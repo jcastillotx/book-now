@@ -1,4 +1,4 @@
-# Book Now by Kre8iv Tech
+# Book Now by Kre8ivTech
 
 A comprehensive WordPress plugin for consultation booking with Stripe payments and calendar integration.
 
