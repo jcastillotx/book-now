@@ -1,0 +1,177 @@
+<?php
+/**
+ * Helper functions for the Book Now plugin
+ *
+ * @package BookNow
+ * @since   1.0.0
+ */
+
+/**
+ * Get plugin settings.
+ *
+ * @param string $group Settings group (general, payment, email, integration).
+ * @param string $key   Optional. Specific setting key.
+ * @return mixed
+ */
+function booknow_get_setting($group, $key = null) {
+    $settings = get_option('booknow_' . $group . '_settings', array());
+
+    if ($key !== null) {
+        return isset($settings[$key]) ? $settings[$key] : null;
+    }
+
+    return $settings;
+}
+
+/**
+ * Generate a unique booking reference number.
+ *
+ * @return string
+ */
+function booknow_generate_reference_number() {
+    return 'BN' . strtoupper(substr(uniqid(), -8));
+}
+
+/**
+ * Format price for display.
+ *
+ * @param float  $amount   Amount to format.
+ * @param string $currency Currency code.
+ * @return string
+ */
+function booknow_format_price($amount, $currency = null) {
+    if ($currency === null) {
+        $currency = booknow_get_setting('general', 'currency');
+    }
+
+    $symbols = array(
+        'USD' => '$',
+        'EUR' => '€',
+        'GBP' => '£',
+        'JPY' => '¥',
+        'CAD' => 'C$',
+        'AUD' => 'A$',
+    );
+
+    $symbol = isset($symbols[$currency]) ? $symbols[$currency] : $currency . ' ';
+
+    return $symbol . number_format($amount, 2);
+}
+
+/**
+ * Format date for display.
+ *
+ * @param string $date Date string.
+ * @return string
+ */
+function booknow_format_date($date) {
+    $format = booknow_get_setting('general', 'date_format') ?: 'F j, Y';
+    return date($format, strtotime($date));
+}
+
+/**
+ * Format time for display.
+ *
+ * @param string $time Time string.
+ * @return string
+ */
+function booknow_format_time($time) {
+    $format = booknow_get_setting('general', 'time_format') ?: 'g:i a';
+    return date($format, strtotime($time));
+}
+
+/**
+ * Get booking status label.
+ *
+ * @param string $status Booking status.
+ * @return string
+ */
+function booknow_get_status_label($status) {
+    $labels = array(
+        'pending'   => __('Pending', 'book-now-kre8iv'),
+        'confirmed' => __('Confirmed', 'book-now-kre8iv'),
+        'completed' => __('Completed', 'book-now-kre8iv'),
+        'cancelled' => __('Cancelled', 'book-now-kre8iv'),
+        'no-show'   => __('No Show', 'book-now-kre8iv'),
+    );
+
+    return isset($labels[$status]) ? $labels[$status] : ucfirst($status);
+}
+
+/**
+ * Get payment status label.
+ *
+ * @param string $status Payment status.
+ * @return string
+ */
+function booknow_get_payment_status_label($status) {
+    $labels = array(
+        'pending'  => __('Pending', 'book-now-kre8iv'),
+        'paid'     => __('Paid', 'book-now-kre8iv'),
+        'refunded' => __('Refunded', 'book-now-kre8iv'),
+        'failed'   => __('Failed', 'book-now-kre8iv'),
+    );
+
+    return isset($labels[$status]) ? $labels[$status] : ucfirst($status);
+}
+
+/**
+ * Convert time to minutes.
+ *
+ * @param string $time Time string (HH:MM:SS or HH:MM).
+ * @return int
+ */
+function booknow_time_to_minutes($time) {
+    $parts = explode(':', $time);
+    return (int)$parts[0] * 60 + (int)$parts[1];
+}
+
+/**
+ * Convert minutes to time string.
+ *
+ * @param int $minutes Number of minutes.
+ * @return string
+ */
+function booknow_minutes_to_time($minutes) {
+    $hours = floor($minutes / 60);
+    $mins = $minutes % 60;
+    return sprintf('%02d:%02d:00', $hours, $mins);
+}
+
+/**
+ * Check if date is within booking window.
+ *
+ * @param string $date Date to check.
+ * @return bool
+ */
+function booknow_is_date_bookable($date) {
+    $min_hours = booknow_get_setting('general', 'min_booking_notice') ?: 24;
+    $max_days = booknow_get_setting('general', 'max_booking_advance') ?: 90;
+
+    $min_date = strtotime("+{$min_hours} hours");
+    $max_date = strtotime("+{$max_days} days");
+    $check_date = strtotime($date);
+
+    return $check_date >= $min_date && $check_date <= $max_date;
+}
+
+/**
+ * Sanitize and validate email.
+ *
+ * @param string $email Email address.
+ * @return string|false
+ */
+function booknow_sanitize_email($email) {
+    $email = sanitize_email($email);
+    return is_email($email) ? $email : false;
+}
+
+/**
+ * Sanitize and validate phone number.
+ *
+ * @param string $phone Phone number.
+ * @return string
+ */
+function booknow_sanitize_phone($phone) {
+    return preg_replace('/[^0-9+\-() ]/', '', $phone);
+}
