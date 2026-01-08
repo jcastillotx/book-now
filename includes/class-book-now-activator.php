@@ -156,6 +156,29 @@ class Book_Now_Activator {
             KEY recipient_email (recipient_email)
         ) $charset_collate;";
         dbDelta($sql);
+
+        // Team Members Table (for multi-user/agency support)
+        $table_name = $wpdb->prefix . 'booknow_team_members';
+        $sql = "CREATE TABLE $table_name (
+            id bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+            user_id bigint(20) unsigned DEFAULT NULL,
+            name varchar(255) NOT NULL,
+            email varchar(255) NOT NULL,
+            phone varchar(50) DEFAULT NULL,
+            bio text,
+            photo_url varchar(500) DEFAULT NULL,
+            status enum('active','inactive') DEFAULT 'active',
+            google_calendar_id varchar(255) DEFAULT NULL,
+            microsoft_calendar_id varchar(255) DEFAULT NULL,
+            display_order int(11) DEFAULT 0,
+            created_at datetime DEFAULT CURRENT_TIMESTAMP,
+            updated_at datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+            PRIMARY KEY (id),
+            KEY user_id (user_id),
+            KEY email (email),
+            KEY status (status)
+        ) $charset_collate;";
+        dbDelta($sql);
     }
 
     /**
@@ -174,8 +197,14 @@ class Book_Now_Activator {
             'slot_interval'     => 30,
             'min_booking_notice' => 24,
             'max_booking_advance' => 90,
+            'account_type'      => 'single',
+            'enable_team_members' => false,
         );
         add_option('booknow_general_settings', $default_general);
+
+        // Setup wizard status
+        add_option('booknow_setup_wizard_completed', false);
+        add_option('booknow_setup_wizard_redirect', true);
 
         // Payment settings
         $default_payment = array(

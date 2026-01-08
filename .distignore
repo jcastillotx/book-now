@@ -1,0 +1,88 @@
+# Development files
+/.git
+/.github
+/node_modules
+/vendor
+.gitignore
+.gitattributes
+.editorconfig
+.eslintrc
+.eslintignore
+.stylelintrc
+.prettierrc
+
+# Documentation (keep only essential)
+/docs/TODO.md
+/docs/PROJECT_SPEC.md
+CLAUDE.md
+
+# Build tools
+package.json
+package-lock.json
+composer.json
+composer.lock
+webpack.config.js
+.babelrc
+tsconfig.json
+
+# Tests
+/tests
+/phpunit.xml
+/.phpunit.result.cache
+/cypress
+/cypress.json
+
+# IDE files
+/.vscode
+/.idea
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+._*
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# Source maps
+*.map
+
+# Environment
+.env
+.env.*
+
+# Build artifacts
+/dist
+/build
+/releases
+
+# Deployment
+.distignore
+.deployignore
+
+# Version control
+.git
+.svn
+.hg
+
+# CI/CD
+.travis.yml
+.gitlab-ci.yml
+/.github/workflows
+
+# Other
+*.zip
+*.tar.gz
+*.rar

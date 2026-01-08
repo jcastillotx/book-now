@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       Book Now by Kre8iv Tech
+ * Plugin Name:       Book Now
  * Plugin URI:        https://github.com/jcastillotx/book-now
  * Description:       A comprehensive WordPress plugin for consultation booking with Stripe payments and calendar integration.
  * Version:           1.0.0

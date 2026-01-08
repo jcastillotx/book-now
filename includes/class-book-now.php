@@ -53,6 +53,7 @@ class Book_Now {
 
         // Admin classes
         require_once BOOK_NOW_PLUGIN_DIR . 'admin/class-book-now-admin.php';
+        require_once BOOK_NOW_PLUGIN_DIR . 'admin/class-book-now-setup-wizard.php';
 
         // Public classes
         require_once BOOK_NOW_PLUGIN_DIR . 'public/class-book-now-public.php';

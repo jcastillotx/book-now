@@ -1,0 +1,52 @@
+{
+  "name": "book-now-kre8iv",
+  "version": "1.0.0",
+  "description": "WordPress plugin for consultation booking with Stripe payments and calendar integration",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development --watch",
+    "lint:js": "eslint admin/js public/js --ext .js",
+    "lint:css": "stylelint 'admin/css/**/*.css' 'public/css/**/*.css'",
+    "format": "prettier --write 'admin/**/*.{js,css}' 'public/**/*.{js,css}'",
+    "pot": "wp i18n make-pot . languages/book-now-kre8iv.pot --exclude=node_modules,vendor",
+    "zip": "npm run build && npm run pot && wp dist-archive . --plugin-dirname=book-now-kre8iv"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcastillotx/book-now.git"
+  },
+  "keywords": [
+    "wordpress",
+    "plugin",
+    "booking",
+    "appointments",
+    "stripe",
+    "calendar"
+  ],
+  "author": "Kre8iv Tech",
+  "license": "GPL-2.0-or-later",
+  "bugs": {
+    "url": "https://github.com/jcastillotx/book-now/issues"
+  },
+  "homepage": "https://github.com/jcastillotx/book-now#readme",
+  "dependencies": {
+    "@stripe/stripe-js": "^2.4.0"
+  },
+  "devDependencies": {
+    "@wordpress/eslint-plugin": "^17.7.0",
+    "eslint": "^8.56.0",
+    "prettier": "^3.2.4",
+    "stylelint": "^16.2.0",
+    "stylelint-config-standard": "^36.0.0",
+    "webpack": "^5.90.0",
+    "webpack-cli": "^5.1.4",
+    "css-loader": "^6.9.1",
+    "mini-css-extract-plugin": "^2.7.7",
+    "terser-webpack-plugin": "^5.3.10"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
