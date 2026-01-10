@@ -1,0 +1,339 @@
+/**
+ * Booking Form Wizard Styles
+ *
+ * @package BookNow
+ * @since   1.2.0
+ */
+
+/* Wrapper */
+.booknow-form-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Steps */
+.booknow-form-step {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.booknow-form-step h3 {
+    margin: 0 0 20px;
+    font-size: 24px;
+    color: #333;
+    border-bottom: 2px solid #0073aa;
+    padding-bottom: 10px;
+}
+
+/* Type Selection */
+.booknow-type-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.booknow-type-option {
+    position: relative;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.booknow-type-option:hover {
+    border-color: #0073aa;
+    box-shadow: 0 2px 8px rgba(0, 115, 170, 0.2);
+}
+
+.booknow-type-option input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.booknow-type-option input[type="radio"]:checked + .type-option-content {
+    background: #f0f8ff;
+}
+
+.booknow-type-option input[type="radio"]:checked ~ .type-option-content::before {
+    content: "✓";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    background: #0073aa;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.type-option-content {
+    position: relative;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.type-option-content strong {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.type-duration,
+.type-price {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 14px;
+    color: #666;
+}
+
+.type-price {
+    font-weight: bold;
+    color: #0073aa;
+}
+
+.type-desc {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Date & Time Selection */
+.booknow-datetime-selector {
+    margin-bottom: 20px;
+}
+
+.booknow-datetime-selector label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.booknow-datetime-selector input[type="date"] {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.booknow-time-slots {
+    margin-top: 20px;
+}
+
+.time-slots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.time-slot {
+    padding: 12px 16px;
+    background: #fff;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.time-slot:hover {
+    border-color: #0073aa;
+    background: #f0f8ff;
+}
+
+.time-slot.selected {
+    background: #0073aa;
+    color: #fff;
+    border-color: #0073aa;
+}
+
+.no-slots,
+.loading {
+    padding: 20px;
+    text-align: center;
+    color: #666;
+    font-style: italic;
+}
+
+.error {
+    padding: 15px;
+    background: #ffebee;
+    border-left: 4px solid #f44336;
+    color: #c62828;
+    margin: 15px 0;
+}
+
+/* Customer Details */
+.booknow-form-fields p {
+    margin-bottom: 20px;
+}
+
+.booknow-form-fields label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #333;
+}
+
+.booknow-form-fields input[type="text"],
+.booknow-form-fields input[type="email"],
+.booknow-form-fields input[type="tel"],
+.booknow-form-fields textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.booknow-form-fields input:focus,
+.booknow-form-fields textarea:focus {
+    outline: none;
+    border-color: #0073aa;
+    box-shadow: 0 0 0 2px rgba(0, 115, 170, 0.1);
+}
+
+.booknow-form-fields .regular-text {
+    max-width: 400px;
+}
+
+.booknow-form-fields .large-text {
+    max-width: 600px;
+}
+
+/* Navigation Buttons */
+.booknow-form-nav {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.booknow-form-nav .button {
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.booknow-next-step,
+.booknow-submit {
+    background: #0073aa;
+    color: #fff;
+    border: none;
+}
+
+.booknow-next-step:hover,
+.booknow-submit:hover {
+    background: #005a87;
+}
+
+.booknow-next-step:disabled,
+.booknow-submit:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.booknow-prev-step {
+    background: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.booknow-prev-step:hover {
+    background: #f5f5f5;
+}
+
+/* Confirmation */
+.booknow-confirmation {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.booknow-success-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background: #4caf50;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.booknow-confirmation h3 {
+    color: #4caf50;
+    margin-bottom: 15px;
+}
+
+.confirmation-message {
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+.confirmation-message strong {
+    color: #0073aa;
+    font-size: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .booknow-form-wrapper {
+        padding: 20px;
+    }
+
+    .booknow-type-options {
+        grid-template-columns: 1fr;
+    }
+
+    .time-slots-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+
+    .booknow-form-nav {
+        flex-direction: column;
+    }
+
+    .booknow-form-nav .button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .booknow-form-step h3 {
+        font-size: 20px;
+    }
+
+    .time-slots-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

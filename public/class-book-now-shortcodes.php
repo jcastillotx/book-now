@@ -27,7 +27,7 @@ class Book_Now_Shortcodes {
     }
 
     /**
-     * Render the calendar view shortcode.
+     * Render calendar view shortcode.
      *
      * @param array $atts Shortcode attributes.
      * @return string
@@ -35,14 +35,11 @@ class Book_Now_Shortcodes {
     public function render_calendar($atts) {
         $atts = shortcode_atts(array(
             'type' => '',
-        ), $atts, 'book_now_calendar');
+            'category' => '',
+        ), $atts);
 
         ob_start();
-        ?>
-        <div class="booknow-calendar-wrapper">
-            <p><?php esc_html_e('Calendar view will be implemented in Phase 3.', 'book-now-kre8iv'); ?></p>
-        </div>
-        <?php
+        include BOOK_NOW_PLUGIN_DIR . 'public/partials/calendar-view.php';
         return ob_get_clean();
     }
 
@@ -54,17 +51,13 @@ class Book_Now_Shortcodes {
      */
     public function render_list_view($atts) {
         $atts = shortcode_atts(array(
-            'type'  => '',
-            'days'  => '7',
-            'limit' => '10',
-        ), $atts, 'book_now_list');
+            'type' => '',
+            'category' => '',
+            'days' => 7,
+        ), $atts);
 
         ob_start();
-        ?>
-        <div class="booknow-list-wrapper">
-            <p><?php esc_html_e('List view will be implemented in Phase 3.', 'book-now-kre8iv'); ?></p>
-        </div>
-        <?php
+        include BOOK_NOW_PLUGIN_DIR . 'public/partials/list-view.php';
         return ob_get_clean();
     }
 
