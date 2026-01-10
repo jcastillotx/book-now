@@ -270,6 +270,10 @@ class Book_Now_Public_AJAX {
             wp_send_json_error(array('message' => __('Invalid consultation type.', 'book-now-kre8iv')));
         }
 
+        // Calculate deposit amount if applicable
+        $deposit_amount = 0;
+        if ($type->deposit_amount > 0) {
+            if ($type->deposit_type === 'percentage') {
                 $deposit_amount = ($type->price * $type->deposit_amount) / 100;
             } else {
                 $deposit_amount = $type->deposit_amount;
@@ -394,4 +398,51 @@ class Book_Now_Public_AJAX {
 
         // Update status
         $updated = Book_Now_Booking::update($booking->id, array(
+            'status' => 'cancelled',
+        ));
+
+        if (!$updated) {
+            wp_send_json_error(array('message' => __('Failed to cancel booking.', 'book-now-kre8iv')));
+        }
+
+        // Process refund if payment was made
+        if ($booking->payment_status === 'paid' && $booking->payment_intent_id) {
+            $stripe = new Book_Now_Stripe();
+            
+            if ($stripe->is_configured()) {
+                $refund_result = $stripe->create_refund($booking->payment_intent_id);
+                
+                if (!is_wp_error($refund_result)) {
+                    Book_Now_Booking::update($booking->id, array(
+                        'payment_status' => 'refunded',
+                        'refund_id' => $refund_result['refund_id'],
+                    ));
+                }
+            }
+        }
+
+        // Trigger post-cancellation actions
+        do_action('booknow_booking_cancelled', $booking->id);
+
+        // Send cancellation email
+        Book_Now_Notifications::send_cancellation($booking->id);
+
+        wp_send_json_success(array(
+            'message' => __('Booking cancelled successfully.', 'book-now-kre8iv'),
+        ));
+    }
+
+    /**
+     * Calculate available slots for a consultation type on a specific date.
+     *
+     * @param object $type Consultation type object.
+     * @param string $date Date in Y-m-d format.
+     * @return array Available time slots.
+     */
+    private function calculate_available_slots($type, $date) {
+        $day_of_week = date('w', strtotime($date));
+        $slots = Book_Now_Availability::calculate_slots($date, $type->id);
+        
+        return $slots;
+    }
 }
