@@ -36,8 +36,6 @@ class Book_Now {
         $this->version = BOOK_NOW_VERSION;
         $this->plugin_name = 'book-now-kre8iv';
 
-        $this->loader = new Book_Now_Loader();
-
         $this->load_dependencies();
         $this->set_locale();
         $this->define_admin_hooks();
@@ -60,19 +58,27 @@ class Book_Now {
      * Load the required dependencies for this plugin.
      */
     private function load_dependencies() {
-        // Core classes
-        require_once BOOK_NOW_PLUGIN_DIR . 'admin/class-book-now-setup-wizard.php';
-        require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-rest-api.php';
+        // Core classes - Load loader and i18n first
+        require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-loader.php';
+        require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-i18n.php';
+        require_once BOOK_NOW_PLUGIN_DIR . 'includes/helpers.php';
+
+        // Model classes (needed by other classes)
+        require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-consultation-type.php';
+        require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-category.php';
+        require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-booking.php';
+        require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-availability.php';
+
+        // Integration classes
         require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-stripe.php';
-        require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-webhook.php';
+        require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-notifications.php';
         require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-google-calendar.php';
         require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-microsoft-calendar.php';
         require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-calendar-sync.php';
         require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-smtp.php';
         require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-email.php';
-
-        require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-loader.php';
-        require_once BOOK_NOW_PLUGIN_DIR . 'includes/helpers.php';
+        require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-webhook.php';
+        require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-rest-api.php';
 
         // Admin classes
         require_once BOOK_NOW_PLUGIN_DIR . 'admin/class-book-now-admin.php';
@@ -83,26 +89,8 @@ class Book_Now {
         require_once BOOK_NOW_PLUGIN_DIR . 'public/class-book-now-public-ajax.php';
         require_once BOOK_NOW_PLUGIN_DIR . 'public/class-book-now-shortcodes.php';
 
-        // Model classes
-        require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-consultation-type.php';
-        require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-category.php';
-        require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-booking.php';
-        require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-availability.php';
-
-        // REST API
-        require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-rest-api.php';
-
-        // Integrations
-        require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-stripe.php';
-        require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-notifications.php';
-        require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-google-calendar.php';
-        require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-microsoft-calendar.php';
-
         // Initialize the loader
         $this->loader = new Book_Now_Loader();
-
-        // Initialize REST API
-        new Book_Now_REST_API();
 
         // Set up reminder cron
         $this->setup_cron();
