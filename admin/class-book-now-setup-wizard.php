@@ -26,10 +26,9 @@ class Book_Now_Setup_Wizard {
      * Initialize the setup wizard.
      */
     public function __construct() {
-        add_action('admin_menu', array($this, 'admin_menus'), 20);
         add_action('admin_init', array($this, 'setup_wizard_redirect'));
-        add_action('admin_enqueue_scripts', array($this, 'enqueue_scripts'));
         add_action('admin_init', array($this, 'handle_save_step'), 5);
+        add_action('admin_init', array($this, 'maybe_render_setup_wizard'), 10);
         
         $this->steps = array(
             'account_type' => array(
@@ -90,13 +89,6 @@ class Book_Now_Setup_Wizard {
     }
 
     /**
-     * Add admin menus/screens.
-     */
-    public function admin_menus() {
-        add_dashboard_page('', '', 'manage_options', 'booknow-setup', '');
-    }
-
-    /**
      * Redirect to setup wizard on activation.
      */
     public function setup_wizard_redirect() {
@@ -124,13 +116,22 @@ class Book_Now_Setup_Wizard {
     }
 
     /**
-     * Enqueue scripts and styles.
+     * Hijack the admin page and render the full-screen wizard.
      */
-    public function enqueue_scripts() {
+    public function maybe_render_setup_wizard() {
         if (empty($_GET['page']) || 'booknow-setup' !== $_GET['page']) {
             return;
         }
 
+        $this->enqueue_scripts();
+        $this->setup_wizard();
+        exit;
+    }
+
+    /**
+     * Enqueue scripts and styles.
+     */
+    private function enqueue_scripts() {
         wp_enqueue_style('booknow-setup', BOOK_NOW_PLUGIN_URL . 'admin/css/setup-wizard.css', array(), BOOK_NOW_VERSION);
         wp_enqueue_script('booknow-setup', BOOK_NOW_PLUGIN_URL . 'admin/js/setup-wizard.js', array('jquery'), BOOK_NOW_VERSION, true);
         
@@ -228,6 +229,8 @@ class Book_Now_Setup_Wizard {
                     </a>
                 </div>
             </div>
+            <?php do_action('admin_footer'); ?>
+            <?php do_action('admin_print_footer_scripts'); ?>
         </body>
         </html>
         <?php
