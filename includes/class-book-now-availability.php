@@ -27,6 +27,14 @@ class Book_Now_Availability {
 
         $args = wp_parse_args($args, $defaults);
 
+        // Whitelist allowed orderby values to prevent SQL injection
+        $allowed_orderby = array('priority', 'day_of_week', 'specific_date', 'start_time', 'created_at', 'id');
+        $orderby = in_array($args['orderby'], $allowed_orderby, true) ? $args['orderby'] : 'priority';
+
+        // Whitelist allowed order values
+        $allowed_order = array('ASC', 'DESC');
+        $order = in_array(strtoupper($args['order']), $allowed_order, true) ? strtoupper($args['order']) : 'DESC';
+
         $where = array('1=1');
         $values = array();
 
@@ -41,7 +49,7 @@ class Book_Now_Availability {
         }
 
         $where_clause = implode(' AND ', $where);
-        $order_clause = sprintf('%s %s', $args['orderby'], $args['order']);
+        $order_clause = sprintf('%s %s', $orderby, $order);
 
         if (!empty($values)) {
             $sql = $wpdb->prepare(
@@ -94,7 +102,12 @@ class Book_Now_Availability {
             '%s', '%d', '%s', '%s', '%s', '%d', '%d', '%d'
         ));
 
-        return $result ? $wpdb->insert_id : false;
+        if ($result === false) {
+            error_log('BookNow DB Error in create_availability: ' . $wpdb->last_error);
+            return false;
+        }
+
+        return $wpdb->insert_id;
     }
 
     /**

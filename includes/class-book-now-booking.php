@@ -31,6 +31,14 @@ class Book_Now_Booking {
 
         $args = wp_parse_args($args, $defaults);
 
+        // Whitelist allowed orderby values to prevent SQL injection
+        $allowed_orderby = array('booking_date', 'booking_time', 'created_at', 'customer_name', 'status', 'payment_status', 'id');
+        $orderby = in_array($args['orderby'], $allowed_orderby, true) ? $args['orderby'] : 'booking_date';
+
+        // Whitelist allowed order values
+        $allowed_order = array('ASC', 'DESC');
+        $order = in_array(strtoupper($args['order']), $allowed_order, true) ? strtoupper($args['order']) : 'DESC';
+
         $where = array('1=1');
         $values = array();
 
@@ -55,7 +63,7 @@ class Book_Now_Booking {
         }
 
         $where_clause = implode(' AND ', $where);
-        $order_clause = sprintf('%s %s', $args['orderby'], $args['order']);
+        $order_clause = sprintf('%s %s', $orderby, $order);
 
         $values[] = $args['limit'];
         $values[] = $args['offset'];
@@ -131,12 +139,13 @@ class Book_Now_Booking {
             '%s', '%d', '%s', '%s', '%s', '%s', '%s', '%s', '%d', '%s', '%s', '%s', '%f'
         ));
 
-        if ($result) {
-            do_action('booknow_booking_created', $wpdb->insert_id, $data);
-            return $wpdb->insert_id;
+        if ($result === false) {
+            error_log('BookNow DB Error in create_booking: ' . $wpdb->last_error);
+            return false;
         }
 
-        return false;
+        do_action('booknow_booking_created', $wpdb->insert_id, $data);
+        return $wpdb->insert_id;
     }
 
     /**

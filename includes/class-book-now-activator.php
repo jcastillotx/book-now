@@ -16,6 +16,63 @@ class Book_Now_Activator {
      * @since 1.0.0
      */
     public static function activate() {
+        // Check PHP version
+        if (version_compare(PHP_VERSION, '8.0', '<')) {
+            deactivate_plugins(BOOK_NOW_BASENAME);
+            wp_die(
+                '<h1>' . __('Plugin Activation Failed', 'book-now-kre8iv') . '</h1>' .
+                '<p>' . sprintf(
+                    __('Book Now requires PHP version 8.0 or higher. You are running PHP %s.', 'book-now-kre8iv'),
+                    PHP_VERSION
+                ) . '</p>' .
+                '<p><a href="' . admin_url('plugins.php') . '">' . __('Return to Plugins', 'book-now-kre8iv') . '</a></p>',
+                __('Plugin Activation Failed', 'book-now-kre8iv'),
+                array('back_link' => true)
+            );
+        }
+
+        // Check WordPress version
+        global $wp_version;
+        if (version_compare($wp_version, '6.0', '<')) {
+            deactivate_plugins(BOOK_NOW_BASENAME);
+            wp_die(
+                '<h1>' . __('Plugin Activation Failed', 'book-now-kre8iv') . '</h1>' .
+                '<p>' . sprintf(
+                    __('Book Now requires WordPress version 6.0 or higher. You are running WordPress %s.', 'book-now-kre8iv'),
+                    $wp_version
+                ) . '</p>' .
+                '<p><a href="' . admin_url('plugins.php') . '">' . __('Return to Plugins', 'book-now-kre8iv') . '</a></p>',
+                __('Plugin Activation Failed', 'book-now-kre8iv'),
+                array('back_link' => true)
+            );
+        }
+
+        // Check database permissions
+        global $wpdb;
+        $test_table = $wpdb->prefix . 'booknow_activation_test';
+        
+        // Suppress errors temporarily
+        $wpdb->suppress_errors(true);
+        
+        $result = $wpdb->query("CREATE TABLE IF NOT EXISTS {$test_table} (id INT)");
+        
+        if ($result === false) {
+            deactivate_plugins(BOOK_NOW_BASENAME);
+            wp_die(
+                '<h1>' . __('Plugin Activation Failed', 'book-now-kre8iv') . '</h1>' .
+                '<p>' . __('Book Now requires database CREATE TABLE permissions. Please contact your hosting provider.', 'book-now-kre8iv') . '</p>' .
+                '<p><strong>' . __('Database Error:', 'book-now-kre8iv') . '</strong> ' . $wpdb->last_error . '</p>' .
+                '<p><a href="' . admin_url('plugins.php') . '">' . __('Return to Plugins', 'book-now-kre8iv') . '</a></p>',
+                __('Plugin Activation Failed', 'book-now-kre8iv'),
+                array('back_link' => true)
+            );
+        }
+        
+        // Clean up test table
+        $wpdb->query("DROP TABLE IF EXISTS {$test_table}");
+        $wpdb->suppress_errors(false);
+
+        // Proceed with activation
         self::create_tables();
         self::set_default_options();
 
