@@ -202,7 +202,7 @@ On activation, these tables are created:
 
 **Solution:** The wizard only shows on first activation. To see it again:
 1. Go to WordPress admin
-2. Navigate to: `/wp-admin/index.php?page=booknow-setup`
+2. Navigate to: `/wp-admin/admin.php?page=booknow-setup`
 
 ### Admin Pages Are Empty
 

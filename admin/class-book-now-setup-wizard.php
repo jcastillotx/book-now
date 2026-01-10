@@ -20,15 +20,16 @@ class Book_Now_Setup_Wizard {
      *
      * @var array
      */
-    private $steps = array();
+    public $steps = array();
 
     /**
      * Initialize the setup wizard.
      */
     public function __construct() {
-        add_action('admin_menu', array($this, 'admin_menus'));
+        add_action('admin_menu', array($this, 'admin_menus'), 20);
         add_action('admin_init', array($this, 'setup_wizard_redirect'));
         add_action('admin_enqueue_scripts', array($this, 'enqueue_scripts'));
+        add_action('admin_init', array($this, 'handle_save_step'), 5);
         
         $this->steps = array(
             'account_type' => array(
@@ -67,6 +68,28 @@ class Book_Now_Setup_Wizard {
     }
 
     /**
+     * Handle saving a step when form is submitted.
+     */
+    public function handle_save_step() {
+        if (empty($_GET['page']) || 'booknow-setup' !== $_GET['page']) {
+            return;
+        }
+
+        if (isset($_POST['save_step'])) {
+            $step = sanitize_key($_POST['save_step']);
+            
+            if ('skip' === $step) {
+                wp_safe_redirect(esc_url_raw($this->get_next_step_link()));
+                exit;
+            }
+
+            if (isset($this->steps[$step]['handler']) && is_callable($this->steps[$step]['handler'])) {
+                call_user_func($this->steps[$step]['handler']);
+            }
+        }
+    }
+
+    /**
      * Add admin menus/screens.
      */
     public function admin_menus() {
@@ -85,13 +108,18 @@ class Book_Now_Setup_Wizard {
             return;
         }
 
-        update_option('booknow_setup_wizard_redirect', false);
-
-        if ((!empty($_GET['page']) && in_array($_GET['page'], array('booknow-setup'))) || is_network_admin() || !current_user_can('manage_options')) {
+        // Only redirect if we are not already on the setup page
+        if (!empty($_GET['page']) && 'booknow-setup' === $_GET['page']) {
             return;
         }
 
-        wp_safe_redirect(admin_url('index.php?page=booknow-setup'));
+        update_option('booknow_setup_wizard_redirect', false);
+
+        if (is_network_admin() || !current_user_can('manage_options')) {
+            return;
+        }
+
+        wp_safe_redirect(admin_url('admin.php?page=booknow-setup'));
         exit;
     }
 
@@ -116,10 +144,6 @@ class Book_Now_Setup_Wizard {
      * Show the setup wizard.
      */
     public function setup_wizard() {
-        if (empty($_GET['page']) || 'booknow-setup' !== $_GET['page']) {
-            return;
-        }
-
         $this->setup_wizard_header();
         $this->setup_wizard_steps();
         $this->setup_wizard_content();
@@ -168,7 +192,7 @@ class Book_Now_Setup_Wizard {
                 } elseif ($is_completed) {
                     ?>
                     <li class="done">
-                        <a href="<?php echo esc_url(add_query_arg('step', $step_key)); ?>"><?php echo esc_html($step['name']); ?></a>
+                        <a href="<?php echo esc_url(add_query_arg('step', $step_key, admin_url('admin.php?page=booknow-setup'))); ?>"><?php echo esc_html($step['name']); ?></a>
                     </li>
                     <?php
                 } else {
@@ -216,8 +240,9 @@ class Book_Now_Setup_Wizard {
         $settings = get_option('booknow_general_settings', array());
         $account_type = isset($settings['account_type']) ? $settings['account_type'] : 'single';
         ?>
-        <form method="post" class="booknow-setup-form">
+        <form method="post" action="<?php echo esc_url(admin_url('admin.php?page=booknow-setup&step=' . $this->step)); ?>" class="booknow-setup-form">
             <?php wp_nonce_field('booknow_setup_account_type'); ?>
+            <input type="hidden" name="save_step" value="<?php echo esc_attr($this->step); ?>">
             
             <h2><?php esc_html_e('What type of booking system do you need?', 'book-now-kre8iv'); ?></h2>
             <p class="description"><?php esc_html_e('This helps us configure the right features for your business.', 'book-now-kre8iv'); ?></p>
@@ -253,7 +278,7 @@ class Book_Now_Setup_Wizard {
             </div>
 
             <p class="booknow-setup-actions">
-                <button type="submit" class="button button-primary button-large" name="save_step" value="<?php echo esc_attr($this->step); ?>">
+                <button type="submit" class="button button-primary button-large">
                     <?php esc_html_e('Continue', 'book-now-kre8iv'); ?>
                 </button>
             </p>
@@ -284,8 +309,9 @@ class Book_Now_Setup_Wizard {
     public function setup_business_info() {
         $settings = get_option('booknow_general_settings', array());
         ?>
-        <form method="post" class="booknow-setup-form">
+        <form method="post" action="<?php echo esc_url(admin_url('admin.php?page=booknow-setup&step=' . $this->step)); ?>" class="booknow-setup-form">
             <?php wp_nonce_field('booknow_setup_business_info'); ?>
+            <input type="hidden" name="save_step" value="<?php echo esc_attr($this->step); ?>">
             
             <h2><?php esc_html_e('Tell us about your business', 'book-now-kre8iv'); ?></h2>
             
@@ -358,7 +384,7 @@ class Book_Now_Setup_Wizard {
                 <a href="<?php echo esc_url($this->get_prev_step_link()); ?>" class="button button-large">
                     <?php esc_html_e('Previous', 'book-now-kre8iv'); ?>
                 </a>
-                <button type="submit" class="button button-primary button-large" name="save_step" value="<?php echo esc_attr($this->step); ?>">
+                <button type="submit" class="button button-primary button-large">
                     <?php esc_html_e('Continue', 'book-now-kre8iv'); ?>
                 </button>
             </p>
@@ -388,8 +414,9 @@ class Book_Now_Setup_Wizard {
     public function setup_payment() {
         $settings = get_option('booknow_payment_settings', array());
         ?>
-        <form method="post" class="booknow-setup-form">
+        <form method="post" action="<?php echo esc_url(admin_url('admin.php?page=booknow-setup&step=' . $this->step)); ?>" class="booknow-setup-form">
             <?php wp_nonce_field('booknow_setup_payment'); ?>
+            <input type="hidden" name="save_step" value="<?php echo esc_attr($this->step); ?>">
             
             <h2><?php esc_html_e('Payment Setup (Optional)', 'book-now-kre8iv'); ?></h2>
             <p class="description"><?php esc_html_e('Connect Stripe to accept payments. You can skip this and set it up later.', 'book-now-kre8iv'); ?></p>
@@ -451,7 +478,7 @@ class Book_Now_Setup_Wizard {
                 <button type="submit" class="button button-large" name="save_step" value="skip">
                     <?php esc_html_e('Skip for Now', 'book-now-kre8iv'); ?>
                 </button>
-                <button type="submit" class="button button-primary button-large" name="save_step" value="<?php echo esc_attr($this->step); ?>">
+                <button type="submit" class="button button-primary button-large">
                     <?php esc_html_e('Continue', 'book-now-kre8iv'); ?>
                 </button>
             </p>
@@ -480,8 +507,9 @@ class Book_Now_Setup_Wizard {
      */
     public function setup_availability() {
         ?>
-        <form method="post" class="booknow-setup-form">
+        <form method="post" action="<?php echo esc_url(admin_url('admin.php?page=booknow-setup&step=' . $this->step)); ?>" class="booknow-setup-form">
             <?php wp_nonce_field('booknow_setup_availability'); ?>
+            <input type="hidden" name="save_step" value="<?php echo esc_attr($this->step); ?>">
             
             <h2><?php esc_html_e('Set Your Availability', 'book-now-kre8iv'); ?></h2>
             <p class="description"><?php esc_html_e('When are you available for bookings? You can adjust this later.', 'book-now-kre8iv'); ?></p>
@@ -535,7 +563,7 @@ class Book_Now_Setup_Wizard {
                 <a href="<?php echo esc_url($this->get_prev_step_link()); ?>" class="button button-large">
                     <?php esc_html_e('Previous', 'book-now-kre8iv'); ?>
                 </a>
-                <button type="submit" class="button button-primary button-large" name="save_step" value="<?php echo esc_attr($this->step); ?>">
+                <button type="submit" class="button button-primary button-large">
                     <?php esc_html_e('Continue', 'book-now-kre8iv'); ?>
                 </button>
             </p>
@@ -579,8 +607,9 @@ class Book_Now_Setup_Wizard {
      */
     public function setup_consultation() {
         ?>
-        <form method="post" class="booknow-setup-form">
+        <form method="post" action="<?php echo esc_url(admin_url('admin.php?page=booknow-setup&step=' . $this->step)); ?>" class="booknow-setup-form">
             <?php wp_nonce_field('booknow_setup_consultation'); ?>
+            <input type="hidden" name="save_step" value="<?php echo esc_attr($this->step); ?>">
             
             <h2><?php esc_html_e('Create Your First Service', 'book-now-kre8iv'); ?></h2>
             <p class="description"><?php esc_html_e('What type of consultation or service do you offer? You can add more later.', 'book-now-kre8iv'); ?></p>
@@ -635,7 +664,7 @@ class Book_Now_Setup_Wizard {
                 <button type="submit" class="button button-large" name="save_step" value="skip">
                     <?php esc_html_e('Skip for Now', 'book-now-kre8iv'); ?>
                 </button>
-                <button type="submit" class="button button-primary button-large" name="save_step" value="<?php echo esc_attr($this->step); ?>">
+                <button type="submit" class="button button-primary button-large">
                     <?php esc_html_e('Continue', 'book-now-kre8iv'); ?>
                 </button>
             </p>
@@ -722,7 +751,7 @@ class Book_Now_Setup_Wizard {
         $current_index = array_search($this->step, $keys, true);
         
         if ($current_index !== false && isset($keys[$current_index + 1])) {
-            return add_query_arg('step', $keys[$current_index + 1], admin_url('index.php?page=booknow-setup'));
+            return add_query_arg('step', $keys[$current_index + 1], admin_url('admin.php?page=booknow-setup'));
         }
         
         return admin_url('admin.php?page=book-now');
@@ -736,33 +765,9 @@ class Book_Now_Setup_Wizard {
         $current_index = array_search($this->step, $keys, true);
         
         if ($current_index !== false && isset($keys[$current_index - 1])) {
-            return add_query_arg('step', $keys[$current_index - 1], admin_url('index.php?page=booknow-setup'));
+            return add_query_arg('step', $keys[$current_index - 1], admin_url('admin.php?page=booknow-setup'));
         }
         
-        return admin_url('index.php?page=booknow-setup');
+        return admin_url('admin.php?page=booknow-setup');
     }
-}
-
-// Initialize the setup wizard
-if (isset($_GET['page']) && 'booknow-setup' === $_GET['page']) {
-    new Book_Now_Setup_Wizard();
-    add_action('admin_init', function() {
-        $wizard = new Book_Now_Setup_Wizard();
-        
-        if (isset($_POST['save_step']) && $_POST['save_step'] !== 'skip') {
-            $step = sanitize_key($_POST['save_step']);
-            if (isset($wizard->steps[$step]['handler']) && !empty($wizard->steps[$step]['handler'])) {
-                call_user_func($wizard->steps[$step]['handler']);
-            }
-        } elseif (isset($_POST['save_step']) && $_POST['save_step'] === 'skip') {
-            wp_safe_redirect(esc_url_raw($wizard->get_next_step_link()));
-            exit;
-        }
-    }, 1);
-    
-    add_action('admin_init', function() {
-        $wizard = new Book_Now_Setup_Wizard();
-        $wizard->setup_wizard();
-        exit;
-    }, 99);
 }

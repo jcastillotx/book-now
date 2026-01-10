@@ -109,6 +109,7 @@ class Book_Now {
      */
     private function define_admin_hooks() {
         $plugin_admin = new Book_Now_Admin($this->get_plugin_name(), $this->get_version());
+        new Book_Now_Setup_Wizard();
 
         // Enqueue admin assets
         $this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_styles');

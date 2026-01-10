@@ -174,9 +174,8 @@ class Book_Now_Admin {
      * Display setup wizard page.
      */
     public function display_setup_wizard() {
-        // Redirect to the actual setup wizard page
-        wp_safe_redirect(admin_url('index.php?page=booknow-setup'));
-        exit;
+        $wizard = new Book_Now_Setup_Wizard();
+        $wizard->setup_wizard();
     }
 
     /**
