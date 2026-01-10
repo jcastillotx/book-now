@@ -8,96 +8,96 @@
 
 class Book_Now_Activator {
 
-    /**
-     * Activate the plugin.
-     *
-     * Creates database tables, sets default options, and flushes rewrite rules.
-     *
-     * @since 1.0.0
-     */
-    public static function activate() {
-        // Check PHP version
-        if (version_compare(PHP_VERSION, '8.0', '<')) {
-            deactivate_plugins(BOOK_NOW_BASENAME);
-            wp_die(
-                '<h1>' . __('Plugin Activation Failed', 'book-now-kre8iv') . '</h1>' .
-                '<p>' . sprintf(
-                    __('Book Now requires PHP version 8.0 or higher. You are running PHP %s.', 'book-now-kre8iv'),
-                    PHP_VERSION
-                ) . '</p>' .
-                '<p><a href="' . admin_url('plugins.php') . '">' . __('Return to Plugins', 'book-now-kre8iv') . '</a></p>',
-                __('Plugin Activation Failed', 'book-now-kre8iv'),
-                array('back_link' => true)
-            );
-        }
+	/**
+	 * Activate the plugin.
+	 *
+	 * Creates database tables, sets default options, and flushes rewrite rules.
+	 *
+	 * @since 1.0.0
+	 */
+	public static function activate() {
+		// Check PHP version
+		if ( version_compare( PHP_VERSION, '8.0', '<' ) ) {
+			deactivate_plugins( BOOK_NOW_BASENAME );
+			wp_die(
+				'<h1>' . __( 'Plugin Activation Failed', 'book-now-kre8iv' ) . '</h1>' .
+				'<p>' . sprintf(
+					__( 'Book Now requires PHP version 8.0 or higher. You are running PHP %s.', 'book-now-kre8iv' ),
+					PHP_VERSION
+				) . '</p>' .
+				'<p><a href="' . admin_url( 'plugins.php' ) . '">' . __( 'Return to Plugins', 'book-now-kre8iv' ) . '</a></p>',
+				__( 'Plugin Activation Failed', 'book-now-kre8iv' ),
+				array( 'back_link' => true )
+			);
+		}
 
-        // Check WordPress version
-        global $wp_version;
-        if (version_compare($wp_version, '6.0', '<')) {
-            deactivate_plugins(BOOK_NOW_BASENAME);
-            wp_die(
-                '<h1>' . __('Plugin Activation Failed', 'book-now-kre8iv') . '</h1>' .
-                '<p>' . sprintf(
-                    __('Book Now requires WordPress version 6.0 or higher. You are running WordPress %s.', 'book-now-kre8iv'),
-                    $wp_version
-                ) . '</p>' .
-                '<p><a href="' . admin_url('plugins.php') . '">' . __('Return to Plugins', 'book-now-kre8iv') . '</a></p>',
-                __('Plugin Activation Failed', 'book-now-kre8iv'),
-                array('back_link' => true)
-            );
-        }
+		// Check WordPress version
+		global $wp_version;
+		if ( version_compare( $wp_version, '6.0', '<' ) ) {
+			deactivate_plugins( BOOK_NOW_BASENAME );
+			wp_die(
+				'<h1>' . __( 'Plugin Activation Failed', 'book-now-kre8iv' ) . '</h1>' .
+				'<p>' . sprintf(
+					__( 'Book Now requires WordPress version 6.0 or higher. You are running WordPress %s.', 'book-now-kre8iv' ),
+					$wp_version
+				) . '</p>' .
+				'<p><a href="' . admin_url( 'plugins.php' ) . '">' . __( 'Return to Plugins', 'book-now-kre8iv' ) . '</a></p>',
+				__( 'Plugin Activation Failed', 'book-now-kre8iv' ),
+				array( 'back_link' => true )
+			);
+		}
 
-        // Check database permissions
-        global $wpdb;
-        $test_table = $wpdb->prefix . 'booknow_activation_test';
-        
-        // Suppress errors temporarily
-        $wpdb->suppress_errors(true);
-        
-        $result = $wpdb->query("CREATE TABLE IF NOT EXISTS {$test_table} (id INT)");
-        
-        if ($result === false) {
-            deactivate_plugins(BOOK_NOW_BASENAME);
-            wp_die(
-                '<h1>' . __('Plugin Activation Failed', 'book-now-kre8iv') . '</h1>' .
-                '<p>' . __('Book Now requires database CREATE TABLE permissions. Please contact your hosting provider.', 'book-now-kre8iv') . '</p>' .
-                '<p><strong>' . __('Database Error:', 'book-now-kre8iv') . '</strong> ' . $wpdb->last_error . '</p>' .
-                '<p><a href="' . admin_url('plugins.php') . '">' . __('Return to Plugins', 'book-now-kre8iv') . '</a></p>',
-                __('Plugin Activation Failed', 'book-now-kre8iv'),
-                array('back_link' => true)
-            );
-        }
-        
-        // Clean up test table
-        $wpdb->query("DROP TABLE IF EXISTS {$test_table}");
-        $wpdb->suppress_errors(false);
+		// Check database permissions
+		global $wpdb;
+		$test_table = $wpdb->prefix . 'booknow_activation_test';
 
-        // Proceed with activation
-        self::create_tables();
-        self::set_default_options();
+		// Suppress errors temporarily
+		$wpdb->suppress_errors( true );
 
-        // Set plugin version
-        update_option('booknow_version', BOOK_NOW_VERSION);
+		$result = $wpdb->query( "CREATE TABLE IF NOT EXISTS {$test_table} (id INT)" );
 
-        // Flush rewrite rules
-        flush_rewrite_rules();
-    }
+		if ( $result === false ) {
+			deactivate_plugins( BOOK_NOW_BASENAME );
+			wp_die(
+				'<h1>' . __( 'Plugin Activation Failed', 'book-now-kre8iv' ) . '</h1>' .
+				'<p>' . __( 'Book Now requires database CREATE TABLE permissions. Please contact your hosting provider.', 'book-now-kre8iv' ) . '</p>' .
+				'<p><strong>' . __( 'Database Error:', 'book-now-kre8iv' ) . '</strong> ' . $wpdb->last_error . '</p>' .
+				'<p><a href="' . admin_url( 'plugins.php' ) . '">' . __( 'Return to Plugins', 'book-now-kre8iv' ) . '</a></p>',
+				__( 'Plugin Activation Failed', 'book-now-kre8iv' ),
+				array( 'back_link' => true )
+			);
+		}
 
-    /**
-     * Create plugin database tables.
-     *
-     * @since 1.0.0
-     */
-    private static function create_tables() {
-        global $wpdb;
+		// Clean up test table
+		$wpdb->query( "DROP TABLE IF EXISTS {$test_table}" );
+		$wpdb->suppress_errors( false );
 
-        $charset_collate = $wpdb->get_charset_collate();
+		// Proceed with activation
+		self::create_tables();
+		self::set_default_options();
 
-        require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+		// Set plugin version
+		update_option( 'booknow_version', BOOK_NOW_VERSION );
 
-        // Consultation Types Table
-        $table_name = $wpdb->prefix . 'booknow_consultation_types';
-        $sql = "CREATE TABLE $table_name (
+		// Flush rewrite rules
+		flush_rewrite_rules();
+	}
+
+	/**
+	 * Create plugin database tables.
+	 *
+	 * @since 1.0.0
+	 */
+	private static function create_tables() {
+		global $wpdb;
+
+		$charset_collate = $wpdb->get_charset_collate();
+
+		require_once ABSPATH . 'wp-admin/includes/upgrade.php';
+
+		// Consultation Types Table
+		$table_name = $wpdb->prefix . 'booknow_consultation_types';
+		$sql        = "CREATE TABLE $table_name (
             id bigint(20) unsigned NOT NULL AUTO_INCREMENT,
             name varchar(255) NOT NULL,
             slug varchar(255) NOT NULL,
@@ -119,11 +119,11 @@ class Book_Now_Activator {
             KEY category_id (category_id),
             KEY status (status)
         ) $charset_collate;";
-        dbDelta($sql);
+		dbDelta( $sql );
 
-        // Bookings Table
-        $table_name = $wpdb->prefix . 'booknow_bookings';
-        $sql = "CREATE TABLE $table_name (
+		// Bookings Table
+		$table_name = $wpdb->prefix . 'booknow_bookings';
+		$sql        = "CREATE TABLE $table_name (
             id bigint(20) unsigned NOT NULL AUTO_INCREMENT,
             reference_number varchar(20) NOT NULL,
             consultation_type_id bigint(20) unsigned NOT NULL,
@@ -155,11 +155,11 @@ class Book_Now_Activator {
             KEY status (status),
             KEY payment_status (payment_status)
         ) $charset_collate;";
-        dbDelta($sql);
+		dbDelta( $sql );
 
-        // Availability Rules Table
-        $table_name = $wpdb->prefix . 'booknow_availability';
-        $sql = "CREATE TABLE $table_name (
+		// Availability Rules Table
+		$table_name = $wpdb->prefix . 'booknow_availability';
+		$sql        = "CREATE TABLE $table_name (
             id bigint(20) unsigned NOT NULL AUTO_INCREMENT,
             rule_type enum('weekly','specific_date','block') DEFAULT 'weekly',
             day_of_week tinyint(1) DEFAULT NULL COMMENT '0=Sunday,6=Saturday',
@@ -177,11 +177,11 @@ class Book_Now_Activator {
             KEY specific_date (specific_date),
             KEY consultation_type_id (consultation_type_id)
         ) $charset_collate;";
-        dbDelta($sql);
+		dbDelta( $sql );
 
-        // Categories Table
-        $table_name = $wpdb->prefix . 'booknow_categories';
-        $sql = "CREATE TABLE $table_name (
+		// Categories Table
+		$table_name = $wpdb->prefix . 'booknow_categories';
+		$sql        = "CREATE TABLE $table_name (
             id bigint(20) unsigned NOT NULL AUTO_INCREMENT,
             name varchar(255) NOT NULL,
             slug varchar(255) NOT NULL,
@@ -194,11 +194,11 @@ class Book_Now_Activator {
             UNIQUE KEY slug (slug),
             KEY parent_id (parent_id)
         ) $charset_collate;";
-        dbDelta($sql);
+		dbDelta( $sql );
 
-        // Email Log Table (optional, for tracking)
-        $table_name = $wpdb->prefix . 'booknow_email_log';
-        $sql = "CREATE TABLE $table_name (
+		// Email Log Table (optional, for tracking)
+		$table_name = $wpdb->prefix . 'booknow_email_log';
+		$sql        = "CREATE TABLE $table_name (
             id bigint(20) unsigned NOT NULL AUTO_INCREMENT,
             booking_id bigint(20) unsigned NOT NULL,
             email_type enum('confirmation','reminder','cancellation','admin_notification') NOT NULL,
@@ -212,11 +212,11 @@ class Book_Now_Activator {
             KEY email_type (email_type),
             KEY recipient_email (recipient_email)
         ) $charset_collate;";
-        dbDelta($sql);
+		dbDelta( $sql );
 
-        // Team Members Table (for multi-user/agency support)
-        $table_name = $wpdb->prefix . 'booknow_team_members';
-        $sql = "CREATE TABLE $table_name (
+		// Team Members Table (for multi-user/agency support)
+		$table_name = $wpdb->prefix . 'booknow_team_members';
+		$sql        = "CREATE TABLE $table_name (
             id bigint(20) unsigned NOT NULL AUTO_INCREMENT,
             user_id bigint(20) unsigned DEFAULT NULL,
             name varchar(255) NOT NULL,
@@ -235,61 +235,61 @@ class Book_Now_Activator {
             KEY email (email),
             KEY status (status)
         ) $charset_collate;";
-        dbDelta($sql);
-    }
+		dbDelta( $sql );
+	}
 
-    /**
-     * Set default plugin options.
-     *
-     * @since 1.0.0
-     */
-    private static function set_default_options() {
-        // General settings
-        $default_general = array(
-            'business_name'     => get_bloginfo('name'),
-            'timezone'          => get_option('timezone_string') ?: 'UTC',
-            'currency'          => 'USD',
-            'date_format'       => 'F j, Y',
-            'time_format'       => 'g:i a',
-            'slot_interval'     => 30,
-            'min_booking_notice' => 24,
-            'max_booking_advance' => 90,
-            'account_type'      => 'single',
-            'enable_team_members' => false,
-        );
-        add_option('booknow_general_settings', $default_general);
+	/**
+	 * Set default plugin options.
+	 *
+	 * @since 1.0.0
+	 */
+	private static function set_default_options() {
+		// General settings
+		$default_general = array(
+			'business_name'       => get_bloginfo( 'name' ),
+			'timezone'            => get_option( 'timezone_string' ) ?: 'UTC',
+			'currency'            => 'USD',
+			'date_format'         => 'F j, Y',
+			'time_format'         => 'g:i a',
+			'slot_interval'       => 30,
+			'min_booking_notice'  => 24,
+			'max_booking_advance' => 90,
+			'account_type'        => 'single',
+			'enable_team_members' => false,
+		);
+		add_option( 'booknow_general_settings', $default_general );
 
-        // Setup wizard status
-        add_option('booknow_setup_wizard_completed', false);
-        add_option('booknow_setup_wizard_redirect', true);
+		// Setup wizard status
+		add_option( 'booknow_setup_wizard_completed', false );
+		add_option( 'booknow_setup_wizard_redirect', true );
 
-        // Payment settings
-        $default_payment = array(
-            'stripe_mode'       => 'test',
-            'stripe_test_publishable_key' => '',
-            'stripe_test_secret_key' => '',
-            'stripe_live_publishable_key' => '',
-            'stripe_live_secret_key' => '',
-            'payment_required'  => true,
-            'allow_deposit'     => false,
-        );
-        add_option('booknow_payment_settings', $default_payment);
+		// Payment settings
+		$default_payment = array(
+			'stripe_mode'                 => 'test',
+			'stripe_test_publishable_key' => '',
+			'stripe_test_secret_key'      => '',
+			'stripe_live_publishable_key' => '',
+			'stripe_live_secret_key'      => '',
+			'payment_required'            => true,
+			'allow_deposit'               => false,
+		);
+		add_option( 'booknow_payment_settings', $default_payment );
 
-        // Email settings
-        $default_email = array(
-            'from_name'         => get_bloginfo('name'),
-            'from_email'        => get_option('admin_email'),
-            'admin_notification' => true,
-            'admin_email'       => get_option('admin_email'),
-            'reminder_hours'    => 24,
-        );
-        add_option('booknow_email_settings', $default_email);
+		// Email settings
+		$default_email = array(
+			'from_name'          => get_bloginfo( 'name' ),
+			'from_email'         => get_option( 'admin_email' ),
+			'admin_notification' => true,
+			'admin_email'        => get_option( 'admin_email' ),
+			'reminder_hours'     => 24,
+		);
+		add_option( 'booknow_email_settings', $default_email );
 
-        // Integration settings
-        $default_integration = array(
-            'google_calendar_enabled' => false,
-            'microsoft_calendar_enabled' => false,
-        );
-        add_option('booknow_integration_settings', $default_integration);
-    }
+		// Integration settings
+		$default_integration = array(
+			'google_calendar_enabled'    => false,
+			'microsoft_calendar_enabled' => false,
+		);
+		add_option( 'booknow_integration_settings', $default_integration );
+	}
 }

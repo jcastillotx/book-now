@@ -1,276 +1,223 @@
 <?php
 /**
- * The public-facing functionality of the plugin
+ * The public-facing functionality of the plugin.
  *
- * @package BookNow
- * @since   1.0.0
+ * Defines the plugin name, version, and hooks for enqueuing
+ * the public-facing stylesheet and JavaScript.
+ *
+ * @package    BookNow
+ * @subpackage BookNow/public
+ * @since      1.0.0
  */
 
+/**
+ * The public-facing functionality of the plugin.
+ *
+ * @package    BookNow
+ * @subpackage BookNow/public
+ * @since      1.0.0
+ */
 class Book_Now_Public {
 
-    /**
-     * The ID of this plugin.
-     *
-     * @var string
-     */
-    private $plugin_name;
+	/**
+	 * The ID of this plugin.
+	 *
+	 * @var string
+	 */
+	private $plugin_name;
 
-    /**
-     * The version of this plugin.
-     *
-     * @var string
-     */
-    private $version;
+	/**
+	 * The version of this plugin.
+	 *
+	 * @var string
+	 */
+	private $version;
 
-    /**
-     * Initialize the class and set its properties.
-     *
-     * @param string $plugin_name The name of the plugin.
-     * @param string $version     The version of this plugin.
-     */
-    public function __construct($plugin_name, $version) {
-        $this->plugin_name = $plugin_name;
-        $this->version = $version;
-    }
+	/**
+	 * Initialize the class and set its properties.
+	 *
+	 * @param string $plugin_name The name of the plugin.
+	 * @param string $version     The version of this plugin.
+	 */
+	public function __construct( $plugin_name, $version ) {
+		$this->plugin_name = $plugin_name;
+		$this->version     = $version;
+	}
 
-    /**
-     * Register the stylesheets for the public-facing side of the site.
-     */
-    public function enqueue_styles() {
-        global $post;
+	/**
+	 * Register the stylesheets for the public-facing side of the site.
+	 */
+	public function enqueue_styles() {
+		global $post;
 
-        // Only load on pages with shortcodes
-        global $post;
-        if (!is_a($post, 'WP_Post')) {
-            return;
-        }
+		// Only enqueue on pages with our shortcodes.
+		if ( is_a( $post, 'WP_Post' ) && (
+			has_shortcode( $post->post_content, 'book_now_form' ) ||
+			has_shortcode( $post->post_content, 'book_now_calendar' ) ||
+			has_shortcode( $post->post_content, 'book_now_list' ) ||
+			has_shortcode( $post->post_content, 'book_now_types' )
+		) ) {
+			wp_enqueue_style(
+				$this->plugin_name,
+				BOOK_NOW_PLUGIN_URL . 'public/css/book-now-public.css',
+				array(),
+				$this->version,
+				'all'
+			);
+		}
+	}
 
-        if (has_shortcode($post->post_content, 'book_now_form') ||
-            has_shortcode($post->post_content, 'book_now_calendar') ||
-            has_shortcode($post->post_content, 'book_now_list') ||
-            has_shortcode($post->post_content, 'book_now_types')) {
-            
-            wp_enqueue_style($this->plugin_name);
-            
-            // Enqueue booking wizard styles
-            wp_enqueue_style(
-                'book-now-wizard',
-                BOOK_NOW_PLUGIN_URL . 'public/css/booking-wizard.css',
-                array(),
-                $this->version,
-                'all'
-            );
-            
-            // Enqueue calendar and list view styles
-            wp_enqueue_style(
-                'book-now-calendar-list',
-                BOOK_NOW_PLUGIN_URL . 'public/css/calendar-list-views.css',
-                array(),
-                $this->version,
-                'all'
-            );
-            
-            wp_enqueue_style(
-                $this->plugin_name,
-                BOOK_NOW_PLUGIN_URL . 'public/css/book-now-public.css',
-                array(),
-                $this->version,
-                'all'
-            );
-        }
-    }
+	/**
+	 * Register the JavaScript for the public-facing side of the site.
+	 */
+	public function enqueue_scripts() {
+		global $post;
 
-    /**
-     * Register the JavaScript for the public-facing side of the site.
-     */
-    public function enqueue_scripts() {
-        global $post;
+		// Only enqueue on pages with our shortcodes.
+		if ( is_a( $post, 'WP_Post' ) && (
+			has_shortcode( $post->post_content, 'book_now_form' ) ||
+			has_shortcode( $post->post_content, 'book_now_calendar' ) ||
+			has_shortcode( $post->post_content, 'book_now_list' ) ||
+			has_shortcode( $post->post_content, 'book_now_types' )
+		) ) {
+			wp_enqueue_script(
+				$this->plugin_name,
+				BOOK_NOW_PLUGIN_URL . 'public/js/book-now-public.js',
+				array( 'jquery' ),
+				$this->version,
+				false
+			);
 
-        // Only enqueue on pages with our shortcodes
-        if (is_a($post, 'WP_Post') && (
-            has_shortcode($post->post_content, 'book_now_form') ||
-            has_shortcode($post->post_content, 'book_now_calendar') ||
-            has_shortcode($post->post_content, 'book_now_list') ||
-            has_shortcode($post->post_content, 'book_now_types')
-        )) {
-            wp_enqueue_script(
-                $this->plugin_name,
-                BOOK_NOW_PLUGIN_URL . 'public/js/book-now-public.js',
-                array('jquery'),
-                $this->version,
-                false
-            );
+			// Localize script.
+			wp_localize_script(
+				$this->plugin_name,
+				'bookNowPublic',
+				array(
+					'ajaxUrl'   => admin_url( 'admin-ajax.php' ),
+					'nonce'     => wp_create_nonce( 'booknow_public_nonce' ),
+					'restUrl'   => rest_url( 'book-now/v1/' ),
+					'restNonce' => wp_create_nonce( 'wp_rest' ),
+					'strings'   => array(
+						'selectType'     => __( 'Please select a consultation type', 'book-now-kre8iv' ),
+						'selectDateTime' => __( 'Please select date and time', 'book-now-kre8iv' ),
+						'fillFields'     => __( 'Please fill in all required fields', 'book-now-kre8iv' ),
+						'error'          => __( 'An error occurred. Please try again.', 'book-now-kre8iv' ),
+						'loading'        => __( 'Loading...', 'book-now-kre8iv' ),
+					),
+				)
+			);
+		}
+	}
 
-            // Enqueue booking wizard script
-            wp_enqueue_script(
-                'book-now-wizard',
-                BOOK_NOW_PLUGIN_URL . 'public/js/booking-wizard.js',
-                array('jquery'),
-                $this->version,
-                true
-            );
-            
-            // Enqueue calendar view script
-            wp_enqueue_script(
-                'book-now-calendar',
-                BOOK_NOW_PLUGIN_URL . 'public/js/calendar-view.js',
-                array('jquery'),
-                $this->version,
-                true
-            );
-            
-            // Enqueue list view script
-            wp_enqueue_script(
-                'book-now-list',
-                BOOK_NOW_PLUGIN_URL . 'public/js/list-view.js',
-                array('jquery'),
-                $this->version,
-                true
-            );
+	/**
+	 * AJAX: Get availability for a consultation type on a specific date.
+	 */
+	public function ajax_get_availability() {
+		check_ajax_referer( 'booknow_public_nonce', 'nonce' );
 
-            // Enqueue Stripe.js
-            wp_enqueue_script(
-                'stripe-js',
-                'https://js.stripe.com/v3/',
-                array(),
-                null,
-                true
-            );
+		$consultation_type_id = absint( $_POST['consultation_type_id'] ?? 0 );
+		$date                 = sanitize_text_field( wp_unslash( $_POST['date'] ?? '' ) );
 
-            // Enqueue payment script
-            $stripe = new Book_Now_Stripe();
-            if ($stripe->is_configured()) {
-                wp_enqueue_script(
-                    'book-now-stripe',
-                    BOOK_NOW_PLUGIN_URL . 'public/js/stripe-payment.js',
-                    array('jquery', 'stripe-js'),
-                    $this->version,
-                    true
-                );
+		if ( ! $consultation_type_id || ! $date ) {
+			wp_send_json_error( array( 'message' => __( 'Missing required parameters.', 'book-now-kre8iv' ) ) );
+		}
 
-                wp_localize_script('book-now-stripe', 'bookNowStripe', array(
-                    'publishableKey' => $stripe->get_publishable_key(),
-                ));
-            }
+		// Check if date is within booking window.
+		if ( ! booknow_is_date_bookable( $date ) ) {
+			wp_send_json_error( array( 'message' => __( 'This date is not available for booking.', 'book-now-kre8iv' ) ) );
+		}
 
-            // Localize script
-            wp_localize_script('book-now-wizard', 'bookNowPublic', array(
-                'ajaxUrl'   => admin_url('admin-ajax.php'),
-                'nonce'     => wp_create_nonce('booknow_public_nonce'),
-                'publicNonce' => wp_create_nonce('booknow_public_nonce'),
-                'restUrl'   => rest_url('book-now/v1/'),
-                'restNonce' => wp_create_nonce('wp_rest'),
-                'strings'   => array(
-                    'selectType'     => __('Please select a consultation type', 'book-now-kre8iv'),
-                    'selectDateTime' => __('Please select date and time', 'book-now-kre8iv'),
-                    'fillFields'     => __('Please fill in all required fields', 'book-now-kre8iv'),
-                    'error'          => __('An error occurred. Please try again.', 'book-now-kre8iv'),
-                    'loading'        => __('Loading...', 'book-now-kre8iv'),
-                ),
-            ));
-        }
-    }
+		$slots = Book_Now_Availability::calculate_slots( $date, $consultation_type_id );
 
-    /**
-     * AJAX: Get availability for a consultation type on a specific date.
-     */
-    public function ajax_get_availability() {
-        check_ajax_referer('booknow_public_nonce', 'nonce');
+		wp_send_json_success(
+			array(
+				'slots' => $slots,
+				'date'  => $date,
+			)
+		);
+	}
 
-        $consultation_type_id = absint($_POST['consultation_type_id'] ?? 0);
-        $date = sanitize_text_field($_POST['date'] ?? '');
+	/**
+	 * AJAX: Create a new booking.
+	 */
+	public function ajax_create_booking() {
+		check_ajax_referer( 'booknow_public_nonce', 'nonce' );
 
-        if (!$consultation_type_id || !$date) {
-            wp_send_json_error(array('message' => __('Missing required parameters.', 'book-now-kre8iv')));
-        }
+		// Validate required fields.
+		$required = array( 'consultation_type_id', 'booking_date', 'booking_time', 'customer_name', 'customer_email' );
+		foreach ( $required as $field ) {
+			if ( empty( $_POST[ $field ] ) ) {
+				// translators: %s is the field name.
+				wp_send_json_error( array( 'message' => sprintf( __( '%s is required.', 'book-now-kre8iv' ), ucfirst( str_replace( '_', ' ', $field ) ) ) ) );
+			}
+		}
 
-        // Check if date is within booking window
-        if (!booknow_is_date_bookable($date)) {
-            wp_send_json_error(array('message' => __('This date is not available for booking.', 'book-now-kre8iv')));
-        }
+		// Validate email.
+		// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Sanitized via booknow_sanitize_email().
+		$email = booknow_sanitize_email( isset( $_POST['customer_email'] ) ? wp_unslash( $_POST['customer_email'] ) : '' );
+		if ( ! $email ) {
+			wp_send_json_error( array( 'message' => __( 'Invalid email address.', 'book-now-kre8iv' ) ) );
+		}
 
-        $slots = Book_Now_Availability::calculate_slots($date, $consultation_type_id);
+		// Get consultation type.
+		$consultation_type_id = isset( $_POST['consultation_type_id'] ) ? absint( $_POST['consultation_type_id'] ) : 0;
+		$consultation_type    = Book_Now_Consultation_Type::get_by_id( $consultation_type_id );
 
-        wp_send_json_success(array(
-            'slots' => $slots,
-            'date'  => $date,
-        ));
-    }
+		if ( ! $consultation_type ) {
+			wp_send_json_error( array( 'message' => __( 'Invalid consultation type.', 'book-now-kre8iv' ) ) );
+		}
 
-    /**
-     * AJAX: Create a new booking.
-     */
-    public function ajax_create_booking() {
-        check_ajax_referer('booknow_public_nonce', 'nonce');
+		// Validate and sanitize date.
+		// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Sanitized via booknow_validate_booking_date().
+		$booking_date = booknow_validate_booking_date( isset( $_POST['booking_date'] ) ? wp_unslash( $_POST['booking_date'] ) : '' );
+		if ( ! $booking_date ) {
+			wp_send_json_error( array( 'message' => __( 'Invalid booking date. Please select a valid date.', 'book-now-kre8iv' ) ) );
+		}
 
-        // Validate required fields
-        $required = array('consultation_type_id', 'booking_date', 'booking_time', 'customer_name', 'customer_email');
-        foreach ($required as $field) {
-            if (empty($_POST[$field])) {
-                wp_send_json_error(array('message' => sprintf(__('%s is required.', 'book-now-kre8iv'), ucfirst(str_replace('_', ' ', $field)))));
-            }
-        }
+		// Validate and sanitize time.
+		// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Sanitized via booknow_validate_booking_time().
+		$booking_time = booknow_validate_booking_time( isset( $_POST['booking_time'] ) ? wp_unslash( $_POST['booking_time'] ) : '' );
+		if ( ! $booking_time ) {
+			wp_send_json_error( array( 'message' => __( 'Invalid booking time. Please select a valid time.', 'book-now-kre8iv' ) ) );
+		}
 
-        // Validate email
-        $email = booknow_sanitize_email($_POST['customer_email']);
-        if (!$email) {
-            wp_send_json_error(array('message' => __('Invalid email address.', 'book-now-kre8iv')));
-        }
+		// Create booking data.
+		$booking_data = array(
+			'consultation_type_id' => $consultation_type_id,
+			'customer_name'        => isset( $_POST['customer_name'] ) ? sanitize_text_field( wp_unslash( $_POST['customer_name'] ) ) : '',
+			'customer_email'       => $email,
+			// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Sanitized via booknow_sanitize_phone().
+			'customer_phone'       => isset( $_POST['customer_phone'] ) ? booknow_sanitize_phone( wp_unslash( $_POST['customer_phone'] ) ) : '',
+			'customer_notes'       => isset( $_POST['customer_notes'] ) ? wp_kses_post( wp_unslash( $_POST['customer_notes'] ) ) : '',
+			'booking_date'         => $booking_date,
+			'booking_time'         => $booking_time,
+			'duration'             => $consultation_type->duration,
+			'timezone'             => isset( $_POST['timezone'] ) ? sanitize_text_field( wp_unslash( $_POST['timezone'] ) ) : booknow_get_setting( 'general', 'timezone' ),
+			'status'               => 'pending',
+			'payment_status'       => 'pending',
+			'payment_amount'       => $consultation_type->price,
+		);
 
-        // Get consultation type
-        $consultation_type_id = absint($_POST['consultation_type_id']);
-        $consultation_type = Book_Now_Consultation_Type::get_by_id($consultation_type_id);
+		// Create booking.
+		$booking_id = Book_Now_Booking::create( $booking_data );
 
-        if (!$consultation_type) {
-            wp_send_json_error(array('message' => __('Invalid consultation type.', 'book-now-kre8iv')));
-        }
+		if ( $booking_id ) {
+			$booking = Book_Now_Booking::get_by_id( $booking_id );
 
-        // Validate and sanitize date
-        $booking_date = booknow_validate_booking_date($_POST['booking_date']);
-        if (!$booking_date) {
-            wp_send_json_error(array('message' => __('Invalid booking date. Please select a valid date.', 'book-now-kre8iv')));
-        }
+			// If payment is required, return payment intent data.
+			// This would be implemented in Phase 4 with Stripe integration.
+			$payment_required = booknow_get_setting( 'payment', 'payment_required' );
 
-        // Validate and sanitize time
-        $booking_time = booknow_validate_booking_time($_POST['booking_time']);
-        if (!$booking_time) {
-            wp_send_json_error(array('message' => __('Invalid booking time. Please select a valid time.', 'book-now-kre8iv')));
-        }
-
-        // Create booking data
-        $booking_data = array(
-            'consultation_type_id' => $consultation_type_id,
-            'customer_name'        => sanitize_text_field($_POST['customer_name']),
-            'customer_email'       => $email,
-            'customer_phone'       => booknow_sanitize_phone($_POST['customer_phone'] ?? ''),
-            'customer_notes'       => wp_kses_post($_POST['customer_notes'] ?? ''),
-            'booking_date'         => $booking_date,
-            'booking_time'         => $booking_time,
-            'duration'             => $consultation_type->duration,
-            'timezone'             => sanitize_text_field($_POST['timezone'] ?? booknow_get_setting('general', 'timezone')),
-            'status'               => 'pending',
-            'payment_status'       => 'pending',
-            'payment_amount'       => $consultation_type->price,
-        );
-
-        // Create booking
-        $booking_id = Book_Now_Booking::create($booking_data);
-
-        if ($booking_id) {
-            $booking = Book_Now_Booking::get_by_id($booking_id);
-
-            // If payment is required, return payment intent data
-            // This would be implemented in Phase 4 with Stripe integration
-            $payment_required = booknow_get_setting('payment', 'payment_required');
-
-            wp_send_json_success(array(
-                'message'          => __('Booking created successfully!', 'book-now-kre8iv'),
-                'booking_id'       => $booking_id,
-                'reference_number' => $booking->reference_number,
-                'payment_required' => $payment_required,
-            ));
-        } else {
-            wp_send_json_error(array('message' => __('Failed to create booking. Please try again.', 'book-now-kre8iv')));
-        }
-    }
+			wp_send_json_success(
+				array(
+					'message'          => __( 'Booking created successfully!', 'book-now-kre8iv' ),
+					'booking_id'       => $booking_id,
+					'reference_number' => $booking->reference_number,
+					'payment_required' => $payment_required,
+				)
+			);
+		} else {
+			wp_send_json_error( array( 'message' => __( 'Failed to create booking. Please try again.', 'book-now-kre8iv' ) ) );
+		}
+	}
 }
