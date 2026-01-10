@@ -46,24 +46,67 @@ if (isset($_POST['save_availability']) && check_admin_referer('booknow_save_avai
 if (isset($_POST['add_block_date']) && check_admin_referer('booknow_add_block_date')) {
     global $wpdb;
     $table = $wpdb->prefix . 'booknow_availability';
-    
+
     $block_date = sanitize_text_field($_POST['block_date']);
     $block_reason = sanitize_text_field($_POST['block_reason']);
-    
-    $wpdb->insert(
-        $table,
-        array(
-            'rule_type'      => 'block',
-            'specific_date'  => $block_date,
-            'start_time'     => '00:00:00',
-            'end_time'       => '23:59:59',
-            'is_available'   => 0,
-            'priority'       => 10,
-        ),
-        array('%s', '%s', '%s', '%s', '%d', '%d')
-    );
-    
-    echo '<div class="notice notice-success"><p>' . esc_html__('Block date added successfully.', 'book-now-kre8iv') . '</p></div>';
+    $is_range = isset($_POST['block_date_range']) && $_POST['block_date_range'] === '1';
+    $block_end_date = $is_range ? sanitize_text_field($_POST['block_end_date']) : $block_date;
+
+    // Validate dates
+    $start = new DateTime($block_date);
+    $end = new DateTime($block_end_date);
+
+    // Ensure end date is not before start date
+    if ($end < $start) {
+        $temp = $start;
+        $start = $end;
+        $end = $temp;
+    }
+
+    // Create block entries for each date in the range
+    $dates_blocked = 0;
+    $current = clone $start;
+    while ($current <= $end) {
+        $date_str = $current->format('Y-m-d');
+
+        // Check if date is already blocked to avoid duplicates
+        $existing = $wpdb->get_var($wpdb->prepare(
+            "SELECT COUNT(*) FROM {$table} WHERE rule_type = 'block' AND specific_date = %s",
+            $date_str
+        ));
+
+        if (!$existing) {
+            $wpdb->insert(
+                $table,
+                array(
+                    'rule_type'      => 'block',
+                    'specific_date'  => $date_str,
+                    'start_time'     => '00:00:00',
+                    'end_time'       => '23:59:59',
+                    'is_available'   => 0,
+                    'priority'       => 10,
+                ),
+                array('%s', '%s', '%s', '%s', '%d', '%d')
+            );
+            $dates_blocked++;
+        }
+
+        $current->modify('+1 day');
+    }
+
+    if ($dates_blocked > 0) {
+        if ($dates_blocked === 1) {
+            echo '<div class="notice notice-success"><p>' . esc_html__('Block date added successfully.', 'book-now-kre8iv') . '</p></div>';
+        } else {
+            echo '<div class="notice notice-success"><p>' . sprintf(
+                /* translators: %d: number of dates blocked */
+                esc_html__('%d block dates added successfully.', 'book-now-kre8iv'),
+                $dates_blocked
+            ) . '</p></div>';
+        }
+    } else {
+        echo '<div class="notice notice-warning"><p>' . esc_html__('Selected dates are already blocked.', 'book-now-kre8iv') . '</p></div>';
+    }
 }
 
 // Handle delete block date
@@ -180,18 +223,45 @@ $days = array(
             
             <form method="post" action="" class="booknow-block-date-form">
                 <?php wp_nonce_field('booknow_add_block_date'); ?>
-                
+
                 <table class="form-table">
                     <tr>
                         <th scope="row">
-                            <label for="block_date"><?php esc_html_e('Date', 'book-now-kre8iv'); ?></label>
+                            <label for="block_date"><?php esc_html_e('Start Date', 'book-now-kre8iv'); ?></label>
                         </th>
                         <td>
-                            <input type="date" 
-                                   name="block_date" 
-                                   id="block_date" 
+                            <input type="date"
+                                   name="block_date"
+                                   id="block_date"
                                    required
                                    min="<?php echo esc_attr(date('Y-m-d')); ?>">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <?php esc_html_e('Block Range', 'book-now-kre8iv'); ?>
+                        </th>
+                        <td>
+                            <label for="block_date_range">
+                                <input type="checkbox"
+                                       name="block_date_range"
+                                       id="block_date_range"
+                                       value="1">
+                                <?php esc_html_e('Block multiple days (date range)', 'book-now-kre8iv'); ?>
+                            </label>
+                            <p class="description"><?php esc_html_e('Enable to block a range of dates instead of a single day.', 'book-now-kre8iv'); ?></p>
+                        </td>
+                    </tr>
+                    <tr class="booknow-end-date-row" style="display: none;">
+                        <th scope="row">
+                            <label for="block_end_date"><?php esc_html_e('End Date', 'book-now-kre8iv'); ?></label>
+                        </th>
+                        <td>
+                            <input type="date"
+                                   name="block_end_date"
+                                   id="block_end_date"
+                                   min="<?php echo esc_attr(date('Y-m-d')); ?>">
+                            <p class="description"><?php esc_html_e('All dates between start and end (inclusive) will be blocked.', 'book-now-kre8iv'); ?></p>
                         </td>
                     </tr>
                     <tr>
@@ -199,15 +269,15 @@ $days = array(
                             <label for="block_reason"><?php esc_html_e('Reason (Optional)', 'book-now-kre8iv'); ?></label>
                         </th>
                         <td>
-                            <input type="text" 
-                                   name="block_reason" 
-                                   id="block_reason" 
+                            <input type="text"
+                                   name="block_reason"
+                                   id="block_reason"
                                    class="regular-text"
                                    placeholder="<?php esc_attr_e('e.g., Holiday, Vacation', 'book-now-kre8iv'); ?>">
                         </td>
                     </tr>
                 </table>
-                
+
                 <p class="submit">
                     <button type="submit" name="add_block_date" class="button">
                         <?php esc_html_e('Add Block Date', 'book-now-kre8iv'); ?>
@@ -256,6 +326,38 @@ jQuery(document).ready(function($) {
         var day = $(this).data('day');
         var isChecked = $(this).is(':checked');
         $('input[data-day="' + day + '"].availability-time').prop('disabled', !isChecked);
+    });
+
+    // Toggle end date row visibility based on range checkbox
+    $('#block_date_range').on('change', function() {
+        var isChecked = $(this).is(':checked');
+        var $endDateRow = $('.booknow-end-date-row');
+        var $endDateInput = $('#block_end_date');
+
+        if (isChecked) {
+            $endDateRow.show();
+            $endDateInput.prop('required', true);
+            // Set minimum end date to match start date
+            var startDate = $('#block_date').val();
+            if (startDate) {
+                $endDateInput.attr('min', startDate);
+            }
+        } else {
+            $endDateRow.hide();
+            $endDateInput.prop('required', false);
+        }
+    });
+
+    // Update end date minimum when start date changes
+    $('#block_date').on('change', function() {
+        var startDate = $(this).val();
+        var $endDateInput = $('#block_end_date');
+        $endDateInput.attr('min', startDate);
+
+        // If end date is before start date, update it
+        if ($endDateInput.val() && $endDateInput.val() < startDate) {
+            $endDateInput.val(startDate);
+        }
     });
 });
 </script>
