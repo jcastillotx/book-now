@@ -158,6 +158,25 @@ class Book_Now_Admin {
             'book-now-settings',
             array($this, 'display_settings')
         );
+
+        // Setup Wizard submenu
+        add_submenu_page(
+            'book-now',
+            __('Setup Wizard', 'book-now-kre8iv'),
+            __('Setup Wizard', 'book-now-kre8iv'),
+            'manage_options',
+            'booknow-setup',
+            array($this, 'display_setup_wizard')
+        );
+    }
+
+    /**
+     * Display setup wizard page.
+     */
+    public function display_setup_wizard() {
+        // Redirect to the actual setup wizard page
+        wp_safe_redirect(admin_url('index.php?page=booknow-setup'));
+        exit;
     }
 
     /**
@@ -199,7 +218,7 @@ class Book_Now_Admin {
      * Display settings page.
      */
     public function display_settings() {
-        include BOOK_NOW_PLUGIN_DIR . 'admin/partials/settings-general.php';
+        include BOOK_NOW_PLUGIN_DIR . 'admin/partials/settings.php';
     }
 
     /**

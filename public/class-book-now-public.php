@@ -39,13 +39,37 @@ class Book_Now_Public {
     public function enqueue_styles() {
         global $post;
 
-        // Only enqueue on pages with our shortcodes
-        if (is_a($post, 'WP_Post') && (
-            has_shortcode($post->post_content, 'book_now_form') ||
+        // Only load on pages with shortcodes
+        global $post;
+        if (!is_a($post, 'WP_Post')) {
+            return;
+        }
+
+        if (has_shortcode($post->post_content, 'book_now_form') ||
             has_shortcode($post->post_content, 'book_now_calendar') ||
             has_shortcode($post->post_content, 'book_now_list') ||
-            has_shortcode($post->post_content, 'book_now_types')
-        )) {
+            has_shortcode($post->post_content, 'book_now_types')) {
+            
+            wp_enqueue_style($this->plugin_name);
+            
+            // Enqueue booking wizard styles
+            wp_enqueue_style(
+                'book-now-wizard',
+                BOOK_NOW_PLUGIN_URL . 'public/css/booking-wizard.css',
+                array(),
+                $this->version,
+                'all'
+            );
+            
+            // Enqueue calendar and list view styles
+            wp_enqueue_style(
+                'book-now-calendar-list',
+                BOOK_NOW_PLUGIN_URL . 'public/css/calendar-list-views.css',
+                array(),
+                $this->version,
+                'all'
+            );
+            
             wp_enqueue_style(
                 $this->plugin_name,
                 BOOK_NOW_PLUGIN_URL . 'public/css/book-now-public.css',
@@ -77,10 +101,63 @@ class Book_Now_Public {
                 false
             );
 
+            // Enqueue booking wizard script
+            wp_enqueue_script(
+                'book-now-wizard',
+                BOOK_NOW_PLUGIN_URL . 'public/js/booking-wizard.js',
+                array('jquery'),
+                $this->version,
+                true
+            );
+            
+            // Enqueue calendar view script
+            wp_enqueue_script(
+                'book-now-calendar',
+                BOOK_NOW_PLUGIN_URL . 'public/js/calendar-view.js',
+                array('jquery'),
+                $this->version,
+                true
+            );
+            
+            // Enqueue list view script
+            wp_enqueue_script(
+                'book-now-list',
+                BOOK_NOW_PLUGIN_URL . 'public/js/list-view.js',
+                array('jquery'),
+                $this->version,
+                true
+            );
+
+            // Enqueue Stripe.js
+            wp_enqueue_script(
+                'stripe-js',
+                'https://js.stripe.com/v3/',
+                array(),
+                null,
+                true
+            );
+
+            // Enqueue payment script
+            $stripe = new Book_Now_Stripe();
+            if ($stripe->is_configured()) {
+                wp_enqueue_script(
+                    'book-now-stripe',
+                    BOOK_NOW_PLUGIN_URL . 'public/js/stripe-payment.js',
+                    array('jquery', 'stripe-js'),
+                    $this->version,
+                    true
+                );
+
+                wp_localize_script('book-now-stripe', 'bookNowStripe', array(
+                    'publishableKey' => $stripe->get_publishable_key(),
+                ));
+            }
+
             // Localize script
-            wp_localize_script($this->plugin_name, 'bookNowPublic', array(
+            wp_localize_script('book-now-wizard', 'bookNowPublic', array(
                 'ajaxUrl'   => admin_url('admin-ajax.php'),
                 'nonce'     => wp_create_nonce('booknow_public_nonce'),
+                'publicNonce' => wp_create_nonce('booknow_public_nonce'),
                 'restUrl'   => rest_url('book-now/v1/'),
                 'restNonce' => wp_create_nonce('wp_rest'),
                 'strings'   => array(
