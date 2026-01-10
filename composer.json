@@ -1,62 +1,33 @@
 {
     "name": "kre8ivtech/book-now",
-    "description": "WordPress plugin for consultation booking with Stripe payments and calendar integration",
+    "description": "A comprehensive WordPress plugin for consultation booking with Stripe payments and calendar integration",
     "type": "wordpress-plugin",
     "license": "GPL-2.0-or-later",
     "authors": [
         {
             "name": "Kre8iv Tech",
-            "email": "support@kre8ivtech.com",
-            "homepage": "https://kre8ivtech.com"
+            "email": "info@kre8ivtech.com"
         }
     ],
-    "keywords": [
-        "wordpress",
-        "plugin",
-        "booking",
-        "appointments",
-        "stripe",
-        "calendar",
-        "consultation"
-    ],
-    "homepage": "https://github.com/jcastillotx/book-now",
-    "support": {
-        "issues": "https://github.com/jcastillotx/book-now/issues",
-        "source": "https://github.com/jcastillotx/book-now"
-    },
     "require": {
-        "php": ">=8.0"
+        "php": ">=8.0",
+        "stripe/stripe-php": "^10.0",
+        "google/apiclient": "^2.15",
+        "microsoft/microsoft-graph": "^1.109"
     },
     "require-dev": {
-        "phpunit/phpunit": "^9.6",
-        "wp-coding-standards/wpcs": "^3.0",
-        "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
-        "phpcompatibility/phpcompatibility-wp": "^2.1",
-        "squizlabs/php_codesniffer": "^3.7"
+        "phpunit/phpunit": "^9.5",
+        "wp-coding-standards/wpcs": "^3.0"
     },
     "autoload": {
-        "classmap": [
-            "includes/",
-            "admin/",
-            "public/"
-        ]
-    },
-    "scripts": {
-        "phpcs": "phpcs --standard=WordPress --extensions=php --ignore=*/vendor/*,*/node_modules/* .",
-        "phpcbf": "phpcbf --standard=WordPress --extensions=php --ignore=*/vendor/*,*/node_modules/* .",
-        "test": "phpunit",
-        "post-install-cmd": [
-            "@composer dump-autoload"
-        ],
-        "post-update-cmd": [
-            "@composer dump-autoload"
-        ]
+        "psr-4": {
+            "BookNow\\": "includes/"
+        }
     },
     "config": {
-        "allow-plugins": {
-            "dealerdirect/phpcodesniffer-composer-installer": true
-        },
         "optimize-autoloader": true,
         "sort-packages": true
-    }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
 }

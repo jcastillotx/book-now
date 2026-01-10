@@ -85,11 +85,27 @@ class Book_Now {
 
         // Model classes
         require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-consultation-type.php';
+        require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-category.php';
         require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-booking.php';
         require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-availability.php';
 
+        // REST API
+        require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-rest-api.php';
+
+        // Integrations
+        require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-stripe.php';
+        require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-notifications.php';
+        require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-google-calendar.php';
+        require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-microsoft-calendar.php';
+
         // Initialize the loader
         $this->loader = new Book_Now_Loader();
+
+        // Initialize REST API
+        new Book_Now_REST_API();
+
+        // Set up reminder cron
+        $this->setup_cron();
     }
 
     /**
@@ -178,5 +194,37 @@ class Book_Now {
      */
     public function get_version() {
         return $this->version;
+    }
+
+    /**
+     * Set up cron jobs.
+     */
+    private function setup_cron() {
+        // Schedule reminder emails
+        if (!wp_next_scheduled('booknow_send_reminders')) {
+            wp_schedule_event(time(), 'hourly', 'booknow_send_reminders');
+        }
+
+        // Hook the reminder function
+        add_action('booknow_send_reminders', array($this, 'send_booking_reminders'));
+    }
+
+    /**
+     * Send booking reminders.
+     */
+    public function send_booking_reminders() {
+        $email_settings = booknow_get_setting('email');
+        $reminder_hours = $email_settings['reminder_hours'] ?? 24;
+        
+        $bookings = Book_Now_Booking::get_upcoming_for_reminders($reminder_hours);
+        
+        foreach ($bookings as $booking) {
+            Book_Now_Notifications::send_booking_reminder($booking);
+            
+            Book_Now_Booking::update($booking->id, array(
+                'reminder_sent' => 1,
+                'reminder_sent_at' => current_time('mysql')
+            ));
+        }
     }
 }
