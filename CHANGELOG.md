@@ -5,6 +5,51 @@ All notable changes to Book Now will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2026-01-08
+
+### Added
+- **Setup Wizard** - Complete 6-step onboarding wizard
+  - Account type selection (Single Person vs Agency/Team)
+  - Business information configuration
+  - Payment setup (optional)
+  - Availability configuration
+  - First service creation
+  - Professional UI with modern styling
+  - Auto-redirect on first activation
+  - Accessible from admin menu
+- **Comprehensive Settings Page** - Complete tabbed interface
+  - General tab (business info, timezone, currency, booking rules, account type)
+  - Payment tab (Stripe test/live mode, API keys, deposit settings)
+  - Email tab (sender info, notifications, reminders, admin alerts)
+  - Integrations tab (Google Calendar, Microsoft Calendar)
+- **Team Members Support** - Database schema for multi-user/agency mode
+  - Team members table with calendar integration fields
+  - Account type setting (single/agency)
+  - Foundation for Phase 2 team features
+- **Production Files**
+  - composer.json with PHP dependencies
+  - package.json with frontend build tools
+  - .gitignore for version control
+  - .distignore for WordPress.org deployment
+  - LICENSE file (GPL v2)
+  - Translation template (.pot file)
+  - Comprehensive CHANGELOG.md
+  - ACTIVATION_GUIDE.md with complete usage instructions
+
+### Changed
+- Plugin name simplified from "Book Now by Kre8iv Tech" to "Book Now"
+- Settings page now uses tabbed interface instead of single page
+- Admin menu now includes Setup Wizard link
+
+### Technical
+- All Phase 1 foundation items completed
+- Complete admin interface with 7 menu pages
+- Full CRUD operations for all entities
+- Security hardening (nonces, sanitization, capability checks)
+- Model classes with proper data access methods
+- Helper functions for common operations
+- AJAX handlers for all admin operations
+
 ## [1.0.0] - 2026-01-08
 
 ### Added
