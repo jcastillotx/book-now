@@ -13,14 +13,14 @@
  * @param string $key   Optional. Specific setting key.
  * @return mixed
  */
-function booknow_get_setting($group, $key = null) {
-    $settings = get_option('booknow_' . $group . '_settings', array());
+function booknow_get_setting( $group, $key = null ) {
+	$settings = get_option( 'booknow_' . $group . '_settings', array() );
 
-    if ($key !== null) {
-        return isset($settings[$key]) ? $settings[$key] : null;
-    }
+	if ( null !== $key ) {
+		return isset( $settings[ $key ] ) ? $settings[ $key ] : null;
+	}
 
-    return $settings;
+	return $settings;
 }
 
 /**
@@ -29,7 +29,7 @@ function booknow_get_setting($group, $key = null) {
  * @return string
  */
 function booknow_generate_reference_number() {
-    return 'BN' . strtoupper(substr(uniqid(), -8));
+	return 'BN' . strtoupper( substr( uniqid(), -8 ) );
 }
 
 /**
@@ -39,23 +39,23 @@ function booknow_generate_reference_number() {
  * @param string $currency Currency code.
  * @return string
  */
-function booknow_format_price($amount, $currency = null) {
-    if ($currency === null) {
-        $currency = booknow_get_setting('general', 'currency');
-    }
+function booknow_format_price( $amount, $currency = null ) {
+	if ( null === $currency ) {
+		$currency = booknow_get_setting( 'general', 'currency' );
+	}
 
-    $symbols = array(
-        'USD' => '$',
-        'EUR' => '€',
-        'GBP' => '£',
-        'JPY' => '¥',
-        'CAD' => 'C$',
-        'AUD' => 'A$',
-    );
+	$symbols = array(
+		'USD' => '$',
+		'EUR' => '€',
+		'GBP' => '£',
+		'JPY' => '¥',
+		'CAD' => 'C$',
+		'AUD' => 'A$',
+	);
 
-    $symbol = isset($symbols[$currency]) ? $symbols[$currency] : $currency . ' ';
+	$symbol = isset( $symbols[ $currency ] ) ? $symbols[ $currency ] : $currency . ' ';
 
-    return $symbol . number_format($amount, 2);
+	return $symbol . number_format( $amount, 2 );
 }
 
 /**
@@ -64,9 +64,10 @@ function booknow_format_price($amount, $currency = null) {
  * @param string $date Date string.
  * @return string
  */
-function booknow_format_date($date) {
-    $format = booknow_get_setting('general', 'date_format') ?: 'F j, Y';
-    return date($format, strtotime($date));
+function booknow_format_date( $date ) {
+	$format = booknow_get_setting( 'general', 'date_format' );
+	$format = $format ? $format : 'F j, Y';
+	return gmdate( $format, strtotime( $date ) );
 }
 
 /**
@@ -75,9 +76,10 @@ function booknow_format_date($date) {
  * @param string $time Time string.
  * @return string
  */
-function booknow_format_time($time) {
-    $format = booknow_get_setting('general', 'time_format') ?: 'g:i a';
-    return date($format, strtotime($time));
+function booknow_format_time( $time ) {
+	$format = booknow_get_setting( 'general', 'time_format' );
+	$format = $format ? $format : 'g:i a';
+	return gmdate( $format, strtotime( $time ) );
 }
 
 /**
@@ -86,16 +88,16 @@ function booknow_format_time($time) {
  * @param string $status Booking status.
  * @return string
  */
-function booknow_get_status_label($status) {
-    $labels = array(
-        'pending'   => __('Pending', 'book-now-kre8iv'),
-        'confirmed' => __('Confirmed', 'book-now-kre8iv'),
-        'completed' => __('Completed', 'book-now-kre8iv'),
-        'cancelled' => __('Cancelled', 'book-now-kre8iv'),
-        'no-show'   => __('No Show', 'book-now-kre8iv'),
-    );
+function booknow_get_status_label( $status ) {
+	$labels = array(
+		'pending'   => __( 'Pending', 'book-now-kre8iv' ),
+		'confirmed' => __( 'Confirmed', 'book-now-kre8iv' ),
+		'completed' => __( 'Completed', 'book-now-kre8iv' ),
+		'cancelled' => __( 'Cancelled', 'book-now-kre8iv' ),
+		'no-show'   => __( 'No Show', 'book-now-kre8iv' ),
+	);
 
-    return isset($labels[$status]) ? $labels[$status] : ucfirst($status);
+	return isset( $labels[ $status ] ) ? $labels[ $status ] : ucfirst( $status );
 }
 
 /**
@@ -104,15 +106,15 @@ function booknow_get_status_label($status) {
  * @param string $status Payment status.
  * @return string
  */
-function booknow_get_payment_status_label($status) {
-    $labels = array(
-        'pending'  => __('Pending', 'book-now-kre8iv'),
-        'paid'     => __('Paid', 'book-now-kre8iv'),
-        'refunded' => __('Refunded', 'book-now-kre8iv'),
-        'failed'   => __('Failed', 'book-now-kre8iv'),
-    );
+function booknow_get_payment_status_label( $status ) {
+	$labels = array(
+		'pending'  => __( 'Pending', 'book-now-kre8iv' ),
+		'paid'     => __( 'Paid', 'book-now-kre8iv' ),
+		'refunded' => __( 'Refunded', 'book-now-kre8iv' ),
+		'failed'   => __( 'Failed', 'book-now-kre8iv' ),
+	);
 
-    return isset($labels[$status]) ? $labels[$status] : ucfirst($status);
+	return isset( $labels[ $status ] ) ? $labels[ $status ] : ucfirst( $status );
 }
 
 /**
@@ -121,9 +123,9 @@ function booknow_get_payment_status_label($status) {
  * @param string $time Time string (HH:MM:SS or HH:MM).
  * @return int
  */
-function booknow_time_to_minutes($time) {
-    $parts = explode(':', $time);
-    return (int)$parts[0] * 60 + (int)$parts[1];
+function booknow_time_to_minutes( $time ) {
+	$parts = explode( ':', $time );
+	return (int) $parts[0] * 60 + (int) $parts[1];
 }
 
 /**
@@ -132,10 +134,10 @@ function booknow_time_to_minutes($time) {
  * @param int $minutes Number of minutes.
  * @return string
  */
-function booknow_minutes_to_time($minutes) {
-    $hours = floor($minutes / 60);
-    $mins = $minutes % 60;
-    return sprintf('%02d:%02d:00', $hours, $mins);
+function booknow_minutes_to_time( $minutes ) {
+	$hours = floor( $minutes / 60 );
+	$mins  = $minutes % 60;
+	return sprintf( '%02d:%02d:00', $hours, $mins );
 }
 
 /**
@@ -144,15 +146,17 @@ function booknow_minutes_to_time($minutes) {
  * @param string $date Date to check.
  * @return bool
  */
-function booknow_is_date_bookable($date) {
-    $min_hours = booknow_get_setting('general', 'min_booking_notice') ?: 24;
-    $max_days = booknow_get_setting('general', 'max_booking_advance') ?: 90;
+function booknow_is_date_bookable( $date ) {
+	$min_hours = booknow_get_setting( 'general', 'min_booking_notice' );
+	$min_hours = $min_hours ? $min_hours : 24;
+	$max_days  = booknow_get_setting( 'general', 'max_booking_advance' );
+	$max_days  = $max_days ? $max_days : 90;
 
-    $min_date = strtotime("+{$min_hours} hours");
-    $max_date = strtotime("+{$max_days} days");
-    $check_date = strtotime($date);
+	$min_date   = strtotime( "+{$min_hours} hours" );
+	$max_date   = strtotime( "+{$max_days} days" );
+	$check_date = strtotime( $date );
 
-    return $check_date >= $min_date && $check_date <= $max_date;
+	return $check_date >= $min_date && $check_date <= $max_date;
 }
 
 /**
@@ -161,9 +165,9 @@ function booknow_is_date_bookable($date) {
  * @param string $email Email address.
  * @return string|false
  */
-function booknow_sanitize_email($email) {
-    $email = sanitize_email($email);
-    return is_email($email) ? $email : false;
+function booknow_sanitize_email( $email ) {
+	$email = sanitize_email( $email );
+	return is_email( $email ) ? $email : false;
 }
 
 /**
@@ -172,8 +176,8 @@ function booknow_sanitize_email($email) {
  * @param string $phone Phone number.
  * @return string
  */
-function booknow_sanitize_phone($phone) {
-    return preg_replace('/[^0-9+\-() ]/', '', $phone);
+function booknow_sanitize_phone( $phone ) {
+	return preg_replace( '/[^0-9+\-() ]/', '', $phone );
 }
 
 /**
@@ -182,13 +186,14 @@ function booknow_sanitize_phone($phone) {
  * @param string $date Date string to validate.
  * @return bool
  */
-function booknow_validate_date($date) {
-    if (empty($date)) {
-        return false;
-    }
-    
-    $d = DateTime::createFromFormat('Y-m-d', $date);
-    return $d && $d->format('Y-m-d') === $date;
+function booknow_validate_date( $date ) {
+	if ( empty( $date ) ) {
+		return false;
+	}
+
+	// Check if date is in the past.
+	$d = DateTime::createFromFormat( 'Y-m-d', $date );
+	return $d && $d->format( 'Y-m-d' ) === $date;
 }
 
 /**
@@ -197,20 +202,20 @@ function booknow_validate_date($date) {
  * @param string $time Time string to validate.
  * @return bool
  */
-function booknow_validate_time($time) {
-    if (empty($time)) {
-        return false;
-    }
-    
-    // Try H:i:s format first
-    $t = DateTime::createFromFormat('H:i:s', $time);
-    if ($t && $t->format('H:i:s') === $time) {
-        return true;
-    }
-    
-    // Try H:i format
-    $t = DateTime::createFromFormat('H:i', $time);
-    return $t && $t->format('H:i') === $time;
+function booknow_validate_time( $time ) {
+	if ( empty( $time ) ) {
+		return false;
+	}
+
+	// Try H:i:s format first.
+	$t = DateTime::createFromFormat( 'H:i:s', $time );
+	if ( $t && $t->format( 'H:i:s' ) === $time ) {
+		return true;
+	}
+
+	// Try H:i format.
+	$t = DateTime::createFromFormat( 'H:i', $time );
+	return $t && $t->format( 'H:i' ) === $time;
 }
 
 /**
@@ -219,24 +224,24 @@ function booknow_validate_time($time) {
  * @param string $date Date to validate.
  * @return string|false Sanitized date or false on failure.
  */
-function booknow_validate_booking_date($date) {
-    $date = sanitize_text_field($date);
-    
-    if (!booknow_validate_date($date)) {
-        return false;
-    }
-    
-    // Check if date is in the past
-    if (strtotime($date) < strtotime('today')) {
-        return false;
-    }
-    
-    // Check if date is within booking window
-    if (!booknow_is_date_bookable($date)) {
-        return false;
-    }
-    
-    return $date;
+function booknow_validate_booking_date( $date ) {
+	$date = sanitize_text_field( $date );
+
+	if ( ! booknow_validate_date( $date ) ) {
+		return false;
+	}
+
+	// Check if date is in the past.
+	if ( strtotime( $date ) < strtotime( 'today' ) ) {
+		return false;
+	}
+
+	// Check if date is within booking window.
+	if ( ! booknow_is_date_bookable( $date ) ) {
+		return false;
+	}
+
+	return $date;
 }
 
 /**
@@ -245,17 +250,17 @@ function booknow_validate_booking_date($date) {
  * @param string $time Time to validate.
  * @return string|false Sanitized time or false on failure.
  */
-function booknow_validate_booking_time($time) {
-    $time = sanitize_text_field($time);
-    
-    if (!booknow_validate_time($time)) {
-        return false;
-    }
-    
-    // Normalize to H:i:s format
-    if (strlen($time) === 5) {
-        $time .= ':00';
-    }
-    
-    return $time;
+function booknow_validate_booking_time( $time ) {
+	$time = sanitize_text_field( $time );
+
+	if ( ! booknow_validate_time( $time ) ) {
+		return false;
+	}
+
+	// Normalize to H:i:s format.
+	if ( strlen( $time ) === 5 ) {
+		$time .= ':00';
+	}
+
+	return $time;
 }
