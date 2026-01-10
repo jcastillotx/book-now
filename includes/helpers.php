@@ -175,3 +175,87 @@ function booknow_sanitize_email($email) {
 function booknow_sanitize_phone($phone) {
     return preg_replace('/[^0-9+\-() ]/', '', $phone);
 }
+
+/**
+ * Validate date format (Y-m-d).
+ *
+ * @param string $date Date string to validate.
+ * @return bool
+ */
+function booknow_validate_date($date) {
+    if (empty($date)) {
+        return false;
+    }
+    
+    $d = DateTime::createFromFormat('Y-m-d', $date);
+    return $d && $d->format('Y-m-d') === $date;
+}
+
+/**
+ * Validate time format (H:i:s or H:i).
+ *
+ * @param string $time Time string to validate.
+ * @return bool
+ */
+function booknow_validate_time($time) {
+    if (empty($time)) {
+        return false;
+    }
+    
+    // Try H:i:s format first
+    $t = DateTime::createFromFormat('H:i:s', $time);
+    if ($t && $t->format('H:i:s') === $time) {
+        return true;
+    }
+    
+    // Try H:i format
+    $t = DateTime::createFromFormat('H:i', $time);
+    return $t && $t->format('H:i') === $time;
+}
+
+/**
+ * Validate and sanitize booking date.
+ *
+ * @param string $date Date to validate.
+ * @return string|false Sanitized date or false on failure.
+ */
+function booknow_validate_booking_date($date) {
+    $date = sanitize_text_field($date);
+    
+    if (!booknow_validate_date($date)) {
+        return false;
+    }
+    
+    // Check if date is in the past
+    if (strtotime($date) < strtotime('today')) {
+        return false;
+    }
+    
+    // Check if date is within booking window
+    if (!booknow_is_date_bookable($date)) {
+        return false;
+    }
+    
+    return $date;
+}
+
+/**
+ * Validate and sanitize booking time.
+ *
+ * @param string $time Time to validate.
+ * @return string|false Sanitized time or false on failure.
+ */
+function booknow_validate_booking_time($time) {
+    $time = sanitize_text_field($time);
+    
+    if (!booknow_validate_time($time)) {
+        return false;
+    }
+    
+    // Normalize to H:i:s format
+    if (strlen($time) === 5) {
+        $time .= ':00';
+    }
+    
+    return $time;
+}

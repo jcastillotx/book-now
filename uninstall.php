@@ -24,6 +24,7 @@ if ($delete_data) {
         $wpdb->prefix . 'booknow_availability',
         $wpdb->prefix . 'booknow_categories',
         $wpdb->prefix . 'booknow_email_log',
+        $wpdb->prefix . 'booknow_team_members',
     );
 
     foreach ($tables as $table) {
@@ -38,6 +39,8 @@ if ($delete_data) {
         'booknow_email_settings',
         'booknow_integration_settings',
         'booknow_delete_data_on_uninstall',
+        'booknow_setup_wizard_completed',
+        'booknow_setup_wizard_redirect',
     );
 
     foreach ($options as $option) {

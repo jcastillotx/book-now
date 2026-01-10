@@ -148,6 +148,18 @@ class Book_Now_Public {
             wp_send_json_error(array('message' => __('Invalid consultation type.', 'book-now-kre8iv')));
         }
 
+        // Validate and sanitize date
+        $booking_date = booknow_validate_booking_date($_POST['booking_date']);
+        if (!$booking_date) {
+            wp_send_json_error(array('message' => __('Invalid booking date. Please select a valid date.', 'book-now-kre8iv')));
+        }
+
+        // Validate and sanitize time
+        $booking_time = booknow_validate_booking_time($_POST['booking_time']);
+        if (!$booking_time) {
+            wp_send_json_error(array('message' => __('Invalid booking time. Please select a valid time.', 'book-now-kre8iv')));
+        }
+
         // Create booking data
         $booking_data = array(
             'consultation_type_id' => $consultation_type_id,
@@ -155,8 +167,8 @@ class Book_Now_Public {
             'customer_email'       => $email,
             'customer_phone'       => booknow_sanitize_phone($_POST['customer_phone'] ?? ''),
             'customer_notes'       => wp_kses_post($_POST['customer_notes'] ?? ''),
-            'booking_date'         => sanitize_text_field($_POST['booking_date']),
-            'booking_time'         => sanitize_text_field($_POST['booking_time']),
+            'booking_date'         => $booking_date,
+            'booking_time'         => $booking_time,
             'duration'             => $consultation_type->duration,
             'timezone'             => sanitize_text_field($_POST['timezone'] ?? booknow_get_setting('general', 'timezone')),
             'status'               => 'pending',
