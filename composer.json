@@ -24,6 +24,13 @@
             "BookNow\\": "includes/"
         }
     },
+    "scripts": {
+        "test": "phpunit",
+        "test:coverage": "phpunit --coverage-text",
+        "phpcs": "phpcs --standard=WordPress --extensions=php --ignore=vendor,node_modules,tests includes/ admin/class-*.php public/class-*.php book-now-kre8iv.php",
+        "phpcbf": "phpcbf --standard=WordPress --extensions=php --ignore=vendor,node_modules,tests includes/ admin/class-*.php public/class-*.php book-now-kre8iv.php",
+        "lint": "php -l includes/*.php admin/class-*.php public/class-*.php book-now-kre8iv.php"
+    },
     "config": {
         "optimize-autoloader": true,
         "sort-packages": true,
