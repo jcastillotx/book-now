@@ -56,12 +56,29 @@ if ($booking_id && isset($_GET['action']) && isset($_GET['_wpnonce'])) {
                 case 'sync_calendar':
                     $calendar_sync = new Book_Now_Calendar_Sync();
                     $results = $calendar_sync->manual_sync($booking_id);
-                    if (!empty($results)) {
-                        $notice = __('Calendar sync completed.', 'book-now-kre8iv');
-                        $notice_type = 'success';
-                    } else {
+
+                    if (empty($results)) {
                         $notice = __('No calendars configured or authenticated.', 'book-now-kre8iv');
                         $notice_type = 'warning';
+                    } else {
+                        $success_msgs = array();
+                        $error_msgs = array();
+
+                        foreach ($results as $provider => $status) {
+                            if ($status === 'error') {
+                                $error_msgs[] = sprintf(__('Sync with %s failed. Please check logs or re-authenticate.', 'book-now-kre8iv'), ucfirst($provider));
+                            } else {
+                                $success_msgs[] = sprintf(__('Sync with %s successful (%s).', 'book-now-kre8iv'), ucfirst($provider), $status);
+                            }
+                        }
+
+                        if (!empty($error_msgs)) {
+                            $notice = implode(' ', array_merge($error_msgs, $success_msgs));
+                            $notice_type = !empty($success_msgs) ? 'warning' : 'error';
+                        } else {
+                            $notice = implode(' ', $success_msgs);
+                            $notice_type = 'success';
+                        }
                     }
                     break;
             }
