@@ -72,6 +72,18 @@ Book Now is a powerful WordPress plugin that enables businesses to provide a sea
 - **SSL Certificate:** Required for Stripe payments
 - **Composer:** For dependency management
 
+## Technology Stack
+
+- **Backend:** PHP 8.0+, WordPress Plugin API, REST API
+- **Frontend:** JavaScript (ES6+), jQuery, HTML5, CSS3
+- **Payments:** Stripe PHP SDK, Stripe.js & Elements
+- **Calendar APIs:** Google Calendar API, Microsoft Graph API
+- **Dependencies:** Composer for PHP, npm for frontend assets
+
+## Versioning
+
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/jcastillotx/book-now/tags). The latest stable version is **1.3.1**. For a detailed list of changes, please refer to the [CHANGELOG.md](CHANGELOG.md).
+
 ## Installation
 
 ### Quick Installation
@@ -390,58 +402,17 @@ This plugin is licensed under the GPL v2 or later.
 
 ## Changelog
 
-### 1.0.0 - 2026-01-08
+### [1.3.1] - 2026-01-17
 
-**🎉 Initial Release - 100% Feature Complete**
+#### Fixed
+- **Critical Bug:** Corrected a fatal PHP error in the admin bookings list caused by duplicated code.
+- **Calendar Timezones:** Added explicit timezones when creating `DateTime` objects for Google and Microsoft calendar integrations to prevent crashes and incorrect time calculations.
+- **Calendar Sync Feedback:** Improved user feedback for the manual "Sync Calendar" action to accurately report success or failure for each provider.
 
-#### Core Features
-- ✅ Complete booking system with CRUD operations
-- ✅ Consultation type management with categories
-- ✅ Hierarchical category system
-- ✅ Advanced availability rules (weekly, specific dates, blocks)
-- ✅ Smart slot calculation with conflict detection
+#### Changed
+- **Error Handling:** Enhanced the booking creation process to show detailed database errors on the frontend for faster debugging.
 
-#### Payment Integration
-- ✅ Stripe payment processing (Payment Intents API)
-- ✅ Deposit support (fixed amount or percentage)
-- ✅ Refund processing (full and partial)
-- ✅ Webhook handling for payment events
-
-#### Calendar Synchronization
-- ✅ Google Calendar bidirectional sync
-- ✅ Microsoft Calendar bidirectional sync
-- ✅ OAuth 2.0 authentication
-- ✅ Automatic event creation and updates
-
-#### Email Notifications
-- ✅ Automated confirmation emails
-- ✅ Reminder emails (scheduled via WP-Cron)
-- ✅ Cancellation and refund notifications
-- ✅ Admin notifications
-- ✅ Customizable HTML templates
-
-#### Admin Interface
-- ✅ Comprehensive dashboard with statistics
-- ✅ Booking management interface
-- ✅ Consultation type management
-- ✅ Category management
-- ✅ Availability settings
-- ✅ Complete settings pages
-
-#### Frontend Components
-- ✅ Multi-step booking wizard
-- ✅ Calendar view
-- ✅ List view
-- ✅ Consultation types grid
-- ✅ Stripe Elements integration
-- ✅ Mobile responsive design
-
-#### Developer Features
-- ✅ REST API (20+ endpoints)
-- ✅ Comprehensive hooks and filters
-- ✅ WordPress Coding Standards compliant
-- ✅ Security hardened
-- ✅ Full documentation
+For a detailed history, see the full [CHANGELOG.md](CHANGELOG.md).
 
 ## Credits
 
@@ -449,7 +420,7 @@ Developed by **Kre8iv Tech**
 
 ---
 
-**Version:** 1.0.0  
+**Version:** 1.3.1  
 **Requires WordPress:** 6.0+  
 **Tested up to:** 6.4  
 **PHP:** 8.0+  
