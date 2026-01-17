@@ -86,6 +86,10 @@ if ($booking_id && isset($_GET['action']) && isset($_GET['_wpnonce'])) {
                 }
                 break;
         }
+    } else {
+        // Nonce verification failed; inform the user instead of failing silently.
+        $notice = __('Security check failed. The requested action could not be completed. Please try again.', 'book-now-kre8iv');
+        $notice_type = 'error';
     }
 }
 
