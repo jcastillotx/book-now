@@ -327,9 +327,13 @@ class Book_Now_Booking {
         } else {
             $wpdb->query('ROLLBACK');
             if (!is_wp_error($result)) {
+                $error_message = __('Failed to create booking. Please try again.', 'book-now-kre8iv');
+                if (!empty($wpdb->last_error)) {
+                    $error_message .= ' (DB Error: ' . $wpdb->last_error . ')';
+                }
                 return new WP_Error(
                     'create_failed',
-                    __('Failed to create booking. Please try again.', 'book-now-kre8iv'),
+                    $error_message,
                     array('status' => 500)
                 );
             }
