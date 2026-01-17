@@ -496,18 +496,14 @@ class Book_Now_Microsoft_Calendar {
         ));
 
         if (is_wp_error($response)) {
-            if (defined('WP_DEBUG') && WP_DEBUG) {
-                error_log('BookNow Microsoft Calendar: Token refresh failed - ' . $response->get_error_message());
-            }
+            Book_Now_Logger::error('Microsoft Calendar token refresh failed', array('error' => $response->get_error_message()));
             return false;
         }
 
         $body = json_decode(wp_remote_retrieve_body($response), true);
 
         if (isset($body['error']) || empty($body['access_token'])) {
-            if (defined('WP_DEBUG') && WP_DEBUG) {
-                error_log('BookNow Microsoft Calendar: Token refresh error - ' . ($body['error_description'] ?? $body['error'] ?? 'Unknown error'));
-            }
+            Book_Now_Logger::error('Microsoft Calendar token refresh error', array('error' => $body['error_description'] ?? $body['error'] ?? 'Unknown error'));
             return false;
         }
 

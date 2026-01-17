@@ -30,7 +30,8 @@ if ($current_tab === 'integration') {
             require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-google-calendar.php';
         }
         $google_calendar = new Book_Now_Google_Calendar();
-        $result = $google_calendar->handle_oauth_callback(sanitize_text_field(wp_unslash($_GET['code'])));
+        $state = isset($_GET['state']) ? sanitize_text_field(wp_unslash($_GET['state'])) : '';
+        $result = $google_calendar->handle_oauth_callback(sanitize_text_field(wp_unslash($_GET['code'])), $state);
 
         if (is_wp_error($result)) {
             $oauth_error = $result->get_error_message();

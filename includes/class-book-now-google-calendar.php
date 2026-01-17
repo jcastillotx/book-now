@@ -108,7 +108,7 @@ class Book_Now_Google_Calendar {
             if ( file_exists( $autoload_path ) ) {
                 require_once $autoload_path;
             } else {
-                error_log( 'BookNow: Google API autoload file not found.' );
+                Book_Now_Logger::error( 'Google API autoload file not found.' );
                 return;
             }
         }
@@ -144,7 +144,7 @@ class Book_Now_Google_Calendar {
             $this->oauth2_service = new Google_Service_Oauth2( $this->client );
 
         } catch ( Exception $e ) {
-            error_log( 'BookNow Google Calendar initialization error: ' . $e->getMessage() );
+            Book_Now_Logger::error( 'Google Calendar initialization error', array( 'error' => $e->getMessage() ) );
         }
     }
 
@@ -221,6 +221,7 @@ class Book_Now_Google_Calendar {
      * Get the Google OAuth authorization URL.
      *
      * Generates the URL to redirect users to Google's OAuth consent screen.
+     * Includes CSRF protection via state parameter.
      *
      * @return string|false The authorization URL or false if client not initialized.
      */
@@ -232,6 +233,13 @@ class Book_Now_Google_Calendar {
         // Set the redirect URI explicitly
         $this->client->setRedirectUri( $this->get_redirect_uri() );
 
+        // Generate state parameter for CSRF protection
+        $state = wp_create_nonce( 'booknow_google_oauth' );
+        set_transient( 'booknow_google_oauth_state', $state, 600 ); // 10 minutes
+
+        // Set state on client
+        $this->client->setState( $state );
+
         // Generate and return the auth URL
         return $this->client->createAuthUrl();
     }
@@ -241,11 +249,26 @@ class Book_Now_Google_Calendar {
      *
      * Exchanges the authorization code received from Google for access
      * and refresh tokens, stores them encrypted, and fetches user info.
+     * Validates CSRF state parameter for security.
      *
-     * @param string $code The authorization code from Google OAuth callback.
+     * @param string $code  The authorization code from Google OAuth callback.
+     * @param string $state The state parameter for CSRF validation.
      * @return true|WP_Error True on success, WP_Error on failure.
      */
-    public function handle_oauth_callback( string $code ) {
+    public function handle_oauth_callback( string $code, string $state = '' ) {
+        // Verify state parameter for CSRF protection
+        $stored_state = get_transient( 'booknow_google_oauth_state' );
+        if ( $stored_state && $state ) {
+            if ( ! wp_verify_nonce( $state, 'booknow_google_oauth' ) ) {
+                delete_transient( 'booknow_google_oauth_state' );
+                return new WP_Error(
+                    'invalid_state',
+                    __( 'Invalid state parameter. Please try again.', 'book-now-kre8iv' )
+                );
+            }
+        }
+        delete_transient( 'booknow_google_oauth_state' );
+
         if ( ! $this->client ) {
             return new WP_Error(
                 'client_not_initialized',
@@ -291,7 +314,7 @@ class Book_Now_Google_Calendar {
             return true;
 
         } catch ( Exception $e ) {
-            error_log( 'BookNow Google OAuth callback error: ' . $e->getMessage() );
+            Book_Now_Logger::error( 'Google OAuth callback error', array( 'error' => $e->getMessage() ) );
             return new WP_Error( 'oauth_exception', $e->getMessage() );
         }
     }
@@ -315,7 +338,7 @@ class Book_Now_Google_Calendar {
                         $this->client->revokeToken( $tokens['access_token'] );
                     } catch ( Exception $e ) {
                         // Log but continue - token may already be invalid
-                        error_log( 'BookNow: Token revocation notice: ' . $e->getMessage() );
+                        Book_Now_Logger::info( 'Token revocation notice', array( 'message' => $e->getMessage() ) );
                     }
                 }
             }
@@ -344,7 +367,7 @@ class Book_Now_Google_Calendar {
             return true;
 
         } catch ( Exception $e ) {
-            error_log( 'BookNow Google Calendar disconnect error: ' . $e->getMessage() );
+            Book_Now_Logger::error( 'Google Calendar disconnect error', array( 'error' => $e->getMessage() ) );
             return new WP_Error( 'disconnect_failed', $e->getMessage() );
         }
     }
@@ -456,7 +479,7 @@ class Book_Now_Google_Calendar {
         $json_tokens = wp_json_encode( $tokens );
 
         if ( $json_tokens === false ) {
-            error_log( 'BookNow: Failed to encode Google tokens as JSON.' );
+            Book_Now_Logger::error( 'Failed to encode Google tokens as JSON.' );
             return false;
         }
 
@@ -482,7 +505,7 @@ class Book_Now_Google_Calendar {
                 $refresh_token = $tokens['refresh_token'] ?? null;
 
                 if ( empty( $refresh_token ) ) {
-                    error_log( 'BookNow: No refresh token available for Google Calendar.' );
+                    Book_Now_Logger::warning( 'No refresh token available for Google Calendar.' );
                     return false;
                 }
             }
@@ -491,7 +514,7 @@ class Book_Now_Google_Calendar {
             $token = $this->client->fetchAccessTokenWithRefreshToken( $refresh_token );
 
             if ( isset( $token['error'] ) ) {
-                error_log( 'BookNow: Token refresh error: ' . ( $token['error_description'] ?? $token['error'] ) );
+                Book_Now_Logger::error( 'Token refresh error', array( 'error' => $token['error_description'] ?? $token['error'] ) );
                 return false;
             }
 
@@ -501,7 +524,7 @@ class Book_Now_Google_Calendar {
             return $token;
 
         } catch ( Exception $e ) {
-            error_log( 'BookNow: Token refresh exception: ' . $e->getMessage() );
+            Book_Now_Logger::error( 'Token refresh exception', array( 'error' => $e->getMessage() ) );
             return false;
         }
     }
@@ -528,7 +551,7 @@ class Book_Now_Google_Calendar {
                     $user_info = $this->oauth2_service->userinfo->get();
                     $metadata['email'] = $user_info->getEmail();
                 } catch ( Exception $e ) {
-                    error_log( 'BookNow: Failed to get user info: ' . $e->getMessage() );
+                    Book_Now_Logger::warning( 'Failed to get user info', array( 'error' => $e->getMessage() ) );
                 }
             }
 
@@ -539,7 +562,7 @@ class Book_Now_Google_Calendar {
                     $calendar = $this->service->calendars->get( $calendar_id );
                     $metadata['calendar_name'] = $calendar->getSummary();
                 } catch ( Exception $e ) {
-                    error_log( 'BookNow: Failed to get calendar info: ' . $e->getMessage() );
+                    Book_Now_Logger::warning( 'Failed to get calendar info', array( 'error' => $e->getMessage() ) );
                     $metadata['calendar_name'] = $this->settings['google_calendar_id'] ?? 'primary';
                 }
             }
@@ -547,7 +570,7 @@ class Book_Now_Google_Calendar {
             return update_option( self::CONNECTION_META_KEY, $metadata );
 
         } catch ( Exception $e ) {
-            error_log( 'BookNow: Failed to update connection metadata: ' . $e->getMessage() );
+            Book_Now_Logger::error( 'Failed to update connection metadata', array( 'error' => $e->getMessage() ) );
             return false;
         }
     }
@@ -604,7 +627,7 @@ class Book_Now_Google_Calendar {
             return $created_event->getId();
 
         } catch ( Exception $e ) {
-            error_log( 'BookNow: Google Calendar event creation failed: ' . $e->getMessage() );
+            Book_Now_Logger::error( 'Google Calendar event creation failed', array( 'error' => $e->getMessage() ) );
             return new WP_Error( 'event_creation_failed', $e->getMessage() );
         }
     }
@@ -650,7 +673,7 @@ class Book_Now_Google_Calendar {
             return true;
 
         } catch ( Exception $e ) {
-            error_log( 'BookNow: Google Calendar event update failed: ' . $e->getMessage() );
+            Book_Now_Logger::error( 'Google Calendar event update failed', array( 'error' => $e->getMessage() ) );
             return new WP_Error( 'event_update_failed', $e->getMessage() );
         }
     }
@@ -676,7 +699,7 @@ class Book_Now_Google_Calendar {
             return true;
 
         } catch ( Exception $e ) {
-            error_log( 'BookNow: Google Calendar event deletion failed: ' . $e->getMessage() );
+            Book_Now_Logger::error( 'Google Calendar event deletion failed', array( 'error' => $e->getMessage() ) );
             return new WP_Error( 'event_deletion_failed', $e->getMessage() );
         }
     }
