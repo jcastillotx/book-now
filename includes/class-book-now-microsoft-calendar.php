@@ -604,52 +604,58 @@ class Book_Now_Microsoft_Calendar {
      * @return string|\WP_Error Event ID or WP_Error.
      */
     public function create_event(object $booking) {
-        $type = Book_Now_Consultation_Type::get($booking->consultation_type_id);
+        try {
+            $type = Book_Now_Consultation_Type::get($booking->consultation_type_id);
 
-        // Use booking duration as fallback if type not found
-        $duration = $type ? $type->duration : ( $booking->duration ?? 60 );
-        $type_name = $type ? $type->name : __( 'Consultation', 'book-now-kre8iv' );
+            // Use booking duration as fallback if type not found
+            $duration = $type ? $type->duration : ( $booking->duration ?? 60 );
+            $type_name = $type ? $type->name : __( 'Consultation', 'book-now-kre8iv' );
 
-        $timezone = booknow_get_setting('general', 'timezone') ?: 'UTC';
-        $tz_object = new DateTimeZone($timezone);
+            $timezone = booknow_get_setting('general', 'timezone') ?: 'UTC';
+            $tz_object = new DateTimeZone($timezone);
 
-        $start_datetime = new DateTime($booking->booking_date . ' ' . $booking->booking_time, $tz_object);
-        $end_datetime = clone $start_datetime;
-        $end_datetime->add(new DateInterval('PT' . $duration . 'M'));
+            $start_datetime = new DateTime($booking->booking_date . ' ' . $booking->booking_time, $tz_object);
+            $end_datetime = clone $start_datetime;
+            $end_datetime->add(new DateInterval('PT' . $duration . 'M'));
 
-        $event_data = array(
-            'subject' => $type_name . ' - ' . $booking->customer_name,
-            'body'    => array(
-                'contentType' => 'text',
-                'content'     => $this->build_event_description($booking, $type),
-            ),
-            'start' => array(
-                'dateTime' => $start_datetime->format('Y-m-d\TH:i:s'),
-                'timeZone' => $timezone,
-            ),
-            'end' => array(
-                'dateTime' => $end_datetime->format('Y-m-d\TH:i:s'),
-                'timeZone' => $timezone,
-            ),
-            'attendees' => array(
-                array(
-                    'emailAddress' => array(
-                        'address' => $booking->customer_email,
-                        'name'    => $booking->customer_name,
-                    ),
-                    'type' => 'required',
+            $event_data = array(
+                'subject' => $type_name . ' - ' . $booking->customer_name,
+                'body'    => array(
+                    'contentType' => 'text',
+                    'content'     => $this->build_event_description($booking, $type),
                 ),
-            ),
-            'reminderMinutesBeforeStart' => 30,
-        );
+                'start' => array(
+                    'dateTime' => $start_datetime->format('Y-m-d\TH:i:s'),
+                    'timeZone' => $timezone,
+                ),
+                'end' => array(
+                    'dateTime' => $end_datetime->format('Y-m-d\TH:i:s'),
+                    'timeZone' => $timezone,
+                ),
+                'attendees' => array(
+                    array(
+                        'emailAddress' => array(
+                            'address' => $booking->customer_email,
+                            'name'    => $booking->customer_name,
+                        ),
+                        'type' => 'required',
+                    ),
+                ),
+                'reminderMinutesBeforeStart' => 30,
+            );
 
-        $result = $this->api_request('/me/events', 'POST', $event_data);
+            $result = $this->api_request('/me/events', 'POST', $event_data);
 
-        if (is_wp_error($result)) {
-            return $result;
+            if (is_wp_error($result)) {
+                return $result;
+            }
+
+            return $result['id'] ?? '';
+
+        } catch (Exception $e) {
+            Book_Now_Logger::error('Microsoft Calendar event creation failed', array('error' => $e->getMessage()));
+            return new WP_Error('event_creation_failed', $e->getMessage());
         }
-
-        return $result['id'] ?? '';
     }
 
     /**
@@ -660,38 +666,48 @@ class Book_Now_Microsoft_Calendar {
      * @return bool|\WP_Error True on success, WP_Error on failure.
      */
     public function update_event(string $event_id, object $booking) {
-        $type = Book_Now_Consultation_Type::get($booking->consultation_type_id);
+        try {
+            $type = Book_Now_Consultation_Type::get($booking->consultation_type_id);
 
-        // Use booking duration as fallback if type not found
-        $duration = $type ? $type->duration : ( $booking->duration ?? 60 );
-        $type_name = $type ? $type->name : __( 'Consultation', 'book-now-kre8iv' );
+            // Use booking duration as fallback if type not found
+            $duration = $type ? $type->duration : ( $booking->duration ?? 60 );
+            $type_name = $type ? $type->name : __( 'Consultation', 'book-now-kre8iv' );
 
-        $timezone = booknow_get_setting('general', 'timezone') ?: 'UTC';
-        $tz_object = new DateTimeZone($timezone);
+            $timezone = booknow_get_setting('general', 'timezone') ?: 'UTC';
+            $tz_object = new DateTimeZone($timezone);
 
-        $start_datetime = new DateTime($booking->booking_date . ' ' . $booking->booking_time, $tz_object);
-        $end_datetime = clone $start_datetime;
-        $end_datetime->add(new DateInterval('PT' . $duration . 'M'));
+            $start_datetime = new DateTime($booking->booking_date . ' ' . $booking->booking_time, $tz_object);
+            $end_datetime = clone $start_datetime;
+            $end_datetime->add(new DateInterval('PT' . $duration . 'M'));
 
-        $event_data = array(
-            'subject' => $type_name . ' - ' . $booking->customer_name,
-            'body'    => array(
-                'contentType' => 'text',
-                'content'     => $this->build_event_description($booking, $type),
-            ),
-            'start' => array(
-                'dateTime' => $start_datetime->format('Y-m-d\TH:i:s'),
-                'timeZone' => $timezone,
-            ),
-            'end' => array(
-                'dateTime' => $end_datetime->format('Y-m-d\TH:i:s'),
-                'timeZone' => $timezone,
-            ),
-        );
+            $event_data = array(
+                'subject' => $type_name . ' - ' . $booking->customer_name,
+                'body'    => array(
+                    'contentType' => 'text',
+                    'content'     => $this->build_event_description($booking, $type),
+                ),
+                'start' => array(
+                    'dateTime' => $start_datetime->format('Y-m-d\TH:i:s'),
+                    'timeZone' => $timezone,
+                ),
+                'end' => array(
+                    'dateTime' => $end_datetime->format('Y-m-d\TH:i:s'),
+                    'timeZone' => $timezone,
+                ),
+            );
 
-        $result = $this->api_request('/me/events/' . $event_id, 'PATCH', $event_data);
+            $result = $this->api_request('/me/events/' . $event_id, 'PATCH', $event_data);
 
-        return !is_wp_error($result);
+            if (is_wp_error($result)) {
+                return $result;
+            }
+
+            return true;
+
+        } catch (Exception $e) {
+            Book_Now_Logger::error('Microsoft Calendar event update failed', array('error' => $e->getMessage()));
+            return new WP_Error('event_update_failed', $e->getMessage());
+        }
     }
 
     /**
@@ -712,7 +728,7 @@ class Book_Now_Microsoft_Calendar {
      * @param object $type    Consultation type object.
      * @return string Event description.
      */
-    private function build_event_description(object $booking, object $type): string {
+    private function build_event_description(object $booking, ?object $type): string {
         $description = "Booking Reference: {$booking->reference_number}\n\n";
         $description .= "Customer: {$booking->customer_name}\n";
         $description .= "Email: {$booking->customer_email}\n";
