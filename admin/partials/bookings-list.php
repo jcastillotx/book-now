@@ -19,6 +19,12 @@ if (!current_user_can('manage_options')) {
 // Check if viewing a single booking
 $booking_id = isset($_GET['id']) ? absint($_GET['id']) : 0;
 
+// Get notice from redirect if present
+if (isset($_GET['booknow_notice'])) {
+    $notice = sanitize_text_field(wp_unslash($_GET['booknow_notice']));
+    $notice_type = isset($_GET['booknow_notice_type']) ? sanitize_text_field($_GET['booknow_notice_type']) : 'info';
+}
+
 // Handle booking actions (confirm, cancel, etc.)
 if ($booking_id && isset($_GET['action']) && isset($_GET['_wpnonce'])) {
     $action = sanitize_text_field($_GET['action']);
@@ -54,6 +60,17 @@ if ($booking_id && isset($_GET['action']) && isset($_GET['_wpnonce'])) {
                     $notice_type = $sent ? 'success' : 'error';
                     break;
                 case 'sync_calendar':
+                    // Load required calendar classes
+                    if (!class_exists('Book_Now_Calendar_Sync')) {
+                        require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-calendar-sync.php';
+                    }
+                    if (!class_exists('Book_Now_Google_Calendar')) {
+                        require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-google-calendar.php';
+                    }
+                    if (!class_exists('Book_Now_Microsoft_Calendar')) {
+                        require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-microsoft-calendar.php';
+                    }
+
                     $calendar_sync = new Book_Now_Calendar_Sync();
                     $results = $calendar_sync->manual_sync($booking_id);
 

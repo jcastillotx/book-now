@@ -295,12 +295,15 @@ class Book_Now_Availability {
     /**
      * Check if a time slot is already booked.
      *
+     * Checks both local bookings AND connected calendars (Google/Microsoft).
+     *
      * @param string $date     Date (Y-m-d).
      * @param string $time     Time (HH:MM:SS).
      * @param int    $duration Duration in minutes.
      * @return bool
      */
     private static function is_slot_booked($date, $time, $duration) {
+        // Check local bookings in WordPress database
         $bookings = Book_Now_Booking::get_by_date($date);
 
         $slot_start = booknow_time_to_minutes($time);
@@ -313,6 +316,28 @@ class Book_Now_Availability {
             // Check for overlap
             if ($slot_start < $booking_end && $slot_end > $booking_start) {
                 return true;
+            }
+        }
+
+        // Check connected calendars (Google Calendar, Microsoft Calendar)
+        if (class_exists('Book_Now_Calendar_Sync')) {
+            // Load calendar classes if not already loaded
+            if (!class_exists('Book_Now_Google_Calendar')) {
+                require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-google-calendar.php';
+            }
+            if (!class_exists('Book_Now_Microsoft_Calendar')) {
+                require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-microsoft-calendar.php';
+            }
+
+            $calendar_sync = new Book_Now_Calendar_Sync();
+
+            // Check if time is available in all connected calendars
+            // is_time_available() returns false if the time is busy in any calendar
+            $is_calendar_available = $calendar_sync->is_time_available($date, $time, $duration);
+
+            // If calendar check returns false, the slot is busy
+            if ($is_calendar_available === false) {
+                return true; // Slot is booked (busy in calendar)
             }
         }
 
