@@ -92,9 +92,9 @@ class Book_Now_Availability {
         $result = $wpdb->insert($table, array(
             'rule_type'             => sanitize_text_field($data['rule_type']),
             'day_of_week'           => isset($data['day_of_week']) ? absint($data['day_of_week']) : null,
-            'specific_date'         => $data['specific_date'] ?? null,
-            'start_time'            => $data['start_time'] ?? null,
-            'end_time'              => $data['end_time'] ?? null,
+            'specific_date'         => isset($data['specific_date']) ? sanitize_text_field($data['specific_date']) : null,
+            'start_time'            => isset($data['start_time']) ? sanitize_text_field($data['start_time']) : null,
+            'end_time'              => isset($data['end_time']) ? sanitize_text_field($data['end_time']) : null,
             'is_available'          => isset($data['is_available']) ? (int)$data['is_available'] : 1,
             'consultation_type_id'  => isset($data['consultation_type_id']) ? absint($data['consultation_type_id']) : null,
             'priority'              => absint($data['priority'] ?? 0),
@@ -133,15 +133,15 @@ class Book_Now_Availability {
             $format[] = '%d';
         }
         if (isset($data['specific_date'])) {
-            $update_data['specific_date'] = $data['specific_date'];
+            $update_data['specific_date'] = sanitize_text_field($data['specific_date']);
             $format[] = '%s';
         }
         if (isset($data['start_time'])) {
-            $update_data['start_time'] = $data['start_time'];
+            $update_data['start_time'] = sanitize_text_field($data['start_time']);
             $format[] = '%s';
         }
         if (isset($data['end_time'])) {
-            $update_data['end_time'] = $data['end_time'];
+            $update_data['end_time'] = sanitize_text_field($data['end_time']);
             $format[] = '%s';
         }
         if (isset($data['is_available'])) {

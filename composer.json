@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "php": ">=8.0",
+        "php": ">=8.1",
         "stripe/stripe-php": "^10.0",
         "google/apiclient": "^2.15",
         "microsoft/microsoft-graph": "^1.109"

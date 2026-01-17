@@ -16,16 +16,16 @@ class Book_Now_Activator {
 	 * @since 1.0.0
 	 */
 	public static function activate() {
-		// Check PHP version
-		if ( version_compare( PHP_VERSION, '8.0', '<' ) ) {
+		// Check PHP version (8.1 required for Google API dependencies)
+		if ( version_compare( PHP_VERSION, '8.1', '<' ) ) {
 			deactivate_plugins( BOOK_NOW_BASENAME );
 			wp_die(
 				'<h1>' . __( 'Plugin Activation Failed', 'book-now-kre8iv' ) . '</h1>' .
 				'<p>' . sprintf(
-					__( 'Book Now requires PHP version 8.0 or higher. You are running PHP %s.', 'book-now-kre8iv' ),
+					__( 'Book Now requires PHP version 8.1 or higher. You are running PHP %s.', 'book-now-kre8iv' ),
 					PHP_VERSION
 				) . '</p>' .
-				'<p><a href="' . admin_url( 'plugins.php' ) . '">' . __( 'Return to Plugins', 'book-now-kre8iv' ) . '</a></p>',
+				'<p><a href="' . esc_url( admin_url( 'plugins.php' ) ) . '">' . __( 'Return to Plugins', 'book-now-kre8iv' ) . '</a></p>',
 				__( 'Plugin Activation Failed', 'book-now-kre8iv' ),
 				array( 'back_link' => true )
 			);

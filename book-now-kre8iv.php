@@ -5,7 +5,7 @@
  * Description:       A comprehensive WordPress plugin for consultation booking with Stripe payments and calendar integration.
  * Version:           1.1.0
  * Requires at least: 6.0
- * Requires PHP:      8.0
+ * Requires PHP:      8.1
  * Author:            Kre8iv Tech
  * Author URI:        https://kre8ivtech.com
  * License:           GPL v2 or later

@@ -447,7 +447,7 @@ class Book_Now_Email {
                         <?php endif; ?>
                     </div>
                     
-                    <p><a href="<?php echo admin_url('admin.php?page=book-now-bookings'); ?>"><?php _e('View in Admin', 'book-now-kre8iv'); ?></a></p>
+                    <p><a href="<?php echo esc_url(admin_url('admin.php?page=book-now-bookings')); ?>"><?php esc_html_e('View in Admin', 'book-now-kre8iv'); ?></a></p>
                 </div>
             </div>
         </body>

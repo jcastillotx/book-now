@@ -354,20 +354,31 @@ class Book_Now_Public_AJAX {
 
     /**
      * Get booking details by reference number.
+     * Requires email verification to prevent IDOR attacks.
      */
     public function get_booking_details() {
         check_ajax_referer('booknow_public_nonce', 'nonce');
 
         $reference = isset($_POST['reference']) ? sanitize_text_field($_POST['reference']) : '';
+        $email = isset($_POST['email']) ? sanitize_email($_POST['email']) : '';
 
         if (!$reference) {
             wp_send_json_error(array('message' => __('Reference number is required.', 'book-now-kre8iv')));
+        }
+
+        if (!$email) {
+            wp_send_json_error(array('message' => __('Email address is required for verification.', 'book-now-kre8iv')));
         }
 
         $booking = Book_Now_Booking::get_by_reference($reference);
 
         if (!$booking) {
             wp_send_json_error(array('message' => __('Booking not found.', 'book-now-kre8iv')));
+        }
+
+        // Verify email matches booking (case-insensitive)
+        if (strtolower($email) !== strtolower($booking->customer_email)) {
+            wp_send_json_error(array('message' => __('Email verification failed. Please use the email address used for this booking.', 'book-now-kre8iv')));
         }
 
         // Get consultation type details
@@ -381,20 +392,31 @@ class Book_Now_Public_AJAX {
 
     /**
      * Cancel a booking.
+     * Requires email verification to prevent unauthorized cancellations.
      */
     public function cancel_booking() {
         check_ajax_referer('booknow_public_nonce', 'nonce');
 
         $reference = isset($_POST['reference']) ? sanitize_text_field($_POST['reference']) : '';
+        $email = isset($_POST['email']) ? sanitize_email($_POST['email']) : '';
 
         if (!$reference) {
             wp_send_json_error(array('message' => __('Reference number is required.', 'book-now-kre8iv')));
+        }
+
+        if (!$email) {
+            wp_send_json_error(array('message' => __('Email address is required for verification.', 'book-now-kre8iv')));
         }
 
         $booking = Book_Now_Booking::get_by_reference($reference);
 
         if (!$booking) {
             wp_send_json_error(array('message' => __('Booking not found.', 'book-now-kre8iv')));
+        }
+
+        // Verify email matches booking (case-insensitive)
+        if (strtolower($email) !== strtolower($booking->customer_email)) {
+            wp_send_json_error(array('message' => __('Email verification failed. Please use the email address used for this booking.', 'book-now-kre8iv')));
         }
 
         // Check if booking can be cancelled
