@@ -25,7 +25,7 @@ if ($show_types) {
 }
 ?>
 
-<div class="booknow-form-wrapper">
+<form class="booknow-form-wrapper" method="post">
     <?php wp_nonce_field('booknow_booking', 'booknow_nonce'); ?>
 
     <!-- Step 1: Select Consultation Type -->
@@ -128,4 +128,4 @@ if ($show_types) {
         <p class="confirmation-message"></p>
         <p><?php esc_html_e('You will receive a confirmation email shortly.', 'book-now-kre8iv'); ?></p>
     </div>
-</div>
+</form>
