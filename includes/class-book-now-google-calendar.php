@@ -592,8 +592,8 @@ class Book_Now_Google_Calendar {
         try {
             $type = Book_Now_Consultation_Type::get( $booking->consultation_type_id );
 
-            // Parse booking date and time
-            $start_datetime = new DateTime( $booking->booking_date . ' ' . $booking->booking_time );
+            $timezone       = new DateTimeZone( booknow_get_setting( 'general', 'timezone' ) ?: 'UTC' );
+            $start_datetime = new DateTime( $booking->booking_date . ' ' . $booking->booking_time, $timezone );
             $end_datetime   = clone $start_datetime;
             $end_datetime->add( new DateInterval( 'PT' . $type->duration . 'M' ) );
 
@@ -653,7 +653,8 @@ class Book_Now_Google_Calendar {
 
             $type = Book_Now_Consultation_Type::get( $booking->consultation_type_id );
 
-            $start_datetime = new DateTime( $booking->booking_date . ' ' . $booking->booking_time );
+            $timezone       = new DateTimeZone( booknow_get_setting( 'general', 'timezone' ) ?: 'UTC' );
+            $start_datetime = new DateTime( $booking->booking_date . ' ' . $booking->booking_time, $timezone );
             $end_datetime   = clone $start_datetime;
             $end_datetime->add( new DateInterval( 'PT' . $type->duration . 'M' ) );
 
@@ -804,7 +805,8 @@ class Book_Now_Google_Calendar {
         }
 
         try {
-            $start_datetime = new DateTime( $date . ' ' . $time );
+            $timezone       = new DateTimeZone( booknow_get_setting( 'general', 'timezone' ) ?: 'UTC' );
+            $start_datetime = new DateTime( $date . ' ' . $time, $timezone );
             $end_datetime   = clone $start_datetime;
             $end_datetime->add( new DateInterval( 'PT' . $duration . 'M' ) );
 
@@ -842,8 +844,9 @@ class Book_Now_Google_Calendar {
         }
 
         try {
-            $start_datetime = new DateTime( $date_from . ' 00:00:00' );
-            $end_datetime   = new DateTime( $date_to . ' 23:59:59' );
+            $timezone       = new DateTimeZone( booknow_get_setting( 'general', 'timezone' ) ?: 'UTC' );
+            $start_datetime = new DateTime( $date_from . ' 00:00:00', $timezone );
+            $end_datetime   = new DateTime( $date_to . ' 23:59:59', $timezone );
 
             $calendar_id = $this->settings['google_calendar_id'] ?? 'primary';
 

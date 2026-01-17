@@ -606,11 +606,12 @@ class Book_Now_Microsoft_Calendar {
     public function create_event(object $booking) {
         $type = Book_Now_Consultation_Type::get($booking->consultation_type_id);
 
-        $start_datetime = new DateTime($booking->booking_date . ' ' . $booking->booking_time);
+        $timezone = booknow_get_setting('general', 'timezone') ?: 'UTC';
+        $tz_object = new DateTimeZone($timezone);
+
+        $start_datetime = new DateTime($booking->booking_date . ' ' . $booking->booking_time, $tz_object);
         $end_datetime = clone $start_datetime;
         $end_datetime->add(new DateInterval('PT' . $type->duration . 'M'));
-
-        $timezone = booknow_get_setting('general', 'timezone') ?: 'UTC';
 
         $event_data = array(
             'subject' => $type->name . ' - ' . $booking->customer_name,
@@ -657,11 +658,12 @@ class Book_Now_Microsoft_Calendar {
     public function update_event(string $event_id, object $booking) {
         $type = Book_Now_Consultation_Type::get($booking->consultation_type_id);
 
-        $start_datetime = new DateTime($booking->booking_date . ' ' . $booking->booking_time);
+        $timezone = booknow_get_setting('general', 'timezone') ?: 'UTC';
+        $tz_object = new DateTimeZone($timezone);
+
+        $start_datetime = new DateTime($booking->booking_date . ' ' . $booking->booking_time, $tz_object);
         $end_datetime = clone $start_datetime;
         $end_datetime->add(new DateInterval('PT' . $type->duration . 'M'));
-
-        $timezone = booknow_get_setting('general', 'timezone') ?: 'UTC';
 
         $event_data = array(
             'subject' => $type->name . ' - ' . $booking->customer_name,
@@ -750,7 +752,10 @@ class Book_Now_Microsoft_Calendar {
             return new WP_Error('not_authenticated', __('Microsoft Calendar not authenticated.', 'book-now-kre8iv'));
         }
 
-        $start_datetime = new DateTime($date . ' ' . $time);
+        $timezone = booknow_get_setting('general', 'timezone') ?: 'UTC';
+        $tz_object = new DateTimeZone($timezone);
+
+        $start_datetime = new DateTime($date . ' ' . $time, $tz_object);
         $end_datetime = clone $start_datetime;
         $end_datetime->add(new DateInterval('PT' . $duration . 'M'));
 
@@ -781,8 +786,11 @@ class Book_Now_Microsoft_Calendar {
             return new WP_Error('not_authenticated', __('Microsoft Calendar not authenticated.', 'book-now-kre8iv'));
         }
 
-        $start_datetime = new DateTime($date_from . ' 00:00:00');
-        $end_datetime = new DateTime($date_to . ' 23:59:59');
+        $timezone = booknow_get_setting('general', 'timezone') ?: 'UTC';
+        $tz_object = new DateTimeZone($timezone);
+
+        $start_datetime = new DateTime($date_from . ' 00:00:00', $tz_object);
+        $end_datetime = new DateTime($date_to . ' 23:59:59', $tz_object);
 
         $start_str = $start_datetime->format('Y-m-d\TH:i:s');
         $end_str = $end_datetime->format('Y-m-d\TH:i:s');
