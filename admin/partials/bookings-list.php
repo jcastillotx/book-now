@@ -98,6 +98,24 @@ if ($booking_id && isset($_GET['action']) && isset($_GET['_wpnonce'])) {
         $notice = __('Security check failed. The requested action could not be completed. Please try again.', 'book-now-kre8iv');
         $notice_type = 'error';
     }
+
+    // Redirect to a clean URL to prevent action re-execution on page refresh (PRG pattern).
+    $redirect_url = remove_query_arg(
+        array('action', '_wpnonce', 'booknow_notice', 'booknow_notice_type')
+    );
+
+    if (!empty($notice) && !empty($notice_type)) {
+        $redirect_url = add_query_arg(
+            array(
+                'booknow_notice'       => rawurlencode($notice),
+                'booknow_notice_type'  => $notice_type,
+            ),
+            $redirect_url
+        );
+    }
+
+    wp_redirect($redirect_url);
+    exit;
 }
 
 // Get single booking or all bookings
