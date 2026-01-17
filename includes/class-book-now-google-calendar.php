@@ -592,14 +592,18 @@ class Book_Now_Google_Calendar {
         try {
             $type = Book_Now_Consultation_Type::get( $booking->consultation_type_id );
 
+            // Use booking duration as fallback if type not found
+            $duration = $type ? $type->duration : ( $booking->duration ?? 60 );
+            $type_name = $type ? $type->name : __( 'Consultation', 'book-now-kre8iv' );
+
             $timezone       = new DateTimeZone( booknow_get_setting( 'general', 'timezone' ) ?: 'UTC' );
             $start_datetime = new DateTime( $booking->booking_date . ' ' . $booking->booking_time, $timezone );
             $end_datetime   = clone $start_datetime;
-            $end_datetime->add( new DateInterval( 'PT' . $type->duration . 'M' ) );
+            $end_datetime->add( new DateInterval( 'PT' . $duration . 'M' ) );
 
             // Create event
             $event = new Google_Service_Calendar_Event( array(
-                'summary'     => $type->name . ' - ' . $booking->customer_name,
+                'summary'     => $type_name . ' - ' . $booking->customer_name,
                 'description' => $this->build_event_description( $booking, $type ),
                 'start'       => array(
                     'dateTime' => $start_datetime->format( 'c' ),
@@ -653,12 +657,16 @@ class Book_Now_Google_Calendar {
 
             $type = Book_Now_Consultation_Type::get( $booking->consultation_type_id );
 
+            // Use booking duration as fallback if type not found
+            $duration = $type ? $type->duration : ( $booking->duration ?? 60 );
+            $type_name = $type ? $type->name : __( 'Consultation', 'book-now-kre8iv' );
+
             $timezone       = new DateTimeZone( booknow_get_setting( 'general', 'timezone' ) ?: 'UTC' );
             $start_datetime = new DateTime( $booking->booking_date . ' ' . $booking->booking_time, $timezone );
             $end_datetime   = clone $start_datetime;
-            $end_datetime->add( new DateInterval( 'PT' . $type->duration . 'M' ) );
+            $end_datetime->add( new DateInterval( 'PT' . $duration . 'M' ) );
 
-            $event->setSummary( $type->name . ' - ' . $booking->customer_name );
+            $event->setSummary( $type_name . ' - ' . $booking->customer_name );
             $event->setDescription( $this->build_event_description( $booking, $type ) );
             $event->setStart( new Google_Service_Calendar_EventDateTime( array(
                 'dateTime' => $start_datetime->format( 'c' ),

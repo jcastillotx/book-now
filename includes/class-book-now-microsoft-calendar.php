@@ -606,15 +606,19 @@ class Book_Now_Microsoft_Calendar {
     public function create_event(object $booking) {
         $type = Book_Now_Consultation_Type::get($booking->consultation_type_id);
 
+        // Use booking duration as fallback if type not found
+        $duration = $type ? $type->duration : ( $booking->duration ?? 60 );
+        $type_name = $type ? $type->name : __( 'Consultation', 'book-now-kre8iv' );
+
         $timezone = booknow_get_setting('general', 'timezone') ?: 'UTC';
         $tz_object = new DateTimeZone($timezone);
 
         $start_datetime = new DateTime($booking->booking_date . ' ' . $booking->booking_time, $tz_object);
         $end_datetime = clone $start_datetime;
-        $end_datetime->add(new DateInterval('PT' . $type->duration . 'M'));
+        $end_datetime->add(new DateInterval('PT' . $duration . 'M'));
 
         $event_data = array(
-            'subject' => $type->name . ' - ' . $booking->customer_name,
+            'subject' => $type_name . ' - ' . $booking->customer_name,
             'body'    => array(
                 'contentType' => 'text',
                 'content'     => $this->build_event_description($booking, $type),
@@ -658,15 +662,19 @@ class Book_Now_Microsoft_Calendar {
     public function update_event(string $event_id, object $booking) {
         $type = Book_Now_Consultation_Type::get($booking->consultation_type_id);
 
+        // Use booking duration as fallback if type not found
+        $duration = $type ? $type->duration : ( $booking->duration ?? 60 );
+        $type_name = $type ? $type->name : __( 'Consultation', 'book-now-kre8iv' );
+
         $timezone = booknow_get_setting('general', 'timezone') ?: 'UTC';
         $tz_object = new DateTimeZone($timezone);
 
         $start_datetime = new DateTime($booking->booking_date . ' ' . $booking->booking_time, $tz_object);
         $end_datetime = clone $start_datetime;
-        $end_datetime->add(new DateInterval('PT' . $type->duration . 'M'));
+        $end_datetime->add(new DateInterval('PT' . $duration . 'M'));
 
         $event_data = array(
-            'subject' => $type->name . ' - ' . $booking->customer_name,
+            'subject' => $type_name . ' - ' . $booking->customer_name,
             'body'    => array(
                 'contentType' => 'text',
                 'content'     => $this->build_event_description($booking, $type),
