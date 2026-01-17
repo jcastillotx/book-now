@@ -52,12 +52,37 @@ if ($booking_id && isset($_GET['action']) && isset($_GET['_wpnonce'])) {
             case 'sync_calendar':
                 $calendar_sync = new Book_Now_Calendar_Sync();
                 $results = $calendar_sync->manual_sync($booking_id);
-                if (!empty($results)) {
-                    $notice = __('Calendar sync completed.', 'book-now-kre8iv');
-                    $notice_type = 'success';
-                } else {
+                if (empty($results)) {
                     $notice = __('No calendars configured or authenticated.', 'book-now-kre8iv');
                     $notice_type = 'warning';
+                } elseif (is_array($results)) {
+                    $has_success = false;
+                    $has_error   = false;
+
+                    foreach ($results as $provider => $status) {
+                        if ($status === 'success') {
+                            $has_success = true;
+                        }
+                        if ($status === 'error') {
+                            $has_error = true;
+                        }
+                    }
+
+                    if ($has_success && !$has_error) {
+                        $notice = __('Calendar sync completed.', 'book-now-kre8iv');
+                        $notice_type = 'success';
+                    } elseif ($has_success && $has_error) {
+                        $notice = __('Calendar sync completed with some errors.', 'book-now-kre8iv');
+                        $notice_type = 'warning';
+                    } else {
+                        // No successful syncs; treat as failure.
+                        $notice = __('Calendar sync failed for all calendars.', 'book-now-kre8iv');
+                        $notice_type = 'error';
+                    }
+                } else {
+                    // Non-empty, non-array result; treat as generic success for backward compatibility.
+                    $notice = __('Calendar sync completed.', 'book-now-kre8iv');
+                    $notice_type = 'success';
                 }
                 break;
         }
