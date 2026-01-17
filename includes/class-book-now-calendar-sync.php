@@ -33,6 +33,7 @@ class Book_Now_Calendar_Sync {
 
         // Hook into booking actions
         add_action('booknow_booking_created', array($this, 'sync_booking_created'), 10, 1);
+        add_action('booknow_booking_confirmed', array($this, 'sync_booking_confirmed'), 10, 1);
         add_action('booknow_booking_updated', array($this, 'sync_booking_updated'), 10, 1);
         add_action('booknow_booking_cancelled', array($this, 'sync_booking_cancelled'), 10, 1);
     }
@@ -64,6 +65,44 @@ class Book_Now_Calendar_Sync {
         if ($this->is_microsoft_enabled() && $this->microsoft->is_authenticated()) {
             $event_id = $this->microsoft->create_event($booking);
             
+            if (!is_wp_error($event_id)) {
+                Book_Now_Booking::update($booking_id, array(
+                    'microsoft_event_id' => $event_id,
+                ));
+            }
+        }
+    }
+
+    /**
+     * Sync booking confirmation to calendars
+     *
+     * Called when a booking status is changed to 'confirmed' (e.g., after payment or manual confirmation)
+     *
+     * @param int $booking_id Booking ID
+     */
+    public function sync_booking_confirmed($booking_id) {
+        $booking = Book_Now_Booking::get($booking_id);
+
+        if (!$booking) {
+            return;
+        }
+
+        // Create calendar events if they don't exist yet
+        // Sync to Google Calendar
+        if ($this->is_google_enabled() && $this->google->is_authenticated() && empty($booking->google_event_id)) {
+            $event_id = $this->google->create_event($booking);
+
+            if (!is_wp_error($event_id)) {
+                Book_Now_Booking::update($booking_id, array(
+                    'google_event_id' => $event_id,
+                ));
+            }
+        }
+
+        // Sync to Microsoft Calendar
+        if ($this->is_microsoft_enabled() && $this->microsoft->is_authenticated() && empty($booking->microsoft_event_id)) {
+            $event_id = $this->microsoft->create_event($booking);
+
             if (!is_wp_error($event_id)) {
                 Book_Now_Booking::update($booking_id, array(
                     'microsoft_event_id' => $event_id,

@@ -1537,3 +1537,123 @@
         padding-bottom: 4px;
     }
 }
+
+/* ==========================================================================
+   Booking Detail View
+   ========================================================================== */
+.booknow-back-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--booknow-gray-500);
+    text-decoration: none;
+    margin-right: 8px;
+}
+
+.booknow-back-link:hover {
+    color: var(--booknow-primary);
+}
+
+.booknow-booking-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.booknow-booking-actions .button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.booknow-booking-actions .button .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+.booknow-booking-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+.booknow-detail-section {
+    background: var(--booknow-gray-50);
+    border-radius: var(--booknow-radius);
+    padding: 20px;
+}
+
+.booknow-detail-section h3 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--booknow-border-light);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--booknow-gray-800);
+}
+
+.booknow-detail-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.booknow-detail-table tr {
+    border-bottom: 1px solid var(--booknow-border-light);
+}
+
+.booknow-detail-table tr:last-child {
+    border-bottom: none;
+}
+
+.booknow-detail-table th,
+.booknow-detail-table td {
+    padding: 10px 0;
+    text-align: left;
+    vertical-align: top;
+}
+
+.booknow-detail-table th {
+    width: 140px;
+    font-weight: 500;
+    color: var(--booknow-gray-500);
+    font-size: 13px;
+}
+
+.booknow-detail-table td {
+    color: var(--booknow-gray-800);
+}
+
+.booknow-detail-table td a {
+    color: var(--booknow-primary);
+    text-decoration: none;
+}
+
+.booknow-detail-table td a:hover {
+    text-decoration: underline;
+}
+
+.booknow-detail-table code {
+    padding: 2px 6px;
+    background: var(--booknow-gray-100);
+    border-radius: 3px;
+    font-size: 12px;
+    word-break: break-all;
+}
+
+@media screen and (max-width: 782px) {
+    .booknow-booking-detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .booknow-booking-actions {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .booknow-detail-table th {
+        width: 100px;
+    }
+}
