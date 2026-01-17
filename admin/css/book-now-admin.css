@@ -176,6 +176,120 @@
     color: #2271b1;
 }
 
+/* Calendar Integration Cards */
+.booknow-calendar-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.booknow-calendar-card {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: border-color 0.2s ease;
+}
+
+.booknow-calendar-card:hover {
+    border-color: #2271b1;
+}
+
+.booknow-calendar-card.connected {
+    border-left: 4px solid #00a32a;
+}
+
+.booknow-calendar-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 20px;
+    background: #f6f7f7;
+    border-bottom: 1px solid #ccd0d4;
+}
+
+.booknow-calendar-card-header h3 {
+    margin: 0;
+    flex-grow: 1;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.booknow-calendar-card-header .dashicons {
+    width: 24px;
+    height: 24px;
+}
+
+.booknow-connection-status {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.booknow-connection-status.status-connected {
+    background: #d6f4d6;
+    color: #007017;
+}
+
+.booknow-connection-status.status-disconnected {
+    background: #f0f0f1;
+    color: #50575e;
+}
+
+.booknow-calendar-card-body {
+    padding: 20px;
+}
+
+.booknow-calendar-card-body .description {
+    margin: 0 0 15px 0;
+    color: #50575e;
+}
+
+.booknow-connection-details {
+    margin-bottom: 15px;
+}
+
+.booknow-connection-details p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 8px 0;
+    font-size: 13px;
+}
+
+.booknow-connection-details p .dashicons {
+    color: #2271b1;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+}
+
+.booknow-connection-details p strong {
+    min-width: 80px;
+}
+
+.booknow-calendar-card-actions {
+    padding-top: 10px;
+    border-top: 1px solid #f0f0f1;
+}
+
+.booknow-calendar-card-actions .button {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.booknow-calendar-card-actions .button .dashicons {
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+}
+
 /* Responsive */
 @media screen and (max-width: 782px) {
     .booknow-stats-row {
@@ -187,6 +301,25 @@
     }
 
     .booknow-quick-links .button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .booknow-calendar-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .booknow-calendar-card-header {
+        flex-wrap: wrap;
+    }
+
+    .booknow-calendar-card-header h3 {
+        order: -1;
+        width: calc(100% - 40px);
+    }
+
+    .booknow-connection-status {
+        margin-top: 10px;
         width: 100%;
         text-align: center;
     }

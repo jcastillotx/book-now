@@ -336,8 +336,8 @@ class Book_Now_Stripe {
      */
     private function handle_dispute($dispute) {
         // Log dispute for admin review
-        error_log('Stripe Dispute Created: ' . $dispute->id);
-        
+        Book_Now_Logger::warning( 'Stripe Dispute Created', array( 'dispute_id' => $dispute->id ) );
+
         do_action('booknow_payment_dispute', $dispute);
     }
 }

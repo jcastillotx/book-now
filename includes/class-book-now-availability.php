@@ -103,7 +103,7 @@ class Book_Now_Availability {
         ));
 
         if ($result === false) {
-            error_log('BookNow DB Error in create_availability: ' . $wpdb->last_error);
+            Book_Now_Logger::error( 'DB Error in create_availability', array( 'error' => $wpdb->last_error ) );
             return false;
         }
 

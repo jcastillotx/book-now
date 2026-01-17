@@ -142,7 +142,7 @@ class Book_Now_Consultation_Type {
         ));
 
         if ($result === false) {
-            error_log('BookNow DB Error in create_consultation_type: ' . $wpdb->last_error);
+            Book_Now_Logger::error( 'DB Error in create_consultation_type', array( 'error' => $wpdb->last_error ) );
             return false;
         }
 

@@ -11,6 +11,11 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
+// Security check - verify user has admin capabilities
+if (!current_user_can('manage_options')) {
+    wp_die(__('You do not have sufficient permissions to access this page.', 'book-now-kre8iv'));
+}
+
 // Get all bookings
 $bookings = Book_Now_Booking::get_all(array('limit' => 100));
 ?>

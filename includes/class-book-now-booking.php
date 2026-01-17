@@ -152,7 +152,7 @@ class Book_Now_Booking {
         ));
 
         if ($result === false) {
-            error_log('BookNow DB Error in create_booking: ' . $wpdb->last_error);
+            Book_Now_Logger::error( 'DB Error in create_booking', array( 'error' => $wpdb->last_error ) );
             return false;
         }
 

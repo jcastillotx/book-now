@@ -27,16 +27,82 @@ class Book_Now_Encryption {
     const ENCRYPTED_PREFIX = '$BNENC$';
 
     /**
+     * Transient name for tracking fallback key usage warning.
+     *
+     * @var string
+     */
+    const FALLBACK_KEY_TRANSIENT = 'booknow_fallback_key_warning';
+
+    /**
      * Get the encryption key derived from WordPress AUTH_KEY.
      *
      * @return string 32-byte encryption key.
      */
     private static function get_key() {
         // Use WordPress AUTH_KEY as the base for our encryption key
-        $auth_key = defined( 'AUTH_KEY' ) && AUTH_KEY ? AUTH_KEY : 'booknow-default-key-change-me';
+        if ( defined( 'AUTH_KEY' ) && AUTH_KEY && AUTH_KEY !== 'put your unique phrase here' ) {
+            $auth_key = AUTH_KEY;
+        } else {
+            $auth_key = 'booknow-default-key-change-me';
+            // Set transient to trigger admin warning (expires in 1 hour / session-like behavior)
+            if ( ! get_transient( self::FALLBACK_KEY_TRANSIENT ) ) {
+                set_transient( self::FALLBACK_KEY_TRANSIENT, true, HOUR_IN_SECONDS );
+            }
+        }
 
         // Derive a 32-byte key using SHA-256
         return hash( 'sha256', $auth_key . 'booknow_encryption_salt', true );
+    }
+
+    /**
+     * Check if encryption is using the fallback key instead of AUTH_KEY.
+     *
+     * @return bool True if using fallback key, false if AUTH_KEY is properly configured.
+     */
+    public static function is_using_fallback_key() {
+        return ! defined( 'AUTH_KEY' ) || ! AUTH_KEY || AUTH_KEY === 'put your unique phrase here';
+    }
+
+    /**
+     * Initialize admin notice hooks for fallback key warning.
+     *
+     * Should be called during plugin initialization.
+     *
+     * @return void
+     */
+    public static function init_admin_notices() {
+        add_action( 'admin_notices', array( __CLASS__, 'display_fallback_key_warning' ) );
+    }
+
+    /**
+     * Display admin notice warning about fallback encryption key usage.
+     *
+     * Only displays if:
+     * - User can manage options
+     * - Fallback key transient is set (meaning fallback was used)
+     * - Currently using fallback key
+     *
+     * @return void
+     */
+    public static function display_fallback_key_warning() {
+        // Only show to administrators
+        if ( ! current_user_can( 'manage_options' ) ) {
+            return;
+        }
+
+        // Only show if transient is set (fallback key was used) and still using fallback
+        if ( ! get_transient( self::FALLBACK_KEY_TRANSIENT ) || ! self::is_using_fallback_key() ) {
+            return;
+        }
+
+        ?>
+        <div class="notice notice-warning is-dismissible">
+            <p>
+                <strong><?php esc_html_e( 'Book Now Warning:', 'book-now-kre8iv' ); ?></strong>
+                <?php esc_html_e( "Your site's AUTH_KEY is not properly configured. API keys are being encrypted with a fallback key which is less secure. Please ensure AUTH_KEY is defined in your wp-config.php file.", 'book-now-kre8iv' ); ?>
+            </p>
+        </div>
+        <?php
     }
 
     /**
