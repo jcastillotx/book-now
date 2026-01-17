@@ -26,7 +26,6 @@ if ($booking_id && isset($_GET['action']) && isset($_GET['_wpnonce'])) {
     if (wp_verify_nonce($_GET['_wpnonce'], 'booknow_booking_action_' . $booking_id)) {
         switch ($action) {
             case 'confirm':
-                $old_booking = Book_Now_Booking::get($booking_id);
                 Book_Now_Booking::update($booking_id, array('status' => 'confirmed'));
                 do_action('booknow_booking_confirmed', $booking_id);
                 $notice = __('Booking confirmed successfully. Calendar sync triggered.', 'book-now-kre8iv');
