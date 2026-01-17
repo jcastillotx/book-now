@@ -24,30 +24,7 @@ if ($booking_id && isset($_GET['action']) && isset($_GET['_wpnonce'])) {
     $action = sanitize_text_field($_GET['action']);
 
     if (wp_verify_nonce($_GET['_wpnonce'], 'booknow_booking_action_' . $booking_id)) {
-        switch ($action) {
-            case 'confirm':
-                Book_Now_Booking::update($booking_id, array('status' => 'confirmed'));
-                do_action('booknow_booking_confirmed', $booking_id);
-                $notice = __('Booking confirmed successfully. Calendar sync triggered.', 'book-now-kre8iv');
-                $notice_type = 'success';
-                break;
-            case 'cancel':
-                Book_Now_Booking::update($booking_id, array('status' => 'cancelled'));
-                do_action('booknow_booking_cancelled', $booking_id);
-                $notice = __('Booking cancelled.', 'book-now-kre8iv');
-                $notice_type = 'warning';
-                break;
-            case 'complete':
-                Book_Now_Booking::update($booking_id, array('status' => 'completed'));
-                $notice = __('Booking marked as completed.', 'book-now-kre8iv');
-                $notice_type = 'success';
-                break;
-            case 'resend_email':
-                $email = new Book_Now_Email();
-                $sent = $email->send_confirmation_email($booking_id);
-                $notice = $sent ? __('Confirmation email sent.', 'book-now-kre8iv') : __('Failed to send email. Check email settings.', 'book-now-kre8iv');
-                $notice_type = $sent ? 'success' : 'error';
-                break;
+
         $existing_booking = Book_Now_Booking::get($booking_id);
 
         if ($existing_booking) {
