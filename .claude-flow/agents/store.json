@@ -1,0 +1,38 @@
+{
+  "agents": {
+    "agent-1768622216628-ewa723": {
+      "agentId": "agent-1768622216628-ewa723",
+      "agentType": "coder",
+      "status": "idle",
+      "health": 1,
+      "taskCount": 0,
+      "config": {
+        "provider": "anthropic"
+      },
+      "createdAt": "2026-01-17T03:56:56.628Z"
+    },
+    "agent-1768622245110-uc9172": {
+      "agentId": "agent-1768622245110-uc9172",
+      "agentType": "reviewer",
+      "status": "idle",
+      "health": 1,
+      "taskCount": 0,
+      "config": {
+        "provider": "anthropic"
+      },
+      "createdAt": "2026-01-17T03:57:25.110Z"
+    },
+    "agent-1768623583103-qopxpn": {
+      "agentId": "agent-1768623583103-qopxpn",
+      "agentType": "reviewer",
+      "status": "idle",
+      "health": 1,
+      "taskCount": 0,
+      "config": {
+        "provider": "anthropic"
+      },
+      "createdAt": "2026-01-17T04:19:43.103Z"
+    }
+  },
+  "version": "3.0.0"
+}
