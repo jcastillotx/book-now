@@ -63,3 +63,6 @@ phpunit.xml
 # Deployment
 *.zip
 /releases/
+
+# Claude Flow runtime files
+.claude-flow/
