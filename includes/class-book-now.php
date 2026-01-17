@@ -69,6 +69,10 @@ class Book_Now {
         require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-booking.php';
         require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-availability.php';
 
+        // Security classes
+        require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-rate-limiter.php';
+        require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-encryption.php';
+
         // Integration classes
         require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-stripe.php';
         require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-notifications.php';

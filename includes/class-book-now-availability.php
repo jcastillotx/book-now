@@ -232,6 +232,18 @@ class Book_Now_Availability {
      *
      * @param string $date              Date (Y-m-d).
      * @param int    $day_of_week       Day of week (0-6).
+     * @param int    $consultation_type_id Consultation type ID (optional).
+     * @return array
+     */
+    public static function get_for_date($date, $day_of_week, $consultation_type_id = null) {
+        return self::get_rules_for_date($date, $day_of_week, $consultation_type_id);
+    }
+
+    /**
+     * Get availability rules for a specific date (internal method).
+     *
+     * @param string $date              Date (Y-m-d).
+     * @param int    $day_of_week       Day of week (0-6).
      * @param int    $consultation_type_id Consultation type ID.
      * @return array
      */

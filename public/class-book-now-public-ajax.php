@@ -136,7 +136,7 @@ class Book_Now_Public_AJAX {
         }
 
         wp_send_json_success(array(
-            'slots' => $slots,
+            'slots' => $filtered_slots,
             'date' => $date,
         ));
     }
@@ -280,7 +280,7 @@ class Book_Now_Public_AJAX {
             }
         }
 
-        // Create booking
+        // Create booking data
         $booking_data = array(
             'consultation_type_id' => $consultation_type_id,
             'booking_date'         => $date,
@@ -289,16 +289,23 @@ class Book_Now_Public_AJAX {
             'customer_name'        => $name,
             'customer_email'       => $email,
             'customer_phone'       => $phone,
-            'notes'                => $notes,
+            'customer_notes'       => $notes,
             'price'                => $type->price,
             'deposit_amount'       => $deposit_amount,
             'status'               => 'pending',
             'payment_status'       => 'pending',
         );
 
-        $booking_id = Book_Now_Booking::create($booking_data);
+        // Create booking with atomic lock to prevent race conditions
+        // This ensures that concurrent requests cannot double-book the same slot
+        $booking_id = Book_Now_Booking::create_with_lock($booking_data);
 
         if (is_wp_error($booking_id)) {
+            $error_message = $booking_id->get_error_message();
+            wp_send_json_error(array('message' => $error_message));
+        }
+
+        if (!$booking_id) {
             wp_send_json_error(array('message' => __('Failed to create booking. Please try again.', 'book-now-kre8iv')));
         }
 
@@ -334,8 +341,7 @@ class Book_Now_Public_AJAX {
             }
         }
 
-        // Trigger post-booking actions (calendar sync, email)
-        do_action('booknow_booking_created', $booking_id);
+        // Note: 'booknow_booking_created' action is already fired in Book_Now_Booking::create()
 
         wp_send_json_success(array(
             'booking'        => $booking,
@@ -415,7 +421,7 @@ class Book_Now_Public_AJAX {
                 if (!is_wp_error($refund_result)) {
                     Book_Now_Booking::update($booking->id, array(
                         'payment_status' => 'refunded',
-                        'refund_id' => $refund_result['refund_id'],
+                        'refund_id' => $refund_result->id,
                     ));
                 }
             }

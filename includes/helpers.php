@@ -26,10 +26,13 @@ function booknow_get_setting( $group, $key = null ) {
 /**
  * Generate a unique booking reference number.
  *
- * @return string
+ * Uses cryptographically secure random bytes for unpredictable reference numbers.
+ * Generates 12 hex characters (281 trillion combinations) prefixed with 'BN'.
+ *
+ * @return string Reference number in format BN + 12 uppercase hex chars (e.g., BN1A2B3C4D5E6F).
  */
 function booknow_generate_reference_number() {
-	return 'BN' . strtoupper( substr( uniqid(), -8 ) );
+	return 'BN' . strtoupper( bin2hex( random_bytes( 6 ) ) );
 }
 
 /**

@@ -79,6 +79,18 @@ class Book_Now_Booking {
     /**
      * Get a single booking by ID.
      *
+     * Alias for get_by_id() for backwards compatibility.
+     *
+     * @param int $id Booking ID.
+     * @return object|null
+     */
+    public static function get($id) {
+        return self::get_by_id($id);
+    }
+
+    /**
+     * Get a single booking by ID.
+     *
      * @param int $id Booking ID.
      * @return object|null
      */
@@ -269,6 +281,64 @@ class Book_Now_Booking {
     }
 
     /**
+     * Create a new booking with atomic slot reservation to prevent race conditions.
+     *
+     * Uses database-level locking (SELECT FOR UPDATE) within a transaction to ensure
+     * that no two concurrent requests can book the same time slot.
+     *
+     * @param array $data Booking data.
+     * @return int|WP_Error Booking ID on success, WP_Error on failure or conflict.
+     */
+    public static function create_with_lock($data) {
+        global $wpdb;
+        $table = $wpdb->prefix . 'booknow_bookings';
+
+        // Start transaction for atomic operation
+        $wpdb->query('START TRANSACTION');
+
+        // Lock and check for conflicting bookings at the same date/time/type
+        // FOR UPDATE ensures exclusive lock on matching rows
+        $conflict = $wpdb->get_var($wpdb->prepare(
+            "SELECT id FROM {$table}
+            WHERE booking_date = %s
+            AND booking_time = %s
+            AND consultation_type_id = %d
+            AND status NOT IN ('cancelled', 'no-show')
+            FOR UPDATE",
+            sanitize_text_field($data['booking_date']),
+            sanitize_text_field($data['booking_time']),
+            absint($data['consultation_type_id'])
+        ));
+
+        if ($conflict) {
+            $wpdb->query('ROLLBACK');
+            return new WP_Error(
+                'slot_taken',
+                __('This time slot was just booked by another customer. Please select a different time.', 'book-now-kre8iv'),
+                array('status' => 409)
+            );
+        }
+
+        // Create the booking using existing create() logic
+        $result = self::create($data);
+
+        if ($result && !is_wp_error($result)) {
+            $wpdb->query('COMMIT');
+        } else {
+            $wpdb->query('ROLLBACK');
+            if (!is_wp_error($result)) {
+                return new WP_Error(
+                    'create_failed',
+                    __('Failed to create booking. Please try again.', 'book-now-kre8iv'),
+                    array('status' => 500)
+                );
+            }
+        }
+
+        return $result;
+    }
+
+    /**
      * Get booking statistics.
      *
      * @return array
@@ -278,7 +348,7 @@ class Book_Now_Booking {
         $table = $wpdb->prefix . 'booknow_bookings';
 
         return array(
-            'total'     => (int) $wpdb->get_var("SELECT COUNT(*) FROM {$table}"),
+            'total'     => (int) $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM {$table} WHERE 1=%d", 1)),
             'pending'   => (int) $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM {$table} WHERE status = %s", 'pending')),
             'confirmed' => (int) $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM {$table} WHERE status = %s", 'confirmed')),
             'completed' => (int) $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM {$table} WHERE status = %s", 'completed')),

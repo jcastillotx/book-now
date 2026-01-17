@@ -66,6 +66,18 @@ class Book_Now_Consultation_Type {
     /**
      * Get a single consultation type by ID.
      *
+     * Alias for get_by_id() for backwards compatibility.
+     *
+     * @param int $id Consultation type ID.
+     * @return object|null
+     */
+    public static function get($id) {
+        return self::get_by_id($id);
+    }
+
+    /**
+     * Get a single consultation type by ID.
+     *
      * @param int $id Consultation type ID.
      * @return object|null
      */

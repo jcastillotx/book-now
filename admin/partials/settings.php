@@ -36,16 +36,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['booknow_settings_nonc
                 break;
 
             case 'payment':
+                // Get existing settings to preserve unchanged masked values
+                $existing_settings = Book_Now_Encryption::get_payment_settings();
+
+                // Helper to check if a masked value was submitted unchanged
+                $get_key_value = function($field, $existing) {
+                    $submitted = isset($_POST[$field]) ? sanitize_text_field($_POST[$field]) : '';
+                    // If submitted value is all asterisks (masked), keep existing
+                    if (preg_match('/^\*+.{0,4}$/', $submitted) && !empty($existing[$field])) {
+                        return $existing[$field];
+                    }
+                    return $submitted;
+                };
+
                 $settings = array(
                     'stripe_mode'                 => sanitize_text_field($_POST['stripe_mode'] ?? 'test'),
                     'stripe_test_publishable_key' => sanitize_text_field($_POST['stripe_test_publishable_key'] ?? ''),
-                    'stripe_test_secret_key'      => sanitize_text_field($_POST['stripe_test_secret_key'] ?? ''),
+                    'stripe_test_secret_key'      => $get_key_value('stripe_test_secret_key', $existing_settings),
                     'stripe_live_publishable_key' => sanitize_text_field($_POST['stripe_live_publishable_key'] ?? ''),
-                    'stripe_live_secret_key'      => sanitize_text_field($_POST['stripe_live_secret_key'] ?? ''),
+                    'stripe_live_secret_key'      => $get_key_value('stripe_live_secret_key', $existing_settings),
                     'payment_required'            => isset($_POST['payment_required']),
                     'allow_deposit'               => isset($_POST['allow_deposit']),
                 );
-                update_option('booknow_payment_settings', $settings);
+                // Use encryption class to save with automatic encryption
+                Book_Now_Encryption::save_payment_settings($settings);
                 break;
 
             case 'email':
@@ -62,17 +76,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['booknow_settings_nonc
                 break;
 
             case 'integration':
+                // Get existing settings to preserve unchanged masked values
+                $existing_integration = Book_Now_Encryption::get_integration_settings();
+
+                // Helper to check if a masked value was submitted unchanged
+                $get_secret_value = function($field, $existing) {
+                    $submitted = isset($_POST[$field]) ? sanitize_text_field($_POST[$field]) : '';
+                    // If submitted value is all asterisks (masked), keep existing
+                    if (preg_match('/^\*+.{0,4}$/', $submitted) && !empty($existing[$field])) {
+                        return $existing[$field];
+                    }
+                    return $submitted;
+                };
+
                 $settings = array(
                     'google_calendar_enabled'    => isset($_POST['google_calendar_enabled']),
                     'google_client_id'           => sanitize_text_field($_POST['google_client_id'] ?? ''),
-                    'google_client_secret'       => sanitize_text_field($_POST['google_client_secret'] ?? ''),
+                    'google_client_secret'       => $get_secret_value('google_client_secret', $existing_integration),
                     'google_calendar_id'         => sanitize_text_field($_POST['google_calendar_id'] ?? ''),
                     'microsoft_calendar_enabled' => isset($_POST['microsoft_calendar_enabled']),
                     'microsoft_client_id'        => sanitize_text_field($_POST['microsoft_client_id'] ?? ''),
-                    'microsoft_client_secret'    => sanitize_text_field($_POST['microsoft_client_secret'] ?? ''),
+                    'microsoft_client_secret'    => $get_secret_value('microsoft_client_secret', $existing_integration),
                     'microsoft_tenant_id'        => sanitize_text_field($_POST['microsoft_tenant_id'] ?? ''),
                 );
-                update_option('booknow_integration_settings', $settings);
+                // Use encryption class to save with automatic encryption
+                Book_Now_Encryption::save_integration_settings($settings);
                 break;
         }
         
@@ -80,11 +108,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['booknow_settings_nonc
     }
 }
 
-// Get settings
+// Get settings - use encryption class for settings with sensitive data
 $general_settings = get_option('booknow_general_settings', array());
-$payment_settings = get_option('booknow_payment_settings', array());
+$payment_settings = Book_Now_Encryption::get_payment_settings();
 $email_settings = get_option('booknow_email_settings', array());
-$integration_settings = get_option('booknow_integration_settings', array());
+$integration_settings = Book_Now_Encryption::get_integration_settings();
+
+// Prepare masked values for display in forms
+$masked_stripe_test_secret = Book_Now_Encryption::mask($payment_settings['stripe_test_secret_key'] ?? '');
+$masked_stripe_live_secret = Book_Now_Encryption::mask($payment_settings['stripe_live_secret_key'] ?? '');
+$masked_google_secret = Book_Now_Encryption::mask($integration_settings['google_client_secret'] ?? '');
+$masked_microsoft_secret = Book_Now_Encryption::mask($integration_settings['microsoft_client_secret'] ?? '');
 ?>
 
 <div class="wrap">
@@ -234,7 +268,10 @@ $integration_settings = get_option('booknow_integration_settings', array());
                 <tr>
                     <th><label for="stripe_test_secret_key"><?php esc_html_e('Test Secret Key', 'book-now-kre8iv'); ?></label></th>
                     <td>
-                        <input type="password" name="stripe_test_secret_key" id="stripe_test_secret_key" value="<?php echo esc_attr($payment_settings['stripe_test_secret_key'] ?? ''); ?>" class="regular-text code" placeholder="sk_test_...">
+                        <input type="password" name="stripe_test_secret_key" id="stripe_test_secret_key" value="<?php echo esc_attr($masked_stripe_test_secret); ?>" class="regular-text code" placeholder="sk_test_..." autocomplete="new-password">
+                        <?php if (!empty($masked_stripe_test_secret)) : ?>
+                            <p class="description"><?php esc_html_e('Key is stored encrypted. Enter a new key to replace it.', 'book-now-kre8iv'); ?></p>
+                        <?php endif; ?>
                     </td>
                 </tr>
                 <tr>
@@ -249,7 +286,10 @@ $integration_settings = get_option('booknow_integration_settings', array());
                 <tr>
                     <th><label for="stripe_live_secret_key"><?php esc_html_e('Live Secret Key', 'book-now-kre8iv'); ?></label></th>
                     <td>
-                        <input type="password" name="stripe_live_secret_key" id="stripe_live_secret_key" value="<?php echo esc_attr($payment_settings['stripe_live_secret_key'] ?? ''); ?>" class="regular-text code" placeholder="sk_live_...">
+                        <input type="password" name="stripe_live_secret_key" id="stripe_live_secret_key" value="<?php echo esc_attr($masked_stripe_live_secret); ?>" class="regular-text code" placeholder="sk_live_..." autocomplete="new-password">
+                        <?php if (!empty($masked_stripe_live_secret)) : ?>
+                            <p class="description"><?php esc_html_e('Key is stored encrypted. Enter a new key to replace it.', 'book-now-kre8iv'); ?></p>
+                        <?php endif; ?>
                     </td>
                 </tr>
                 <tr>
@@ -343,7 +383,10 @@ $integration_settings = get_option('booknow_integration_settings', array());
                 <tr>
                     <th><label for="google_client_secret"><?php esc_html_e('Client Secret', 'book-now-kre8iv'); ?></label></th>
                     <td>
-                        <input type="password" name="google_client_secret" id="google_client_secret" value="<?php echo esc_attr($integration_settings['google_client_secret'] ?? ''); ?>" class="regular-text">
+                        <input type="password" name="google_client_secret" id="google_client_secret" value="<?php echo esc_attr($masked_google_secret); ?>" class="regular-text" autocomplete="new-password">
+                        <?php if (!empty($masked_google_secret)) : ?>
+                            <p class="description"><?php esc_html_e('Secret is stored encrypted. Enter a new secret to replace it.', 'book-now-kre8iv'); ?></p>
+                        <?php endif; ?>
                     </td>
                 </tr>
                 <tr>
@@ -375,7 +418,10 @@ $integration_settings = get_option('booknow_integration_settings', array());
                 <tr>
                     <th><label for="microsoft_client_secret"><?php esc_html_e('Client Secret', 'book-now-kre8iv'); ?></label></th>
                     <td>
-                        <input type="password" name="microsoft_client_secret" id="microsoft_client_secret" value="<?php echo esc_attr($integration_settings['microsoft_client_secret'] ?? ''); ?>" class="regular-text">
+                        <input type="password" name="microsoft_client_secret" id="microsoft_client_secret" value="<?php echo esc_attr($masked_microsoft_secret); ?>" class="regular-text" autocomplete="new-password">
+                        <?php if (!empty($masked_microsoft_secret)) : ?>
+                            <p class="description"><?php esc_html_e('Secret is stored encrypted. Enter a new secret to replace it.', 'book-now-kre8iv'); ?></p>
+                        <?php endif; ?>
                     </td>
                 </tr>
                 <tr>

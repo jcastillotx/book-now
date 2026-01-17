@@ -36,10 +36,11 @@ class Book_Now_Stripe {
      * Load Stripe settings
      */
     private function load_settings() {
-        $payment_settings = get_option('booknow_payment_settings', array());
-        
+        // Use encryption class for automatic decryption and legacy migration
+        $payment_settings = Book_Now_Encryption::get_payment_settings();
+
         $this->test_mode = isset($payment_settings['stripe_mode']) && $payment_settings['stripe_mode'] === 'live' ? false : true;
-        
+
         if ($this->test_mode) {
             $this->secret_key = isset($payment_settings['stripe_test_secret_key']) ? $payment_settings['stripe_test_secret_key'] : '';
             $this->publishable_key = isset($payment_settings['stripe_test_publishable_key']) ? $payment_settings['stripe_test_publishable_key'] : '';

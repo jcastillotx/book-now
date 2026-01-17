@@ -121,9 +121,10 @@ if (isset($_GET['delete_block']) && check_admin_referer('booknow_delete_block_' 
 // Get current weekly availability
 global $wpdb;
 $table = $wpdb->prefix . 'booknow_availability';
-$weekly_rules = $wpdb->get_results(
-    "SELECT * FROM {$table} WHERE rule_type = 'weekly' ORDER BY day_of_week ASC"
-);
+$weekly_rules = $wpdb->get_results($wpdb->prepare(
+    "SELECT * FROM {$table} WHERE rule_type = %s ORDER BY day_of_week ASC",
+    'weekly'
+));
 
 $availability = array();
 foreach ($weekly_rules as $rule) {
@@ -135,9 +136,10 @@ foreach ($weekly_rules as $rule) {
 }
 
 // Get block dates
-$block_dates = $wpdb->get_results(
-    "SELECT * FROM {$table} WHERE rule_type = 'block' ORDER BY specific_date ASC"
-);
+$block_dates = $wpdb->get_results($wpdb->prepare(
+    "SELECT * FROM {$table} WHERE rule_type = %s ORDER BY specific_date ASC",
+    'block'
+));
 
 $days = array(
     1 => __('Monday', 'book-now-kre8iv'),

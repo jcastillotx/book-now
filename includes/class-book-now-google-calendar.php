@@ -35,7 +35,19 @@ class Book_Now_Google_Calendar {
      * Load calendar settings
      */
     private function load_settings() {
-        $this->settings = get_option('booknow_calendar_settings', array());
+        // Load integration settings (credentials) with automatic decryption
+        $integration_settings = Book_Now_Encryption::get_integration_settings();
+
+        // Load calendar settings (tokens, calendar_id, etc.)
+        $calendar_settings = get_option('booknow_calendar_settings', array());
+
+        // Merge integration credentials with calendar settings
+        // Integration settings take precedence for credentials
+        $this->settings = array_merge($calendar_settings, array(
+            'google_client_id'     => $integration_settings['google_client_id'] ?? '',
+            'google_client_secret' => $integration_settings['google_client_secret'] ?? '',
+            'google_calendar_id'   => $integration_settings['google_calendar_id'] ?? ($calendar_settings['google_calendar_id'] ?? 'primary'),
+        ));
     }
 
     /**
@@ -276,8 +288,8 @@ class Book_Now_Google_Calendar {
             $description .= "Phone: {$booking->customer_phone}\n";
         }
         
-        if ($booking->notes) {
-            $description .= "\nNotes:\n{$booking->notes}";
+        if ($booking->customer_notes) {
+            $description .= "\nNotes:\n{$booking->customer_notes}";
         }
 
         return $description;

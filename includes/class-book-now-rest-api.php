@@ -21,6 +21,39 @@ class Book_Now_REST_API {
     }
 
     /**
+     * Check rate limit and return error response if exceeded.
+     *
+     * @param string $action The rate limit action identifier.
+     * @return WP_Error|null WP_Error if rate limited, null if allowed.
+     */
+    private function check_rate_limit( $action ) {
+        if ( ! Book_Now_Rate_Limiter::check( $action ) ) {
+            $retry_after = Book_Now_Rate_Limiter::get_retry_after( $action );
+
+            // Send rate limit headers
+            Book_Now_Rate_Limiter::send_rate_limit_headers( $action );
+
+            return new WP_Error(
+                'rate_limit_exceeded',
+                sprintf(
+                    /* translators: %d: seconds until rate limit resets */
+                    __( 'Too many requests. Please try again in %d seconds.', 'book-now-kre8iv' ),
+                    $retry_after
+                ),
+                array(
+                    'status'      => 429,
+                    'retry_after' => $retry_after,
+                )
+            );
+        }
+
+        // Send rate limit headers even for successful requests
+        Book_Now_Rate_Limiter::send_rate_limit_headers( $action );
+
+        return null;
+    }
+
+    /**
      * Register REST API routes.
      */
     public function register_routes() {
@@ -137,6 +170,15 @@ class Book_Now_REST_API {
                     'required'    => true,
                     'description' => 'Booking reference number',
                 ),
+                'customer_email' => array(
+                    'type'              => 'string',
+                    'required'          => true,
+                    'description'       => 'Customer email for verification',
+                    'validate_callback' => function( $param ) {
+                        return is_email( $param );
+                    },
+                    'sanitize_callback' => 'sanitize_email',
+                ),
             ),
         ));
 
@@ -150,6 +192,15 @@ class Book_Now_REST_API {
                     'type'        => 'string',
                     'required'    => true,
                     'description' => 'Booking reference number',
+                ),
+                'customer_email' => array(
+                    'type'              => 'string',
+                    'required'          => true,
+                    'description'       => 'Customer email for verification',
+                    'validate_callback' => function( $param ) {
+                        return is_email( $param );
+                    },
+                    'sanitize_callback' => 'sanitize_email',
                 ),
             ),
         ));
@@ -209,9 +260,10 @@ class Book_Now_REST_API {
         global $wpdb;
         $table = $wpdb->prefix . 'booknow_categories';
 
-        $categories = $wpdb->get_results(
-            "SELECT * FROM {$table} WHERE status = 'active' ORDER BY name ASC"
-        );
+        $categories = $wpdb->get_results($wpdb->prepare(
+            "SELECT * FROM {$table} WHERE status = %s ORDER BY name ASC",
+            'active'
+        ));
 
         if ($wpdb->last_error) {
             return new WP_Error('fetch_failed', __('Failed to fetch categories.', 'book-now-kre8iv'), array('status' => 500));
@@ -227,6 +279,12 @@ class Book_Now_REST_API {
      * @return WP_REST_Response|WP_Error
      */
     public function get_availability($request) {
+        // Check rate limit (60 requests per minute per IP)
+        $rate_limit_error = $this->check_rate_limit( 'availability_check' );
+        if ( $rate_limit_error ) {
+            return $rate_limit_error;
+        }
+
         $consultation_type_id = $request->get_param('consultation_type_id');
         $date = $request->get_param('date');
 
@@ -236,7 +294,7 @@ class Book_Now_REST_API {
         }
 
         // Get consultation type
-        $type = Book_Now_Consultation_Type::get($consultation_type_id);
+        $type = Book_Now_Consultation_Type::get_by_id($consultation_type_id);
         if (!$type) {
             return new WP_Error('not_found', __('Consultation type not found.', 'book-now-kre8iv'), array('status' => 404));
         }
@@ -358,9 +416,15 @@ class Book_Now_REST_API {
      * @return WP_REST_Response|WP_Error
      */
     public function create_booking($request) {
+        // Check rate limit (5 requests per hour per IP)
+        $rate_limit_error = $this->check_rate_limit( 'booking_create' );
+        if ( $rate_limit_error ) {
+            return $rate_limit_error;
+        }
+
         // Validate consultation type exists
         $consultation_type_id = $request->get_param('consultation_type_id');
-        $type = Book_Now_Consultation_Type::get($consultation_type_id);
+        $type = Book_Now_Consultation_Type::get_by_id($consultation_type_id);
         
         if (!$type) {
             return new WP_Error('invalid_type', __('Invalid consultation type.', 'book-now-kre8iv'), array('status' => 400));
@@ -378,8 +442,11 @@ class Book_Now_REST_API {
             return new WP_Error('invalid_date', __('This date is not available for booking.', 'book-now-kre8iv'), array('status' => 400));
         }
 
-        // Validate time slot is available
+        // Validate time format
         $time = sanitize_text_field($request->get_param('booking_time'));
+
+        // Note: Pre-check availability for early feedback, but the atomic lock in
+        // create_with_lock() is the authoritative check for race condition prevention
         if (!$this->is_slot_available($date, $time, $type->duration, $type->buffer_before, $type->buffer_after)) {
             return new WP_Error('slot_unavailable', __('This time slot is no longer available.', 'book-now-kre8iv'), array('status' => 400));
         }
@@ -393,25 +460,28 @@ class Book_Now_REST_API {
             'customer_name'        => sanitize_text_field($request->get_param('customer_name')),
             'customer_email'       => $email,
             'customer_phone'       => sanitize_text_field($request->get_param('customer_phone')),
-            'notes'                => sanitize_textarea_field($request->get_param('notes')),
-            'price'                => $type->price,
-            'deposit_amount'       => $this->calculate_deposit($type),
+            'customer_notes'       => sanitize_textarea_field($request->get_param('notes')),
+            'payment_amount'       => $type->price,
             'status'               => 'pending',
             'payment_status'       => 'pending',
         );
 
-        // Create booking
-        $booking_id = Book_Now_Booking::create($booking_data);
+        // Create booking with atomic lock to prevent race conditions
+        // This ensures that concurrent requests cannot double-book the same slot
+        $booking_id = Book_Now_Booking::create_with_lock($booking_data);
 
         if (is_wp_error($booking_id)) {
-            return new WP_Error('create_failed', __('Failed to create booking.', 'book-now-kre8iv'), array('status' => 500));
+            $error_code = $booking_id->get_error_code();
+            $error_data = $booking_id->get_error_data();
+            $status = isset($error_data['status']) ? $error_data['status'] : 500;
+
+            return new WP_Error($error_code, $booking_id->get_error_message(), array('status' => $status));
         }
 
         // Get created booking
-        $booking = Book_Now_Booking::get($booking_id);
+        $booking = Book_Now_Booking::get_by_id($booking_id);
 
-        // Trigger post-booking actions (email, calendar sync)
-        do_action('booknow_booking_created', $booking_id);
+        // Note: 'booknow_booking_created' action is already fired in Book_Now_Booking::create()
 
         return new WP_REST_Response(array(
             'success'   => true,
@@ -441,15 +511,34 @@ class Book_Now_REST_API {
     /**
      * Get booking by reference number.
      *
+     * Requires email verification to prevent unauthorized access to booking data.
+     *
      * @param WP_REST_Request $request Request object.
      * @return WP_REST_Response|WP_Error
      */
     public function get_booking($request) {
+        // Check rate limit (20 requests per minute per IP)
+        $rate_limit_error = $this->check_rate_limit( 'booking_lookup' );
+        if ( $rate_limit_error ) {
+            return $rate_limit_error;
+        }
+
         $reference = sanitize_text_field($request->get_param('reference'));
+        $customer_email = sanitize_email($request->get_param('customer_email'));
+
         $booking = Book_Now_Booking::get_by_reference($reference);
 
         if (!$booking) {
             return new WP_Error('not_found', __('Booking not found.', 'book-now-kre8iv'), array('status' => 404));
+        }
+
+        // Verify email matches the booking's customer email (case-insensitive comparison)
+        if (strtolower($booking->customer_email) !== strtolower($customer_email)) {
+            return new WP_Error(
+                'forbidden',
+                __('The provided email does not match the booking record.', 'book-now-kre8iv'),
+                array('status' => 403)
+            );
         }
 
         return new WP_REST_Response($booking, 200);
@@ -458,19 +547,32 @@ class Book_Now_REST_API {
     /**
      * Cancel a booking.
      *
+     * Requires email verification to prevent unauthorized cancellation.
+     *
      * @param WP_REST_Request $request Request object.
      * @return WP_REST_Response|WP_Error
      */
     public function cancel_booking($request) {
         $reference = sanitize_text_field($request->get_param('reference'));
+        $customer_email = sanitize_email($request->get_param('customer_email'));
+
         $booking = Book_Now_Booking::get_by_reference($reference);
 
         if (!$booking) {
             return new WP_Error('not_found', __('Booking not found.', 'book-now-kre8iv'), array('status' => 404));
         }
 
+        // Verify email matches the booking's customer email (case-insensitive comparison)
+        if (strtolower($booking->customer_email) !== strtolower($customer_email)) {
+            return new WP_Error(
+                'forbidden',
+                __('The provided email does not match the booking record.', 'book-now-kre8iv'),
+                array('status' => 403)
+            );
+        }
+
         // Check if booking can be cancelled
-        if (in_array($booking->status, array('cancelled', 'completed', 'no-show'))) {
+        if (in_array($booking->status, array('cancelled', 'completed', 'no-show'), true)) {
             return new WP_Error('cannot_cancel', __('This booking cannot be cancelled.', 'book-now-kre8iv'), array('status' => 400));
         }
 
@@ -484,7 +586,7 @@ class Book_Now_REST_API {
         }
 
         // Trigger cancellation actions (email, calendar cleanup)
-        do_action('booknow_booking_cancelled', $booking_id);
+        do_action('booknow_booking_cancelled', $booking->id);
 
         return new WP_REST_Response(array(
             'success' => true,
