@@ -49,42 +49,49 @@ if ($booking_id && isset($_GET['action']) && isset($_GET['_wpnonce'])) {
                 $notice = $sent ? __('Confirmation email sent.', 'book-now-kre8iv') : __('Failed to send email. Check email settings.', 'book-now-kre8iv');
                 $notice_type = $sent ? 'success' : 'error';
                 break;
-            case 'sync_calendar':
-                $calendar_sync = new Book_Now_Calendar_Sync();
-                $results = $calendar_sync->manual_sync($booking_id);
-                if (empty($results)) {
-                    $notice = __('No calendars configured or authenticated.', 'book-now-kre8iv');
+        $existing_booking = Book_Now_Booking::get($booking_id);
+
+        if ($existing_booking) {
+            switch ($action) {
+                case 'confirm':
+                    $old_booking = $existing_booking;
+                    Book_Now_Booking::update($booking_id, array('status' => 'confirmed'));
+                    do_action('booknow_booking_confirmed', $booking_id);
+                    $notice = __('Booking confirmed successfully. Calendar sync triggered.', 'book-now-kre8iv');
+                    $notice_type = 'success';
+                    break;
+                case 'cancel':
+                    Book_Now_Booking::update($booking_id, array('status' => 'cancelled'));
+                    do_action('booknow_booking_cancelled', $booking_id);
+                    $notice = __('Booking cancelled.', 'book-now-kre8iv');
                     $notice_type = 'warning';
-                } elseif (is_array($results)) {
-                    $has_success = false;
-                    $has_error   = false;
-
-                    foreach ($results as $provider => $status) {
-                        if ($status === 'success') {
-                            $has_success = true;
-                        }
-                        if ($status === 'error') {
-                            $has_error = true;
-                        }
-                    }
-
-                    if ($has_success && !$has_error) {
+                    break;
+                case 'complete':
+                    Book_Now_Booking::update($booking_id, array('status' => 'completed'));
+                    $notice = __('Booking marked as completed.', 'book-now-kre8iv');
+                    $notice_type = 'success';
+                    break;
+                case 'resend_email':
+                    $email = new Book_Now_Email();
+                    $sent = $email->send_confirmation_email($booking_id);
+                    $notice = $sent ? __('Confirmation email sent.', 'book-now-kre8iv') : __('Failed to send email. Check email settings.', 'book-now-kre8iv');
+                    $notice_type = $sent ? 'success' : 'error';
+                    break;
+                case 'sync_calendar':
+                    $calendar_sync = new Book_Now_Calendar_Sync();
+                    $results = $calendar_sync->manual_sync($booking_id);
+                    if (!empty($results)) {
                         $notice = __('Calendar sync completed.', 'book-now-kre8iv');
                         $notice_type = 'success';
-                    } elseif ($has_success && $has_error) {
-                        $notice = __('Calendar sync completed with some errors.', 'book-now-kre8iv');
-                        $notice_type = 'warning';
                     } else {
-                        // No successful syncs; treat as failure.
-                        $notice = __('Calendar sync failed for all calendars.', 'book-now-kre8iv');
-                        $notice_type = 'error';
+                        $notice = __('No calendars configured or authenticated.', 'book-now-kre8iv');
+                        $notice_type = 'warning';
                     }
-                } else {
-                    // Non-empty, non-array result; treat as generic success for backward compatibility.
-                    $notice = __('Calendar sync completed.', 'book-now-kre8iv');
-                    $notice_type = 'success';
-                }
-                break;
+                    break;
+            }
+        } else {
+            $notice = __('Booking not found.', 'book-now-kre8iv');
+            $notice_type = 'error';
         }
     } else {
         // Nonce verification failed; inform the user instead of failing silently.
