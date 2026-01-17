@@ -60,42 +60,54 @@ if ($booking_id && isset($_GET['action']) && isset($_GET['_wpnonce'])) {
                     $notice_type = $sent ? 'success' : 'error';
                     break;
                 case 'sync_calendar':
-                    // Load required calendar classes
-                    if (!class_exists('Book_Now_Calendar_Sync')) {
-                        require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-calendar-sync.php';
-                    }
-                    if (!class_exists('Book_Now_Google_Calendar')) {
-                        require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-google-calendar.php';
-                    }
-                    if (!class_exists('Book_Now_Microsoft_Calendar')) {
-                        require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-microsoft-calendar.php';
-                    }
+                    try {
+                        // Calendar classes are loaded by the main plugin, but ensure they exist
+                        if (!class_exists('Book_Now_Calendar_Sync')) {
+                            require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-calendar-sync.php';
+                        }
+                        if (!class_exists('Book_Now_Google_Calendar')) {
+                            require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-google-calendar.php';
+                        }
+                        if (!class_exists('Book_Now_Microsoft_Calendar')) {
+                            require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-microsoft-calendar.php';
+                        }
 
-                    $calendar_sync = new Book_Now_Calendar_Sync();
-                    $results = $calendar_sync->manual_sync($booking_id);
+                        $calendar_sync = new Book_Now_Calendar_Sync();
+                        $results = $calendar_sync->manual_sync($booking_id);
 
-                    if (empty($results)) {
-                        $notice = __('No calendars configured or authenticated.', 'book-now-kre8iv');
-                        $notice_type = 'warning';
-                    } else {
-                        $success_msgs = array();
-                        $error_msgs = array();
+                        if (empty($results)) {
+                            $notice = __('No calendars configured or authenticated.', 'book-now-kre8iv');
+                            $notice_type = 'warning';
+                        } elseif (isset($results['error'])) {
+                            $notice = $results['error'];
+                            $notice_type = 'error';
+                        } else {
+                            $success_msgs = array();
+                            $error_msgs = array();
 
-                        foreach ($results as $provider => $status) {
-                            if ($status === 'error') {
-                                $error_msgs[] = sprintf(__('Sync with %s failed. Please check logs or re-authenticate.', 'book-now-kre8iv'), ucfirst($provider));
+                            foreach ($results as $provider => $status) {
+                                if ($status === 'error') {
+                                    $error_msgs[] = sprintf(__('Sync with %s failed. Please check logs or re-authenticate.', 'book-now-kre8iv'), ucfirst($provider));
+                                } else {
+                                    $success_msgs[] = sprintf(__('Sync with %s successful (%s).', 'book-now-kre8iv'), ucfirst($provider), $status);
+                                }
+                            }
+
+                            if (!empty($error_msgs)) {
+                                $notice = implode(' ', array_merge($error_msgs, $success_msgs));
+                                $notice_type = !empty($success_msgs) ? 'warning' : 'error';
                             } else {
-                                $success_msgs[] = sprintf(__('Sync with %s successful (%s).', 'book-now-kre8iv'), ucfirst($provider), $status);
+                                $notice = implode(' ', $success_msgs);
+                                $notice_type = 'success';
                             }
                         }
-
-                        if (!empty($error_msgs)) {
-                            $notice = implode(' ', array_merge($error_msgs, $success_msgs));
-                            $notice_type = !empty($success_msgs) ? 'warning' : 'error';
-                        } else {
-                            $notice = implode(' ', $success_msgs);
-                            $notice_type = 'success';
-                        }
+                    } catch (Exception $e) {
+                        Book_Now_Logger::error('Calendar sync failed', array(
+                            'booking_id' => $booking_id,
+                            'error' => $e->getMessage(),
+                        ));
+                        $notice = __('Calendar sync encountered an error. Please check your calendar settings and try again.', 'book-now-kre8iv');
+                        $notice_type = 'error';
                     }
                     break;
             }

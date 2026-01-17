@@ -268,7 +268,15 @@ class Book_Now_Calendar_Sync {
         if ($this->is_google_enabled() && $this->google->is_authenticated()) {
             if (empty($booking->google_event_id)) {
                 $event_id = $this->google->create_event($booking);
-                $results['google'] = !is_wp_error($event_id) ? 'created' : 'error';
+                if (!is_wp_error($event_id)) {
+                    // Save the event ID to the booking record
+                    Book_Now_Booking::update($booking_id, array(
+                        'google_event_id' => $event_id,
+                    ));
+                    $results['google'] = 'created';
+                } else {
+                    $results['google'] = 'error';
+                }
             } else {
                 $result = $this->google->update_event($booking->google_event_id, $booking);
                 $results['google'] = !is_wp_error($result) ? 'updated' : 'error';
@@ -279,7 +287,15 @@ class Book_Now_Calendar_Sync {
         if ($this->is_microsoft_enabled() && $this->microsoft->is_authenticated()) {
             if (empty($booking->microsoft_event_id)) {
                 $event_id = $this->microsoft->create_event($booking);
-                $results['microsoft'] = !is_wp_error($event_id) ? 'created' : 'error';
+                if (!is_wp_error($event_id)) {
+                    // Save the event ID to the booking record
+                    Book_Now_Booking::update($booking_id, array(
+                        'microsoft_event_id' => $event_id,
+                    ));
+                    $results['microsoft'] = 'created';
+                } else {
+                    $results['microsoft'] = 'error';
+                }
             } else {
                 $result = $this->microsoft->update_event($booking->microsoft_event_id, $booking);
                 $results['microsoft'] = !is_wp_error($result) ? 'updated' : 'error';
