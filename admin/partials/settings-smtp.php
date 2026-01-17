@@ -5,9 +5,23 @@
  * @package BookNow
  */
 
+// Exit if accessed directly
+if (!defined('ABSPATH')) {
+    exit;
+}
+
+// Security check - verify user has admin capabilities
+if (!current_user_can('manage_options')) {
+    wp_die(__('You do not have sufficient permissions to access this page.', 'book-now-kre8iv'));
+}
+
 // Handle form submission
 if (isset($_POST['booknow_save_smtp_settings'])) {
     check_admin_referer('booknow_smtp_settings_nonce', 'nonce');
+
+    // Encrypt sensitive credentials before storing
+    $smtp_password = sanitize_text_field($_POST['smtp_password']);
+    $encrypted_password = !empty($smtp_password) ? Book_Now_Encryption::encrypt($smtp_password) : '';
 
     $settings = array(
         'enabled' => isset($_POST['smtp_enabled']),
@@ -17,19 +31,20 @@ if (isset($_POST['booknow_save_smtp_settings'])) {
         'encryption' => sanitize_text_field($_POST['smtp_encryption']),
         'auth' => isset($_POST['smtp_auth']),
         'username' => sanitize_text_field($_POST['smtp_username']),
-        'password' => sanitize_text_field($_POST['smtp_password']),
+        'password' => $encrypted_password,
         'from_name' => sanitize_text_field($_POST['smtp_from_name']),
         'from_email' => sanitize_email($_POST['smtp_from_email']),
     );
 
     update_option('booknow_smtp_settings', $settings);
-    
-    // Save Brevo API key separately if provided
+
+    // Save Brevo API key separately if provided (encrypted)
     if (!empty($_POST['brevo_api_key'])) {
-        update_option('booknow_brevo_api_key', sanitize_text_field($_POST['brevo_api_key']));
+        $brevo_key = sanitize_text_field($_POST['brevo_api_key']);
+        update_option('booknow_brevo_api_key', Book_Now_Encryption::encrypt($brevo_key));
     }
-    
-    echo '<div class="notice notice-success"><p>' . __('SMTP settings saved successfully.', 'book-now-kre8iv') . '</p></div>';
+
+    echo '<div class="notice notice-success"><p>' . esc_html__('SMTP settings saved successfully.', 'book-now-kre8iv') . '</p></div>';
 }
 
 // Handle test connection
@@ -40,7 +55,7 @@ if (isset($_POST['booknow_test_smtp'])) {
     $result = $smtp->test_connection();
     
     if (is_wp_error($result)) {
-        echo '<div class="notice notice-error"><p><strong>' . __('Connection Failed:', 'book-now-kre8iv') . '</strong> ' . esc_html($result->get_error_message()) . '</p></div>';
+        echo '<div class="notice notice-error"><p><strong>' . esc_html__('Connection Failed:', 'book-now-kre8iv') . '</strong> ' . esc_html($result->get_error_message()) . '</p></div>';
     } else {
         echo '<div class="notice notice-success"><p>' . esc_html($result['message']) . '</p></div>';
     }

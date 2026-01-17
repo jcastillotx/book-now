@@ -125,8 +125,8 @@ class Book_Now_Encryption {
         if ( ! function_exists( 'openssl_encrypt' ) ) {
             // Fallback: return value as-is if OpenSSL not available
             // This is less secure but prevents breakage
-            if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
-                error_log( 'BookNow: OpenSSL not available for encryption' );
+            if ( class_exists( 'Book_Now_Logger' ) ) {
+                Book_Now_Logger::warning( 'OpenSSL not available for encryption' );
             }
             return $value;
         }
@@ -139,8 +139,8 @@ class Book_Now_Encryption {
 
         if ( $encrypted === false ) {
             // Encryption failed, return original value
-            if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
-                error_log( 'BookNow: Encryption failed' );
+            if ( class_exists( 'Book_Now_Logger' ) ) {
+                Book_Now_Logger::error( 'Encryption failed' );
             }
             return $value;
         }
@@ -169,8 +169,8 @@ class Book_Now_Encryption {
 
         // Check if OpenSSL is available
         if ( ! function_exists( 'openssl_decrypt' ) ) {
-            if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
-                error_log( 'BookNow: OpenSSL not available for decryption' );
+            if ( class_exists( 'Book_Now_Logger' ) ) {
+                Book_Now_Logger::warning( 'OpenSSL not available for decryption' );
             }
             return '';
         }
@@ -193,8 +193,8 @@ class Book_Now_Encryption {
         $decrypted = openssl_decrypt( $encrypted, self::CIPHER, $key, OPENSSL_RAW_DATA, $iv );
 
         if ( $decrypted === false ) {
-            if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
-                error_log( 'BookNow: Decryption failed' );
+            if ( class_exists( 'Book_Now_Logger' ) ) {
+                Book_Now_Logger::error( 'Decryption failed' );
             }
             return '';
         }

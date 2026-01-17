@@ -148,7 +148,7 @@ class Book_Now_Calendar_Sync {
             $google_available = $this->google->is_time_available($date, $time, $duration);
             
             if (is_wp_error($google_available)) {
-                error_log('Google Calendar availability check failed: ' . $google_available->get_error_message());
+                Book_Now_Logger::warning('Google Calendar availability check failed', array('error' => $google_available->get_error_message()));
             } else {
                 $available = $available && $google_available;
             }
@@ -159,7 +159,7 @@ class Book_Now_Calendar_Sync {
             $microsoft_available = $this->microsoft->is_time_available($date, $time, $duration);
             
             if (is_wp_error($microsoft_available)) {
-                error_log('Microsoft Calendar availability check failed: ' . $microsoft_available->get_error_message());
+                Book_Now_Logger::warning('Microsoft Calendar availability check failed', array('error' => $microsoft_available->get_error_message()));
             } else {
                 $available = $available && $microsoft_available;
             }

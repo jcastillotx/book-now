@@ -11,6 +11,11 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
+// Security check - verify user has admin capabilities
+if (!current_user_can('manage_options')) {
+    wp_die(__('You do not have sufficient permissions to access this page.', 'book-now-kre8iv'));
+}
+
 // Handle form submission
 if (isset($_POST['booknow_settings_nonce']) && wp_verify_nonce($_POST['booknow_settings_nonce'], 'booknow_save_settings')) {
     $settings = array(

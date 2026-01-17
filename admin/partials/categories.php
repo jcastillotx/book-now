@@ -11,6 +11,11 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
+// Security check - verify user has admin capabilities
+if (!current_user_can('manage_options')) {
+    wp_die(__('You do not have sufficient permissions to access this page.', 'book-now-kre8iv'));
+}
+
 // Handle form submission
 if (isset($_POST['save_category']) && check_admin_referer('booknow_save_category')) {
     $category_id = isset($_POST['category_id']) ? absint($_POST['category_id']) : 0;

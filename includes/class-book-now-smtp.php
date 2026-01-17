@@ -114,12 +114,17 @@ class Book_Now_SMTP {
     }
 
     /**
-     * Get SMTP password
+     * Get SMTP password (decrypted)
      *
-     * @return string Password
+     * @return string Decrypted password
      */
     private function get_smtp_password() {
-        return $this->settings['password'];
+        $password = $this->settings['password'] ?? '';
+        // Decrypt if encrypted
+        if (!empty($password) && class_exists('Book_Now_Encryption')) {
+            return Book_Now_Encryption::decrypt($password);
+        }
+        return $password;
     }
 
     /**

@@ -5,6 +5,16 @@
  * @package BookNow
  */
 
+// Exit if accessed directly
+if (!defined('ABSPATH')) {
+    exit;
+}
+
+// Security check - verify user has admin capabilities
+if (!current_user_can('manage_options')) {
+    wp_die(__('You do not have sufficient permissions to access this page.', 'book-now-kre8iv'));
+}
+
 // Handle form submission
 if (isset($_POST['booknow_save_email_settings'])) {
     check_admin_referer('booknow_email_settings_nonce', 'nonce');
@@ -20,7 +30,7 @@ if (isset($_POST['booknow_save_email_settings'])) {
 
     update_option('booknow_email_settings', $settings);
     
-    echo '<div class="notice notice-success"><p>' . __('Email settings saved successfully.', 'book-now-kre8iv') . '</p></div>';
+    echo '<div class="notice notice-success"><p>' . esc_html__('Email settings saved successfully.', 'book-now-kre8iv') . '</p></div>';
 }
 
 // Handle test email
@@ -31,9 +41,9 @@ if (isset($_POST['booknow_send_test_email'])) {
     $email_handler = new Book_Now_Email();
     
     if ($email_handler->send_test_email($test_email)) {
-        echo '<div class="notice notice-success"><p>' . __('Test email sent successfully!', 'book-now-kre8iv') . '</p></div>';
+        echo '<div class="notice notice-success"><p>' . esc_html__('Test email sent successfully!', 'book-now-kre8iv') . '</p></div>';
     } else {
-        echo '<div class="notice notice-error"><p>' . __('Failed to send test email. Please check your settings.', 'book-now-kre8iv') . '</p></div>';
+        echo '<div class="notice notice-error"><p>' . esc_html__('Failed to send test email. Please check your settings.', 'book-now-kre8iv') . '</p></div>';
     }
 }
 
