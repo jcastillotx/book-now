@@ -31,6 +31,214 @@ class Book_Now_Admin {
     public function __construct($plugin_name, $version) {
         $this->plugin_name = $plugin_name;
         $this->version = $version;
+
+        // Handle booking actions before page renders (to allow redirects)
+        add_action('admin_init', array($this, 'handle_booking_actions'));
+    }
+
+    /**
+     * Handle booking actions (confirm, cancel, sync, etc.) before page renders.
+     *
+     * This must run on admin_init to allow redirects before headers are sent.
+     */
+    public function handle_booking_actions() {
+        // Only process on the bookings page
+        if (!isset($_GET['page']) || $_GET['page'] !== 'book-now-bookings') {
+            return;
+        }
+
+        // Check for action and required parameters
+        $booking_id = isset($_GET['id']) ? absint($_GET['id']) : 0;
+        if (!$booking_id || !isset($_GET['action']) || !isset($_GET['_wpnonce'])) {
+            return;
+        }
+
+        // Security check
+        if (!current_user_can('manage_options')) {
+            return;
+        }
+
+        $action = sanitize_text_field($_GET['action']);
+
+        // Verify nonce
+        if (!wp_verify_nonce($_GET['_wpnonce'], 'booknow_booking_action_' . $booking_id)) {
+            $redirect_url = add_query_arg(
+                array(
+                    'page' => 'book-now-bookings',
+                    'id' => $booking_id,
+                    'booknow_notice' => rawurlencode(__('Security check failed. The requested action could not be completed. Please try again.', 'book-now-kre8iv')),
+                    'booknow_notice_type' => 'error',
+                ),
+                admin_url('admin.php')
+            );
+            wp_redirect($redirect_url);
+            exit;
+        }
+
+        $existing_booking = Book_Now_Booking::get($booking_id);
+        if (!$existing_booking) {
+            $redirect_url = add_query_arg(
+                array(
+                    'page' => 'book-now-bookings',
+                    'id' => $booking_id,
+                    'booknow_notice' => rawurlencode(__('Booking not found.', 'book-now-kre8iv')),
+                    'booknow_notice_type' => 'error',
+                ),
+                admin_url('admin.php')
+            );
+            wp_redirect($redirect_url);
+            exit;
+        }
+
+        $notice = '';
+        $notice_type = 'info';
+
+        switch ($action) {
+            case 'confirm':
+                Book_Now_Booking::update($booking_id, array('status' => 'confirmed'));
+                do_action('booknow_booking_confirmed', $booking_id);
+                $notice = __('Booking confirmed successfully. Calendar sync triggered.', 'book-now-kre8iv');
+                $notice_type = 'success';
+                break;
+
+            case 'cancel':
+                Book_Now_Booking::update($booking_id, array('status' => 'cancelled'));
+                do_action('booknow_booking_cancelled', $booking_id);
+                $notice = __('Booking cancelled.', 'book-now-kre8iv');
+                $notice_type = 'warning';
+                break;
+
+            case 'complete':
+                Book_Now_Booking::update($booking_id, array('status' => 'completed'));
+                $notice = __('Booking marked as completed.', 'book-now-kre8iv');
+                $notice_type = 'success';
+                break;
+
+            case 'resend_email':
+                $email = new Book_Now_Email();
+                $sent = $email->send_confirmation_email($booking_id);
+                $notice = $sent
+                    ? __('Confirmation email sent.', 'book-now-kre8iv')
+                    : __('Failed to send email. Check email settings.', 'book-now-kre8iv');
+                $notice_type = $sent ? 'success' : 'error';
+                break;
+
+            case 'sync_calendar':
+                $notice = $this->handle_calendar_sync($booking_id);
+                $notice_type = $this->get_sync_notice_type($notice);
+                break;
+
+            default:
+                // Unknown action, just return without redirect
+                return;
+        }
+
+        // Redirect to clean URL with notice
+        $redirect_url = add_query_arg(
+            array(
+                'page' => 'book-now-bookings',
+                'id' => $booking_id,
+                'booknow_notice' => rawurlencode($notice),
+                'booknow_notice_type' => $notice_type,
+            ),
+            admin_url('admin.php')
+        );
+        wp_redirect($redirect_url);
+        exit;
+    }
+
+    /**
+     * Handle calendar sync action.
+     *
+     * @param int $booking_id Booking ID.
+     * @return string Notice message.
+     */
+    private function handle_calendar_sync($booking_id) {
+        try {
+            // Load dependencies required by calendar classes
+            if (!class_exists('Book_Now_Encryption')) {
+                require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-encryption.php';
+            }
+            if (!class_exists('Book_Now_Logger')) {
+                require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-logger.php';
+            }
+            if (!class_exists('Book_Now_Calendar_Sync')) {
+                require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-calendar-sync.php';
+            }
+            if (!class_exists('Book_Now_Google_Calendar')) {
+                require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-google-calendar.php';
+            }
+            if (!class_exists('Book_Now_Microsoft_Calendar')) {
+                require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-microsoft-calendar.php';
+            }
+
+            $calendar_sync = new Book_Now_Calendar_Sync();
+            $results = $calendar_sync->manual_sync($booking_id);
+
+            if (empty($results)) {
+                return __('No calendars configured or authenticated.', 'book-now-kre8iv');
+            }
+
+            if (isset($results['error'])) {
+                return $results['error'];
+            }
+
+            $success_msgs = array();
+            $error_msgs = array();
+
+            foreach ($results as $provider => $status) {
+                if ($status === 'error') {
+                    $error_msgs[] = sprintf(
+                        __('Sync with %s failed. Please check logs or re-authenticate.', 'book-now-kre8iv'),
+                        ucfirst($provider)
+                    );
+                } else {
+                    $success_msgs[] = sprintf(
+                        __('Sync with %s successful (%s).', 'book-now-kre8iv'),
+                        ucfirst($provider),
+                        $status
+                    );
+                }
+            }
+
+            if (!empty($error_msgs)) {
+                return implode(' ', array_merge($error_msgs, $success_msgs));
+            }
+
+            return implode(' ', $success_msgs);
+
+        } catch (Exception $e) {
+            if (class_exists('Book_Now_Logger')) {
+                Book_Now_Logger::error('Calendar sync failed', array(
+                    'booking_id' => $booking_id,
+                    'error' => $e->getMessage(),
+                ));
+            }
+            return __('Calendar sync encountered an error. Please check your calendar settings and try again.', 'book-now-kre8iv');
+        }
+    }
+
+    /**
+     * Determine notice type based on sync result message.
+     *
+     * @param string $notice The notice message.
+     * @return string Notice type (success, warning, error).
+     */
+    private function get_sync_notice_type($notice) {
+        if (strpos($notice, __('failed', 'book-now-kre8iv')) !== false ||
+            strpos($notice, __('error', 'book-now-kre8iv')) !== false) {
+            // Check if there's also a success
+            if (strpos($notice, __('successful', 'book-now-kre8iv')) !== false) {
+                return 'warning';
+            }
+            return 'error';
+        }
+
+        if (strpos($notice, __('No calendars', 'book-now-kre8iv')) !== false) {
+            return 'warning';
+        }
+
+        return 'success';
     }
 
     /**
