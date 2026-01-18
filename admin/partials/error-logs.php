@@ -208,11 +208,11 @@ $error_sources = $wpdb->get_col("SELECT DISTINCT error_source FROM {$table_name}
                         <label for="error-level"><?php esc_html_e('Error Level', 'book-now-kre8iv'); ?></label>
                         <select name="error_level" id="error-level">
                             <option value=""><?php esc_html_e('All Levels', 'book-now-kre8iv'); ?></option>
-                            <option value="CRITICAL" <?php selected(isset($_GET['error_level']) && $_GET['error_level'] === 'CRITICAL'); ?>><?php esc_html_e('Critical', 'book-now-kre8iv'); ?></option>
-                            <option value="ERROR" <?php selected(isset($_GET['error_level']) && $_GET['error_level'] === 'ERROR'); ?>><?php esc_html_e('Error', 'book-now-kre8iv'); ?></option>
-                            <option value="WARNING" <?php selected(isset($_GET['error_level']) && $_GET['error_level'] === 'WARNING'); ?>><?php esc_html_e('Warning', 'book-now-kre8iv'); ?></option>
-                            <option value="INFO" <?php selected(isset($_GET['error_level']) && $_GET['error_level'] === 'INFO'); ?>><?php esc_html_e('Info', 'book-now-kre8iv'); ?></option>
-                            <option value="DEBUG" <?php selected(isset($_GET['error_level']) && $_GET['error_level'] === 'DEBUG'); ?>><?php esc_html_e('Debug', 'book-now-kre8iv'); ?></option>
+                            <option value="CRITICAL" <?php selected(isset($_GET['error_level']) && sanitize_text_field($_GET['error_level']) === 'CRITICAL'); ?>><?php esc_html_e('Critical', 'book-now-kre8iv'); ?></option>
+                            <option value="ERROR" <?php selected(isset($_GET['error_level']) && sanitize_text_field($_GET['error_level']) === 'ERROR'); ?>><?php esc_html_e('Error', 'book-now-kre8iv'); ?></option>
+                            <option value="WARNING" <?php selected(isset($_GET['error_level']) && sanitize_text_field($_GET['error_level']) === 'WARNING'); ?>><?php esc_html_e('Warning', 'book-now-kre8iv'); ?></option>
+                            <option value="INFO" <?php selected(isset($_GET['error_level']) && sanitize_text_field($_GET['error_level']) === 'INFO'); ?>><?php esc_html_e('Info', 'book-now-kre8iv'); ?></option>
+                            <option value="DEBUG" <?php selected(isset($_GET['error_level']) && sanitize_text_field($_GET['error_level']) === 'DEBUG'); ?>><?php esc_html_e('Debug', 'book-now-kre8iv'); ?></option>
                         </select>
                     </div>
 
@@ -221,7 +221,7 @@ $error_sources = $wpdb->get_col("SELECT DISTINCT error_source FROM {$table_name}
                         <select name="error_source" id="error-source">
                             <option value=""><?php esc_html_e('All Sources', 'book-now-kre8iv'); ?></option>
                             <?php foreach ($error_sources as $source) : ?>
-                                <option value="<?php echo esc_attr($source); ?>" <?php selected(isset($_GET['error_source']) && $_GET['error_source'] === $source); ?>>
+                                <option value="<?php echo esc_attr($source); ?>" <?php selected(isset($_GET['error_source']) && sanitize_text_field($_GET['error_source']) === $source); ?>>
                                     <?php echo esc_html($source); ?>
                                 </option>
                             <?php endforeach; ?>
@@ -304,9 +304,28 @@ $error_sources = $wpdb->get_col("SELECT DISTINCT error_source FROM {$table_name}
                             </tr>
                         </thead>
                         <tbody>
-                            <?php foreach ($error_logs as $log) :
+                            <?php
+                            // Bulk load all bookings to avoid N+1 query problem
+                            $booking_ids = array_filter(array_unique(wp_list_pluck($error_logs, 'booking_id')));
+                            $bookings = array();
+                            if (!empty($booking_ids)) {
+                                $bookings_table = $wpdb->prefix . 'booknow_bookings';
+                                $placeholders = implode(',', array_fill(0, count($booking_ids), '%d'));
+                                $bookings_raw = $wpdb->get_results(
+                                    $wpdb->prepare(
+                                        "SELECT * FROM {$bookings_table} WHERE id IN ({$placeholders})",
+                                        $booking_ids
+                                    )
+                                );
+                                // Create associative array keyed by ID for fast lookup
+                                foreach ($bookings_raw as $booking) {
+                                    $bookings[$booking->id] = $booking;
+                                }
+                            }
+
+                            foreach ($error_logs as $log) :
                                 $context_data = !empty($log->error_context) ? json_decode($log->error_context, true) : null;
-                                $booking = $log->booking_id ? Book_Now_Booking::get($log->booking_id) : null;
+                                $booking = isset($bookings[$log->booking_id]) ? $bookings[$log->booking_id] : null;
                             ?>
                                 <tr class="error-log-row" data-log-id="<?php echo esc_attr($log->id); ?>">
                                     <th scope="row" class="check-column">

@@ -204,10 +204,10 @@ $stats = $wpdb->get_row("
                         <label for="email-type"><?php esc_html_e('Email Type', 'book-now-kre8iv'); ?></label>
                         <select name="email_type" id="email-type">
                             <option value=""><?php esc_html_e('All Types', 'book-now-kre8iv'); ?></option>
-                            <option value="confirmation" <?php selected(isset($_GET['email_type']) && $_GET['email_type'] === 'confirmation'); ?>><?php esc_html_e('Confirmation', 'book-now-kre8iv'); ?></option>
-                            <option value="reminder" <?php selected(isset($_GET['email_type']) && $_GET['email_type'] === 'reminder'); ?>><?php esc_html_e('Reminder', 'book-now-kre8iv'); ?></option>
-                            <option value="cancellation" <?php selected(isset($_GET['email_type']) && $_GET['email_type'] === 'cancellation'); ?>><?php esc_html_e('Cancellation', 'book-now-kre8iv'); ?></option>
-                            <option value="admin_notification" <?php selected(isset($_GET['email_type']) && $_GET['email_type'] === 'admin_notification'); ?>><?php esc_html_e('Admin Notification', 'book-now-kre8iv'); ?></option>
+                            <option value="confirmation" <?php selected(isset($_GET['email_type']) && sanitize_text_field($_GET['email_type']) === 'confirmation'); ?>><?php esc_html_e('Confirmation', 'book-now-kre8iv'); ?></option>
+                            <option value="reminder" <?php selected(isset($_GET['email_type']) && sanitize_text_field($_GET['email_type']) === 'reminder'); ?>><?php esc_html_e('Reminder', 'book-now-kre8iv'); ?></option>
+                            <option value="cancellation" <?php selected(isset($_GET['email_type']) && sanitize_text_field($_GET['email_type']) === 'cancellation'); ?>><?php esc_html_e('Cancellation', 'book-now-kre8iv'); ?></option>
+                            <option value="admin_notification" <?php selected(isset($_GET['email_type']) && sanitize_text_field($_GET['email_type']) === 'admin_notification'); ?>><?php esc_html_e('Admin Notification', 'book-now-kre8iv'); ?></option>
                         </select>
                     </div>
 
@@ -215,8 +215,8 @@ $stats = $wpdb->get_row("
                         <label for="status"><?php esc_html_e('Status', 'book-now-kre8iv'); ?></label>
                         <select name="status" id="status">
                             <option value=""><?php esc_html_e('All Statuses', 'book-now-kre8iv'); ?></option>
-                            <option value="sent" <?php selected(isset($_GET['status']) && $_GET['status'] === 'sent'); ?>><?php esc_html_e('Sent', 'book-now-kre8iv'); ?></option>
-                            <option value="failed" <?php selected(isset($_GET['status']) && $_GET['status'] === 'failed'); ?>><?php esc_html_e('Failed', 'book-now-kre8iv'); ?></option>
+                            <option value="sent" <?php selected(isset($_GET['status']) && sanitize_text_field($_GET['status']) === 'sent'); ?>><?php esc_html_e('Sent', 'book-now-kre8iv'); ?></option>
+                            <option value="failed" <?php selected(isset($_GET['status']) && sanitize_text_field($_GET['status']) === 'failed'); ?>><?php esc_html_e('Failed', 'book-now-kre8iv'); ?></option>
                         </select>
                     </div>
 
@@ -296,8 +296,27 @@ $stats = $wpdb->get_row("
                             </tr>
                         </thead>
                         <tbody>
-                            <?php foreach ($email_logs as $log) :
-                                $booking = $log->booking_id ? Book_Now_Booking::get($log->booking_id) : null;
+                            <?php
+                            // Bulk load all bookings to avoid N+1 query problem
+                            $booking_ids = array_filter(array_unique(wp_list_pluck($email_logs, 'booking_id')));
+                            $bookings = array();
+                            if (!empty($booking_ids)) {
+                                $bookings_table = $wpdb->prefix . 'booknow_bookings';
+                                $placeholders = implode(',', array_fill(0, count($booking_ids), '%d'));
+                                $bookings_raw = $wpdb->get_results(
+                                    $wpdb->prepare(
+                                        "SELECT * FROM {$bookings_table} WHERE id IN ({$placeholders})",
+                                        $booking_ids
+                                    )
+                                );
+                                // Create associative array keyed by ID for fast lookup
+                                foreach ($bookings_raw as $booking) {
+                                    $bookings[$booking->id] = $booking;
+                                }
+                            }
+
+                            foreach ($email_logs as $log) :
+                                $booking = isset($bookings[$log->booking_id]) ? $bookings[$log->booking_id] : null;
                             ?>
                                 <tr>
                                     <th scope="row" class="check-column">
