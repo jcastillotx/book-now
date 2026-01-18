@@ -33,6 +33,17 @@ class Book_Now_Logger {
     }
 
     /**
+     * Check if database logging is enabled.
+     *
+     * Database logging is enabled when BOOKNOW_DB_LOG is defined as true.
+     *
+     * @return bool
+     */
+    private static function is_db_logging_enabled() {
+        return defined( 'BOOKNOW_DB_LOG' ) && BOOKNOW_DB_LOG;
+    }
+
+    /**
      * Format the log message.
      *
      * @param string $level   Log level.
@@ -66,6 +77,27 @@ class Book_Now_Logger {
 
         $formatted_message = self::format_message( $level, $message, $context );
         error_log( $formatted_message );
+
+        // Also log to database for ERROR and CRITICAL levels
+        if ( self::is_db_logging_enabled() && in_array( $level, array( self::LEVEL_ERROR, self::LEVEL_CRITICAL ), true ) ) {
+            self::log_to_database( $level, $message, $context );
+        }
+    }
+
+    /**
+     * Log message to database.
+     *
+     * @param string $level   Log level.
+     * @param string $message Log message.
+     * @param array  $context Optional context data.
+     * @return void
+     */
+    private static function log_to_database( $level, $message, $context = array() ) {
+        if ( ! class_exists( 'Book_Now_Error_Log' ) ) {
+            require_once plugin_dir_path( __FILE__ ) . 'class-book-now-error-log.php';
+        }
+
+        Book_Now_Error_Log::log( $level, $message, $context );
     }
 
     /**

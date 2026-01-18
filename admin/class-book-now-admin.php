@@ -168,6 +168,26 @@ class Book_Now_Admin {
             'booknow-setup',
             array($this, 'display_setup_wizard')
         );
+
+        // Email Logs submenu
+        add_submenu_page(
+            'book-now',
+            __('Email Logs', 'book-now-kre8iv'),
+            __('Email Logs', 'book-now-kre8iv'),
+            'manage_options',
+            'book-now-email-logs',
+            array($this, 'display_email_logs')
+        );
+
+        // Error Logs submenu
+        add_submenu_page(
+            'book-now',
+            __('Error Logs', 'book-now-kre8iv'),
+            __('Error Logs', 'book-now-kre8iv'),
+            'manage_options',
+            'book-now-error-logs',
+            array($this, 'display_error_logs')
+        );
     }
 
     /**
@@ -218,6 +238,20 @@ class Book_Now_Admin {
      */
     public function display_settings() {
         include BOOK_NOW_PLUGIN_DIR . 'admin/partials/settings.php';
+    }
+
+    /**
+     * Display email logs page.
+     */
+    public function display_email_logs() {
+        include BOOK_NOW_PLUGIN_DIR . 'admin/partials/email-logs.php';
+    }
+
+    /**
+     * Display error logs page.
+     */
+    public function display_error_logs() {
+        include BOOK_NOW_PLUGIN_DIR . 'admin/partials/error-logs.php';
     }
 
     /**

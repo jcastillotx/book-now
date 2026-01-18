@@ -503,7 +503,7 @@ class Book_Now_Email {
         $wpdb->insert($table, array(
             'booking_id' => $booking_id,
             'email_type' => $type,
-            'recipient' => $to,
+            'recipient_email' => $to,
             'subject' => $subject,
             'status' => $sent ? 'sent' : 'failed',
             'sent_at' => current_time('mysql'),

@@ -63,6 +63,8 @@ class Book_Now {
         require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-i18n.php';
         require_once BOOK_NOW_PLUGIN_DIR . 'includes/helpers.php';
         require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-logger.php';
+        require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-email-log.php';
+        require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-error-log.php';
 
         // Model classes (needed by other classes)
         require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-consultation-type.php';
