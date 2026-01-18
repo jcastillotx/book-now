@@ -61,6 +61,14 @@ if ($booking_id && isset($_GET['action']) && isset($_GET['_wpnonce'])) {
                     break;
                 case 'sync_calendar':
                     try {
+                        // Load dependencies required by calendar classes
+                        if (!class_exists('Book_Now_Encryption')) {
+                            require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-encryption.php';
+                        }
+                        if (!class_exists('Book_Now_Logger')) {
+                            require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-logger.php';
+                        }
+
                         // Calendar classes are loaded by the main plugin, but ensure they exist
                         if (!class_exists('Book_Now_Calendar_Sync')) {
                             require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-calendar-sync.php';

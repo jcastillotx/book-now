@@ -26,6 +26,13 @@ $oauth_error = '';
 if ($current_tab === 'integration') {
     // Handle Google OAuth callback (google_oauth=callback from redirect URI)
     if (isset($_GET['code']) && isset($_GET['google_oauth']) && $_GET['google_oauth'] === 'callback') {
+        // Load dependencies required by calendar classes
+        if (!class_exists('Book_Now_Encryption')) {
+            require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-encryption.php';
+        }
+        if (!class_exists('Book_Now_Logger')) {
+            require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-logger.php';
+        }
         if (!class_exists('Book_Now_Google_Calendar')) {
             require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-google-calendar.php';
         }
@@ -44,6 +51,13 @@ if ($current_tab === 'integration') {
 
     // Handle Microsoft OAuth callback (microsoft_oauth=callback from redirect URI)
     if (isset($_GET['code']) && isset($_GET['microsoft_oauth']) && $_GET['microsoft_oauth'] === 'callback') {
+        // Load dependencies required by calendar classes
+        if (!class_exists('Book_Now_Encryption')) {
+            require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-encryption.php';
+        }
+        if (!class_exists('Book_Now_Logger')) {
+            require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-logger.php';
+        }
         if (!class_exists('Book_Now_Microsoft_Calendar')) {
             require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-microsoft-calendar.php';
         }
@@ -62,6 +76,13 @@ if ($current_tab === 'integration') {
     // Handle Google disconnect using the disconnect() method
     if (isset($_GET['disconnect_google']) && isset($_GET['_wpnonce'])) {
         if (wp_verify_nonce(sanitize_text_field(wp_unslash($_GET['_wpnonce'])), 'booknow_disconnect_google')) {
+            // Load dependencies required by calendar classes
+            if (!class_exists('Book_Now_Encryption')) {
+                require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-encryption.php';
+            }
+            if (!class_exists('Book_Now_Logger')) {
+                require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-logger.php';
+            }
             if (!class_exists('Book_Now_Google_Calendar')) {
                 require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-google-calendar.php';
             }
@@ -80,6 +101,13 @@ if ($current_tab === 'integration') {
     // Handle Microsoft disconnect
     if (isset($_GET['disconnect_microsoft']) && isset($_GET['_wpnonce'])) {
         if (wp_verify_nonce(sanitize_text_field(wp_unslash($_GET['_wpnonce'])), 'booknow_disconnect_microsoft')) {
+            // Load dependencies required by calendar classes
+            if (!class_exists('Book_Now_Encryption')) {
+                require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-encryption.php';
+            }
+            if (!class_exists('Book_Now_Logger')) {
+                require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-logger.php';
+            }
             if (!class_exists('Book_Now_Microsoft_Calendar')) {
                 require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-microsoft-calendar.php';
             }
