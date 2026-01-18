@@ -28,8 +28,33 @@ class Book_Now_Calendar_Sync {
      */
     public function __construct() {
         $this->settings = get_option('booknow_calendar_settings', array());
-        $this->google = new Book_Now_Google_Calendar();
-        $this->microsoft = new Book_Now_Microsoft_Calendar();
+
+        // Instantiate calendar integrations with error handling
+        try {
+            if (class_exists('Book_Now_Google_Calendar')) {
+                $this->google = new Book_Now_Google_Calendar();
+            } else {
+                $this->google = null;
+            }
+        } catch (Exception $e) {
+            $this->google = null;
+            if (class_exists('Book_Now_Logger')) {
+                Book_Now_Logger::warning('Google Calendar initialization failed', array('error' => $e->getMessage()));
+            }
+        }
+
+        try {
+            if (class_exists('Book_Now_Microsoft_Calendar')) {
+                $this->microsoft = new Book_Now_Microsoft_Calendar();
+            } else {
+                $this->microsoft = null;
+            }
+        } catch (Exception $e) {
+            $this->microsoft = null;
+            if (class_exists('Book_Now_Logger')) {
+                Book_Now_Logger::warning('Microsoft Calendar initialization failed', array('error' => $e->getMessage()));
+            }
+        }
 
         // Hook into booking actions
         add_action('booknow_booking_created', array($this, 'sync_booking_created'), 10, 1);
@@ -50,10 +75,10 @@ class Book_Now_Calendar_Sync {
             return;
         }
 
-        // Sync to Google Calendar
-        if ($this->is_google_enabled() && $this->google->is_authenticated()) {
+        // Sync to Google Calendar (with null check)
+        if ($this->is_google_enabled() && $this->google !== null && $this->google->is_authenticated()) {
             $event_id = $this->google->create_event($booking);
-            
+
             if (!is_wp_error($event_id)) {
                 Book_Now_Booking::update($booking_id, array(
                     'google_event_id' => $event_id,
@@ -61,8 +86,8 @@ class Book_Now_Calendar_Sync {
             }
         }
 
-        // Sync to Microsoft Calendar
-        if ($this->is_microsoft_enabled() && $this->microsoft->is_authenticated()) {
+        // Sync to Microsoft Calendar (with null check)
+        if ($this->is_microsoft_enabled() && $this->microsoft !== null && $this->microsoft->is_authenticated()) {
             $event_id = $this->microsoft->create_event($booking);
             
             if (!is_wp_error($event_id)) {
@@ -88,8 +113,8 @@ class Book_Now_Calendar_Sync {
         }
 
         // Create calendar events if they don't exist yet
-        // Sync to Google Calendar
-        if ($this->is_google_enabled() && $this->google->is_authenticated() && empty($booking->google_event_id)) {
+        // Sync to Google Calendar (with null check)
+        if ($this->is_google_enabled() && $this->google !== null && $this->google->is_authenticated() && empty($booking->google_event_id)) {
             $event_id = $this->google->create_event($booking);
 
             if (!is_wp_error($event_id)) {
@@ -99,8 +124,8 @@ class Book_Now_Calendar_Sync {
             }
         }
 
-        // Sync to Microsoft Calendar
-        if ($this->is_microsoft_enabled() && $this->microsoft->is_authenticated() && empty($booking->microsoft_event_id)) {
+        // Sync to Microsoft Calendar (with null check)
+        if ($this->is_microsoft_enabled() && $this->microsoft !== null && $this->microsoft->is_authenticated() && empty($booking->microsoft_event_id)) {
             $event_id = $this->microsoft->create_event($booking);
 
             if (!is_wp_error($event_id)) {
@@ -123,13 +148,13 @@ class Book_Now_Calendar_Sync {
             return;
         }
 
-        // Update Google Calendar event
-        if ($this->is_google_enabled() && !empty($booking->google_event_id)) {
+        // Update Google Calendar event (with null check)
+        if ($this->is_google_enabled() && $this->google !== null && !empty($booking->google_event_id)) {
             $this->google->update_event($booking->google_event_id, $booking);
         }
 
-        // Update Microsoft Calendar event
-        if ($this->is_microsoft_enabled() && !empty($booking->microsoft_event_id)) {
+        // Update Microsoft Calendar event (with null check)
+        if ($this->is_microsoft_enabled() && $this->microsoft !== null && !empty($booking->microsoft_event_id)) {
             $this->microsoft->update_event($booking->microsoft_event_id, $booking);
         }
     }
@@ -146,13 +171,13 @@ class Book_Now_Calendar_Sync {
             return;
         }
 
-        // Delete Google Calendar event
-        if ($this->is_google_enabled() && !empty($booking->google_event_id)) {
+        // Delete Google Calendar event (with null check)
+        if ($this->is_google_enabled() && $this->google !== null && !empty($booking->google_event_id)) {
             $this->google->delete_event($booking->google_event_id);
         }
 
-        // Delete Microsoft Calendar event
-        if ($this->is_microsoft_enabled() && !empty($booking->microsoft_event_id)) {
+        // Delete Microsoft Calendar event (with null check)
+        if ($this->is_microsoft_enabled() && $this->microsoft !== null && !empty($booking->microsoft_event_id)) {
             $this->microsoft->delete_event($booking->microsoft_event_id);
         }
     }
@@ -182,12 +207,14 @@ class Book_Now_Calendar_Sync {
     public function is_time_available($date, $time, $duration) {
         $available = true;
 
-        // Check Google Calendar
-        if ($this->is_google_enabled() && $this->google->is_authenticated()) {
+        // Check Google Calendar (with null check)
+        if ($this->is_google_enabled() && $this->google !== null && $this->google->is_authenticated()) {
             $google_available = $this->google->is_time_available($date, $time, $duration);
-            
+
             if (is_wp_error($google_available)) {
-                Book_Now_Logger::warning('Google Calendar availability check failed', array('error' => $google_available->get_error_message()));
+                if (class_exists('Book_Now_Logger')) {
+                    Book_Now_Logger::warning('Google Calendar availability check failed', array('error' => $google_available->get_error_message()));
+                }
                 $available = false; // Assume not available on error
             } else {
                 $available = $available && $google_available;
@@ -199,12 +226,14 @@ class Book_Now_Calendar_Sync {
             return false;
         }
 
-        // Check Microsoft Calendar
-        if ($this->is_microsoft_enabled() && $this->microsoft->is_authenticated()) {
+        // Check Microsoft Calendar (with null check)
+        if ($this->is_microsoft_enabled() && $this->microsoft !== null && $this->microsoft->is_authenticated()) {
             $microsoft_available = $this->microsoft->is_time_available($date, $time, $duration);
-            
+
             if (is_wp_error($microsoft_available)) {
-                Book_Now_Logger::warning('Microsoft Calendar availability check failed', array('error' => $microsoft_available->get_error_message()));
+                if (class_exists('Book_Now_Logger')) {
+                    Book_Now_Logger::warning('Microsoft Calendar availability check failed', array('error' => $microsoft_available->get_error_message()));
+                }
                 $available = false; // Assume not available on error
             } else {
                 $available = $available && $microsoft_available;
@@ -224,19 +253,19 @@ class Book_Now_Calendar_Sync {
     public function get_busy_times($date_from, $date_to) {
         $all_busy_times = array();
 
-        // Get Google Calendar busy times
-        if ($this->is_google_enabled() && $this->google->is_authenticated()) {
+        // Get Google Calendar busy times (with null check)
+        if ($this->is_google_enabled() && $this->google !== null && $this->google->is_authenticated()) {
             $google_busy = $this->google->get_busy_times($date_from, $date_to);
-            
+
             if (!is_wp_error($google_busy)) {
                 $all_busy_times = array_merge($all_busy_times, $google_busy);
             }
         }
 
-        // Get Microsoft Calendar busy times
-        if ($this->is_microsoft_enabled() && $this->microsoft->is_authenticated()) {
+        // Get Microsoft Calendar busy times (with null check)
+        if ($this->is_microsoft_enabled() && $this->microsoft !== null && $this->microsoft->is_authenticated()) {
             $microsoft_busy = $this->microsoft->get_busy_times($date_from, $date_to);
-            
+
             if (!is_wp_error($microsoft_busy)) {
                 $all_busy_times = array_merge($all_busy_times, $microsoft_busy);
             }
@@ -264,8 +293,8 @@ class Book_Now_Calendar_Sync {
             return array('error' => 'Booking not found');
         }
 
-        // Sync to Google
-        if ($this->is_google_enabled() && $this->google->is_authenticated()) {
+        // Sync to Google (with null check)
+        if ($this->is_google_enabled() && $this->google !== null && $this->google->is_authenticated()) {
             if (empty($booking->google_event_id)) {
                 $event_id = $this->google->create_event($booking);
                 if (!is_wp_error($event_id)) {
@@ -283,8 +312,8 @@ class Book_Now_Calendar_Sync {
             }
         }
 
-        // Sync to Microsoft
-        if ($this->is_microsoft_enabled() && $this->microsoft->is_authenticated()) {
+        // Sync to Microsoft (with null check)
+        if ($this->is_microsoft_enabled() && $this->microsoft !== null && $this->microsoft->is_authenticated()) {
             if (empty($booking->microsoft_event_id)) {
                 $event_id = $this->microsoft->create_event($booking);
                 if (!is_wp_error($event_id)) {
