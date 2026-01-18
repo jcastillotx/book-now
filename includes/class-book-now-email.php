@@ -72,8 +72,8 @@ class Book_Now_Email {
 
         $sent = wp_mail($to, $subject, $message, $headers);
 
-        // Log email
-        $this->log_email($booking_id, 'confirmation', $to, $subject, $sent);
+        // Log email with encrypted body
+        $this->log_email($booking_id, 'confirmation', $to, $subject, $sent, $message);
 
         // Send admin notification
         if (!empty($this->settings['admin_notification_enabled'])) {
@@ -111,7 +111,7 @@ class Book_Now_Email {
 
         $sent = wp_mail($to, $subject, $message, $headers);
 
-        $this->log_email($booking_id, 'cancellation', $to, $subject, $sent);
+        $this->log_email($booking_id, 'cancellation', $to, $subject, $sent, $message);
 
         return $sent;
     }
@@ -139,7 +139,7 @@ class Book_Now_Email {
 
         $sent = wp_mail($to, $subject, $message, $headers);
 
-        $this->log_email($booking_id, 'reminder', $to, $subject, $sent);
+        $this->log_email($booking_id, 'reminder', $to, $subject, $sent, $message);
 
         return $sent;
     }
@@ -158,7 +158,7 @@ class Book_Now_Email {
 
         $sent = wp_mail($admin_email, $subject, $message, $headers);
 
-        $this->log_email($booking->id, 'admin_notification', $admin_email, $subject, $sent);
+        $this->log_email($booking->id, 'admin_notification', $admin_email, $subject, $sent, $message);
 
         return $sent;
     }
@@ -495,16 +495,27 @@ class Book_Now_Email {
      * @param string $to Recipient email
      * @param string $subject Email subject
      * @param bool   $sent Whether email was sent successfully
+     * @param string $body Optional. Email body content to encrypt and store
      */
-    private function log_email($booking_id, $type, $to, $subject, $sent) {
+    private function log_email($booking_id, $type, $to, $subject, $sent, $body = '') {
         global $wpdb;
         $table = $wpdb->prefix . 'booknow_email_log';
+
+        // Encrypt email body if provided and encryption is available
+        $encrypted_body = '';
+        if (!empty($body) && class_exists('Book_Now_Encryption') && Book_Now_Encryption::is_available()) {
+            $encrypted_body = Book_Now_Encryption::encrypt($body);
+        } elseif (!empty($body)) {
+            // Fallback: store as-is if encryption not available
+            $encrypted_body = $body;
+        }
 
         $wpdb->insert($table, array(
             'booking_id' => $booking_id,
             'email_type' => $type,
             'recipient_email' => $to,
             'subject' => $subject,
+            'email_body' => $encrypted_body,
             'status' => $sent ? 'sent' : 'failed',
             'sent_at' => current_time('mysql'),
         ));

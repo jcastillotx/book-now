@@ -204,6 +204,7 @@ class Book_Now_Activator {
             email_type enum('confirmation','reminder','cancellation','admin_notification') NOT NULL,
             recipient_email varchar(255) NOT NULL,
             subject varchar(500) NOT NULL,
+            email_body longtext DEFAULT NULL,
             status enum('sent','failed') DEFAULT 'sent',
             error_message text,
             sent_at datetime DEFAULT CURRENT_TIMESTAMP,

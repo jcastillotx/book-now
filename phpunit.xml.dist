@@ -8,10 +8,18 @@
 	convertNoticesToExceptions="true"
 	convertWarningsToExceptions="true"
 	beStrictAboutTestsThatDoNotTestAnything="true"
+	verbose="true"
 >
 	<testsuites>
 		<testsuite name="unit">
 			<directory suffix="Test.php">./tests/unit</directory>
+		</testsuite>
+		<testsuite name="integration">
+			<directory suffix="Test.php">./tests/integration</directory>
+		</testsuite>
+		<testsuite name="all">
+			<directory suffix="Test.php">./tests/unit</directory>
+			<directory suffix="Test.php">./tests/integration</directory>
 		</testsuite>
 	</testsuites>
 	<coverage processUncoveredFiles="true">
@@ -20,6 +28,17 @@
 		</include>
 		<exclude>
 			<directory suffix=".php">./vendor</directory>
+			<file>./includes/class-book-now-i18n.php</file>
+			<file>./includes/class-book-now-loader.php</file>
 		</exclude>
+		<report>
+			<html outputDirectory="tests/coverage"/>
+			<text outputFile="php://stdout" showOnlySummary="true"/>
+		</report>
 	</coverage>
+	<php>
+		<const name="PHPUNIT_RUNNING" value="true"/>
+		<ini name="display_errors" value="1"/>
+		<ini name="error_reporting" value="-1"/>
+	</php>
 </phpunit>

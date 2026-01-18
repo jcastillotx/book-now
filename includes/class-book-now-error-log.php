@@ -261,12 +261,18 @@ class Book_Now_Error_Log {
 
 		$table = $wpdb->prefix . 'booknow_error_log';
 
-		return $wpdb->query(
+		$result = $wpdb->query(
 			$wpdb->prepare(
 				"DELETE FROM {$table} WHERE created_at < DATE_SUB(NOW(), INTERVAL %d DAY)",
 				$days
 			)
 		);
+
+		if ( $result ) {
+			self::clear_cache();
+		}
+
+		return $result;
 	}
 
 	/**
@@ -285,11 +291,17 @@ class Book_Now_Error_Log {
 
 		$table = $wpdb->prefix . 'booknow_error_log';
 
-		return (bool) $wpdb->delete(
+		$result = (bool) $wpdb->delete(
 			$table,
 			array( 'id' => $log_id ),
 			array( '%d' )
 		);
+
+		if ( $result ) {
+			self::clear_cache();
+		}
+
+		return $result;
 	}
 
 	/**
@@ -315,12 +327,18 @@ class Book_Now_Error_Log {
 		$table        = $wpdb->prefix . 'booknow_error_log';
 		$placeholders = implode( ',', array_fill( 0, count( $log_ids ), '%d' ) );
 
-		return $wpdb->query(
+		$result = $wpdb->query(
 			$wpdb->prepare(
 				"DELETE FROM {$table} WHERE id IN ({$placeholders})",
 				$log_ids
 			)
 		);
+
+		if ( $result ) {
+			self::clear_cache();
+		}
+
+		return $result;
 	}
 
 	/**
@@ -411,6 +429,14 @@ class Book_Now_Error_Log {
 
 		$args = wp_parse_args( $args, $defaults );
 
+		// Generate cache key from arguments
+		$cache_key = 'booknow_error_stats_' . md5( serialize( $args ) );
+		$stats     = wp_cache_get( $cache_key, 'booknow' );
+
+		if ( false !== $stats ) {
+			return $stats;
+		}
+
 		$table         = $wpdb->prefix . 'booknow_error_log';
 		$where_clauses = array( '1=1' );
 		$where_values  = array();
@@ -469,12 +495,17 @@ class Book_Now_Error_Log {
 		}
 		$recent = $wpdb->get_results( $recent_sql );
 
-		return array(
+		$stats = array(
 			'total'     => $total,
 			'by_level'  => $by_level,
 			'by_source' => $by_source,
 			'recent'    => $recent,
 		);
+
+		// Cache for 5 minutes (300 seconds)
+		wp_cache_set( $cache_key, $stats, 'booknow', 300 );
+
+		return $stats;
 	}
 
 	/**
@@ -520,6 +551,8 @@ class Book_Now_Error_Log {
 
 		$table = $wpdb->prefix . 'booknow_error_log';
 
+		$client_ip = self::get_client_ip();
+
 		$data = array(
 			'error_level'   => $level,
 			'error_message' => sanitize_text_field( $message ),
@@ -527,7 +560,7 @@ class Book_Now_Error_Log {
 			'error_source'  => isset( $context['source'] ) ? sanitize_text_field( $context['source'] ) : null,
 			'booking_id'    => isset( $context['booking_id'] ) ? absint( $context['booking_id'] ) : null,
 			'user_id'       => isset( $context['user_id'] ) ? absint( $context['user_id'] ) : get_current_user_id(),
-			'ip_address'    => self::get_client_ip(),
+			'ip_address'    => $client_ip ? self::anonymize_ip( $client_ip ) : null,
 			'user_agent'    => isset( $_SERVER['HTTP_USER_AGENT'] ) ? sanitize_text_field( wp_unslash( $_SERVER['HTTP_USER_AGENT'] ) ) : null,
 			'request_uri'   => isset( $_SERVER['REQUEST_URI'] ) ? esc_url_raw( wp_unslash( $_SERVER['REQUEST_URI'] ) ) : null,
 		);
@@ -546,7 +579,37 @@ class Book_Now_Error_Log {
 
 		$result = $wpdb->insert( $table, $data, $format );
 
-		return $result ? $wpdb->insert_id : false;
+		if ( $result ) {
+			self::clear_cache();
+			return $wpdb->insert_id;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Anonymize IP address for GDPR compliance
+	 *
+	 * @param string $ip_address IP address to anonymize.
+	 * @return string Anonymized IP address.
+	 */
+	private static function anonymize_ip( $ip_address ) {
+		if ( empty( $ip_address ) ) {
+			return '';
+		}
+
+		// IPv4 - mask last octet
+		if ( filter_var( $ip_address, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4 ) ) {
+			return preg_replace( '/\.\d+$/', '.xxx', $ip_address );
+		}
+
+		// IPv6 - mask last 80 bits (keep first 48 bits)
+		if ( filter_var( $ip_address, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6 ) ) {
+			$parts = explode( ':', $ip_address );
+			return implode( ':', array_slice( $parts, 0, 3 ) ) . ':xxxx:xxxx:xxxx:xxxx:xxxx';
+		}
+
+		return 'xxx.xxx.xxx.xxx';
 	}
 
 	/**
@@ -594,12 +657,35 @@ class Book_Now_Error_Log {
 	public static function get_sources() {
 		global $wpdb;
 
+		$cache_key = 'booknow_error_sources';
+		$sources   = wp_cache_get( $cache_key, 'booknow' );
+
+		if ( false !== $sources ) {
+			return $sources;
+		}
+
 		$table = $wpdb->prefix . 'booknow_error_log';
 
 		$results = $wpdb->get_col(
 			"SELECT DISTINCT error_source FROM {$table} WHERE error_source IS NOT NULL ORDER BY error_source ASC"
 		);
 
-		return $results ? $results : array();
+		$sources = $results ? $results : array();
+
+		// Cache for 1 hour (3600 seconds)
+		wp_cache_set( $cache_key, $sources, 'booknow', 3600 );
+
+		return $sources;
+	}
+
+	/**
+	 * Clear error log cache
+	 *
+	 * Clears all cached error log data.
+	 *
+	 * @return void
+	 */
+	public static function clear_cache() {
+		wp_cache_delete_group( 'booknow' );
 	}
 }

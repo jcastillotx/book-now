@@ -149,6 +149,15 @@ class Book_Now_Email_Log {
 		$prepared_query = $wpdb->prepare( $sql, $query_values );
 		$logs           = $wpdb->get_results( $prepared_query );
 
+		// Decrypt email bodies if present
+		if ( ! empty( $logs ) ) {
+			foreach ( $logs as $log ) {
+				if ( ! empty( $log->email_body ) ) {
+					$log->email_body = self::get_decrypted_body( $log );
+				}
+			}
+		}
+
 		return array(
 			'logs'     => $logs,
 			'total'    => $total,
@@ -174,12 +183,19 @@ class Book_Now_Email_Log {
 
 		$table = $wpdb->prefix . 'booknow_email_log';
 
-		return $wpdb->get_row(
+		$log = $wpdb->get_row(
 			$wpdb->prepare(
 				"SELECT * FROM {$table} WHERE id = %d",
 				$log_id
 			)
 		);
+
+		// Decrypt email body if present
+		if ( $log && ! empty( $log->email_body ) ) {
+			$log->email_body = self::get_decrypted_body( $log );
+		}
+
+		return $log;
 	}
 
 	/**
@@ -263,12 +279,18 @@ class Book_Now_Email_Log {
 
 		$table = $wpdb->prefix . 'booknow_email_log';
 
-		return $wpdb->query(
+		$result = $wpdb->query(
 			$wpdb->prepare(
 				"DELETE FROM {$table} WHERE sent_at < DATE_SUB(NOW(), INTERVAL %d DAY)",
 				$days
 			)
 		);
+
+		if ( $result ) {
+			self::clear_cache();
+		}
+
+		return $result;
 	}
 
 	/**
@@ -287,11 +309,17 @@ class Book_Now_Email_Log {
 
 		$table = $wpdb->prefix . 'booknow_email_log';
 
-		return (bool) $wpdb->delete(
+		$result = (bool) $wpdb->delete(
 			$table,
 			array( 'id' => $log_id ),
 			array( '%d' )
 		);
+
+		if ( $result ) {
+			self::clear_cache();
+		}
+
+		return $result;
 	}
 
 	/**
@@ -317,12 +345,18 @@ class Book_Now_Email_Log {
 		$table       = $wpdb->prefix . 'booknow_email_log';
 		$placeholders = implode( ',', array_fill( 0, count( $log_ids ), '%d' ) );
 
-		return $wpdb->query(
+		$result = $wpdb->query(
 			$wpdb->prepare(
 				"DELETE FROM {$table} WHERE id IN ({$placeholders})",
 				$log_ids
 			)
 		);
+
+		if ( $result ) {
+			self::clear_cache();
+		}
+
+		return $result;
 	}
 
 	/**
@@ -410,6 +444,14 @@ class Book_Now_Email_Log {
 
 		$args = wp_parse_args( $args, $defaults );
 
+		// Generate cache key from arguments
+		$cache_key = 'booknow_email_stats_' . md5( serialize( $args ) );
+		$stats     = wp_cache_get( $cache_key, 'booknow' );
+
+		if ( false !== $stats ) {
+			return $stats;
+		}
+
 		$table         = $wpdb->prefix . 'booknow_email_log';
 		$where_clauses = array( '1=1' );
 		$where_values  = array();
@@ -473,13 +515,18 @@ class Book_Now_Email_Log {
 		// Success rate
 		$success_rate = $total > 0 ? round( ( $sent / $total ) * 100, 2 ) : 0;
 
-		return array(
+		$stats = array(
 			'total'        => $total,
 			'sent'         => $sent,
 			'failed'       => $failed,
 			'by_type'      => $by_type,
 			'success_rate' => $success_rate,
 		);
+
+		// Cache for 5 minutes (300 seconds)
+		wp_cache_set( $cache_key, $stats, 'booknow', 300 );
+
+		return $stats;
 	}
 
 	/**
@@ -498,11 +545,60 @@ class Book_Now_Email_Log {
 
 		$table = $wpdb->prefix . 'booknow_email_log';
 
-		return $wpdb->get_results(
+		$logs = $wpdb->get_results(
 			$wpdb->prepare(
 				"SELECT * FROM {$table} WHERE booking_id = %d ORDER BY sent_at DESC",
 				$booking_id
 			)
 		);
+
+		// Decrypt email bodies if present
+		if ( ! empty( $logs ) ) {
+			foreach ( $logs as $log ) {
+				if ( ! empty( $log->email_body ) ) {
+					$log->email_body = self::get_decrypted_body( $log );
+				}
+			}
+		}
+
+		return $logs;
+	}
+
+	/**
+	 * Clear email log cache
+	 *
+	 * Clears all cached email log data.
+	 *
+	 * @return void
+	 */
+	public static function clear_cache() {
+		wp_cache_delete_group( 'booknow' );
+	}
+
+	/**
+	 * Get decrypted email body from a log entry
+	 *
+	 * Handles backward compatibility with unencrypted data.
+	 *
+	 * @param object $log Email log object with email_body field.
+	 * @return string Decrypted email body or original if not encrypted.
+	 */
+	public static function get_decrypted_body( $log ) {
+		if ( empty( $log ) || empty( $log->email_body ) ) {
+			return '';
+		}
+
+		// Check if encryption class is available
+		if ( ! class_exists( 'Book_Now_Encryption' ) ) {
+			return $log->email_body;
+		}
+
+		// Check if body is encrypted
+		if ( Book_Now_Encryption::is_encrypted( $log->email_body ) ) {
+			return Book_Now_Encryption::decrypt( $log->email_body );
+		}
+
+		// Return as-is if not encrypted (backward compatibility)
+		return $log->email_body;
 	}
 }
