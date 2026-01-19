@@ -171,6 +171,10 @@ class Book_Now_Admin {
             if (!class_exists('Book_Now_Microsoft_Calendar')) {
                 require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-microsoft-calendar.php';
             }
+            // Ensure consultation type class is loaded as it might be needed for event description
+            if (!class_exists('Book_Now_Consultation_Type')) {
+                require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-consultation-type.php';
+            }
 
             $calendar_sync = new Book_Now_Calendar_Sync();
             $results = $calendar_sync->manual_sync($booking_id);
@@ -207,14 +211,15 @@ class Book_Now_Admin {
 
             return implode(' ', $success_msgs);
 
-        } catch (Exception $e) {
+        } catch (Throwable $e) {
             if (class_exists('Book_Now_Logger')) {
                 Book_Now_Logger::error('Calendar sync failed', array(
                     'booking_id' => $booking_id,
                     'error' => $e->getMessage(),
+                    'trace' => $e->getTraceAsString()
                 ));
             }
-            return __('Calendar sync encountered an error. Please check your calendar settings and try again.', 'book-now-kre8iv');
+            return sprintf(__('Calendar sync encountered an error: %s', 'book-now-kre8iv'), $e->getMessage());
         }
     }
 
