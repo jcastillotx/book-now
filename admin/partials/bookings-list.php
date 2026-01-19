@@ -19,7 +19,7 @@ if (!current_user_can('manage_options')) {
 // Check if viewing a single booking
 $booking_id = isset($_GET['id']) ? absint($_GET['id']) : 0;
 
-// Get notice from redirect if present
+// Get notice from redirect if present (actions are handled in Book_Now_Admin::handle_booking_actions)
 if (isset($_GET['booknow_notice'])) {
     $notice = sanitize_text_field(wp_unslash($_GET['booknow_notice']));
     $notice_type = isset($_GET['booknow_notice_type']) ? sanitize_text_field($_GET['booknow_notice_type']) : 'info';
