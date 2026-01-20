@@ -1,0 +1,851 @@
+{
+  "directory": "vendor/dealerdirect/phpcodesniffer-composer-installer",
+  "files": {
+    "CHANGELOG.md": {
+      "hash": "b73ddcc30c9d",
+      "indexed_at": "2026-01-20T04:50:13.903441+00:00",
+      "language": "markdown",
+      "lines": 587,
+      "symbols": [
+        {
+          "docstring": "_Nothing yet._",
+          "lines": [
+            8,
+            12
+          ],
+          "name": "[Unreleased]",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Various housekeeping, including improvements to the documentation and tests.",
+              "lines": [
+                15,
+                17
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Drop support for PHP_CodeSniffer 2.x. Thanks [@jrfnl] ! [#261]",
+              "lines": [
+                18,
+                23
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            13,
+            23
+          ],
+          "name": "[v1.2.0] - 2025-11-11",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- General housekeeping.",
+              "lines": [
+                26,
+                28
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [#247]: Potential fatal error when the Composer EventDispatcher is called programmatically from an integration. Thanks [@jrfnl] ! [#248]",
+              "lines": [
+                29,
+                35
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            24,
+            35
+          ],
+          "name": "[v1.1.2] - 2025-07-17",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Various housekeeping, including improvements to the documentation.",
+              "lines": [
+                38,
+                40
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [#239]: The PHP_CodeSniffer package could not be always found when running the plugin in a Drupal or Magento setup. Thanks [@jrfnl] ! [#245]",
+              "lines": [
+                41,
+                47
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            36,
+            47
+          ],
+          "name": "[v1.1.1] - 2025-06-27",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Various housekeeping, including improvements to the documentation and tests. Thanks [@SplotyCode], [@fredden] for contributing!",
+              "lines": [
+                50,
+                52
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Drop support for Composer v1.x. Thanks [@fredden] ! [#230]",
+              "lines": [
+                53,
+                58
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            48,
+            58
+          ],
+          "name": "[v1.1.0] - 2025-06-24",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Rename namespace prefix from Dealerdirect to PHPCSStandards by [@jrfnl] in [#191] - Drop support for PHP 5.3 by [@jrfnl] in [#147]",
+              "lines": [
+                61,
+                64
+              ],
+              "name": "Breaking changes",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Correct grammar in error message by [@fredden] in [#189] - .gitattributes: sync with current repo state by [@jrfnl] in [#198] - PHPCSVersions: updat",
+              "lines": [
+                65,
+                100
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Plugin: improve feedback by [@jrfnl] in [#182]",
+              "lines": [
+                101,
+                142
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            59,
+            142
+          ],
+          "name": "[v1.0.0] - 2023-01-05",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Add details regarding QA automation in CONTRIBUTING.md file. by [@Potherca] in [#133] - Add mention of Composer and PHP compatibility to project REA",
+              "lines": [
+                145,
+                182
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            143,
+            182
+          ],
+          "name": "[v0.7.2] - 2022-02-04",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Order of installed_paths inconsistent between runs [#125] - Maintaining this project and Admin rights [#113]",
+              "lines": [
+                185,
+                188
+              ],
+              "name": "Closed issues",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Sort list of installed paths before saving for consistency by [@kevinfodness] in [#126] - Update code of conduct by [@Potherca] in [#117] - Add rema",
+              "lines": [
+                189,
+                194
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed v4 constraint by [@GrahamCampbell] in [#115]",
+              "lines": [
+                195,
+                206
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            183,
+            206
+          ],
+          "name": "[v0.7.1] - 2020-12-07",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Composer 2.x compatibility [#108] - Add link to Packagist on main page [#110] - Switch from Travis CI .org to .com [#112]",
+              "lines": [
+                209,
+                213
+              ],
+              "name": "Closed issues",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Allow installation on PHP 8 by [@jrfnl] in [#106] - Support Composer 2.0 by [@jrfnl] in [#111]",
+              "lines": [
+                214,
+                217
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Test with PHPCS 4.x and allow installation when using PHPCS 4.x by [@jrfnl] in [#107] - Fix case of class name by [@Seldaek] in [#109]",
+              "lines": [
+                218,
+                230
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            207,
+            230
+          ],
+          "name": "[v0.7.0] - 2020-06-25",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Composer scripts/commands broken in 0.6.0 update by [@BrianHenryIE] in [#105]",
+              "lines": [
+                233,
+                237
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            231,
+            237
+          ],
+          "name": "[v0.6.2] - 2020-01-29",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Do not exit with code 1 on uninstall (--no-dev) [#103]",
+              "lines": [
+                240,
+                242
+              ],
+              "name": "Closed issues",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Readme: minor tweak now 0.6.0 has been released [#102] ([@jrfnl])",
+              "lines": [
+                243,
+                245
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [#103]: Fix for issue #103 [#104] ([@Potherca])",
+              "lines": [
+                246,
+                253
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            238,
+            253
+          ],
+          "name": "[v0.6.1] - 2020-01-27",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Composer PHP version appears not to be respected [#79] - Allow a string value for extra.phpcodesniffer-search-depth [#82] - Add [@jrfnl] as (co)main",
+              "lines": [
+                256,
+                260
+              ],
+              "name": "Closed issues",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Add support for a string phpcodesniffer-search-depth config value set via composer config by [@TravisCarden] in [#85] - Send an exit code when the s",
+              "lines": [
+                261,
+                265
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- CS: fix compliance with PSR12 by [@jrfnl] in [#88] - Improve GH issue template by [@jrfnl] in [#94] - Readme: add section about including this plugi",
+              "lines": [
+                266,
+                278
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [#79]: Respect PHP version used by Composer and provide better feedback on failure by [@jrfnl] in [#80] - Bug fix: loadInstalledPaths() very very br",
+              "lines": [
+                279,
+                303
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            254,
+            303
+          ],
+          "name": "[v0.6.0] - 2020-01-19",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Scan depth as parameter [#45] - phpcs: Exit Code: 127 (Command not found) on every Composer command [#48] - The composer plugin implementation seems",
+              "lines": [
+                306,
+                314
+              ],
+              "name": "Closed issues",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Adds the ability to set the max depth from the composer.json file by [@Potherca] in [#46]",
+              "lines": [
+                315,
+                317
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Build/PHPCS: update PHPCompatibility repo name by [@jrfnl] in [#54] - README: remove VersionEye badge by [@jrfnl] in [#55] - README: replace mainten",
+              "lines": [
+                318,
+                339
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [#49]: Move loadInstalledPaths from init to onDependenciesChangedEvent by [@gapple] in [#51]",
+              "lines": [
+                340,
+                373
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            304,
+            373
+          ],
+          "name": "[v0.5.0] - 2018-10-26",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- PHP 7.2 compatibility issue [#43]",
+              "lines": [
+                376,
+                378
+              ],
+              "name": "Closed issues",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Update Travis CI svg badge and link URLs [#42] ([@ntwb]) - Add PHP 7.2 to Travis CI [#41] ([@ntwb]) - Docs: Fix link to releases [#40] ([@GaryJones]",
+              "lines": [
+                379,
+                389
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            374,
+            389
+          ],
+          "name": "[v0.4.4] - 2017-12-06",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- CS: Add PHP 5.3 compatibility [#39] ([@GaryJones]) - Local PHPCS [#38] ([@GaryJones])",
+              "lines": [
+                392,
+                399
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            390,
+            399
+          ],
+          "name": "[v0.4.3] - 2017-09-18",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Docs: Rename example script [#35] ([@GaryJones]) - Update README.md [#36] ([@jrfnl]) - Documentation update. [#37] ([@frenck])",
+              "lines": [
+                402,
+                411
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            400,
+            411
+          ],
+          "name": "[v0.4.2] - 2017-08-16",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Incorrect relative paths for WPCS [#33]",
+              "lines": [
+                414,
+                416
+              ],
+              "name": "Closed issues",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [#33]: Changes the way the installed_paths are set. [#34] ([@frenck])",
+              "lines": [
+                417,
+                423
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            412,
+            423
+          ],
+          "name": "[v0.4.1] - 2017-08-01",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Add support for code standards in root of repository for PHP_CodeSniffer 3.x [#26] - Config codings styles in composer.json from project [#23] - Che",
+              "lines": [
+                426,
+                433
+              ],
+              "name": "Closed issues",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Support for coding standard in the root repository for PHP_CodeSniffer v3.x [#30] ([@frenck]) - Added support for having coding standards in the roo",
+              "lines": [
+                434,
+                437
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Local projects uses relative paths to their coding standards [#28] ([@frenck]) - Docs: Updated README. [#31] ([@frenck]) - Docs: Adds reference to c",
+              "lines": [
+                438,
+                457
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            424,
+            457
+          ],
+          "name": "[v0.4.0] - 2017-05-11",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Coding Standard tries itself to install with installPath when it's the root package [#19]",
+              "lines": [
+                460,
+                462
+              ],
+              "name": "Closed issues",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Improvements to the documentation [#22] ([@Potherca]) - Added instanceof check to prevent root package from being installed [#21] ([@bastianschwarz]",
+              "lines": [
+                463,
+                466
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [#13]: Incorrect coding standards search depth [#15] ([@frenck])",
+              "lines": [
+                467,
+                474
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            458,
+            474
+          ],
+          "name": "[v0.3.2] - 2017-03-29",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Plugin not working correctly when sniffs install depth is equal to \"1\" [#13] - Create new stable release version to support wider use [#11]",
+              "lines": [
+                477,
+                480
+              ],
+              "name": "Closed issues",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [#13]: Incorrect coding standards search depth [#15] ([@frenck])",
+              "lines": [
+                481,
+                488
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            475,
+            488
+          ],
+          "name": "[v0.3.1] - 2017-02-17",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Install Plugin provides no feedback [#7] - Installing coding standards when executing Composer with --no-scripts [#4] - Github contribution template",
+              "lines": [
+                491,
+                497
+              ],
+              "name": "Implemented enhancements",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Support existing standards packages with subfolders [#6] ([@christopher-hopper])",
+              "lines": [
+                498,
+                500
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Improved documentation [#12] ([@frenck]) - Removal of lgtm.co [#3] ([@frenck])",
+              "lines": [
+                501,
+                514
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            489,
+            514
+          ],
+          "name": "[v0.3.0] - 2017-02-15",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Bugfix: Plugin fails when PHP_CodeSniffer is not installed [#2] ([@frenck])",
+              "lines": [
+                519,
+                524
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "Fixes an issue with having this plugin installed globally within composer, but using your global composer installation on a local repository without P",
+          "lines": [
+            515,
+            524
+          ],
+          "name": "[v0.2.1] - 2016-11-01",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- PHPCS Configuration management [#1] ([@frenck])",
+              "lines": [
+                529,
+                534
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "For this version on, this installer no longer messes with the installation paths of composer libraries, but instead, it configures PHP_CodeSniffer to",
+          "lines": [
+            525,
+            534
+          ],
+          "name": "[v0.2.0] - 2016-11-01",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Standard name mapping improvements",
+              "lines": [
+                537,
+                540
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            535,
+            540
+          ],
+          "name": "[v0.1.1] - 2016-10-24",
+          "type": "section"
+        },
+        {
+          "docstring": "First useable release.",
+          "lines": [
+            541,
+            588
+          ],
+          "name": "v0.1.0 - 2016-10-23",
+          "type": "section"
+        }
+      ]
+    },
+    "LICENSE.md": {
+      "hash": "ff8952f52de5",
+      "indexed_at": "2026-01-20T04:50:12.904591+00:00",
+      "language": "markdown",
+      "lines": 22,
+      "symbols": []
+    },
+    "README.md": {
+      "hash": "8a1856b1c58f",
+      "indexed_at": "2026-01-20T04:50:14.898117+00:00",
+      "language": "markdown",
+      "lines": 278,
+      "symbols": [
+        {
+          "children": [
+            {
+              "docstring": "This plugin is compatible with:",
+              "lines": [
+                45,
+                52
+              ],
+              "name": "Compatibility",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Basically, this plugin executes the following steps:",
+              "lines": [
+                53,
+                60
+              ],
+              "name": "How it works",
+              "type": "subsection"
+            },
+            {
+              "docstring": "The following is an example Composer project and has included multiple `phpcodesniffer-standard` packages.",
+              "lines": [
+                61,
+                92
+              ],
+              "name": "Example project",
+              "type": "subsection"
+            },
+            {
+              "docstring": "In some circumstances, it is desirable to call this plugin's functionality directly. For instance, during development or in [CI][definition-ci] enviro",
+              "lines": [
+                93,
+                132
+              ],
+              "name": "Calling the plugin directly",
+              "type": "subsection"
+            },
+            {
+              "docstring": "By default, this plugin searches up for Coding Standards up to three directories deep. In most cases, this should be sufficient. However, this plugin",
+              "lines": [
+                133,
+                146
+              ],
+              "name": "Changing the Coding Standards search depth",
+              "type": "subsection"
+            },
+            {
+              "docstring": "When this plugin is installed globally, composer will load the _global_ plugin rather than the one from the local repository. Despite [this behavior b",
+              "lines": [
+                147,
+                153
+              ],
+              "name": "Caveats",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "Installation can be done with [Composer][composer], by requiring this package as a development dependency:",
+          "lines": [
+            17,
+            153
+          ],
+          "name": "Usage",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "If your coding standard itself depends on additional external PHPCS standards, this plugin can make life easier on your end-users by taking care of th",
+              "lines": [
+                177,
+                204
+              ],
+              "name": "Requiring the plugin from within your coding standard",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "Coding standard can be developed normally, as documented by [PHP_CodeSniffer][codesniffer], in the [Coding Standard Tutorial][tutorial].",
+          "lines": [
+            154,
+            204
+          ],
+          "name": "Developing Coding Standards",
+          "type": "section"
+        },
+        {
+          "docstring": "This is an active open-source project. We are always open to people who want to use the code or contribute to it.",
+          "lines": [
+            205,
+            213
+          ],
+          "name": "Contributing",
+          "type": "section"
+        },
+        {
+          "docstring": "The original idea and setup of this repository is by [Franck Nijhof][frenck], employee @ Dealerdirect.",
+          "lines": [
+            214,
+            219
+          ],
+          "name": "Authors & contributors",
+          "type": "section"
+        },
+        {
+          "docstring": "This project is included in the projects supported via the [PHP_CodeSniffer Open Collective][phpcs-open-collective].",
+          "lines": [
+            220,
+            225
+          ],
+          "name": "Funding",
+          "type": "section"
+        },
+        {
+          "docstring": "The MIT License (MIT)",
+          "lines": [
+            226,
+            279
+          ],
+          "name": "License",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.142323+00:00",
+  "version": "1.0"
+}

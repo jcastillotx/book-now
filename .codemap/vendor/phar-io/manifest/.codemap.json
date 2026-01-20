@@ -1,0 +1,133 @@
+{
+  "directory": "vendor/phar-io/manifest",
+  "files": {
+    "CHANGELOG.md": {
+      "hash": "632aebefe187",
+      "indexed_at": "2026-01-20T04:49:42.570827+00:00",
+      "language": "markdown",
+      "lines": 45,
+      "symbols": [
+        {
+          "children": [
+            {
+              "docstring": "- Make `EMail` an optional attribute for author - Stick with PHP 7.2 compatibilty - Do not use implict nullable type (thanks @sebastianbergmann), this",
+              "lines": [
+                7,
+                12
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            5,
+            12
+          ],
+          "name": "[2.0.4] - 03-03-2024",
+          "type": "section"
+        },
+        {
+          "docstring": "- Fixed PHP 7.2 / PHP 7.3 incompatibility introduced in previous release",
+          "lines": [
+            13,
+            16
+          ],
+          "name": "[2.0.3] - 20.07.2021",
+          "type": "section"
+        },
+        {
+          "docstring": "- Fixed PHP 8.1 deprecation notice",
+          "lines": [
+            17,
+            20
+          ],
+          "name": "[2.0.2] - 20.07.2021",
+          "type": "section"
+        },
+        {
+          "docstring": "This release now supports the use of PHP 7.2+ and ^8.0",
+          "lines": [
+            21,
+            24
+          ],
+          "name": "[2.0.1] - 27.06.2020",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Upgraded to phar-io/version 3.0 - Version strings `v1.2.3` will now be converted to valid semantic version strings `1.2.3` - Abreviated strings like",
+              "lines": [
+                29,
+                34
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "[Unreleased]: https://github.com/phar-io/manifest/compare/2.1.0...HEAD [2.1.0]: https://github.com/phar-io/manifest/compare/2.0.3...2.1.0 [2.0.3]: htt",
+              "lines": [
+                35,
+                46
+              ],
+              "name": "Unreleased",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "This release now requires PHP 7.2+",
+          "lines": [
+            25,
+            46
+          ],
+          "name": "[2.0.0] - 10.05.2020",
+          "type": "section"
+        }
+      ]
+    },
+    "README.md": {
+      "hash": "47c8d1538f76",
+      "indexed_at": "2026-01-20T04:49:43.756229+00:00",
+      "language": "markdown",
+      "lines": 178,
+      "symbols": [
+        {
+          "docstring": "You can add this library as a local, per-project dependency to your project using [Composer](https://getcomposer.org/):",
+          "lines": [
+            5,
+            14
+          ],
+          "name": "Installation",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                17,
+                131
+              ],
+              "name": "Read from `manifest.xml`",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                132,
+                179
+              ],
+              "name": "Create via API",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            15,
+            179
+          ],
+          "name": "Usage Examples",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.134430+00:00",
+  "version": "1.0"
+}

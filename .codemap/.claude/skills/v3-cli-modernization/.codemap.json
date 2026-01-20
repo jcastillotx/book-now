@@ -1,0 +1,244 @@
+{
+  "directory": ".claude/skills/v3-cli-modernization",
+  "files": {
+    "SKILL.md": {
+      "hash": "73d3fff01662",
+      "indexed_at": "2026-01-20T04:50:25.498534+00:00",
+      "language": "markdown",
+      "lines": 872,
+      "symbols": [
+        {
+          "docstring": "Modernizes claude-flow v3 CLI with interactive prompts, intelligent command decomposition, enhanced hooks integration, performance optimization, and c",
+          "lines": [
+            8,
+            11
+          ],
+          "name": "What This Skill Does",
+          "type": "section"
+        },
+        {
+          "lines": [
+            12,
+            23
+          ],
+          "name": "Quick Start",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                26,
+                42
+              ],
+              "name": "Current State Analysis",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                43,
+                101
+              ],
+              "name": "Modular Command Architecture",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            24,
+            101
+          ],
+          "name": "CLI Architecture Modernization",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                104,
+                191
+              ],
+              "name": "Swarm Commands Module",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                192,
+                266
+              ],
+              "name": "Learning Commands Module",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            102,
+            266
+          ],
+          "name": "Command Decomposition Strategy",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                269,
+                382
+              ],
+              "name": "Advanced Prompt Service",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            267,
+            382
+          ],
+          "name": "Interactive Prompt System",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                385,
+                453
+              ],
+              "name": "Deep CLI Hooks Integration",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                454,
+                554
+              ],
+              "name": "Learning Integration",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            383,
+            554
+          ],
+          "name": "Enhanced Hooks Integration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                557,
+                664
+              ],
+              "name": "Workflow Orchestrator",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            555,
+            664
+          ],
+          "name": "Intelligent Workflow Automation",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                667,
+                738
+              ],
+              "name": "Command Performance Monitoring",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            665,
+            738
+          ],
+          "name": "Performance Optimization",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                741,
+                819
+              ],
+              "name": "Intelligent Command Completion",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            739,
+            819
+          ],
+          "name": "Smart Auto-completion",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- [ ] **Command Response**: <200ms average command execution time - [ ] **File Decomposition**: index.ts (108KB) \u2192 <10KB per command module - [ ] **In",
+              "lines": [
+                822,
+                829
+              ],
+              "name": "CLI Performance Targets",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                830,
+                848
+              ],
+              "name": "User Experience Improvements",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            820,
+            848
+          ],
+          "name": "Success Metrics",
+          "type": "section"
+        },
+        {
+          "docstring": "- `v3-core-implementation` - Core domain integration - `v3-memory-unification` - Memory-backed command caching - `v3-swarm-coordination` - CLI swarm m",
+          "lines": [
+            849,
+            855
+          ],
+          "name": "Related V3 Skills",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                858,
+                865
+              ],
+              "name": "Complete CLI Modernization",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                866,
+                872
+              ],
+              "name": "Interactive Command Enhancement",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            856,
+            872
+          ],
+          "name": "Usage Examples",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.159234+00:00",
+  "version": "1.0"
+}

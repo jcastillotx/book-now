@@ -1,0 +1,475 @@
+{
+  "directory": ".claude/skills/hooks-automation",
+  "files": {
+    "SKILL.md": {
+      "hash": "748868e06e46",
+      "indexed_at": "2026-01-20T04:50:25.497781+00:00",
+      "language": "markdown",
+      "lines": 1201,
+      "symbols": [
+        {
+          "docstring": "This skill provides a comprehensive hook system that automatically manages development operations, coordinates swarm agents, maintains session state,",
+          "lines": [
+            10,
+            22
+          ],
+          "name": "What This Skill Does",
+          "type": "section"
+        },
+        {
+          "docstring": "**Required:** - Claude Flow CLI installed (`npm install -g claude-flow@alpha`) - Claude Code with hooks enabled - `.claude/settings.json` with hook co",
+          "lines": [
+            23,
+            34
+          ],
+          "name": "Prerequisites",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                37,
+                48
+              ],
+              "name": "Initialize Hooks System",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                49,
+                63
+              ],
+              "name": "Basic Hook Usage",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            35,
+            63
+          ],
+          "name": "Quick Start",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "Hooks that execute BEFORE operations to prepare and validate:",
+                  "lines": [
+                    68,
+                    156
+                  ],
+                  "name": "Pre-Operation Hooks",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Hooks that execute AFTER operations to process and learn:",
+                  "lines": [
+                    157,
+                    245
+                  ],
+                  "name": "Post-Operation Hooks",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Hooks that coordinate with MCP swarm tools:",
+                  "lines": [
+                    246,
+                    289
+                  ],
+                  "name": "MCP Integration Hooks",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "**memory-write** - Triggered when agents write to coordination memory",
+                  "lines": [
+                    290,
+                    320
+                  ],
+                  "name": "Memory Coordination Hooks",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "**session-start** - Initialize new session",
+                  "lines": [
+                    321,
+                    402
+                  ],
+                  "name": "Session Hooks",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                66,
+                402
+              ],
+              "name": "Available Hooks",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "Edit `.claude/settings.json` to configure hooks:",
+                  "lines": [
+                    405,
+                    447
+                  ],
+                  "name": "Basic Configuration",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Complete hook configuration with all features:",
+                  "lines": [
+                    448,
+                    548
+                  ],
+                  "name": "Advanced Configuration",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Add protection for sensitive files:",
+                  "lines": [
+                    549,
+                    570
+                  ],
+                  "name": "Protected File Patterns",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Run tests after file modifications:",
+                  "lines": [
+                    571,
+                    593
+                  ],
+                  "name": "Automatic Testing",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                403,
+                593
+              ],
+              "name": "Configuration",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "lines": [
+                    598,
+                    621
+                  ],
+                  "name": "Pre-Task Hook with Agent Spawning",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    622,
+                    647
+                  ],
+                  "name": "Post-Edit Hook with Memory Storage",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    648,
+                    665
+                  ],
+                  "name": "Session End Hook with State Persistence",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "Hooks automatically integrate with MCP tools for coordination:",
+              "lines": [
+                594,
+                665
+              ],
+              "name": "MCP Tool Integration",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "**Phase 1: STATUS** - Hook starts",
+                  "lines": [
+                    670,
+                    716
+                  ],
+                  "name": "Three-Phase Memory Protocol",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "All hooks follow a standardized memory coordination pattern:",
+              "lines": [
+                666,
+                716
+              ],
+              "name": "Memory Coordination Protocol",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "lines": [
+                    721,
+                    733
+                  ],
+                  "name": "Continue Response",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    734,
+                    746
+                  ],
+                  "name": "Block Response",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    747,
+                    762
+                  ],
+                  "name": "Warning Response",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "Hooks return JSON responses to control operation flow:",
+              "lines": [
+                717,
+                762
+              ],
+              "name": "Hook Response Format",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "lines": [
+                    767,
+                    795
+                  ],
+                  "name": "Pre-Commit Hook",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    796,
+                    811
+                  ],
+                  "name": "Post-Commit Hook",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    812,
+                    837
+                  ],
+                  "name": "Pre-Push Hook",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "Hooks can integrate with Git operations for quality control:",
+              "lines": [
+                763,
+                837
+              ],
+              "name": "Git Integration",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "lines": [
+                    842,
+                    907
+                  ],
+                  "name": "Agent Workflow Example",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "How agents use hooks for coordination:",
+              "lines": [
+                838,
+                907
+              ],
+              "name": "Agent Coordination Workflow",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "lines": [
+                    912,
+                    955
+                  ],
+                  "name": "Custom Hook Template",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    956,
+                    975
+                  ],
+                  "name": "Register Custom Hook",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "Create custom hooks for specific workflows:",
+              "lines": [
+                908,
+                975
+              ],
+              "name": "Custom Hook Creation",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "lines": [
+                    978,
+                    1017
+                  ],
+                  "name": "Example 1: Full-Stack Development Workflow",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    1018,
+                    1058
+                  ],
+                  "name": "Example 2: Debugging with Hooks",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    1059,
+                    1100
+                  ],
+                  "name": "Example 3: Multi-Agent Refactoring",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                976,
+                1100
+              ],
+              "name": "Real-World Examples",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. **Keep Hooks Lightweight** - Target < 100ms execution time 2. **Use Async for Heavy Operations** - Don't block the main flow 3. **Cache Aggressivel",
+              "lines": [
+                1101,
+                1110
+              ],
+              "name": "Performance Tips",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Enable debug mode for troubleshooting:",
+              "lines": [
+                1111,
+                1128
+              ],
+              "name": "Debugging Hooks",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Automatic Agent Assignment**: Right agent for every file type - **Consistent Code Formatting**: Language-specific formatters - **Continuous Learni",
+              "lines": [
+                1129,
+                1143
+              ],
+              "name": "Benefits",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. **Configure Hooks Early** - Set up during project initialization 2. **Use Memory Keys Strategically** - Organize with clear namespaces 3. **Enable",
+              "lines": [
+                1144,
+                1156
+              ],
+              "name": "Best Practices",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "- Verify `.claude/settings.json` syntax - Check hook matcher patterns - Enable debug mode - Review permission settings - Ensure claude-flow CLI is in",
+                  "lines": [
+                    1159,
+                    1165
+                  ],
+                  "name": "Hooks Not Executing",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "- Increase timeout values in configuration - Make hooks asynchronous for heavy operations - Optimize hook logic - Check network connectivity for MCP t",
+                  "lines": [
+                    1166,
+                    1171
+                  ],
+                  "name": "Hook Timeouts",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "- Set appropriate TTLs for memory keys - Clean up old memory entries - Use memory namespaces effectively - Monitor memory usage",
+                  "lines": [
+                    1172,
+                    1177
+                  ],
+                  "name": "Memory Issues",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "- Profile hook execution times - Use caching for repeated operations - Batch operations when possible - Reduce hook complexity",
+                  "lines": [
+                    1178,
+                    1183
+                  ],
+                  "name": "Performance Problems",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                1157,
+                1183
+              ],
+              "name": "Troubleshooting",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- `npx claude-flow init --hooks` - Initialize hooks system - `npx claude-flow hook --list` - List available hooks - `npx claude-flow hook --test <hook",
+              "lines": [
+                1184,
+                1192
+              ],
+              "name": "Related Commands",
+              "type": "subsection"
+            },
+            {
+              "docstring": "This skill works seamlessly with: - **SPARC Methodology** - Hooks enhance SPARC workflows - **Pair Programming** - Automated quality in pairing sessio",
+              "lines": [
+                1193,
+                1202
+              ],
+              "name": "Integration with Other Skills",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            64,
+            1202
+          ],
+          "name": "Complete Guide",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.158760+00:00",
+  "version": "1.0"
+}

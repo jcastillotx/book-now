@@ -1,0 +1,697 @@
+{
+  "directory": ".claude/skills/github-multi-repo",
+  "files": {
+    "SKILL.md": {
+      "hash": "ab86c4e0b303",
+      "indexed_at": "2026-01-20T04:50:25.514529+00:00",
+      "language": "markdown",
+      "lines": 874,
+      "symbols": [
+        {
+          "docstring": "Advanced multi-repository coordination system that combines swarm intelligence, package synchronization, and repository architecture optimization. Thi",
+          "lines": [
+            21,
+            24
+          ],
+          "name": "Overview",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Cross-repository AI swarm orchestration for distributed development workflows.",
+              "lines": [
+                27,
+                29
+              ],
+              "name": "\ud83d\udd04 Multi-Repository Swarm Coordination",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Intelligent dependency resolution and version alignment across multiple packages.",
+              "lines": [
+                30,
+                32
+              ],
+              "name": "\ud83d\udce6 Package Synchronization",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Structure optimization and template management for scalable projects.",
+              "lines": [
+                33,
+                35
+              ],
+              "name": "\ud83c\udfd7\ufe0f Repository Architecture",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Cross-package integration testing and deployment coordination.",
+              "lines": [
+                36,
+                38
+              ],
+              "name": "\ud83d\udd17 Integration Management",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            25,
+            38
+          ],
+          "name": "Core Capabilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                41,
+                55
+              ],
+              "name": "Initialize Multi-Repo Coordination",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                56,
+                64
+              ],
+              "name": "Synchronize Packages",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                65,
+                73
+              ],
+              "name": "Optimize Architecture",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            39,
+            73
+          ],
+          "name": "Quick Start",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "lines": [
+                    78,
+                    99
+                  ],
+                  "name": "Repository Discovery",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    100,
+                    140
+                  ],
+                  "name": "Synchronized Operations",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                76,
+                140
+              ],
+              "name": "1. Cross-Repository Swarm Orchestration",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "lines": [
+                    143,
+                    182
+                  ],
+                  "name": "Version Alignment",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    183,
+                    205
+                  ],
+                  "name": "Documentation Synchronization",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    206,
+                    230
+                  ],
+                  "name": "Cross-Package Integration",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                141,
+                230
+              ],
+              "name": "2. Package Synchronization",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- \u2705 Multi-repo coordination - \u2705 Package synchronization - \u2705 Architecture optimization",
+              "lines": [
+                231,
+                235
+              ],
+              "name": "Features",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [x] Package dependency verification - [x] Integration tests - [x] Cross-package compatibility\"`)",
+              "lines": [
+                236,
+                241
+              ],
+              "name": "Testing",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "lines": [
+                    244,
+                    279
+                  ],
+                  "name": "Structure Analysis",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    280,
+                    328
+                  ],
+                  "name": "Template Creation",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    329,
+                    355
+                  ],
+                  "name": "Cross-Repository Standardization",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                242,
+                355
+              ],
+              "name": "3. Repository Architecture",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "lines": [
+                    358,
+                    403
+                  ],
+                  "name": "Dependency Management",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    404,
+                    425
+                  ],
+                  "name": "Refactoring Operations",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    426,
+                    454
+                  ],
+                  "name": "Security Updates",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                356,
+                454
+              ],
+              "name": "4. Orchestration Workflows",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            74,
+            454
+          ],
+          "name": "Features",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                457,
+                490
+              ],
+              "name": "Multi-Repo Config File",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                491,
+                510
+              ],
+              "name": "Repository Roles",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            455,
+            510
+          ],
+          "name": "Configuration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                513,
+                531
+              ],
+              "name": "1. Webhook-Based Coordination",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                532,
+                545
+              ],
+              "name": "2. Event Streaming",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            511,
+            545
+          ],
+          "name": "Communication Strategies",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                548,
+                561
+              ],
+              "name": "1. Eventually Consistent",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                562,
+                573
+              ],
+              "name": "2. Strong Consistency",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                574,
+                587
+              ],
+              "name": "3. Hybrid Approach",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            546,
+            587
+          ],
+          "name": "Synchronization Patterns",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                590,
+                598
+              ],
+              "name": "1. Microservices Coordination",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                599,
+                608
+              ],
+              "name": "2. Library Updates",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                609,
+                617
+              ],
+              "name": "3. Organization-Wide Changes",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            588,
+            617
+          ],
+          "name": "Use Cases",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                620,
+                649
+              ],
+              "name": "Monorepo Structure",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                650,
+                672
+              ],
+              "name": "Command Structure",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            618,
+            672
+          ],
+          "name": "Architecture Patterns",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                675,
+                682
+              ],
+              "name": "Multi-Repo Dashboard",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                683,
+                690
+              ],
+              "name": "Dependency Graph",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                691,
+                698
+              ],
+              "name": "Health Monitoring",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            673,
+            698
+          ],
+          "name": "Monitoring & Visualization",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Clear repository roles and boundaries - Consistent naming conventions - Documented dependencies - Shared configuration standards",
+              "lines": [
+                701,
+                706
+              ],
+              "name": "1. Repository Organization",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Use appropriate sync strategies - Implement circuit breakers - Monitor latency and failures - Clear error propagation",
+              "lines": [
+                707,
+                712
+              ],
+              "name": "2. Communication",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Secure cross-repo authentication - Encrypted communication channels - Audit trail for all operations - Principle of least privilege",
+              "lines": [
+                713,
+                718
+              ],
+              "name": "3. Security",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Semantic versioning alignment - Dependency compatibility validation - Automated version bump coordination",
+              "lines": [
+                719,
+                723
+              ],
+              "name": "4. Version Management",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Cross-package test validation - Integration test automation - Performance regression detection",
+              "lines": [
+                724,
+                728
+              ],
+              "name": "5. Testing Integration",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            699,
+            728
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                731,
+                738
+              ],
+              "name": "Caching Strategy",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                739,
+                746
+              ],
+              "name": "Parallel Execution",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                747,
+                754
+              ],
+              "name": "Resource Pooling",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            729,
+            754
+          ],
+          "name": "Performance Optimization",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                757,
+                764
+              ],
+              "name": "Connectivity Issues",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                765,
+                772
+              ],
+              "name": "Memory Synchronization",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                773,
+                780
+              ],
+              "name": "Performance Bottlenecks",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            755,
+            780
+          ],
+          "name": "Troubleshooting",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                783,
+                791
+              ],
+              "name": "1. Distributed Task Queue",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                792,
+                800
+              ],
+              "name": "2. Cross-Repo Testing",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                801,
+                809
+              ],
+              "name": "3. Monorepo Migration",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            781,
+            809
+          ],
+          "name": "Advanced Features",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                812,
+                820
+              ],
+              "name": "Full-Stack Application Update",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                821,
+                829
+              ],
+              "name": "Cross-Team Collaboration",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            810,
+            829
+          ],
+          "name": "Examples",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Package version alignment percentage - Documentation consistency score - Integration test success rate - Synchronization completion time",
+              "lines": [
+                832,
+                837
+              ],
+              "name": "Sync Quality Metrics",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Repository structure consistency score - Documentation coverage percentage - Cross-repository integration success rate - Template adoption and usage",
+              "lines": [
+                838,
+                843
+              ],
+              "name": "Architecture Health Metrics",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Weekly sync status reports - Dependency drift detection - Documentation divergence alerts - Integration health monitoring",
+              "lines": [
+                844,
+                849
+              ],
+              "name": "Automated Reporting",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            830,
+            849
+          ],
+          "name": "Metrics and Reporting",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- `github-workflow` - GitHub workflow automation - `github-pr` - Pull request management - `sparc-architect` - Architecture design - `sparc-optimizer`",
+              "lines": [
+                852,
+                857
+              ],
+              "name": "Related Skills",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- `/github sync-coordinator` - Cross-repo synchronization - `/github release-manager` - Coordinated releases - `/github repo-architect` - Repository o",
+              "lines": [
+                858,
+                863
+              ],
+              "name": "Related Commands",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            850,
+            863
+          ],
+          "name": "Integration Points",
+          "type": "section"
+        },
+        {
+          "docstring": "- Documentation: https://github.com/ruvnet/claude-flow - Issues: https://github.com/ruvnet/claude-flow/issues - Examples: `.claude/examples/github-mul",
+          "lines": [
+            864,
+            875
+          ],
+          "name": "Support and Resources",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.168388+00:00",
+  "version": "1.0"
+}

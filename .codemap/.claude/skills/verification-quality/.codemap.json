@@ -1,0 +1,347 @@
+{
+  "directory": ".claude/skills/verification-quality",
+  "files": {
+    "SKILL.md": {
+      "hash": "afde8a69eb57",
+      "indexed_at": "2026-01-20T04:50:25.500460+00:00",
+      "language": "markdown",
+      "lines": 649,
+      "symbols": [
+        {
+          "docstring": "This skill provides a comprehensive verification and quality assurance system that ensures code quality and correctness through:",
+          "lines": [
+            11,
+            21
+          ],
+          "name": "What This Skill Does",
+          "type": "section"
+        },
+        {
+          "docstring": "- Claude Flow installed (`npx claude-flow@alpha`) - Git repository (for rollback features) - Node.js 18+ (for dashboard features)",
+          "lines": [
+            22,
+            27
+          ],
+          "name": "Prerequisites",
+          "type": "section"
+        },
+        {
+          "lines": [
+            28,
+            45
+          ],
+          "name": "Quick Start",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "Display comprehensive quality and reliability metrics for your codebase and agent tasks.",
+                  "lines": [
+                    50,
+                    92
+                  ],
+                  "name": "View Truth Metrics",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Example dashboard output:",
+                  "lines": [
+                    93,
+                    117
+                  ],
+                  "name": "Truth Score Dashboard",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "**Truth Scores (0.0-1.0):** - `1.0-0.95`: Excellent \u2b50 (production-ready) - `0.94-0.85`: Good \u2705 (acceptable quality) - `0.84-0.75`: Warning \u26a0\ufe0f (needs a",
+                  "lines": [
+                    118,
+                    136
+                  ],
+                  "name": "Metrics Explained",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                48,
+                136
+              ],
+              "name": "Truth Scoring System",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "Execute comprehensive verification checks on code, tasks, or agent outputs.",
+                  "lines": [
+                    139,
+                    181
+                  ],
+                  "name": "Run Verification",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "The verification system evaluates:",
+                  "lines": [
+                    182,
+                    215
+                  ],
+                  "name": "Verification Criteria",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    216,
+                    242
+                  ],
+                  "name": "JSON Output for CI/CD",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                137,
+                242
+              ],
+              "name": "Verification Checks",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "Automatically revert changes that fail verification checks.",
+                  "lines": [
+                    245,
+                    277
+                  ],
+                  "name": "Rollback Failed Changes",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                243,
+                277
+              ],
+              "name": "Automatic Rollback",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "Create detailed verification reports with metrics and visualizations.",
+                  "lines": [
+                    280,
+                    322
+                  ],
+                  "name": "Generate Reports",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                278,
+                322
+              ],
+              "name": "Verification Reports",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "Run interactive web-based verification dashboard with real-time updates.",
+                  "lines": [
+                    325,
+                    351
+                  ],
+                  "name": "Launch Dashboard",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                323,
+                351
+              ],
+              "name": "Interactive Dashboard",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "Set verification preferences in `.claude-flow/config.json`:",
+                  "lines": [
+                    354,
+                    389
+                  ],
+                  "name": "Default Configuration",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "**Adjust verification strictness:**",
+                  "lines": [
+                    390,
+                    416
+                  ],
+                  "name": "Threshold Configuration",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                352,
+                416
+              ],
+              "name": "Configuration",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "**GitHub Actions:**",
+                  "lines": [
+                    419,
+                    473
+                  ],
+                  "name": "CI/CD Integration",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Run verification automatically during swarm operations:",
+                  "lines": [
+                    474,
+                    488
+                  ],
+                  "name": "Swarm Integration",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Enable real-time verification during collaborative development:",
+                  "lines": [
+                    489,
+                    500
+                  ],
+                  "name": "Pair Programming Integration",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                417,
+                500
+              ],
+              "name": "Integration Examples",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "Monitor codebase continuously during development:",
+                  "lines": [
+                    503,
+                    517
+                  ],
+                  "name": "Continuous Verification",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Send metrics to external monitoring systems:",
+                  "lines": [
+                    518,
+                    540
+                  ],
+                  "name": "Monitoring Integration",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Automatically verify before commits:",
+                  "lines": [
+                    541,
+                    562
+                  ],
+                  "name": "Pre-commit Hooks",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                501,
+                562
+              ],
+              "name": "Advanced Workflows",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Verification Speed:** - Single file check: <100ms - Directory scan: <500ms (per 100 files) - Full codebase analysis: <5s (typical project) - Truth s",
+              "lines": [
+                563,
+                580
+              ],
+              "name": "Performance Metrics",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "**Low Truth Scores:**",
+                  "lines": [
+                    583,
+                    617
+                  ],
+                  "name": "Common Issues",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                581,
+                617
+              ],
+              "name": "Troubleshooting",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Verification commands return standard exit codes:",
+              "lines": [
+                618,
+                625
+              ],
+              "name": "Exit Codes",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- `npx claude-flow@alpha pair` - Collaborative development with verification - `npx claude-flow@alpha train` - Training with verification feedback - `",
+              "lines": [
+                626,
+                632
+              ],
+              "name": "Related Commands",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. **Set Appropriate Thresholds**: Use 0.99 for critical code, 0.95 for standard, 0.90 for experimental 2. **Enable Auto-rollback**: Prevent bad code",
+              "lines": [
+                633,
+                643
+              ],
+              "name": "Best Practices",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Truth Scoring Algorithm: See `/docs/truth-scoring.md` - Verification Criteria: See `/docs/verification-criteria.md` - Integration Examples: See `/ex",
+              "lines": [
+                644,
+                650
+              ],
+              "name": "Additional Resources",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            46,
+            650
+          ],
+          "name": "Complete Guide",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.160148+00:00",
+  "version": "1.0"
+}

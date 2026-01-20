@@ -1,0 +1,266 @@
+{
+  "directory": ".claude/skills/reasoningbank-agentdb",
+  "files": {
+    "SKILL.md": {
+      "hash": "d60a616ad0bb",
+      "indexed_at": "2026-01-20T04:50:25.503528+00:00",
+      "language": "markdown",
+      "lines": 446,
+      "symbols": [
+        {
+          "docstring": "Provides ReasoningBank adaptive learning patterns using AgentDB's high-performance backend (150x-12,500x faster). Enables agents to learn from experie",
+          "lines": [
+            8,
+            13
+          ],
+          "name": "What This Skill Does",
+          "type": "section"
+        },
+        {
+          "docstring": "- Node.js 18+ - AgentDB v1.0.7+ (via agentic-flow) - Understanding of reinforcement learning concepts (optional)",
+          "lines": [
+            14,
+            21
+          ],
+          "name": "Prerequisites",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                24,
+                34
+              ],
+              "name": "Initialize ReasoningBank Database",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                35,
+                46
+              ],
+              "name": "Migrate from Legacy ReasoningBank",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            22,
+            46
+          ],
+          "name": "Quick Start with CLI",
+          "type": "section"
+        },
+        {
+          "lines": [
+            47,
+            98
+          ],
+          "name": "Quick Start with API",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Track agent execution paths and outcomes:",
+              "lines": [
+                101,
+                132
+              ],
+              "name": "1. Trajectory Tracking",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Judge whether a trajectory was successful:",
+              "lines": [
+                133,
+                153
+              ],
+              "name": "2. Verdict Judgment",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Consolidate similar experiences into patterns:",
+              "lines": [
+                154,
+                192
+              ],
+              "name": "3. Memory Distillation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            99,
+            192
+          ],
+          "name": "Core ReasoningBank Concepts",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Find similar successful patterns:",
+              "lines": [
+                197,
+                215
+              ],
+              "name": "1. PatternMatcher",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Generate rich context from multiple memories:",
+              "lines": [
+                216,
+                233
+              ],
+              "name": "2. ContextSynthesizer",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Automatically consolidate and prune:",
+              "lines": [
+                234,
+                248
+              ],
+              "name": "3. MemoryOptimizer",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Filter by quality and relevance:",
+              "lines": [
+                249,
+                268
+              ],
+              "name": "4. ExperienceCurator",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "AgentDB provides 4 reasoning modules that enhance ReasoningBank:",
+          "lines": [
+            193,
+            268
+          ],
+          "name": "Integration with Reasoning Agents",
+          "type": "section"
+        },
+        {
+          "docstring": "AgentDB maintains 100% backward compatibility with legacy ReasoningBank:",
+          "lines": [
+            269,
+            297
+          ],
+          "name": "Legacy API Compatibility",
+          "type": "section"
+        },
+        {
+          "docstring": "- **Pattern Search**: 150x faster (100\u00b5s vs 15ms) - **Memory Retrieval**: <1ms (with cache) - **Batch Insert**: 500x faster (2ms vs 1s for 100 pattern",
+          "lines": [
+            298,
+            307
+          ],
+          "name": "Performance Characteristics",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Organize memories by abstraction level:",
+              "lines": [
+                310,
+                351
+              ],
+              "name": "Hierarchical Memory",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Transfer learning across domains:",
+              "lines": [
+                352,
+                372
+              ],
+              "name": "Multi-Domain Learning",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            308,
+            372
+          ],
+          "name": "Advanced Patterns",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                375,
+                388
+              ],
+              "name": "Database Management",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                389,
+                400
+              ],
+              "name": "Migration",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            373,
+            400
+          ],
+          "name": "CLI Operations",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                403,
+                411
+              ],
+              "name": "Issue: Migration fails",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                412,
+                421
+              ],
+              "name": "Issue: Low confidence scores",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                422,
+                434
+              ],
+              "name": "Issue: Memory growing too large",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            401,
+            434
+          ],
+          "name": "Troubleshooting",
+          "type": "section"
+        },
+        {
+          "docstring": "- **AgentDB Integration**: node_modules/agentic-flow/docs/AGENTDB_INTEGRATION.md - **GitHub**: https://github.com/ruvnet/agentic-flow/tree/main/packag",
+          "lines": [
+            435,
+            447
+          ],
+          "name": "Learn More",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.161976+00:00",
+  "version": "1.0"
+}

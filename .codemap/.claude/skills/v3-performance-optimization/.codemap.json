@@ -1,0 +1,233 @@
+{
+  "directory": ".claude/skills/v3-performance-optimization",
+  "files": {
+    "SKILL.md": {
+      "hash": "25858e4c4325",
+      "indexed_at": "2026-01-20T04:50:25.511527+00:00",
+      "language": "markdown",
+      "lines": 390,
+      "symbols": [
+        {
+          "docstring": "Validates and optimizes claude-flow v3 to achieve industry-leading performance through Flash Attention, AgentDB HNSW indexing, and comprehensive syste",
+          "lines": [
+            8,
+            11
+          ],
+          "name": "What This Skill Does",
+          "type": "section"
+        },
+        {
+          "lines": [
+            12,
+            23
+          ],
+          "name": "Quick Start",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                26,
+                37
+              ],
+              "name": "Flash Attention Revolution",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                38,
+                49
+              ],
+              "name": "Search Performance Revolution",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            24,
+            49
+          ],
+          "name": "Performance Target Matrix",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                52,
+                72
+              ],
+              "name": "Startup Performance",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                73,
+                122
+              ],
+              "name": "Memory Operation Benchmarks",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                123,
+                154
+              ],
+              "name": "Swarm Coordination Benchmarks",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                155,
+                186
+              ],
+              "name": "Flash Attention Benchmarks",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                187,
+                223
+              ],
+              "name": "SONA Learning Benchmarks",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            50,
+            223
+          ],
+          "name": "Comprehensive Benchmark Suite",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                226,
+                254
+              ],
+              "name": "Real-time Metrics",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                255,
+                287
+              ],
+              "name": "Continuous Regression Detection",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            224,
+            287
+          ],
+          "name": "Performance Monitoring Dashboard",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                290,
+                310
+              ],
+              "name": "Memory Optimization",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                311,
+                328
+              ],
+              "name": "CPU Optimization",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            288,
+            328
+          ],
+          "name": "Optimization Strategies",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                331,
+                352
+              ],
+              "name": "Performance Gates",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            329,
+            352
+          ],
+          "name": "Target Validation Framework",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- [ ] **Flash Attention**: 2.49x-7.47x speedup validated - [ ] **Search Performance**: 150x-12,500x improvement confirmed - [ ] **Memory Reduction**:",
+              "lines": [
+                355,
+                362
+              ],
+              "name": "Primary Targets",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [ ] **Performance Dashboard**: Real-time metrics collection - [ ] **Regression Testing**: Automated performance validation - [ ] **Trend Analysis**:",
+              "lines": [
+                363,
+                368
+              ],
+              "name": "Continuous Monitoring",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            353,
+            368
+          ],
+          "name": "Success Metrics",
+          "type": "section"
+        },
+        {
+          "docstring": "- `v3-integration-deep` - Performance integration with agentic-flow - `v3-memory-unification` - Memory performance optimization - `v3-swarm-coordinati",
+          "lines": [
+            369,
+            375
+          ],
+          "name": "Related V3 Skills",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                378,
+                390
+              ],
+              "name": "Complete Performance Validation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            376,
+            390
+          ],
+          "name": "Usage Examples",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.166485+00:00",
+  "version": "1.0"
+}

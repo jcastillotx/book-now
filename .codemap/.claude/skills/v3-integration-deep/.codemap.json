@@ -1,0 +1,196 @@
+{
+  "directory": ".claude/skills/v3-integration-deep",
+  "files": {
+    "SKILL.md": {
+      "hash": "4e835f83bae3",
+      "indexed_at": "2026-01-20T04:50:25.500841+00:00",
+      "language": "markdown",
+      "lines": 241,
+      "symbols": [
+        {
+          "docstring": "Transforms claude-flow from parallel implementation to specialized extension of agentic-flow@alpha, eliminating massive code duplication while achievi",
+          "lines": [
+            8,
+            11
+          ],
+          "name": "What This Skill Does",
+          "type": "section"
+        },
+        {
+          "lines": [
+            12,
+            23
+          ],
+          "name": "Quick Start",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                26,
+                39
+              ],
+              "name": "Current Overlap \u2192 Integration",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            24,
+            39
+          ],
+          "name": "Code Deduplication Strategy",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                42,
+                57
+              ],
+              "name": "SONA Learning Modes",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                58,
+                70
+              ],
+              "name": "Flash Attention Integration",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                71,
+                83
+              ],
+              "name": "AgentDB Coordination",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                84,
+                98
+              ],
+              "name": "MCP Tools Integration",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            40,
+            98
+          ],
+          "name": "agentic-flow@alpha Feature Integration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                101,
+                116
+              ],
+              "name": "Phase 1: Adapter Layer",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                117,
+                141
+              ],
+              "name": "Phase 2: System Migration",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                142,
+                155
+              ],
+              "name": "Phase 3: Cleanup",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            99,
+            155
+          ],
+          "name": "Migration Implementation",
+          "type": "section"
+        },
+        {
+          "lines": [
+            156,
+            175
+          ],
+          "name": "RL Algorithm Integration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                178,
+                187
+              ],
+              "name": "Flash Attention Targets",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                188,
+                196
+              ],
+              "name": "AgentDB Search Performance",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            176,
+            196
+          ],
+          "name": "Performance Integration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                199,
+                225
+              ],
+              "name": "Gradual Migration",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            197,
+            225
+          ],
+          "name": "Backward Compatibility",
+          "type": "section"
+        },
+        {
+          "docstring": "- **Code Reduction**: <5,000 lines orchestration (vs 15,000+) - **Performance**: 2.49x-7.47x Flash Attention speedup - **Search**: 150x-12,500x AgentD",
+          "lines": [
+            226,
+            235
+          ],
+          "name": "Success Metrics",
+          "type": "section"
+        },
+        {
+          "docstring": "- `v3-memory-unification` - Memory system integration - `v3-performance-optimization` - Performance target validation - `v3-swarm-coordination` - Swar",
+          "lines": [
+            236,
+            241
+          ],
+          "name": "Related V3 Skills",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.160572+00:00",
+  "version": "1.0"
+}

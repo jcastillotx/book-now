@@ -1,0 +1,136 @@
+{
+  "directory": "vendor/phpunit/php-text-template",
+  "files": {
+    "ChangeLog.md": {
+      "hash": "0f6d371522b4",
+      "indexed_at": "2026-01-20T04:49:56.145938+00:00",
+      "language": "markdown",
+      "lines": 43,
+      "symbols": [
+        {
+          "children": [
+            {
+              "docstring": "* `SebastianBergmann\\Template\\Exception` now correctly extends `\\Throwable`",
+              "lines": [
+                7,
+                10
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            5,
+            10
+          ],
+          "name": "[2.0.4] - 2020-10-26",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Changed PHP version constraint in `composer.json` from `^7.3 || ^8.0` to `>=7.3`",
+              "lines": [
+                13,
+                16
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            11,
+            16
+          ],
+          "name": "[2.0.3] - 2020-09-28",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* This component is now supported on PHP 8",
+              "lines": [
+                19,
+                22
+              ],
+              "name": "Added",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            17,
+            22
+          ],
+          "name": "[2.0.2] - 2020-06-26",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Tests etc. are now ignored for archive exports",
+              "lines": [
+                25,
+                28
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            23,
+            28
+          ],
+          "name": "[2.0.1] - 2020-06-15",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* The `Text_Template` class was renamed to `SebastianBergmann\\Template\\Template`",
+              "lines": [
+                31,
+                34
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* Removed support for PHP 5.3, PHP 5.4, PHP 5.5, PHP 5.6, PHP 7.0, PHP 7.1, and PHP 7.2",
+              "lines": [
+                35,
+                44
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            29,
+            44
+          ],
+          "name": "[2.0.0] - 2020-02-07",
+          "type": "section"
+        }
+      ]
+    },
+    "README.md": {
+      "hash": "938667e15e85",
+      "indexed_at": "2026-01-20T04:49:57.258577+00:00",
+      "language": "markdown",
+      "lines": 12,
+      "symbols": [
+        {
+          "docstring": "You can add this library as a local, per-project dependency to your project using [Composer](https://getcomposer.org/):",
+          "lines": [
+            3,
+            13
+          ],
+          "name": "Installation",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.136779+00:00",
+  "version": "1.0"
+}

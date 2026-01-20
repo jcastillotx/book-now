@@ -1,0 +1,77 @@
+{
+  "directory": "vendor/psr/http-message",
+  "files": {
+    "CHANGELOG.md": {
+      "hash": "0e0a6a6166ed",
+      "indexed_at": "2026-01-20T04:49:41.395401+00:00",
+      "language": "markdown",
+      "lines": 36,
+      "symbols": [
+        {
+          "children": [
+            {
+              "docstring": "- Nothing.",
+              "lines": [
+                7,
+                10
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Nothing.",
+              "lines": [
+                11,
+                14
+              ],
+              "name": "Deprecated",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Nothing.",
+              "lines": [
+                15,
+                18
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Updated all `@return self` annotation references in interfaces to use `@return static`, which more closelly follows the semantics of the specificati",
+              "lines": [
+                19,
+                33
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            5,
+            33
+          ],
+          "name": "1.0.1 - 2016-08-06",
+          "type": "section"
+        },
+        {
+          "docstring": "Initial stable release; reflects accepted PSR-7 specification.",
+          "lines": [
+            34,
+            37
+          ],
+          "name": "1.0.0 - 2016-05-18",
+          "type": "section"
+        }
+      ]
+    },
+    "README.md": {
+      "hash": "4cd6339fa85e",
+      "indexed_at": "2026-01-20T04:49:41.395606+00:00",
+      "language": "markdown",
+      "lines": 16,
+      "symbols": []
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.133553+00:00",
+  "version": "1.0"
+}

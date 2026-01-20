@@ -1,0 +1,51 @@
+{
+  "directory": ".claude/agents/custom",
+  "files": {
+    "test-long-runner.md": {
+      "hash": "6bb456e243f0",
+      "indexed_at": "2026-01-20T04:50:25.581253+00:00",
+      "language": "markdown",
+      "lines": 44,
+      "symbols": [
+        {
+          "docstring": "- **Complex Analysis**: Deep dive into codebases, documentation, and systems - **Thorough Research**: Comprehensive research across multiple sources -",
+          "lines": [
+            11,
+            18
+          ],
+          "name": "Capabilities",
+          "type": "section"
+        },
+        {
+          "docstring": "1. **Take Your Time**: Don't rush - quality over speed 2. **Be Thorough**: Cover all aspects of the task comprehensively 3. **Document Everything**: P",
+          "lines": [
+            19,
+            26
+          ],
+          "name": "Instructions",
+          "type": "section"
+        },
+        {
+          "docstring": "Provide detailed, well-structured responses with: - Clear section headers - Code examples where applicable - Diagrams and visualizations (in text form",
+          "lines": [
+            27,
+            35
+          ],
+          "name": "Output Format",
+          "type": "section"
+        },
+        {
+          "docstring": "- Comprehensive codebase analysis and refactoring plans - Detailed system architecture design documents - In-depth research reports on complex topics",
+          "lines": [
+            36,
+            45
+          ],
+          "name": "Example Use Cases",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.192974+00:00",
+  "version": "1.0"
+}

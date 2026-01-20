@@ -1,0 +1,24 @@
+{
+  "directory": "vendor/ralouphie/getallheaders",
+  "files": {
+    "README.md": {
+      "hash": "a5a015ade842",
+      "indexed_at": "2026-01-20T04:50:24.166945+00:00",
+      "language": "markdown",
+      "lines": 27,
+      "symbols": [
+        {
+          "docstring": "For PHP version **`>= 5.6`**:",
+          "lines": [
+            15,
+            28
+          ],
+          "name": "Install",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.149895+00:00",
+  "version": "1.0"
+}

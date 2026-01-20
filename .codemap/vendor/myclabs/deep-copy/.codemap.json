@@ -1,0 +1,250 @@
+{
+  "directory": "vendor/myclabs/deep-copy",
+  "files": {
+    "README.md": {
+      "hash": "248034964b8f",
+      "indexed_at": "2026-01-20T04:50:25.444812+00:00",
+      "language": "markdown",
+      "lines": 406,
+      "symbols": [
+        {
+          "docstring": "1. [How](#how) 1. [Why](#why) 1. [Using simply `clone`](#using-simply-clone) 1. [Overriding `__clone()`](#overriding-__clone) 1. [With `DeepCopy`](#wi",
+          "lines": [
+            8,
+            33
+          ],
+          "name": "Table of Contents",
+          "type": "section"
+        },
+        {
+          "docstring": "Install with Composer:",
+          "lines": [
+            34,
+            51
+          ],
+          "name": "How?",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "![Using clone](doc/clone.png)",
+              "lines": [
+                72,
+                76
+              ],
+              "name": "Using simply `clone`",
+              "type": "subsection"
+            },
+            {
+              "docstring": "![Overriding __clone](doc/deep-clone.png)",
+              "lines": [
+                77,
+                81
+              ],
+              "name": "Overriding `__clone()`",
+              "type": "subsection"
+            },
+            {
+              "docstring": "![With DeepCopy](doc/deep-copy.png)",
+              "lines": [
+                82,
+                86
+              ],
+              "name": "With `DeepCopy`",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "- How do you create copies of your objects?",
+          "lines": [
+            52,
+            86
+          ],
+          "name": "Why?",
+          "type": "section"
+        },
+        {
+          "docstring": "DeepCopy recursively traverses all the object's properties and clones them. To avoid cloning the same object twice it keeps a hash map of all instance",
+          "lines": [
+            87,
+            129
+          ],
+          "name": "How it works",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "The `PropertyNameMatcher` will match a property by its name:",
+                  "lines": [
+                    147,
+                    158
+                  ],
+                  "name": "Property name",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "The `PropertyMatcher` will match a specific property of a specific class:",
+                  "lines": [
+                    159,
+                    170
+                  ],
+                  "name": "Specific property",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "The `TypeMatcher` will match any element by its type (instance of a class or any value that could be parameter of [gettype()](http://php.net/manual/en",
+                  "lines": [
+                    171,
+                    183
+                  ],
+                  "name": "Type",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "- `DeepCopy\\Matcher` applies on a object attribute. - `DeepCopy\\TypeMatcher` applies on any element found in graph, including array elements.",
+              "lines": [
+                141,
+                183
+              ],
+              "name": "Matchers",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "Let's say for example that you are copying a database record (or a Doctrine entity), so you want the copy not to have any ID:",
+                  "lines": [
+                    193,
+                    214
+                  ],
+                  "name": "`SetNullFilter` (filter)",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "If you want a property to remain untouched (for example, an association to an object):",
+                  "lines": [
+                    215,
+                    231
+                  ],
+                  "name": "`KeepFilter` (filter)",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "If you use cloning on proxy classes, you might want to apply two filters for: 1. loading the data 2. applying a transformation",
+                  "lines": [
+                    232,
+                    259
+                  ],
+                  "name": "`ChainableFilter` (filter)",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "If you use Doctrine and want to copy an entity, you will need to use the `DoctrineCollectionFilter`:",
+                  "lines": [
+                    260,
+                    275
+                  ],
+                  "name": "`DoctrineCollectionFilter` (filter)",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "If you use Doctrine and want to copy an entity who contains a `Collection` that you want to be reset, you can use the `DoctrineEmptyCollectionFilter`",
+                  "lines": [
+                    276,
+                    294
+                  ],
+                  "name": "`DoctrineEmptyCollectionFilter` (filter)",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "If you use Doctrine and use cloning on lazy loaded entities, you might encounter errors mentioning missing fields on a Doctrine proxy class (...\\\\\\_\\_",
+                  "lines": [
+                    295,
+                    318
+                  ],
+                  "name": "`DoctrineProxyFilter` (filter)",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "1. If you want to replace the value of a property:",
+                  "lines": [
+                    319,
+                    360
+                  ],
+                  "name": "`ReplaceFilter` (type filter)",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Stop *DeepCopy* from recursively copying element, using standard `clone` instead:",
+                  "lines": [
+                    361,
+                    381
+                  ],
+                  "name": "`ShallowCopyFilter` (type filter)",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "- `DeepCopy\\Filter` applies a transformation to the object attribute matched by `DeepCopy\\Matcher` - `DeepCopy\\TypeFilter` applies a transformation to",
+              "lines": [
+                184,
+                381
+              ],
+              "name": "Filters",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "You can add filters to customize the copy process.",
+          "lines": [
+            130,
+            381
+          ],
+          "name": "Going further",
+          "type": "section"
+        },
+        {
+          "docstring": "The following structures cannot be deep-copied with PHP Reflection. As a result they are shallow cloned and filters are not applied. There is two ways",
+          "lines": [
+            382,
+            390
+          ],
+          "name": "Edge cases",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Running the tests is simple:",
+              "lines": [
+                396,
+                403
+              ],
+              "name": "Tests",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Get professional support via [the Tidelift Subscription](https://tidelift.com/subscription/pkg/packagist-myclabs-deep-copy?utm_source=packagist-myclab",
+              "lines": [
+                404,
+                407
+              ],
+              "name": "Support",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "DeepCopy is distributed under the MIT license.",
+          "lines": [
+            391,
+            407
+          ],
+          "name": "Contributing",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.150151+00:00",
+  "version": "1.0"
+}

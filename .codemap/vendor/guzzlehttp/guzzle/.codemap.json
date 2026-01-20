@@ -1,0 +1,2214 @@
+{
+  "directory": "vendor/guzzlehttp/guzzle",
+  "files": {
+    "CHANGELOG.md": {
+      "hash": "5979e30bf386",
+      "indexed_at": "2026-01-20T04:50:22.528817+00:00",
+      "language": "markdown",
+      "lines": 1683,
+      "symbols": [
+        {
+          "children": [
+            {
+              "docstring": "- Support for PHP 8.5",
+              "lines": [
+                7,
+                10
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Adjusted `guzzlehttp/promises` version constraint to `^2.3` - Adjusted `guzzlehttp/psr7` version constraint to `^2.8`",
+              "lines": [
+                11,
+                16
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            5,
+            16
+          ],
+          "name": "7.10.0 - 2025-08-23",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Remove explicit content-length header for GET requests - Improve compatibility with bad servers for boolean cookie values",
+              "lines": [
+                19,
+                24
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            17,
+            24
+          ],
+          "name": "7.9.3 - 2025-03-27",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Adjusted handler selection to use cURL if its version is 7.21.2 or higher, rather than 7.34.0",
+              "lines": [
+                27,
+                31
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            25,
+            31
+          ],
+          "name": "7.9.2 - 2024-07-24",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Fix TLS 1.3 check for HTTP/2 requests",
+              "lines": [
+                34,
+                38
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            32,
+            38
+          ],
+          "name": "7.9.1 - 2024-07-19",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Improve protocol version checks to provide feedback around unsupported protocols - Only select the cURL handler by default if 7.34.0 or higher is li",
+              "lines": [
+                41,
+                48
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            39,
+            48
+          ],
+          "name": "7.9.0 - 2024-07-18",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Support for PHP 8.4",
+              "lines": [
+                51,
+                55
+              ],
+              "name": "Added",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            49,
+            55
+          ],
+          "name": "7.8.2 - 2024-07-18",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Updated links in docs to their canonical versions - Replaced `call_user_func*` with native calls",
+              "lines": [
+                58,
+                63
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            56,
+            63
+          ],
+          "name": "7.8.1 - 2023-12-03",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Support for PHP 8.3 - Added automatic closing of handles on `CurlFactory` object destruction",
+              "lines": [
+                66,
+                71
+              ],
+              "name": "Added",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            64,
+            71
+          ],
+          "name": "7.8.0 - 2023-08-27",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Remove the need for `AllowDynamicProperties` in `CurlMultiHandler`",
+              "lines": [
+                74,
+                78
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            72,
+            78
+          ],
+          "name": "7.7.1 - 2023-08-27",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Support `guzzlehttp/promises` v2",
+              "lines": [
+                81,
+                85
+              ],
+              "name": "Added",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            79,
+            85
+          ],
+          "name": "7.7.0 - 2023-05-21",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Fix `SetCookie::fromString` MaxAge deprecation warning and skip invalid MaxAge values",
+              "lines": [
+                88,
+                92
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            86,
+            92
+          ],
+          "name": "7.6.1 - 2023-05-15",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Support for setting the minimum TLS version in a unified way - Apply on request the version set in options parameters",
+              "lines": [
+                95,
+                100
+              ],
+              "name": "Added",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            93,
+            100
+          ],
+          "name": "7.6.0 - 2023-05-14",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Fixed set cookie constructor validation - Fixed handling of files with `'0'` body",
+              "lines": [
+                103,
+                107
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Corrected docs and default connect timeout value to 300 seconds",
+              "lines": [
+                108,
+                112
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            101,
+            112
+          ],
+          "name": "7.5.2 - 2023-05-14",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Fixed `NO_PROXY` settings so that setting the `proxy` option to `no` overrides the env variable",
+              "lines": [
+                115,
+                118
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Adjusted `guzzlehttp/psr7` version constraint to `^1.9.1 || ^2.4.5`",
+              "lines": [
+                119,
+                123
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            113,
+            123
+          ],
+          "name": "7.5.1 - 2023-04-17",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Support PHP 8.2 - Add request to delay closure params",
+              "lines": [
+                126,
+                131
+              ],
+              "name": "Added",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            124,
+            131
+          ],
+          "name": "7.5.0 - 2022-08-28",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Fix change in port should be considered a change in origin * Fix `CURLOPT_HTTPAUTH` option not cleared on change of origin",
+              "lines": [
+                134,
+                139
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            132,
+            139
+          ],
+          "name": "7.4.5 - 2022-06-20",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Fix failure to strip Authorization header on HTTP downgrade * Fix failure to strip the Cookie header on change in host or HTTP downgrade",
+              "lines": [
+                142,
+                147
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            140,
+            147
+          ],
+          "name": "7.4.4 - 2022-06-09",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Fix cross-domain cookie leakage",
+              "lines": [
+                150,
+                154
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            148,
+            154
+          ],
+          "name": "7.4.3 - 2022-05-25",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Remove curl auth on cross-domain redirects to align with the Authorization HTTP header - Reject non-HTTP schemes in StreamHandler - Set a default ss",
+              "lines": [
+                157,
+                163
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            155,
+            163
+          ],
+          "name": "7.4.2 - 2022-03-20",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Replaced implicit URI to string coercion [#2946](https://github.com/guzzle/guzzle/pull/2946) - Allow `symfony/deprecation-contracts` version 3 [#296",
+              "lines": [
+                166,
+                170
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Only close curl handle if it's done [#2950](https://github.com/guzzle/guzzle/pull/2950)",
+              "lines": [
+                171,
+                175
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            164,
+            175
+          ],
+          "name": "7.4.1 - 2021-12-06",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Support PHP 8.1 [#2929](https://github.com/guzzle/guzzle/pull/2929), [#2939](https://github.com/guzzle/guzzle/pull/2939) - Support `psr/log` version",
+              "lines": [
+                178,
+                182
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Make sure we always call `restore_error_handler()` [#2915](https://github.com/guzzle/guzzle/pull/2915) - Fix progress parameter type compatibility b",
+              "lines": [
+                183,
+                188
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Be more strict with types [#2914](https://github.com/guzzle/guzzle/pull/2914), [#2917](https://github.com/guzzle/guzzle/pull/2917), [#2919](https://",
+              "lines": [
+                189,
+                193
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            176,
+            193
+          ],
+          "name": "7.4.0 - 2021-10-18",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Support for DER and P12 certificates [#2413](https://github.com/guzzle/guzzle/pull/2413) - Support the cURL (http://) scheme for StreamHandler proxi",
+              "lines": [
+                196,
+                201
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Handle exceptions on invalid header consistently between PHP versions and handlers [#2872](https://github.com/guzzle/guzzle/pull/2872)",
+              "lines": [
+                202,
+                206
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            194,
+            206
+          ],
+          "name": "7.3.0 - 2021-03-23",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Support for PHP 8 [#2712](https://github.com/guzzle/guzzle/pull/2712), [#2715](https://github.com/guzzle/guzzle/pull/2715), [#2789](https://github.c",
+              "lines": [
+                209,
+                213
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Handle exceptions during response creation [#2591](https://github.com/guzzle/guzzle/pull/2591) - Fix CURLOPT_ENCODING not to be overwritten [#2595](",
+              "lines": [
+                214,
+                219
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The `TooManyRedirectsException` has a response [#2660](https://github.com/guzzle/guzzle/pull/2660) - Avoid \"functions\" from dependencies [#2712](htt",
+              "lines": [
+                220,
+                224
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Using environment variable GUZZLE_CURL_SELECT_TIMEOUT [#2786](https://github.com/guzzle/guzzle/pull/2786)",
+              "lines": [
+                225,
+                229
+              ],
+              "name": "Deprecated",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            207,
+            229
+          ],
+          "name": "7.2.0 - 2020-10-10",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Incorrect EOF detection for response body streams on Windows.",
+              "lines": [
+                232,
+                235
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- We dont connect curl `sink` on HEAD requests. - Removed some PHP 5 workarounds",
+              "lines": [
+                236,
+                241
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            230,
+            241
+          ],
+          "name": "7.1.1 - 2020-09-30",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- `GuzzleHttp\\MessageFormatterInterface`",
+              "lines": [
+                244,
+                247
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed issue that caused cookies with no value not to be stored. - On redirects, we allow all safe methods like GET, HEAD and OPTIONS. - Fixed loggin",
+              "lines": [
+                248,
+                254
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- All functions in `GuzzleHttp` has been deprecated. Use static methods on `Utils` instead. - `ClientInterface::getConfig()` - `Client::getConfig()` -",
+              "lines": [
+                255,
+                264
+              ],
+              "name": "Deprecated",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            242,
+            264
+          ],
+          "name": "7.1.0 - 2020-09-22",
+          "type": "section"
+        },
+        {
+          "docstring": "* Fix multiply defined functions fatal error [#2699](https://github.com/guzzle/guzzle/pull/2699)",
+          "lines": [
+            265,
+            269
+          ],
+          "name": "7.0.1 - 2020-06-27",
+          "type": "section"
+        },
+        {
+          "docstring": "No changes since 7.0.0-rc1.",
+          "lines": [
+            270,
+            274
+          ],
+          "name": "7.0.0 - 2020-06-27",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Use error level for logging errors in Middleware [#2629](https://github.com/guzzle/guzzle/pull/2629) * Disabled IDN support by default and require e",
+              "lines": [
+                277,
+                282
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            275,
+            282
+          ],
+          "name": "7.0.0-rc1 - 2020-06-15",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Using `Utils` class instead of functions in the `GuzzleHttp` namespace. [#2546](https://github.com/guzzle/guzzle/pull/2546) * `ClientInterface::MAJO",
+              "lines": [
+                285,
+                289
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* Avoid the `getenv` function when unsafe [#2531](https://github.com/guzzle/guzzle/pull/2531) * Added real client methods [#2529](https://github.com/g",
+              "lines": [
+                290,
+                299
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* Various intl icu issues [#2626](https://github.com/guzzle/guzzle/pull/2626)",
+              "lines": [
+                300,
+                303
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* Pool option `pool_size` [#2528](https://github.com/guzzle/guzzle/pull/2528)",
+              "lines": [
+                304,
+                308
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            283,
+            308
+          ],
+          "name": "7.0.0-beta2 - 2020-05-25",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Implement PSR-18 and dropped PHP 5 support [#2421](https://github.com/guzzle/guzzle/pull/2421) [#2474](https://github.com/guzzle/guzzle/pull/2474) *",
+              "lines": [
+                314,
+                319
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* Dont allow passing null as third argument to `BadResponseException::__construct()` [#2427](https://github.com/guzzle/guzzle/pull/2427) * Use SAPI co",
+              "lines": [
+                320,
+                329
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* Logging when Promise rejected with a string [#2311](https://github.com/guzzle/guzzle/pull/2311)",
+              "lines": [
+                330,
+                333
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* Class `SeekException` [#2162](https://github.com/guzzle/guzzle/pull/2162) * `RequestException::getResponseBodySummary()` [#2425](https://github.com/",
+              "lines": [
+                334,
+                342
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "The diff might look very big but 95% of Guzzle users will be able to upgrade without modification. Please see [the upgrade document](UPGRADING.md) tha",
+          "lines": [
+            309,
+            342
+          ],
+          "name": "7.0.0-beta1 - 2019-12-30",
+          "type": "section"
+        },
+        {
+          "docstring": "* idn_to_ascii() fix for old PHP versions [#2489](https://github.com/guzzle/guzzle/pull/2489)",
+          "lines": [
+            343,
+            347
+          ],
+          "name": "6.5.2 - 2019-12-23",
+          "type": "section"
+        },
+        {
+          "docstring": "* Better defaults for PHP installations with old ICU lib [#2454](https://github.com/guzzle/guzzle/pull/2454) * IDN support for redirects [#2424](https",
+          "lines": [
+            348,
+            353
+          ],
+          "name": "6.5.1 - 2019-12-21",
+          "type": "section"
+        },
+        {
+          "docstring": "* Improvement: Added support for reset internal queue in MockHandler. [#2143](https://github.com/guzzle/guzzle/pull/2143) * Improvement: Added support",
+          "lines": [
+            354,
+            363
+          ],
+          "name": "6.5.0 - 2019-12-07",
+          "type": "section"
+        },
+        {
+          "docstring": "* No `guzzle.phar` was created in 6.4.0 due expired API token. This release will fix that * Added `parent::__construct()` to `FileCookieJar` and `Sess",
+          "lines": [
+            364,
+            369
+          ],
+          "name": "6.4.1 - 2019-10-23",
+          "type": "section"
+        },
+        {
+          "docstring": "* Improvement: Improved error messages when using curl < 7.21.2 [#2108](https://github.com/guzzle/guzzle/pull/2108) * Fix: Test if response is readabl",
+          "lines": [
+            370,
+            382
+          ],
+          "name": "6.4.0 - 2019-10-23",
+          "type": "section"
+        },
+        {
+          "docstring": "* Fix: Default headers when decode_content is specified",
+          "lines": [
+            383,
+            387
+          ],
+          "name": "6.3.3 - 2018-04-22",
+          "type": "section"
+        },
+        {
+          "docstring": "* Fix: Release process",
+          "lines": [
+            388,
+            392
+          ],
+          "name": "6.3.2 - 2018-03-26",
+          "type": "section"
+        },
+        {
+          "docstring": "* Bug fix: Parsing 0 epoch expiry times in cookies [#2014](https://github.com/guzzle/guzzle/pull/2014) * Improvement: Better ConnectException detectio",
+          "lines": [
+            393,
+            405
+          ],
+          "name": "6.3.1 - 2018-03-26",
+          "type": "section"
+        },
+        {
+          "docstring": "* Feature: force IP resolution (ipv4 or ipv6) [#1608](https://github.com/guzzle/guzzle/pull/1608), [#1659](https://github.com/guzzle/guzzle/pull/1659)",
+          "lines": [
+            406,
+            426
+          ],
+          "name": "6.3.0 - 2017-06-22",
+          "type": "section"
+        },
+        {
+          "docstring": "* Fix deprecations with guzzle/psr7 version 1.4",
+          "lines": [
+            427,
+            431
+          ],
+          "name": "6.2.3 - 2017-02-28",
+          "type": "section"
+        },
+        {
+          "docstring": "* Allow to pass nullable Response to delay callable * Only add scheme when host is present * Fix drain case where content-length is the literal string",
+          "lines": [
+            432,
+            439
+          ],
+          "name": "6.2.2 - 2016-10-08",
+          "type": "section"
+        },
+        {
+          "docstring": "* Address HTTP_PROXY security vulnerability, CVE-2016-5385: https://httpoxy.org/ * Fixing timeout bug with StreamHandler: https://github.com/guzzle/gu",
+          "lines": [
+            440,
+            450
+          ],
+          "name": "6.2.1 - 2016-07-18",
+          "type": "section"
+        },
+        {
+          "docstring": "* Feature: added `GuzzleHttp\\json_encode` and `GuzzleHttp\\json_decode`. https://github.com/guzzle/guzzle/pull/1389 * Bug fix: Fix sleep calculation wh",
+          "lines": [
+            451,
+            470
+          ],
+          "name": "6.2.0 - 2016-03-21",
+          "type": "section"
+        },
+        {
+          "docstring": "* Bug fix: Proxy::wrapSync() now correctly proxies to the appropriate handler https://github.com/guzzle/guzzle/commit/911bcbc8b434adce64e223a6d1d14e9a",
+          "lines": [
+            471,
+            486
+          ],
+          "name": "6.1.1 - 2015-11-22",
+          "type": "section"
+        },
+        {
+          "docstring": "* Feature: Added the `on_stats` request option to provide access to transfer statistics for requests. https://github.com/guzzle/guzzle/pull/1202 * Fea",
+          "lines": [
+            487,
+            521
+          ],
+          "name": "6.1.0 - 2015-09-08",
+          "type": "section"
+        },
+        {
+          "docstring": "* Fixed a memory leak in the curl handlers in which references to callbacks were not being removed by `curl_reset`. * Cookies are now extracted proper",
+          "lines": [
+            522,
+            539
+          ],
+          "name": "6.0.2 - 2015-07-04",
+          "type": "section"
+        },
+        {
+          "docstring": "* Fixed a bug with serializing the `query` request option where the `&` separator was missing. * Added a better error message for when `body` is provi",
+          "lines": [
+            540,
+            548
+          ],
+          "name": "6.0.1 - 2015-05-27",
+          "type": "section"
+        },
+        {
+          "docstring": "* See the UPGRADING.md document for more information. * Added `multipart` and `form_params` request options. * Added `synchronous` request option. * A",
+          "lines": [
+            549,
+            573
+          ],
+          "name": "6.0.0 - 2015-05-26",
+          "type": "section"
+        },
+        {
+          "docstring": "* Mock now supports `save_to` * Marked `AbstractRequestEvent::getTransaction()` as public. * Fixed a bug in which multiple headers using different cas",
+          "lines": [
+            574,
+            584
+          ],
+          "name": "5.3.0 - 2015-05-19",
+          "type": "section"
+        },
+        {
+          "docstring": "* Requires PHP >= 5.5 * Updated to use PSR-7 * Requires immutable messages, which basically means an event based system owned by a request instance is",
+          "lines": [
+            585,
+            637
+          ],
+          "name": "6.0.0-beta.1",
+          "type": "section"
+        },
+        {
+          "docstring": "* Added `AppliesHeadersInterface` to make applying headers to a request based on the body more generic and not specific to `PostBodyInterface`. * Redu",
+          "lines": [
+            638,
+            648
+          ],
+          "name": "5.2.0 - 2015-01-27",
+          "type": "section"
+        },
+        {
+          "docstring": "* Pool class no longer uses recursion when a request is intercepted. * The size of a Pool can now be dynamically adjusted using a callback. See https:",
+          "lines": [
+            649,
+            669
+          ],
+          "name": "5.1.0 - 2014-12-19",
+          "type": "section"
+        },
+        {
+          "docstring": "This change updates query strings so that they are treated as un-encoded values by default where the value represents an un-encoded value to send over",
+          "lines": [
+            670,
+            684
+          ],
+          "name": "5.0.3 - 2014-11-03",
+          "type": "section"
+        },
+        {
+          "docstring": "* Added a trailing `\\r\\n` to multipart/form-data payloads. See https://github.com/guzzle/guzzle/pull/871 * Added a `GuzzleHttp\\Pool::send()` convenien",
+          "lines": [
+            685,
+            707
+          ],
+          "name": "5.0.2 - 2014-10-30",
+          "type": "section"
+        },
+        {
+          "docstring": "Bugfix release.",
+          "lines": [
+            708,
+            719
+          ],
+          "name": "5.0.1 - 2014-10-16",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Added support for non-blocking responses based on `guzzlehttp/guzzle-ring`. * Added a public API for creating a default HTTP adapter. * Updated the",
+              "lines": [
+                724,
+                738
+              ],
+              "name": "New Features",
+              "type": "subsection"
+            },
+            {
+              "docstring": "The breaking changes in this release are relatively minor. The biggest thing to look out for is that request and response objects no longer implement",
+              "lines": [
+                739,
+                801
+              ],
+              "name": "Breaking changes",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "Adding support for non-blocking responses and some minor API cleanup.",
+          "lines": [
+            720,
+            801
+          ],
+          "name": "5.0.0 - 2014-10-12",
+          "type": "section"
+        },
+        {
+          "docstring": "* Fixed a memory leak in the CurlAdapter when reusing cURL handles. * No longer using `request_fulluri` in stream adapter proxies. * Relative redirect",
+          "lines": [
+            802,
+            807
+          ],
+          "name": "4.2.2 - 2014-09-08",
+          "type": "section"
+        },
+        {
+          "docstring": "* Ensuring that the StreamAdapter does not always add a Content-Type header * Adding automated github releases with a phar and zip",
+          "lines": [
+            808,
+            812
+          ],
+          "name": "4.2.1 - 2014-08-19",
+          "type": "section"
+        },
+        {
+          "docstring": "* Now merging in default options using a case-insensitive comparison. Closes https://github.com/guzzle/guzzle/issues/767 * Added the ability to automa",
+          "lines": [
+            813,
+            831
+          ],
+          "name": "4.2.0 - 2014-08-17",
+          "type": "section"
+        },
+        {
+          "docstring": "* Fixed an issue in the CurlFactory that caused setting the `stream=false` request option to throw an exception. See: https://github.com/guzzle/guzzle",
+          "lines": [
+            832,
+            842
+          ],
+          "name": "4.1.8 - 2014-08-14",
+          "type": "section"
+        },
+        {
+          "docstring": "* Fixed an error in the HistoryPlugin that caused the same request and response to be logged multiple times when an HTTP protocol error occurs. * Ensu",
+          "lines": [
+            843,
+            858
+          ],
+          "name": "4.1.7 - 2014-08-07",
+          "type": "section"
+        },
+        {
+          "docstring": "* Added helper methods to make it easier to represent messages as strings, including getting the start line and getting headers as a string.",
+          "lines": [
+            859,
+            863
+          ],
+          "name": "4.1.6 - 2014-08-03",
+          "type": "section"
+        },
+        {
+          "docstring": "* Automatically retrying cURL \"Connection died, retrying a fresh connect\" errors when possible. * cURL implementation cleanup * Allowing multiple even",
+          "lines": [
+            864,
+            871
+          ],
+          "name": "4.1.5 - 2014-08-02",
+          "type": "section"
+        },
+        {
+          "docstring": "* Fixed a bug that caused multi-part POST requests with more than one field to serialize incorrectly. * Paths can now be set to \"0\" * `ResponseInterfa",
+          "lines": [
+            872,
+            881
+          ],
+          "name": "4.1.4 - 2014-07-22",
+          "type": "section"
+        },
+        {
+          "docstring": "* Various fixes to multipart/form-data POST uploads * Wrapping function.php in an if-statement to ensure Guzzle can be used globally and in a Composer",
+          "lines": [
+            882,
+            894
+          ],
+          "name": "4.1.3 - 2014-07-15",
+          "type": "section"
+        },
+        {
+          "docstring": "* Added support for sending payloads with GET requests",
+          "lines": [
+            895,
+            898
+          ],
+          "name": "4.1.2 - 2014-06-18",
+          "type": "section"
+        },
+        {
+          "docstring": "* Fixed an issue related to using custom message factory options in subclasses * Fixed an issue with nested form fields in a multi-part POST * Fixed a",
+          "lines": [
+            899,
+            905
+          ],
+          "name": "4.1.1 - 2014-06-08",
+          "type": "section"
+        },
+        {
+          "docstring": "* Added a `json` request option to easily serialize JSON payloads. * Added a `GuzzleHttp\\json_decode()` wrapper to safely parse JSON. * Added `setPort",
+          "lines": [
+            906,
+            924
+          ],
+          "name": "4.1.0 - 2014-05-27",
+          "type": "section"
+        },
+        {
+          "docstring": "* The HTTP status code of a response is now set as the exception code of RequestException objects. * 303 redirects will now correctly switch from POST",
+          "lines": [
+            925,
+            933
+          ],
+          "name": "4.0.1 - 2014-04-04",
+          "type": "section"
+        },
+        {
+          "docstring": "* For information on changes and upgrading, see: https://github.com/guzzle/guzzle/blob/master/UPGRADING.md#3x-to-40 * Added `GuzzleHttp\\batch()` as a",
+          "lines": [
+            934,
+            943
+          ],
+          "name": "4.0.0 - 2014-03-29",
+          "type": "section"
+        },
+        {
+          "docstring": "* Removed `getConfig()` and `setConfig()` from clients to avoid confusion around whether things like base_url, message_factory, etc. should be able to",
+          "lines": [
+            944,
+            967
+          ],
+          "name": "4.0.0.rc-2 - 2014-03-25",
+          "type": "section"
+        },
+        {
+          "docstring": "* See https://github.com/guzzle/guzzle/blob/master/UPGRADING.md#3x-to-40",
+          "lines": [
+            968,
+            971
+          ],
+          "name": "4.0.0-rc.1 - 2014-03-15",
+          "type": "section"
+        },
+        {
+          "docstring": "* Bug: Always using GET requests when redirecting from a 303 response * Bug: CURLOPT_SSL_VERIFYHOST is now correctly set to false when setting `$certi",
+          "lines": [
+            972,
+            989
+          ],
+          "name": "3.8.1 - 2014-01-28",
+          "type": "section"
+        },
+        {
+          "docstring": "* Added the ability to define a POST name for a file * JSON response parsing now properly walks additionalProperties * cURL error code 18 is now retri",
+          "lines": [
+            990,
+            1009
+          ],
+          "name": "3.8.0 - 2013-12-05",
+          "type": "section"
+        },
+        {
+          "docstring": "* Bug fix: 0 is now an allowed value in a description parameter that has a default value (#430) * Bug fix: SchemaFormatter now returns an integer when",
+          "lines": [
+            1010,
+            1019
+          ],
+          "name": "3.7.4 - 2013-10-02",
+          "type": "section"
+        },
+        {
+          "docstring": "* Added the ability to get the exception associated with a request/command when using `MultiTransferException` and `CommandTransferException`. * Setti",
+          "lines": [
+            1020,
+            1035
+          ],
+          "name": "3.7.3 - 2013-09-08",
+          "type": "section"
+        },
+        {
+          "docstring": "* Bug fix: Properly URL encoding paths when using the PHP-only version of the UriTemplate expander See https://github.com/guzzle/guzzle/issues/371 * B",
+          "lines": [
+            1036,
+            1050
+          ],
+          "name": "3.7.2 - 2013-08-02",
+          "type": "section"
+        },
+        {
+          "docstring": "* Bug fix: Setting default options on a client now works * Bug fix: Setting options on HEAD requests now works. See #352 * Bug fix: Moving stream fact",
+          "lines": [
+            1051,
+            1065
+          ],
+          "name": "3.7.1 - 2013-07-05",
+          "type": "section"
+        },
+        {
+          "docstring": "* See UPGRADING.md for more information on how to upgrade. * Requests now support the ability to specify an array of $options when creating a request",
+          "lines": [
+            1066,
+            1149
+          ],
+          "name": "3.7.0 - 2013-06-10",
+          "type": "section"
+        },
+        {
+          "docstring": "* ServiceDescription now implements ToArrayInterface * Added command.hidden_params to blacklist certain headers from being treated as additionalParame",
+          "lines": [
+            1150,
+            1186
+          ],
+          "name": "3.6.0 - 2013-05-29",
+          "type": "section"
+        },
+        {
+          "docstring": "* Bug: Fixed a regression so that request responses are parsed only once per oncomplete event rather than multiple times * Bug: Better cleanup of one-",
+          "lines": [
+            1187,
+            1208
+          ],
+          "name": "3.5.0 - 2013-05-13",
+          "type": "section"
+        },
+        {
+          "docstring": "* Bug fix: Fixing bug introduced in 3.4.2 where redirect responses are duplicated on the final redirected response * Added a check to re-extract the t",
+          "lines": [
+            1209,
+            1213
+          ],
+          "name": "3.4.3 - 2013-04-30",
+          "type": "section"
+        },
+        {
+          "docstring": "* Bug fix: Stream objects now work correctly with \"a\" and \"a+\" modes * Bug fix: Removing `Transfer-Encoding: chunked` header when a Content-Length is",
+          "lines": [
+            1214,
+            1228
+          ],
+          "name": "3.4.2 - 2013-04-29",
+          "type": "section"
+        },
+        {
+          "docstring": "* Large refactoring to how CurlMulti handles work. There is now a proxy that sits in front of a pool of CurlMulti handles. This greatly simplifies the",
+          "lines": [
+            1229,
+            1241
+          ],
+          "name": "3.4.1 - 2013-04-16",
+          "type": "section"
+        },
+        {
+          "docstring": "* Bug fix: URLs are now resolved correctly based on https://datatracker.ietf.org/doc/html/rfc3986#section-5.2. #289 * Bug fix: Absolute URLs with a pa",
+          "lines": [
+            1242,
+            1271
+          ],
+          "name": "3.4.0 - 2013-04-11",
+          "type": "section"
+        },
+        {
+          "docstring": "* Added the ability to create PHP streaming responses from HTTP requests * Bug fix: Running any filters when parsing response headers with service des",
+          "lines": [
+            1272,
+            1282
+          ],
+          "name": "3.3.1 - 2013-03-10",
+          "type": "section"
+        },
+        {
+          "docstring": "* A large number of performance optimizations have been made * Bug fix: Added 'wb' as a valid write mode for streams * Bug fix: `Guzzle\\Http\\Message\\R",
+          "lines": [
+            1283,
+            1306
+          ],
+          "name": "3.3.0 - 2013-03-03",
+          "type": "section"
+        },
+        {
+          "docstring": "* CurlMulti is no longer reused globally. A new multi object is created per-client. This helps to isolate clients. * URLs with no path no longer conta",
+          "lines": [
+            1307,
+            1325
+          ],
+          "name": "3.2.0 - 2013-02-14",
+          "type": "section"
+        },
+        {
+          "docstring": "* Refactored how operation responses are parsed. Visitors now include a before() method responsible for parsing the response body. For example, the Xm",
+          "lines": [
+            1326,
+            1334
+          ],
+          "name": "3.1.2 - 2013-01-27",
+          "type": "section"
+        },
+        {
+          "docstring": "* Adding wildcard support to Guzzle\\Common\\Collection::getPath() * Adding alias support to ServiceBuilder configs * Adding Guzzle\\Service\\Resource\\Com",
+          "lines": [
+            1335,
+            1340
+          ],
+          "name": "3.1.1 - 2013-01-20",
+          "type": "section"
+        },
+        {
+          "docstring": "* BC: CurlException now extends from RequestException rather than BadResponseException * BC: Renamed Guzzle\\Plugin\\Cache\\CanCacheStrategyInterface::ca",
+          "lines": [
+            1341,
+            1357
+          ],
+          "name": "3.1.0 - 2013-01-12",
+          "type": "section"
+        },
+        {
+          "docstring": "* Fixing phar detection when forcing a cacert to system if null or true * Allowing filename to be passed to `Guzzle\\Http\\Message\\Request::setResponseB",
+          "lines": [
+            1358,
+            1364
+          ],
+          "name": "3.0.7 - 2012-12-19",
+          "type": "section"
+        },
+        {
+          "docstring": "* CurlMulti performance improvements * Adding setErrorResponses() to Operation * composer.json tweaks",
+          "lines": [
+            1365,
+            1370
+          ],
+          "name": "3.0.6 - 2012-12-09",
+          "type": "section"
+        },
+        {
+          "docstring": "* Bug: Fixing an infinite recursion bug caused from revalidating with the CachePlugin * Bug: Response body can now be a string containing \"0\" * Bug: U",
+          "lines": [
+            1371,
+            1380
+          ],
+          "name": "3.0.5 - 2012-11-18",
+          "type": "section"
+        },
+        {
+          "docstring": "* Bug: Fixed a bug when adding multiple cookies to a request to use the correct glue value * Bug: Cookies can now be added that have a name, domain, o",
+          "lines": [
+            1381,
+            1391
+          ],
+          "name": "3.0.4 - 2012-11-11",
+          "type": "section"
+        },
+        {
+          "docstring": "* Implementing redirects in PHP rather than cURL * Added PECL URI template extension and using as default parser if available * Bug: Fixed Content-Len",
+          "lines": [
+            1392,
+            1400
+          ],
+          "name": "3.0.3 - 2012-11-04",
+          "type": "section"
+        },
+        {
+          "docstring": "* Magic methods are enabled by default on clients * Magic methods return the result of a command * Service clients no longer require a base_url option",
+          "lines": [
+            1401,
+            1407
+          ],
+          "name": "3.0.2 - 2012-10-25",
+          "type": "section"
+        },
+        {
+          "docstring": "* Models can now be used like regular collection objects by calling filter, map, etc. * Models no longer require a Parameter structure or initial data",
+          "lines": [
+            1408,
+            1413
+          ],
+          "name": "3.0.1 - 2012-10-22",
+          "type": "section"
+        },
+        {
+          "docstring": "* Rewrote service description format to be based on Swagger * Now based on JSON schema * Added nested input structures and nested response models * Su",
+          "lines": [
+            1414,
+            1445
+          ],
+          "name": "3.0.0 - 2012-10-15",
+          "type": "section"
+        },
+        {
+          "docstring": "* Bug: Fixed a cookie issue that caused dot prefixed domains to not match where popular browsers did",
+          "lines": [
+            1446,
+            1449
+          ],
+          "name": "2.8.8 - 2012-10-15",
+          "type": "section"
+        },
+        {
+          "docstring": "* Bug: Fixed config file aliases for JSON includes * Bug: Fixed cookie bug on a request object by using CookieParser to parse cookies on requests * Bu",
+          "lines": [
+            1450,
+            1463
+          ],
+          "name": "2.8.7 - 2012-09-30",
+          "type": "section"
+        },
+        {
+          "docstring": "* Added the ability to modify and build service descriptions * Added the use of visitors to apply parameters to locations in service descriptions usin",
+          "lines": [
+            1464,
+            1477
+          ],
+          "name": "2.8.6 - 2012-09-05",
+          "type": "section"
+        },
+        {
+          "docstring": "* Bug: Suppressed empty arrays from URI templates * Bug: Added the missing $options argument from ServiceDescription::factory to enable caching * Adde",
+          "lines": [
+            1478,
+            1485
+          ],
+          "name": "2.8.5 - 2012-08-29",
+          "type": "section"
+        },
+        {
+          "docstring": "* Bug: Custom delay time calculations are no longer ignored in the ExponentialBackoffPlugin * Added the ability to transfer entity bodies as a string",
+          "lines": [
+            1486,
+            1499
+          ],
+          "name": "2.8.4 - 2012-08-15",
+          "type": "section"
+        },
+        {
+          "docstring": "* Bug: Fixed a case where empty POST requests were sent as GET requests * Bug: Fixed a bug in ExponentialBackoffPlugin that caused fatal errors when r",
+          "lines": [
+            1500,
+            1509
+          ],
+          "name": "2.8.3 - 2012-07-30",
+          "type": "section"
+        },
+        {
+          "docstring": "* Bug: Query string values set to 0 are no longer dropped from the query string * Bug: A Collection object is no longer created each time a call is ma",
+          "lines": [
+            1510,
+            1517
+          ],
+          "name": "2.8.2 - 2012-07-24",
+          "type": "section"
+        },
+        {
+          "docstring": "* Loosening Event Dispatcher dependency * POST redirects can now be customized using CURLOPT_POSTREDIR",
+          "lines": [
+            1518,
+            1522
+          ],
+          "name": "2.8.1 - 2012-07-16",
+          "type": "section"
+        },
+        {
+          "docstring": "* BC: Guzzle\\Http\\Query * Query strings with empty variables will always show an equal sign unless the variable is set to QueryString::BLANK (e.g. ?ac",
+          "lines": [
+            1523,
+            1535
+          ],
+          "name": "2.8.0 - 2012-07-15",
+          "type": "section"
+        },
+        {
+          "docstring": "* BC: Moving things to get ready for subtree splits. Moving Inflection into Common. Moving Guzzle\\Http\\Parser to Guzzle\\Parser. * BC: Removing Guzzle\\",
+          "lines": [
+            1536,
+            1545
+          ],
+          "name": "2.7.2 - 2012-07-02",
+          "type": "section"
+        },
+        {
+          "docstring": "* Minor patch to update version number in UA string * Updating build process",
+          "lines": [
+            1546,
+            1550
+          ],
+          "name": "2.7.1 - 2012-06-26",
+          "type": "section"
+        },
+        {
+          "docstring": "* BC: Inflection classes moved to Guzzle\\Inflection. No longer static methods. Can now inject custom inflectors into classes. * BC: Removed magic setX",
+          "lines": [
+            1551,
+            1567
+          ],
+          "name": "2.7.0 - 2012-06-25",
+          "type": "section"
+        },
+        {
+          "docstring": "* BC: Removing Guzzle\\Http\\Plugin\\BatchQueuePlugin * BC: Removing Guzzle\\Service\\Command\\CommandSet * Adding generic batching system (replaces the bat",
+          "lines": [
+            1568,
+            1577
+          ],
+          "name": "2.6.6 - 2012-06-10",
+          "type": "section"
+        },
+        {
+          "docstring": "* BC: Renaming Guzzle\\Http\\Message\\RequestInterface::getResourceUri() to getResource() * BC: Removing unused AUTH_BASIC and AUTH_DIGEST constants from",
+          "lines": [
+            1578,
+            1589
+          ],
+          "name": "2.6.5 - 2012-06-03",
+          "type": "section"
+        },
+        {
+          "docstring": "* BC: Cleaning up how POST files are stored in EntityEnclosingRequest objects. Adding PostFile class. * BC: Moving ApiCommand specific functionality f",
+          "lines": [
+            1590,
+            1606
+          ],
+          "name": "2.6.4 - 2012-05-30",
+          "type": "section"
+        },
+        {
+          "docstring": "* [BC] Guzzle\\Common\\FromConfigInterface no longer requires any config options. * [BC] Refactoring how POST files are stored on an EntityEnclosingRequ",
+          "lines": [
+            1607,
+            1620
+          ],
+          "name": "2.6.3 - 2012-05-23",
+          "type": "section"
+        },
+        {
+          "docstring": "* [Http] Better handling of nested scope requests in CurlMulti.  Requests are now always prepares in the send() method rather than the addRequest() me",
+          "lines": [
+            1621,
+            1624
+          ],
+          "name": "2.6.2 - 2012-05-19",
+          "type": "section"
+        },
+        {
+          "docstring": "* [BC] Removing 'path' support in service descriptions.  Use 'uri'. * [BC] Guzzle\\Service\\Inspector::parseDocBlock is now protected. Adding getApiPara",
+          "lines": [
+            1625,
+            1635
+          ],
+          "name": "2.6.1 - 2012-05-19",
+          "type": "section"
+        },
+        {
+          "docstring": "* [BC] Moving Guzzle\\Service\\Builder to Guzzle\\Service\\Builder\\ServiceBuilder * [BC] Executing a Command returns the result of the command rather than",
+          "lines": [
+            1636,
+            1663
+          ],
+          "name": "2.6.0 - 2012-05-15",
+          "type": "section"
+        },
+        {
+          "docstring": "* Major performance improvements * [BC] Simplifying Guzzle\\Common\\Collection.  Please check to see if you are using features that are now deprecated.",
+          "lines": [
+            1664,
+            1684
+          ],
+          "name": "2.5.0 - 2012-05-08",
+          "type": "section"
+        }
+      ]
+    },
+    "README.md": {
+      "hash": "46012620bed7",
+      "indexed_at": "2026-01-20T04:50:22.529672+00:00",
+      "language": "markdown",
+      "lines": 94,
+      "symbols": [
+        {
+          "docstring": "We use GitHub issues only to discuss bugs and new features. For support please refer to:",
+          "lines": [
+            41,
+            50
+          ],
+          "name": "Help and docs",
+          "type": "section"
+        },
+        {
+          "docstring": "The recommended way to install Guzzle is through [Composer](https://getcomposer.org/).",
+          "lines": [
+            51,
+            60
+          ],
+          "name": "Installing Guzzle",
+          "type": "section"
+        },
+        {
+          "docstring": "| Version | Status              | Packagist           | Namespace    | Repo                | Docs                | PSR-7 | PHP Version  | |---------|-",
+          "lines": [
+            61,
+            81
+          ],
+          "name": "Version Guidance",
+          "type": "section"
+        },
+        {
+          "docstring": "If you discover a security vulnerability within this package, please send an email to security@tidelift.com. All security vulnerabilities will be prom",
+          "lines": [
+            82,
+            85
+          ],
+          "name": "Security",
+          "type": "section"
+        },
+        {
+          "docstring": "Guzzle is made available under the MIT License (MIT). Please see [License File](LICENSE) for more information.",
+          "lines": [
+            86,
+            89
+          ],
+          "name": "License",
+          "type": "section"
+        },
+        {
+          "docstring": "Available as part of the Tidelift Subscription",
+          "lines": [
+            90,
+            95
+          ],
+          "name": "For Enterprise",
+          "type": "section"
+        }
+      ]
+    },
+    "UPGRADING.md": {
+      "hash": "e118080d7dde",
+      "indexed_at": "2026-01-20T04:50:22.532871+00:00",
+      "language": "markdown",
+      "lines": 1253,
+      "symbols": [
+        {
+          "docstring": "- Class `GuzzleHttp\\UriTemplate` is removed. - Class `GuzzleHttp\\Exception\\SeekException` is removed. - Classes `GuzzleHttp\\Exception\\BadResponseExcep",
+          "lines": [
+            15,
+            37
+          ],
+          "name": "Other backwards compatibility breaking changes",
+          "type": "subsubsection"
+        },
+        {
+          "docstring": "All internal native functions calls of Guzzle are now prefixed with a slash. This change makes it impossible for method overloading by other libraries",
+          "lines": [
+            38,
+            140
+          ],
+          "name": "Native functions calls",
+          "type": "subsubsection"
+        },
+        {
+          "docstring": "The change to PSR-7 unfortunately required significant refactoring to Guzzle due to the fact that PSR-7 messages are immutable. Guzzle 5 relied on an",
+          "lines": [
+            141,
+            189
+          ],
+          "name": "Migrating to middleware",
+          "type": "section"
+        },
+        {
+          "docstring": "This version added the [`form_params`](https://docs.guzzlephp.org/en/latest/request-options.html#form_params) and `multipart` request options. `form_p",
+          "lines": [
+            190,
+            209
+          ],
+          "name": "POST Requests",
+          "type": "section"
+        },
+        {
+          "docstring": "Guzzle now uses [RingPHP](https://ringphp.readthedocs.org/en/latest) to send HTTP requests. The `adapter` option in a `GuzzleHttp\\Client` constructor",
+          "lines": [
+            210,
+            217
+          ],
+          "name": "Rewritten Adapter Layer",
+          "type": "section"
+        },
+        {
+          "docstring": "[Fluent interfaces were removed](https://ocramius.github.io/blog/fluent-interfaces-are-evil/) from the following classes:",
+          "lines": [
+            218,
+            228
+          ],
+          "name": "Removed Fluent Interfaces",
+          "type": "section"
+        },
+        {
+          "docstring": "Removed \"functions.php\", so that Guzzle is truly PSR-4 compliant. The following functions can be used as replacements.",
+          "lines": [
+            229,
+            243
+          ],
+          "name": "Removed functions.php",
+          "type": "section"
+        },
+        {
+          "docstring": "The concept of \"throwImmediately\" has been removed from exceptions and error events. This control mechanism was used to stop a transfer of concurrent",
+          "lines": [
+            244,
+            251
+          ],
+          "name": "`throwImmediately` has been removed",
+          "type": "section"
+        },
+        {
+          "docstring": "Removed the \"headers\" event. This event was only useful for changing the body a response once the headers of the response were known. You can implemen",
+          "lines": [
+            252,
+            261
+          ],
+          "name": "headers event has been removed",
+          "type": "section"
+        },
+        {
+          "docstring": "Removed the `asArray` parameter from `GuzzleHttp\\Message\\MessageInterface::getHeader`. If you want to get a header value as an array, then use the new",
+          "lines": [
+            262,
+            272
+          ],
+          "name": "Updates to HTTP Messages",
+          "type": "section"
+        },
+        {
+          "docstring": "- Now requires PHP 5.4 or greater. - No longer requires cURL to send requests. - Guzzle no longer wraps every exception it throws. Only exceptions tha",
+          "lines": [
+            273,
+            286
+          ],
+          "name": "Overarching changes:",
+          "type": "section"
+        },
+        {
+          "docstring": "The `Guzzle\\Batch` namespace has been removed. This is best left to third-parties to implement on top of Guzzle's core HTTP library.",
+          "lines": [
+            287,
+            291
+          ],
+          "name": "Batch",
+          "type": "section"
+        },
+        {
+          "docstring": "The `Guzzle\\Cache` namespace has been removed. (Todo: No suitable replacement has been implemented yet, but hoping to utilize a PSR cache interface).",
+          "lines": [
+            292,
+            296
+          ],
+          "name": "Cache",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- `getAll` has been removed. Use `toArray` to convert a collection to an array. - `inject` has been removed. - `keySearch` has been removed. - `getPat",
+              "lines": [
+                305,
+                313
+              ],
+              "name": "Collection",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "- Use the `once()` method to add a listener that automatically removes itself the first time it is invoked. - Use the `listeners()` method to retrieve",
+                  "lines": [
+                    331,
+                    359
+                  ],
+                  "name": "Emitter",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "Guzzle no longer requires Symfony's EventDispatcher component. Guzzle now uses `GuzzleHttp\\Event\\Emitter`.",
+              "lines": [
+                314,
+                359
+              ],
+              "name": "Events",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "- Removed all of the wrapped exceptions. It's better to use the standard PHP library for unrecoverable exceptions. - `FromConfigInterface` has been re",
+          "lines": [
+            297,
+            359
+          ],
+          "name": "Common",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- The cacert.pem certificate has been moved to `src/cacert.pem`. - Added the concept of adapters that are used to transfer requests over the wire. - S",
+              "lines": [
+                362,
+                379
+              ],
+              "name": "General changes",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Calling methods like `get()`, `post()`, `head()`, etc. no longer create and return a request, but rather creates a request, sends the request, and ret",
+              "lines": [
+                380,
+                422
+              ],
+              "name": "Client",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "- `GuzzleHttp\\Message\\EntityEnclosingRequest` and `GuzzleHttp\\Message\\EntityEnclosingRequestInterface` have been removed. The separation between reque",
+                  "lines": [
+                    432,
+                    457
+                  ],
+                  "name": "Requests with a body",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "- `GuzzleHttp\\Message\\Header` has been removed. Header values are now simply represented by an array of values or as a string. Header values are retur",
+                  "lines": [
+                    458,
+                    473
+                  ],
+                  "name": "Headers",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "- `GuzzleHttp\\Message\\Response::getInfo()` and `GuzzleHttp\\Message\\Response::setInfo()` have been removed. Use the event system to retrieve this type",
+                  "lines": [
+                    474,
+                    492
+                  ],
+                  "name": "Responses",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Streaming requests can now be created by a client directly, returning a `GuzzleHttp\\Message\\ResponseInterface` object that contains a body stream refe",
+                  "lines": [
+                    493,
+                    512
+                  ],
+                  "name": "Streaming responses",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "The `configureRedirects()` method has been removed in favor of a `allow_redirects` request option.",
+                  "lines": [
+                    513,
+                    527
+                  ],
+                  "name": "Redirects",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "EntityBody interfaces and classes have been removed or moved to `GuzzleHttp\\Stream`. All classes and interfaces that once required `GuzzleHttp\\EntityB",
+                  "lines": [
+                    528,
+                    543
+                  ],
+                  "name": "EntityBody",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Requests previously submitted a large number of requests. The number of events emitted over the lifecycle of a request has been significantly reduced",
+                  "lines": [
+                    544,
+                    579
+                  ],
+                  "name": "Request lifecycle events",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "Messages no longer have references to their counterparts (i.e., a request no longer has a reference to it's response, and a response no loger has a re",
+              "lines": [
+                423,
+                579
+              ],
+              "name": "Messages",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            360,
+            579
+          ],
+          "name": "Http",
+          "type": "section"
+        },
+        {
+          "docstring": "The `Guzzle\\Inflection` namespace has been removed. This is not a core concern of Guzzle.",
+          "lines": [
+            580,
+            584
+          ],
+          "name": "Inflection",
+          "type": "section"
+        },
+        {
+          "docstring": "The `Guzzle\\Iterator` namespace has been removed.",
+          "lines": [
+            585,
+            598
+          ],
+          "name": "Iterator",
+          "type": "section"
+        },
+        {
+          "docstring": "The LogPlugin has moved to https://github.com/guzzle/log-subscriber. The `Guzzle\\Log` namespace has been removed. Guzzle now relies on `Psr\\Log\\Logger",
+          "lines": [
+            599,
+            605
+          ],
+          "name": "Log",
+          "type": "section"
+        },
+        {
+          "docstring": "The `Guzzle\\Parser` namespace has been removed. This was previously used to make it possible to plug in custom parsers for cookies, messages, URI temp",
+          "lines": [
+            606,
+            625
+          ],
+          "name": "Parser",
+          "type": "section"
+        },
+        {
+          "docstring": "The `Guzzle\\Plugin` namespace has been renamed to `GuzzleHttp\\Subscriber`. Several plugins are shipping with the core Guzzle library under this namesp",
+          "lines": [
+            626,
+            666
+          ],
+          "name": "Plugin",
+          "type": "section"
+        },
+        {
+          "docstring": "The service description layer of Guzzle has moved into two separate packages:",
+          "lines": [
+            667,
+            676
+          ],
+          "name": "Service",
+          "type": "section"
+        },
+        {
+          "docstring": "Stream have moved to a separate package available at https://github.com/guzzle/streams.",
+          "lines": [
+            677,
+            687
+          ],
+          "name": "Stream",
+          "type": "section"
+        },
+        {
+          "docstring": "- `getStream` and `setStream` have been removed to better encapsulate streams. - `getMetadata` and `setMetadata` have been removed in favor of `Guzzle",
+          "lines": [
+            688,
+            697
+          ],
+          "name": "Removed methods from StreamInterface",
+          "type": "section"
+        },
+        {
+          "docstring": "- `detachStream` has been renamed to `detach`. - `feof` has been renamed to `eof`. - `ftell` has been renamed to `tell`. - `readLine` has moved from a",
+          "lines": [
+            698,
+            705
+          ],
+          "name": "Renamed methods",
+          "type": "section"
+        },
+        {
+          "docstring": "`GuzzleHttp\\Stream\\MetadataStreamInterface` has been added to denote streams that contain additional metadata accessible via `getMetadata()`. `GuzzleH",
+          "lines": [
+            706,
+            712
+          ],
+          "name": "Metadata streams",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- You can now enable E_USER_DEPRECATED warnings to see if you are using any deprecated methods.:",
+              "lines": [
+                723,
+                769
+              ],
+              "name": "Deprecations",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Additions and changes (you will need to update any implementations or subclasses you may have created):",
+              "lines": [
+                770,
+                801
+              ],
+              "name": "Interface changes",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- CacheKeyProviderInterface and DefaultCacheKeyProvider are no longer used. All of this logic is handled in a CacheStorageInterface. These two objects",
+              "lines": [
+                802,
+                833
+              ],
+              "name": "Cache plugin breaking changes",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* Removed from interface: Guzzle\\Http\\ClientInterface::setUriTemplate * Removed from interface: Guzzle\\Http\\ClientInterface::setCurlMulti() * Removed",
+              "lines": [
+                834,
+                843
+              ],
+              "name": "Interface changes",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* Removed Guzzle\\Parser\\ParserRegister::get(). Use getParser() * Removed Guzzle\\Parser\\ParserRegister::set(). Use registerParser().",
+              "lines": [
+                844,
+                848
+              ],
+              "name": "Removed deprecated functions",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* The ability to case-insensitively search for header values * Guzzle\\Http\\Message\\Header::hasExactHeader * Guzzle\\Http\\Message\\Header::raw. Use getAl",
+              "lines": [
+                849,
+                856
+              ],
+              "name": "Deprecations",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* All response header helper functions return a string rather than mixing Header objects and strings inconsistently * Removed cURL blacklist support.",
+              "lines": [
+                857,
+                877
+              ],
+              "name": "Other changes",
+              "type": "subsection"
+            },
+            {
+              "docstring": "`Guzzle\\Http\\Message\\Response::getEtag()` no longer strips quotes around the ETag response header",
+              "lines": [
+                878,
+                881
+              ],
+              "name": "Response::getEtag() quote stripping removed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "The `Guzzle\\Http\\Utils` class was removed. This class was only used for testing.",
+              "lines": [
+                882,
+                885
+              ],
+              "name": "Removed `Guzzle\\Http\\Utils`",
+              "type": "subsection"
+            },
+            {
+              "docstring": "`Guzzle\\Stream\\Stream::getWrapper()` and `Guzzle\\Stream\\Stream::getStreamType()` are no longer converted to lowercase.",
+              "lines": [
+                886,
+                889
+              ],
+              "name": "Stream wrapper and type",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Emitting IO events from a RequestMediator is now a parameter that must be set in a request's curl options using the 'emit_io' key. This was previously",
+              "lines": [
+                890,
+                897
+              ],
+              "name": "curl.emit_io became emit_io",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Before 3.2, the same CurlMulti object was reused globally for each client. This can cause issue where plugins added to a single client can pollute req",
+              "lines": [
+                898,
+                915
+              ],
+              "name": "CurlMulti is no longer reused globally",
+              "type": "subsection"
+            },
+            {
+              "docstring": "URLs no longer have a default path value of '/' if no path was specified.",
+              "lines": [
+                916,
+                935
+              ],
+              "name": "No default path",
+              "type": "subsection"
+            },
+            {
+              "docstring": "The exception message for `Guzzle\\Http\\Exception\\BadResponseException` no longer contains the full HTTP request and response information. You can, how",
+              "lines": [
+                936,
+                941
+              ],
+              "name": "Less verbose BadResponseException",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Multi-valued query parameters are no longer aggregated using a callback function. `Guzzle\\Http\\Query` now has a setAggregator() method that accepts a",
+              "lines": [
+                942,
+                950
+              ],
+              "name": "Query parameter aggregation",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Change `\\Guzzle\\Service\\Inspector::fromConfig` to `\\Guzzle\\Common\\Collection::fromConfig`",
+              "lines": [
+                951,
+                1006
+              ],
+              "name": "Guzzle\\Service\\Inspector",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Before**",
+              "lines": [
+                1007,
+                1143
+              ],
+              "name": "Convert XML Service Descriptions to JSON",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Commands are now called Operations",
+              "lines": [
+                1144,
+                1171
+              ],
+              "name": "Guzzle\\Service\\Description\\ServiceDescription",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Namespace is now `Guzzle\\Inflection\\Inflector`",
+              "lines": [
+                1172,
+                1175
+              ],
+              "name": "Guzzle\\Common\\Inflection\\Inflector",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Namespace is now `Guzzle\\Plugin`. Many other changes occur within this namespace and are detailed in their own sections below.",
+              "lines": [
+                1176,
+                1179
+              ],
+              "name": "Guzzle\\Http\\Plugin",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Now `Guzzle\\Plugin\\Log\\LogPlugin` and `Guzzle\\Log` respectively.",
+              "lines": [
+                1180,
+                1210
+              ],
+              "name": "Guzzle\\Http\\Plugin\\LogPlugin and Guzzle\\Common\\Log",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Now `Guzzle\\Plugin\\CurlAuth\\CurlAuthPlugin`.",
+              "lines": [
+                1211,
+                1214
+              ],
+              "name": "Guzzle\\Http\\Plugin\\CurlAuthPlugin",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Now `Guzzle\\Plugin\\Backoff\\BackoffPlugin`, and other changes.",
+              "lines": [
+                1215,
+                1244
+              ],
+              "name": "Guzzle\\Http\\Plugin\\ExponentialBackoffPlugin",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "(See #217) (Fixed in 09daeb8c666fb44499a0646d655a8ae36456575e)",
+                  "lines": [
+                    1247,
+                    1254
+                  ],
+                  "name": "[BUG] Accept-Encoding header behavior changed unintentionally.",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                1245,
+                1254
+              ],
+              "name": "Known Issues",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "The entire concept of the StreamRequestFactory has been removed. The way this was used in Guzzle 3 broke the actual interface of sending streaming req",
+          "lines": [
+            713,
+            1254
+          ],
+          "name": "StreamRequestFactory",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.147741+00:00",
+  "version": "1.0"
+}

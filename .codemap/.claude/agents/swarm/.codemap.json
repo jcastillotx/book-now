@@ -1,0 +1,951 @@
+{
+  "directory": ".claude/agents/swarm",
+  "files": {
+    "adaptive-coordinator.md": {
+      "hash": "62df2c4371a5",
+      "indexed_at": "2026-01-20T04:50:25.544843+00:00",
+      "language": "markdown",
+      "lines": 1127,
+      "symbols": [
+        {
+          "lines": [
+            43,
+            58
+          ],
+          "name": "Adaptive Architecture",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Real-time Performance Monitoring**: Continuous metrics collection and analysis - **Dynamic Topology Switching**: Seamless transitions between coor",
+              "lines": [
+                61,
+                66
+              ],
+              "name": "1. Topology Adaptation Engine",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Emergent Behaviors**: Allow optimal patterns to emerge from agent interactions - **Adaptive Load Balancing**: Dynamic work distribution based on c",
+              "lines": [
+                67,
+                72
+              ],
+              "name": "2. Self-Organizing Coordination",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Neural Pattern Analysis**: Deep learning for coordination pattern optimization - **Predictive Analytics**: Forecasting resource needs and performa",
+              "lines": [
+                73,
+                78
+              ],
+              "name": "3. Machine Learning Integration",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            59,
+            78
+          ],
+          "name": "Core Intelligence Systems",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                81,
+                103
+              ],
+              "name": "Workload Analysis Framework",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                104,
+                130
+              ],
+              "name": "Topology Switching Conditions",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            79,
+            130
+          ],
+          "name": "Topology Decision Matrix",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Adaptive coordinators use **dynamic attention selection** to choose the optimal mechanism based on task characteristics and real-time performance:",
+              "lines": [
+                133,
+                664
+              ],
+              "name": "Dynamic Attention Mechanism Selection",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                665,
+                741
+              ],
+              "name": "Usage Example: Adaptive Dynamic Coordination",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                742,
+                861
+              ],
+              "name": "Self-Learning Integration (ReasoningBank)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            131,
+            861
+          ],
+          "name": "\ud83e\udde0 Advanced Attention Mechanisms (v2.0.0-alpha)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                864,
+                878
+              ],
+              "name": "Pattern Recognition & Learning",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                879,
+                893
+              ],
+              "name": "Performance Optimization",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                894,
+                905
+              ],
+              "name": "Predictive Scaling",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            862,
+            905
+          ],
+          "name": "MCP Neural Integration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                908,
+                945
+              ],
+              "name": "1. Real-Time Topology Optimization",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                946,
+                988
+              ],
+              "name": "2. Intelligent Agent Allocation",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                989,
+                1023
+              ],
+              "name": "3. Predictive Load Management",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            906,
+            1023
+          ],
+          "name": "Dynamic Adaptation Algorithms",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                1026,
+                1052
+              ],
+              "name": "Seamless Migration Process",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                1053,
+                1086
+              ],
+              "name": "Rollback Mechanisms",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1024,
+            1086
+          ],
+          "name": "Topology Transition Protocols",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Topology Switch Success Rate**: Percentage of beneficial switches - **Performance Improvement**: Average gain from adaptations - **Adaptation Spee",
+              "lines": [
+                1089,
+                1094
+              ],
+              "name": "Adaptation Effectiveness",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Resource Utilization**: Optimal use of available agents and resources - **Task Completion Rate**: Percentage of successfully completed tasks - **L",
+              "lines": [
+                1095,
+                1100
+              ],
+              "name": "System Efficiency",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Model Accuracy Improvement**: Enhancement in prediction precision over time - **Pattern Recognition Rate**: Identification of recurring optimizati",
+              "lines": [
+                1101,
+                1106
+              ],
+              "name": "Learning Progress",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1087,
+            1106
+          ],
+          "name": "Performance Metrics & KPIs",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "1. **Gradual Transitions**: Avoid abrupt topology changes that disrupt work 2. **Performance Validation**: Always validate improvements before committ",
+              "lines": [
+                1109,
+                1114
+              ],
+              "name": "Adaptive Strategy Design",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. **Feature Engineering**: Identify relevant metrics for decision making 2. **Model Validation**: Use cross-validation for robust model evaluation 3.",
+              "lines": [
+                1115,
+                1120
+              ],
+              "name": "Machine Learning Optimization",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. **Multi-Dimensional Metrics**: Track performance, resource usage, and quality 2. **Real-Time Dashboards**: Provide visibility into adaptation decis",
+              "lines": [
+                1121,
+                1127
+              ],
+              "name": "System Monitoring",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1107,
+            1127
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        }
+      ]
+    },
+    "hierarchical-coordinator.md": {
+      "hash": "3ec1ee04398c",
+      "indexed_at": "2026-01-20T04:50:25.543141+00:00",
+      "language": "markdown",
+      "lines": 710,
+      "symbols": [
+        {
+          "lines": [
+            37,
+            46
+          ],
+          "name": "Architecture Overview",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Break down complex objectives into manageable sub-tasks - Identify optimal task sequencing and dependencies - Allocate resources based on task compl",
+              "lines": [
+                49,
+                54
+              ],
+              "name": "1. Strategic Planning & Task Decomposition",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Spawn specialized worker agents based on task requirements - Assign tasks to workers based on their capabilities and current workload - Monitor work",
+              "lines": [
+                55,
+                60
+              ],
+              "name": "2. Agent Supervision & Delegation",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Maintain command and control structure - Ensure information flows efficiently through hierarchy - Coordinate cross-team dependencies - Synchronize d",
+              "lines": [
+                61,
+                66
+              ],
+              "name": "3. Coordination Protocol Management",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            47,
+            66
+          ],
+          "name": "Core Responsibilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Capabilities**: Information gathering, market research, competitive analysis - **Use Cases**: Requirements analysis, technology research, feasibil",
+              "lines": [
+                69,
+                73
+              ],
+              "name": "Research Workers \ud83d\udd2c",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Capabilities**: Implementation, code review, testing, documentation - **Use Cases**: Feature development, bug fixes, code optimization - **Spawn C",
+              "lines": [
+                74,
+                78
+              ],
+              "name": "Code Workers \ud83d\udcbb",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Capabilities**: Data analysis, performance monitoring, reporting - **Use Cases**: Metrics analysis, performance optimization, reporting - **Spawn",
+              "lines": [
+                79,
+                83
+              ],
+              "name": "Analyst Workers \ud83d\udcca",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Capabilities**: Quality assurance, validation, compliance checking - **Use Cases**: Testing, validation, quality gates - **Spawn Command**: `mcp__",
+              "lines": [
+                84,
+                88
+              ],
+              "name": "Test Workers \ud83e\uddea",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            67,
+            88
+          ],
+          "name": "Specialized Worker Types",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                91,
+                108
+              ],
+              "name": "Phase 1: Planning & Strategy",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                109,
+                126
+              ],
+              "name": "Phase 2: Execution & Monitoring",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                127,
+                144
+              ],
+              "name": "Phase 3: Integration & Delivery",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            89,
+            144
+          ],
+          "name": "Coordination Workflow",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Hierarchical swarms use **hyperbolic attention** to model natural queen-worker relationships with topology-aware coordination:",
+              "lines": [
+                147,
+                450
+              ],
+              "name": "Hyperbolic Attention for Hierarchical Coordination",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                451,
+                502
+              ],
+              "name": "Usage Example: Hierarchical Coordination",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                503,
+                598
+              ],
+              "name": "Self-Learning Integration (ReasoningBank)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            145,
+            598
+          ],
+          "name": "\ud83e\udde0 Advanced Attention Mechanisms (v2.0.0-alpha)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                601,
+                614
+              ],
+              "name": "Swarm Management",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                615,
+                626
+              ],
+              "name": "Task Orchestration",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                627,
+                638
+              ],
+              "name": "Performance & Analytics",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            599,
+            638
+          ],
+          "name": "MCP Tool Integration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                641,
+                656
+              ],
+              "name": "Task Assignment Algorithm",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                657,
+                671
+              ],
+              "name": "Escalation Protocols",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            639,
+            671
+          ],
+          "name": "Decision Making Framework",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Frequency**: Every 5 minutes for active tasks - **Format**: Structured JSON with progress, blockers, ETA - **Escalation**: Automatic alerts for de",
+              "lines": [
+                674,
+                678
+              ],
+              "name": "Status Reporting",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Sync Points**: Daily standups, milestone reviews - **Dependencies**: Explicit dependency tracking with notifications - **Handoffs**: Formal work p",
+              "lines": [
+                679,
+                683
+              ],
+              "name": "Cross-Team Coordination",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            672,
+            683
+          ],
+          "name": "Communication Patterns",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Task Completion Rate**: >95% of tasks completed successfully - **Time to Market**: Average delivery time vs. estimates - **Resource Utilization**:",
+              "lines": [
+                686,
+                690
+              ],
+              "name": "Coordination Effectiveness",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Defect Rate**: <5% of deliverables require rework - **Compliance Score**: 100% adherence to quality standards - **Customer Satisfaction**: Stakeho",
+              "lines": [
+                691,
+                695
+              ],
+              "name": "Quality Metrics",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            684,
+            695
+          ],
+          "name": "Performance Metrics",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "1. **Clear Specifications**: Provide detailed requirements and acceptance criteria 2. **Appropriate Scope**: Tasks sized for 2-8 hour completion windo",
+              "lines": [
+                698,
+                703
+              ],
+              "name": "Efficient Delegation",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. **Load Balancing**: Distribute work evenly across available agents 2. **Parallel Execution**: Identify and parallelize independent work streams 3.",
+              "lines": [
+                704,
+                710
+              ],
+              "name": "Performance Optimization",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            696,
+            710
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        }
+      ]
+    },
+    "mesh-coordinator.md": {
+      "hash": "ec17ad8c83ba",
+      "indexed_at": "2026-01-20T04:50:25.543949+00:00",
+      "language": "markdown",
+      "lines": 963,
+      "symbols": [
+        {
+          "lines": [
+            39,
+            51
+          ],
+          "name": "Network Architecture",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- No single point of failure or control - Distributed decision making through consensus protocols - Peer-to-peer communication and resource sharing -",
+              "lines": [
+                54,
+                59
+              ],
+              "name": "1. Decentralized Coordination",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Automatic failure detection and recovery - Dynamic rerouting around failed nodes - Redundant data and computation paths - Graceful degradation under",
+              "lines": [
+                60,
+                65
+              ],
+              "name": "2. Fault Tolerance & Resilience",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Distributed problem solving and optimization - Shared learning and knowledge propagation - Emergent behaviors from local interactions - Swarm-based",
+              "lines": [
+                66,
+                71
+              ],
+              "name": "3. Collective Intelligence",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            52,
+            71
+          ],
+          "name": "Core Principles",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                74,
+                88
+              ],
+              "name": "Gossip Algorithm",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                89,
+                101
+              ],
+              "name": "Consensus Building",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                102,
+                115
+              ],
+              "name": "Peer Discovery",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            72,
+            115
+          ],
+          "name": "Network Communication Protocols",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                118,
+                144
+              ],
+              "name": "1. Work Stealing",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                145,
+                164
+              ],
+              "name": "2. Distributed Hash Table (DHT)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                165,
+                187
+              ],
+              "name": "3. Auction-Based Assignment",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            116,
+            187
+          ],
+          "name": "Task Distribution Strategies",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Mesh networks use **multi-head attention** for distributed consensus where all agents have equal influence:",
+              "lines": [
+                190,
+                631
+              ],
+              "name": "Multi-Head Attention for Peer-to-Peer Coordination",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                632,
+                680
+              ],
+              "name": "Usage Example: Mesh Peer Coordination",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                681,
+                758
+              ],
+              "name": "Self-Learning Integration (ReasoningBank)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            188,
+            758
+          ],
+          "name": "\ud83e\udde0 Advanced Attention Mechanisms (v2.0.0-alpha)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                761,
+                772
+              ],
+              "name": "Network Management",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                773,
+                784
+              ],
+              "name": "Consensus Operations",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                785,
+                796
+              ],
+              "name": "Fault Tolerance",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            759,
+            796
+          ],
+          "name": "MCP Tool Integration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                799,
+                816
+              ],
+              "name": "1. Practical Byzantine Fault Tolerance (pBFT)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                817,
+                830
+              ],
+              "name": "2. Raft Consensus",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                831,
+                843
+              ],
+              "name": "3. Gossip-Based Consensus",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            797,
+            843
+          ],
+          "name": "Consensus Algorithms",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                846,
+                865
+              ],
+              "name": "Heartbeat Monitoring",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                866,
+                883
+              ],
+              "name": "Network Partitioning",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            844,
+            883
+          ],
+          "name": "Failure Detection & Recovery",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                886,
+                903
+              ],
+              "name": "1. Dynamic Work Distribution",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                904,
+                922
+              ],
+              "name": "2. Capability-Based Routing",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            884,
+            922
+          ],
+          "name": "Load Balancing Strategies",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Connectivity**: Percentage of nodes reachable - **Latency**: Average message delivery time - **Throughput**: Messages processed per second - **Par",
+              "lines": [
+                925,
+                930
+              ],
+              "name": "Network Health",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Decision Latency**: Time to reach consensus - **Vote Participation**: Percentage of nodes voting - **Byzantine Tolerance**: Fault threshold mainta",
+              "lines": [
+                931,
+                936
+              ],
+              "name": "Consensus Efficiency",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Load Variance**: Standard deviation of node utilization - **Migration Frequency**: Task redistribution rate - **Hotspot Detection**: Identificatio",
+              "lines": [
+                937,
+                942
+              ],
+              "name": "Load Distribution",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            923,
+            942
+          ],
+          "name": "Performance Metrics",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "1. **Optimal Connectivity**: Maintain 3-5 connections per node 2. **Redundant Paths**: Ensure multiple routes between nodes 3. **Geographic Distributi",
+              "lines": [
+                945,
+                950
+              ],
+              "name": "Network Design",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. **Quorum Sizing**: Use smallest viable quorum (>50%) 2. **Timeout Tuning**: Balance responsiveness vs. stability 3. **Batching**: Group operations",
+              "lines": [
+                951,
+                956
+              ],
+              "name": "Consensus Optimization",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. **Proactive Monitoring**: Detect issues before failures 2. **Graceful Degradation**: Maintain core functionality 3. **Recovery Procedures**: Automa",
+              "lines": [
+                957,
+                963
+              ],
+              "name": "Fault Tolerance",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            943,
+            963
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.178518+00:00",
+  "version": "1.0"
+}

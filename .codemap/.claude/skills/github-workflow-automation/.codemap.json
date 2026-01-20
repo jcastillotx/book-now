@@ -1,0 +1,787 @@
+{
+  "directory": ".claude/skills/github-workflow-automation",
+  "files": {
+    "SKILL.md": {
+      "hash": "d01274c166a9",
+      "indexed_at": "2026-01-20T04:50:25.499797+00:00",
+      "language": "markdown",
+      "lines": 1065,
+      "symbols": [
+        {
+          "docstring": "This skill provides comprehensive GitHub Actions automation with AI swarm coordination. It integrates intelligent CI/CD pipelines, workflow orchestrat",
+          "lines": [
+            27,
+            30
+          ],
+          "name": "Overview",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                36,
+                44
+              ],
+              "name": "Initialize GitHub Workflow Automation",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                45,
+                59
+              ],
+              "name": "Common Commands",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "<details> <summary>\ud83d\udca1 Basic Usage - Click to expand</summary>",
+          "lines": [
+            31,
+            59
+          ],
+          "name": "Quick Start",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "**GitHub workflow orchestration and coordination** - **Coordination Mode**: Hierarchical - **Max Parallel Operations**: 10 - **Batch Optimized**: Yes",
+                  "lines": [
+                    67,
+                    79
+                  ],
+                  "name": "1. gh-coordinator",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "**Pull request management and review coordination** - **Review Mode**: Automated - **Multi-reviewer**: Yes - **Conflict Resolution**: Intelligent",
+                  "lines": [
+                    80,
+                    93
+                  ],
+                  "name": "2. pr-manager",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "**Issue management and project coordination** - **Issue Workflow**: Automated - **Label Management**: Smart - **Progress Tracking**: Real-time",
+                  "lines": [
+                    94,
+                    105
+                  ],
+                  "name": "3. issue-tracker",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "**Release coordination and deployment** - **Release Pipeline**: Automated - **Versioning**: Semantic - **Deployment**: Multi-stage",
+                  "lines": [
+                    106,
+                    117
+                  ],
+                  "name": "4. release-manager",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "**Repository structure and organization** - **Structure Optimization**: Yes - **Multi-repo Support**: Yes - **Template Management**: Advanced",
+                  "lines": [
+                    118,
+                    129
+                  ],
+                  "name": "5. repo-architect",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "**Automated code review and quality assurance** - **Review Quality**: Deep - **Security Analysis**: Yes - **Performance Check**: Automated",
+                  "lines": [
+                    130,
+                    143
+                  ],
+                  "name": "6. code-reviewer",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "**CI/CD pipeline coordination** - **Pipeline Management**: Advanced - **Test Coordination**: Parallel - **Deployment**: Automated",
+                  "lines": [
+                    144,
+                    155
+                  ],
+                  "name": "7. ci-orchestrator",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "**Security and compliance management** - **Security Scan**: Automated - **Compliance Check**: Continuous - **Vulnerability Management**: Proactive",
+                  "lines": [
+                    156,
+                    171
+                  ],
+                  "name": "8. security-guardian",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "<details> <summary>Available GitHub Integration Modes</summary>",
+              "lines": [
+                62,
+                171
+              ],
+              "name": "\ud83e\udd16 Swarm-Powered GitHub Modes",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "lines": [
+                    177,
+                    202
+                  ],
+                  "name": "1. Intelligent CI with Swarms",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    203,
+                    227
+                  ],
+                  "name": "2. Multi-Language Detection",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    228,
+                    257
+                  ],
+                  "name": "3. Adaptive Security Scanning",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    258,
+                    276
+                  ],
+                  "name": "4. Self-Healing Pipeline",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    277,
+                    302
+                  ],
+                  "name": "5. Progressive Deployment",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    303,
+                    320
+                  ],
+                  "name": "6. Performance Regression Detection",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    321,
+                    343
+                  ],
+                  "name": "7. PR Validation Swarm",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    344,
+                    366
+                  ],
+                  "name": "8. Intelligent Release",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "<details> <summary>Production-Ready GitHub Actions Templates</summary>",
+              "lines": [
+                172,
+                366
+              ],
+              "name": "\ud83d\udd27 Workflow Templates",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "lines": [
+                    372,
+                    381
+                  ],
+                  "name": "Workflow Analytics",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    382,
+                    390
+                  ],
+                  "name": "Cost Optimization",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    391,
+                    399
+                  ],
+                  "name": "Failure Pattern Analysis",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    400,
+                    410
+                  ],
+                  "name": "Resource Management",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "<details> <summary>Workflow Analysis & Optimization</summary>",
+              "lines": [
+                367,
+                410
+              ],
+              "name": "\ud83d\udcca Monitoring & Analytics",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            60,
+            410
+          ],
+          "name": "Core Capabilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "lines": [
+                    418,
+                    428
+                  ],
+                  "name": "Smart Test Selection",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    429,
+                    449
+                  ],
+                  "name": "Dynamic Test Matrix",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    450,
+                    460
+                  ],
+                  "name": "Intelligent Parallelization",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "<details> <summary>Intelligent Test Selection & Execution</summary>",
+              "lines": [
+                413,
+                460
+              ],
+              "name": "\ud83e\uddea Dynamic Test Strategies",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "lines": [
+                    466,
+                    474
+                  ],
+                  "name": "Predictive Failures",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    475,
+                    483
+                  ],
+                  "name": "Workflow Recommendations",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    484,
+                    494
+                  ],
+                  "name": "Automated Optimization",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "<details> <summary>AI-Powered Workflow Predictions</summary>",
+              "lines": [
+                461,
+                494
+              ],
+              "name": "\ud83d\udd2e Predictive Analysis",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "lines": [
+                    500,
+                    529
+                  ],
+                  "name": "Custom Swarm Action Template",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "<details> <summary>Build Your Own Swarm Actions</summary>",
+              "lines": [
+                495,
+                529
+              ],
+              "name": "\ud83c\udfaf Custom Actions Development",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            411,
+            529
+          ],
+          "name": "Advanced Features",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "lines": [
+                    537,
+                    558
+                  ],
+                  "name": "Initialize GitHub Swarm",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    559,
+                    578
+                  ],
+                  "name": "GitHub Hooks Integration",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "<details> <summary>MCP-Based GitHub Workflow Coordination</summary>",
+              "lines": [
+                532,
+                578
+              ],
+              "name": "\ud83d\udd04 Swarm Coordination Patterns",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "lines": [
+                    584,
+                    601
+                  ],
+                  "name": "Parallel GitHub CLI Commands",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "<details> <summary>Concurrent GitHub Operations</summary>",
+              "lines": [
+                579,
+                601
+              ],
+              "name": "\ud83d\udce6 Batch Operations",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            530,
+            601
+          ],
+          "name": "Integration with Claude-Flow",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "lines": [
+                    609,
+                    628
+                  ],
+                  "name": "1. Use Reusable Workflows",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    629,
+                    637
+                  ],
+                  "name": "2. Implement Proper Caching",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    638,
+                    647
+                  ],
+                  "name": "3. Set Appropriate Timeouts",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    648,
+                    664
+                  ],
+                  "name": "4. Use Workflow Dependencies",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "<details> <summary>Structure Your GitHub Workflows</summary>",
+              "lines": [
+                604,
+                664
+              ],
+              "name": "\ud83c\udfd7\ufe0f Workflow Organization",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "lines": [
+                    670,
+                    679
+                  ],
+                  "name": "1. Store Configurations Securely",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    680,
+                    692
+                  ],
+                  "name": "2. Use OIDC Authentication",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    693,
+                    700
+                  ],
+                  "name": "3. Implement Least-Privilege",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    701,
+                    711
+                  ],
+                  "name": "4. Audit Swarm Operations",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "<details> <summary>Secure Your GitHub Workflows</summary>",
+              "lines": [
+                665,
+                711
+              ],
+              "name": "\ud83d\udd12 Security Best Practices",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "lines": [
+                    717,
+                    726
+                  ],
+                  "name": "1. Cache Swarm Dependencies",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    727,
+                    735
+                  ],
+                  "name": "2. Use Appropriate Runner Sizes",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    736,
+                    745
+                  ],
+                  "name": "3. Implement Early Termination",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    746,
+                    761
+                  ],
+                  "name": "4. Optimize Parallel Execution",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "<details> <summary>Maximize Workflow Performance</summary>",
+              "lines": [
+                712,
+                761
+              ],
+              "name": "\u26a1 Performance Optimization",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            602,
+            761
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "lines": [
+                    769,
+                    780
+                  ],
+                  "name": "Debug Mode",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    781,
+                    789
+                  ],
+                  "name": "Performance Profiling",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    790,
+                    798
+                  ],
+                  "name": "Failure Analysis",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    799,
+                    809
+                  ],
+                  "name": "Log Analysis",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "<details> <summary>Debug GitHub Workflow Issues</summary>",
+              "lines": [
+                764,
+                809
+              ],
+              "name": "\ud83d\udc1b Debug Tools",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            762,
+            809
+          ],
+          "name": "Debugging & Troubleshooting",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "lines": [
+                    817,
+                    880
+                  ],
+                  "name": "Example 1: Full-Stack Application CI/CD",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    881,
+                    916
+                  ],
+                  "name": "Example 2: Monorepo Management",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    917,
+                    930
+                  ],
+                  "name": "Example 3: Multi-Repo Synchronization",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "<details> <summary>Production-Ready Integration Examples</summary>",
+              "lines": [
+                812,
+                930
+              ],
+              "name": "\ud83d\ude80 Complete Workflows",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            810,
+            930
+          ],
+          "name": "Real-World Examples",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "lines": [
+                    938,
+                    945
+                  ],
+                  "name": "Workflow Generation",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    946,
+                    954
+                  ],
+                  "name": "Optimization",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    955,
+                    962
+                  ],
+                  "name": "Analysis",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    963,
+                    970
+                  ],
+                  "name": "Testing",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    971,
+                    978
+                  ],
+                  "name": "Security",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    979,
+                    986
+                  ],
+                  "name": "Deployment",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    987,
+                    997
+                  ],
+                  "name": "Monitoring",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "<details> <summary>All Available Commands</summary>",
+              "lines": [
+                933,
+                997
+              ],
+              "name": "\ud83d\udcda Quick Command Guide",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            931,
+            997
+          ],
+          "name": "Command Reference",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "lines": [
+                    1014,
+                    1037
+                  ],
+                  "name": "Quick Setup Script",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "<details> <summary>Verify Your Setup</summary>",
+              "lines": [
+                1000,
+                1037
+              ],
+              "name": "\u2705 Setup Verification",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            998,
+            1037
+          ],
+          "name": "Integration Checklist",
+          "type": "section"
+        },
+        {
+          "docstring": "- `github-pr-enhancement` - Advanced PR management - `release-coordination` - Release automation - `swarm-coordination` - Multi-agent orchestration -",
+          "lines": [
+            1038,
+            1044
+          ],
+          "name": "Related Skills",
+          "type": "section"
+        },
+        {
+          "docstring": "- **GitHub CLI Docs**: https://cli.github.com/manual/ - **GitHub Actions**: https://docs.github.com/en/actions - **Claude-Flow**: https://github.com/r",
+          "lines": [
+            1045,
+            1051
+          ],
+          "name": "Support & Documentation",
+          "type": "section"
+        },
+        {
+          "docstring": "- **v1.0.0** (2025-01-19): Initial skill consolidation - Merged workflow-automation.md (441 lines) - Merged github-modes.md (146 lines) - Added progre",
+          "lines": [
+            1052,
+            1066
+          ],
+          "name": "Version History",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.159556+00:00",
+  "version": "1.0"
+}

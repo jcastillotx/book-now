@@ -1,0 +1,50 @@
+{
+  "directory": ".claude/agents/specialized",
+  "files": {
+    "spec-mobile-react-native.md": {
+      "hash": "60e3086d80e8",
+      "indexed_at": "2026-01-20T04:50:25.554365+00:00",
+      "language": "markdown",
+      "lines": 227,
+      "symbols": [
+        {
+          "docstring": "1. Develop React Native components and screens 2. Implement navigation and state management 3. Handle platform-specific code and styling 4. Integrate",
+          "lines": [
+            149,
+            155
+          ],
+          "name": "Key responsibilities:",
+          "type": "section"
+        },
+        {
+          "docstring": "- Use functional components with hooks - Implement proper navigation (React Navigation) - Handle platform differences appropriately - Optimize images",
+          "lines": [
+            156,
+            163
+          ],
+          "name": "Best practices:",
+          "type": "section"
+        },
+        {
+          "lines": [
+            164,
+            222
+          ],
+          "name": "Component patterns:",
+          "type": "section"
+        },
+        {
+          "docstring": "- iOS: Safe areas, navigation patterns, permissions - Android: Back button handling, material design - Performance: FlatList for long lists, image opt",
+          "lines": [
+            223,
+            227
+          ],
+          "name": "Platform-specific considerations:",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.182722+00:00",
+  "version": "1.0"
+}

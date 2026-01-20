@@ -1,0 +1,537 @@
+{
+  "directory": "vendor/squizlabs/php_codesniffer/tests/Core/Generators/Expectations",
+  "files": {
+    "ExpectedOutputCodeComparisonBlankLines.md": {
+      "hash": "089945f948c6",
+      "indexed_at": "2026-01-20T04:49:11.895643+00:00",
+      "language": "markdown",
+      "lines": 35,
+      "symbols": [
+        {
+          "docstring": "This is a standard block. <table> <tr> <th>Valid: Checking handling of blank lines.</th> <th>Invalid: Checking handling of blank lines.</th> </tr> <tr",
+          "lines": [
+            3,
+            36
+          ],
+          "name": "Code Comparison, blank lines",
+          "type": "section"
+        }
+      ]
+    },
+    "ExpectedOutputCodeComparisonBlockLength.md": {
+      "hash": "0b166161a30e",
+      "indexed_at": "2026-01-20T04:49:23.895589+00:00",
+      "language": "markdown",
+      "lines": 47,
+      "symbols": [
+        {
+          "docstring": "This is a standard block. <table> <tr> <th>Valid: code sample A has more lines than B.</th> <th>Invalid: shorter.</th> </tr> <tr> <td>",
+          "lines": [
+            3,
+            48
+          ],
+          "name": "Code Comparison, block length",
+          "type": "section"
+        }
+      ]
+    },
+    "ExpectedOutputCodeComparisonEncoding.md": {
+      "hash": "7bc188173b1f",
+      "indexed_at": "2026-01-20T04:49:38.129013+00:00",
+      "language": "markdown",
+      "lines": 48,
+      "symbols": [
+        {
+          "docstring": "This is a standard block. <table> <tr> <th>Valid: Vestibulum et orci condimentum.</th> <th>Invalid: Donec in nisl ut tortor convallis interdum.</th> <",
+          "lines": [
+            3,
+            49
+          ],
+          "name": "Code Comparison, char encoding",
+          "type": "section"
+        }
+      ]
+    },
+    "ExpectedOutputCodeComparisonLineLength.md": {
+      "hash": "40e81cb40a53",
+      "indexed_at": "2026-01-20T04:49:14.112243+00:00",
+      "language": "markdown",
+      "lines": 31,
+      "symbols": [
+        {
+          "docstring": "Ensure there is no PHP &quot;Warning: str_repeat(): Second argument has to be greater than or equal to 0&quot;. Ref: squizlabs/PHP_CodeSniffer#2522 <t",
+          "lines": [
+            3,
+            32
+          ],
+          "name": "Code Comparison, line length",
+          "type": "section"
+        }
+      ]
+    },
+    "ExpectedOutputCodeTitleLineWrapping.md": {
+      "hash": "ac00a9c38b0d",
+      "indexed_at": "2026-01-20T04:49:31.758819+00:00",
+      "language": "markdown",
+      "lines": 79,
+      "symbols": [
+        {
+          "docstring": "This is a standard block. <table> <tr> <th>Valid: exactly 45 character long description.</th> <th>Invalid: exactly 45 char long description---.</th> <",
+          "lines": [
+            3,
+            80
+          ],
+          "name": "Code Title, line wrapping",
+          "type": "section"
+        }
+      ]
+    },
+    "ExpectedOutputCodeTitleWhitespace.md": {
+      "hash": "a66435c424b3",
+      "indexed_at": "2026-01-20T04:49:15.412954+00:00",
+      "language": "markdown",
+      "lines": 44,
+      "symbols": [
+        {
+          "docstring": "This is a standard block. <table> <tr> <th>Valid: spaces at start of description.</th> <th>Invalid: spaces at end making line > 46 chars.</th> </tr> <",
+          "lines": [
+            3,
+            45
+          ],
+          "name": "Code Title, whitespace handling",
+          "type": "section"
+        }
+      ]
+    },
+    "ExpectedOutputDocumentationTitleCase.md": {
+      "hash": "9bc21206c535",
+      "indexed_at": "2026-01-20T04:49:33.754307+00:00",
+      "language": "markdown",
+      "lines": 7,
+      "symbols": [
+        {
+          "docstring": "This is a standard block.",
+          "lines": [
+            3,
+            8
+          ],
+          "name": "lowercase title",
+          "type": "section"
+        }
+      ]
+    },
+    "ExpectedOutputDocumentationTitleLength.md": {
+      "hash": "89b6c0aaa54a",
+      "indexed_at": "2026-01-20T04:49:09.759133+00:00",
+      "language": "markdown",
+      "lines": 7,
+      "symbols": [
+        {
+          "docstring": "This is a standard block.",
+          "lines": [
+            3,
+            8
+          ],
+          "name": "This is a very very very very very very very very very very very long title",
+          "type": "section"
+        }
+      ]
+    },
+    "ExpectedOutputDocumentationTitlePCREFallback.md": {
+      "hash": "7df61e0a693e",
+      "indexed_at": "2026-01-20T04:49:19.373167+00:00",
+      "language": "markdown",
+      "lines": 9,
+      "symbols": [
+        {
+          "docstring": "Testing the document title can get determined from the sniff name if missing.",
+          "lines": [
+            3,
+            10
+          ],
+          "name": "Documentation Title PCRE Fallback",
+          "type": "section"
+        }
+      ]
+    },
+    "ExpectedOutputInvalidCodeComparisonMismatchedCodeElms.md": {
+      "hash": "f6658f43946b",
+      "indexed_at": "2026-01-20T04:49:30.737901+00:00",
+      "language": "markdown",
+      "lines": 25,
+      "symbols": [
+        {
+          "docstring": "This doc has two code elements, one only has a title, one has actual code. Unbalanced <table> <tr> <th>Code title</th> <th></th> </tr> <tr> <td>",
+          "lines": [
+            3,
+            26
+          ],
+          "name": "Code Comparison, mismatched code blocks",
+          "type": "section"
+        }
+      ]
+    },
+    "ExpectedOutputInvalidCodeComparisonMissingCodeElm.md": {
+      "hash": "ef7e3b6acd42",
+      "indexed_at": "2026-01-20T04:49:37.118812+00:00",
+      "language": "markdown",
+      "lines": 7,
+      "symbols": [
+        {
+          "docstring": "This is a standard block.",
+          "lines": [
+            3,
+            8
+          ],
+          "name": "Code Comparison, missing code element",
+          "type": "section"
+        }
+      ]
+    },
+    "ExpectedOutputInvalidCodeComparisonNoCode.md": {
+      "hash": "6c65afd75570",
+      "indexed_at": "2026-01-20T04:49:25.035272+00:00",
+      "language": "markdown",
+      "lines": 13,
+      "symbols": [
+        {
+          "docstring": "This is a standard block. <table> <tr> <th>Valid: no code.</th> <th>Invalid: no code.</th> </tr> </table>",
+          "lines": [
+            3,
+            14
+          ],
+          "name": "Code Comparison, no code",
+          "type": "section"
+        }
+      ]
+    },
+    "ExpectedOutputInvalidCodeComparisonNoContent.md": {
+      "hash": "27571a1e803b",
+      "indexed_at": "2026-01-20T04:49:20.523349+00:00",
+      "language": "markdown",
+      "lines": 7,
+      "symbols": [
+        {
+          "docstring": "This is a standard block.",
+          "lines": [
+            3,
+            8
+          ],
+          "name": "Code Comparison, no content",
+          "type": "section"
+        }
+      ]
+    },
+    "ExpectedOutputInvalidCodeComparisonOneEmptyCodeElm.md": {
+      "hash": "383c8ad22604",
+      "indexed_at": "2026-01-20T04:49:41.348684+00:00",
+      "language": "markdown",
+      "lines": 25,
+      "symbols": [
+        {
+          "docstring": "This doc has two code elements, but only one of them has a title and actual code. <table> <tr> <th>Code title</th> <th></th> </tr> <tr> <td>",
+          "lines": [
+            3,
+            26
+          ],
+          "name": "Code Comparison, one empty code element",
+          "type": "section"
+        }
+      ]
+    },
+    "ExpectedOutputInvalidCodeComparisonTwoEmptyCodeElms.md": {
+      "hash": "a844305e4be7",
+      "indexed_at": "2026-01-20T04:49:36.015010+00:00",
+      "language": "markdown",
+      "lines": 7,
+      "symbols": [
+        {
+          "docstring": "This doc has two code elements, but neither of them contain any information.",
+          "lines": [
+            3,
+            8
+          ],
+          "name": "Code Comparison, two empty code elements",
+          "type": "section"
+        }
+      ]
+    },
+    "ExpectedOutputInvalidCodeTitleEmpty.md": {
+      "hash": "53efd75d8df7",
+      "indexed_at": "2026-01-20T04:49:27.121325+00:00",
+      "language": "markdown",
+      "lines": 21,
+      "symbols": [
+        {
+          "docstring": "This is a standard block. <table> <tr> <td>",
+          "lines": [
+            3,
+            22
+          ],
+          "name": "Code Title, empty",
+          "type": "section"
+        }
+      ]
+    },
+    "ExpectedOutputInvalidCodeTitleMissing.md": {
+      "hash": "514747cdf8cd",
+      "indexed_at": "2026-01-20T04:49:26.050445+00:00",
+      "language": "markdown",
+      "lines": 21,
+      "symbols": [
+        {
+          "docstring": "This is a standard block. <table> <tr> <td>",
+          "lines": [
+            3,
+            22
+          ],
+          "name": "Code Title, missing",
+          "type": "section"
+        }
+      ]
+    },
+    "ExpectedOutputInvalidDocumentationTitleEmpty.md": {
+      "hash": "028b9602f423",
+      "indexed_at": "2026-01-20T04:49:40.272015+00:00",
+      "language": "markdown",
+      "lines": 25,
+      "symbols": [
+        {
+          "docstring": "The above &quot;documentation&quot; element has an empty title attribute. <table> <tr> <th>Valid: Lorem ipsum dolor sit amet.</th> <th>Invalid: Maecen",
+          "lines": [
+            3,
+            26
+          ],
+          "name": "Documentation Title Empty",
+          "type": "section"
+        }
+      ]
+    },
+    "ExpectedOutputInvalidDocumentationTitleMissing.md": {
+      "hash": "493fd9b77cdb",
+      "indexed_at": "2026-01-20T04:49:10.894030+00:00",
+      "language": "markdown",
+      "lines": 25,
+      "symbols": [
+        {
+          "docstring": "The above &quot;documentation&quot; element is missing the title attribute. <table> <tr> <th>Valid: Lorem ipsum dolor sit amet.</th> <th>Invalid: Maec",
+          "lines": [
+            3,
+            26
+          ],
+          "name": "Documentation Title Missing",
+          "type": "section"
+        }
+      ]
+    },
+    "ExpectedOutputInvalidStandardNoContent.md": {
+      "hash": "ad3c4170e020",
+      "indexed_at": "2026-01-20T04:49:18.227791+00:00",
+      "language": "markdown",
+      "lines": 24,
+      "symbols": [
+        {
+          "docstring": "<table> <tr> <th>Valid: Lorem ipsum dolor sit amet.</th> <th>Invalid: Maecenas non rutrum dolor.</th> </tr> <tr> <td>",
+          "lines": [
+            3,
+            25
+          ],
+          "name": "Standard Element, no content",
+          "type": "section"
+        }
+      ]
+    },
+    "ExpectedOutputOneDoc.md": {
+      "hash": "ce381505443b",
+      "indexed_at": "2026-01-20T04:49:39.277990+00:00",
+      "language": "markdown",
+      "lines": 7,
+      "symbols": [
+        {
+          "docstring": "Documentation contains one standard block and no code comparison.",
+          "lines": [
+            3,
+            8
+          ],
+          "name": "One Standard Block, No Code",
+          "type": "section"
+        }
+      ]
+    },
+    "ExpectedOutputStandardBlankLines.md": {
+      "hash": "511c11a3108a",
+      "indexed_at": "2026-01-20T04:49:16.443745+00:00",
+      "language": "markdown",
+      "lines": 11,
+      "symbols": [
+        {
+          "docstring": "There is a blank line at the start of this standard.",
+          "lines": [
+            3,
+            12
+          ],
+          "name": "Standard Element, blank line handling",
+          "type": "section"
+        }
+      ]
+    },
+    "ExpectedOutputStandardEncoding.md": {
+      "hash": "63614de19084",
+      "indexed_at": "2026-01-20T04:49:32.754036+00:00",
+      "language": "markdown",
+      "lines": 8,
+      "symbols": [
+        {
+          "docstring": "The use of *tags* in standard descriptions is allowed and their handling should be *safeguarded*. Other tags, like &lt;a href=&quot;example.com&quot;&",
+          "lines": [
+            3,
+            9
+          ],
+          "name": "Standard Element, handling of HTML tags",
+          "type": "section"
+        }
+      ]
+    },
+    "ExpectedOutputStandardIndent.md": {
+      "hash": "d2274ab11682",
+      "indexed_at": "2026-01-20T04:49:13.083376+00:00",
+      "language": "markdown",
+      "lines": 10,
+      "symbols": [
+        {
+          "docstring": "This line has no indentation. This line has 4 spaces indentation. This line has 8 spaces indentation. This line has 4 spaces indentation.",
+          "lines": [
+            3,
+            11
+          ],
+          "name": "Standard Element, indentation should be ignored",
+          "type": "section"
+        }
+      ]
+    },
+    "ExpectedOutputStandardLineWrapping.md": {
+      "hash": "473ddb55b21d",
+      "indexed_at": "2026-01-20T04:49:29.624030+00:00",
+      "language": "markdown",
+      "lines": 9,
+      "symbols": [
+        {
+          "docstring": "This line has to be exactly 99 chars to test part of the logic.------------------------------------ And this line has to be exactly 100 chars.--------",
+          "lines": [
+            3,
+            10
+          ],
+          "name": "Standard Element, line wrapping handling",
+          "type": "section"
+        }
+      ]
+    },
+    "ExpectedOutputStructureDocs.md": {
+      "hash": "26be8a6ac1db",
+      "indexed_at": "2026-01-20T04:49:34.897211+00:00",
+      "language": "markdown",
+      "lines": 177,
+      "symbols": [
+        {
+          "docstring": "<table> <tr> <th>Valid: Lorem ipsum dolor sit amet.</th> <th>Invalid: Maecenas non rutrum dolor.</th> </tr> <tr> <td>",
+          "lines": [
+            3,
+            23
+          ],
+          "name": "Code Comparison Only, Missing Standard Block",
+          "type": "section"
+        },
+        {
+          "docstring": "Documentation contains one standard block and one code comparison. <table> <tr> <th>Valid: Lorem ipsum dolor sit amet.</th> <th>Invalid: Maecenas non",
+          "lines": [
+            24,
+            45
+          ],
+          "name": "One Standard Block, Code Comparison",
+          "type": "section"
+        },
+        {
+          "docstring": "Documentation contains one standard block and no code comparison.",
+          "lines": [
+            46,
+            49
+          ],
+          "name": "One Standard Block, No Code",
+          "type": "section"
+        },
+        {
+          "docstring": "Documentation contains one standard block and two code comparisons. <table> <tr> <th>Valid: Etiam commodo magna at vestibulum blandit.</th> <th>Invali",
+          "lines": [
+            50,
+            89
+          ],
+          "name": "One Standard Block, Two Code Comparisons",
+          "type": "section"
+        },
+        {
+          "docstring": "This is standard block one. This is standard block two.",
+          "lines": [
+            90,
+            94
+          ],
+          "name": "Two Standard Blocks, No Code",
+          "type": "section"
+        },
+        {
+          "docstring": "This is standard block one. <table> <tr> <th>Valid: Vestibulum et orci condimentum.</th> <th>Invalid: Donec in nisl ut tortor convallis interdum.</th>",
+          "lines": [
+            95,
+            117
+          ],
+          "name": "Two Standard Blocks, One Code Comparison",
+          "type": "section"
+        },
+        {
+          "docstring": "This is standard block one. <table> <tr> <th>Valid: Vestibulum et orci condimentum.</th> <th>Invalid: Donec in nisl ut tortor convallis interdum.</th>",
+          "lines": [
+            118,
+            178
+          ],
+          "name": "Two Standard Blocks, Three Code Comparisons",
+          "type": "section"
+        }
+      ]
+    },
+    "ExpectedOutputUnsupportedOneElmAtWrongLevel.md": {
+      "hash": "fdc8a5444af9",
+      "indexed_at": "2026-01-20T04:49:22.756927+00:00",
+      "language": "markdown",
+      "lines": 7,
+      "symbols": [
+        {
+          "docstring": "This is a standard block at the correct level.",
+          "lines": [
+            3,
+            8
+          ],
+          "name": "One element correct, one element wrong level",
+          "type": "section"
+        }
+      ]
+    },
+    "ExpectedOutputUnsupportedSuperfluousCodeElement.md": {
+      "hash": "732819160330",
+      "indexed_at": "2026-01-20T04:49:28.304397+00:00",
+      "language": "markdown",
+      "lines": 25,
+      "symbols": [
+        {
+          "docstring": "This is a standard block. <table> <tr> <th>Valid: Checking handling of blank lines.</th> <th>Invalid: Checking handling of blank lines.</th> </tr> <tr",
+          "lines": [
+            3,
+            26
+          ],
+          "name": "Superfluous code element",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.131828+00:00",
+  "version": "1.0"
+}

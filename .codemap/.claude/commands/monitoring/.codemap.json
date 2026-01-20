@@ -1,0 +1,281 @@
+{
+  "directory": ".claude/commands/monitoring",
+  "files": {
+    "README.md": {
+      "hash": "49fcdc033edf",
+      "indexed_at": "2026-01-20T04:50:25.531034+00:00",
+      "language": "markdown",
+      "lines": 9,
+      "symbols": [
+        {
+          "docstring": "- [swarm-monitor](./swarm-monitor.md) - [agent-metrics](./agent-metrics.md) - [real-time-view](./real-time-view.md)",
+          "lines": [
+            5,
+            10
+          ],
+          "name": "Available Commands",
+          "type": "section"
+        }
+      ]
+    },
+    "agent-metrics.md": {
+      "hash": "f555846d8eb2",
+      "indexed_at": "2026-01-20T04:50:25.531670+00:00",
+      "language": "markdown",
+      "lines": 25,
+      "symbols": [
+        {
+          "lines": [
+            5,
+            9
+          ],
+          "name": "Usage",
+          "type": "section"
+        },
+        {
+          "docstring": "- `--agent-id <id>` - Specific agent - `--period <time>` - Time period - `--format <type>` - Output format",
+          "lines": [
+            10,
+            14
+          ],
+          "name": "Options",
+          "type": "section"
+        },
+        {
+          "lines": [
+            15,
+            26
+          ],
+          "name": "Examples",
+          "type": "section"
+        }
+      ]
+    },
+    "agents.md": {
+      "hash": "f4799ec0e303",
+      "indexed_at": "2026-01-20T04:50:25.531275+00:00",
+      "language": "markdown",
+      "lines": 44,
+      "symbols": [
+        {
+          "docstring": "**This tool coordinates Claude Code's actions. It does NOT write code or create content.**",
+          "lines": [
+            3,
+            5
+          ],
+          "name": "\ud83c\udfaf Key Principle",
+          "type": "section"
+        },
+        {
+          "docstring": "**Tool:** `mcp__claude-flow__agent_list`",
+          "lines": [
+            6,
+            9
+          ],
+          "name": "MCP Tool Usage in Claude Code",
+          "type": "section"
+        },
+        {
+          "lines": [
+            10,
+            16
+          ],
+          "name": "Parameters",
+          "type": "section"
+        },
+        {
+          "docstring": "View all active cognitive patterns and their current focus areas",
+          "lines": [
+            17,
+            19
+          ],
+          "name": "Description",
+          "type": "section"
+        },
+        {
+          "docstring": "Filters: - **all**: Show all defined patterns - **active**: Currently engaged patterns - **idle**: Available but unused patterns - **busy**: Patterns",
+          "lines": [
+            20,
+            26
+          ],
+          "name": "Details",
+          "type": "section"
+        },
+        {
+          "docstring": "**In Claude Code:** 1. List all agents: Use tool `mcp__claude-flow__agent_list` 2. Get specific agent metrics: Use tool `mcp__claude-flow__agent_metri",
+          "lines": [
+            27,
+            33
+          ],
+          "name": "Example Usage",
+          "type": "section"
+        },
+        {
+          "docstring": "- \u2705 This tool provides coordination and structure - \u2705 Claude Code performs all actual implementation - \u274c The tool does NOT write code - \u274c The tool doe",
+          "lines": [
+            34,
+            40
+          ],
+          "name": "Important Reminders",
+          "type": "section"
+        },
+        {
+          "docstring": "- Main documentation: /CLAUDE.md - Other commands in this category - Workflow examples in /workflows/",
+          "lines": [
+            41,
+            45
+          ],
+          "name": "See Also",
+          "type": "section"
+        }
+      ]
+    },
+    "real-time-view.md": {
+      "hash": "5d1abdd5aaf2",
+      "indexed_at": "2026-01-20T04:50:25.531484+00:00",
+      "language": "markdown",
+      "lines": 25,
+      "symbols": [
+        {
+          "lines": [
+            5,
+            9
+          ],
+          "name": "Usage",
+          "type": "section"
+        },
+        {
+          "docstring": "- `--filter <type>` - Filter view - `--highlight <pattern>` - Highlight pattern - `--tail <n>` - Show last N events",
+          "lines": [
+            10,
+            14
+          ],
+          "name": "Options",
+          "type": "section"
+        },
+        {
+          "lines": [
+            15,
+            26
+          ],
+          "name": "Examples",
+          "type": "section"
+        }
+      ]
+    },
+    "status.md": {
+      "hash": "eb0de483f7b5",
+      "indexed_at": "2026-01-20T04:50:25.530840+00:00",
+      "language": "markdown",
+      "lines": 46,
+      "symbols": [
+        {
+          "docstring": "**This tool coordinates Claude Code's actions. It does NOT write code or create content.**",
+          "lines": [
+            3,
+            5
+          ],
+          "name": "\ud83c\udfaf Key Principle",
+          "type": "section"
+        },
+        {
+          "docstring": "**Tool:** `mcp__claude-flow__swarm_status`",
+          "lines": [
+            6,
+            9
+          ],
+          "name": "MCP Tool Usage in Claude Code",
+          "type": "section"
+        },
+        {
+          "lines": [
+            10,
+            16
+          ],
+          "name": "Parameters",
+          "type": "section"
+        },
+        {
+          "docstring": "Monitor the effectiveness of current coordination patterns",
+          "lines": [
+            17,
+            19
+          ],
+          "name": "Description",
+          "type": "section"
+        },
+        {
+          "docstring": "Shows: - Active coordination topologies - Current cognitive patterns in use - Task breakdown and progress - Resource utilization for coordination - Ov",
+          "lines": [
+            20,
+            27
+          ],
+          "name": "Details",
+          "type": "section"
+        },
+        {
+          "docstring": "**In Claude Code:** 1. Check swarm status: Use tool `mcp__claude-flow__swarm_status` 2. Monitor in real-time: Use tool `mcp__claude-flow__swarm_monito",
+          "lines": [
+            28,
+            35
+          ],
+          "name": "Example Usage",
+          "type": "section"
+        },
+        {
+          "docstring": "- \u2705 This tool provides coordination and structure - \u2705 Claude Code performs all actual implementation - \u274c The tool does NOT write code - \u274c The tool doe",
+          "lines": [
+            36,
+            42
+          ],
+          "name": "Important Reminders",
+          "type": "section"
+        },
+        {
+          "docstring": "- Main documentation: /CLAUDE.md - Other commands in this category - Workflow examples in /workflows/",
+          "lines": [
+            43,
+            47
+          ],
+          "name": "See Also",
+          "type": "section"
+        }
+      ]
+    },
+    "swarm-monitor.md": {
+      "hash": "898bf4d84898",
+      "indexed_at": "2026-01-20T04:50:25.530635+00:00",
+      "language": "markdown",
+      "lines": 25,
+      "symbols": [
+        {
+          "lines": [
+            5,
+            9
+          ],
+          "name": "Usage",
+          "type": "section"
+        },
+        {
+          "docstring": "- `--interval <ms>` - Update interval - `--metrics` - Show detailed metrics - `--export` - Export monitoring data",
+          "lines": [
+            10,
+            14
+          ],
+          "name": "Options",
+          "type": "section"
+        },
+        {
+          "lines": [
+            15,
+            26
+          ],
+          "name": "Examples",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.175417+00:00",
+  "version": "1.0"
+}

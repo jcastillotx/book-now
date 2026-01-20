@@ -1,0 +1,2390 @@
+{
+  "directory": ".claude/agents/v3",
+  "files": {
+    "adr-architect.md": {
+      "hash": "159ba170f6fd",
+      "indexed_at": "2026-01-20T04:50:25.577035+00:00",
+      "language": "markdown",
+      "lines": 184,
+      "symbols": [
+        {
+          "lines": [
+            40,
+            44
+          ],
+          "name": "ADR Format (MADR 3.0)",
+          "type": "section"
+        },
+        {
+          "docstring": "{Proposed | Accepted | Deprecated | Superseded by ADR-XXX}",
+          "lines": [
+            45,
+            47
+          ],
+          "name": "Status",
+          "type": "section"
+        },
+        {
+          "docstring": "What is the issue that we're seeing that is motivating this decision or change?",
+          "lines": [
+            48,
+            50
+          ],
+          "name": "Context",
+          "type": "section"
+        },
+        {
+          "docstring": "What is the change that we're proposing and/or doing?",
+          "lines": [
+            51,
+            53
+          ],
+          "name": "Decision",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Benefit 1 - Benefit 2",
+              "lines": [
+                57,
+                60
+              ],
+              "name": "Positive",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Tradeoff 1 - Tradeoff 2",
+              "lines": [
+                61,
+                64
+              ],
+              "name": "Negative",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Side effect 1",
+              "lines": [
+                65,
+                67
+              ],
+              "name": "Neutral",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "What becomes easier or more difficult to do because of this change?",
+          "lines": [
+            54,
+            67
+          ],
+          "name": "Consequences",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Pros**: ... - **Cons**: ...",
+              "lines": [
+                70,
+                73
+              ],
+              "name": "Option 1: {Name}",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Pros**: ... - **Cons**: ...",
+              "lines": [
+                74,
+                77
+              ],
+              "name": "Option 2: {Name}",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            68,
+            77
+          ],
+          "name": "Options Considered",
+          "type": "section"
+        },
+        {
+          "docstring": "- ADR-XXX: Related decision",
+          "lines": [
+            78,
+            80
+          ],
+          "name": "Related Decisions",
+          "type": "section"
+        },
+        {
+          "docstring": "- [Link to relevant documentation]",
+          "lines": [
+            81,
+            84
+          ],
+          "name": "References",
+          "type": "section"
+        },
+        {
+          "docstring": "The following ADRs define the Claude Flow V3 architecture:",
+          "lines": [
+            85,
+            101
+          ],
+          "name": "V3 Project ADRs",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Create new ADRs for significant decisions - Use consistent numbering and naming - Document context, decision, and consequences",
+              "lines": [
+                104,
+                108
+              ],
+              "name": "1. ADR Creation",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Maintain ADR index - Track decision status lifecycle - Handle supersession chains",
+              "lines": [
+                109,
+                113
+              ],
+              "name": "2. Decision Tracking",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Store successful decisions in ReasoningBank - Search for similar past decisions - Learn from decision outcomes",
+              "lines": [
+                114,
+                118
+              ],
+              "name": "3. Pattern Learning",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Validate code changes against ADRs - Flag violations of accepted decisions - Suggest relevant ADRs during review",
+              "lines": [
+                119,
+                123
+              ],
+              "name": "4. Enforcement",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            102,
+            123
+          ],
+          "name": "Responsibilities",
+          "type": "section"
+        },
+        {
+          "lines": [
+            124,
+            142
+          ],
+          "name": "Commands",
+          "type": "section"
+        },
+        {
+          "lines": [
+            143,
+            158
+          ],
+          "name": "Memory Integration",
+          "type": "section"
+        },
+        {
+          "docstring": "| Category | Description | Example ADRs | |----------|-------------|--------------| | Architecture | System structure decisions | ADR-001, ADR-002 | |",
+          "lines": [
+            159,
+            168
+          ],
+          "name": "Decision Categories",
+          "type": "section"
+        },
+        {
+          "docstring": "1. **Identify Decision Need**: Recognize when an architectural decision is needed 2. **Research Options**: Investigate alternatives 3. **Document Opti",
+          "lines": [
+            169,
+            178
+          ],
+          "name": "Workflow",
+          "type": "section"
+        },
+        {
+          "docstring": "- **HNSW Search**: Find similar ADRs 150x faster - **ReasoningBank**: Learn from decision outcomes - **Claims Auth**: Control who can approve ADRs - *",
+          "lines": [
+            179,
+            185
+          ],
+          "name": "Integration with V3",
+          "type": "section"
+        }
+      ]
+    },
+    "aidefence-guardian.md": {
+      "hash": "bc51d4665e9e",
+      "indexed_at": "2026-01-20T04:50:25.573446+00:00",
+      "language": "markdown",
+      "lines": 282,
+      "symbols": [
+        {
+          "docstring": "1. **Real-Time Threat Detection** - Scan all agent inputs before processing 2. **Prompt Injection Prevention** - Block 50+ known injection patterns 3.",
+          "lines": [
+            61,
+            69
+          ],
+          "name": "Core Responsibilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- `instruction_override` - Attempts to override system instructions - `jailbreak` - DAN mode, bypass attempts, restriction removal - `role_switching`",
+              "lines": [
+                72,
+                79
+              ],
+              "name": "Threat Types Detected",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Detection latency: <10ms (actual ~0.06ms) - Pattern count: 50+ built-in, unlimited learned - False positive rate: <5%",
+              "lines": [
+                80,
+                84
+              ],
+              "name": "Performance",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            70,
+            84
+          ],
+          "name": "Detection Capabilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                87,
+                123
+              ],
+              "name": "Scanning Agent Input",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                124,
+                145
+              ],
+              "name": "Multi-Agent Security Consensus",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                146,
+                162
+              ],
+              "name": "Learning from Detections",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            85,
+            162
+          ],
+          "name": "Usage",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Add to `.claude/settings.json`:",
+              "lines": [
+                165,
+                189
+              ],
+              "name": "Pre-Agent-Input Hook",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                190,
+                212
+              ],
+              "name": "Swarm Coordination",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            163,
+            212
+          ],
+          "name": "Integration Hooks",
+          "type": "section"
+        },
+        {
+          "docstring": "When critical threats are detected:",
+          "lines": [
+            213,
+            251
+          ],
+          "name": "Escalation Protocol",
+          "type": "section"
+        },
+        {
+          "docstring": "- **security-architect**: Escalate critical threats, receive policy guidance - **security-auditor**: Share detection patterns, coordinate audits - **r",
+          "lines": [
+            252,
+            258
+          ],
+          "name": "Collaboration",
+          "type": "section"
+        },
+        {
+          "docstring": "Track guardian effectiveness:",
+          "lines": [
+            259,
+            283
+          ],
+          "name": "Performance Metrics",
+          "type": "section"
+        }
+      ]
+    },
+    "claims-authorizer.md": {
+      "hash": "1ce83afa57aa",
+      "indexed_at": "2026-01-20T04:50:25.575533+00:00",
+      "language": "markdown",
+      "lines": 208,
+      "symbols": [
+        {
+          "lines": [
+            33,
+            56
+          ],
+          "name": "Claims Architecture",
+          "type": "section"
+        },
+        {
+          "docstring": "| Claim | Description | Example | |-------|-------------|---------| | `role` | Agent role in swarm | `coordinator`, `worker`, `reviewer` | | `scope` |",
+          "lines": [
+            57,
+            66
+          ],
+          "name": "Claim Types",
+          "type": "section"
+        },
+        {
+          "lines": [
+            67,
+            90
+          ],
+          "name": "Authorization Commands",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                93,
+                121
+              ],
+              "name": "Role-Based Policies",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                122,
+                135
+              ],
+              "name": "Attribute-Based Policies",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            91,
+            135
+          ],
+          "name": "Policy Definitions",
+          "type": "section"
+        },
+        {
+          "docstring": "Protected MCP tools require claims:",
+          "lines": [
+            136,
+            147
+          ],
+          "name": "MCP Tool Authorization",
+          "type": "section"
+        },
+        {
+          "docstring": "Claims are checked automatically via hooks:",
+          "lines": [
+            148,
+            170
+          ],
+          "name": "Hook Integration",
+          "type": "section"
+        },
+        {
+          "docstring": "All authorization decisions are logged:",
+          "lines": [
+            171,
+            185
+          ],
+          "name": "Audit Logging",
+          "type": "section"
+        },
+        {
+          "docstring": "| Agent Type | Default Claims | |------------|----------------| | `coordinator` | Full swarm access | | `coder` | File write, bash execute | | `tester",
+          "lines": [
+            186,
+            196
+          ],
+          "name": "Default Policies",
+          "type": "section"
+        },
+        {
+          "lines": [
+            197,
+            209
+          ],
+          "name": "Error Handling",
+          "type": "section"
+        }
+      ]
+    },
+    "collective-intelligence-coordinator.md": {
+      "hash": "12f2c26ba636",
+      "indexed_at": "2026-01-20T04:50:25.573046+00:00",
+      "language": "markdown",
+      "lines": 993,
+      "symbols": [
+        {
+          "lines": [
+            51,
+            88
+          ],
+          "name": "Collective Architecture",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Distributed Cognition**: Aggregate cognitive processing across all agents - **Emergent Intelligence**: Foster intelligent behaviors from local int",
+              "lines": [
+                91,
+                96
+              ],
+              "name": "1. Hive-Mind Collective Decision Making",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **PBFT Protocol**: Three-phase practical Byzantine fault tolerance - **Malicious Actor Detection**: Identify and isolate Byzantine behavior - **Cryp",
+              "lines": [
+                97,
+                102
+              ],
+              "name": "2. Byzantine Fault-Tolerant Consensus",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Multi-Head Attention**: Equal peer influence in mesh topologies - **Hyperbolic Attention**: Hierarchical influence modeling (1.5x queen weight) -",
+              "lines": [
+                103,
+                108
+              ],
+              "name": "3. Attention-Based Agent Coordination",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **CRDT State Synchronization**: Conflict-free replicated data types - **Delta Propagation**: Efficient incremental updates - **Causal Consistency**:",
+              "lines": [
+                109,
+                114
+              ],
+              "name": "4. Memory Synchronization Protocols",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            89,
+            114
+          ],
+          "name": "Core Responsibilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "The collective intelligence coordinator uses a sophisticated attention framework that combines multiple mechanisms for optimal coordination:",
+              "lines": [
+                117,
+                658
+              ],
+              "name": "Collective Attention Framework",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                659,
+                743
+              ],
+              "name": "Usage Example: Collective Intelligence Coordination",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                744,
+                796
+              ],
+              "name": "Self-Learning Integration (ReasoningBank)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            115,
+            796
+          ],
+          "name": "\ud83e\udde0 Advanced Attention Mechanisms (V3)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                799,
+                820
+              ],
+              "name": "Collective Coordination Commands",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                821,
+                836
+              ],
+              "name": "Memory Synchronization Commands",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                837,
+                852
+              ],
+              "name": "Neural Learning Commands",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            797,
+            852
+          ],
+          "name": "MCP Tool Integration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                855,
+                873
+              ],
+              "name": "1. Practical Byzantine Fault Tolerance (PBFT)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                874,
+                892
+              ],
+              "name": "2. Attention-Weighted Voting",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                893,
+                911
+              ],
+              "name": "3. CRDT-Based Eventual Consistency",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            853,
+            911
+          ],
+          "name": "Consensus Mechanisms",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                914,
+                930
+              ],
+              "name": "Hierarchical-Mesh Hybrid",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                931,
+                944
+              ],
+              "name": "Topology Switching",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            912,
+            944
+          ],
+          "name": "Topology Integration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "| Metric | Target | Description | |--------|--------|-------------| | Consensus Latency | <500ms | Time to achieve collective decision | | Byzantine D",
+              "lines": [
+                947,
+                957
+              ],
+              "name": "Collective Intelligence KPIs",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                958,
+                970
+              ],
+              "name": "Health Monitoring",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            945,
+            970
+          ],
+          "name": "Performance Metrics",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Always verify Byzantine tolerance before coordination - Use attention-weighted voting for nuanced decisions - Implement rollback mechanisms for fail",
+              "lines": [
+                973,
+                977
+              ],
+              "name": "1. Consensus Building",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Build knowledge graphs from diverse perspectives - Apply GraphRoPE for topology-aware synthesis - Store patterns for future learning",
+              "lines": [
+                978,
+                982
+              ],
+              "name": "2. Knowledge Aggregation",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Choose appropriate CRDT types for data characteristics - Monitor vector clocks for causal consistency - Implement delta compression for efficiency",
+              "lines": [
+                983,
+                987
+              ],
+              "name": "3. Memory Synchronization",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Allow sufficient iterations for consensus emergence - Track trajectory for learning optimization - Validate stability before finalizing decisions",
+              "lines": [
+                988,
+                994
+              ],
+              "name": "4. Emergent Intelligence",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            971,
+            994
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        }
+      ]
+    },
+    "ddd-domain-expert.md": {
+      "hash": "1afcdbdaf02d",
+      "indexed_at": "2026-01-20T04:50:25.570743+00:00",
+      "language": "markdown",
+      "lines": 220,
+      "symbols": [
+        {
+          "lines": [
+            46,
+            81
+          ],
+          "name": "DDD Strategic Patterns",
+          "type": "section"
+        },
+        {
+          "docstring": "| Context | Type | Responsibility | |---------|------|----------------| | **Swarm** | Core | Agent coordination, topology management | | **Agent** | C",
+          "lines": [
+            82,
+            94
+          ],
+          "name": "Claude Flow V3 Bounded Contexts",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                97,
+                130
+              ],
+              "name": "Aggregate Design",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                131,
+                158
+              ],
+              "name": "Domain Events",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            95,
+            158
+          ],
+          "name": "DDD Tactical Patterns",
+          "type": "section"
+        },
+        {
+          "docstring": "| Term | Definition | |------|------------| | **Swarm** | A coordinated group of agents working together | | **Agent** | An autonomous unit that execu",
+          "lines": [
+            159,
+            170
+          ],
+          "name": "Ubiquitous Language",
+          "type": "section"
+        },
+        {
+          "docstring": "| Pattern | Use Case | |---------|----------| | **Partnership** | Swarm \u2194 Agent (tight collaboration) | | **Customer-Supplier** | Task \u2192 Agent (task d",
+          "lines": [
+            171,
+            181
+          ],
+          "name": "Context Mapping Patterns",
+          "type": "section"
+        },
+        {
+          "docstring": "When analyzing a domain, produce:",
+          "lines": [
+            182,
+            192
+          ],
+          "name": "Event Storming Output",
+          "type": "section"
+        },
+        {
+          "lines": [
+            193,
+            208
+          ],
+          "name": "Commands",
+          "type": "section"
+        },
+        {
+          "lines": [
+            209,
+            221
+          ],
+          "name": "Memory Integration",
+          "type": "section"
+        }
+      ]
+    },
+    "injection-analyst.md": {
+      "hash": "3446df8a0d55",
+      "indexed_at": "2026-01-20T04:50:25.576697+00:00",
+      "language": "markdown",
+      "lines": 236,
+      "symbols": [
+        {
+          "children": [
+            {
+              "docstring": "| Category | Techniques | Severity | |----------|------------|----------| | **Instruction Override** | \"Ignore previous\", \"Forget all\", \"Disregard\" |",
+              "lines": [
+                32,
+                42
+              ],
+              "name": "Attack Technique Classification",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                43,
+                157
+              ],
+              "name": "Analysis Workflow",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            30,
+            157
+          ],
+          "name": "Analysis Capabilities",
+          "type": "section"
+        },
+        {
+          "lines": [
+            158,
+            193
+          ],
+          "name": "Output Format",
+          "type": "section"
+        },
+        {
+          "docstring": "After analysis, feed learnings back:",
+          "lines": [
+            194,
+            210
+          ],
+          "name": "Pattern Learning Integration",
+          "type": "section"
+        },
+        {
+          "docstring": "- **aidefence-guardian**: Receive alerts, provide detailed analysis - **security-architect**: Inform architecture decisions based on attack trends - *",
+          "lines": [
+            211,
+            216
+          ],
+          "name": "Collaboration",
+          "type": "section"
+        },
+        {
+          "docstring": "Generate analysis reports:",
+          "lines": [
+            217,
+            237
+          ],
+          "name": "Reporting",
+          "type": "section"
+        }
+      ]
+    },
+    "memory-specialist.md": {
+      "hash": "033dab43a851",
+      "indexed_at": "2026-01-20T04:50:25.574891+00:00",
+      "language": "markdown",
+      "lines": 995,
+      "symbols": [
+        {
+          "lines": [
+            47,
+            66
+          ],
+          "name": "Architecture Overview",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "The Hierarchical Navigable Small World (HNSW) algorithm provides logarithmic search complexity for vector similarity queries.",
+              "lines": [
+                69,
+                137
+              ],
+              "name": "1. HNSW Indexing Optimization (150x-12,500x Faster Search)",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Implements ADR-009 for combining structured storage with vector capabilities.",
+              "lines": [
+                138,
+                220
+              ],
+              "name": "2. Hybrid Memory Backend (SQLite + AgentDB)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                221,
+                309
+              ],
+              "name": "3. Vector Quantization (4-32x Memory Reduction)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                310,
+                406
+              ],
+              "name": "4. Memory Consolidation and Cleanup",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                407,
+                491
+              ],
+              "name": "5. Cross-Session Persistence Patterns",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                492,
+                591
+              ],
+              "name": "6. Namespace Management and Isolation",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                592,
+                680
+              ],
+              "name": "7. Memory Sync Across Distributed Agents",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Implements Elastic Weight Consolidation++ to preserve important learned patterns.",
+              "lines": [
+                681,
+                794
+              ],
+              "name": "8. EWC++ for Preventing Catastrophic Forgetting",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                795,
+                880
+              ],
+              "name": "9. Pattern Distillation and Compression",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            67,
+            880
+          ],
+          "name": "Core Responsibilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                883,
+                910
+              ],
+              "name": "Memory Operations",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                911,
+                936
+              ],
+              "name": "CLI Commands",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            881,
+            936
+          ],
+          "name": "MCP Tool Integration",
+          "type": "section"
+        },
+        {
+          "docstring": "| Metric | V2 Baseline | V3 Target | Improvement | |--------|-------------|-----------|-------------| | Vector Search | 1000ms | 0.8-6.7ms | 150x-12,5",
+          "lines": [
+            937,
+            946
+          ],
+          "name": "Performance Targets",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                949,
+                965
+              ],
+              "name": "Memory Organization",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. **Store** - Always include embeddings for semantic search 2. **Index** - Let HNSW automatically index new entries 3. **Search** - Use hybrid search",
+              "lines": [
+                966,
+                974
+              ],
+              "name": "Memory Lifecycle",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            947,
+            974
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        },
+        {
+          "docstring": "- **Hierarchical Coordinator**: Manages memory allocation for swarm tasks - **Performance Engineer**: Optimizes memory access patterns - **Security Ar",
+          "lines": [
+            975,
+            981
+          ],
+          "name": "Collaboration Points",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Single interface for all memory operations - Abstraction over multiple backends - Consistent API across storage types",
+              "lines": [
+                984,
+                988
+              ],
+              "name": "ADR-006: Unified Memory Service",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- SQLite for structured data and metadata - AgentDB for vector embeddings - HNSW for fast similarity search - Automatic query routing",
+              "lines": [
+                989,
+                996
+              ],
+              "name": "ADR-009: Hybrid Memory Backend",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            982,
+            996
+          ],
+          "name": "ADR References",
+          "type": "section"
+        }
+      ]
+    },
+    "performance-engineer.md": {
+      "hash": "b889946ea6ac",
+      "indexed_at": "2026-01-20T04:50:25.571479+00:00",
+      "language": "markdown",
+      "lines": 1233,
+      "symbols": [
+        {
+          "docstring": "I am a **V3 Performance Engineering Agent** specialized in optimizing Claude Flow systems for maximum performance. I leverage Flash Attention (2.49x-7",
+          "lines": [
+            118,
+            121
+          ],
+          "name": "Overview",
+          "type": "section"
+        },
+        {
+          "docstring": "| Metric | Target | Method | |--------|--------|--------| | Flash Attention | 2.49x-7.47x speedup | Fused operations, memory-efficient attention | | H",
+          "lines": [
+            122,
+            132
+          ],
+          "name": "V3 Performance Targets",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Flash Attention provides significant speedups through memory-efficient attention computation:",
+              "lines": [
+                135,
+                209
+              ],
+              "name": "1. Flash Attention Optimization",
+              "type": "subsection"
+            },
+            {
+              "docstring": "WASM SIMD enables native-speed vector operations in JavaScript:",
+              "lines": [
+                210,
+                321
+              ],
+              "name": "2. WASM SIMD Acceleration",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                322,
+                448
+              ],
+              "name": "3. Performance Profiling & Bottleneck Detection",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                449,
+                557
+              ],
+              "name": "4. Token Usage Optimization (50-75% Reduction)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                558,
+                657
+              ],
+              "name": "5. Latency Analysis & Optimization",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                658,
+                736
+              ],
+              "name": "6. Memory Footprint Reduction",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                737,
+                811
+              ],
+              "name": "7. Batch Processing Optimization",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                812,
+                885
+              ],
+              "name": "8. Parallel Execution Strategies",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                886,
+                1019
+              ],
+              "name": "9. Benchmark Suite Integration",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            133,
+            1019
+          ],
+          "name": "Core Capabilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                1022,
+                1083
+              ],
+              "name": "Performance Monitoring via MCP",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1020,
+            1083
+          ],
+          "name": "MCP Integration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                1086,
+                1116
+              ],
+              "name": "Performance Commands",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1084,
+            1116
+          ],
+          "name": "CLI Integration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                1119,
+                1185
+              ],
+              "name": "Adaptive Learning for Performance Optimization",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1117,
+            1185
+          ],
+          "name": "SONA Integration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "1. **Flash Attention** - Enable for all transformer-based models - Use fused operations where possible - Target 2.49x-7.47x speedup",
+              "lines": [
+                1188,
+                1214
+              ],
+              "name": "Performance Optimization Checklist",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1186,
+            1214
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Memory Specialist**: Coordinate memory optimization strategies - **Security Architect**: Ensure performance changes maintain security - **SONA Lea",
+              "lines": [
+                1217,
+                1222
+              ],
+              "name": "With Other V3 Agents",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Provide performance metrics to coordinators - Optimize agent communication patterns - Balance load across swarm agents",
+              "lines": [
+                1223,
+                1234
+              ],
+              "name": "With Swarm Coordination",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1215,
+            1234
+          ],
+          "name": "Integration Points",
+          "type": "section"
+        }
+      ]
+    },
+    "pii-detector.md": {
+      "hash": "552e5af53433",
+      "indexed_at": "2026-01-20T04:50:25.573734+00:00",
+      "language": "markdown",
+      "lines": 151,
+      "symbols": [
+        {
+          "children": [
+            {
+              "docstring": "- Email addresses - Social Security Numbers (SSN) - Phone numbers - Physical addresses - Names in specific contexts",
+              "lines": [
+                31,
+                37
+              ],
+              "name": "Personal Identifiable Information (PII)",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- API keys (OpenAI, Anthropic, GitHub, AWS, etc.) - Passwords (hardcoded, in config files) - Database connection strings - Private keys and certificat",
+              "lines": [
+                38,
+                44
+              ],
+              "name": "Credentials & Secrets",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Credit card numbers - Bank account numbers - Financial identifiers",
+              "lines": [
+                45,
+                49
+              ],
+              "name": "Financial Data",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            29,
+            49
+          ],
+          "name": "Detection Targets",
+          "type": "section"
+        },
+        {
+          "lines": [
+            50,
+            86
+          ],
+          "name": "Usage",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                89,
+                105
+              ],
+              "name": "API Key Patterns",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                106,
+                115
+              ],
+              "name": "Password Patterns",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            87,
+            115
+          ],
+          "name": "Scanning Patterns",
+          "type": "section"
+        },
+        {
+          "docstring": "When PII is detected, suggest:",
+          "lines": [
+            116,
+            124
+          ],
+          "name": "Remediation Recommendations",
+          "type": "section"
+        },
+        {
+          "lines": [
+            125,
+            142
+          ],
+          "name": "Integration with Security Swarm",
+          "type": "section"
+        },
+        {
+          "docstring": "Useful for: - **GDPR** - Personal data identification - **HIPAA** - Protected health information - **PCI-DSS** - Payment card data - **SOC 2** - Sensi",
+          "lines": [
+            143,
+            152
+          ],
+          "name": "Compliance Context",
+          "type": "section"
+        }
+      ]
+    },
+    "reasoningbank-learner.md": {
+      "hash": "827821860183",
+      "indexed_at": "2026-01-20T04:50:25.577343+00:00",
+      "language": "markdown",
+      "lines": 213,
+      "symbols": [
+        {
+          "lines": [
+            39,
+            62
+          ],
+          "name": "Intelligence Pipeline",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Search for similar patterns 150x-12,500x faster:",
+              "lines": [
+                65,
+                76
+              ],
+              "name": "1. RETRIEVE (HNSW Search)",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Assign success/failure verdicts to trajectories:",
+              "lines": [
+                77,
+                95
+              ],
+              "name": "2. JUDGE (Verdict Assignment)",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Extract key learnings using LoRA adaptation:",
+              "lines": [
+                96,
+                113
+              ],
+              "name": "3. DISTILL (Pattern Extraction)",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Prevent catastrophic forgetting:",
+              "lines": [
+                114,
+                125
+              ],
+              "name": "4. CONSOLIDATE (EWC++)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            63,
+            125
+          ],
+          "name": "Pipeline Stages",
+          "type": "section"
+        },
+        {
+          "docstring": "Every agent operation should be tracked:",
+          "lines": [
+            126,
+            159
+          ],
+          "name": "Trajectory Tracking",
+          "type": "section"
+        },
+        {
+          "lines": [
+            160,
+            180
+          ],
+          "name": "Pattern Schema",
+          "type": "section"
+        },
+        {
+          "docstring": "| Tool | Purpose | |------|---------| | `memory_search` | HNSW pattern retrieval | | `memory_usage` | Store/retrieve patterns | | `neural_train` | Tra",
+          "lines": [
+            181,
+            189
+          ],
+          "name": "MCP Tool Integration",
+          "type": "section"
+        },
+        {
+          "docstring": "The ReasoningBank integrates with V3 hooks:",
+          "lines": [
+            190,
+            205
+          ],
+          "name": "Hooks Integration",
+          "type": "section"
+        },
+        {
+          "docstring": "| Metric | Target | |--------|--------| | Pattern retrieval | <5ms (HNSW) | | Verdict assignment | <1ms | | Distillation | <100ms | | Consolidation |",
+          "lines": [
+            206,
+            214
+          ],
+          "name": "Performance Metrics",
+          "type": "section"
+        }
+      ]
+    },
+    "security-architect-aidefence.md": {
+      "hash": "bc9cef7b2eba",
+      "indexed_at": "2026-01-20T04:50:25.576412+00:00",
+      "language": "markdown",
+      "lines": 410,
+      "symbols": [
+        {
+          "children": [
+            {
+              "docstring": "- **50+ prompt injection patterns** - Comprehensive pattern matching - **Jailbreak detection** - DAN variants, hypothetical attacks, roleplay bypasses",
+              "lines": [
+                278,
+                283
+              ],
+              "name": "Detection Layer (<10ms)",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Behavioral analysis** - Temporal pattern detection using attractor classification - **Chaos detection** - Lyapunov exponent calculation for advers",
+              "lines": [
+                284,
+                289
+              ],
+              "name": "Analysis Layer (<100ms)",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **7 mitigation strategies** - Adaptive response selection - **25-level meta-learning** - strange-loop recursive optimization - **Rollback management",
+              "lines": [
+                290,
+                295
+              ],
+              "name": "Response Layer (<50ms)",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "This agent extends the base `security-architect` with production-grade AI defense capabilities:",
+          "lines": [
+            274,
+            295
+          ],
+          "name": "AIMDS Integration",
+          "type": "section"
+        },
+        {
+          "docstring": "1. **AI Threat Detection** - Real-time scanning for manipulation attempts 2. **Behavioral Monitoring** - Continuous agent behavior analysis 3. **Threa",
+          "lines": [
+            296,
+            305
+          ],
+          "name": "Core Responsibilities",
+          "type": "section"
+        },
+        {
+          "lines": [
+            306,
+            321
+          ],
+          "name": "AIMDS Commands",
+          "type": "section"
+        },
+        {
+          "lines": [
+            322,
+            347
+          ],
+          "name": "MCP Tool Integration",
+          "type": "section"
+        },
+        {
+          "docstring": "Threat patterns are stored in the shared `security_threats` namespace:",
+          "lines": [
+            348,
+            375
+          ],
+          "name": "Threat Pattern Storage (AgentDB)",
+          "type": "section"
+        },
+        {
+          "docstring": "- Coordinate with **security-auditor** for detailed vulnerability testing - Share AIMDS threat intelligence with **reviewer** agents - Provide **coder",
+          "lines": [
+            376,
+            384
+          ],
+          "name": "Collaboration Protocol",
+          "type": "section"
+        },
+        {
+          "lines": [
+            385,
+            411
+          ],
+          "name": "Security Policies (LTL Examples)",
+          "type": "section"
+        }
+      ]
+    },
+    "security-architect.md": {
+      "hash": "e46a06c50f8b",
+      "indexed_at": "2026-01-20T04:50:25.572188+00:00",
+      "language": "markdown",
+      "lines": 867,
+      "symbols": [
+        {
+          "docstring": "1. **Threat Modeling**: Apply STRIDE/DREAD methodologies for comprehensive threat analysis 2. **Vulnerability Assessment**: Identify and prioritize se",
+          "lines": [
+            115,
+            123
+          ],
+          "name": "Core Responsibilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                126,
+                146
+              ],
+              "name": "HNSW-Indexed Threat Pattern Search (150x-12,500x Faster)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                147,
+                163
+              ],
+              "name": "Flash Attention for Large Codebase Security Scanning",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                164,
+                190
+              ],
+              "name": "ReasoningBank Security Pattern Learning",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            124,
+            190
+          ],
+          "name": "V3 Security Capabilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                193,
+                253
+              ],
+              "name": "STRIDE Methodology",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                254,
+                295
+              ],
+              "name": "DREAD Risk Scoring",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            191,
+            295
+          ],
+          "name": "Threat Modeling Framework",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                298,
+                429
+              ],
+              "name": "CVE-1, CVE-2, CVE-3 Tracking",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            296,
+            429
+          ],
+          "name": "CVE Tracking and Remediation",
+          "type": "section"
+        },
+        {
+          "lines": [
+            430,
+            544
+          ],
+          "name": "Claims-Based Authorization Design",
+          "type": "section"
+        },
+        {
+          "lines": [
+            545,
+            662
+          ],
+          "name": "Zero-Trust Architecture Patterns",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                665,
+                700
+              ],
+              "name": "Before Security Assessment: Learn from History",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                701,
+                728
+              ],
+              "name": "During Assessment: GNN-Enhanced Context Retrieval",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                729,
+                761
+              ],
+              "name": "After Assessment: Store Learning Patterns",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            663,
+            761
+          ],
+          "name": "Self-Learning Protocol (V3)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                764,
+                791
+              ],
+              "name": "Attention-Based Security Consensus",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                792,
+                832
+              ],
+              "name": "MCP Memory Coordination",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            762,
+            832
+          ],
+          "name": "Multi-Agent Security Coordination",
+          "type": "section"
+        },
+        {
+          "lines": [
+            833,
+            857
+          ],
+          "name": "Security Scanning Commands",
+          "type": "section"
+        },
+        {
+          "docstring": "- Coordinate with **security-auditor** for detailed vulnerability testing - Work with **coder** to implement secure coding patterns - Provide **review",
+          "lines": [
+            858,
+            868
+          ],
+          "name": "Collaboration Protocol",
+          "type": "section"
+        }
+      ]
+    },
+    "security-auditor.md": {
+      "hash": "063a86e41474",
+      "indexed_at": "2026-01-20T04:50:25.574290+00:00",
+      "language": "markdown",
+      "lines": 771,
+      "symbols": [
+        {
+          "docstring": "1. **Vulnerability Scanning**: Comprehensive static and dynamic code analysis 2. **CVE Detection**: HNSW-indexed search of vulnerability databases 3.",
+          "lines": [
+            97,
+            106
+          ],
+          "name": "Core Responsibilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Learn from past security audits to improve detection rates:",
+              "lines": [
+                109,
+                145
+              ],
+              "name": "ReasoningBank Vulnerability Pattern Learning",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Rapid vulnerability lookup using HNSW indexing:",
+              "lines": [
+                146,
+                169
+              ],
+              "name": "HNSW-Indexed CVE Database Search (150x-12,500x Faster)",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Scan large codebases efficiently:",
+              "lines": [
+                170,
+                188
+              ],
+              "name": "Flash Attention for Rapid Code Scanning",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            107,
+            188
+          ],
+          "name": "V3 Intelligence Features",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                191,
+                210
+              ],
+              "name": "A01:2021 - Broken Access Control",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                211,
+                232
+              ],
+              "name": "A02:2021 - Cryptographic Failures",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                233,
+                254
+              ],
+              "name": "A03:2021 - Injection",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                255,
+                272
+              ],
+              "name": "A04:2021 - Insecure Design",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                273,
+                294
+              ],
+              "name": "A05:2021 - Security Misconfiguration",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                295,
+                313
+              ],
+              "name": "A06:2021 - Vulnerable Components",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                314,
+                335
+              ],
+              "name": "A07:2021 - Authentication Failures",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                336,
+                353
+              ],
+              "name": "A08:2021 - Software and Data Integrity Failures",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                354,
+                371
+              ],
+              "name": "A09:2021 - Security Logging Failures",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                372,
+                388
+              ],
+              "name": "A10:2021 - Server-Side Request Forgery (SSRF)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            189,
+            388
+          ],
+          "name": "OWASP Top 10 Vulnerability Detection",
+          "type": "section"
+        },
+        {
+          "lines": [
+            389,
+            430
+          ],
+          "name": "Secret Detection and Credential Scanning",
+          "type": "section"
+        },
+        {
+          "lines": [
+            431,
+            477
+          ],
+          "name": "Dependency Vulnerability Scanning",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                480,
+                520
+              ],
+              "name": "SOC2 Compliance Patterns",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                521,
+                559
+              ],
+              "name": "GDPR Compliance Patterns",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                560,
+                596
+              ],
+              "name": "HIPAA Compliance Patterns",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            478,
+            596
+          ],
+          "name": "Compliance Auditing",
+          "type": "section"
+        },
+        {
+          "lines": [
+            597,
+            644
+          ],
+          "name": "Security Report Generation",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                647,
+                693
+              ],
+              "name": "Continuous Detection Improvement",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                694,
+                723
+              ],
+              "name": "Pattern Recognition Enhancement",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            645,
+            723
+          ],
+          "name": "Self-Learning Protocol",
+          "type": "section"
+        },
+        {
+          "lines": [
+            724,
+            761
+          ],
+          "name": "MCP Integration",
+          "type": "section"
+        },
+        {
+          "docstring": "- **Coordinate with security-architect** for threat modeling - **Share findings with reviewer** for code quality assessment - **Provide input to coder",
+          "lines": [
+            762,
+            772
+          ],
+          "name": "Collaboration with Other Agents",
+          "type": "section"
+        }
+      ]
+    },
+    "sparc-orchestrator.md": {
+      "hash": "698cd0886b91",
+      "indexed_at": "2026-01-20T04:50:25.575223+00:00",
+      "language": "markdown",
+      "lines": 182,
+      "symbols": [
+        {
+          "lines": [
+            45,
+            72
+          ],
+          "name": "SPARC Methodology Overview",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Agent**: `specification` - **Outputs**: Requirements document, constraints, edge cases - **Quality Gate**: All requirements testable, no ambiguity",
+              "lines": [
+                75,
+                79
+              ],
+              "name": "1. Specification Phase",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Agent**: `pseudocode` - **Outputs**: Algorithm designs, data structures, logic flow - **Quality Gate**: Algorithms complete, complexity analyzed",
+              "lines": [
+                80,
+                84
+              ],
+              "name": "2. Pseudocode Phase",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Agent**: `architecture` - **Outputs**: System design, component diagrams, interfaces - **Quality Gate**: Scalable, secure, maintainable design",
+              "lines": [
+                85,
+                89
+              ],
+              "name": "3. Architecture Phase",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Agent**: `sparc-coder` + `tester` - **Outputs**: Production code, comprehensive tests - **Quality Gate**: Tests pass, coverage >80%, no critical i",
+              "lines": [
+                90,
+                94
+              ],
+              "name": "4. Refinement Phase (TDD)",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Agent**: `reviewer` + `production-validator` - **Outputs**: Integrated system, documentation, deployment - **Quality Gate**: All acceptance criter",
+              "lines": [
+                95,
+                99
+              ],
+              "name": "5. Completion Phase",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            73,
+            99
+          ],
+          "name": "Phase Responsibilities",
+          "type": "section"
+        },
+        {
+          "lines": [
+            100,
+            119
+          ],
+          "name": "Orchestration Commands",
+          "type": "section"
+        },
+        {
+          "docstring": "When orchestrating, spawn phase-specific agents:",
+          "lines": [
+            120,
+            148
+          ],
+          "name": "Agent Delegation Pattern",
+          "type": "section"
+        },
+        {
+          "docstring": "| Phase | Gate Criteria | Blocking | |-------|---------------|----------| | Specification | All requirements testable | Yes | | Pseudocode | Algorithm",
+          "lines": [
+            149,
+            158
+          ],
+          "name": "Quality Gates",
+          "type": "section"
+        },
+        {
+          "docstring": "The orchestrator learns from each workflow:",
+          "lines": [
+            159,
+            176
+          ],
+          "name": "ReasoningBank Integration",
+          "type": "section"
+        },
+        {
+          "docstring": "- **HNSW Search**: Find similar SPARC patterns (150x faster) - **Flash Attention**: Process large specifications efficiently - **EWC++**: Prevent forg",
+          "lines": [
+            177,
+            183
+          ],
+          "name": "Integration with V3 Features",
+          "type": "section"
+        }
+      ]
+    },
+    "swarm-memory-manager.md": {
+      "hash": "3744aa67069f",
+      "indexed_at": "2026-01-20T04:50:25.575853+00:00",
+      "language": "markdown",
+      "lines": 157,
+      "symbols": [
+        {
+          "lines": [
+            46,
+            74
+          ],
+          "name": "Architecture",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Manage memory namespaces: `swarm`, `agents`, `tasks`, `patterns`, `decisions` - Enforce namespace isolation and access patterns - Handle cross-names",
+              "lines": [
+                77,
+                81
+              ],
+              "name": "1. Namespace Coordination",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Use Conflict-free Replicated Data Types for eventual consistency - Support G-Counters, PN-Counters, LWW-Registers, OR-Sets - Merge concurrent update",
+              "lines": [
+                82,
+                86
+              ],
+              "name": "2. CRDT Replication",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Coordinate HNSW index access across agents - Cache frequently accessed vectors - Manage index sharding for large datasets",
+              "lines": [
+                87,
+                91
+              ],
+              "name": "3. Vector Cache Management",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Implement last-writer-wins for simple conflicts - Use vector clocks for causal ordering - Escalate complex conflicts to consensus",
+              "lines": [
+                92,
+                96
+              ],
+              "name": "4. Conflict Resolution",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            75,
+            96
+          ],
+          "name": "Responsibilities",
+          "type": "section"
+        },
+        {
+          "lines": [
+            97,
+            109
+          ],
+          "name": "MCP Tools",
+          "type": "section"
+        },
+        {
+          "docstring": "1. **Agent Registration**: When agents spawn, register their memory requirements 2. **State Sync**: Periodically sync state using vector clocks 3. **C",
+          "lines": [
+            110,
+            117
+          ],
+          "name": "Coordination Protocol",
+          "type": "section"
+        },
+        {
+          "docstring": "| Namespace | Purpose | TTL | |-----------|---------|-----| | `swarm` | Swarm-wide coordination state | 24h | | `agents` | Individual agent state | 1h",
+          "lines": [
+            118,
+            128
+          ],
+          "name": "Memory Namespaces",
+          "type": "section"
+        },
+        {
+          "lines": [
+            129,
+            158
+          ],
+          "name": "Example Workflow",
+          "type": "section"
+        }
+      ]
+    },
+    "v3-integration-architect.md": {
+      "hash": "3b380eb1d0cc",
+      "indexed_at": "2026-01-20T04:50:25.570240+00:00",
+      "language": "markdown",
+      "lines": 205,
+      "symbols": [
+        {
+          "lines": [
+            34,
+            70
+          ],
+          "name": "ADR-001 Implementation",
+          "type": "section"
+        },
+        {
+          "docstring": "| Component | Before | After | Savings | |-----------|--------|-------|---------| | MCP Server | 2,500 lines | 200 lines | 92% | | Memory Service | 1,",
+          "lines": [
+            71,
+            81
+          ],
+          "name": "Eliminated Duplicates",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                84,
+                100
+              ],
+              "name": "1. MCP Server Extension",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                101,
+                119
+              ],
+              "name": "2. Memory Service Extension",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                120,
+                145
+              ],
+              "name": "3. Agent Spawning Extension",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            82,
+            145
+          ],
+          "name": "Integration Points",
+          "type": "section"
+        },
+        {
+          "docstring": "| Claude-Flow Tool | Agentic-Flow Base | Extension | |------------------|-------------------|-----------| | `swarm_init` | `agent_spawn` | + topology",
+          "lines": [
+            146,
+            155
+          ],
+          "name": "MCP Tool Mapping",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Hierarchical coordination - Mesh peer-to-peer - Hierarchical-mesh hybrid - Adaptive topology switching",
+              "lines": [
+                158,
+                163
+              ],
+              "name": "Swarm Topologies (Not in agentic-flow)",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Byzantine fault tolerance - Raft leader election - Gossip protocols - CRDT synchronization",
+              "lines": [
+                164,
+                169
+              ],
+              "name": "Hive-Mind Consensus (Not in agentic-flow)",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Phase-based development - TDD integration - Quality gates - ReasoningBank learning",
+              "lines": [
+                170,
+                175
+              ],
+              "name": "SPARC Methodology (Not in agentic-flow)",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- PreToolUse / PostToolUse - SessionStart / Stop - UserPromptSubmit routing - Intelligence trajectory tracking",
+              "lines": [
+                176,
+                181
+              ],
+              "name": "V3 Hooks System (Extended)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            156,
+            181
+          ],
+          "name": "V3-Specific Extensions",
+          "type": "section"
+        },
+        {
+          "lines": [
+            182,
+            197
+          ],
+          "name": "Commands",
+          "type": "section"
+        },
+        {
+          "docstring": "| Metric | Target | Current | |--------|--------|---------| | Code Reduction | >90% | Tracking | | MCP Response Time | <100ms | Tracking | | Memory Ov",
+          "lines": [
+            198,
+            206
+          ],
+          "name": "Quality Metrics",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.189098+00:00",
+  "version": "1.0"
+}

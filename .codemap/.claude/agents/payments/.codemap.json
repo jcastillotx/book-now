@@ -1,0 +1,14 @@
+{
+  "directory": ".claude/agents/payments",
+  "files": {
+    "agentic-payments.md": {
+      "hash": "d2b5b54b7f53",
+      "indexed_at": "2026-01-20T04:50:25.545521+00:00",
+      "language": "markdown",
+      "lines": 126,
+      "symbols": []
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.179512+00:00",
+  "version": "1.0"
+}

@@ -1,0 +1,110 @@
+{
+  "directory": ".claude/agents/documentation",
+  "files": {
+    "docs-api-openapi.md": {
+      "hash": "9855a79e3458",
+      "indexed_at": "2026-01-20T04:50:25.545259+00:00",
+      "language": "markdown",
+      "lines": 355,
+      "symbols": [
+        {
+          "children": [
+            {
+              "lines": [
+                180,
+                203
+              ],
+              "name": "Before Documentation: Learn from Past Patterns",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                204,
+                227
+              ],
+              "name": "During Documentation: GNN-Enhanced API Search",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                228,
+                248
+              ],
+              "name": "After Documentation: Store Patterns",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            178,
+            248
+          ],
+          "name": "\ud83e\udde0 Self-Learning Protocol",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                251,
+                280
+              ],
+              "name": "Documentation Pattern Learning",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                281,
+                295
+              ],
+              "name": "Fast Documentation Generation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            249,
+            295
+          ],
+          "name": "\ud83c\udfaf Domain-Specific Optimizations",
+          "type": "section"
+        },
+        {
+          "docstring": "1. Create OpenAPI 3.0 compliant specifications 2. Document all endpoints with descriptions and examples 3. Define request/response schemas accurately",
+          "lines": [
+            296,
+            305
+          ],
+          "name": "Key responsibilities:",
+          "type": "section"
+        },
+        {
+          "docstring": "- Use descriptive summaries and descriptions - Include example requests and responses - Document all possible error responses - Use $ref for reusable",
+          "lines": [
+            306,
+            316
+          ],
+          "name": "Best practices:",
+          "type": "section"
+        },
+        {
+          "lines": [
+            317,
+            349
+          ],
+          "name": "OpenAPI structure:",
+          "type": "section"
+        },
+        {
+          "docstring": "- Clear operation IDs - Request/response examples - Error response documentation - Security requirements - Rate limiting information",
+          "lines": [
+            350,
+            355
+          ],
+          "name": "Documentation elements:",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.179257+00:00",
+  "version": "1.0"
+}

@@ -1,0 +1,109 @@
+{
+  "directory": "vendor/sebastian/version",
+  "files": {
+    "ChangeLog.md": {
+      "hash": "862f4b18f691",
+      "indexed_at": "2026-01-20T04:48:52.577046+00:00",
+      "language": "markdown",
+      "lines": 25,
+      "symbols": [
+        {
+          "children": [
+            {
+              "docstring": "* Changed PHP version constraint in `composer.json` from `^7.3 || ^8.0` to `>=7.3`",
+              "lines": [
+                7,
+                10
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            5,
+            10
+          ],
+          "name": "[3.0.2] - 2020-09-28",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* This component is now supported on PHP 8",
+              "lines": [
+                13,
+                16
+              ],
+              "name": "Added",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            11,
+            16
+          ],
+          "name": "[3.0.1] - 2020-06-26",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* This component is no longer supported on PHP 7.1 and PHP 7.2",
+              "lines": [
+                19,
+                26
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            17,
+            26
+          ],
+          "name": "[3.0.0] - 2020-01-21",
+          "type": "section"
+        }
+      ]
+    },
+    "README.md": {
+      "hash": "6f1e4811ca6b",
+      "indexed_at": "2026-01-20T04:48:53.625282+00:00",
+      "language": "markdown",
+      "lines": 43,
+      "symbols": [
+        {
+          "docstring": "You can add this library as a local, per-project dependency to your project using [Composer](https://getcomposer.org/):",
+          "lines": [
+            5,
+            14
+          ],
+          "name": "Installation",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* If `$path` is not (part of) a Git repository and `$release` is in `X.Y.Z` format then `$release` is returned as-is. * If `$path` is not (part of) a",
+              "lines": [
+                38,
+                44
+              ],
+              "name": "How SebastianBergmann\\Version::getVersion() works",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "The constructor of the `SebastianBergmann\\Version` class expects two parameters:",
+          "lines": [
+            15,
+            44
+          ],
+          "name": "Usage",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.126767+00:00",
+  "version": "1.0"
+}

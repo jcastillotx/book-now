@@ -1,0 +1,14 @@
+{
+  "directory": "vendor/psr/http-factory",
+  "files": {
+    "README.md": {
+      "hash": "d80b63e2a8c4",
+      "indexed_at": "2026-01-20T04:49:41.396816+00:00",
+      "language": "markdown",
+      "lines": 12,
+      "symbols": []
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.133997+00:00",
+  "version": "1.0"
+}

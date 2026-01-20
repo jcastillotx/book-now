@@ -1,0 +1,246 @@
+{
+  "directory": ".claude/skills/v3-mcp-optimization",
+  "files": {
+    "SKILL.md": {
+      "hash": "309969c33ee3",
+      "indexed_at": "2026-01-20T04:50:25.495152+00:00",
+      "language": "markdown",
+      "lines": 777,
+      "symbols": [
+        {
+          "docstring": "Optimizes claude-flow v3 MCP (Model Context Protocol) server implementation with advanced transport layer optimizations, connection pooling, load bala",
+          "lines": [
+            8,
+            11
+          ],
+          "name": "What This Skill Does",
+          "type": "section"
+        },
+        {
+          "lines": [
+            12,
+            23
+          ],
+          "name": "Quick Start",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                26,
+                42
+              ],
+              "name": "Current State Analysis",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                43,
+                115
+              ],
+              "name": "MCP Server Architecture",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            24,
+            115
+          ],
+          "name": "MCP Performance Architecture",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                118,
+                230
+              ],
+              "name": "Advanced Connection Pooling",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            116,
+            230
+          ],
+          "name": "Connection Pool Implementation",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                233,
+                335
+              ],
+              "name": "O(1) Tool Lookup Implementation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            231,
+            335
+          ],
+          "name": "Fast Tool Registry",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                338,
+                422
+              ],
+              "name": "Intelligent Load Balancer",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            336,
+            422
+          ],
+          "name": "Load Balancing & Request Distribution",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                425,
+                503
+              ],
+              "name": "High-Performance Transport",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            423,
+            503
+          ],
+          "name": "Transport Layer Optimization",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                506,
+                599
+              ],
+              "name": "Real-time MCP Metrics",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            504,
+            599
+          ],
+          "name": "Performance Monitoring",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                602,
+                658
+              ],
+              "name": "Pre-compiled Tool Index",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            600,
+            658
+          ],
+          "name": "Tool Registry Optimization",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                661,
+                721
+              ],
+              "name": "Multi-Level Caching",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            659,
+            721
+          ],
+          "name": "Advanced Caching Strategy",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- [ ] **Startup Time**: <400ms MCP server initialization (4.5x improvement) - [ ] **Response Time**: <100ms p95 for tool execution - [ ] **Tool Lookup",
+              "lines": [
+                724,
+                732
+              ],
+              "name": "Performance Targets",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                733,
+                753
+              ],
+              "name": "Monitoring Dashboards",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            722,
+            753
+          ],
+          "name": "Success Metrics",
+          "type": "section"
+        },
+        {
+          "docstring": "- `v3-core-implementation` - Core domain integration with MCP - `v3-performance-optimization` - Overall performance optimization - `v3-swarm-coordinat",
+          "lines": [
+            754,
+            760
+          ],
+          "name": "Related V3 Skills",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                763,
+                770
+              ],
+              "name": "Complete MCP Optimization",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                771,
+                777
+              ],
+              "name": "Specific Optimization",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            761,
+            777
+          ],
+          "name": "Usage Examples",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.156833+00:00",
+  "version": "1.0"
+}

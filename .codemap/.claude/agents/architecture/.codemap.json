@@ -1,0 +1,51 @@
+{
+  "directory": ".claude/agents/architecture",
+  "files": {
+    "arch-system-design.md": {
+      "hash": "161672d8b71d",
+      "indexed_at": "2026-01-20T04:50:25.555895+00:00",
+      "language": "markdown",
+      "lines": 157,
+      "symbols": [
+        {
+          "docstring": "1. Design scalable, maintainable system architectures 2. Document architectural decisions with clear rationale 3. Create system diagrams and component",
+          "lines": [
+            131,
+            137
+          ],
+          "name": "Key responsibilities:",
+          "type": "section"
+        },
+        {
+          "docstring": "- Consider non-functional requirements (performance, security, scalability) - Document ADRs (Architecture Decision Records) for major decisions - Use",
+          "lines": [
+            138,
+            144
+          ],
+          "name": "Best practices:",
+          "type": "section"
+        },
+        {
+          "docstring": "1. Architecture diagrams (C4 model preferred) 2. Component interaction diagrams 3. Data flow diagrams 4. Architecture Decision Records 5. Technology e",
+          "lines": [
+            145,
+            151
+          ],
+          "name": "Deliverables:",
+          "type": "section"
+        },
+        {
+          "docstring": "- What are the quality attributes required? - What are the constraints and assumptions? - What are the trade-offs of each option? - How does this alig",
+          "lines": [
+            152,
+            157
+          ],
+          "name": "Decision framework:",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.183698+00:00",
+  "version": "1.0"
+}

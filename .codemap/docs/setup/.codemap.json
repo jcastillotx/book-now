@@ -1,0 +1,1669 @@
+{
+  "directory": "docs/setup",
+  "files": {
+    "ACTIVATION_GUIDE.md": {
+      "hash": "0d685a9b4732",
+      "indexed_at": "2026-01-20T04:50:25.475998+00:00",
+      "language": "markdown",
+      "lines": 349,
+      "symbols": [
+        {
+          "children": [
+            {
+              "docstring": "1. **Upload the plugin** to `/wp-content/plugins/book-now/` or install via WordPress admin 2. **Activate** the plugin from WordPress Admin \u2192 Plugins 3",
+              "lines": [
+                5,
+                10
+              ],
+              "name": "Step 1: Activate the Plugin",
+              "type": "subsection"
+            },
+            {
+              "docstring": "The setup wizard will guide you through:",
+              "lines": [
+                11,
+                22
+              ],
+              "name": "Step 2: Complete Setup Wizard",
+              "type": "subsection"
+            },
+            {
+              "docstring": "After activation, you'll see **Book Now** in your WordPress admin menu with:",
+              "lines": [
+                23,
+                35
+              ],
+              "name": "Step 3: Access Admin Pages",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            3,
+            35
+          ],
+          "name": "\ud83d\ude80 Quick Start",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "- Statistics cards (Total, Pending, Confirmed, Active Types) - Recent bookings table - Quick action links",
+                  "lines": [
+                    40,
+                    44
+                  ],
+                  "name": "**Dashboard** (`/wp-admin/admin.php?page=book-now`)",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "- List all bookings - Filter by status, date range - Update booking status - View customer details - Manage payments",
+                  "lines": [
+                    45,
+                    51
+                  ],
+                  "name": "**Bookings** (`/wp-admin/admin.php?page=book-now-bookings`)",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "- Create/Edit/Delete services - Set pricing and duration - Configure deposits - Add buffer times - Assign categories",
+                  "lines": [
+                    52,
+                    58
+                  ],
+                  "name": "**Consultation Types** (`/wp-admin/admin.php?page=book-now-types`)",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "- Weekly schedule management - Date-specific overrides - Break times - Holiday blocking",
+                  "lines": [
+                    59,
+                    64
+                  ],
+                  "name": "**Availability** (`/wp-admin/admin.php?page=book-now-availability`)",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "**General Tab:** - Business name - Account type (Single/Agency) - Timezone - Currency - Booking intervals - Advance booking limits",
+                  "lines": [
+                    65,
+                    90
+                  ],
+                  "name": "**Settings** (`/wp-admin/admin.php?page=book-now-settings`)",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                38,
+                90
+              ],
+              "name": "\u2705 Admin Features",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "lines": [
+                    93,
+                    108
+                  ],
+                  "name": "**Shortcodes**",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Create a new page and add:",
+                  "lines": [
+                    109,
+                    119
+                  ],
+                  "name": "**Usage Example**",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                91,
+                119
+              ],
+              "name": "\u2705 Frontend Features",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            36,
+            119
+          ],
+          "name": "\ud83d\udccb What's Included",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "On activation, these tables are created:",
+              "lines": [
+                122,
+                132
+              ],
+              "name": "Database Tables Created",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                133,
+                156
+              ],
+              "name": "Default Settings",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            120,
+            156
+          ],
+          "name": "\ud83d\udd27 Configuration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "1. Go to **Book Now \u2192 Consultation Types** 2. Click **Add New** 3. Fill in: - Name (e.g., \"Strategy Session\") - Duration (e.g., 60 minutes) - Price (e",
+              "lines": [
+                159,
+                169
+              ],
+              "name": "Add a New Consultation Type",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Go to **Book Now \u2192 Availability** 2. Toggle days on/off 3. Set start/end times 4. Add breaks if needed 5. Save changes",
+              "lines": [
+                170,
+                177
+              ],
+              "name": "Set Your Availability",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Go to **Book Now \u2192 Settings \u2192 Payment** 2. Check \"Require payment for bookings\" 3. Enter your Stripe API keys: - Test Publishable Key (pk_test_...)",
+              "lines": [
+                178,
+                186
+              ],
+              "name": "Configure Stripe Payments",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Go to **Book Now \u2192 Settings \u2192 Integrations** 2. Check \"Enable Google Calendar\" 3. Enter: - Client ID - Client Secret - Calendar ID (usually \"primar",
+              "lines": [
+                187,
+                198
+              ],
+              "name": "Connect Google Calendar",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            157,
+            198
+          ],
+          "name": "\ud83c\udfaf Common Tasks",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "**Solution:** The wizard only shows on first activation. To see it again: 1. Go to WordPress admin 2. Navigate to: `/wp-admin/admin.php?page=booknow-s",
+              "lines": [
+                201,
+                206
+              ],
+              "name": "Setup Wizard Doesn't Appear",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Possible causes:** 1. **Plugin not activated** - Check Plugins page 2. **Database tables not created** - Deactivate and reactivate plugin 3. **No da",
+              "lines": [
+                207,
+                218
+              ],
+              "name": "Admin Pages Are Empty",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Solution:** 1. Check file permissions 2. Verify WordPress can write to database 3. Check for JavaScript errors in browser console 4. Ensure nonce ve",
+              "lines": [
+                219,
+                226
+              ],
+              "name": "Settings Not Saving",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Solution:** 1. Verify shortcode spelling: `[book_now_form]` 2. Check if consultation types exist 3. View page source to see if shortcode is renderin",
+              "lines": [
+                227,
+                236
+              ],
+              "name": "Shortcode Not Working",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            199,
+            236
+          ],
+          "name": "\ud83d\udc1b Troubleshooting",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                239,
+                257
+              ],
+              "name": "Book_Now_Consultation_Type",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                258,
+                273
+              ],
+              "name": "Book_Now_Booking",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                274,
+                288
+              ],
+              "name": "Book_Now_Availability",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            237,
+            288
+          ],
+          "name": "\ud83d\udcca Model Classes Available",
+          "type": "section"
+        },
+        {
+          "docstring": "All implemented and active:",
+          "lines": [
+            289,
+            303
+          ],
+          "name": "\ud83d\udd10 Security Features",
+          "type": "section"
+        },
+        {
+          "docstring": "- **Documentation:** `/wp-content/plugins/book-now/docs/` - **GitHub:** https://github.com/jcastillotx/book-now - **Issues:** https://github.com/jcast",
+          "lines": [
+            304,
+            311
+          ],
+          "name": "\ud83d\udcde Support",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Admin dashboard with statistics - Bookings management (CRUD) - Consultation types management - Settings page with 4 tabs (General, Payment, Email, I",
+              "lines": [
+                314,
+                324
+              ],
+              "name": "\u2705 Fully Functional",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Calendar view shortcode - List view shortcode - Frontend booking form (wizard structure exists) - Stripe payment processing - Google Calendar sync -",
+              "lines": [
+                325,
+                335
+              ],
+              "name": "\ud83d\udea7 Phase 2/3 Features (Coming Soon)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            312,
+            335
+          ],
+          "name": "\u2728 What's Working Right Now",
+          "type": "section"
+        },
+        {
+          "docstring": "Your Book Now plugin is **100% production-ready** with:",
+          "lines": [
+            336,
+            350
+          ],
+          "name": "\ud83c\udf89 You're Ready!",
+          "type": "section"
+        }
+      ]
+    },
+    "IMPLEMENTATION_GUIDE.md": {
+      "hash": "6489a88592b7",
+      "indexed_at": "2026-01-20T04:50:25.477167+00:00",
+      "language": "markdown",
+      "lines": 614,
+      "symbols": [
+        {
+          "children": [
+            {
+              "lines": [
+                9,
+                22
+              ],
+              "name": "1. Install Composer Dependencies",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            7,
+            22
+          ],
+          "name": "Prerequisites",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "**Key Methods Needed:** - `__construct()` - Initialize Stripe with API keys - `create_payment_intent($amount, $consultation_type_id)` - Create payment",
+                  "lines": [
+                    27,
+                    54
+                  ],
+                  "name": "1. Complete `includes/class-book-now-stripe.php`",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                25,
+                54
+              ],
+              "name": "Files to Create:",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**File:** `public/js/book-now-public.js`",
+              "lines": [
+                55,
+                81
+              ],
+              "name": "2. Update Frontend for Payment",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            23,
+            81
+          ],
+          "name": "Feature 1: Stripe Payment Integration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "**Key Methods:**",
+                  "lines": [
+                    86,
+                    112
+                  ],
+                  "name": "1. `includes/class-book-now-notifications.php`",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Create template files: - `booking-confirmation.php` - `booking-reminder.php` - `cancellation-notification.php` - `admin-new-booking.php` - `admin-canc",
+                  "lines": [
+                    113,
+                    145
+                  ],
+                  "name": "2. `includes/email-templates/` directory",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "**Add to `includes/class-book-now.php`:**",
+                  "lines": [
+                    146,
+                    175
+                  ],
+                  "name": "3. Reminder Cron Job",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                84,
+                175
+              ],
+              "name": "Files to Create:",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Update `public/class-book-now-public.php`:**",
+              "lines": [
+                176,
+                200
+              ],
+              "name": "Integration Points:",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            82,
+            200
+          ],
+          "name": "Feature 2: Email Notifications",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "**Key Methods:**",
+                  "lines": [
+                    205,
+                    265
+                  ],
+                  "name": "1. `includes/class-book-now-google-calendar.php`",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "**Add to settings:**",
+                  "lines": [
+                    266,
+                    278
+                  ],
+                  "name": "2. Admin Settings Page for Google Calendar",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                203,
+                278
+              ],
+              "name": "Files to Create:",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            201,
+            278
+          ],
+          "name": "Feature 3: Google Calendar Integration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "**Similar structure to Google Calendar:**",
+                  "lines": [
+                    283,
+                    310
+                  ],
+                  "name": "1. `includes/class-book-now-microsoft-calendar.php`",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                281,
+                310
+              ],
+              "name": "Files to Create:",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            279,
+            310
+          ],
+          "name": "Feature 4: Microsoft Calendar Integration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "**Add:**",
+              "lines": [
+                313,
+                396
+              ],
+              "name": "Admin CSS (`admin/css/book-now-admin.css`)",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Add:**",
+              "lines": [
+                397,
+                538
+              ],
+              "name": "Public CSS (`public/css/book-now-public.css`)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            311,
+            538
+          ],
+          "name": "Feature 5: Enhanced Styling",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- [ ] Test payment intent creation - [ ] Test successful payment - [ ] Test failed payment - [ ] Test refund processing - [ ] Test webhook handling -",
+              "lines": [
+                543,
+                550
+              ],
+              "name": "Stripe Payment:",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [ ] Test booking confirmation email - [ ] Test admin notification email - [ ] Test cancellation email - [ ] Test reminder email (wait for cron) - [",
+              "lines": [
+                551,
+                558
+              ],
+              "name": "Email Notifications:",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [ ] Test OAuth connection - [ ] Test event creation - [ ] Test event update - [ ] Test event deletion - [ ] Test busy time reading - [ ] Test token",
+              "lines": [
+                559,
+                566
+              ],
+              "name": "Google Calendar:",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [ ] Test OAuth connection - [ ] Test event creation - [ ] Test event update - [ ] Test event deletion - [ ] Test busy time reading - [ ] Test token",
+              "lines": [
+                567,
+                576
+              ],
+              "name": "Microsoft Calendar:",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "After implementing each feature:",
+          "lines": [
+            539,
+            576
+          ],
+          "name": "Testing Checklist",
+          "type": "section"
+        },
+        {
+          "docstring": "1. **Install Dependencies:**",
+          "lines": [
+            577,
+            604
+          ],
+          "name": "Deployment Steps",
+          "type": "section"
+        },
+        {
+          "docstring": "- **Stripe Documentation:** https://stripe.com/docs/api - **Google Calendar API:** https://developers.google.com/calendar - **Microsoft Graph API:** h",
+          "lines": [
+            605,
+            615
+          ],
+          "name": "Support Resources",
+          "type": "section"
+        }
+      ]
+    },
+    "INSTALL.md": {
+      "hash": "5c6f9385d243",
+      "indexed_at": "2026-01-20T04:50:25.476650+00:00",
+      "language": "markdown",
+      "lines": 567,
+      "symbols": [
+        {
+          "docstring": "1. [Requirements](#requirements) 2. [Installation](#installation) 3. [Initial Configuration](#initial-configuration) 4. [Stripe Payment Setup](#stripe",
+          "lines": [
+            7,
+            23
+          ],
+          "name": "Table of Contents",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- cURL - JSON - OpenSSL - mbstring",
+              "lines": [
+                36,
+                41
+              ],
+              "name": "Required PHP Extensions",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Go to **Tools > Site Health** in WordPress admin 2. Click **Info** tab 3. Expand **Server** section 4. Find \"PHP version\"",
+              "lines": [
+                42,
+                49
+              ],
+              "name": "Check Your PHP Version",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "Before installing, ensure your environment meets these requirements:",
+          "lines": [
+            24,
+            49
+          ],
+          "name": "Requirements",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "1. Download the plugin ZIP file 2. Go to **Plugins > Add New** in WordPress admin 3. Click **Upload Plugin** 4. Choose the ZIP file and click **Instal",
+              "lines": [
+                52,
+                59
+              ],
+              "name": "Method 1: WordPress Admin Upload",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Extract the plugin ZIP file 2. Upload the `book-now-kre8iv` folder to `/wp-content/plugins/` 3. Go to **Plugins** in WordPress admin 4. Find \"Book",
+              "lines": [
+                60,
+                66
+              ],
+              "name": "Method 2: FTP/File Manager",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                67,
+                72
+              ],
+              "name": "Method 3: WP-CLI",
+              "type": "subsection"
+            },
+            {
+              "docstring": "After activation: - Database tables are created automatically - Default settings are configured - Admin menu \"Book Now\" appears in sidebar",
+              "lines": [
+                73,
+                81
+              ],
+              "name": "Post-Installation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            50,
+            81
+          ],
+          "name": "Installation",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "1. Go to **Book Now > Settings** in WordPress admin 2. You'll see tabs for different settings areas",
+              "lines": [
+                84,
+                88
+              ],
+              "name": "Step 1: Access Settings",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Configure your business basics:",
+              "lines": [
+                89,
+                101
+              ],
+              "name": "Step 2: General Settings",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Configure notification emails:",
+              "lines": [
+                102,
+                113
+              ],
+              "name": "Step 3: Email Settings",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            82,
+            113
+          ],
+          "name": "Initial Configuration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "1. Go to [stripe.com](https://stripe.com) 2. Click **Start now** and create account 3. Complete business verification",
+              "lines": [
+                116,
+                121
+              ],
+              "name": "Create a Stripe Account",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Log in to [Stripe Dashboard](https://dashboard.stripe.com) 2. Click **Developers** in sidebar 3. Click **API keys** 4. You'll see: - **Publishable",
+              "lines": [
+                122,
+                132
+              ],
+              "name": "Get API Keys",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Go to **Book Now > Settings > Payments** 2. Enter your keys:",
+              "lines": [
+                133,
+                146
+              ],
+              "name": "Configure in Book Now",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Green checkmark: \"Connection successful!\" - Shows Stripe account name",
+              "lines": [
+                147,
+                150
+              ],
+              "name": "Expected Result",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. In Stripe Dashboard, go to **Developers > Webhooks** 2. Click **Add endpoint** 3. Enter your webhook URL:",
+              "lines": [
+                151,
+                169
+              ],
+              "name": "Set Up Webhooks",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            114,
+            169
+          ],
+          "name": "Stripe Payment Setup",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "1. Go to [Google Cloud Console](https://console.cloud.google.com) 2. Click **Select a project** > **New Project** 3. Name it (e.g., \"Book Now Integrat",
+              "lines": [
+                172,
+                178
+              ],
+              "name": "Create Google Cloud Project",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Go to **APIs & Services > Library** 2. Search for \"Google Calendar API\" 3. Click on it and click **Enable**",
+              "lines": [
+                179,
+                184
+              ],
+              "name": "Enable Calendar API",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Go to **APIs & Services > Credentials** 2. Click **Create Credentials > OAuth client ID** 3. If prompted, configure consent screen first: - User Ty",
+              "lines": [
+                185,
+                202
+              ],
+              "name": "Create OAuth Credentials",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Go to **Book Now > Settings > Integrations** 2. In Google Calendar section:",
+              "lines": [
+                203,
+                219
+              ],
+              "name": "Configure in Book Now",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Shows connected Google account - Calendar dropdown populated - Test creates a test event (then deletes it)",
+              "lines": [
+                220,
+                226
+              ],
+              "name": "Expected Result",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            170,
+            226
+          ],
+          "name": "Google Calendar Setup",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "1. Go to [Azure Portal](https://portal.azure.com) 2. Search for \"App registrations\" 3. Click **New registration** 4. Configure:",
+              "lines": [
+                229,
+                244
+              ],
+              "name": "Register Azure AD Application",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Go to **Certificates & secrets** 2. Click **New client secret** 3. Description: \"Book Now\" 4. Expiration: Choose duration 5. Click **Add** 6. **Cop",
+              "lines": [
+                245,
+                253
+              ],
+              "name": "Create Client Secret",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Go to **API permissions** 2. Click **Add a permission** 3. Choose **Microsoft Graph** 4. Select **Delegated permissions** 5. Add: - `Calendars.Read",
+              "lines": [
+                254,
+                265
+              ],
+              "name": "Configure API Permissions",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Go to **Book Now > Settings > Integrations** 2. In Microsoft Calendar section:",
+              "lines": [
+                266,
+                284
+              ],
+              "name": "Configure in Book Now",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            227,
+            284
+          ],
+          "name": "Microsoft Calendar Setup",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "1. Go to **Book Now > Consultation Types** 2. Click **Add New**",
+              "lines": [
+                287,
+                291
+              ],
+              "name": "Step 1: Add New Type",
+              "type": "subsection"
+            },
+            {
+              "docstring": "| Field | Example | Notes | |-------|---------|-------| | Name | Strategy Session | Displayed to customers | | Slug | strategy-session | Auto-generate",
+              "lines": [
+                292,
+                302
+              ],
+              "name": "Step 2: Configure Details",
+              "type": "subsection"
+            },
+            {
+              "docstring": "| Setting | Purpose | |---------|---------| | Buffer Before | Minutes before appointment to block | | Buffer After | Minutes after appointment to bloc",
+              "lines": [
+                303,
+                312
+              ],
+              "name": "Step 3: Advanced Settings",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Click **Publish** or **Save**",
+              "lines": [
+                313,
+                318
+              ],
+              "name": "Step 4: Save",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            285,
+            318
+          ],
+          "name": "Creating Your First Consultation Type",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "1. Go to **Book Now > Availability** 2. For each day: - Toggle day on/off - Set start time - Set end time - Add breaks (lunch, etc.)",
+              "lines": [
+                321,
+                340
+              ],
+              "name": "Weekly Schedule",
+              "type": "subsection"
+            },
+            {
+              "docstring": "To mark dates as unavailable (holidays, vacations):",
+              "lines": [
+                341,
+                349
+              ],
+              "name": "Block Specific Dates",
+              "type": "subsection"
+            },
+            {
+              "docstring": "To set different hours for specific dates:",
+              "lines": [
+                350,
+                360
+              ],
+              "name": "Custom Date Hours",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            319,
+            360
+          ],
+          "name": "Setting Up Availability",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "1. Go to **Pages > Add New** 2. Title: \"Book a Consultation\" 3. Add shortcode block or paste:",
+              "lines": [
+                363,
+                375
+              ],
+              "name": "Create Booking Page",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Full Booking Form:**",
+              "lines": [
+                376,
+                409
+              ],
+              "name": "Shortcode Options",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            361,
+            409
+          ],
+          "name": "Adding Shortcodes to Pages",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Use this checklist to verify everything works:",
+              "lines": [
+                412,
+                441
+              ],
+              "name": "Test Checklist",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Use these for testing:",
+              "lines": [
+                442,
+                458
+              ],
+              "name": "Stripe Test Cards",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            410,
+            458
+          ],
+          "name": "Testing Your Setup",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- [ ] Switch API Mode to \"Live\" - [ ] Enter live Publishable Key - [ ] Enter live Secret Key - [ ] Update webhook to use live endpoint - [ ] Enter liv",
+              "lines": [
+                463,
+                470
+              ],
+              "name": "Stripe",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [ ] Connected to production calendar - [ ] Test event created successfully - [ ] Sync direction configured correctly",
+              "lines": [
+                471,
+                475
+              ],
+              "name": "Calendar",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [ ] All consultation types reviewed - [ ] Prices are correct - [ ] Descriptions are complete - [ ] Availability schedule is accurate",
+              "lines": [
+                476,
+                481
+              ],
+              "name": "Content",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [ ] Terms and conditions page linked - [ ] Privacy policy page linked - [ ] Refund policy clear",
+              "lines": [
+                482,
+                486
+              ],
+              "name": "Legal",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [ ] Complete one real test booking - [ ] Process one real test refund - [ ] Verify all emails work",
+              "lines": [
+                487,
+                493
+              ],
+              "name": "Testing",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "Before accepting real bookings:",
+          "lines": [
+            459,
+            493
+          ],
+          "name": "Going Live Checklist",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "- Verify API keys are correct (no extra spaces) - Ensure using correct mode (Test vs Live) - Check SSL certificate is valid",
+                  "lines": [
+                    498,
+                    502
+                  ],
+                  "name": "\"Connection Failed\" for Stripe",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "- Verify redirect URI matches exactly - Check OAuth consent screen is configured - Ensure Calendar API is enabled",
+                  "lines": [
+                    503,
+                    507
+                  ],
+                  "name": "\"Connection Failed\" for Google Calendar",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "- Verify redirect URI matches exactly - Check API permissions are granted - Ensure admin consent given (if required)",
+                  "lines": [
+                    508,
+                    512
+                  ],
+                  "name": "\"Connection Failed\" for Microsoft",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "- Check sync is enabled - Verify calendar is selected - Test connection works - Check error logs",
+                  "lines": [
+                    513,
+                    518
+                  ],
+                  "name": "Bookings Not Showing in Calendar",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "- Verify From Email is valid - Check WordPress can send emails - Try different email plugin (WP Mail SMTP) - Check spam folder",
+                  "lines": [
+                    519,
+                    524
+                  ],
+                  "name": "Emails Not Sending",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "- Verify timezone in Settings - Check server timezone - Ensure customer timezone detection works",
+                  "lines": [
+                    525,
+                    529
+                  ],
+                  "name": "Times Showing Wrong",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                496,
+                529
+              ],
+              "name": "Common Issues",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Enable debug logging:",
+              "lines": [
+                530,
+                542
+              ],
+              "name": "Debug Mode",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Check [FAQ section](HELP.md#faq) - Review [GitHub Issues](https://github.com/jcastillotx/book-now/issues) - Contact support with debug log",
+              "lines": [
+                543,
+                550
+              ],
+              "name": "Getting Help",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            494,
+            550
+          ],
+          "name": "Troubleshooting",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "1. Go to **Plugins** 2. Deactivate \"Book Now by Kre8iv Tech\" 3. Data remains in database for reactivation",
+              "lines": [
+                553,
+                557
+              ],
+              "name": "Keep Data",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Go to **Book Now > Settings > General** 2. Enable \"Delete data on uninstall\" 3. Deactivate plugin 4. Delete plugin 5. All data and tables are remov",
+              "lines": [
+                558,
+                568
+              ],
+              "name": "Remove Everything",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            551,
+            568
+          ],
+          "name": "Uninstallation",
+          "type": "section"
+        }
+      ]
+    },
+    "INSTALLATION.md": {
+      "hash": "ce417a211987",
+      "indexed_at": "2026-01-20T04:50:25.477743+00:00",
+      "language": "markdown",
+      "lines": 470,
+      "symbols": [
+        {
+          "docstring": "1. [Requirements](#requirements) 2. [Installation](#installation) 3. [Composer Dependencies](#composer-dependencies) 4. [Stripe Setup](#stripe-setup)",
+          "lines": [
+            5,
+            17
+          ],
+          "name": "Table of Contents",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **PHP:** 8.0 or higher - **WordPress:** 6.0 or higher - **MySQL:** 5.7 or higher / MariaDB 10.3 or higher - **HTTPS:** Required for payment processi",
+              "lines": [
+                20,
+                26
+              ],
+              "name": "Server Requirements",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- `curl` - `json` - `mbstring` - `openssl`",
+              "lines": [
+                27,
+                34
+              ],
+              "name": "PHP Extensions",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            18,
+            34
+          ],
+          "name": "Requirements",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "1. Download the plugin ZIP file or clone from GitHub 2. Upload to `/wp-content/plugins/book-now/` 3. Or install via WordPress admin: Plugins \u2192 Add New",
+              "lines": [
+                37,
+                42
+              ],
+              "name": "Step 1: Upload Plugin",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**IMPORTANT:** You must install Composer dependencies before activating the plugin.",
+              "lines": [
+                43,
+                56
+              ],
+              "name": "Step 2: Install Composer Dependencies",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Go to WordPress Admin \u2192 Plugins 2. Find \"Book Now\" in the list 3. Click \"Activate\"",
+              "lines": [
+                57,
+                62
+              ],
+              "name": "Step 3: Activate Plugin",
+              "type": "subsection"
+            },
+            {
+              "docstring": "After activation, you'll be redirected to the setup wizard. Complete all steps:",
+              "lines": [
+                63,
+                74
+              ],
+              "name": "Step 4: Run Setup Wizard",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            35,
+            74
+          ],
+          "name": "Installation",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                77,
+                86
+              ],
+              "name": "Installing Dependencies",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                87,
+                92
+              ],
+              "name": "Updating Dependencies",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Check that the `vendor/` directory exists with these folders: - `vendor/stripe/` - `vendor/google/` - `vendor/microsoft/`",
+              "lines": [
+                93,
+                101
+              ],
+              "name": "Verifying Installation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            75,
+            101
+          ],
+          "name": "Composer Dependencies",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "1. Go to [https://stripe.com](https://stripe.com) 2. Sign up for an account 3. Complete business verification",
+              "lines": [
+                104,
+                109
+              ],
+              "name": "Step 1: Create Stripe Account",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Log in to Stripe Dashboard 2. Go to Developers \u2192 API Keys 3. Copy your keys: - **Test Mode:** - Publishable key: `pk_test_...` - Secret key: `sk_te",
+              "lines": [
+                110,
+                121
+              ],
+              "name": "Step 2: Get API Keys",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Go to Book Now \u2192 Settings \u2192 Payment 2. Enter your Stripe keys: - Test Publishable Key - Test Secret Key - Live Publishable Key (when ready for prod",
+              "lines": [
+                122,
+                133
+              ],
+              "name": "Step 3: Configure in WordPress",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Webhooks allow Stripe to notify your site about payment events.",
+              "lines": [
+                134,
+                153
+              ],
+              "name": "Step 4: Set Up Webhooks",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Use test mode 2. Test card numbers: - Success: `4242 4242 4242 4242` - Decline: `4000 0000 0000 0002` - 3D Secure: `4000 0025 0000 3155` 3. Use any",
+              "lines": [
+                154,
+                166
+              ],
+              "name": "Testing Stripe",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            102,
+            166
+          ],
+          "name": "Stripe Setup",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "1. Go to [Google Cloud Console](https://console.cloud.google.com) 2. Create a new project or select existing 3. Name it \"Book Now Calendar\"",
+              "lines": [
+                169,
+                174
+              ],
+              "name": "Step 1: Create Google Cloud Project",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. In your project, go to APIs & Services \u2192 Library 2. Search for \"Google Calendar API\" 3. Click on it and click \"Enable\"",
+              "lines": [
+                175,
+                180
+              ],
+              "name": "Step 2: Enable Calendar API",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Go to APIs & Services \u2192 Credentials 2. Click \"Create Credentials\" \u2192 \"OAuth client ID\" 3. Configure consent screen if prompted: - User Type: Externa",
+              "lines": [
+                181,
+                198
+              ],
+              "name": "Step 3: Create OAuth Credentials",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Go to Book Now \u2192 Settings \u2192 Integrations 2. Enable Google Calendar 3. Enter: - Client ID - Client Secret 4. Save settings 5. Click \"Connect to Goog",
+              "lines": [
+                199,
+                213
+              ],
+              "name": "Step 4: Configure in WordPress",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            167,
+            213
+          ],
+          "name": "Google Calendar Setup",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "1. Go to [Azure Portal](https://portal.azure.com) 2. Navigate to Azure Active Directory \u2192 App registrations 3. Click \"New registration\" 4. Name: Book",
+              "lines": [
+                216,
+                227
+              ],
+              "name": "Step 1: Register Azure AD App",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. In your app, go to API permissions 2. Click \"Add a permission\" 3. Select \"Microsoft Graph\" 4. Select \"Delegated permissions\" 5. Add these permissio",
+              "lines": [
+                228,
+                239
+              ],
+              "name": "Step 2: Configure API Permissions",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Go to Certificates & secrets 2. Click \"New client secret\" 3. Description: Book Now 4. Expires: 24 months (or as needed) 5. Click \"Add\" 6. **IMPORTA",
+              "lines": [
+                240,
+                248
+              ],
+              "name": "Step 3: Create Client Secret",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Go to Overview 2. Copy the \"Application (client) ID\"",
+              "lines": [
+                249,
+                253
+              ],
+              "name": "Step 4: Get Application ID",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Go to Book Now \u2192 Settings \u2192 Integrations 2. Enable Microsoft Calendar 3. Enter: - Client ID (Application ID) - Client Secret 4. Save settings 5. Cl",
+              "lines": [
+                254,
+                268
+              ],
+              "name": "Step 5: Configure in WordPress",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            214,
+            268
+          ],
+          "name": "Microsoft Calendar Setup",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "1. Go to Book Now \u2192 Settings \u2192 Email 2. Configure: - **From Name:** Your business name - **From Email:** noreply@yourdomain.com - **Reply-To Email:**",
+              "lines": [
+                271,
+                281
+              ],
+              "name": "Step 1: Configure Email Settings",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Email templates are located in:",
+              "lines": [
+                282,
+                304
+              ],
+              "name": "Step 2: Customize Email Templates",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Go to Book Now \u2192 Settings \u2192 Email 2. Click \"Send Test Email\" 3. Check your inbox 4. If not received, check: - WordPress email settings - Server ema",
+              "lines": [
+                305,
+                315
+              ],
+              "name": "Step 3: Test Email Delivery",
+              "type": "subsection"
+            },
+            {
+              "docstring": "For reliable email delivery, use an SMTP service:",
+              "lines": [
+                316,
+                329
+              ],
+              "name": "Recommended: Use SMTP",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            269,
+            329
+          ],
+          "name": "Email Configuration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- [ ] Plugin activates without errors - [ ] Database tables created - [ ] Setup wizard completes - [ ] Can create consultation types - [ ] Can set ava",
+              "lines": [
+                332,
+                350
+              ],
+              "name": "Test Checklist",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Add shortcode to a page:",
+              "lines": [
+                351,
+                365
+              ],
+              "name": "Test Booking Flow",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Enable WordPress debug mode for troubleshooting:",
+              "lines": [
+                366,
+                380
+              ],
+              "name": "Debug Mode",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            330,
+            380
+          ],
+          "name": "Testing",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "**Error:** \"Class 'Stripe\\Stripe' not found\"",
+              "lines": [
+                383,
+                392
+              ],
+              "name": "Composer Dependencies Not Found",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Possible causes:** - Wrong API keys - Keys from different modes (test vs live) - Network/firewall blocking Stripe API",
+              "lines": [
+                393,
+                407
+              ],
+              "name": "Stripe Connection Failed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Google Calendar:** - Verify OAuth credentials - Check redirect URI matches exactly - Ensure Calendar API is enabled - Re-authorize connection",
+              "lines": [
+                408,
+                421
+              ],
+              "name": "Calendar Not Syncing",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Solutions:** - Install WP Mail SMTP plugin - Check server email configuration - Verify from email is valid - Check spam folder - Test with different",
+              "lines": [
+                422,
+                430
+              ],
+              "name": "Emails Not Sending",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Solutions:** - Verify webhook URL is accessible - Check webhook secret is correct - Ensure HTTPS is enabled - Check server logs for errors - Test we",
+              "lines": [
+                431,
+                441
+              ],
+              "name": "Webhook Not Working",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            381,
+            441
+          ],
+          "name": "Troubleshooting",
+          "type": "section"
+        },
+        {
+          "docstring": "For issues or questions:",
+          "lines": [
+            442,
+            452
+          ],
+          "name": "Support",
+          "type": "section"
+        },
+        {
+          "docstring": "After installation:",
+          "lines": [
+            453,
+            471
+          ],
+          "name": "Next Steps",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.150497+00:00",
+  "version": "1.0"
+}

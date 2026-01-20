@@ -1,0 +1,865 @@
+{
+  "directory": ".claude/agents/optimization",
+  "files": {
+    "benchmark-suite.md": {
+      "hash": "5c333b36ea2d",
+      "indexed_at": "2026-01-20T04:50:25.553142+00:00",
+      "language": "markdown",
+      "lines": 665,
+      "symbols": [
+        {
+          "docstring": "- **Name**: Benchmark Suite - **Type**: Performance Optimization Agent - **Specialization**: Comprehensive performance benchmarking and testing - **Pe",
+          "lines": [
+            10,
+            15
+          ],
+          "name": "Agent Profile",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                18,
+                122
+              ],
+              "name": "1. Comprehensive Benchmarking Framework",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                123,
+                225
+              ],
+              "name": "2. Performance Regression Detection",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                226,
+                358
+              ],
+              "name": "3. Automated Performance Testing",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                359,
+                505
+              ],
+              "name": "4. Performance Validation Framework",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            16,
+            505
+          ],
+          "name": "Core Capabilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                508,
+                574
+              ],
+              "name": "Benchmark Execution Integration",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            506,
+            574
+          ],
+          "name": "MCP Integration Hooks",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                577,
+                594
+              ],
+              "name": "Benchmarking Commands",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                595,
+                606
+              ],
+              "name": "Regression Detection Commands",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            575,
+            606
+          ],
+          "name": "Operational Commands",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Performance Monitor**: Provides continuous monitoring data for benchmarking - **Load Balancer**: Validates load balancing effectiveness through be",
+              "lines": [
+                609,
+                613
+              ],
+              "name": "With Other Optimization Agents",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Automated Testing**: Integrates with CI/CD for continuous performance validation - **Quality Gates**: Provides pass/fail criteria for deployment d",
+              "lines": [
+                614,
+                618
+              ],
+              "name": "With CI/CD Pipeline",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            607,
+            618
+          ],
+          "name": "Integration Points",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                621,
+                665
+              ],
+              "name": "Standard Benchmark Suite",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            619,
+            665
+          ],
+          "name": "Performance Benchmarks",
+          "type": "section"
+        }
+      ]
+    },
+    "load-balancer.md": {
+      "hash": "630a3388862f",
+      "indexed_at": "2026-01-20T04:50:25.552308+00:00",
+      "language": "markdown",
+      "lines": 431,
+      "symbols": [
+        {
+          "docstring": "- **Name**: Load Balancing Coordinator - **Type**: Performance Optimization Agent - **Specialization**: Dynamic task distribution and resource allocat",
+          "lines": [
+            10,
+            15
+          ],
+          "name": "Agent Profile",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                18,
+                53
+              ],
+              "name": "1. Work-Stealing Algorithms",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                54,
+                95
+              ],
+              "name": "2. Dynamic Load Balancing",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                96,
+                153
+              ],
+              "name": "3. Queue Management & Prioritization",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                154,
+                204
+              ],
+              "name": "4. Resource Allocation Optimization",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            16,
+            204
+          ],
+          "name": "Core Capabilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                207,
+                257
+              ],
+              "name": "Performance Monitoring Integration",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            205,
+            257
+          ],
+          "name": "MCP Integration Hooks",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                260,
+                276
+              ],
+              "name": "1. Earliest Deadline First (EDF)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                277,
+                302
+              ],
+              "name": "2. Completely Fair Scheduler (CFS)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            258,
+            302
+          ],
+          "name": "Advanced Scheduling Algorithms",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                305,
+                350
+              ],
+              "name": "Circuit Breaker Pattern",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            303,
+            350
+          ],
+          "name": "Performance Optimization Features",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                353,
+                367
+              ],
+              "name": "Load Balancing Commands",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                368,
+                379
+              ],
+              "name": "Performance Monitoring",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            351,
+            379
+          ],
+          "name": "Operational Commands",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Performance Monitor**: Provides real-time metrics for load balancing decisions - **Topology Optimizer**: Coordinates topology changes based on loa",
+              "lines": [
+                382,
+                386
+              ],
+              "name": "With Other Optimization Agents",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Task Orchestrator**: Receives load-balanced task assignments - **Agent Coordinator**: Provides agent capacity and availability information - **Mem",
+              "lines": [
+                387,
+                391
+              ],
+              "name": "With Swarm Infrastructure",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            380,
+            391
+          ],
+          "name": "Integration Points",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Load Distribution Variance**: Measure of load balance across agents - **Task Migration Rate**: Frequency of work-stealing operations - **Queue Lat",
+              "lines": [
+                394,
+                400
+              ],
+              "name": "Key Performance Indicators",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                401,
+                431
+              ],
+              "name": "Benchmarking",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            392,
+            431
+          ],
+          "name": "Performance Metrics",
+          "type": "section"
+        }
+      ]
+    },
+    "performance-monitor.md": {
+      "hash": "2be55d0e639a",
+      "indexed_at": "2026-01-20T04:50:25.554056+00:00",
+      "language": "markdown",
+      "lines": 672,
+      "symbols": [
+        {
+          "docstring": "- **Name**: Performance Monitor - **Type**: Performance Optimization Agent - **Specialization**: Real-time metrics collection and bottleneck analysis",
+          "lines": [
+            10,
+            15
+          ],
+          "name": "Agent Profile",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                18,
+                101
+              ],
+              "name": "1. Real-Time Metrics Collection",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                102,
+                176
+              ],
+              "name": "2. Bottleneck Detection & Analysis",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                177,
+                264
+              ],
+              "name": "3. SLA Monitoring & Alerting",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                265,
+                340
+              ],
+              "name": "4. Resource Utilization Tracking",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            16,
+            340
+          ],
+          "name": "Core Capabilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                343,
+                424
+              ],
+              "name": "Performance Data Collection",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                425,
+                506
+              ],
+              "name": "Anomaly Detection",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            341,
+            506
+          ],
+          "name": "MCP Integration Hooks",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                509,
+                579
+              ],
+              "name": "Real-Time Performance Dashboard",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            507,
+            579
+          ],
+          "name": "Dashboard Integration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                582,
+                599
+              ],
+              "name": "Monitoring Commands",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                600,
+                611
+              ],
+              "name": "Alert Configuration",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            580,
+            611
+          ],
+          "name": "Operational Commands",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Load Balancer**: Provides performance data for load balancing decisions - **Topology Optimizer**: Supplies network and coordination metrics - **Re",
+              "lines": [
+                614,
+                618
+              ],
+              "name": "With Other Optimization Agents",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Task Orchestrator**: Monitors task execution performance - **Agent Coordinator**: Tracks agent health and performance - **Memory System**: Stores",
+              "lines": [
+                619,
+                623
+              ],
+              "name": "With Swarm Infrastructure",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            612,
+            623
+          ],
+          "name": "Integration Points",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                626,
+                672
+              ],
+              "name": "Key Metrics Dashboard",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            624,
+            672
+          ],
+          "name": "Performance Analytics",
+          "type": "section"
+        }
+      ]
+    },
+    "resource-allocator.md": {
+      "hash": "b617890e5d6f",
+      "indexed_at": "2026-01-20T04:50:25.552729+00:00",
+      "language": "markdown",
+      "lines": 674,
+      "symbols": [
+        {
+          "docstring": "- **Name**: Resource Allocator - **Type**: Performance Optimization Agent - **Specialization**: Adaptive resource allocation and predictive scaling -",
+          "lines": [
+            10,
+            15
+          ],
+          "name": "Agent Profile",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                18,
+                128
+              ],
+              "name": "1. Adaptive Resource Allocation",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                129,
+                265
+              ],
+              "name": "2. Predictive Scaling with Machine Learning",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                266,
+                362
+              ],
+              "name": "3. Circuit Breaker and Fault Tolerance",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                363,
+                491
+              ],
+              "name": "4. Performance Profiling and Optimization",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            16,
+            491
+          ],
+          "name": "Core Capabilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                494,
+                597
+              ],
+              "name": "Resource Management Integration",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            492,
+            597
+          ],
+          "name": "MCP Integration Hooks",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                600,
+                617
+              ],
+              "name": "Resource Management Commands",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                618,
+                632
+              ],
+              "name": "Optimization Commands",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            598,
+            632
+          ],
+          "name": "Operational Commands",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Load Balancer**: Provides resource allocation data for load balancing decisions - **Performance Monitor**: Shares performance metrics and bottlene",
+              "lines": [
+                635,
+                639
+              ],
+              "name": "With Other Optimization Agents",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Task Orchestrator**: Allocates resources for task execution - **Agent Coordinator**: Manages agent resource requirements - **Memory System**: Stor",
+              "lines": [
+                640,
+                644
+              ],
+              "name": "With Swarm Infrastructure",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            633,
+            644
+          ],
+          "name": "Integration Points",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                647,
+                674
+              ],
+              "name": "Resource Allocation KPIs",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            645,
+            674
+          ],
+          "name": "Performance Metrics",
+          "type": "section"
+        }
+      ]
+    },
+    "topology-optimizer.md": {
+      "hash": "7c6c635c78a6",
+      "indexed_at": "2026-01-20T04:50:25.553637+00:00",
+      "language": "markdown",
+      "lines": 808,
+      "symbols": [
+        {
+          "docstring": "- **Name**: Topology Optimizer - **Type**: Performance Optimization Agent - **Specialization**: Dynamic swarm topology reconfiguration and network opt",
+          "lines": [
+            10,
+            15
+          ],
+          "name": "Agent Profile",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                18,
+                106
+              ],
+              "name": "1. Dynamic Topology Reconfiguration",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                107,
+                184
+              ],
+              "name": "2. Network Latency Optimization",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                185,
+                283
+              ],
+              "name": "3. Agent Placement Strategies",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                284,
+                369
+              ],
+              "name": "4. Communication Pattern Optimization",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            16,
+            369
+          ],
+          "name": "Core Capabilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                372,
+                473
+              ],
+              "name": "Topology Management Integration",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                474,
+                547
+              ],
+              "name": "Neural Network Integration",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            370,
+            547
+          ],
+          "name": "MCP Integration Hooks",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                550,
+                644
+              ],
+              "name": "1. Genetic Algorithm for Topology Evolution",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                645,
+                723
+              ],
+              "name": "2. Simulated Annealing for Topology Optimization",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            548,
+            723
+          ],
+          "name": "Advanced Optimization Algorithms",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                726,
+                743
+              ],
+              "name": "Topology Optimization Commands",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                744,
+                755
+              ],
+              "name": "Agent Placement Commands",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            724,
+            755
+          ],
+          "name": "Operational Commands",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Load Balancer**: Coordinates topology changes with load distribution - **Performance Monitor**: Receives topology performance metrics - **Resource",
+              "lines": [
+                758,
+                762
+              ],
+              "name": "With Other Optimization Agents",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Task Orchestrator**: Adapts task distribution to topology changes - **Agent Coordinator**: Manages agent connections during topology updates - **M",
+              "lines": [
+                763,
+                767
+              ],
+              "name": "With Swarm Infrastructure",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            756,
+            767
+          ],
+          "name": "Integration Points",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                770,
+                808
+              ],
+              "name": "Topology Performance Indicators",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            768,
+            808
+          ],
+          "name": "Performance Metrics",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.182145+00:00",
+  "version": "1.0"
+}

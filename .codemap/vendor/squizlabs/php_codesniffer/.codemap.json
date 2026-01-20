@@ -1,0 +1,4475 @@
+{
+  "directory": "vendor/squizlabs/php_codesniffer",
+  "files": {
+    "CHANGELOG.md": {
+      "hash": "b9f20ff88cdc",
+      "indexed_at": "2026-01-20T04:49:07.514103+00:00",
+      "language": "markdown",
+      "lines": 8138,
+      "symbols": [
+        {
+          "docstring": "_Nothing yet._",
+          "lines": [
+            5,
+            8
+          ],
+          "name": "[Unreleased]",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Runtime support for PHP 8.5. All known PHP 8.5 deprecation notices have been fixed. - Syntax support for new PHP 8.5 features will follow in a futur",
+              "lines": [
+                11,
+                15
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Various housekeeping, including improvements to the tests and documentation. - Thanks to [Rodrigo Primo][@rodrigoprimo] and [Juliette Reinders Folme",
+              "lines": [
+                16,
+                19
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#1216]: Tokenizer/PHP: added more defensive coding to prevent PHP 8.5 \"Using null as an array offset\" deprecation notices. - Thanks to [A",
+              "lines": [
+                20,
+                26
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Please be aware that the `master` branch has been renamed to `3.x` and the default branch has changed to the `4.x` branch. - If you contribute to PH",
+              "lines": [
+                27,
+                35
+              ],
+              "name": "Other",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            9,
+            35
+          ],
+          "name": "[3.13.5] - 2025-11-04",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Fixed bug [#1213]: ability to run tests for external standards using the PHPCS native test framework was broken. - Thanks to [Juliette Reinders Folm",
+              "lines": [
+                38,
+                47
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            36,
+            47
+          ],
+          "name": "[3.13.4] - 2025-09-05",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Tokenizer support for PHP 8.4 dereferencing of new expressions without wrapping parentheses. [#1160] - Thanks to [Juliette Reinders Folmer][@jrfnl]",
+              "lines": [
+                50,
+                67
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Tokenizer/PHP: fully qualified `true`/`false`/`null` will now be tokenized as `T_NS_SEPARATOR` + `T_TRUE`/`T_FALSE`/`T_NULL`. [#1201] - Previously,",
+              "lines": [
+                68,
+                85
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#1112] : `--parallel` option fails if PHP_CodeSniffer is invoked via bash and the invokation creates a non-PHPCS-managed process. - Thank",
+              "lines": [
+                86,
+                98
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The [Wiki documentation] is now publicly editable. :tada: - Update proposals can be submittted by opening a pull request in the [PHPCSStandards/PHP_",
+              "lines": [
+                99,
+                128
+              ],
+              "name": "Other",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            48,
+            128
+          ],
+          "name": "[3.13.3] - 2025-09-04",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- The documentation for the following sniffs has been improved: - Squiz.Classes.SelfMemberReference - Thanks to [Rodrigo Primo][@rodrigoprimo] for the",
+              "lines": [
+                131,
+                137
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#1135] : Squiz.Functions.FunctionDeclarationArgumentSpacing: typo in new error code `SpacingAfterSetVis\\[i\\]bility`. - Thanks to [Juliett",
+              "lines": [
+                138,
+                144
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            129,
+            144
+          ],
+          "name": "[3.13.2] - 2025-06-18",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Added support for PHP 8.4 properties with asymmetric visibility to File::getMemberProperties() through a new `set_scope` array index in the return v",
+              "lines": [
+                147,
+                164
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The PSR2.Classes.PropertyDeclaration will now check that a set-visibility modifier keyword is placed after a potential general visibility keyword. [",
+              "lines": [
+                165,
+                180
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The latest PHP_CodeSniffer XSD file is now available via the following permalink: <https://schema.phpcodesniffer.com/phpcs.xsd>. [#1094] Older XSD f",
+              "lines": [
+                181,
+                197
+              ],
+              "name": "Other",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            145,
+            197
+          ],
+          "name": "[3.13.1] - 2025-06-13",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Added support for PHP 8.4 asymmetric visibility modifiers to the tokenizer. [#871] - Thanks to [Daniel Scherzer][@DanielEScherzer] for the patch. -",
+              "lines": [
+                200,
+                206
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Generic.WhiteSpace.LanguageConstructSpacing: will now also check the spacing after the `goto` language construct keyword. [#917] - Thanks to [Juliet",
+              "lines": [
+                207,
+                222
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Nearly everything which was soft deprecated before is now hard deprecated and will show deprecation notices: - This applies to: - All sniffs which w",
+              "lines": [
+                223,
+                236
+              ],
+              "name": "Deprecated",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#1040] : Generic.Strings.UnnecessaryHeredoc - false positive for heredocs containing escape sequences. - Thanks to [Juliette Reinders Fol",
+              "lines": [
+                237,
+                244
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Calling all testers!**",
+              "lines": [
+                245,
+                267
+              ],
+              "name": "Other",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            198,
+            267
+          ],
+          "name": "[3.13.0] - 2025-05-11",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Added support for PHP 8.4 `final` properties to the following sniffs: - Generic.PHP.LowerCaseConstant [#948] - Generic.PHP.UpperCaseConstant [#948]",
+              "lines": [
+                270,
+                277
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Tokenizer/PHP: a PHP open tag at the very end of a file will now always be tokenized as T_OPEN_TAG, independently of the PHP version. [#937] - Previ",
+              "lines": [
+                278,
+                290
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#830] : PEAR.Commenting.FunctionComment will no longer remove blank lines within attributes. - Thanks to [Juliette Reinders Folmer][@jrfn",
+              "lines": [
+                291,
+                329
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            268,
+            329
+          ],
+          "name": "[3.12.2] - 2025-04-13",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Documentation for the following sniffs: - Squiz.Commenting.BlockComment - Thanks to [Colin Stewart][@costdev] for the patch.",
+              "lines": [
+                332,
+                336
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Generic.WhiteSpace.HereNowdocIdentifierSpacing: improved error message text. - Thanks to [Juliette Reinders Folmer][@jrfnl] for the patch. - Various",
+              "lines": [
+                337,
+                342
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The `Generic.Functions.CallTimePassByReference` sniff. See [#921]. - This sniff will be removed in version 4.0.0.",
+              "lines": [
+                343,
+                346
+              ],
+              "name": "Deprecated",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#906] : Fixer: prevent `InvalidArgumentException`s when displaying verbose information. - Thanks to [Juliette Reinders Folmer][@jrfnl] fo",
+              "lines": [
+                347,
+                356
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- PHP_CodeSniffer 4.0 is coming soon! Interested in a sneak peek ? Join the live stream at any time on April 14, 15, 17 or 18. Read the open invitatio",
+              "lines": [
+                357,
+                367
+              ],
+              "name": "Other",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            330,
+            367
+          ],
+          "name": "[3.12.1] - 2025-04-04",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Added support for PHP 8.4 `final` properties to File::getMemberProperties() through a new `is_final` array index in the return value. [#834] - Thank",
+              "lines": [
+                370,
+                380
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- PHPCBF: the messaging when no fixable errors are found will now distinguish between \"No violations\" (at all) versus \"No fixable errors\". [#806] - Th",
+              "lines": [
+                381,
+                425
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "All deprecation are slated for removal in PHP_CodeSniffer 4.0.",
+              "lines": [
+                426,
+                449
+              ],
+              "name": "Deprecated",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#794] : Generators: prevent fatal error when the XML documentation does not comply with the expected format. - It is recommended to valid",
+              "lines": [
+                450,
+                487
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- A new [wiki page][wiki-about-standards] is available to clarify the difference between a project ruleset and an external standard. - This wiki page",
+              "lines": [
+                488,
+                533
+              ],
+              "name": "Other",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            368,
+            533
+          ],
+          "name": "[3.12.0] - 2025-03-18",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Generic.ControlStructures.InlineControlStructure no longer unnecessarily listens for T_SWITCH tokens. [#595] - Thanks to [Rodrigo Primo][@rodrigopri",
+              "lines": [
+                536,
+                546
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#620] : Squiz.Functions.FunctionDeclarationArgumentSpacing: newlines after type will now be handled by the fixer. This also prevents a po",
+              "lines": [
+                547,
+                572
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            534,
+            572
+          ],
+          "name": "[3.11.3] - 2025-01-23",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Generators/HTML + Markdown: the output will now be empty (no page header/footer) when there are no docs to display. [#687] - This is in line with th",
+              "lines": [
+                575,
+                594
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#527] : Squiz.Arrays.ArrayDeclaration: short lists within a foreach condition should be ignored. - Thanks to [Rodrigo Primo][@rodrigoprim",
+              "lines": [
+                595,
+                627
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            573,
+            627
+          ],
+          "name": "[3.11.2] - 2024-12-11",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Output from the `--generator=...` feature will respect the OS-expected EOL char in more places. [#671] - Thanks to [Juliette Reinders Folmer][@jrfnl",
+              "lines": [
+                630,
+                635
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#674] : Generic.WhiteSpace.HereNowdocIdentifierSpacing broken XML documentation - Thanks to [Juliette Reinders Folmer][@jrfnl] for the pa",
+              "lines": [
+                636,
+                646
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            628,
+            646
+          ],
+          "name": "[3.11.1] - 2024-11-16",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Runtime support for PHP 8.4. All known PHP 8.4 deprecation notices have been fixed. - Syntax support for new PHP 8.4 features will follow in a futur",
+              "lines": [
+                649,
+                669
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The Common::getSniffCode() method will now throw an InvalidArgumentException exception if an invalid `$sniffClass` is passed. [#524], [#625] - Thank",
+              "lines": [
+                670,
+                689
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#3808][sq-3808] : Generic.WhiteSpace.ScopeIndent would throw false positive for tab indented multi-token yield from expression. - Thanks",
+              "lines": [
+                690,
+                733
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            647,
+            733
+          ],
+          "name": "[3.11.0] - 2024-11-12",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Various housekeeping, including improvements to the tests and documentation. - Thanks to [Rodrigo Primo][@rodrigoprimo] and [Juliette Reinders Folme",
+              "lines": [
+                736,
+                739
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#553] : Squiz.Classes.SelfMemberReference: false negative(s) when namespace operator was encountered between the namespace declaration an",
+              "lines": [
+                740,
+                759
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The provenance of PHAR files associated with a release can now be verified via [GitHub Artifact Attestations][ghattest] using the [GitHub CLI tool][",
+              "lines": [
+                760,
+                777
+              ],
+              "name": "Other",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            734,
+            777
+          ],
+          "name": "[3.10.3] - 2024-09-18",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- The following sniff(s) have received efficiency improvements: - Generic.Functions.FunctionCallArgumentSpacing - Thanks to [Juliette Reinders Folmer]",
+              "lines": [
+                780,
+                788
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#513] : Generic.Functions.FunctionCallArgumentSpacing did not ignore the body of a match expressions passed as a function argument, which",
+              "lines": [
+                789,
+                815
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            778,
+            815
+          ],
+          "name": "[3.10.2] - 2024-07-22",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Documentation for the following sniffs: - Generic.Commenting.DocComment - Thanks to [Rodrigo Primo][@rodrigoprimo] for the patch.",
+              "lines": [
+                818,
+                822
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The following have received efficiency improvements: - Type handling in the PHP Tokenizer - Thanks to [Juliette Reinders Folmer][@jrfnl] for the pat",
+              "lines": [
+                823,
+                829
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#110], [#437], [#475] : `File::findStartOfStatement()`: the start of statement/expression determination for tokens in parentheses/short a",
+              "lines": [
+                830,
+                845
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            816,
+            845
+          ],
+          "name": "[3.10.1] - 2024-05-22",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Tokenizer support for PHP 8.2 Disjunctive Normal Form (DNF) types. [#3731][sq-3731], [#387], [#461] - Includes new `T_TYPE_OPEN_PARENTHESIS` and `T_",
+              "lines": [
+                848,
+                859
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The help screens have received a face-lift for improved usability and readability. [#447] - Thanks to [Juliette Reinders Folmer][@jrfnl] for the pat",
+              "lines": [
+                860,
+                872
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#466] : Generic.Functions.CallTimePassByReference was not flagging call-time pass-by-reference in class instantiations using the self/par",
+              "lines": [
+                873,
+                896
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            846,
+            896
+          ],
+          "name": "[3.10.0] - 2024-05-20",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- The Generic.ControlStructures.DisallowYodaConditions sniff no longer listens for the null coalesce operator. [#458] - Thanks to [Rodrigo Primo][@rod",
+              "lines": [
+                899,
+                904
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#381] : Squiz.Commenting.ClosingDeclarationComment could throw the wrong error when the close brace being examined is at the very end of",
+              "lines": [
+                905,
+                928
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [ESLint 9.0] has been released and changes the supported configuration file format. The (deprecated) `Generic.Debug.ESLint` sniff only supports the",
+              "lines": [
+                929,
+                950
+              ],
+              "name": "Other",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            897,
+            950
+          ],
+          "name": "[3.9.2] - 2024-04-24",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Documentation for the following sniffs: - Generic.PHP.RequireStrictTypes - Squiz.WhiteSpace.MemberVarSpacing - Squiz.WhiteSpace.ScopeClosingBrace -",
+              "lines": [
+                953,
+                960
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The following sniffs have received performance related improvements: - Generic.CodeAnalysis.UselessOverridingMethod - Generic.Files.ByteOrderMark -",
+              "lines": [
+                961,
+                973
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#289] : Squiz.WhiteSpace.OperatorSpacing and PSR12.Operators.OperatorSpacing : improved fixer conflict protection by more strenuously avo",
+              "lines": [
+                974,
+                990
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            951,
+            990
+          ],
+          "name": "[3.9.1] - 2024-03-31",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Tokenizer support for PHP 8.3 typed class constants. [#321] - Additionally, the following sniffs have been updated to support typed class constants:",
+              "lines": [
+                993,
+                1025
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The Performance report can now also be used for a `phpcbf` run. [#308] - Thanks to [Juliette Reinders Folmer][@jrfnl] for the patch - Sniff tests wh",
+              "lines": [
+                1026,
+                1038
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Support for scanning JavaScript and CSS files. See [#2448][sq-2448]. - This also means that all sniffs which are only aimed at JavaScript or CSS fil",
+              "lines": [
+                1039,
+                1053
+              ],
+              "name": "Deprecated",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#127] : Squiz.Commenting.FunctionComment : The `MissingParamType` error code will now be used instead of `MissingParamName` when a parame",
+              "lines": [
+                1054,
+                1077
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- A \"Community cc list\" has been introduced to ping maintainers of external standards and integrators for input regarding change proposals for PHP_Cod",
+              "lines": [
+                1078,
+                1108
+              ],
+              "name": "Other",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            991,
+            1108
+          ],
+          "name": "[3.9.0] - 2024-02-16",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Documentation has been added for the following sniffs: - Generic.CodeAnalysis.EmptyPHPStatement - Generic.Formatting.SpaceBeforeCast - Generic.PHP.S",
+              "lines": [
+                1111,
+                1122
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- GitHub releases will now always only contain unversioned release assets (PHARS + asc files) (same as it previously was in the squizlabs repo). See [",
+              "lines": [
+                1123,
+                1128
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#124] : Report Full : avoid unnecessarily wrapping lines when `-s` is used - Thanks to [Brad Jorsch][@anomiex] for the patch - Fixed bug",
+              "lines": [
+                1129,
+                1154
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1109,
+            1154
+          ],
+          "name": "[3.8.1] - 2024-01-11",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- The `squizlabs/PHP_CodeSniffer` repository has been abandoned. The `PHPCSStandards/PHP_CodeSniffer` repository will serve as the continuation of the",
+              "lines": [
+                1159,
+                1173
+              ],
+              "name": "Breaking Changes",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Runtime support for PHP 8.3. All known PHP 8.3 deprecation notices have been fixed - Syntax support for new PHP 8.3 features will follow in a future",
+              "lines": [
+                1174,
+                1219
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Changes have been made to the way PHPCS handles invalid sniff properties being set in a custom ruleset - Fixes PHP 8.2 deprecation notices for prope",
+              "lines": [
+                1220,
+                1283
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Removed support for installation via PEAR - Use composer or the PHAR files instead",
+              "lines": [
+                1284,
+                1287
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#2857][sq-2857] : Squiz/NonExecutableCode: prevent false positives when exit is used in a ternary expression or as default with null coal",
+              "lines": [
+                1288,
+                1409
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "[Squizlabs/PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) is dead. Long live [PHPCSStandards/PHP_CodeSniffer](https://github.com/PHPCS",
+          "lines": [
+            1155,
+            1409
+          ],
+          "name": "[3.8.0] - 2023-12-08",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Newer versions of Composer will now suggest installing PHPCS using require-dev instead of require - Thanks to [Gary Jones][@GaryJones] for the patch",
+              "lines": [
+                1412,
+                1421
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#3616][sq-3616] : Squiz.PHP.DisallowComparisonAssignment false positive for PHP 8 match expression - Thanks to [Juliette Reinders Folmer]",
+              "lines": [
+                1422,
+                1456
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1410,
+            1456
+          ],
+          "name": "[3.7.2] - 2023-02-23",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Fixed bug [#3609][sq-3609] : Methods/constants with name empty/isset/unset are always reported as error - Thanks to [Juliette Reinders Folmer][@jrfn",
+              "lines": [
+                1459,
+                1464
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1457,
+            1464
+          ],
+          "name": "[3.7.1] - 2022-06-18",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Added support for PHP 8.1 explicit octal notation - This new syntax has been backfilled for PHP versions less than 8.1 - Thanks to [Mark Baker][@Mar",
+              "lines": [
+                1467,
+                1483
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- File::getMethodParameters now supports the new PHP 8.1 readonly token - When constructor property promotion is used, a new property_readonly array i",
+              "lines": [
+                1484,
+                1508
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#3502][sq-3502] : A match statement within an array produces Squiz.Arrays.ArrayDeclaration.NoKeySpecified - Fixed bug [#3503][sq-3503] :",
+              "lines": [
+                1509,
+                1538
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1465,
+            1538
+          ],
+          "name": "[3.7.0] - 2022-06-13",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Processing large code bases that use tab indenting inside comments and strings will now be faster - Thanks to [Thiemo Kreuz][@thiemowmde] for the pa",
+              "lines": [
+                1541,
+                1544
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#3388][sq-3388] : phpcs does not work when run from WSL drives - Thanks to [Juliette Reinders Folmer][@jrfnl] and [Graham Wharton][@gwhar",
+              "lines": [
+                1545,
+                1577
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1539,
+            1577
+          ],
+          "name": "[3.6.2] - 2021-12-13",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- PHPCS annotations can now be specified using hash-style comments - Previously, only slash-style and block-style comments could be used to do things",
+              "lines": [
+                1580,
+                1606
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Generic.NamingConventions.ConstructorName no longer throws deprecation notices on PHP 8.1 - Thanks to [Juliette Reinders Folmer][@jrfnl] for the pat",
+              "lines": [
+                1607,
+                1678
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1578,
+            1678
+          ],
+          "name": "[3.6.1] - 2021-10-11",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Added support for PHP 8.0 union types - A new T_TYPE_UNION token is available to represent the pipe character - File::getMethodParameters(), getMeth",
+              "lines": [
+                1681,
+                1736
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The value of the T_FN_ARROW token has changed from \"T_FN_ARROW\" to \"PHPCS_T_FN_ARROW\" to avoid package conflicts - This will have no impact on custo",
+              "lines": [
+                1737,
+                1796
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed an issue that could occur when checking files on network drives, such as with WSL2 on Windows 10 - This works around a long-standing PHP bug w",
+              "lines": [
+                1797,
+                1854
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1679,
+            1854
+          ],
+          "name": "[3.6.0] - 2021-04-09",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Reverted a change to the way include/exclude patterns are processed for STDIN content - This change is not backwards compatible and will be re-intro",
+              "lines": [
+                1857,
+                1860
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1855,
+            1860
+          ],
+          "name": "[3.5.8] - 2020-10-23",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- The PHP 8.0 T_NULLSAFE_OBJECT_OPERATOR token has been made available for older versions - Existing sniffs that check for T_OBJECT_OPERATOR have been",
+              "lines": [
+                1863,
+                1878
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The autoloader has been changed to fix sniff class name detection issues that may occur when running on PHP 7.4+ - Thanks to [Eloy Lafuente][@stronk",
+              "lines": [
+                1879,
+                1884
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed Squiz.Formatting.OperatorBracket false positive when exiting with a negative number - Fixed Squiz.PHP.DisallowComparisonAssignment false posit",
+              "lines": [
+                1885,
+                1939
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1861,
+            1939
+          ],
+          "name": "[3.5.7] - 2020-10-23",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Added support for PHP 8.0 magic constant dereferencing - Thanks to [Juliette Reinders Folmer][@jrfnl] for the patch - Added support for changes to t",
+              "lines": [
+                1942,
+                1952
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The cache is no longer used if the list of loaded PHP extensions changes - Thanks to [Juliette Reinders Folmer][@jrfnl] for the patch - `Generic.Nam",
+              "lines": [
+                1953,
+                1962
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#2877][sq-2877] : PEAR.Functions.FunctionCallSignature false positive for array of functions - Thanks to [Vincent Langlet][@VincentLangle",
+              "lines": [
+                1963,
+                1985
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1940,
+            1985
+          ],
+          "name": "[3.5.6] - 2020-08-10",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- The T_FN backfill now works more reliably so T_FN tokens only ever represent real arrow functions - Thanks to [Juliette Reinders Folmer][@jrfnl] for",
+              "lines": [
+                1988,
+                1993
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Error wording in PEAR.Functions.FunctionCallSignature now always uses \"parenthesis\" instead of sometimes using \"bracket\" - Thanks to [Vincent Langle",
+              "lines": [
+                1994,
+                2028
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1986,
+            2028
+          ],
+          "name": "[3.5.5] - 2020-04-17",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- The PHP 7.4 numeric separator backfill now works correctly for more float formats - Thanks to [Juliette Reinders Folmer][@jrfnl] for the patch - The",
+              "lines": [
+                2031,
+                2054
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#2497][sq-2497] : Sniff properties not set when referencing a sniff using relative paths or non-native slashes - Thanks to [Juliette Rein",
+              "lines": [
+                2055,
+                2106
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            2029,
+            2106
+          ],
+          "name": "[3.5.4] - 2020-01-31",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- The PHP 7.4 T_FN token has been made available for older versions - T_FN represents the fn string used for arrow functions - The double arrow become",
+              "lines": [
+                2109,
+                2149
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#2586][sq-2586] : Generic.WhiteSpace.ScopeIndent false positives when indenting open tags at a non tab-stop - Fixed bug [#2638][sq-2638]",
+              "lines": [
+                2150,
+                2174
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            2107,
+            2174
+          ],
+          "name": "[3.5.3] - 2019-12-04",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Generic.ControlStructures.DisallowYodaConditions now returns less false positives - False positives were being returned for array comparisons, or wh",
+              "lines": [
+                2177,
+                2186
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#2654][sq-2654] : Incorrect indentation for arguments of multiline function calls - Fixed bug [#2656][sq-2656] : Squiz.WhiteSpace.MemberV",
+              "lines": [
+                2187,
+                2202
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            2175,
+            2202
+          ],
+          "name": "[3.5.2] - 2019-10-28",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Very very verbose diff report output has slightly changed to improve readability - Output is printed when running PHPCS with the --report=diff and -",
+              "lines": [
+                2205,
+                2219
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#2506][sq-2506] : PSR2 standard can't auto fix multi-line function call inside a string concat statement - Fixed bug [#2530][sq-2530] : P",
+              "lines": [
+                2220,
+                2247
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            2203,
+            2247
+          ],
+          "name": "[3.5.1] - 2019-10-17",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- The included PSR12 standard is now complete and ready to use - Check your code using PSR-12 by running PHPCS with --standard=PSR12 - Added support f",
+              "lines": [
+                2250,
+                2383
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#2391][sq-2391] : Sniff-specific ignore rules inside rulesets are filtering out too many files - Thanks to [Juliette Reinders Folmer][@jr",
+              "lines": [
+                2384,
+                2442
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            2248,
+            2442
+          ],
+          "name": "[3.5.0] - 2019-09-27",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Squiz.Arrays.ArrayDeclaration now has improved handling of syntax errors",
+              "lines": [
+                2445,
+                2447
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed an issue where the PCRE JIT on PHP 7.3 caused PHPCS to die when using the parallel option - PHPCS now disables the PCRE JIT before running - F",
+              "lines": [
+                2448,
+                2471
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            2443,
+            2471
+          ],
+          "name": "[3.4.2] - 2019-04-11",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- The PEAR installable version of PHPCS was missing some files, which have been re-included in this release - The code report was not previously avail",
+              "lines": [
+                2474,
+                2546
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#2298][sq-2298] : PSR2.Classes.ClassDeclaration allows extended class on new line - Thanks to [Micha\u0142 Bundyra][@michalbundyra] for the pa",
+              "lines": [
+                2547,
+                2566
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            2472,
+            2566
+          ],
+          "name": "[3.4.1] - 2019-03-19",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- The Generic.Formatting.NoSpaceAfterCast sniff has been deprecated and will be removed in version 4 - The functionality of this sniff is now availabl",
+              "lines": [
+                2569,
+                2575
+              ],
+              "name": "Deprecated",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Rule include patterns in a ruleset.xml file are now evaluated as OR instead of AND - Previously, a file had to match every include pattern and no ex",
+              "lines": [
+                2576,
+                2706
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#2109][sq-2109] : Generic.Functions.CallTimePassByReference false positive for bitwise and used in function argument - Fixed bug [#2165][",
+              "lines": [
+                2707,
+                2754
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            2567,
+            2754
+          ],
+          "name": "[3.4.0] - 2018-12-20",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- PHPCS should now run under PHP 7.3 without deprecation warnings - Thanks to [Nick Wilde][@NickDickinsonWilde] for the patch",
+              "lines": [
+                2757,
+                2760
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#1496][sq-1496] : Squiz.Strings.DoubleQuoteUsage not unescaping dollar sign when fixing - Thanks to [Micha\u0142 Bundyra][@michalbundyra] for",
+              "lines": [
+                2761,
+                2767
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            2755,
+            2767
+          ],
+          "name": "[2.9.2] - 2018-11-08",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Fixed a problem where the report cache was not being cleared when the sniffs inside a standard were updated - The info report (--report=info) now ha",
+              "lines": [
+                2770,
+                2787
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed a problem where referencing a relative file path in a ruleset XML file could add unnecessary sniff exclusions - This didn't actually exclude a",
+              "lines": [
+                2788,
+                2816
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            2768,
+            2816
+          ],
+          "name": "[3.3.2] - 2018-09-24",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Support for HHVM has been dropped due to recent unfixed bugs and HHVM refocus on Hack only - Thanks to [Walt Sorensen][@photodude] and [Juliette Rei",
+              "lines": [
+                2819,
+                2822
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The full report (the default report) now has improved word wrapping for multi-line messages and sniff codes - Thanks to [Juliette Reinders Folmer][@",
+              "lines": [
+                2823,
+                2869
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#2029][sq-2029] : Squiz.Scope.MemberVarScope throws fatal error when a property is found in an interface - Thanks to [Juliette Reinders F",
+              "lines": [
+                2870,
+                2889
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            2817,
+            2889
+          ],
+          "name": "[3.3.1] - 2018-07-27",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- The Squiz.WhiteSpace.LanguageConstructSpacing sniff has been deprecated and will be removed in version 4 - The sniff has been moved to the Generic s",
+              "lines": [
+                2892,
+                2920
+              ],
+              "name": "Deprecated",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- This release contains an incomplete version of the PSR-12 coding standard - Errors found using this standard should be valid, but it will miss a lot",
+              "lines": [
+                2921,
+                2925
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Config values set using --runtime-set now override any config values set in rulesets or the CodeSniffer.conf file - You can now apply include-patter",
+              "lines": [
+                2926,
+                3061
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#1863][sq-1863] : File::findEndOfStatement() not working when passed a scope opener - Fixed bug [#1876][sq-1876] : PSR2.Namespaces.UseDec",
+              "lines": [
+                3062,
+                3123
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            2890,
+            3123
+          ],
+          "name": "[3.3.0] - 2018-06-07",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- The new phpcs: comment syntax can now be prefixed with an at symbol ( @phpcs: ) - This restores the behaviour of the previous syntax where these com",
+              "lines": [
+                3126,
+                3160
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed test suite compatibility with PHPUnit 7 - Fixed bug [#1793][sq-1793] : PSR2 forcing exact indent for function call opening statements - Fixed",
+              "lines": [
+                3161,
+                3190
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            3124,
+            3190
+          ],
+          "name": "[3.2.3] - 2018-02-21",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Disabled STDIN detection on Windows - This fixes a problem with IDE plugins (e.g., PHPStorm) hanging on Windows",
+              "lines": [
+                3193,
+                3196
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            3191,
+            3196
+          ],
+          "name": "[3.2.2] - 2017-12-20",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Empty diffs are no longer followed by a newline character (request [#1781][sq-1781]) - Generic.Functions.OpeningFunctionBraceKernighanRitchie no lon",
+              "lines": [
+                3199,
+                3204
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed problems with some scripts and plugins waiting for STDIN - This was a notable problem with IDE plugins (e.g., PHPStorm) and build systems - Fi",
+              "lines": [
+                3205,
+                3212
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            3197,
+            3212
+          ],
+          "name": "[3.2.1] - 2017-12-18",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- This release deprecates the @codingStandards comment syntax used for sending commands to PHP_CodeSniffer - The existing syntax will continue to work",
+              "lines": [
+                3215,
+                3233
+              ],
+              "name": "Deprecated",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The phpcs:disable and phpcs:ignore comments can now selectively ignore specific sniffs (request [#604][sq-604]) - E.g., phpcs:disable Generic.Commen",
+              "lines": [
+                3234,
+                3316
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#1462][sq-1462] : Error processing cyrillic strings in Tokenizer - Fixed bug [#1573][sq-1573] : Squiz.WhiteSpace.LanguageConstructSpacing",
+              "lines": [
+                3317,
+                3353
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            3213,
+            3353
+          ],
+          "name": "[3.2.0] - 2017-12-13",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Restored preference of non-dist files over dist files for phpcs.xml and phpcs.xml.dist - The order that the files are searched is now: .phpcs.xml, p",
+              "lines": [
+                3356,
+                3366
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#1512][sq-1512] : PEAR.Functions.FunctionCallSignature enforces spaces when no arguments if required spaces is not 0 - Fixed bug [#1522][",
+              "lines": [
+                3367,
+                3395
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            3354,
+            3395
+          ],
+          "name": "[3.1.1] - 2017-10-17",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- This release includes a change to support newer versions of PHPUnit (versions 4, 5, and 6 are now supported) - The custom PHP_CodeSniffer test runne",
+              "lines": [
+                3398,
+                3458
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#1550][sq-1550] : Squiz.Commenting.FunctionComment false positive when function contains closure - Fixed bug [#1577][sq-1577] : Generic.I",
+              "lines": [
+                3459,
+                3482
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            3396,
+            3482
+          ],
+          "name": "[3.1.0] - 2017-09-20",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- The code report now gracefully handles tokenizer exceptions - The phpcs and phpcbf scripts are now the only places that exit() in the code - This al",
+              "lines": [
+                3485,
+                3498
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed a problem where the source report was not printing the correct number of errors found - Fixed a problem where the --cache=/path/to/cachefile C",
+              "lines": [
+                3499,
+                3527
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            3483,
+            3527
+          ],
+          "name": "[3.0.2] - 2017-07-18",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- This release contains a fix for a security advisory related to the improper handling of a shell command - A properly crafted filename would allow fo",
+              "lines": [
+                3530,
+                3540
+              ],
+              "name": "Security",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Arguments on the command line now override or merge with those specified in a ruleset.xml file in all cases - PHPCS now stops looking for a phpcs.xm",
+              "lines": [
+                3541,
+                3563
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed a problem where excluding a message from a custom standard's own sniff would exclude the whole sniff - This caused some PSR2 errors to be unde",
+              "lines": [
+                3564,
+                3593
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            3528,
+            3593
+          ],
+          "name": "[3.0.1] - 2017-06-14",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Fixed bug [#1442][sq-1442] : T_NULLABLE detection not working for nullable parameters and return type hints in some cases - Fixed bug [#1448][sq-144",
+              "lines": [
+                3596,
+                3603
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            3594,
+            3603
+          ],
+          "name": "[2.9.1] - 2017-05-22",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Added an --ignore-annotations command line argument to ignore all @codingStandards annotations in code comments (request [#811][sq-811]) - This allo",
+              "lines": [
+                3606,
+                3623
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#834][sq-834] : PSR2.ControlStructures.SwitchDeclaration does not handle if branches with returns - Thanks to [Fabian Wiget][@fabacino] f",
+              "lines": [
+                3624,
+                3631
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            3604,
+            3631
+          ],
+          "name": "[3.0.0] - 2017-05-04",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- This release contains a fix for a security advisory related to the improper handling of shell commands - Uses of shell_exec() and exec() were not es",
+              "lines": [
+                3634,
+                3653
+              ],
+              "name": "Security",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The indent property of PEAR.Classes.ClassDeclaration has been removed - Instead of calculating the indent of the brace, it just ensures the brace is",
+              "lines": [
+                3654,
+                3661
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#1333][sq-1333] : The new autoloader breaks some frameworks with custom autoloaders - Fixed bug [#1334][sq-1334] : Undefined offset when",
+              "lines": [
+                3662,
+                3668
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            3632,
+            3668
+          ],
+          "name": "[3.0.0RC4] - 2017-03-02",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Added support for ES6 class declarations - Previously, these class were tokenized as JS objects but are now tokenized as normal T_CLASS structures -",
+              "lines": [
+                3671,
+                3687
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed an issue where excluding a file using a @codingStandardsIgnoreFile comment would produce errors - For PHPCS, it would show empty files being p",
+              "lines": [
+                3688,
+                3699
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            3669,
+            3699
+          ],
+          "name": "[3.0.0RC3] - 2017-02-02",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Made the Runner class easier to use with wrapper scripts - Full usage information is no longer printed when a usage error is encountered (request [#",
+              "lines": [
+                3702,
+                3707
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed an undefined var name error that could be produced while running PHPCBF - Fixed bug [#1167][sq-1167] : 3.0.0RC1 PHAR does not work with PEAR s",
+              "lines": [
+                3708,
+                3716
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            3700,
+            3716
+          ],
+          "name": "[3.0.0RC2] - 2016-11-30",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Progress output now shows E and W in green when a file has fixable errors or warnings - Only supported if colors are enabled - PHPCBF no longer prod",
+              "lines": [
+                3719,
+                3733
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed shell error appearing on some systems when trying to find executable paths",
+              "lines": [
+                3734,
+                3738
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            3717,
+            3738
+          ],
+          "name": "[3.0.0RC1] - 2016-09-02",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Min PHP version increased from 5.1.2 to 5.4.0 - Added optional caching of results between runs (request [#530][sq-530]) - Enable the cache by using",
+              "lines": [
+                3741,
+                3809
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The included PHPCS standard has been removed - All rules are now found inside the phpcs.xml.dist file - Running \"phpcs\" without any arguments from a",
+              "lines": [
+                3810,
+                3826
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            3739,
+            3826
+          ],
+          "name": "[3.0.0a1] - 2016-07-20",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Added Generic.Debug.ESLint sniff to run ESLint over JS files and report errors - Set eslint path using: phpcs --config-set eslint_path /path/to/esli",
+              "lines": [
+                3829,
+                3853
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#1266][sq-1266] : PEAR.WhiteSpace.ScopeClosingBrace can throw an error while fixing mixed PHP/HTML - Fixed bug [#1364][sq-1364] : Yield F",
+              "lines": [
+                3854,
+                3882
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            3827,
+            3882
+          ],
+          "name": "[2.9.0] - 2017-05-04",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- This release contains a fix for a security advisory related to the improper handling of shell commands - Uses of shell_exec() and exec() were not es",
+              "lines": [
+                3885,
+                3904
+              ],
+              "name": "Security",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The PHP-supplied T_COALESCE_EQUAL token has been replicated for PHP versions before 7.2 - PEAR.Functions.FunctionDeclaration now reports an error fo",
+              "lines": [
+                3905,
+                3918
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#1340][sq-1340] : STDIN file contents not being populated in some cases - Thanks to [David Bi\u0148ovec][@david-binda] for the patch - Fixed b",
+              "lines": [
+                3919,
+                3936
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            3883,
+            3936
+          ],
+          "name": "[2.8.1] - 2017-03-02",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- The Internal.NoCodeFound error is no longer generated for content sourced from STDIN - This should stop some Git hooks generating errors because PHP",
+              "lines": [
+                3939,
+                3971
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#1230][sq-1230] : JS tokeniser incorrectly tokenises bitwise shifts as comparison - Thanks to [Ryan McCue][@rmccue] for the patch - Fixed",
+              "lines": [
+                3972,
+                4019
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            3937,
+            4019
+          ],
+          "name": "[2.8.0] - 2017-02-02",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Squiz.ControlStructures.ControlSignature.SpaceAfterCloseParenthesis fix now removes unnecessary whitespace - Squiz.Formatting.OperatorBracket no lon",
+              "lines": [
+                4022,
+                4035
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#1135][sq-1135] : PEAR.ControlStructures.MultiLineCondition.CloseBracketNewLine not detected if preceded by multiline function call - Fix",
+              "lines": [
+                4036,
+                4072
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            4020,
+            4072
+          ],
+          "name": "[2.7.1] - 2016-11-30",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Added --file-list command line argument to allow a list of files and directories to be specified in an external file - Useful if you have a generate",
+              "lines": [
+                4075,
+                4131
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#985][sq-985] : Duplicate class definition detection generates false-positives in media queries - Thanks to [Raphael Horber][@rhorber] fo",
+              "lines": [
+                4132,
+                4173
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            4073,
+            4173
+          ],
+          "name": "[2.7.0] - 2016-09-02",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Added a new --exclude CLI argument to exclude a list of sniffs from checking and fixing (request [#904][sq-904]) - Accepts the same sniff codes as t",
+              "lines": [
+                4176,
+                4191
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#790][sq-790] : Incorrect missing @throws error in methods that use closures - Fixed bug [#908][sq-908] : PSR2 standard is not checking t",
+              "lines": [
+                4192,
+                4226
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            4174,
+            4226
+          ],
+          "name": "[2.6.2] - 2016-07-14",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- The PHP-supplied T_COALESCE token has been replicated for PHP versions before 7.0 - Function return types of self, parent and callable are now token",
+              "lines": [
+                4229,
+                4237
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#940][sq-940] : Auto-fixing issue encountered with inconsistent use of braces - Fixed bug [#943][sq-943] : Squiz.PHP.InnerFunctions.NotAl",
+              "lines": [
+                4238,
+                4276
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            4227,
+            4276
+          ],
+          "name": "[2.6.1] - 2016-05-31",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Paths used when setting CLI arguments inside ruleset.xml files are now relative to the ruleset location (request [#847][sq-847]) - This change only",
+              "lines": [
+                4279,
+                4323
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#791][sq-791] : codingStandardsChangeSetting settings not working with namespaces - Fixed bug [#872][sq-872] : Incorrect detection of bla",
+              "lines": [
+                4324,
+                4366
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            4277,
+            4366
+          ],
+          "name": "[2.6.0] - 2016-04-04",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- The PHP-supplied T_SPACESHIP token has been replicated for PHP versions before 7.0 - T_SPACESHIP is now correctly identified as an operator - Thanks",
+              "lines": [
+                4369,
+                4384
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#622][sq-622] : Wrong detection of Squiz.CSS.DuplicateStyleDefinition with media queries - Fixed bug [#752][sq-752] : The missing excepti",
+              "lines": [
+                4385,
+                4440
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            4367,
+            4440
+          ],
+          "name": "[2.5.1] - 2016-01-20",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- PHPCS will now look for a phpcs.xml file in parent directories as well as the current directory (request [#626][sq-626]) - PHPCS will now use a phpc",
+              "lines": [
+                4443,
+                4458
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#660][sq-660] : Syntax checks can fail on Windows with PHP5.6 - Fixed bug [#784][sq-784] : $this->trait is seen as a T_TRAIT token - Fixe",
+              "lines": [
+                4459,
+                4484
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            4441,
+            4484
+          ],
+          "name": "[2.5.0] - 2015-12-11",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Added support for PHP 7 anonymous classes - Anonymous classes are now tokenized as T_ANON_CLASS and ignored by normal class sniffs - Added support f",
+              "lines": [
+                4487,
+                4510
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#601][sq-601] : Expected type hint int[]; found array in Squiz FunctionCommentSniff - Thanks to [Scato Eggen][@scato] for the patch - Fix",
+              "lines": [
+                4511,
+                4569
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            4485,
+            4569
+          ],
+          "name": "[2.4.0] - 2015-11-24",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- JSON report format now includes the fixable status for each error message and the total number of fixable errors - Added more guard code for functio",
+              "lines": [
+                4572,
+                4586
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#636][sq-636] : Some class names cause CSS tokenizer to hang - Fixed bug [#638][sq-638] : VCS blame reports output error content from the",
+              "lines": [
+                4587,
+                4623
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            4570,
+            4623
+          ],
+          "name": "[2.3.4] - 2015-09-09",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Improved the performance of the CSS tokenizer, especially on very large CSS files (thousands of lines) - Thanks to [Klaus Purer][@klausi] for the pa",
+              "lines": [
+                4626,
+                4638
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#584][sq-584] : Squiz.Arrays.ArrayDeclaration sniff gives incorrect NoComma error for multiline string values - Fixed bug [#589][sq-589]",
+              "lines": [
+                4639,
+                4671
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            4624,
+            4671
+          ],
+          "name": "[2.3.3] - 2015-06-24",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- The error message for PSR2.ControlStructures.SwitchDeclaration.WrongOpenercase is now clearer (request [#579][sq-579])",
+              "lines": [
+                4674,
+                4676
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#545][sq-545] : Long list of CASE statements can cause tokenizer to reach a depth limit - Fixed bug [#565][sq-565] : Squiz.WhiteSpace.Ope",
+              "lines": [
+                4677,
+                4690
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            4672,
+            4690
+          ],
+          "name": "[2.3.2] - 2015-04-29",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- PHPCS can now exit with 0 even if errors are found - Set the ignore_errors_on_exit config variable to 1 to set this behaviour - Use with the ignore_",
+              "lines": [
+                4693,
+                4708
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#479][sq-479] : Yielded values are not recognised as returned values in Squiz FunctionComment sniff - Fixed bug [#512][sq-512] : Endless",
+              "lines": [
+                4709,
+                4739
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            4691,
+            4739
+          ],
+          "name": "[2.3.1] - 2015-04-23",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- The existence of the main config file is now cached to reduce is_file() calls when it doesn't exist (request [#486][sq-486]) - Abstract classes insi",
+              "lines": [
+                4742,
+                4768
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#415][sq-415] : The @codingStandardsIgnoreStart has no effect during fixing - Fixed bug [#432][sq-432] : Properties of custom sniffs cann",
+              "lines": [
+                4769,
+                4807
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            4740,
+            4807
+          ],
+          "name": "[2.3.0] - 2015-03-04",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Added (hopefully) tastefully used colors to report and progress output for the phpcs command - Use the --colors command line argument to use colors",
+              "lines": [
+                4810,
+                4856
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#379][sq-379] : Squiz.Arrays.ArrayDeclaration.NoCommaAfterLast incorrectly detects comments - Fixed bug [#382][sq-382] : JS tokenizer inc",
+              "lines": [
+                4857,
+                4899
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            4808,
+            4899
+          ],
+          "name": "[2.2.0] - 2015-01-22",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Time and memory output is now shown if progress information is also shown (request [#335][sq-335]) - A tilde can now be used to reference a user's h",
+              "lines": [
+                4902,
+                4930
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#337][sq-337] : False positive with anonymous functions in Generic_Sniffs_WhiteSpace_ScopeIndentSniff - Fixed bug [#339][sq-339] : reform",
+              "lines": [
+                4931,
+                4967
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            4900,
+            4967
+          ],
+          "name": "[2.1.0] - 2014-12-18",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- JS tokenizer now sets functions as T_CLOSUREs if the function is anonymous - JS tokenizer now sets all objects to T_OBJECT - Object end braces are s",
+              "lines": [
+                4970,
+                4997
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#311][sq-311] : Suppression of function prototype breaks checking of lines within function - Fixed bug [#320][sq-320] : Code sniffer inde",
+              "lines": [
+                4998,
+                5005
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            4968,
+            5005
+          ],
+          "name": "[2.0.0] - 2014-12-05",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- JS tokenizer now detects xor statements correctly - The --config-show command now pretty-prints the config values - Thanks to [Ken Guest][@kenguest]",
+              "lines": [
+                5008,
+                5020
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#280][sq-280] : The --config-show option generates error when there is no config file - Fixed bug [#306][sq-306] : File containing only a",
+              "lines": [
+                5021,
+                5029
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            5006,
+            5029
+          ],
+          "name": "[1.5.6] - 2014-12-05",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- JS tokenizer now detects xor statements correctly - Improved detection of properties and objects in the JS tokenizer - Generic ScopeIndentSniff can",
+              "lines": [
+                5032,
+                5053
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#295][sq-295] : ScopeIndentSniff hangs when processing nested closures - Fixed bug [#298][sq-298] : False positive in ScopeIndentSniff wh",
+              "lines": [
+                5054,
+                5072
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            5030,
+            5072
+          ],
+          "name": "[2.0.0RC4] - 2014-11-07",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Improved default output for PHPCBF and removed the options to print verbose and progress output - If a .fixed file is supplied for a unit test file,",
+              "lines": [
+                5075,
+                5095
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#280][sq-280] : The --config-show option generates error when there is no config file",
+              "lines": [
+                5096,
+                5101
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            5073,
+            5101
+          ],
+          "name": "[2.0.0RC3] - 2014-10-16",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Minified JS and CSS files are now detected and skipped (fixes bug [#252][sq-252] and bug [#19899][pear-19899]) - A warning will be added to the file",
+              "lines": [
+                5104,
+                5151
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#243][sq-243] : Missing DocBlock not detected - Fixed bug [#248][sq-248] : FunctionCommentSniff expects ampersand on param name - Fixed b",
+              "lines": [
+                5152,
+                5170
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            5102,
+            5170
+          ],
+          "name": "[2.0.0RC2] - 2014-09-26",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- PHP tokenizer no longer converts class/function names to special tokens types - Class/function names such as parent and true would become special to",
+              "lines": [
+                5173,
+                5188
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#248][sq-248] : FunctionCommentSniff expects ampersand on param name - Fixed bug [#265][sq-265] : False positives with type hints in Forb",
+              "lines": [
+                5189,
+                5204
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            5171,
+            5204
+          ],
+          "name": "[1.5.5] - 2014-09-25",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- PHPCBF will now fix incorrect newline characters in a file - PHPCBF now exits cleanly when there are no errors to fix - Added phpcbf.bat file for Wi",
+              "lines": [
+                5207,
+                5260
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#20261][pear-20261] : phpcbf has an endless fixing loop - Fixed bug [#20268][pear-20268] : Incorrect documentation titles in PEAR documen",
+              "lines": [
+                5261,
+                5279
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            5205,
+            5279
+          ],
+          "name": "[2.0.0RC1] - 2014-08-06",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Removed use of sys_get_temp_dir() as this is not supported by the min PHP version - The installed_paths config var now accepts relative paths - The",
+              "lines": [
+                5282,
+                5304
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#20268][pear-20268] : Incorrect documentation titles in PEAR documentation - Fixed bug [#20296][pear-20296] : new array notion in functio",
+              "lines": [
+                5305,
+                5326
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            5280,
+            5326
+          ],
+          "name": "[1.5.4] - 2014-08-06",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Added report type --report=info to show information about the checked code to make building a standard easier - Checks a number of things, such as w",
+              "lines": [
+                5329,
+                5364
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#20200][pear-20200] : Invalid JSON produced with specific error message - Fixed bug [#20204][pear-20204] : Ruleset exclude checks are cas",
+              "lines": [
+                5365,
+                5379
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            5327,
+            5379
+          ],
+          "name": "[2.0.0a2] - 2014-05-01",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Improved detection of nested IF statements that use the alternate IF/ENDIF syntax - PHP tokenizer now supports DEFAULT statements opened with a T_SE",
+              "lines": [
+                5382,
+                5397
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#20200][pear-20200] : Invalid JSON produced with specific error message - Fixed bug [#20204][pear-20204] : Ruleset exclude checks are cas",
+              "lines": [
+                5398,
+                5421
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            5380,
+            5421
+          ],
+          "name": "[1.5.3] - 2014-05-01",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Added the phpcbf script to automatically fix many errors found by the phpcs script - Added report type --report=diff to show suggested changes to fi",
+              "lines": [
+                5424,
+                5473
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            5422,
+            5473
+          ],
+          "name": "[2.0.0a1] - 2014-02-05",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Improved support for the PHP 5.5. classname::class syntax - PSR2 SwitchDeclarationSniff no longer throws errors when this syntax is used in CASE con",
+              "lines": [
+                5476,
+                5507
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#20145][pear-20145] : Custom ruleset preferences directory over installed standard - Fixed bug [#20147][pear-20147] : phpcs-svn-pre-commi",
+              "lines": [
+                5508,
+                5518
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            5474,
+            5518
+          ],
+          "name": "[1.5.2] - 2014-02-05",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Config values can now be set at runtime using the command line argument `--runtime-set key value` - Runtime values are the same as config values, bu",
+              "lines": [
+                5521,
+                5538
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#20136][pear-20136] : Squiz_Sniffs_WhiteSpace_ScopeKeywordSpacingSniff and Traits - Fixed bug [#20138][pear-20138] : Protected property u",
+              "lines": [
+                5539,
+                5548
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            5519,
+            5548
+          ],
+          "name": "[1.5.1] - 2013-12-12",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Doc generation is now working again for installed standards - Includes a fix for limiting the docs to specific sniffs - Generic ScopeIndentSniff now",
+              "lines": [
+                5551,
+                5571
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#20093][pear-20093] : Bug with ternary operator token - Fixed bug [#20097][pear-20097] : `CLI.php` throws error in PHP 5.2 - Fixed bug [#",
+              "lines": [
+                5572,
+                5584
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            5549,
+            5584
+          ],
+          "name": "[1.5.0] - 2013-11-28",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Generic ScopeIndentSniff now allows for ignored tokens to be set via ruleset.xml files - E.g., to ignore comments, override a property using: - name",
+              "lines": [
+                5587,
+                5601
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#20097][pear-20097] : `CLI.php` throws error in PHP 5.2 - Fixed bug [#20100][pear-20100] : incorrect Function mysql() has been deprecated",
+              "lines": [
+                5602,
+                5616
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            5585,
+            5616
+          ],
+          "name": "[1.4.8] - 2013-11-26",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- You can now restrict violations to individual sniff codes using the --sniffs command line argument - Previously, this only restricted violations to",
+              "lines": [
+                5619,
+                5665
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed cases where code was incorrectly assigned the T_GOTO_LABEL token when used in a complex CASE condition - Fixed bug [#20026][pear-20026] : Chec",
+              "lines": [
+                5666,
+                5678
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            5617,
+            5678
+          ],
+          "name": "[1.5.0RC4] - 2013-09-26",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Added report type --report=junit to show the error list in a JUnit compatible format - Thanks to [Oleg Lobach][@bladeofsteel] for the contribution -",
+              "lines": [
+                5681,
+                5718
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#20026][pear-20026] : Check for multi-line arrays that should be single-line is slightly wrong - Adds new error message for single-line a",
+              "lines": [
+                5719,
+                5733
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            5679,
+            5733
+          ],
+          "name": "[1.4.7] - 2013-09-26",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Added report type --report=json to show the error list and total counts for all checked files - Thanks to [Jeffrey Fisher][@jeffslofish] for the con",
+              "lines": [
+                5736,
+                5782
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#19811][pear-19811] : Comments not ignored in all cases in AbstractPatternSniff - Thanks to [Erik Wiffin][@erikwiffin] for the patch - Fi",
+              "lines": [
+                5783,
+                5801
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            5734,
+            5801
+          ],
+          "name": "[1.5.0RC3] - 2013-07-25",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Added report type --report=json to show the error list and total counts for all checked files - Thanks to [Jeffrey Fisher][@jeffslofish] for the con",
+              "lines": [
+                5804,
+                5846
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#19811][pear-19811] : Comments not ignored in all cases in AbstractPatternSniff - Thanks to [Erik Wiffin][@erikwiffin] for the patch - Fi",
+              "lines": [
+                5847,
+                5878
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            5802,
+            5878
+          ],
+          "name": "[1.4.6] - 2013-07-25",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Ruleset processing has been rewritten to be more predictable - Provides much better support for relative paths inside ruleset files - May mean that",
+              "lines": [
+                5881,
+                5917
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#19819][pear-19819] : Freeze with syntax error in use statement - Fixed bug [#19820][pear-19820] : Wrong message level in Generic_Sniffs_",
+              "lines": [
+                5918,
+                5927
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            5879,
+            5927
+          ],
+          "name": "[1.5.0RC2] - 2013-04-04",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Added Generic LowerCaseKeywordSniff to ensure all PHP keywords are defined in lowercase - The PSR2 and Squiz standards now use this sniff - Added Ge",
+              "lines": [
+                5930,
+                5956
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#19819][pear-19819] : Freeze with syntax error in use statement - Fixed bug [#19820][pear-19820] : Wrong message level in Generic_Sniffs_",
+              "lines": [
+                5957,
+                5971
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            5928,
+            5971
+          ],
+          "name": "[1.4.5] - 2013-04-04",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Reports have been completely rewritten to consume far less memory - Each report is incrementally written to the file system during a run and then pr",
+              "lines": [
+                5974,
+                5981
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            5972,
+            5981
+          ],
+          "name": "[1.5.0RC1] - 2013-02-08",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Ignored lines no longer cause the summary report to show incorrect error and warning counts - Thanks to [Bert Van Hauwaert][@becoded] for the patch",
+              "lines": [
+                5984,
+                6005
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#19755][pear-19755] : Token of T_CLASS type has no scope_opener and scope_closer keys - Fixed bug [#19759][pear-19759] : Squiz.PHP.NonExe",
+              "lines": [
+                6006,
+                6027
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            5982,
+            6027
+          ],
+          "name": "[1.4.4] - 2013-02-07",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Added support for the PHP 5.5 T_FINALLY token to detect try/catch/finally statements - Added empty CodeSniffer.conf to enable config settings for Co",
+              "lines": [
+                6030,
+                6043
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#19699][pear-19699] : Generic.Files.LineLength giving false positives when tab-width is used - Fixed bug [#19726][pear-19726] : Wrong num",
+              "lines": [
+                6044,
+                6052
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6028,
+            6052
+          ],
+          "name": "[1.4.3] - 2012-12-04",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- PHP_CodeSniffer can now be installed using Composer - Require `squizlabs/php_codesniffer` in your `composer.json` file - Thanks to [Rob Bast][@alcoh",
+              "lines": [
+                6055,
+                6068
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed gitblame report not working on Windows - Thanks to [Rogerio Prado de Jesus][@rogeriopradoj] - Fixed an incorrect error in Squiz OperatorSpacin",
+              "lines": [
+                6069,
+                6083
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6053,
+            6083
+          ],
+          "name": "[1.4.2] - 2012-11-09",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- All ignore patterns have been reverted to being checked against the absolute path of a file - Patterns can be specified to be relative in a ruleset.",
+              "lines": [
+                6086,
+                6121
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#19616][pear-19616] : Nested switches cause false error in PSR2 - Fixed bug [#19629][pear-19629] : PSR2 error for inline comments on mult",
+              "lines": [
+                6122,
+                6139
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6084,
+            6139
+          ],
+          "name": "[1.4.1] - 2012-11-02",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Added PSR1 and PSR2 coding standards that can be used to check your code against these guidelines - PHP 5.4 short array syntax is now detected and t",
+              "lines": [
+                6142,
+                6162
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed a PHP notice generated when loading custom array settings from a ruleset.xml file - Fixed bug [#17908][pear-17908] : CodeSniffer does not reco",
+              "lines": [
+                6163,
+                6175
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6140,
+            6175
+          ],
+          "name": "[1.4.0] - 2012-09-26",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Memory usage has been dramatically reduced when using the summary report - Reduced memory is only available when displaying a single summary report",
+              "lines": [
+                6178,
+                6200
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed undefined variable error in PEAR FunctionCallSignatureSniff for lines with no indent - Fixed bug [#19502][pear-19502] : Generic.Files.LineEndi",
+              "lines": [
+                6201,
+                6212
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6176,
+            6212
+          ],
+          "name": "[1.3.6] - 2012-08-08",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Added Generic CamelCapsFunctionNameSniff to just check if function and method names use camel caps - Does not allow underscore prefixes for private/",
+              "lines": [
+                6215,
+                6231
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed duplicate message codes in Generic OpeningFunctionBraceKernighanRitchieSniff - Fixed bug [#18651][pear-18651] : PHPUnit Test cases for custom",
+              "lines": [
+                6232,
+                6258
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6213,
+            6258
+          ],
+          "name": "[1.3.5] - 2012-07-12",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Added missing package.xml entries for new Generic FixmeSniff - Thanks to [Jaroslav Hansl\u00edk][@kukulich] for the patch - Expected indents for PEAR Sco",
+              "lines": [
+                6261,
+                6291
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#19290][pear-19290] : Generic indent sniffer fails for anonymous functions - Fixed bug [#19324][pear-19324] : Setting show_warnings confi",
+              "lines": [
+                6292,
+                6321
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6259,
+            6321
+          ],
+          "name": "[1.3.4] - 2012-05-17",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Added new Generic FixmeSniff that shows error messages for all FIXME comments left in your code - Thanks to [Sam Graham][@illusori] for the contribu",
+              "lines": [
+                6324,
+                6335
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#19114][pear-19114] : CodeSniffer checks extension even for single file - Fixed bug [#19171][pear-19171] : Show sniff codes option is ign",
+              "lines": [
+                6336,
+                6362
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6322,
+            6362
+          ],
+          "name": "[1.3.3] - 2012-02-07",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Added Generic JSHintSniff to run jshint.js over a JS file and report warnings - Set jshint path using phpcs --config-set jshint_path /path/to/jshint",
+              "lines": [
+                6365,
+                6379
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed unit tests not running under Windows - Thanks to [Jaroslav Hansl\u00edk][@kukulich] for the patch - Fixed bug [#18964][pear-18964] : \"$stackPtr mus",
+              "lines": [
+                6380,
+                6393
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6363,
+            6393
+          ],
+          "name": "[1.3.2] - 2011-12-01",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- All report file command line arguments now work with relative paths (request [#17240][pear-17240]) - The extensions command line argument now suppor",
+              "lines": [
+                6396,
+                6428
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed issue in Squiz FileCommentSniff where suggested package name was the same as the incorrect package name - Fixed some issues with Squiz ArrayDe",
+              "lines": [
+                6429,
+                6491
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6394,
+            6491
+          ],
+          "name": "1.3.1 - 2011-11-03",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Add a new token T_CLOSURE that replaces T_FUNCTION if the function keyword is anonymous - Many Squiz sniffs no longer report errors when checking cl",
+              "lines": [
+                6494,
+                6500
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#18200][pear-18200] : Using custom named ruleset file as standard no longer works - Fixed bug [#18196][pear-18196] : PEAR MultiLineCondit",
+              "lines": [
+                6501,
+                6522
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6492,
+            6522
+          ],
+          "name": "1.3.0 - 2011-03-17",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- You can now print multiple reports for each run and print each to the screen or a file (request [#12434][pear-12434]) - Format is `--report-[report]",
+              "lines": [
+                6525,
+                6569
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#17693][pear-17693] : issue with pre-commit hook script with filenames that start with v - Fixed bug [#17860][pear-17860] : isReference f",
+              "lines": [
+                6570,
+                6613
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6523,
+            6613
+          ],
+          "name": "1.3.0RC2 - 2011-01-14",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Added exclude pattern support to ruleset.xml file so you can specify ignore patterns in a standard (request [#17683][pear-17683]) - Use new exclude-",
+              "lines": [
+                6616,
+                6634
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed a problem in Squiz OutputBufferingIndentSniff where block comments were reported as not indented - Fixed bug [#17092][pear-17092] : Problems w",
+              "lines": [
+                6635,
+                6659
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6614,
+            6659
+          ],
+          "name": "1.3.0RC1 - 2010-09-03",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- All `CodingStandard.php` files have been replaced by `ruleset.xml` files - Custom standards will need to be converted over to this new format to con",
+              "lines": [
+                6662,
+                6689
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed a problem where Generic CodeAnalysisSniff could show warnings if checking multi-line strings - Fixed error messages in Squiz ArrayDeclarationS",
+              "lines": [
+                6690,
+                6720
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6660,
+            6720
+          ],
+          "name": "1.3.0a1 - 2010-07-15",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- The core PHP_CodeSniffer_File methods now understand the concept of closures (feature request [#16866][pear-16866]) - Thanks to [Christian Kaps][@ak",
+              "lines": [
+                6723,
+                6772
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed a problem with the SVN pre-commit hook for PHP versions without vertical whitespace regex support - Fixed bug [#16740][pear-16740] : False pos",
+              "lines": [
+                6773,
+                6802
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6721,
+            6802
+          ],
+          "name": "1.2.2 - 2010-01-27",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Added a new report type --report=svnblame to show how many errors and warnings were committed by each author - Also shows the percentage of their co",
+              "lines": [
+                6805,
+                6838
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed an issue with Generic UnnecessaryStringConcatSniff where it incorrectly suggested removing a concat - Fixed bug [#16530][pear-16530] : ScopeIn",
+              "lines": [
+                6839,
+                6873
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6803,
+            6873
+          ],
+          "name": "1.2.1 - 2009-11-17",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Installed standards are now favoured over custom standards when using the cmd line arg with relative paths - Unit tests now use a lot less memory wh",
+              "lines": [
+                6876,
+                6882
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#16424][pear-16424] : SubversionPropertiesSniff print PHP Warning - Fixed bug [#16450][pear-16450] : Constant `PHP_CODESNIFFER_VERBOSITY`",
+              "lines": [
+                6883,
+                6893
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6874,
+            6893
+          ],
+          "name": "1.2.0 - 2009-08-17",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- You can now use @codingStandardsIgnoreStart and @...End comments to suppress messages (feature request [#14002][pear-14002]) - A warning is now incl",
+              "lines": [
+                6896,
+                6908
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6894,
+            6908
+          ],
+          "name": "1.2.0RC3 - 2009-07-07",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Test suite can now be run using the full path to `AllTests.php` (feature request [#16179][pear-16179])",
+              "lines": [
+                6911,
+                6913
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#15980][pear-15980] : PHP_CodeSniffer change PHP current directory - Thanks to [Dolly Aswin Harahap][pear-dollyaswin] for the patch - Fix",
+              "lines": [
+                6914,
+                6930
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6909,
+            6930
+          ],
+          "name": "1.2.0RC2 - 2009-05-25",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Reports that are output to a file now include a trailing newline at the end of the file - Fixed sniff names not shown in -vvv token processing outpu",
+              "lines": [
+                6933,
+                6946
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed the incorrect tokenizing of multi-line block comments in CSS files - Fixed bug [#15383][pear-15383] : Uncaught PHP_CodeSniffer_Exception - Fix",
+              "lines": [
+                6947,
+                6964
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6931,
+            6964
+          ],
+          "name": "1.2.0RC1 - 2009-03-09",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- PHP_CodeSniffer now has a CSS tokenizer for checking CSS files - Added support for a new multi-file sniff that sniffs all processed files at once -",
+              "lines": [
+                6967,
+                7059
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed Squiz DoubleQuoteUsageSniff so it works correctly with short_open_tag=Off - Fixed bug [#14409][pear-14409] : Output of warnings to log file -",
+              "lines": [
+                7060,
+                7089
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6965,
+            7089
+          ],
+          "name": "1.2.0a1 - 2008-12-18",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- PEAR FileCommentSniff now allows tag orders to be overridden in child classes - Thanks to Jeff Hodsdon for the patch - Added Generic DisallowMultipl",
+              "lines": [
+                7092,
+                7097
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed error in Zend ValidVariableNameSniff when checking vars in form: $class->{$var} - Fixed bug [#14077][pear-14077] : Fatal error: Uncaught PHP_C",
+              "lines": [
+                7098,
+                7106
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            7090,
+            7106
+          ],
+          "name": "1.1.0 - 2008-07-14",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- PEAR FileCommentSniff now allows tag orders to be overridden in child classes - Thanks to Jeff Hodsdon for the patch - Added Generic DisallowMultipl",
+              "lines": [
+                7109,
+                7114
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed error in Zend ValidVariableNameSniff when checking vars in form: $class->{$var} - Fixed bug [#14077][pear-14077] : Fatal error: Uncaught PHP_C",
+              "lines": [
+                7115,
+                7130
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            7107,
+            7130
+          ],
+          "name": "1.1.0RC3 - 2008-07-03",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Permission denied errors now stop script execution but still display current errors (feature request [#14076][pear-14076]) - Added Squiz ValidArrayI",
+              "lines": [
+                7133,
+                7138
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#13921][pear-13921] : js parsing fails for comments on last line of file - Fixed bug [#13922][pear-13922] : crash in case of malformed (b",
+              "lines": [
+                7139,
+                7149
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            7131,
+            7149
+          ],
+          "name": "1.1.0RC2 - 2008-06-13",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Added support for multiple tokenizers so PHP_CodeSniffer can check more than just PHP files - PHP_CodeSniffer now has a JS tokenizer for checking Ja",
+              "lines": [
+                7152,
+                7196
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed error in Squiz ValidVariableNameSniff when checking vars in the form $obj->$var - Fixed error in Squiz DisallowMultipleAssignmentsSniff when c",
+              "lines": [
+                7197,
+                7225
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            7150,
+            7225
+          ],
+          "name": "1.1.0RC1 - 2008-05-13",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Fixed error in PEAR ValidClassNameSniff when checking class names with double underscores - Moved Squiz InlineControlStructureSniff into Generic sta",
+              "lines": [
+                7228,
+                7238
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#13827][pear-13827] : AbstractVariableSniff throws \"undefined index\" - Fixed bug [#13846][pear-13846] : Bug in Squiz.NonExecutableCodeSni",
+              "lines": [
+                7239,
+                7248
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            7226,
+            7248
+          ],
+          "name": "1.0.1a1 - 2008-04-21",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Squiz ArrayDeclarationSniff now throws error if the array keyword is followed by a space - Squiz ArrayDeclarationSniff now throws error for empty mu",
+              "lines": [
+                7251,
+                7266
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed a problem that caused the parentheses map to sometimes contain incorrect values - Fixed bug [#12767][pear-12767] : Cant run phpcs from dir wit",
+              "lines": [
+                7267,
+                7285
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            7249,
+            7285
+          ],
+          "name": "1.0.1 - 2008-02-04",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- You can now specify the full path to a coding standard on the command line (feature request [#11886][pear-11886]) - This allows you to use standards",
+              "lines": [
+                7288,
+                7309
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#12621][pear-12621] : \"space after AS\" check is wrong - Thanks to [Satoshi Oikawa][pear-renoiv] for the patch - Fixed bug [#12645][pear-1",
+              "lines": [
+                7310,
+                7322
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            7286,
+            7322
+          ],
+          "name": "1.0.0 - 2007-12-21",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Added new command line argument --tab-width that will convert tabs to spaces before testing - This allows you to use the existing sniffs that check",
+              "lines": [
+                7325,
+                7343
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#12455][pear-12455] : CodeSniffer treats content inside heredoc as PHP code - Fixed bug [#12471][pear-12471] : Checkstyle report is broke",
+              "lines": [
+                7344,
+                7357
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            7323,
+            7357
+          ],
+          "name": "1.0.0RC3 - 2007-11-30",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Added a new Checkstyle report format - Like the current XML format but modified to look like Checkstyle output - Thanks to [Manuel Pichler][@manuelp",
+              "lines": [
+                7360,
+                7380
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed incorrect errors about missing function comments in PEAR FunctionCommentSniff - Fixed incorrect function docblock detection in Squiz FunctionC",
+              "lines": [
+                7381,
+                7395
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            7358,
+            7395
+          ],
+          "name": "1.0.0RC2 - 2007-11-14",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Main phpcs script can now be run from a CVS checkout without installing the package - Added a new CSV report format - Header row indicates what posi",
+              "lines": [
+                7398,
+                7438
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed error with multi-token array indexes in Squiz ArrayDeclarationSniff - Fixed error with checking shorthand IF statements without a semicolon in",
+              "lines": [
+                7439,
+                7448
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            7396,
+            7448
+          ],
+          "name": "1.0.0RC1 - 2007-11-01",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Added a config system for setting config data across phpcs runs - You can now change the default coding standard from PEAR to something else - Run:",
+              "lines": [
+                7451,
+                7460
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            7449,
+            7460
+          ],
+          "name": "0.9.0 - 2007-09-24",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Added new XML report format; --report=xml (feature request [#11535][pear-11535]) - Thanks to [Brett Bieber][@saltybeagle] for the patch - Added new",
+              "lines": [
+                7463,
+                7483
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#11473][pear-11473] : Invalid CamelCaps name when numbers used in names",
+              "lines": [
+                7484,
+                7494
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            7461,
+            7494
+          ],
+          "name": "0.8.0 - 2007-08-08",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- BC BREAK: EOL character is now auto-detected and used instead of hard-coded \\n - Pattern sniffs must now specify \"EOL\" instead of \"\\n\" or \"\\r\\n\" to",
+              "lines": [
+                7497,
+                7536
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#11105][pear-11105] : getIncludedSniffs() not working anymore - Thanks to [Blair Robertson][pear-adviva] for the patch - Fixed bug [#1112",
+              "lines": [
+                7537,
+                7547
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            7495,
+            7547
+          ],
+          "name": "0.7.0 - 2007-07-02",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- The number of errors and warnings found is now shown for each file while checking the file if verbosity is enabled - Now using PHP_EOL instead of ha",
+              "lines": [
+                7550,
+                7556
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed variable name error causing incorrect error message in Squiz ValidVariableNameSniff - Fixed bug [#10757][pear-10757] : Error in ControlSignatu",
+              "lines": [
+                7557,
+                7575
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            7548,
+            7575
+          ],
+          "name": "0.6.0 - 2007-05-15",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- BC BREAK: Coding standards now require a class to be added so PHP_CodeSniffer can get information from them - Please read the end user docs for info",
+              "lines": [
+                7578,
+                7588
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed problems caused by references and type hints in Squiz FunctionDeclarationArgumentSpacingSniff - Fixed problems with errors not being thrown fo",
+              "lines": [
+                7589,
+                7606
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            7576,
+            7606
+          ],
+          "name": "0.5.0 - 2007-04-17",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Standard name specified with --standard command line argument is no longer case sensitive - Long error and warning messages are now wrapped to 80 ch",
+              "lines": [
+                7609,
+                7617
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed incorrect error with switch closing brace in Squiz SwitchDeclarationSniff - Fixed missing error when multiple statements are not aligned corre",
+              "lines": [
+                7618,
+                7626
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            7607,
+            7626
+          ],
+          "name": "0.4.0 - 2007-02-19",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Updated package.xml to version 2 - Specifying coding standard on command line is now optional, even if you have multiple standards installed - PHP_C",
+              "lines": [
+                7629,
+                7648
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed bug [#9274][pear-9274] : nested_parenthesis element not set for open and close parenthesis tokens - Fixed bug [#9411][pear-9411] : too few pat",
+              "lines": [
+                7649,
+                7654
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            7627,
+            7654
+          ],
+          "name": "0.3.0 - 2007-01-11",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Fixed bug [#9274][pear-9274] : nested_parenthesis element not set for open and close parenthesis tokens",
+              "lines": [
+                7657,
+                7661
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            7655,
+            7661
+          ],
+          "name": "0.2.1 - 2006-11-09",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Added a generic standards package that will contain generic sniffs to be used in specific coding standards - thanks to Frederic Poeydomenge for the",
+              "lines": [
+                7664,
+                7679
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed some coding standard errors - Fixed bug [#8834][pear-8834] : Massive memory consumption - Fixed bug [#8836][pear-8836] : path case issues in p",
+              "lines": [
+                7680,
+                7693
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            7662,
+            7693
+          ],
+          "name": "0.2.0 - 2006-10-13",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Added unit tests for all PEAR sniffs - Exception class now extends from PEAR_Exception",
+              "lines": [
+                7696,
+                7699
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed summary report so files without errors but with warnings are not shown when warnings are hidden",
+              "lines": [
+                7700,
+                7702
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            7694,
+            7702
+          ],
+          "name": "0.1.1 - 2006-09-25",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Reorganised package contents to conform to PEAR standards - Changed version numbering to conform to PEAR standards - Removed duplicate `require_once",
+              "lines": [
+                7705,
+                7709
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            7703,
+            7709
+          ],
+          "name": "0.1.0 - 2006-09-19",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Fixed `.bat` file for situation where `php.ini` cannot be found so `include_path` is not set",
+              "lines": [
+                7712,
+                7714
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            7710,
+            7714
+          ],
+          "name": "0.0.5 - 2006-09-18",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Added .bat file for easier running of PHP_CodeSniffer on Windows - Sniff that checks method names now works for PHP4 style code where there is no sc",
+              "lines": [
+                7717,
+                7733
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            7715,
+            7733
+          ],
+          "name": "0.0.4 - 2006-08-28",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Added sniff to check for invalid class and interface names - Added sniff to check for invalid function and method names - Added sniff to warn if lin",
+              "lines": [
+                7736,
+                7742
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed error where comments were not allowed on the same line as a control structure declaration",
+              "lines": [
+                7743,
+                7745
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            7734,
+            7745
+          ],
+          "name": "0.0.3 - 2006-08-22",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Removed the including of checked files to stop errors caused by parsing them - Removed the use of reflection so checked files do not have to be incl",
+              "lines": [
+                7748,
+                7763
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            7746,
+            7763
+          ],
+          "name": "0.0.2 - 2006-07-25",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Initial preview release",
+              "lines": [
+                7766,
+                8139
+              ],
+              "name": "Added",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            7764,
+            8139
+          ],
+          "name": "0.0.1 - 2006-07-19",
+          "type": "section"
+        }
+      ]
+    },
+    "README.md": {
+      "hash": "c4dc274e93a6",
+      "indexed_at": "2026-01-20T04:49:08.529317+00:00",
+      "language": "markdown",
+      "lines": 153,
+      "symbols": [
+        {
+          "docstring": "PHP_CodeSniffer is a set of two PHP scripts; the main `phpcs` script that tokenizes PHP, JavaScript and CSS files to detect violations of a defined co",
+          "lines": [
+            21,
+            25
+          ],
+          "name": "About",
+          "type": "section"
+        },
+        {
+          "docstring": "PHP_CodeSniffer requires PHP version 5.4.0 or greater, although individual sniffs may have additional requirements such as external applications and s",
+          "lines": [
+            26,
+            32
+          ],
+          "name": "Requirements",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "If you use Composer, you can install PHP_CodeSniffer system-wide with the following command:",
+              "lines": [
+                55,
+                77
+              ],
+              "name": "Composer",
+              "type": "subsection"
+            },
+            {
+              "docstring": "If you use Phive, you can install PHP_CodeSniffer as a project tool using the following commands:",
+              "lines": [
+                78,
+                89
+              ],
+              "name": "Phive",
+              "type": "subsection"
+            },
+            {
+              "docstring": "You can also download the PHP_CodeSniffer source and run the `phpcs` and `phpcbf` commands directly from the Git clone:",
+              "lines": [
+                90,
+                98
+              ],
+              "name": "Git Clone",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "The easiest way to get started with PHP_CodeSniffer is to download the Phar files for each of the commands:",
+          "lines": [
+            33,
+            98
+          ],
+          "name": "Installation",
+          "type": "section"
+        },
+        {
+          "docstring": "The default coding standard used by PHP_CodeSniffer is the PEAR coding standard. To check a file against the PEAR coding standard, simply specify the",
+          "lines": [
+            99,
+            117
+          ],
+          "name": "Getting Started",
+          "type": "section"
+        },
+        {
+          "docstring": "The documentation for PHP_CodeSniffer is available on the [GitHub wiki](https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki).",
+          "lines": [
+            118,
+            121
+          ],
+          "name": "Documentation",
+          "type": "section"
+        },
+        {
+          "docstring": "Bug reports and feature requests can be submitted on the [GitHub Issue Tracker](https://github.com/PHPCSStandards/PHP_CodeSniffer/issues).",
+          "lines": [
+            122,
+            125
+          ],
+          "name": "Issues",
+          "type": "section"
+        },
+        {
+          "docstring": "See [CONTRIBUTING.md](.github/CONTRIBUTING.md) for information.",
+          "lines": [
+            126,
+            129
+          ],
+          "name": "Contributing",
+          "type": "section"
+        },
+        {
+          "docstring": "PHP_CodeSniffer uses a `MAJOR.MINOR.PATCH` version number format.",
+          "lines": [
+            130,
+            154
+          ],
+          "name": "Versioning",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.128935+00:00",
+  "version": "1.0"
+}

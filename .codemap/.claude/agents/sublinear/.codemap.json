@@ -1,0 +1,1496 @@
+{
+  "directory": ".claude/agents/sublinear",
+  "files": {
+    "consensus-coordinator.md": {
+      "hash": "7fa2a1ad51ad",
+      "indexed_at": "2026-01-20T04:50:25.546603+00:00",
+      "language": "markdown",
+      "lines": 338,
+      "symbols": [
+        {
+          "children": [
+            {
+              "docstring": "- **Byzantine Fault Tolerance**: Implement BFT consensus with sublinear complexity - **Voting Mechanisms**: Design and optimize distributed voting sys",
+              "lines": [
+                11,
+                16
+              ],
+              "name": "Consensus Protocols",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Multi-Agent Synchronization**: Synchronize actions across agent swarms - **Resource Allocation**: Coordinate distributed resource allocation - **L",
+              "lines": [
+                17,
+                22
+              ],
+              "name": "Distributed Coordination",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- `mcp__sublinear-time-solver__solve` - Core consensus computation engine - `mcp__sublinear-time-solver__estimateEntry` - Estimate consensus convergen",
+              "lines": [
+                23,
+                28
+              ],
+              "name": "Primary MCP Tools",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            9,
+            28
+          ],
+          "name": "Core Capabilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                31,
+                72
+              ],
+              "name": "1. Byzantine Fault Tolerant Consensus",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                73,
+                108
+              ],
+              "name": "2. Distributed Voting System",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                109,
+                147
+              ],
+              "name": "3. Multi-Agent Coordination",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            29,
+            147
+          ],
+          "name": "Usage Scenarios",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Agent Agreement**: Coordinate agreement across swarm agents - **Task Allocation**: Distribute tasks based on consensus decisions - **Resource Shar",
+              "lines": [
+                150,
+                155
+              ],
+              "name": "Swarm Consensus Protocols",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Multi-Level Consensus**: Implement consensus at multiple hierarchy levels - **Delegation Mechanisms**: Implement delegation and representation sys",
+              "lines": [
+                156,
+                160
+              ],
+              "name": "Hierarchical Consensus",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            148,
+            160
+          ],
+          "name": "Integration with Claude Flow",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                163,
+                221
+              ],
+              "name": "Distributed Consensus Infrastructure",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                222,
+                246
+              ],
+              "name": "Blockchain Consensus Integration",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            161,
+            246
+          ],
+          "name": "Integration with Flow Nexus",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Three-Phase Protocol**: Implement pre-prepare, prepare, and commit phases - **View Changes**: Handle primary node failures with view change protoc",
+              "lines": [
+                249,
+                253
+              ],
+              "name": "Practical Byzantine Fault Tolerance (pBFT)",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Validator Selection**: Select validators based on stake and performance - **Slashing Conditions**: Implement slashing for malicious behavior - **D",
+              "lines": [
+                254,
+                258
+              ],
+              "name": "Proof of Stake Consensus",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Multi-Layer Consensus**: Combine different consensus mechanisms - **Adaptive Protocols**: Adapt consensus protocol based on network conditions - *",
+              "lines": [
+                259,
+                263
+              ],
+              "name": "Hybrid Consensus Protocols",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            247,
+            263
+          ],
+          "name": "Advanced Consensus Algorithms",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Sharding**: Implement consensus sharding for large networks - **Parallel Consensus**: Run parallel consensus instances - **Hierarchical Consensus*",
+              "lines": [
+                266,
+                270
+              ],
+              "name": "Scalability Techniques",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Fast Consensus**: Optimize for low-latency consensus - **Predictive Consensus**: Use predictive algorithms to reduce latency - **Pipelining**: Pip",
+              "lines": [
+                271,
+                275
+              ],
+              "name": "Latency Optimization",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Communication Complexity**: Minimize communication overhead - **Computational Efficiency**: Optimize computational requirements - **Energy Efficie",
+              "lines": [
+                276,
+                280
+              ],
+              "name": "Resource Optimization",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            264,
+            280
+          ],
+          "name": "Performance Optimization",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Malicious Node Detection**: Detect and isolate malicious nodes - **Byzantine Agreement**: Achieve agreement despite malicious nodes - **Recovery P",
+              "lines": [
+                283,
+                287
+              ],
+              "name": "Byzantine Fault Tolerance",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Split-Brain Prevention**: Prevent split-brain scenarios - **Partition Recovery**: Recover consistency after network partitions - **CAP Theorem Opt",
+              "lines": [
+                288,
+                292
+              ],
+              "name": "Network Partition Tolerance",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Node Failure Detection**: Detect and handle node crashes - **Automatic Recovery**: Automatically recover from node failures - **Graceful Degradati",
+              "lines": [
+                293,
+                297
+              ],
+              "name": "Crash Fault Tolerance",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            281,
+            297
+          ],
+          "name": "Fault Tolerance Mechanisms",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Consensus Matrix Optimization**: Optimize consensus matrices for performance - **Stability Analysis**: Analyze consensus protocol stability - **Co",
+              "lines": [
+                300,
+                304
+              ],
+              "name": "With Matrix Optimizer",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Voting Power Analysis**: Analyze voting power distribution - **Influence Networks**: Build and analyze influence networks - **Authority Ranking**:",
+              "lines": [
+                305,
+                309
+              ],
+              "name": "With PageRank Analyzer",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Protocol Optimization**: Optimize consensus protocol performance - **Resource Allocation**: Optimize resource allocation for consensus - **Bottlen",
+              "lines": [
+                310,
+                314
+              ],
+              "name": "With Performance Optimizer",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            298,
+            314
+          ],
+          "name": "Integration Patterns",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "1. **Network Design**: Design consensus network topology 2. **Protocol Selection**: Select appropriate consensus protocol 3. **Parameter Tuning**: Tun",
+              "lines": [
+                317,
+                323
+              ],
+              "name": "Enterprise Consensus Deployment",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. **Genesis Configuration**: Configure genesis block and initial parameters 2. **Validator Setup**: Setup and configure validator nodes 3. **Consensu",
+              "lines": [
+                324,
+                330
+              ],
+              "name": "Blockchain Network Setup",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. **Agent Registration**: Register agents in consensus network 2. **Coordination Setup**: Setup coordination protocols 3. **Objective Alignment**: Al",
+              "lines": [
+                331,
+                338
+              ],
+              "name": "Multi-Agent System Coordination",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            315,
+            338
+          ],
+          "name": "Example Workflows",
+          "type": "section"
+        }
+      ]
+    },
+    "matrix-optimizer.md": {
+      "hash": "ee115c000f31",
+      "indexed_at": "2026-01-20T04:50:25.546942+00:00",
+      "language": "markdown",
+      "lines": 185,
+      "symbols": [
+        {
+          "children": [
+            {
+              "docstring": "- **Property Detection**: Analyze matrices for diagonal dominance, symmetry, and structural properties - **Condition Assessment**: Estimate condition",
+              "lines": [
+                11,
+                16
+              ],
+              "name": "Matrix Analysis",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- `mcp__sublinear-time-solver__analyzeMatrix` - Comprehensive matrix property analysis - `mcp__sublinear-time-solver__solve` - Solve diagonally domina",
+              "lines": [
+                17,
+                22
+              ],
+              "name": "Primary MCP Tools",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            9,
+            22
+          ],
+          "name": "Core Capabilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                25,
+                47
+              ],
+              "name": "1. Pre-Solver Matrix Analysis",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                48,
+                68
+              ],
+              "name": "2. Large-Scale System Optimization",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                69,
+                82
+              ],
+              "name": "3. Targeted Entry Estimation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            23,
+            82
+          ],
+          "name": "Usage Scenarios",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Matrix Distribution**: Distribute large matrix operations across swarm agents - **Parallel Analysis**: Coordinate parallel matrix property analysi",
+              "lines": [
+                85,
+                89
+              ],
+              "name": "Swarm Coordination",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Resource Allocation**: Optimize computational resource allocation based on matrix properties - **Load Balancing**: Balance matrix operations acros",
+              "lines": [
+                90,
+                94
+              ],
+              "name": "Performance Optimization",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            83,
+            94
+          ],
+          "name": "Integration with Claude Flow",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                97,
+                127
+              ],
+              "name": "Sandbox Deployment",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Training Data Optimization**: Optimize neural network training data matrices - **Weight Matrix Analysis**: Analyze neural network weight matrices",
+              "lines": [
+                128,
+                132
+              ],
+              "name": "Neural Network Integration",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            95,
+            132
+          ],
+          "name": "Integration with Flow Nexus",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Diagonal Dominance Enhancement**: Transform matrices to improve diagonal dominance - **Condition Number Reduction**: Apply preconditioning to redu",
+              "lines": [
+                135,
+                139
+              ],
+              "name": "Matrix Preprocessing",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Convergence Tracking**: Monitor solver convergence rates - **Memory Usage Optimization**: Track and optimize memory usage patterns - **Computation",
+              "lines": [
+                140,
+                144
+              ],
+              "name": "Performance Monitoring",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Numerical Stability Assessment**: Analyze numerical stability of matrix operations - **Error Propagation Tracking**: Track error propagation throu",
+              "lines": [
+                145,
+                149
+              ],
+              "name": "Error Analysis",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            133,
+            149
+          ],
+          "name": "Advanced Features",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "1. **Always analyze matrix properties before solving** 2. **Check diagonal dominance and recommend fixes if needed** 3. **Estimate condition numbers f",
+              "lines": [
+                152,
+                157
+              ],
+              "name": "Matrix Preparation",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. **Use appropriate solver methods based on matrix properties** 2. **Set convergence criteria based on problem requirements** 3. **Monitor computatio",
+              "lines": [
+                158,
+                163
+              ],
+              "name": "Performance Optimization",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. **Coordinate with other agents for distributed operations** 2. **Use Flow Nexus sandboxes for isolated matrix operations** 3. **Leverage swarm capa",
+              "lines": [
+                164,
+                169
+              ],
+              "name": "Integration Guidelines",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            150,
+            169
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "1. **Analysis Phase**: Analyze matrix properties and structure 2. **Preprocessing Phase**: Apply necessary transformations and optimizations 3. **Solv",
+              "lines": [
+                172,
+                178
+              ],
+              "name": "Complete Matrix Optimization Pipeline",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Coordinate with consensus-coordinator** for distributed matrix operations - **Work with performance-optimizer** for system-wide optimization - **I",
+              "lines": [
+                179,
+                185
+              ],
+              "name": "Integration with Other Agents",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            170,
+            185
+          ],
+          "name": "Example Workflows",
+          "type": "section"
+        }
+      ]
+    },
+    "pagerank-analyzer.md": {
+      "hash": "99fb156ddf13",
+      "indexed_at": "2026-01-20T04:50:25.548194+00:00",
+      "language": "markdown",
+      "lines": 299,
+      "symbols": [
+        {
+          "children": [
+            {
+              "docstring": "- **PageRank Computation**: Calculate PageRank scores for large-scale networks - **Influence Analysis**: Identify influential nodes and propagation pa",
+              "lines": [
+                11,
+                16
+              ],
+              "name": "Graph Analysis",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Swarm Topology Design**: Optimize agent swarm communication topologies - **Load Distribution**: Optimize load distribution across network nodes -",
+              "lines": [
+                17,
+                22
+              ],
+              "name": "Network Optimization",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- `mcp__sublinear-time-solver__pageRank` - Core PageRank computation engine - `mcp__sublinear-time-solver__solve` - General linear system solving for",
+              "lines": [
+                23,
+                28
+              ],
+              "name": "Primary MCP Tools",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            9,
+            28
+          ],
+          "name": "Core Capabilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                31,
+                53
+              ],
+              "name": "1. Large-Scale PageRank Computation",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                54,
+                68
+              ],
+              "name": "2. Personalized PageRank",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                69,
+                83
+              ],
+              "name": "3. Network Influence Analysis",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            29,
+            83
+          ],
+          "name": "Usage Scenarios",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                86,
+                122
+              ],
+              "name": "Swarm Topology Optimization",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Voting Power Analysis**: Analyze voting power distribution in consensus networks - **Byzantine Fault Tolerance**: Analyze network resilience to By",
+              "lines": [
+                123,
+                127
+              ],
+              "name": "Consensus Network Analysis",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            84,
+            127
+          ],
+          "name": "Integration with Claude Flow",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                130,
+                177
+              ],
+              "name": "Distributed Graph Processing",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                178,
+                202
+              ],
+              "name": "Neural Graph Networks",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            128,
+            202
+          ],
+          "name": "Integration with Flow Nexus",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Modularity Optimization**: Optimize network modularity for community detection - **Spectral Clustering**: Use spectral methods for community ident",
+              "lines": [
+                205,
+                209
+              ],
+              "name": "Community Detection",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Temporal Networks**: Analyze time-evolving network structures - **Dynamic PageRank**: Compute PageRank for changing network topologies - **Influen",
+              "lines": [
+                210,
+                214
+              ],
+              "name": "Network Dynamics",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Node Classification**: Classify nodes based on network structure and features - **Link Prediction**: Predict future connections in evolving networ",
+              "lines": [
+                215,
+                219
+              ],
+              "name": "Graph Machine Learning",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            203,
+            219
+          ],
+          "name": "Advanced Graph Algorithms",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Graph Partitioning**: Partition large graphs for parallel processing - **Approximation Algorithms**: Use approximation for very large-scale graphs",
+              "lines": [
+                222,
+                226
+              ],
+              "name": "Scalability Techniques",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Sparse Representations**: Use efficient sparse matrix representations - **Compression Techniques**: Compress graph data for memory efficiency - **",
+              "lines": [
+                227,
+                231
+              ],
+              "name": "Memory Optimization",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Parallel Computation**: Parallelize PageRank computation across cores - **GPU Acceleration**: Leverage GPU computing for large-scale operations -",
+              "lines": [
+                232,
+                236
+              ],
+              "name": "Computational Optimization",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            220,
+            236
+          ],
+          "name": "Performance Optimization",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Influence Ranking**: Rank users by influence and reach - **Community Detection**: Identify social communities and groups - **Viral Marketing**: Op",
+              "lines": [
+                239,
+                243
+              ],
+              "name": "Social Network Analysis",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Web Page Ranking**: Rank web pages by authority and relevance - **Link Analysis**: Analyze web link structures and patterns - **SEO Optimization**",
+              "lines": [
+                244,
+                248
+              ],
+              "name": "Web Search and Ranking",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Content Recommendation**: Recommend content based on network analysis - **Collaborative Filtering**: Use network structures for collaborative filt",
+              "lines": [
+                249,
+                253
+              ],
+              "name": "Recommendation Systems",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Network Routing**: Optimize routing in communication networks - **Load Balancing**: Balance loads across network infrastructure - **Fault Toleranc",
+              "lines": [
+                254,
+                258
+              ],
+              "name": "Infrastructure Optimization",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            237,
+            258
+          ],
+          "name": "Application Domains",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Adjacency Matrix Optimization**: Optimize graph adjacency matrices - **Spectral Analysis**: Perform spectral analysis of graph Laplacians - **Eige",
+              "lines": [
+                261,
+                265
+              ],
+              "name": "With Matrix Optimizer",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Market Network Analysis**: Analyze financial market networks - **Correlation Networks**: Build and analyze asset correlation networks - **Systemic",
+              "lines": [
+                266,
+                270
+              ],
+              "name": "With Trading Predictor",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Consensus Topology**: Design optimal consensus network topologies - **Voting Networks**: Analyze voting networks and power structures - **Byzantin",
+              "lines": [
+                271,
+                275
+              ],
+              "name": "With Consensus Coordinator",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            259,
+            275
+          ],
+          "name": "Integration Patterns",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "1. **Network Construction**: Build social network graph from user interactions 2. **Influence Analysis**: Compute PageRank scores to identify influenc",
+              "lines": [
+                278,
+                284
+              ],
+              "name": "Social Media Influence Campaign",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. **Web Graph Construction**: Build web graph from crawled pages and links 2. **Authority Computation**: Compute PageRank scores for web pages 3. **Q",
+              "lines": [
+                285,
+                291
+              ],
+              "name": "Web Search Optimization",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. **Topology Analysis**: Analyze current system topology 2. **Bottleneck Identification**: Identify communication and processing bottlenecks 3. **Opt",
+              "lines": [
+                292,
+                299
+              ],
+              "name": "Distributed System Design",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            276,
+            299
+          ],
+          "name": "Example Workflows",
+          "type": "section"
+        }
+      ]
+    },
+    "performance-optimizer.md": {
+      "hash": "99bcd7f36052",
+      "indexed_at": "2026-01-20T04:50:25.547797+00:00",
+      "language": "markdown",
+      "lines": 368,
+      "symbols": [
+        {
+          "children": [
+            {
+              "docstring": "- **Bottleneck Identification**: Identify computational and system bottlenecks - **Resource Utilization Analysis**: Analyze CPU, memory, network, and",
+              "lines": [
+                11,
+                16
+              ],
+              "name": "Performance Analysis",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Resource Allocation**: Optimize allocation of computational resources - **Load Balancing**: Implement optimal load balancing strategies - **Cachin",
+              "lines": [
+                17,
+                22
+              ],
+              "name": "Optimization Strategies",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- `mcp__sublinear-time-solver__solve` - Optimize resource allocation problems - `mcp__sublinear-time-solver__analyzeMatrix` - Analyze performance matr",
+              "lines": [
+                23,
+                28
+              ],
+              "name": "Primary MCP Tools",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            9,
+            28
+          ],
+          "name": "Core Capabilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                31,
+                73
+              ],
+              "name": "1. Resource Allocation Optimization",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                74,
+                103
+              ],
+              "name": "2. Load Balancing Optimization",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                104,
+                147
+              ],
+              "name": "3. Performance Bottleneck Analysis",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            29,
+            147
+          ],
+          "name": "Usage Scenarios",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Agent Performance Monitoring**: Monitor individual agent performance - **Swarm Efficiency Optimization**: Optimize overall swarm efficiency - **Co",
+              "lines": [
+                150,
+                155
+              ],
+              "name": "Swarm Performance Optimization",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Real-time Optimization**: Continuously optimize performance in real-time - **Adaptive Scaling**: Implement adaptive scaling based on performance m",
+              "lines": [
+                156,
+                160
+              ],
+              "name": "Dynamic Performance Tuning",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            148,
+            160
+          ],
+          "name": "Integration with Claude Flow",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                163,
+                244
+              ],
+              "name": "Cloud Performance Optimization",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                245,
+                270
+              ],
+              "name": "Neural Performance Modeling",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            161,
+            270
+          ],
+          "name": "Integration with Flow Nexus",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Performance Prediction**: Predict future performance based on historical data - **Anomaly Detection**: Detect performance anomalies and outliers -",
+              "lines": [
+                273,
+                277
+              ],
+              "name": "Machine Learning-Based Optimization",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Pareto Optimization**: Find Pareto-optimal solutions for multiple objectives - **Trade-off Analysis**: Analyze trade-offs between different perfor",
+              "lines": [
+                278,
+                282
+              ],
+              "name": "Multi-Objective Optimization",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Stream Processing**: Optimize streaming data processing systems - **Online Algorithms**: Implement online optimization algorithms - **Reactive Opt",
+              "lines": [
+                283,
+                287
+              ],
+              "name": "Real-Time Optimization",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            271,
+            287
+          ],
+          "name": "Advanced Optimization Techniques",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Throughput**: Measure system throughput and processing capacity - **Latency**: Monitor response times and latency characteristics - **Resource Uti",
+              "lines": [
+                290,
+                295
+              ],
+              "name": "System Performance Metrics",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Response Time**: Monitor application response times - **Error Rates**: Track error rates and failure patterns - **Scalability**: Measure applicati",
+              "lines": [
+                296,
+                301
+              ],
+              "name": "Application Performance Metrics",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Network Performance**: Monitor network bandwidth, latency, and packet loss - **Storage Performance**: Track storage IOPS, throughput, and latency",
+              "lines": [
+                302,
+                307
+              ],
+              "name": "Infrastructure Performance Metrics",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            288,
+            307
+          ],
+          "name": "Performance Metrics and KPIs",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Algorithm Selection**: Select optimal algorithms for specific use cases - **Complexity Reduction**: Reduce algorithmic complexity where possible -",
+              "lines": [
+                310,
+                315
+              ],
+              "name": "Algorithmic Optimization",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Resource Provisioning**: Optimize resource provisioning strategies - **Configuration Tuning**: Tune system and application configurations - **Arch",
+              "lines": [
+                316,
+                321
+              ],
+              "name": "System-Level Optimization",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Code Optimization**: Optimize application code for performance - **Database Optimization**: Optimize database queries and structures - **Caching S",
+              "lines": [
+                322,
+                327
+              ],
+              "name": "Application-Level Optimization",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            308,
+            327
+          ],
+          "name": "Optimization Strategies",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Performance Matrix Analysis**: Analyze performance matrices - **Resource Allocation Matrices**: Optimize resource allocation matrices - **Bottlene",
+              "lines": [
+                330,
+                334
+              ],
+              "name": "With Matrix Optimizer",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Distributed Optimization**: Coordinate distributed optimization efforts - **Consensus-Based Decisions**: Use consensus for optimization decisions",
+              "lines": [
+                335,
+                339
+              ],
+              "name": "With Consensus Coordinator",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Financial Performance Optimization**: Optimize financial system performance - **Trading System Optimization**: Optimize trading system performance",
+              "lines": [
+                340,
+                344
+              ],
+              "name": "With Trading Predictor",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            328,
+            344
+          ],
+          "name": "Integration Patterns",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "1. **Baseline Assessment**: Assess current infrastructure performance 2. **Bottleneck Identification**: Identify performance bottlenecks 3. **Optimiza",
+              "lines": [
+                347,
+                353
+              ],
+              "name": "Cloud Infrastructure Optimization",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. **Performance Profiling**: Profile application performance 2. **Code Analysis**: Analyze code for optimization opportunities 3. **Database Optimiza",
+              "lines": [
+                354,
+                360
+              ],
+              "name": "Application Performance Tuning",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. **Comprehensive Analysis**: Analyze entire system performance 2. **Multi-Level Optimization**: Optimize at multiple system levels 3. **Resource Rea",
+              "lines": [
+                361,
+                368
+              ],
+              "name": "System-Wide Performance Enhancement",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            345,
+            368
+          ],
+          "name": "Example Workflows",
+          "type": "section"
+        }
+      ]
+    },
+    "trading-predictor.md": {
+      "hash": "16c9270fde6f",
+      "indexed_at": "2026-01-20T04:50:25.547336+00:00",
+      "language": "markdown",
+      "lines": 246,
+      "symbols": [
+        {
+          "children": [
+            {
+              "docstring": "- **Predictive Execution**: Execute trades before market data physically arrives - **Latency Arbitrage**: Exploit computational speed advantages over",
+              "lines": [
+                11,
+                16
+              ],
+              "name": "Temporal Advantage Trading",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- `mcp__sublinear-time-solver__predictWithTemporalAdvantage` - Core predictive trading engine - `mcp__sublinear-time-solver__validateTemporalAdvantage",
+              "lines": [
+                17,
+                23
+              ],
+              "name": "Primary MCP Tools",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            9,
+            23
+          ],
+          "name": "Core Capabilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                26,
+                45
+              ],
+              "name": "1. High-Frequency Trading with Temporal Lead",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                46,
+                60
+              ],
+              "name": "2. Cross-Market Arbitrage",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                61,
+                77
+              ],
+              "name": "3. Real-Time Portfolio Optimization",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            24,
+            77
+          ],
+          "name": "Usage Scenarios",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Market Data Processing**: Distribute market data analysis across swarm agents - **Signal Generation**: Coordinate signal generation from multiple",
+              "lines": [
+                80,
+                85
+              ],
+              "name": "Multi-Agent Trading Swarms",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Signal Aggregation**: Aggregate trading signals from multiple agents - **Risk Consensus**: Build consensus on risk tolerance and exposure limits -",
+              "lines": [
+                86,
+                90
+              ],
+              "name": "Consensus-Based Trading Decisions",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            78,
+            90
+          ],
+          "name": "Integration with Claude Flow",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                93,
+                136
+              ],
+              "name": "Real-Time Trading Sandbox",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                137,
+                161
+              ],
+              "name": "Neural Network Price Prediction",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            91,
+            161
+          ],
+          "name": "Integration with Flow Nexus",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Geographic Arbitrage**: Exploit latency differences between geographic markets - **Technology Arbitrage**: Leverage computational advantages over",
+              "lines": [
+                164,
+                168
+              ],
+              "name": "Latency Arbitrage",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Real-Time VaR**: Calculate Value at Risk in real-time using sublinear algorithms - **Dynamic Hedging**: Implement dynamic hedging strategies with",
+              "lines": [
+                169,
+                173
+              ],
+              "name": "Risk Management",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Optimal Spread Calculation**: Calculate optimal bid-ask spreads using sublinear optimization - **Inventory Management**: Manage market maker inven",
+              "lines": [
+                174,
+                178
+              ],
+              "name": "Market Making",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            162,
+            178
+          ],
+          "name": "Advanced Trading Strategies",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Computational Lead Time**: Time advantage over data transmission - **Prediction Accuracy**: Accuracy of temporal advantage predictions - **Executi",
+              "lines": [
+                181,
+                185
+              ],
+              "name": "Temporal Advantage Metrics",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Sharpe Ratio**: Risk-adjusted returns measurement - **Maximum Drawdown**: Largest peak-to-trough decline - **Win Rate**: Percentage of profitable",
+              "lines": [
+                186,
+                191
+              ],
+              "name": "Trading Performance",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Latency Monitoring**: Continuous monitoring of system latencies - **Throughput Measurement**: Number of trades processed per second - **Resource U",
+              "lines": [
+                192,
+                196
+              ],
+              "name": "System Performance",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            179,
+            196
+          ],
+          "name": "Performance Metrics",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Maximum Position Size**: Limit maximum position sizes per instrument - **Sector Concentration**: Limit exposure to specific market sectors - **Cor",
+              "lines": [
+                199,
+                203
+              ],
+              "name": "Position Risk Controls",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **VaR Limits**: Daily Value at Risk limits - **Stress Test Scenarios**: Regular stress testing against extreme market scenarios - **Liquidity Risk**",
+              "lines": [
+                204,
+                208
+              ],
+              "name": "Market Risk Controls",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **System Monitoring**: Continuous monitoring of trading systems - **Fail-Safe Mechanisms**: Automatic shutdown procedures for system failures - **Au",
+              "lines": [
+                209,
+                213
+              ],
+              "name": "Operational Risk Controls",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            197,
+            213
+          ],
+          "name": "Risk Management Framework",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Portfolio Optimization**: Use matrix optimization for portfolio construction - **Risk Matrix Analysis**: Analyze correlation and covariance matric",
+              "lines": [
+                216,
+                220
+              ],
+              "name": "With Matrix Optimizer",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **System Optimization**: Optimize trading system performance - **Resource Allocation**: Optimize computational resource allocation - **Latency Minim",
+              "lines": [
+                221,
+                225
+              ],
+              "name": "With Performance Optimizer",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Multi-Agent Coordination**: Coordinate trading decisions across multiple agents - **Signal Aggregation**: Aggregate trading signals from distribut",
+              "lines": [
+                226,
+                230
+              ],
+              "name": "With Consensus Coordinator",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            214,
+            230
+          ],
+          "name": "Integration Patterns",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "1. **Pre-Market Analysis**: Analyze overnight developments and market conditions 2. **Strategy Initialization**: Initialize trading strategies and ris",
+              "lines": [
+                233,
+                239
+              ],
+              "name": "Daily Trading Cycle",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. **Anomaly Detection**: Detect unusual market conditions or system anomalies 2. **Risk Assessment**: Assess potential impact on portfolio and tradin",
+              "lines": [
+                240,
+                246
+              ],
+              "name": "Crisis Management",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            231,
+            246
+          ],
+          "name": "Example Trading Workflows",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.179681+00:00",
+  "version": "1.0"
+}

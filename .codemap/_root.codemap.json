@@ -1,0 +1,1618 @@
+{
+  "directory": "",
+  "files": {
+    "CHANGELOG.md": {
+      "hash": "11a7afb7e236",
+      "indexed_at": "2026-01-20T04:48:29.192549+00:00",
+      "language": "markdown",
+      "lines": 249,
+      "symbols": [
+        {
+          "children": [
+            {
+              "docstring": "- **Critical Bug:** Corrected a fatal PHP error in the admin bookings list caused by duplicated code. - **Calendar Timezones:** Added explicit timezon",
+              "lines": [
+                10,
+                14
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Error Handling:** Enhanced the booking creation process to show detailed database errors on the frontend when a booking fails, aiding in faster de",
+              "lines": [
+                15,
+                17
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            8,
+            17
+          ],
+          "name": "[1.3.1] - 2026-01-17",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Setup Wizard** - Complete 6-step onboarding wizard - Account type selection (Single Person vs Agency/Team) - Business information configuration -",
+              "lines": [
+                20,
+                48
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Plugin name simplified from \"Book Now by Kre8iv Tech\" to \"Book Now\" - Settings page now uses tabbed interface instead of single page - Admin menu no",
+              "lines": [
+                49,
+                53
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- All Phase 1 foundation items completed - Complete admin interface with 7 menu pages - Full CRUD operations for all entities - Security hardening (no",
+              "lines": [
+                54,
+                62
+              ],
+              "name": "Technical",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            18,
+            62
+          ],
+          "name": "[1.1.0] - 2026-01-08",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Initial release of Book Now - **Consultation Type Management** - Create, read, update, delete consultation types - Custom pricing and duration setti",
+              "lines": [
+                65,
+                186
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Minimum Requirements** - WordPress 6.0+ - PHP 8.0+ - MySQL 5.7+ or MariaDB 10.3+ - SSL certificate (for Stripe)",
+              "lines": [
+                187,
+                205
+              ],
+              "name": "Technical Details",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- All AJAX endpoints protected with nonces - Capability checks on all admin operations - Prepared statements for all database queries - Output escapin",
+              "lines": [
+                206,
+                212
+              ],
+              "name": "Security",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Conditional asset loading - Database query optimization with indexes - Transient caching for availability calculations - Minified assets for product",
+              "lines": [
+                213,
+                220
+              ],
+              "name": "Performance",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            63,
+            220
+          ],
+          "name": "[1.0.0] - 2026-01-08",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Enhanced calendar views with interactive UI - Advanced reporting and analytics - Bulk booking operations - Customer portal for managing appointments",
+              "lines": [
+                223,
+                240
+              ],
+              "name": "Planned Features",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            221,
+            240
+          ],
+          "name": "[Unreleased]",
+          "type": "section"
+        },
+        {
+          "docstring": "- **1.0.0** (2026-01-08) - Initial release",
+          "lines": [
+            241,
+            250
+          ],
+          "name": "Version History",
+          "type": "section"
+        }
+      ]
+    },
+    "CLAUDE.md": {
+      "hash": "ad116abd1ce6",
+      "indexed_at": "2026-01-20T04:48:29.194381+00:00",
+      "language": "markdown",
+      "lines": 294,
+      "symbols": [
+        {
+          "children": [
+            {
+              "docstring": "- Consultation type management with custom pricing and duration - Booking system with status tracking - Stripe payment integration (Payment Intents AP",
+              "lines": [
+                16,
+                24
+              ],
+              "name": "Key Features",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Platform**: WordPress 6.0+ - **PHP**: 8.0+ - **Database**: MySQL 5.7+ / MariaDB 10.3+ - **Payment**: Stripe PHP SDK v10.x - **Calendar**: Google A",
+              "lines": [
+                25,
+                34
+              ],
+              "name": "Technology Stack",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "**Book Now** is a WordPress plugin for consultation booking with Stripe payments and calendar integration. It enables businesses to offer online booki",
+          "lines": [
+            12,
+            34
+          ],
+          "name": "Project Overview",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- `book-now-kre8iv.php:1` - Main plugin file with version and metadata - `includes/class-book-now.php` - Core plugin class orchestrating all component",
+              "lines": [
+                86,
+                91
+              ],
+              "name": "Key Files",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- `{prefix}booknow_bookings` - Booking records - `{prefix}booknow_consultation_types` - Service definitions - `{prefix}booknow_availability` - Schedul",
+              "lines": [
+                92,
+                100
+              ],
+              "name": "Database Tables",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            35,
+            100
+          ],
+          "name": "Codebase Structure",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Feature branches: `claude/<description>-<session-id>` - Bug fixes: `claude/fix-<issue>-<session-id>`",
+              "lines": [
+                103,
+                106
+              ],
+              "name": "Branch Naming",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Read and understand existing code before making changes 2. Use TodoWrite for complex tasks (3+ steps) 3. Follow WordPress coding standards 4. Test",
+              "lines": [
+                107,
+                114
+              ],
+              "name": "Standard Workflow",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Branch must start with `claude/` and match session ID - Retry network errors up to 4 times with exponential backoff (2s, 4s, 8s, 16s) - Fetch specif",
+              "lines": [
+                115,
+                121
+              ],
+              "name": "Push/Pull Practices",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            101,
+            121
+          ],
+          "name": "Development Workflow",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Use `$wpdb->prepare()` for all SQL queries - Escape output: `esc_html()`, `esc_attr()`, `esc_url()` - Sanitize input: `sanitize_text_field()`, `absi",
+              "lines": [
+                124,
+                130
+              ],
+              "name": "WordPress PHP Standards",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Never trust user input - always sanitize - Use `wp_verify_nonce()` for form submissions - Check capabilities: `current_user_can('manage_options')` -",
+              "lines": [
+                131,
+                137
+              ],
+              "name": "Security Checklist",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Class files: `class-{plugin}-{name}.php` - Admin templates: `admin/partials/{feature}.php` - Public templates: `public/partials/{feature}.php` - Eac",
+              "lines": [
+                138,
+                143
+              ],
+              "name": "File Patterns",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                144,
+                154
+              ],
+              "name": "Helper Functions",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            122,
+            154
+          ],
+          "name": "Coding Conventions",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                157,
+                172
+              ],
+              "name": "Commit Message Format",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Atomic commits - one logical change per commit - Use HEREDOC for multi-line commit messages - Never commit secrets or API keys - Review changes befo",
+              "lines": [
+                173,
+                180
+              ],
+              "name": "Commit Best Practices",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            155,
+            180
+          ],
+          "name": "Git Practices",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                183,
+                197
+              ],
+              "name": "Local Development",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Add to `wp-config.php`:",
+              "lines": [
+                198,
+                206
+              ],
+              "name": "WordPress Debug Mode",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                207,
+                213
+              ],
+              "name": "Plugin Debug Mode",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            181,
+            213
+          ],
+          "name": "Common Commands",
+          "type": "section"
+        },
+        {
+          "docstring": "| Shortcode | Purpose | |-----------|---------| | `[book_now_form]` | Complete booking form wizard | | `[book_now_types]` | Consultation types grid |",
+          "lines": [
+            214,
+            224
+          ],
+          "name": "Shortcodes Reference",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Uses Payment Intents API (SCA-compliant) - Webhook events: `payment_intent.succeeded`, `payment_intent.payment_failed` - Frontend uses Stripe.js for",
+              "lines": [
+                227,
+                231
+              ],
+              "name": "Stripe",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- OAuth 2.0 authentication - Scopes: `calendar`, `calendar.events` - Operations: insert, update, delete events, freebusy queries",
+              "lines": [
+                232,
+                236
+              ],
+              "name": "Google Calendar",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- OAuth 2.0 via Azure AD - Permissions: `Calendars.ReadWrite`, `User.Read` - Uses Microsoft Graph API v1.0",
+              "lines": [
+                237,
+                243
+              ],
+              "name": "Microsoft Calendar",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            225,
+            243
+          ],
+          "name": "API Integrations",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "1. Read files first - never propose changes to unread code 2. Explore related files to understand patterns 3. Check existing conventions before adding",
+              "lines": [
+                246,
+                250
+              ],
+              "name": "Before Making Changes",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Follow WordPress coding standards 2. Use proper escaping and sanitization 3. Avoid over-engineering - make minimal necessary changes 4. Watch for O",
+              "lines": [
+                251,
+                256
+              ],
+              "name": "During Implementation",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Don't add unnecessary features beyond the task - Don't refactor unrelated code - Don't add comments where logic is self-evident - Don't create prema",
+              "lines": [
+                257,
+                263
+              ],
+              "name": "What NOT to Do",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Use `file_path:line_number` format when referencing code: - \"The booking model is in `includes/class-book-now-booking.php:45`\"",
+              "lines": [
+                264,
+                269
+              ],
+              "name": "Code References",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            244,
+            269
+          ],
+          "name": "AI Assistant Guidelines",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Ensure branch starts with `claude/` and includes session ID - Example: `claude/add-feature-s0a9J`",
+              "lines": [
+                272,
+                275
+              ],
+              "name": "Git Push Fails with 403",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Retry with exponential backoff (2s, 4s, 8s, 16s)",
+              "lines": [
+                276,
+                278
+              ],
+              "name": "Network Errors",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Review hook feedback and adjust changes",
+              "lines": [
+                279,
+                283
+              ],
+              "name": "Pre-commit Hook Failures",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            270,
+            283
+          ],
+          "name": "Troubleshooting",
+          "type": "section"
+        },
+        {
+          "docstring": "- [WordPress Plugin Handbook](https://developer.wordpress.org/plugins/) - [WordPress Coding Standards](https://developer.wordpress.org/coding-standard",
+          "lines": [
+            284,
+            295
+          ],
+          "name": "Additional Resources",
+          "type": "section"
+        }
+      ]
+    },
+    "README.md": {
+      "hash": "8922e1d96d27",
+      "indexed_at": "2026-01-20T04:48:29.193137+00:00",
+      "language": "markdown",
+      "lines": 428,
+      "symbols": [
+        {
+          "docstring": "Book Now is a powerful WordPress plugin that enables businesses to provide a seamless consultation booking experience. Website visitors can browse ava",
+          "lines": [
+            5,
+            10
+          ],
+          "name": "Description",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "- \u2705 **Consultation Type Management** - Create and manage multiple consultation types with custom pricing, duration, and descriptions - \u2705 **Category Sy",
+                  "lines": [
+                    15,
+                    21
+                  ],
+                  "name": "Core Booking System",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "- \u2705 **Stripe Integration** - Secure payment processing with Payment Intents API - \u2705 **Deposit Support** - Accept full payments or deposits (fixed amou",
+                  "lines": [
+                    22,
+                    28
+                  ],
+                  "name": "Payment Processing",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "- \u2705 **Google Calendar Sync** - Bidirectional sync with OAuth 2.0 authentication - \u2705 **Microsoft Calendar Sync** - Bidirectional sync with Microsoft 36",
+                  "lines": [
+                    29,
+                    35
+                  ],
+                  "name": "Calendar Synchronization",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "- \u2705 **Automated Emails** - Confirmation, reminder, cancellation, and refund notifications - \u2705 **Customizable Templates** - HTML email templates with m",
+                  "lines": [
+                    36,
+                    43
+                  ],
+                  "name": "Email Notifications",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "- \u2705 **Comprehensive Dashboard** - Overview of bookings, revenue, and statistics - \u2705 **Booking Management** - View, filter, and manage all bookings - \u2705",
+                  "lines": [
+                    44,
+                    52
+                  ],
+                  "name": "Admin Interface",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "- \u2705 **Booking Form Wizard** - Multi-step booking process with validation - \u2705 **Calendar View** - Interactive calendar showing available dates - \u2705 **Li",
+                  "lines": [
+                    53,
+                    60
+                  ],
+                  "name": "Frontend Components",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "- \u2705 **20+ Endpoints** - Complete REST API for external integrations - \u2705 **Authentication** - Secure API key authentication - \u2705 **CRUD Operations** - F",
+                  "lines": [
+                    61,
+                    66
+                  ],
+                  "name": "REST API",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                13,
+                66
+              ],
+              "name": "\u2705 Complete Feature Set (All Phases Implemented)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            11,
+            66
+          ],
+          "name": "\u2728 Features",
+          "type": "section"
+        },
+        {
+          "docstring": "- **WordPress:** 6.0 or higher - **PHP:** 8.0 or higher - **MySQL:** 5.7+ or MariaDB 10.3+ - **SSL Certificate:** Required for Stripe payments - **Com",
+          "lines": [
+            67,
+            74
+          ],
+          "name": "Requirements",
+          "type": "section"
+        },
+        {
+          "docstring": "- **Backend:** PHP 8.0+, WordPress Plugin API, REST API - **Frontend:** JavaScript (ES6+), jQuery, HTML5, CSS3 - **Payments:** Stripe PHP SDK, Stripe.",
+          "lines": [
+            75,
+            82
+          ],
+          "name": "Technology Stack",
+          "type": "section"
+        },
+        {
+          "docstring": "We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/jcastillotx/book-",
+          "lines": [
+            83,
+            86
+          ],
+          "name": "Versioning",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "1. **Download the plugin**",
+              "lines": [
+                89,
+                113
+              ],
+              "name": "Quick Installation",
+              "type": "subsection"
+            },
+            {
+              "docstring": "See [INSTALLATION.md](INSTALLATION.md) for comprehensive setup instructions including: - Server requirements - Stripe configuration - Google Calendar",
+              "lines": [
+                114,
+                123
+              ],
+              "name": "Detailed Installation Guide",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            87,
+            123
+          ],
+          "name": "Installation",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Navigate to **Book Now** > **Settings** > **General**",
+              "lines": [
+                126,
+                136
+              ],
+              "name": "1. Configure General Settings",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Navigate to **Book Now** > **Settings** > **Payment**",
+              "lines": [
+                137,
+                146
+              ],
+              "name": "2. Set Up Stripe Payments",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Google Calendar:** 1. Go to **Settings** > **Integrations** 2. Follow the Google Calendar setup guide 3. Authorize your Google account 4. Select the",
+              "lines": [
+                147,
+                160
+              ],
+              "name": "3. Configure Calendar Sync (Optional)",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Navigate to **Book Now** > **Settings** > **Email**",
+              "lines": [
+                161,
+                169
+              ],
+              "name": "4. Set Up Email Notifications",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Go to **Book Now** > **Consultation Types** 2. Click **Add New** 3. Fill in the details: - **Name:** e.g., \"30-Minute Strategy Call\" - **Duration:*",
+              "lines": [
+                170,
+                181
+              ],
+              "name": "5. Create Consultation Types",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Go to **Book Now** > **Availability** 2. Set your weekly schedule: - Check days you're available - Set start and end times - Add breaks if needed 3",
+              "lines": [
+                182,
+                191
+              ],
+              "name": "6. Set Your Availability",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Add this shortcode to any page or post:",
+              "lines": [
+                192,
+                201
+              ],
+              "name": "7. Add Booking Form to Your Site",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            124,
+            201
+          ],
+          "name": "Quick Start Guide",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                204,
+                226
+              ],
+              "name": "Main Booking Form",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                227,
+                248
+              ],
+              "name": "Consultation Types Grid",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                249,
+                265
+              ],
+              "name": "Calendar View",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                266,
+                284
+              ],
+              "name": "List View",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            202,
+            284
+          ],
+          "name": "Shortcodes",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                289,
+                296
+              ],
+              "name": "Authentication",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Bookings:** - `GET /wp-json/booknow/v1/bookings` - List bookings - `POST /wp-json/booknow/v1/bookings` - Create booking - `GET /wp-json/booknow/v1/b",
+              "lines": [
+                297,
+                316
+              ],
+              "name": "Key Endpoints",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "The plugin provides a comprehensive REST API for external integrations.",
+          "lines": [
+            285,
+            316
+          ],
+          "name": "REST API",
+          "type": "section"
+        },
+        {
+          "docstring": "The plugin creates the following custom tables:",
+          "lines": [
+            317,
+            326
+          ],
+          "name": "Database Structure",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                329,
+                345
+              ],
+              "name": "Helper Functions",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                346,
+                364
+              ],
+              "name": "Model Classes",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            327,
+            364
+          ],
+          "name": "Developer Documentation",
+          "type": "section"
+        },
+        {
+          "docstring": "The plugin implements multiple security layers:",
+          "lines": [
+            365,
+            375
+          ],
+          "name": "Security",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- [Installation Guide](INSTALLATION.md) - Complete setup instructions - [API Guide](docs/API_GUIDE.md) - REST API documentation - [Help Guide](docs/HE",
+              "lines": [
+                378,
+                383
+              ],
+              "name": "Documentation",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **GitHub Issues:** [Report bugs or request features](https://github.com/jcastillotx/book-now/issues) - **Email:** info@kre8ivtech.com - **Website:**",
+              "lines": [
+                384,
+                388
+              ],
+              "name": "Support Channels",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            376,
+            388
+          ],
+          "name": "Support & Documentation",
+          "type": "section"
+        },
+        {
+          "docstring": "Contributions are welcome! Please follow these steps:",
+          "lines": [
+            389,
+            398
+          ],
+          "name": "Contributing",
+          "type": "section"
+        },
+        {
+          "docstring": "This plugin is licensed under the GPL v2 or later.",
+          "lines": [
+            399,
+            402
+          ],
+          "name": "License",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "- **Critical Bug:** Corrected a fatal PHP error in the admin bookings list caused by duplicated code. - **Calendar Timezones:** Added explicit timezon",
+                  "lines": [
+                    407,
+                    411
+                  ],
+                  "name": "Fixed",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "- **Error Handling:** Enhanced the booking creation process to show detailed database errors on the frontend for faster debugging.",
+                  "lines": [
+                    412,
+                    416
+                  ],
+                  "name": "Changed",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                405,
+                416
+              ],
+              "name": "[1.3.1] - 2026-01-17",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            403,
+            416
+          ],
+          "name": "Changelog",
+          "type": "section"
+        },
+        {
+          "docstring": "Developed by **Kre8iv Tech**",
+          "lines": [
+            417,
+            429
+          ],
+          "name": "Credits",
+          "type": "section"
+        }
+      ]
+    },
+    "TESTING_QUICKSTART.md": {
+      "hash": "b9395512c1db",
+      "indexed_at": "2026-01-20T04:48:29.192200+00:00",
+      "language": "markdown",
+      "lines": 278,
+      "symbols": [
+        {
+          "children": [
+            {
+              "lines": [
+                5,
+                15
+              ],
+              "name": "Install PHPUnit and Dev Dependencies",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            3,
+            15
+          ],
+          "name": "Installation (One-Time Setup)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                18,
+                22
+              ],
+              "name": "Run All Tests",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                23,
+                34
+              ],
+              "name": "Run Specific Test Suites",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                35,
+                46
+              ],
+              "name": "Run Specific Test File",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                47,
+                52
+              ],
+              "name": "Run Specific Test Method",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            16,
+            52
+          ],
+          "name": "Running Tests",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                55,
+                59
+              ],
+              "name": "Text Coverage Summary",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                60,
+                65
+              ],
+              "name": "HTML Coverage Report",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                66,
+                70
+              ],
+              "name": "Coverage for Specific File",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            53,
+            70
+          ],
+          "name": "Coverage Reports",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                73,
+                92
+              ],
+              "name": "Successful Test Run",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                93,
+                105
+              ],
+              "name": "Test Failure Example",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            71,
+            105
+          ],
+          "name": "Expected Results",
+          "type": "section"
+        },
+        {
+          "lines": [
+            106,
+            125
+          ],
+          "name": "Test Structure Overview",
+          "type": "section"
+        },
+        {
+          "docstring": "| Command | Purpose | |---------|---------| | `composer test` | Run all tests | | `composer test:coverage` | Run with coverage report | | `vendor/bin/",
+          "lines": [
+            126,
+            136
+          ],
+          "name": "Common Commands Reference",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                139,
+                143
+              ],
+              "name": "Verbose Output",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                144,
+                148
+              ],
+              "name": "Show Test Names",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                149,
+                153
+              ],
+              "name": "Stop on First Failure",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                154,
+                162
+              ],
+              "name": "Debug with var_dump()",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            137,
+            162
+          ],
+          "name": "Debugging Tests",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                165,
+                173
+              ],
+              "name": "\"vendor/bin/phpunit not found\"",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                174,
+                179
+              ],
+              "name": "\"Class not found\" errors",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                180,
+                185
+              ],
+              "name": "\"Call to undefined function\"",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                186,
+                194
+              ],
+              "name": "Tests pass locally but fail in CI",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            163,
+            194
+          ],
+          "name": "Troubleshooting",
+          "type": "section"
+        },
+        {
+          "docstring": "Before committing code:",
+          "lines": [
+            195,
+            210
+          ],
+          "name": "Pre-Commit Checklist",
+          "type": "section"
+        },
+        {
+          "docstring": "| Component | Target | Current | |-----------|--------|---------| | Booking | 85% | 85% | | Availability | 80% | 80% | | Email/Error Log | 75% | 75% |",
+          "lines": [
+            211,
+            223
+          ],
+          "name": "Coverage Goals",
+          "type": "section"
+        },
+        {
+          "docstring": "1. **Install dependencies**: `composer install` 2. **Run tests**: `composer test` 3. **Check coverage**: `composer test:coverage` 4. **View detailed c",
+          "lines": [
+            224,
+            231
+          ],
+          "name": "Next Steps",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                234,
+                260
+              ],
+              "name": "GitHub Actions Example",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            232,
+            260
+          ],
+          "name": "CI/CD Integration",
+          "type": "section"
+        },
+        {
+          "docstring": "1. **Follow existing patterns** - Look at HelpersTest.php for examples 2. **Use descriptive names** - `test_create_inserts_booking_with_valid_data()`",
+          "lines": [
+            261,
+            268
+          ],
+          "name": "Tips for Writing Tests",
+          "type": "section"
+        },
+        {
+          "docstring": "- Full test documentation: `tests/README.md` - Implementation details: `TEST_SUITE_SUMMARY.md` - PHPUnit docs: https://phpunit.de/documentation.html -",
+          "lines": [
+            269,
+            279
+          ],
+          "name": "Help & Documentation",
+          "type": "section"
+        }
+      ]
+    },
+    "TEST_SUITE_SUMMARY.md": {
+      "hash": "af10edd303a7",
+      "indexed_at": "2026-01-20T04:48:29.193771+00:00",
+      "language": "markdown",
+      "lines": 384,
+      "symbols": [
+        {
+          "docstring": "Comprehensive PHPUnit test suite created to increase code coverage from 5% to 70% with focus on critical paths: booking, payment, calendar integration",
+          "lines": [
+            3,
+            6
+          ],
+          "name": "Overview",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "1. **tests/unit/BookingTest.php** (420 lines) - 15 test methods covering booking CRUD operations - Race condition prevention (create_with_lock) - Inpu",
+                  "lines": [
+                    11,
+                    53
+                  ],
+                  "name": "Unit Tests (6 files)",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "1. **tests/integration/CalendarSyncTest.php** (280 lines) - 9 test methods for calendar synchronization - Google Calendar and Microsoft Calendar integ",
+                  "lines": [
+                    54,
+                    69
+                  ],
+                  "name": "Integration Tests (2 files)",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                9,
+                69
+              ],
+              "name": "Test Files (7 files)",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. **phpunit.xml.dist** (Updated) - Test suite definitions (unit, integration, all) - Coverage reporting configuration - Code coverage exclusions - HT",
+              "lines": [
+                70,
+                90
+              ],
+              "name": "Configuration Files (3 files)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            7,
+            90
+          ],
+          "name": "What Was Created",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Unit Tests**: 80+ test methods - **Integration Tests**: 20+ test methods - **Total Test Methods**: 100+ across all suites",
+              "lines": [
+                93,
+                97
+              ],
+              "name": "Total Tests Created",
+              "type": "subsection"
+            },
+            {
+              "docstring": "| Component | Test File | Test Methods | Expected Coverage | |-----------|-----------|--------------|-------------------| | Booking CRUD | BookingTest",
+              "lines": [
+                98,
+                110
+              ],
+              "name": "Coverage by Component",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Booking creation and validation - Payment intent creation - Data encryption/decryption - Input sanitization and XSS prevention",
+              "lines": [
+                111,
+                116
+              ],
+              "name": "Critical Path Coverage (90%+)",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Availability slot calculation - Calendar synchronization - Email/error logging - Helper functions",
+              "lines": [
+                117,
+                122
+              ],
+              "name": "High Priority Coverage (70-85%)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            91,
+            122
+          ],
+          "name": "Test Coverage Details",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- SQL injection prevention (parameterized queries) - XSS prevention (input sanitization) - Email validation - Phone number sanitization - Encryption k",
+              "lines": [
+                125,
+                131
+              ],
+              "name": "Security Testing",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Email format validation - Date/time format validation - Booking conflict detection - Payment amount validation - Reference number uniqueness",
+              "lines": [
+                132,
+                138
+              ],
+              "name": "Data Validation",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Database operation failures - Payment API errors - Calendar API failures - Encryption/decryption errors - Invalid input handling",
+              "lines": [
+                139,
+                145
+              ],
+              "name": "Error Handling",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Mock WordPress functions (30+ functions) - WP_Error handling - Options/transients management - Action/filter hooks - Database operations ($wpdb)",
+              "lines": [
+                146,
+                152
+              ],
+              "name": "WordPress Integration",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            123,
+            152
+          ],
+          "name": "Key Testing Features",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                155,
+                163
+              ],
+              "name": "Prerequisites",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                164,
+                181
+              ],
+              "name": "Execute Tests",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                182,
+                204
+              ],
+              "name": "Expected Output",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            153,
+            204
+          ],
+          "name": "Running the Test Suite",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                207,
+                222
+              ],
+              "name": "Expected Coverage by Directory",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            205,
+            222
+          ],
+          "name": "Coverage Report",
+          "type": "section"
+        },
+        {
+          "docstring": "1. **Arrange-Act-Assert Pattern** - Clear test structure - Setup \u2192 Execute \u2192 Verify",
+          "lines": [
+            223,
+            250
+          ],
+          "name": "Testing Best Practices Implemented",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Options**: get_option(), update_option() - **Transients**: get_transient(), set_transient() - **Sanitization**: sanitize_text_field(), sanitize_em",
+              "lines": [
+                253,
+                262
+              ],
+              "name": "Mocked Functions (30+)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                263,
+                275
+              ],
+              "name": "Mock Implementation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            251,
+            275
+          ],
+          "name": "WordPress Mocking Strategy",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                278,
+                289
+              ],
+              "name": "Composer Scripts",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                290,
+                301
+              ],
+              "name": "GitHub Actions Example",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            276,
+            301
+          ],
+          "name": "CI/CD Integration",
+          "type": "section"
+        },
+        {
+          "docstring": "1. **phpunit.xml.dist** - Updated with new test suites and coverage configuration 2. **tests/bootstrap.php** - Enhanced with comprehensive WordPress m",
+          "lines": [
+            302,
+            307
+          ],
+          "name": "Files Modified",
+          "type": "section"
+        },
+        {
+          "docstring": "1. tests/unit/BookingTest.php 2. tests/unit/AvailabilityTest.php 3. tests/unit/EmailLogTest.php 4. tests/unit/ErrorLogTest.php 5. tests/unit/Encryptio",
+          "lines": [
+            308,
+            319
+          ],
+          "name": "Files Created",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "1. Install PHPUnit: `composer install` 2. Run test suite: `composer test` 3. Generate coverage: `composer test:coverage` 4. View HTML coverage: Open `",
+              "lines": [
+                322,
+                327
+              ],
+              "name": "To Run Tests",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Follow naming convention: `{Class}Test.php` 2. Extend `PHPUnit\\Framework\\TestCase` 3. Mock WordPress functions in setUp() 4. Write descriptive test",
+              "lines": [
+                328,
+                334
+              ],
+              "name": "To Add More Tests",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Add tests for admin classes - Add tests for REST API endpoints - Add tests for webhook handlers - Add tests for public shortcodes - Add tests for AJ",
+              "lines": [
+                335,
+                341
+              ],
+              "name": "To Improve Coverage",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            320,
+            341
+          ],
+          "name": "Next Steps",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- 100+ test methods created - 7 new test files - Comprehensive WordPress mocking - Documentation and guidelines - CI/CD ready configuration",
+              "lines": [
+                344,
+                350
+              ],
+              "name": "Achieved",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- 70% code coverage (from 5%) - < 1 minute test execution time - All critical paths tested - No flaky tests - Maintainable test suite",
+              "lines": [
+                351,
+                357
+              ],
+              "name": "Target",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            342,
+            357
+          ],
+          "name": "Success Metrics",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Run tests before each commit - Update tests when modifying code - Review coverage reports monthly - Refactor duplicate test code - Update mocks for",
+              "lines": [
+                360,
+                366
+              ],
+              "name": "Regular Tasks",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Target: < 1 minute for full suite - Unit tests: < 10 seconds - Integration tests: < 30 seconds - Use `@group` annotations for slow tests",
+              "lines": [
+                367,
+                372
+              ],
+              "name": "Performance",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            358,
+            372
+          ],
+          "name": "Maintenance",
+          "type": "section"
+        },
+        {
+          "docstring": "- PHPUnit Documentation: https://phpunit.de/ - WordPress Plugin Testing: https://make.wordpress.org/cli/handbook/misc/plugin-unit-tests/ - Test-Driven",
+          "lines": [
+            373,
+            385
+          ],
+          "name": "Additional Resources",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.114584+00:00",
+  "version": "1.0"
+}

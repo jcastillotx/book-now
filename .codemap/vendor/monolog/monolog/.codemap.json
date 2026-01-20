@@ -1,0 +1,896 @@
+{
+  "directory": "vendor/monolog/monolog",
+  "files": {
+    "CHANGELOG.md": {
+      "hash": "c31fbae044bf",
+      "indexed_at": "2026-01-20T04:49:41.383357+00:00",
+      "language": "markdown",
+      "lines": 810,
+      "symbols": [
+        {
+          "docstring": "* Added automatic directory cleanup in RotatingFileHandler (#2000) * Added timezone-aware file rotation to RotatingFileHandler (#1982) * Added support",
+          "lines": [
+            1,
+            16
+          ],
+          "name": "3.10.0 (2026-01-02)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* BC Warning: Fixed SendGridHandler to use the V3 API as V2 is now shut down, but this requires a new API key (#1952) * Deprecated Monolog\\Test\\TestCa",
+          "lines": [
+            17,
+            25
+          ],
+          "name": "3.9.0 (2025-03-24)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Deprecated Monolog\\DateTimeImmutable in favor of Monolog\\JsonSerializableDateTimeImmutable (#1928) * Fixed gelf keys not being valid when context/ex",
+          "lines": [
+            26,
+            31
+          ],
+          "name": "3.8.1 (2024-12-05)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Added `$fileOpenMode` param to `StreamHandler` to define a custom fopen mode to open the log file (#1913) * Fixed PHP 8.4 deprecation notices (#1903",
+          "lines": [
+            32,
+            45
+          ],
+          "name": "3.8.0 (2024-11-12)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Added `NormalizerFormatter->setBasePath(...)` (and `JsonFormatter` by extension) that allows removing the project's path from the stack trace output",
+          "lines": [
+            46,
+            51
+          ],
+          "name": "3.7.0 (2024-06-28)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Added `LineFormatter->setBasePath(...)` that allows removing the project's path from the stack trace output (#1873) * Added `$includeExtra` option i",
+          "lines": [
+            52,
+            61
+          ],
+          "name": "3.6.0 (2024-04-12)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Added ability to indent stack traces in LineFormatter via e.g. `indentStacktraces('  ')` (#1835) * Added ability to configure a max level name lengt",
+          "lines": [
+            62,
+            73
+          ],
+          "name": "3.5.0 (2023-10-27)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Added `LoadAverageProcessor` to track one of the 1, 5 or 15min load averages (#1803) * Added support for priority to the `AsMonologProcessor` attrib",
+          "lines": [
+            74,
+            83
+          ],
+          "name": "3.4.0 (2023-06-21)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Fixed Logger not being serializable anymore (#1792)",
+          "lines": [
+            84,
+            87
+          ],
+          "name": "3.3.1 (2023-02-06)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Deprecated FlowdockHandler & Formatter as the flowdock service was shutdown (#1748) * Added `ClosureContextProcessor` to allow delaying the creation",
+          "lines": [
+            88,
+            101
+          ],
+          "name": "3.3.0 (2023-02-06)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Deprecated `CubeHandler` and `PHPConsoleHandler` as both projects are abandoned and those should not be used anymore (#1734) * Marked `Logger` `@fin",
+          "lines": [
+            102,
+            117
+          ],
+          "name": "3.2.0 (2022-07-24)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Added `$datetime` parameter to `Logger::addRecord` as low level API to allow logging into the past or future (#1682) * Added `Logger::useLoggingLoop",
+          "lines": [
+            118,
+            126
+          ],
+          "name": "3.1.0 (2022-06-09)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "Changes from RC1",
+          "lines": [
+            127,
+            132
+          ],
+          "name": "3.0.0 (2022-05-10)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "This is mostly a cleanup release offering stronger type guarantees for integrators with the array->object/enum changes, but there is no big new featur",
+          "lines": [
+            133,
+            169
+          ],
+          "name": "3.0.0-RC1 (2022-05-08)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Added `$fileOpenMode` to `StreamHandler` to define a custom fopen mode to open the log file (#1913) * Fixed `StreamHandler` handling of write failur",
+          "lines": [
+            170,
+            177
+          ],
+          "name": "2.10.0 (2024-11-12)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Fixed PHP 8.4 deprecation warnings (#1874)",
+          "lines": [
+            178,
+            181
+          ],
+          "name": "2.9.3 (2024-04-12)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Fixed display_errors parsing in ErrorHandler which did not support string values (#1804) * Fixed bug where the previous error handler would not be r",
+          "lines": [
+            182,
+            187
+          ],
+          "name": "2.9.2 (2023-10-27)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Fixed Logger not being serializable anymore (#1792)",
+          "lines": [
+            188,
+            191
+          ],
+          "name": "2.9.1 (2023-02-06)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Deprecated FlowdockHandler & Formatter as the flowdock service was shutdown (#1748) * Added support for enum context values in PsrLogMessageProcesso",
+          "lines": [
+            192,
+            202
+          ],
+          "name": "2.9.0 (2023-02-05)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Deprecated `CubeHandler` and `PHPConsoleHandler` as both projects are abandoned and those should not be used anymore (#1734) * Added RFC 5424 level",
+          "lines": [
+            203,
+            216
+          ],
+          "name": "2.8.0 (2022-07-24)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Added `$datetime` parameter to `Logger::addRecord` as low level API to allow logging into the past or future (#1682) * Added `Logger::useLoggingLoop",
+          "lines": [
+            217,
+            224
+          ],
+          "name": "2.7.0 (2022-06-09)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Deprecated `SwiftMailerHandler`, use `SymfonyMailerHandler` instead * Added `SymfonyMailerHandler` (#1663) * Added ElasticSearch 8.x support to the",
+          "lines": [
+            225,
+            233
+          ],
+          "name": "2.6.0 (2022-05-10)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Added `callType` to IntrospectionProcessor (#1612) * Fixed AsMonologProcessor syntax to be compatible with PHP 7.2 (#1651)",
+          "lines": [
+            234,
+            238
+          ],
+          "name": "2.5.0 (2022-04-08)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Added [`Monolog\\LogRecord`](src/Monolog/LogRecord.php) interface that can be used to type-hint records like `array|\\Monolog\\LogRecord $record` to be",
+          "lines": [
+            239,
+            253
+          ],
+          "name": "2.4.0 (2022-03-14)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Fixed regression in StreamHandler since 2.3.3 on systems with the memory_limit set to >=20GB (#1592)",
+          "lines": [
+            254,
+            257
+          ],
+          "name": "2.3.5 (2021-10-01)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Fixed support for psr/log 3.x (#1589)",
+          "lines": [
+            258,
+            261
+          ],
+          "name": "2.3.4 (2021-09-15)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Fixed memory usage when using StreamHandler and calling stream_get_contents on the resource you passed to it (#1578, #1577) * Fixed support for psr/",
+          "lines": [
+            262,
+            267
+          ],
+          "name": "2.3.3 (2021-09-14)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Fixed compatibility with PHP 7.2 - 7.4 when experiencing PCRE errors (#1568)",
+          "lines": [
+            268,
+            271
+          ],
+          "name": "2.3.2 (2021-07-23)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Fixed Utils::getClass handling of anonymous classes not being fully compatible with PHP 8 (#1563) * Fixed some `@inheritDoc` annotations having the",
+          "lines": [
+            272,
+            276
+          ],
+          "name": "2.3.1 (2021-07-14)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Added a ton of PHPStan type annotations as well as type aliases on Monolog\\Logger for Record, Level and LevelName that you can import (#1557) * Adde",
+          "lines": [
+            277,
+            284
+          ],
+          "name": "2.3.0 (2021-07-05)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Added JSON_PARTIAL_OUTPUT_ON_ERROR to default json encoding flags, to avoid dropping entire context data or even records due to an invalid subset of",
+          "lines": [
+            285,
+            299
+          ],
+          "name": "2.2.0 (2020-12-14)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Fixed removing of json encoding options * Fixed type hint of $level not accepting strings in SendGridHandler and OverflowHandler * Fixed SwiftMailer",
+          "lines": [
+            300,
+            307
+          ],
+          "name": "2.1.1 (2020-07-23)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Added `JSON_INVALID_UTF8_SUBSTITUTE` to default json flags, so that invalid UTF8 characters now get converted to [\ufffd](https://en.wikipedia.org/wiki/S",
+          "lines": [
+            308,
+            318
+          ],
+          "name": "2.1.0 (2020-05-22)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Fixed ElasticsearchHandler swallowing exceptions details when failing to index log records * Fixed normalization of SoapFault objects containing non",
+          "lines": [
+            319,
+            327
+          ],
+          "name": "2.0.2 (2019-12-20)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Fixed normalization of Traversables to avoid traversing them as not all of them are rewindable * Fixed setFormatter/getFormatter to forward to the n",
+          "lines": [
+            328,
+            338
+          ],
+          "name": "2.0.1 (2019-11-13)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* BC Break: This is a major release, see [UPGRADE.md](UPGRADE.md) for details if you are coming from a 1.x release * BC Break: Logger methods log/debu",
+          "lines": [
+            339,
+            347
+          ],
+          "name": "2.0.0 (2019-08-30)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* BC Break: This is a major release, see [UPGRADE.md](UPGRADE.md) for details if you are coming from a 1.x release * BC Break: PHP 7.2 is now the mini",
+          "lines": [
+            348,
+            363
+          ],
+          "name": "2.0.0-beta2 (2019-07-06)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* BC Break: This is a major release, see [UPGRADE.md](UPGRADE.md) for details if you are coming from a 1.x release * BC Break: PHP 7.1 is now the mini",
+          "lines": [
+            364,
+            387
+          ],
+          "name": "2.0.0-beta1 (2018-12-08)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Fixed PHP 8.1 deprecation warning",
+          "lines": [
+            388,
+            391
+          ],
+          "name": "1.26.1 (2021-05-28)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Added $dateFormat and $removeUsedContextFields arguments to PsrLogMessageProcessor (backport from 2.x)",
+          "lines": [
+            392,
+            395
+          ],
+          "name": "1.26.0 (2020-12-14)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Fixed array access on null in RavenHandler * Fixed unique_id in WebProcessor not being disableable",
+          "lines": [
+            396,
+            400
+          ],
+          "name": "1.25.5 (2020-07-23)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Fixed GitProcessor type error when there is no git repo present * Fixed normalization of SoapFault objects containing deeply nested objects as \"deta",
+          "lines": [
+            401,
+            406
+          ],
+          "name": "1.25.4 (2020-05-22)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Fixed formatting of resources in JsonFormatter * Fixed RedisHandler failing to use MULTI properly when passed a proxied Redis instance (e.g. in Symf",
+          "lines": [
+            407,
+            413
+          ],
+          "name": "1.25.3 (2019-12-20)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Fixed normalization of Traversables to avoid traversing them as not all of them are rewindable * Fixed setFormatter/getFormatter to forward to the n",
+          "lines": [
+            414,
+            422
+          ],
+          "name": "1.25.2 (2019-11-13)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Fixed forward-compatible interfaces to be compatible with Monolog 1.x too.",
+          "lines": [
+            423,
+            426
+          ],
+          "name": "1.25.1 (2019-09-06)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Deprecated SlackbotHandler, use SlackWebhookHandler or SlackHandler instead * Deprecated RavenHandler, use sentry/sentry 2.x and their Sentry\\Monolo",
+          "lines": [
+            427,
+            439
+          ],
+          "name": "1.25.0 (2019-09-06)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* BC Notice: If you are extending any of the Monolog's Formatters' `normalize` method, make sure you add the new `$depth = 0` argument to your functio",
+          "lines": [
+            440,
+            468
+          ],
+          "name": "1.24.0 (2018-11-05)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Improved SyslogUdpHandler's support for RFC5424 and added optional `$ident` argument * Fixed GelfHandler truncation to be per field and not per mess",
+          "lines": [
+            469,
+            477
+          ],
+          "name": "1.23.0 (2017-06-19)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Fixed lots of minor issues in the new Slack integrations * Fixed support for allowInlineLineBreaks in LineFormatter when formatting exception backtr",
+          "lines": [
+            478,
+            482
+          ],
+          "name": "1.22.1 (2017-03-13)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Added SlackbotHandler and SlackWebhookHandler to set up Slack integration more easily * Added MercurialProcessor to add mercurial revision and branc",
+          "lines": [
+            483,
+            493
+          ],
+          "name": "1.22.0 (2016-11-26)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Break: Reverted the addition of $context when the ErrorHandler handles regular php errors from 1.20.0 as it was causing issues * Added support for m",
+          "lines": [
+            494,
+            501
+          ],
+          "name": "1.21.0 (2016-07-29)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Added FingersCrossedHandler::activate() to manually trigger the handler regardless of the activation policy * Added StreamHandler::getUrl to retriev",
+          "lines": [
+            502,
+            511
+          ],
+          "name": "1.20.0 (2016-07-02)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Break: StreamHandler will not close streams automatically that it does not own. If you pass in a stream (not a path/url), then it will not close it",
+          "lines": [
+            512,
+            518
+          ],
+          "name": "1.19.0 (2016-04-12)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Fixed ElasticaFormatter to use more precise dates * Fixed GelfMessageFormatter sending too long messages",
+          "lines": [
+            519,
+            523
+          ],
+          "name": "1.18.2 (2016-04-02)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Fixed SlackHandler bug where slack dropped messages randomly * Fixed RedisHandler issue when using with the PHPRedis extension * Fixed AmqpHandler c",
+          "lines": [
+            524,
+            530
+          ],
+          "name": "1.18.1 (2016-03-13)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Added optional reduction of timestamp precision via `Logger->useMicrosecondTimestamps(false)`, disabling it gets you a bit of performance boost but",
+          "lines": [
+            531,
+            545
+          ],
+          "name": "1.18.0 (2016-03-01)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Fixed ErrorHandler compatibility with non-Monolog PSR-3 loggers * Fixed SlackHandler handling to use slack functionalities better * Fixed SwiftMaile",
+          "lines": [
+            546,
+            552
+          ],
+          "name": "1.17.2 (2015-10-14)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Fixed RollbarHandler triggering PHP notices",
+          "lines": [
+            553,
+            556
+          ],
+          "name": "1.17.1 (2015-08-31)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Added support for `checksum` and `release` context/extra values in RavenHandler * Added better support for exceptions in RollbarHandler * Added UidP",
+          "lines": [
+            557,
+            564
+          ],
+          "name": "1.17.0 (2015-08-30)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Added IFTTTHandler to notify ifttt.com triggers * Added Logger::setHandlers() to allow setting/replacing all handlers * Added $capSize in RedisHandl",
+          "lines": [
+            565,
+            575
+          ],
+          "name": "1.16.0 (2015-08-09)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Added addTags and setTags methods to change a TagProcessor * Added automatic creation of directories if they are missing for a StreamHandler to open",
+          "lines": [
+            576,
+            584
+          ],
+          "name": "1.15.0 (2015-07-12)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Added PHPConsoleHandler to send record to Chrome's PHP Console extension and library * Added support for objects implementing __toString in the Norm",
+          "lines": [
+            585,
+            593
+          ],
+          "name": "1.14.0 (2015-06-19)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Fixed regression in HipChat requiring a new token to be created",
+          "lines": [
+            594,
+            597
+          ],
+          "name": "1.13.1 (2015-03-09)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Added Registry::hasLogger to check for the presence of a logger instance * Added context.user support to RavenHandler * Added HipChat API v2 support",
+          "lines": [
+            598,
+            608
+          ],
+          "name": "1.13.0 (2015-03-05)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Break: HandlerInterface::isHandling now receives a partial record containing only a level key. This was always the intent and does not break any Mon",
+          "lines": [
+            609,
+            622
+          ],
+          "name": "1.12.0 (2014-12-29)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Break: The NewRelicHandler extra and context data are now prefixed with extra_ and context_ to avoid clashes. Watch out if you have scripts reading",
+          "lines": [
+            623,
+            640
+          ],
+          "name": "1.11.0 (2014-09-30)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Added Logger::getHandlers() and Logger::getProcessors() methods * Added $passthruLevel argument to FingersCrossedHandler to let it always pass some",
+          "lines": [
+            641,
+            647
+          ],
+          "name": "1.10.0 (2014-06-04)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Fixed regression in RotatingFileHandler file permissions * Fixed initialization of the BufferHandler to make sure it gets flushed after receiving re",
+          "lines": [
+            648,
+            653
+          ],
+          "name": "1.9.1 (2014-04-24)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Added LogEntriesHandler to send logs to a LogEntries account * Added $filePermissions to tweak file mode on StreamHandler and RotatingFileHandler *",
+          "lines": [
+            654,
+            666
+          ],
+          "name": "1.9.0 (2014-04-20)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Break: the LineFormatter now strips newlines by default because this was a bug, set $allowInlineLineBreaks to true if you need them * Added BrowserC",
+          "lines": [
+            667,
+            683
+          ],
+          "name": "1.8.0 (2014-03-23)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Added ElasticSearchHandler to send logs to an Elastic Search server * Added DynamoDbHandler and ScalarFormatter to send logs to Amazon's Dynamo DB *",
+          "lines": [
+            684,
+            700
+          ],
+          "name": "1.7.0 (2013-11-14)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Added HipChatHandler to send logs to a HipChat chat room * Added ErrorLogHandler to send logs to PHP's error_log function * Added NewRelicHandler to",
+          "lines": [
+            701,
+            718
+          ],
+          "name": "1.6.0 (2013-07-29)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Added ProcessIdProcessor to inject the PID in log records * Added UidProcessor to inject a unique identifier to all log records of one request/run *",
+          "lines": [
+            719,
+            726
+          ],
+          "name": "1.5.0 (2013-04-23)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Fixed exception formatting in the LineFormatter to be more minimalistic * Fixed RavenHandler's handling of context/extra data, requires Raven client",
+          "lines": [
+            727,
+            734
+          ],
+          "name": "1.4.1 (2013-04-01)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Added RedisHandler to log to Redis via the Predis library or the phpredis extension * Added ZendMonitorHandler to log to the Zend Server monitor * A",
+          "lines": [
+            735,
+            743
+          ],
+          "name": "1.4.0 (2013-02-13)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Fixed LogstashFormatter to be usable with stream handlers * Fixed GelfMessageFormatter levels on Windows",
+          "lines": [
+            744,
+            748
+          ],
+          "name": "1.3.1 (2013-01-11)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Added PSR-3 compliance, the `Monolog\\Logger` class is now an instance of `Psr\\Log\\LoggerInterface` * Added PsrLogMessageProcessor that you can selec",
+          "lines": [
+            749,
+            762
+          ],
+          "name": "1.3.0 (2013-01-08)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Added new $logopts arg to SyslogHandler to provide custom openlog options * Fixed fatal error in SyslogHandler",
+          "lines": [
+            763,
+            767
+          ],
+          "name": "1.2.1 (2012-08-29)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Added AmqpHandler (for use with AMQP servers) * Added CubeHandler * Added NativeMailerHandler::addHeader() to send custom headers in mails * Added t",
+          "lines": [
+            768,
+            780
+          ],
+          "name": "1.2.0 (2012-08-18)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Added Monolog\\Logger::isHandling() to check if a handler will handle the given log level * Added ChromePHPHandler * Added MongoDBHandler * Added Gel",
+          "lines": [
+            781,
+            793
+          ],
+          "name": "1.1.0 (2012-04-23)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Fixed bug in IE with large response headers and FirePHPHandler",
+          "lines": [
+            794,
+            797
+          ],
+          "name": "1.0.2 (2011-10-24)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Added MemoryPeakUsageProcessor and MemoryUsageProcessor * Added Monolog\\Logger::getName() to get a logger's channel name",
+          "lines": [
+            798,
+            802
+          ],
+          "name": "1.0.1 (2011-08-25)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Added IntrospectionProcessor to get info from where the logger was called * Fixed WebProcessor in CLI",
+          "lines": [
+            803,
+            807
+          ],
+          "name": "1.0.0 (2011-07-06)",
+          "type": "subsection"
+        },
+        {
+          "docstring": "* Initial release",
+          "lines": [
+            808,
+            811
+          ],
+          "name": "1.0.0-RC1 (2011-07-01)",
+          "type": "subsection"
+        }
+      ]
+    },
+    "README.md": {
+      "hash": "0e009e700560",
+      "indexed_at": "2026-01-20T04:49:41.383714+00:00",
+      "language": "markdown",
+      "lines": 136,
+      "symbols": [
+        {
+          "docstring": "Install the latest version with",
+          "lines": [
+            38,
+            45
+          ],
+          "name": "Installation",
+          "type": "section"
+        },
+        {
+          "lines": [
+            46,
+            63
+          ],
+          "name": "Basic Usage",
+          "type": "section"
+        },
+        {
+          "docstring": "- [Usage Instructions](doc/01-usage.md) - [Handlers, Formatters and Processors](doc/02-handlers-formatters-processors.md) - [Utility Classes](doc/03-u",
+          "lines": [
+            64,
+            71
+          ],
+          "name": "Documentation",
+          "type": "section"
+        },
+        {
+          "docstring": "Get supported Monolog and help fund the project with the [Tidelift Subscription](https://tidelift.com/subscription/pkg/packagist-monolog-monolog?utm_s",
+          "lines": [
+            72,
+            77
+          ],
+          "name": "Support Monolog Financially",
+          "type": "section"
+        },
+        {
+          "docstring": "Third party handlers, formatters and processors are [listed in the wiki](https://github.com/Seldaek/monolog/wiki/Third-Party-Packages). You can also a",
+          "lines": [
+            78,
+            83
+          ],
+          "name": "Third Party Packages",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Monolog `^3.0` works with PHP 8.1 or above. - Monolog `^2.5` works with PHP 7.2 or above. - Monolog `^1.25` works with PHP 5.3 up to 8.1, but is not",
+              "lines": [
+                86,
+                91
+              ],
+              "name": "Requirements",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Monolog 1.x support is somewhat limited at this point and only important fixes will be done. You should migrate to Monolog 2 or 3 where possible to be",
+              "lines": [
+                92,
+                95
+              ],
+              "name": "Support",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Bugs and feature request are tracked on [GitHub](https://github.com/Seldaek/monolog/issues)",
+              "lines": [
+                96,
+                99
+              ],
+              "name": "Submitting bugs and feature requests",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Frameworks and libraries using [PSR-3](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-3-logger-interface.md) can be used very eas",
+              "lines": [
+                100,
+                123
+              ],
+              "name": "Framework Integrations",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Jordi Boggiano - <j.boggiano@seld.be> - <http://twitter.com/seldaek><br /> See also the list of [contributors](https://github.com/Seldaek/monolog/cont",
+              "lines": [
+                124,
+                128
+              ],
+              "name": "Author",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Monolog is licensed under the MIT License - see the [LICENSE](LICENSE) file for details",
+              "lines": [
+                129,
+                132
+              ],
+              "name": "License",
+              "type": "subsection"
+            },
+            {
+              "docstring": "This library is heavily inspired by Python's [Logbook](https://logbook.readthedocs.io/en/stable/) library, although most concepts have been adjusted t",
+              "lines": [
+                133,
+                137
+              ],
+              "name": "Acknowledgements",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            84,
+            137
+          ],
+          "name": "About",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.132691+00:00",
+  "version": "1.0"
+}

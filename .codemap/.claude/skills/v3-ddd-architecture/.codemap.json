@@ -1,0 +1,260 @@
+{
+  "directory": ".claude/skills/v3-ddd-architecture",
+  "files": {
+    "SKILL.md": {
+      "hash": "da84eb1ab349",
+      "indexed_at": "2026-01-20T04:50:25.507727+00:00",
+      "language": "markdown",
+      "lines": 442,
+      "symbols": [
+        {
+          "docstring": "Designs and implements Domain-Driven Design (DDD) architecture for claude-flow v3, decomposing god objects into bounded contexts, implementing clean a",
+          "lines": [
+            8,
+            11
+          ],
+          "name": "What This Skill Does",
+          "type": "section"
+        },
+        {
+          "lines": [
+            12,
+            23
+          ],
+          "name": "Quick Start",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                26,
+                47
+              ],
+              "name": "Current Architecture Analysis",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "lines": [
+                    50,
+                    71
+                  ],
+                  "name": "1. Task Management Domain",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    72,
+                    92
+                  ],
+                  "name": "2. Session Management Domain",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    93,
+                    113
+                  ],
+                  "name": "3. Health Monitoring Domain",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                48,
+                113
+              ],
+              "name": "Domain Boundaries",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            24,
+            113
+          ],
+          "name": "DDD Implementation Strategy",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                116,
+                148
+              ],
+              "name": "Core Kernel",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                149,
+                177
+              ],
+              "name": "Plugin Architecture",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            114,
+            177
+          ],
+          "name": "Microkernel Architecture Pattern",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                180,
+                241
+              ],
+              "name": "Event-Driven Communication",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            178,
+            241
+          ],
+          "name": "Domain Events & Integration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                260,
+                294
+              ],
+              "name": "Application Layer (Use Cases)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            242,
+            294
+          ],
+          "name": "Clean Architecture Layers",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                297,
+                329
+              ],
+              "name": "Bounded Context Modules",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            295,
+            329
+          ],
+          "name": "Module Configuration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                332,
+                350
+              ],
+              "name": "Phase 1: Extract Domain Services",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                351,
+                367
+              ],
+              "name": "Phase 2: Implement Clean Interfaces",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                368,
+                376
+              ],
+              "name": "Phase 3: Plugin System",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            330,
+            376
+          ],
+          "name": "Migration Strategy",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                379,
+                411
+              ],
+              "name": "Domain Testing (London School TDD)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            377,
+            411
+          ],
+          "name": "Testing Strategy",
+          "type": "section"
+        },
+        {
+          "docstring": "- [ ] **God Object Elimination**: orchestrator.ts (1,440 lines) \u2192 5 focused domains (<300 lines each) - [ ] **Bounded Context Isolation**: 100% domain",
+          "lines": [
+            412,
+            420
+          ],
+          "name": "Success Metrics",
+          "type": "section"
+        },
+        {
+          "docstring": "- `v3-core-implementation` - Implementation of DDD domains - `v3-memory-unification` - AgentDB integration within bounded contexts - `v3-swarm-coordin",
+          "lines": [
+            421,
+            427
+          ],
+          "name": "Related V3 Skills",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                430,
+                437
+              ],
+              "name": "Complete Domain Extraction",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                438,
+                442
+              ],
+              "name": "Plugin Development",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            428,
+            442
+          ],
+          "name": "Usage Examples",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.164218+00:00",
+  "version": "1.0"
+}

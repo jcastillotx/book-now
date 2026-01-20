@@ -1,0 +1,489 @@
+{
+  "directory": "vendor/firebase/php-jwt",
+  "files": {
+    "CHANGELOG.md": {
+      "hash": "d96f23e2c94b",
+      "indexed_at": "2026-01-20T04:50:05.553452+00:00",
+      "language": "markdown",
+      "lines": 229,
+      "symbols": [
+        {
+          "children": [
+            {
+              "docstring": "* add key length validation for ec keys ([#615](https://github.com/firebase/php-jwt/issues/615)) ([7044f9a](https://github.com/firebase/php-jwt/commit",
+              "lines": [
+                6,
+                9
+              ],
+              "name": "Bug Fixes",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            3,
+            9
+          ],
+          "name": "[7.0.2](https://github.com/firebase/php-jwt/compare/v7.0.1...v7.0.2) (2025-12-16)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* add key size validation ([#613](https://github.com/firebase/php-jwt/issues/613)) ([6b80341](https://github.com/firebase/php-jwt/commit/6b80341bf5783",
+              "lines": [
+                13,
+                16
+              ],
+              "name": "\u26a0\ufe0f \u26a0\ufe0f \u26a0\ufe0f  Security Fixes \u26a0\ufe0f \u26a0\ufe0f \u26a0\ufe0f",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* add SensitiveParameter attribute to security-critical parameters ([#603](https://github.com/firebase/php-jwt/issues/603)) ([4dbfac0](https://github.",
+              "lines": [
+                17,
+                22
+              ],
+              "name": "Features",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* validate iat and nbf on payload ([#568](https://github.com/firebase/php-jwt/issues/568)) ([953b2c8](https://github.com/firebase/php-jwt/commit/953b2",
+              "lines": [
+                23,
+                26
+              ],
+              "name": "Bug Fixes",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            10,
+            26
+          ],
+          "name": "[7.0.0](https://github.com/firebase/php-jwt/compare/v6.11.1...v7.0.0) (2025-12-15)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* update error text for consistency ([#528](https://github.com/firebase/php-jwt/issues/528)) ([c11113a](https://github.com/firebase/php-jwt/commit/c11",
+              "lines": [
+                30,
+                33
+              ],
+              "name": "Bug Fixes",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            27,
+            33
+          ],
+          "name": "[6.11.1](https://github.com/firebase/php-jwt/compare/v6.11.0...v6.11.1) (2025-04-09)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* support octet typed JWK ([#587](https://github.com/firebase/php-jwt/issues/587)) ([7cb8a26](https://github.com/firebase/php-jwt/commit/7cb8a265fa81e",
+              "lines": [
+                37,
+                41
+              ],
+              "name": "Features",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* refactor constructor Key to use PHP 8.0 syntax ([#577](https://github.com/firebase/php-jwt/issues/577)) ([29fa2ce](https://github.com/firebase/php-j",
+              "lines": [
+                42,
+                45
+              ],
+              "name": "Bug Fixes",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            34,
+            45
+          ],
+          "name": "[6.11.0](https://github.com/firebase/php-jwt/compare/v6.10.2...v6.11.0) (2025-01-23)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Mitigate PHP8.4 deprecation warnings ([#570](https://github.com/firebase/php-jwt/issues/570)) ([76808fa](https://github.com/firebase/php-jwt/commit/",
+              "lines": [
+                49,
+                53
+              ],
+              "name": "Bug Fixes",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            46,
+            53
+          ],
+          "name": "[6.10.2](https://github.com/firebase/php-jwt/compare/v6.10.1...v6.10.2) (2024-11-24)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* ensure ratelimit expiry is set every time ([#556](https://github.com/firebase/php-jwt/issues/556)) ([09cb208](https://github.com/firebase/php-jwt/co",
+              "lines": [
+                57,
+                61
+              ],
+              "name": "Bug Fixes",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            54,
+            61
+          ],
+          "name": "[6.10.1](https://github.com/firebase/php-jwt/compare/v6.10.0...v6.10.1) (2024-05-18)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* allow typ header override ([#546](https://github.com/firebase/php-jwt/issues/546)) ([79cb30b](https://github.com/firebase/php-jwt/commit/79cb30b729a",
+              "lines": [
+                65,
+                68
+              ],
+              "name": "Features",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            62,
+            68
+          ],
+          "name": "[6.10.0](https://github.com/firebase/php-jwt/compare/v6.9.0...v6.10.0) (2023-11-28)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* add payload to jwt exception ([#521](https://github.com/firebase/php-jwt/issues/521)) ([175edf9](https://github.com/firebase/php-jwt/commit/175edf95",
+              "lines": [
+                72,
+                75
+              ],
+              "name": "Features",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            69,
+            75
+          ],
+          "name": "[6.9.0](https://github.com/firebase/php-jwt/compare/v6.8.1...v6.9.0) (2023-10-04)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* accept float claims but round down to ignore them ([#492](https://github.com/firebase/php-jwt/issues/492)) ([3936842](https://github.com/firebase/ph",
+              "lines": [
+                79,
+                83
+              ],
+              "name": "Bug Fixes",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            76,
+            83
+          ],
+          "name": "[6.8.1](https://github.com/firebase/php-jwt/compare/v6.8.0...v6.8.1) (2023-07-14)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* add support for P-384 curve ([#515](https://github.com/firebase/php-jwt/issues/515)) ([5de4323](https://github.com/firebase/php-jwt/commit/5de4323f4",
+              "lines": [
+                87,
+                91
+              ],
+              "name": "Features",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* handle invalid http responses ([#508](https://github.com/firebase/php-jwt/issues/508)) ([91c39c7](https://github.com/firebase/php-jwt/commit/91c39c7",
+              "lines": [
+                92,
+                95
+              ],
+              "name": "Bug Fixes",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            84,
+            95
+          ],
+          "name": "[6.8.0](https://github.com/firebase/php-jwt/compare/v6.7.0...v6.8.0) (2023-06-14)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* add ed25519 support to JWK (public keys) ([#452](https://github.com/firebase/php-jwt/issues/452)) ([e53979a](https://github.com/firebase/php-jwt/com",
+              "lines": [
+                99,
+                102
+              ],
+              "name": "Features",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            96,
+            102
+          ],
+          "name": "[6.7.0](https://github.com/firebase/php-jwt/compare/v6.6.0...v6.7.0) (2023-06-14)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* allow get headers when decoding token ([#442](https://github.com/firebase/php-jwt/issues/442)) ([fb85f47](https://github.com/firebase/php-jwt/commit",
+              "lines": [
+                106,
+                110
+              ],
+              "name": "Features",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* only check iat if nbf is not used ([#493](https://github.com/firebase/php-jwt/issues/493)) ([398ccd2](https://github.com/firebase/php-jwt/commit/398",
+              "lines": [
+                111,
+                114
+              ],
+              "name": "Bug Fixes",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            103,
+            114
+          ],
+          "name": "[6.6.0](https://github.com/firebase/php-jwt/compare/v6.5.0...v6.6.0) (2023-06-13)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* allow KID of '0' ([#505](https://github.com/firebase/php-jwt/issues/505)) ([9dc46a9](https://github.com/firebase/php-jwt/commit/9dc46a9c3e5801294249",
+              "lines": [
+                118,
+                122
+              ],
+              "name": "Bug Fixes",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* drop support for PHP 7.3 ([#495](https://github.com/firebase/php-jwt/issues/495))",
+              "lines": [
+                123,
+                126
+              ],
+              "name": "Miscellaneous Chores",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            115,
+            126
+          ],
+          "name": "[6.5.0](https://github.com/firebase/php-jwt/compare/v6.4.0...v6.5.0) (2023-05-12)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* add support for W3C ES256K ([#462](https://github.com/firebase/php-jwt/issues/462)) ([213924f](https://github.com/firebase/php-jwt/commit/213924f519",
+              "lines": [
+                130,
+                134
+              ],
+              "name": "Features",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            127,
+            134
+          ],
+          "name": "[6.4.0](https://github.com/firebase/php-jwt/compare/v6.3.2...v6.4.0) (2023-02-08)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* check kid before using as array index ([bad1b04](https://github.com/firebase/php-jwt/commit/bad1b040d0c736bbf86814c6b5ae614f517cf7bd))",
+              "lines": [
+                138,
+                141
+              ],
+              "name": "Bug Fixes",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            135,
+            141
+          ],
+          "name": "[6.3.2](https://github.com/firebase/php-jwt/compare/v6.3.1...v6.3.2) (2022-11-01)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* casing of GET for PSR compat ([#451](https://github.com/firebase/php-jwt/issues/451)) ([60b52b7](https://github.com/firebase/php-jwt/commit/60b52b71",
+              "lines": [
+                145,
+                149
+              ],
+              "name": "Bug Fixes",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            142,
+            149
+          ],
+          "name": "[6.3.1](https://github.com/firebase/php-jwt/compare/v6.3.0...v6.3.1) (2022-11-01)",
+          "type": "section"
+        },
+        {
+          "docstring": "- Added ES256 support to JWK parsing ([#399](https://github.com/firebase/php-jwt/pull/399)) - Fixed potential caching error in `CachedKeySet` by cachi",
+          "lines": [
+            150,
+            154
+          ],
+          "name": "6.3.0 / 2022-07-15",
+          "type": "section"
+        },
+        {
+          "docstring": "- Added `CachedKeySet` ([#397](https://github.com/firebase/php-jwt/pull/397)) - Added `$defaultAlg` parameter to `JWT::parseKey` and `JWT::parseKeySet",
+          "lines": [
+            155,
+            159
+          ],
+          "name": "6.2.0 / 2022-05-14",
+          "type": "section"
+        },
+        {
+          "docstring": "- Drop support for PHP 5.3, 5.4, 5.5, 5.6, and 7.0 - Add parameter typing and return types where possible",
+          "lines": [
+            160,
+            164
+          ],
+          "name": "6.1.0 / 2022-03-23",
+          "type": "section"
+        },
+        {
+          "docstring": "- **Backwards-Compatibility Breaking Changes**: See the [Release Notes](https://github.com/firebase/php-jwt/releases/tag/v6.0.0) for more information.",
+          "lines": [
+            165,
+            173
+          ],
+          "name": "6.0.0 / 2022-01-24",
+          "type": "section"
+        },
+        {
+          "docstring": "- Support RS384 and RS512. See [#117](https://github.com/firebase/php-jwt/pull/117). Thanks [@joostfaassen](https://github.com/joostfaassen)! - Add an",
+          "lines": [
+            174,
+            194
+          ],
+          "name": "5.0.0 / 2017-06-26",
+          "type": "section"
+        },
+        {
+          "docstring": "- Add support for late static binding. See [#88](https://github.com/firebase/php-jwt/pull/88) for details. Thanks to [@chappy84](https://github.com/ch",
+          "lines": [
+            195,
+            200
+          ],
+          "name": "4.0.0 / 2016-07-17",
+          "type": "section"
+        },
+        {
+          "docstring": "- Minimum PHP version updated from `5.2.0` to `5.3.0`. - Add `\\Firebase\\JWT` namespace. See [#59](https://github.com/firebase/php-jwt/pull/59) for det",
+          "lines": [
+            201,
+            212
+          ],
+          "name": "3.0.0 / 2015-07-22",
+          "type": "section"
+        },
+        {
+          "docstring": "- Add support for adding custom, optional JWT headers to `JWT::encode()`. See [#53](https://github.com/firebase/php-jwt/pull/53/files) for details. Th",
+          "lines": [
+            213,
+            217
+          ],
+          "name": "2.2.0 / 2015-06-22",
+          "type": "section"
+        },
+        {
+          "docstring": "- Add support for adding a leeway to `JWT:decode()` that accounts for clock skew between signing and verifying entities. Thanks to [@lcabral](https://",
+          "lines": [
+            218,
+            223
+          ],
+          "name": "2.1.0 / 2015-05-20",
+          "type": "section"
+        },
+        {
+          "docstring": "- **Note**: It is strongly recommended that you update to > v2.0.0 to address known security vulnerabilities in prior versions when both symmetric and",
+          "lines": [
+            224,
+            230
+          ],
+          "name": "2.0.0 / 2015-04-01",
+          "type": "section"
+        }
+      ]
+    },
+    "README.md": {
+      "hash": "e875d44c7be1",
+      "indexed_at": "2026-01-20T04:50:05.554309+00:00",
+      "language": "markdown",
+      "lines": 425,
+      "symbols": [
+        {
+          "docstring": "When a call to `JWT::decode` is invalid, it will throw one of the following exceptions:",
+          "lines": [
+            339,
+            390
+          ],
+          "name": "Exception Handling",
+          "type": "subsubsection"
+        },
+        {
+          "docstring": "The return value of `JWT::decode` is the generic PHP object `stdClass`. If you'd like to handle with arrays instead, you can do the following:",
+          "lines": [
+            391,
+            426
+          ],
+          "name": "Casting to array",
+          "type": "subsubsection"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.138436+00:00",
+  "version": "1.0"
+}

@@ -1,0 +1,3176 @@
+{
+  "directory": ".claude/commands/sparc",
+  "files": {
+    "analyzer.md": {
+      "hash": "bd6a184d3fcf",
+      "indexed_at": "2026-01-20T04:50:25.539473+00:00",
+      "language": "markdown",
+      "lines": 52,
+      "symbols": [
+        {
+          "docstring": "Deep code and data analysis with batch processing capabilities.",
+          "lines": [
+            3,
+            5
+          ],
+          "name": "Purpose",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                8,
+                19
+              ],
+              "name": "Option 1: Using MCP Tools (Preferred in Claude Code)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                20,
+                28
+              ],
+              "name": "Option 2: Using NPX CLI (Fallback when MCP not available)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                29,
+                34
+              ],
+              "name": "Option 3: Local Installation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6,
+            34
+          ],
+          "name": "Activation",
+          "type": "section"
+        },
+        {
+          "docstring": "- Code analysis with parallel file processing - Data pattern recognition - Performance profiling - Memory usage analysis - Dependency mapping",
+          "lines": [
+            35,
+            41
+          ],
+          "name": "Core Capabilities",
+          "type": "section"
+        },
+        {
+          "docstring": "- Parallel file analysis using concurrent Read operations - Batch pattern matching with Grep tool - Simultaneous metric collection - Aggregated report",
+          "lines": [
+            42,
+            47
+          ],
+          "name": "Batch Operations",
+          "type": "section"
+        },
+        {
+          "docstring": "- Detailed analysis reports - Performance metrics - Improvement recommendations - Visualizations when applicable",
+          "lines": [
+            48,
+            52
+          ],
+          "name": "Output Format",
+          "type": "section"
+        }
+      ]
+    },
+    "architect.md": {
+      "hash": "ada362c7e25a",
+      "indexed_at": "2026-01-20T04:50:25.533098+00:00",
+      "language": "markdown",
+      "lines": 53,
+      "symbols": [
+        {
+          "docstring": "System design with Memory-based coordination for scalable architectures.",
+          "lines": [
+            3,
+            5
+          ],
+          "name": "Purpose",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                8,
+                19
+              ],
+              "name": "Option 1: Using MCP Tools (Preferred in Claude Code)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                20,
+                28
+              ],
+              "name": "Option 2: Using NPX CLI (Fallback when MCP not available)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                29,
+                34
+              ],
+              "name": "Option 3: Local Installation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6,
+            34
+          ],
+          "name": "Activation",
+          "type": "section"
+        },
+        {
+          "docstring": "- System architecture design - Component interface definition - Database schema design - API contract specification - Infrastructure planning",
+          "lines": [
+            35,
+            41
+          ],
+          "name": "Core Capabilities",
+          "type": "section"
+        },
+        {
+          "docstring": "- Store architecture decisions in Memory - Share component specifications across agents - Maintain design consistency - Track architectural evolution",
+          "lines": [
+            42,
+            47
+          ],
+          "name": "Memory Integration",
+          "type": "section"
+        },
+        {
+          "docstring": "- Microservices - Event-driven architecture - Domain-driven design - Hexagonal architecture - CQRS and Event Sourcing",
+          "lines": [
+            48,
+            54
+          ],
+          "name": "Design Patterns",
+          "type": "section"
+        }
+      ]
+    },
+    "ask.md": {
+      "hash": "2d785fada820",
+      "indexed_at": "2026-01-20T04:50:25.538753+00:00",
+      "language": "markdown",
+      "lines": 97,
+      "symbols": [
+        {
+          "docstring": "You are a task-formulation guide that helps users navigate, ask, and delegate tasks to the correct SPARC modes.",
+          "lines": [
+            8,
+            10
+          ],
+          "name": "Role Definition",
+          "type": "section"
+        },
+        {
+          "docstring": "Guide users to ask questions using SPARC methodology:",
+          "lines": [
+            11,
+            31
+          ],
+          "name": "Custom Instructions",
+          "type": "section"
+        },
+        {
+          "docstring": "- **read**: File reading and viewing",
+          "lines": [
+            32,
+            34
+          ],
+          "name": "Available Tools",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                37,
+                48
+              ],
+              "name": "Option 1: Using MCP Tools (Preferred in Claude Code)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                49,
+                63
+              ],
+              "name": "Option 2: Using NPX CLI (Fallback when MCP not available)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                64,
+                69
+              ],
+              "name": "Option 3: Local Installation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            35,
+            69
+          ],
+          "name": "Usage",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                72,
+                89
+              ],
+              "name": "Using MCP Tools (Preferred)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                90,
+                98
+              ],
+              "name": "Using NPX CLI (Fallback)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            70,
+            98
+          ],
+          "name": "Memory Integration",
+          "type": "section"
+        }
+      ]
+    },
+    "batch-executor.md": {
+      "hash": "5c731f6062a8",
+      "indexed_at": "2026-01-20T04:50:25.535320+00:00",
+      "language": "markdown",
+      "lines": 54,
+      "symbols": [
+        {
+          "docstring": "Parallel task execution specialist using batch operations.",
+          "lines": [
+            3,
+            5
+          ],
+          "name": "Purpose",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                8,
+                19
+              ],
+              "name": "Option 1: Using MCP Tools (Preferred in Claude Code)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                20,
+                28
+              ],
+              "name": "Option 2: Using NPX CLI (Fallback when MCP not available)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                29,
+                34
+              ],
+              "name": "Option 3: Local Installation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6,
+            34
+          ],
+          "name": "Activation",
+          "type": "section"
+        },
+        {
+          "docstring": "- Parallel file operations - Concurrent task execution - Resource optimization - Load balancing - Progress tracking",
+          "lines": [
+            35,
+            41
+          ],
+          "name": "Core Capabilities",
+          "type": "section"
+        },
+        {
+          "docstring": "- Parallel Read/Write operations - Concurrent Edit operations - Batch file transformations - Distributed processing - Pipeline orchestration",
+          "lines": [
+            42,
+            48
+          ],
+          "name": "Execution Patterns",
+          "type": "section"
+        },
+        {
+          "docstring": "- Dynamic resource allocation - Automatic load balancing - Progress monitoring - Error recovery - Result aggregation",
+          "lines": [
+            49,
+            55
+          ],
+          "name": "Performance Features",
+          "type": "section"
+        }
+      ]
+    },
+    "code.md": {
+      "hash": "9e97586f1a5f",
+      "indexed_at": "2026-01-20T04:50:25.537355+00:00",
+      "language": "markdown",
+      "lines": 89,
+      "symbols": [
+        {
+          "docstring": "You write clean, efficient, modular code based on pseudocode and architecture. You use configuration for environments and break large components into",
+          "lines": [
+            8,
+            10
+          ],
+          "name": "Role Definition",
+          "type": "section"
+        },
+        {
+          "docstring": "Write modular code using clean architecture principles. Never hardcode secrets or environment values. Split code into files < 500 lines. Use config fi",
+          "lines": [
+            11,
+            13
+          ],
+          "name": "Custom Instructions",
+          "type": "section"
+        },
+        {
+          "docstring": "- Use `insert_content` when creating new files or when the target file is empty - Use `apply_diff` when modifying existing code, always with complete",
+          "lines": [
+            14,
+            19
+          ],
+          "name": "Tool Usage Guidelines:",
+          "type": "section"
+        },
+        {
+          "docstring": "- **read**: File reading and viewing - **edit**: File modification and creation - **browser**: Web browsing capabilities - **mcp**: Model Context Prot",
+          "lines": [
+            20,
+            26
+          ],
+          "name": "Available Tools",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                29,
+                40
+              ],
+              "name": "Option 1: Using MCP Tools (Preferred in Claude Code)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                41,
+                55
+              ],
+              "name": "Option 2: Using NPX CLI (Fallback when MCP not available)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                56,
+                61
+              ],
+              "name": "Option 3: Local Installation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            27,
+            61
+          ],
+          "name": "Usage",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                64,
+                81
+              ],
+              "name": "Using MCP Tools (Preferred)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                82,
+                90
+              ],
+              "name": "Using NPX CLI (Fallback)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            62,
+            90
+          ],
+          "name": "Memory Integration",
+          "type": "section"
+        }
+      ]
+    },
+    "coder.md": {
+      "hash": "5dca05da5928",
+      "indexed_at": "2026-01-20T04:50:25.537803+00:00",
+      "language": "markdown",
+      "lines": 54,
+      "symbols": [
+        {
+          "docstring": "Autonomous code generation with batch file operations.",
+          "lines": [
+            3,
+            5
+          ],
+          "name": "Purpose",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                8,
+                19
+              ],
+              "name": "Option 1: Using MCP Tools (Preferred in Claude Code)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                20,
+                28
+              ],
+              "name": "Option 2: Using NPX CLI (Fallback when MCP not available)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                29,
+                34
+              ],
+              "name": "Option 3: Local Installation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6,
+            34
+          ],
+          "name": "Activation",
+          "type": "section"
+        },
+        {
+          "docstring": "- Feature implementation - Code refactoring - Bug fixes - API development - Algorithm implementation",
+          "lines": [
+            35,
+            41
+          ],
+          "name": "Core Capabilities",
+          "type": "section"
+        },
+        {
+          "docstring": "- Parallel file creation - Concurrent code modifications - Batch import updates - Test file generation - Documentation updates",
+          "lines": [
+            42,
+            48
+          ],
+          "name": "Batch Operations",
+          "type": "section"
+        },
+        {
+          "docstring": "- ES2022 standards - Type safety with TypeScript - Comprehensive error handling - Performance optimization - Security best practices",
+          "lines": [
+            49,
+            55
+          ],
+          "name": "Code Quality",
+          "type": "section"
+        }
+      ]
+    },
+    "debug.md": {
+      "hash": "b5d5309737df",
+      "indexed_at": "2026-01-20T04:50:25.532178+00:00",
+      "language": "markdown",
+      "lines": 83,
+      "symbols": [
+        {
+          "docstring": "You troubleshoot runtime bugs, logic errors, or integration failures by tracing, inspecting, and analyzing behavior.",
+          "lines": [
+            8,
+            10
+          ],
+          "name": "Role Definition",
+          "type": "section"
+        },
+        {
+          "docstring": "Use logs, traces, and stack analysis to isolate bugs. Avoid changing env configuration directly. Keep fixes modular. Refactor if a file exceeds 500 li",
+          "lines": [
+            11,
+            13
+          ],
+          "name": "Custom Instructions",
+          "type": "section"
+        },
+        {
+          "docstring": "- **read**: File reading and viewing - **edit**: File modification and creation - **browser**: Web browsing capabilities - **mcp**: Model Context Prot",
+          "lines": [
+            14,
+            20
+          ],
+          "name": "Available Tools",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                23,
+                34
+              ],
+              "name": "Option 1: Using MCP Tools (Preferred in Claude Code)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                35,
+                49
+              ],
+              "name": "Option 2: Using NPX CLI (Fallback when MCP not available)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                50,
+                55
+              ],
+              "name": "Option 3: Local Installation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            21,
+            55
+          ],
+          "name": "Usage",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                58,
+                75
+              ],
+              "name": "Using MCP Tools (Preferred)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                76,
+                84
+              ],
+              "name": "Using NPX CLI (Fallback)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            56,
+            84
+          ],
+          "name": "Memory Integration",
+          "type": "section"
+        }
+      ]
+    },
+    "debugger.md": {
+      "hash": "e028c64afcaf",
+      "indexed_at": "2026-01-20T04:50:25.533323+00:00",
+      "language": "markdown",
+      "lines": 54,
+      "symbols": [
+        {
+          "docstring": "Systematic debugging with TodoWrite and Memory integration.",
+          "lines": [
+            3,
+            5
+          ],
+          "name": "Purpose",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                8,
+                19
+              ],
+              "name": "Option 1: Using MCP Tools (Preferred in Claude Code)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                20,
+                28
+              ],
+              "name": "Option 2: Using NPX CLI (Fallback when MCP not available)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                29,
+                34
+              ],
+              "name": "Option 3: Local Installation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6,
+            34
+          ],
+          "name": "Activation",
+          "type": "section"
+        },
+        {
+          "docstring": "- Issue reproduction - Root cause analysis - Stack trace analysis - Memory leak detection - Performance bottleneck identification",
+          "lines": [
+            35,
+            41
+          ],
+          "name": "Core Capabilities",
+          "type": "section"
+        },
+        {
+          "docstring": "1. Create debugging plan with TodoWrite 2. Systematic issue investigation 3. Store findings in Memory 4. Track fix progress 5. Verify resolution",
+          "lines": [
+            42,
+            48
+          ],
+          "name": "Debugging Workflow",
+          "type": "section"
+        },
+        {
+          "docstring": "- Error log analysis - Breakpoint simulation - Variable inspection - Call stack tracing - Memory profiling",
+          "lines": [
+            49,
+            55
+          ],
+          "name": "Tools Integration",
+          "type": "section"
+        }
+      ]
+    },
+    "designer.md": {
+      "hash": "37989336870a",
+      "indexed_at": "2026-01-20T04:50:25.533810+00:00",
+      "language": "markdown",
+      "lines": 53,
+      "symbols": [
+        {
+          "docstring": "UI/UX design with Memory coordination for consistent experiences.",
+          "lines": [
+            3,
+            5
+          ],
+          "name": "Purpose",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                8,
+                19
+              ],
+              "name": "Option 1: Using MCP Tools (Preferred in Claude Code)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                20,
+                28
+              ],
+              "name": "Option 2: Using NPX CLI (Fallback when MCP not available)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                29,
+                34
+              ],
+              "name": "Option 3: Local Installation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6,
+            34
+          ],
+          "name": "Activation",
+          "type": "section"
+        },
+        {
+          "docstring": "- Interface design - Component architecture - Design system creation - Accessibility planning - Responsive layouts",
+          "lines": [
+            35,
+            41
+          ],
+          "name": "Core Capabilities",
+          "type": "section"
+        },
+        {
+          "docstring": "- User research insights - Wireframe creation - Component design - Interaction patterns - Design token management",
+          "lines": [
+            42,
+            48
+          ],
+          "name": "Design Process",
+          "type": "section"
+        },
+        {
+          "docstring": "- Store design decisions - Share component specs - Maintain consistency - Track design evolution",
+          "lines": [
+            49,
+            54
+          ],
+          "name": "Memory Coordination",
+          "type": "section"
+        }
+      ]
+    },
+    "devops.md": {
+      "hash": "53f0b8e21e44",
+      "indexed_at": "2026-01-20T04:50:25.538037+00:00",
+      "language": "markdown",
+      "lines": 109,
+      "symbols": [
+        {
+          "docstring": "You are the DevOps automation and infrastructure specialist responsible for deploying, managing, and orchestrating systems across cloud providers, edg",
+          "lines": [
+            8,
+            10
+          ],
+          "name": "Role Definition",
+          "type": "section"
+        },
+        {
+          "docstring": "Start by running uname. You are responsible for deployment, automation, and infrastructure operations. You:",
+          "lines": [
+            11,
+            41
+          ],
+          "name": "Custom Instructions",
+          "type": "section"
+        },
+        {
+          "docstring": "- **read**: File reading and viewing - **edit**: File modification and creation - **command**: Command execution",
+          "lines": [
+            42,
+            46
+          ],
+          "name": "Available Tools",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                49,
+                60
+              ],
+              "name": "Option 1: Using MCP Tools (Preferred in Claude Code)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                61,
+                75
+              ],
+              "name": "Option 2: Using NPX CLI (Fallback when MCP not available)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                76,
+                81
+              ],
+              "name": "Option 3: Local Installation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            47,
+            81
+          ],
+          "name": "Usage",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                84,
+                101
+              ],
+              "name": "Using MCP Tools (Preferred)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                102,
+                110
+              ],
+              "name": "Using NPX CLI (Fallback)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            82,
+            110
+          ],
+          "name": "Memory Integration",
+          "type": "section"
+        }
+      ]
+    },
+    "docs-writer.md": {
+      "hash": "564dfa75728e",
+      "indexed_at": "2026-01-20T04:50:25.537155+00:00",
+      "language": "markdown",
+      "lines": 80,
+      "symbols": [
+        {
+          "docstring": "You write concise, clear, and modular Markdown documentation that explains usage, integration, setup, and configuration.",
+          "lines": [
+            8,
+            10
+          ],
+          "name": "Role Definition",
+          "type": "section"
+        },
+        {
+          "docstring": "Only work in .md files. Use sections, examples, and headings. Keep each file under 500 lines. Do not leak env values. Summarize what you wrote using `",
+          "lines": [
+            11,
+            13
+          ],
+          "name": "Custom Instructions",
+          "type": "section"
+        },
+        {
+          "docstring": "- **read**: File reading and viewing - **edit**: Markdown files only (Files matching: \\.md$)",
+          "lines": [
+            14,
+            17
+          ],
+          "name": "Available Tools",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                20,
+                31
+              ],
+              "name": "Option 1: Using MCP Tools (Preferred in Claude Code)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                32,
+                46
+              ],
+              "name": "Option 2: Using NPX CLI (Fallback when MCP not available)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                47,
+                52
+              ],
+              "name": "Option 3: Local Installation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            18,
+            52
+          ],
+          "name": "Usage",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                55,
+                72
+              ],
+              "name": "Using MCP Tools (Preferred)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                73,
+                81
+              ],
+              "name": "Using NPX CLI (Fallback)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            53,
+            81
+          ],
+          "name": "Memory Integration",
+          "type": "section"
+        }
+      ]
+    },
+    "documenter.md": {
+      "hash": "5c6671c9624a",
+      "indexed_at": "2026-01-20T04:50:25.534276+00:00",
+      "language": "markdown",
+      "lines": 54,
+      "symbols": [
+        {
+          "docstring": "Documentation with batch file operations for comprehensive docs.",
+          "lines": [
+            3,
+            5
+          ],
+          "name": "Purpose",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                8,
+                19
+              ],
+              "name": "Option 1: Using MCP Tools (Preferred in Claude Code)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                20,
+                28
+              ],
+              "name": "Option 2: Using NPX CLI (Fallback when MCP not available)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                29,
+                34
+              ],
+              "name": "Option 3: Local Installation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6,
+            34
+          ],
+          "name": "Activation",
+          "type": "section"
+        },
+        {
+          "docstring": "- API documentation - Code documentation - User guides - Architecture docs - README files",
+          "lines": [
+            35,
+            41
+          ],
+          "name": "Core Capabilities",
+          "type": "section"
+        },
+        {
+          "docstring": "- Markdown documentation - JSDoc comments - API specifications - Integration guides - Deployment docs",
+          "lines": [
+            42,
+            48
+          ],
+          "name": "Documentation Types",
+          "type": "section"
+        },
+        {
+          "docstring": "- Parallel doc generation - Bulk file updates - Cross-reference management - Example generation - Diagram creation",
+          "lines": [
+            49,
+            55
+          ],
+          "name": "Batch Features",
+          "type": "section"
+        }
+      ]
+    },
+    "innovator.md": {
+      "hash": "88f93f66387b",
+      "indexed_at": "2026-01-20T04:50:25.537565+00:00",
+      "language": "markdown",
+      "lines": 54,
+      "symbols": [
+        {
+          "docstring": "Creative problem solving with WebSearch and Memory integration.",
+          "lines": [
+            3,
+            5
+          ],
+          "name": "Purpose",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                8,
+                19
+              ],
+              "name": "Option 1: Using MCP Tools (Preferred in Claude Code)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                20,
+                28
+              ],
+              "name": "Option 2: Using NPX CLI (Fallback when MCP not available)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                29,
+                34
+              ],
+              "name": "Option 3: Local Installation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6,
+            34
+          ],
+          "name": "Activation",
+          "type": "section"
+        },
+        {
+          "docstring": "- Creative ideation - Solution brainstorming - Technology exploration - Pattern innovation - Proof of concept",
+          "lines": [
+            35,
+            41
+          ],
+          "name": "Core Capabilities",
+          "type": "section"
+        },
+        {
+          "docstring": "- Divergent thinking phase - Research and exploration - Convergent synthesis - Prototype planning - Feasibility analysis",
+          "lines": [
+            42,
+            48
+          ],
+          "name": "Innovation Process",
+          "type": "section"
+        },
+        {
+          "docstring": "- WebSearch for trends - Memory for context - Cross-domain insights - Pattern recognition - Analogical reasoning",
+          "lines": [
+            49,
+            55
+          ],
+          "name": "Knowledge Sources",
+          "type": "section"
+        }
+      ]
+    },
+    "integration.md": {
+      "hash": "dc08bda49831",
+      "indexed_at": "2026-01-20T04:50:25.533577+00:00",
+      "language": "markdown",
+      "lines": 83,
+      "symbols": [
+        {
+          "docstring": "You merge the outputs of all modes into a working, tested, production-ready system. You ensure consistency, cohesion, and modularity.",
+          "lines": [
+            8,
+            10
+          ],
+          "name": "Role Definition",
+          "type": "section"
+        },
+        {
+          "docstring": "Verify interface compatibility, shared modules, and env config standards. Split integration logic across domains as needed. Use `new_task` for preflig",
+          "lines": [
+            11,
+            13
+          ],
+          "name": "Custom Instructions",
+          "type": "section"
+        },
+        {
+          "docstring": "- **read**: File reading and viewing - **edit**: File modification and creation - **browser**: Web browsing capabilities - **mcp**: Model Context Prot",
+          "lines": [
+            14,
+            20
+          ],
+          "name": "Available Tools",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                23,
+                34
+              ],
+              "name": "Option 1: Using MCP Tools (Preferred in Claude Code)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                35,
+                49
+              ],
+              "name": "Option 2: Using NPX CLI (Fallback when MCP not available)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                50,
+                55
+              ],
+              "name": "Option 3: Local Installation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            21,
+            55
+          ],
+          "name": "Usage",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                58,
+                75
+              ],
+              "name": "Using MCP Tools (Preferred)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                76,
+                84
+              ],
+              "name": "Using NPX CLI (Fallback)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            56,
+            84
+          ],
+          "name": "Memory Integration",
+          "type": "section"
+        }
+      ]
+    },
+    "mcp.md": {
+      "hash": "c0a68234d8cd",
+      "indexed_at": "2026-01-20T04:50:25.534071+00:00",
+      "language": "markdown",
+      "lines": 117,
+      "symbols": [
+        {
+          "docstring": "You are the MCP (Management Control Panel) integration specialist responsible for connecting to and managing external services through MCP interfaces.",
+          "lines": [
+            8,
+            10
+          ],
+          "name": "Role Definition",
+          "type": "section"
+        },
+        {
+          "docstring": "You are responsible for integrating with external services through MCP interfaces. You:",
+          "lines": [
+            11,
+            50
+          ],
+          "name": "Custom Instructions",
+          "type": "section"
+        },
+        {
+          "docstring": "- **edit**: File modification and creation - **mcp**: Model Context Protocol tools",
+          "lines": [
+            51,
+            54
+          ],
+          "name": "Available Tools",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                57,
+                68
+              ],
+              "name": "Option 1: Using MCP Tools (Preferred in Claude Code)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                69,
+                83
+              ],
+              "name": "Option 2: Using NPX CLI (Fallback when MCP not available)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                84,
+                89
+              ],
+              "name": "Option 3: Local Installation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            55,
+            89
+          ],
+          "name": "Usage",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                92,
+                109
+              ],
+              "name": "Using MCP Tools (Preferred)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                110,
+                118
+              ],
+              "name": "Using NPX CLI (Fallback)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            90,
+            118
+          ],
+          "name": "Memory Integration",
+          "type": "section"
+        }
+      ]
+    },
+    "memory-manager.md": {
+      "hash": "94608382b51c",
+      "indexed_at": "2026-01-20T04:50:25.535526+00:00",
+      "language": "markdown",
+      "lines": 54,
+      "symbols": [
+        {
+          "docstring": "Knowledge management with Memory tools for persistent insights.",
+          "lines": [
+            3,
+            5
+          ],
+          "name": "Purpose",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                8,
+                19
+              ],
+              "name": "Option 1: Using MCP Tools (Preferred in Claude Code)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                20,
+                28
+              ],
+              "name": "Option 2: Using NPX CLI (Fallback when MCP not available)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                29,
+                34
+              ],
+              "name": "Option 3: Local Installation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6,
+            34
+          ],
+          "name": "Activation",
+          "type": "section"
+        },
+        {
+          "docstring": "- Knowledge organization - Information retrieval - Context management - Insight preservation - Cross-session persistence",
+          "lines": [
+            35,
+            41
+          ],
+          "name": "Core Capabilities",
+          "type": "section"
+        },
+        {
+          "docstring": "- Hierarchical organization - Tag-based categorization - Temporal tracking - Relationship mapping - Priority management",
+          "lines": [
+            42,
+            48
+          ],
+          "name": "Memory Strategies",
+          "type": "section"
+        },
+        {
+          "docstring": "- Store critical insights - Retrieve relevant context - Update knowledge base - Merge related information - Archive obsolete data",
+          "lines": [
+            49,
+            55
+          ],
+          "name": "Knowledge Operations",
+          "type": "section"
+        }
+      ]
+    },
+    "optimizer.md": {
+      "hash": "5f5c2ab6e0f7",
+      "indexed_at": "2026-01-20T04:50:25.532895+00:00",
+      "language": "markdown",
+      "lines": 54,
+      "symbols": [
+        {
+          "docstring": "Performance optimization with systematic analysis and improvements.",
+          "lines": [
+            3,
+            5
+          ],
+          "name": "Purpose",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                8,
+                19
+              ],
+              "name": "Option 1: Using MCP Tools (Preferred in Claude Code)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                20,
+                28
+              ],
+              "name": "Option 2: Using NPX CLI (Fallback when MCP not available)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                29,
+                34
+              ],
+              "name": "Option 3: Local Installation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6,
+            34
+          ],
+          "name": "Activation",
+          "type": "section"
+        },
+        {
+          "docstring": "- Performance profiling - Code optimization - Resource optimization - Algorithm improvement - Scalability enhancement",
+          "lines": [
+            35,
+            41
+          ],
+          "name": "Core Capabilities",
+          "type": "section"
+        },
+        {
+          "docstring": "- Execution speed - Memory usage - Network efficiency - Database queries - Bundle size",
+          "lines": [
+            42,
+            48
+          ],
+          "name": "Optimization Areas",
+          "type": "section"
+        },
+        {
+          "docstring": "1. Baseline measurement 2. Bottleneck identification 3. Optimization implementation 4. Impact verification 5. Continuous monitoring",
+          "lines": [
+            49,
+            55
+          ],
+          "name": "Systematic Approach",
+          "type": "section"
+        }
+      ]
+    },
+    "orchestrator.md": {
+      "hash": "29fab62338b6",
+      "indexed_at": "2026-01-20T04:50:25.532471+00:00",
+      "language": "markdown",
+      "lines": 132,
+      "symbols": [
+        {
+          "docstring": "Multi-agent task orchestration with TodoWrite/TodoRead/Task/Memory using MCP tools.",
+          "lines": [
+            3,
+            5
+          ],
+          "name": "Purpose",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                8,
+                15
+              ],
+              "name": "Option 1: Using MCP Tools (Preferred in Claude Code)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                16,
+                24
+              ],
+              "name": "Option 2: Using NPX CLI (Fallback when MCP not available)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                25,
+                30
+              ],
+              "name": "Option 3: Local Installation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6,
+            30
+          ],
+          "name": "Activation",
+          "type": "section"
+        },
+        {
+          "docstring": "- Task decomposition - Agent coordination - Resource allocation - Progress tracking - Result synthesis",
+          "lines": [
+            31,
+            37
+          ],
+          "name": "Core Capabilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                40,
+                62
+              ],
+              "name": "Using MCP Tools (Preferred)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                63,
+                74
+              ],
+              "name": "Using NPX CLI (Fallback)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            38,
+            74
+          ],
+          "name": "Integration Examples",
+          "type": "section"
+        },
+        {
+          "docstring": "- Hierarchical coordination - Parallel execution - Sequential pipelines - Event-driven flows - Adaptive strategies",
+          "lines": [
+            75,
+            81
+          ],
+          "name": "Orchestration Patterns",
+          "type": "section"
+        },
+        {
+          "docstring": "- TodoWrite for planning - Task for agent launch - Memory for sharing - Progress monitoring - Result aggregation",
+          "lines": [
+            82,
+            88
+          ],
+          "name": "Coordination Tools",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                91,
+                118
+              ],
+              "name": "Using MCP Tools (Preferred)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                119,
+                132
+              ],
+              "name": "Using NPX CLI (Fallback)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            89,
+            132
+          ],
+          "name": "Workflow Example",
+          "type": "section"
+        }
+      ]
+    },
+    "post-deployment-monitoring-mode.md": {
+      "hash": "f112e0fd1d1b",
+      "indexed_at": "2026-01-20T04:50:25.536165+00:00",
+      "language": "markdown",
+      "lines": 83,
+      "symbols": [
+        {
+          "docstring": "You observe the system post-launch, collecting performance, logs, and user feedback. You flag regressions or unexpected behaviors.",
+          "lines": [
+            8,
+            10
+          ],
+          "name": "Role Definition",
+          "type": "section"
+        },
+        {
+          "docstring": "Configure metrics, logs, uptime checks, and alerts. Recommend improvements if thresholds are violated. Use `new_task` to escalate refactors or hotfixe",
+          "lines": [
+            11,
+            13
+          ],
+          "name": "Custom Instructions",
+          "type": "section"
+        },
+        {
+          "docstring": "- **read**: File reading and viewing - **edit**: File modification and creation - **browser**: Web browsing capabilities - **mcp**: Model Context Prot",
+          "lines": [
+            14,
+            20
+          ],
+          "name": "Available Tools",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                23,
+                34
+              ],
+              "name": "Option 1: Using MCP Tools (Preferred in Claude Code)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                35,
+                49
+              ],
+              "name": "Option 2: Using NPX CLI (Fallback when MCP not available)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                50,
+                55
+              ],
+              "name": "Option 3: Local Installation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            21,
+            55
+          ],
+          "name": "Usage",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                58,
+                75
+              ],
+              "name": "Using MCP Tools (Preferred)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                76,
+                84
+              ],
+              "name": "Using NPX CLI (Fallback)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            56,
+            84
+          ],
+          "name": "Memory Integration",
+          "type": "section"
+        }
+      ]
+    },
+    "refinement-optimization-mode.md": {
+      "hash": "aaef74635728",
+      "indexed_at": "2026-01-20T04:50:25.539238+00:00",
+      "language": "markdown",
+      "lines": 83,
+      "symbols": [
+        {
+          "docstring": "You refactor, modularize, and improve system performance. You enforce file size limits, dependency decoupling, and configuration hygiene.",
+          "lines": [
+            8,
+            10
+          ],
+          "name": "Role Definition",
+          "type": "section"
+        },
+        {
+          "docstring": "Audit files for clarity, modularity, and size. Break large components (>500 lines) into smaller ones. Move inline configs to env files. Optimize perfo",
+          "lines": [
+            11,
+            13
+          ],
+          "name": "Custom Instructions",
+          "type": "section"
+        },
+        {
+          "docstring": "- **read**: File reading and viewing - **edit**: File modification and creation - **browser**: Web browsing capabilities - **mcp**: Model Context Prot",
+          "lines": [
+            14,
+            20
+          ],
+          "name": "Available Tools",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                23,
+                34
+              ],
+              "name": "Option 1: Using MCP Tools (Preferred in Claude Code)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                35,
+                49
+              ],
+              "name": "Option 2: Using NPX CLI (Fallback when MCP not available)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                50,
+                55
+              ],
+              "name": "Option 3: Local Installation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            21,
+            55
+          ],
+          "name": "Usage",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                58,
+                75
+              ],
+              "name": "Using MCP Tools (Preferred)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                76,
+                84
+              ],
+              "name": "Using NPX CLI (Fallback)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            56,
+            84
+          ],
+          "name": "Memory Integration",
+          "type": "section"
+        }
+      ]
+    },
+    "researcher.md": {
+      "hash": "ec6c5c30269d",
+      "indexed_at": "2026-01-20T04:50:25.535127+00:00",
+      "language": "markdown",
+      "lines": 54,
+      "symbols": [
+        {
+          "docstring": "Deep research with parallel WebSearch/WebFetch and Memory coordination.",
+          "lines": [
+            3,
+            5
+          ],
+          "name": "Purpose",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                8,
+                19
+              ],
+              "name": "Option 1: Using MCP Tools (Preferred in Claude Code)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                20,
+                28
+              ],
+              "name": "Option 2: Using NPX CLI (Fallback when MCP not available)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                29,
+                34
+              ],
+              "name": "Option 3: Local Installation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6,
+            34
+          ],
+          "name": "Activation",
+          "type": "section"
+        },
+        {
+          "docstring": "- Information gathering - Source evaluation - Trend analysis - Competitive research - Technology assessment",
+          "lines": [
+            35,
+            41
+          ],
+          "name": "Core Capabilities",
+          "type": "section"
+        },
+        {
+          "docstring": "- Parallel web searches - Academic paper analysis - Industry report synthesis - Expert opinion gathering - Data compilation",
+          "lines": [
+            42,
+            48
+          ],
+          "name": "Research Methods",
+          "type": "section"
+        },
+        {
+          "docstring": "- Store research findings - Build knowledge graphs - Track information sources - Cross-reference insights - Maintain research history",
+          "lines": [
+            49,
+            55
+          ],
+          "name": "Memory Integration",
+          "type": "section"
+        }
+      ]
+    },
+    "reviewer.md": {
+      "hash": "f81d581bc6ce",
+      "indexed_at": "2026-01-20T04:50:25.532663+00:00",
+      "language": "markdown",
+      "lines": 54,
+      "symbols": [
+        {
+          "docstring": "Code review using batch file analysis for comprehensive reviews.",
+          "lines": [
+            3,
+            5
+          ],
+          "name": "Purpose",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                8,
+                19
+              ],
+              "name": "Option 1: Using MCP Tools (Preferred in Claude Code)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                20,
+                28
+              ],
+              "name": "Option 2: Using NPX CLI (Fallback when MCP not available)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                29,
+                34
+              ],
+              "name": "Option 3: Local Installation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6,
+            34
+          ],
+          "name": "Activation",
+          "type": "section"
+        },
+        {
+          "docstring": "- Code quality assessment - Security review - Performance analysis - Best practices check - Documentation review",
+          "lines": [
+            35,
+            41
+          ],
+          "name": "Core Capabilities",
+          "type": "section"
+        },
+        {
+          "docstring": "- Code correctness - Design patterns - Error handling - Test coverage - Maintainability",
+          "lines": [
+            42,
+            48
+          ],
+          "name": "Review Criteria",
+          "type": "section"
+        },
+        {
+          "docstring": "- Parallel file review - Pattern detection - Dependency checking - Consistency validation - Automated reporting",
+          "lines": [
+            49,
+            55
+          ],
+          "name": "Batch Analysis",
+          "type": "section"
+        }
+      ]
+    },
+    "security-review.md": {
+      "hash": "c9029a10c045",
+      "indexed_at": "2026-01-20T04:50:25.531938+00:00",
+      "language": "markdown",
+      "lines": 80,
+      "symbols": [
+        {
+          "docstring": "You perform static and dynamic audits to ensure secure code practices. You flag secrets, poor modular boundaries, and oversized files.",
+          "lines": [
+            8,
+            10
+          ],
+          "name": "Role Definition",
+          "type": "section"
+        },
+        {
+          "docstring": "Scan for exposed secrets, env leaks, and monoliths. Recommend mitigations or refactors to reduce risk. Flag files > 500 lines or direct environment co",
+          "lines": [
+            11,
+            13
+          ],
+          "name": "Custom Instructions",
+          "type": "section"
+        },
+        {
+          "docstring": "- **read**: File reading and viewing - **edit**: File modification and creation",
+          "lines": [
+            14,
+            17
+          ],
+          "name": "Available Tools",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                20,
+                31
+              ],
+              "name": "Option 1: Using MCP Tools (Preferred in Claude Code)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                32,
+                46
+              ],
+              "name": "Option 2: Using NPX CLI (Fallback when MCP not available)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                47,
+                52
+              ],
+              "name": "Option 3: Local Installation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            18,
+            52
+          ],
+          "name": "Usage",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                55,
+                72
+              ],
+              "name": "Using MCP Tools (Preferred)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                73,
+                81
+              ],
+              "name": "Using NPX CLI (Fallback)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            53,
+            81
+          ],
+          "name": "Memory Integration",
+          "type": "section"
+        }
+      ]
+    },
+    "sparc-modes.md": {
+      "hash": "2c740231aeed",
+      "indexed_at": "2026-01-20T04:50:25.536665+00:00",
+      "language": "markdown",
+      "lines": 174,
+      "symbols": [
+        {
+          "children": [
+            {
+              "docstring": "- **orchestrator**: Multi-agent task orchestration - **swarm-coordinator**: Specialized swarm management - **workflow-manager**: Process automation -",
+              "lines": [
+                7,
+                12
+              ],
+              "name": "Core Orchestration Modes",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **coder**: Autonomous code generation - **architect**: System design - **reviewer**: Code review - **tdd**: Test-driven development",
+              "lines": [
+                13,
+                18
+              ],
+              "name": "Development Modes",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **researcher**: Deep research capabilities - **analyzer**: Code and data analysis - **optimizer**: Performance optimization",
+              "lines": [
+                19,
+                23
+              ],
+              "name": "Analysis and Research Modes",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **designer**: UI/UX design - **innovator**: Creative problem solving - **documenter**: Documentation generation - **debugger**: Systematic debugging",
+              "lines": [
+                24,
+                31
+              ],
+              "name": "Creative and Support Modes",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            5,
+            31
+          ],
+          "name": "Available Modes",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                34,
+                64
+              ],
+              "name": "Option 1: Using MCP Tools (Preferred in Claude Code)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                65,
+                82
+              ],
+              "name": "Option 2: Using NPX CLI (Fallback when MCP not available)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                83,
+                88
+              ],
+              "name": "Option 3: Local Installation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            32,
+            88
+          ],
+          "name": "Usage",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "lines": [
+                    93,
+                    125
+                  ],
+                  "name": "Using MCP Tools (Preferred)",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    126,
+                    140
+                  ],
+                  "name": "Using NPX CLI (Fallback)",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                91,
+                140
+              ],
+              "name": "Full Development Cycle",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "lines": [
+                    143,
+                    163
+                  ],
+                  "name": "Using MCP Tools (Preferred)",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    164,
+                    175
+                  ],
+                  "name": "Using NPX CLI (Fallback)",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                141,
+                175
+              ],
+              "name": "Research and Innovation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            89,
+            175
+          ],
+          "name": "Common Workflows",
+          "type": "section"
+        }
+      ]
+    },
+    "sparc.md": {
+      "hash": "9e54e553a2ba",
+      "indexed_at": "2026-01-20T04:50:25.535721+00:00",
+      "language": "markdown",
+      "lines": 111,
+      "symbols": [
+        {
+          "docstring": "You are SPARC, the orchestrator of complex workflows. You break down large objectives into delegated subtasks aligned to the SPARC methodology. You en",
+          "lines": [
+            8,
+            10
+          ],
+          "name": "Role Definition",
+          "type": "section"
+        },
+        {
+          "docstring": "Follow SPARC:",
+          "lines": [
+            11,
+            32
+          ],
+          "name": "Custom Instructions",
+          "type": "section"
+        },
+        {
+          "docstring": "- Always use `apply_diff` for code modifications with complete search and replace blocks - Use `insert_content` for documentation and adding new conte",
+          "lines": [
+            33,
+            45
+          ],
+          "name": "Tool Usage Guidelines:",
+          "type": "section"
+        },
+        {
+          "lines": [
+            46,
+            48
+          ],
+          "name": "Available Tools",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                51,
+                62
+              ],
+              "name": "Option 1: Using MCP Tools (Preferred in Claude Code)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                63,
+                77
+              ],
+              "name": "Option 2: Using NPX CLI (Fallback when MCP not available)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                78,
+                83
+              ],
+              "name": "Option 3: Local Installation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            49,
+            83
+          ],
+          "name": "Usage",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                86,
+                103
+              ],
+              "name": "Using MCP Tools (Preferred)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                104,
+                112
+              ],
+              "name": "Using NPX CLI (Fallback)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            84,
+            112
+          ],
+          "name": "Memory Integration",
+          "type": "section"
+        }
+      ]
+    },
+    "spec-pseudocode.md": {
+      "hash": "d60a693ba51f",
+      "indexed_at": "2026-01-20T04:50:25.538977+00:00",
+      "language": "markdown",
+      "lines": 80,
+      "symbols": [
+        {
+          "docstring": "You capture full project context\u2014functional requirements, edge cases, constraints\u2014and translate that into modular pseudocode with TDD anchors.",
+          "lines": [
+            8,
+            10
+          ],
+          "name": "Role Definition",
+          "type": "section"
+        },
+        {
+          "docstring": "Write pseudocode as a series of md files with phase_number_name.md and flow logic that includes clear structure for future coding and testing. Split c",
+          "lines": [
+            11,
+            13
+          ],
+          "name": "Custom Instructions",
+          "type": "section"
+        },
+        {
+          "docstring": "- **read**: File reading and viewing - **edit**: File modification and creation",
+          "lines": [
+            14,
+            17
+          ],
+          "name": "Available Tools",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                20,
+                31
+              ],
+              "name": "Option 1: Using MCP Tools (Preferred in Claude Code)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                32,
+                46
+              ],
+              "name": "Option 2: Using NPX CLI (Fallback when MCP not available)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                47,
+                52
+              ],
+              "name": "Option 3: Local Installation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            18,
+            52
+          ],
+          "name": "Usage",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                55,
+                72
+              ],
+              "name": "Using MCP Tools (Preferred)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                73,
+                81
+              ],
+              "name": "Using NPX CLI (Fallback)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            53,
+            81
+          ],
+          "name": "Memory Integration",
+          "type": "section"
+        }
+      ]
+    },
+    "supabase-admin.md": {
+      "hash": "25b952c5e90d",
+      "indexed_at": "2026-01-20T04:50:25.534853+00:00",
+      "language": "markdown",
+      "lines": 348,
+      "symbols": [
+        {
+          "docstring": "You are the Supabase database, authentication, and storage specialist. You design and implement database schemas, RLS policies, triggers, and function",
+          "lines": [
+            8,
+            10
+          ],
+          "name": "Role Definition",
+          "type": "section"
+        },
+        {
+          "docstring": "Review supabase using @/mcp-instructions.txt. Never use the CLI, only the MCP server. You are responsible for all Supabase-related operations and impl",
+          "lines": [
+            11,
+            79
+          ],
+          "name": "Custom Instructions",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "1. **Authentication**: MCP services are pre-authenticated within this environment. No additional login is required.",
+              "lines": [
+                84,
+                112
+              ],
+              "name": "How to Use MCP Services",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                113,
+                118
+              ],
+              "name": "Current Project",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "The Supabase MCP (Management Control Panel) provides a set of tools for managing your Supabase projects programmatically. This guide will help you use",
+          "lines": [
+            80,
+            118
+          ],
+          "name": "Getting Started with Supabase MCP",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "Lists all Supabase projects for the user.",
+                  "lines": [
+                    123,
+                    125
+                  ],
+                  "name": "`list_projects`",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Gets details for a Supabase project.",
+                  "lines": [
+                    126,
+                    131
+                  ],
+                  "name": "`get_project`",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Gets the cost of creating a new project or branch. Never assume organization as costs can be different for each.",
+                  "lines": [
+                    132,
+                    138
+                  ],
+                  "name": "`get_cost`",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Ask the user to confirm their understanding of the cost of creating a new project or branch. Call `get_cost` first. Returns a unique ID for this confi",
+                  "lines": [
+                    139,
+                    146
+                  ],
+                  "name": "`confirm_cost`",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Creates a new Supabase project. Always ask the user which organization to create the project in. The project can take a few minutes to initialize - us",
+                  "lines": [
+                    147,
+                    155
+                  ],
+                  "name": "`create_project`",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Pauses a Supabase project.",
+                  "lines": [
+                    156,
+                    161
+                  ],
+                  "name": "`pause_project`",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Restores a Supabase project.",
+                  "lines": [
+                    162,
+                    167
+                  ],
+                  "name": "`restore_project`",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Lists all organizations that the user is a member of.",
+                  "lines": [
+                    168,
+                    170
+                  ],
+                  "name": "`list_organizations`",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Gets details for an organization. Includes subscription plan.",
+                  "lines": [
+                    171,
+                    176
+                  ],
+                  "name": "`get_organization`",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                121,
+                176
+              ],
+              "name": "Project Management",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "Lists all tables in a schema.",
+                  "lines": [
+                    179,
+                    185
+                  ],
+                  "name": "`list_tables`",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Lists all extensions in the database.",
+                  "lines": [
+                    186,
+                    191
+                  ],
+                  "name": "`list_extensions`",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Lists all migrations in the database.",
+                  "lines": [
+                    192,
+                    197
+                  ],
+                  "name": "`list_migrations`",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Applies a migration to the database. Use this when executing DDL operations.",
+                  "lines": [
+                    198,
+                    205
+                  ],
+                  "name": "`apply_migration`",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Executes raw SQL in the Postgres database. Use `apply_migration` instead for DDL operations.",
+                  "lines": [
+                    206,
+                    212
+                  ],
+                  "name": "`execute_sql`",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                177,
+                212
+              ],
+              "name": "Database Operations",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "Gets logs for a Supabase project by service type. Use this to help debug problems with your app. This will only return logs within the last minute. If",
+                  "lines": [
+                    215,
+                    221
+                  ],
+                  "name": "`get_logs`",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Gets the API URL for a project.",
+                  "lines": [
+                    222,
+                    227
+                  ],
+                  "name": "`get_project_url`",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Gets the anonymous API key for a project.",
+                  "lines": [
+                    228,
+                    233
+                  ],
+                  "name": "`get_anon_key`",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Generates TypeScript types for a project.",
+                  "lines": [
+                    234,
+                    239
+                  ],
+                  "name": "`generate_typescript_types`",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                213,
+                239
+              ],
+              "name": "Monitoring & Utilities",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "Creates a development branch on a Supabase project. This will apply all migrations from the main project to a fresh branch database. Note that product",
+                  "lines": [
+                    242,
+                    249
+                  ],
+                  "name": "`create_branch`",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Lists all development branches of a Supabase project. This will return branch details including status which you can use to check when operations like",
+                  "lines": [
+                    250,
+                    255
+                  ],
+                  "name": "`list_branches`",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Deletes a development branch.",
+                  "lines": [
+                    256,
+                    261
+                  ],
+                  "name": "`delete_branch`",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Merges migrations and edge functions from a development branch to production.",
+                  "lines": [
+                    262,
+                    267
+                  ],
+                  "name": "`merge_branch`",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Resets migrations of a development branch. Any untracked data or schema changes will be lost.",
+                  "lines": [
+                    268,
+                    274
+                  ],
+                  "name": "`reset_branch`",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Rebases a development branch on production. This will effectively run any newer migrations from production onto this branch to help handle migration d",
+                  "lines": [
+                    275,
+                    280
+                  ],
+                  "name": "`rebase_branch`",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                240,
+                280
+              ],
+              "name": "Development Branches",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            119,
+            280
+          ],
+          "name": "Available Commands",
+          "type": "section"
+        },
+        {
+          "docstring": "- **read**: File reading and viewing - **edit**: File modification and creation - **mcp**: Model Context Protocol tools",
+          "lines": [
+            281,
+            285
+          ],
+          "name": "Available Tools",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                288,
+                299
+              ],
+              "name": "Option 1: Using MCP Tools (Preferred in Claude Code)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                300,
+                314
+              ],
+              "name": "Option 2: Using NPX CLI (Fallback when MCP not available)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                315,
+                320
+              ],
+              "name": "Option 3: Local Installation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            286,
+            320
+          ],
+          "name": "Usage",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                323,
+                340
+              ],
+              "name": "Using MCP Tools (Preferred)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                341,
+                349
+              ],
+              "name": "Using NPX CLI (Fallback)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            321,
+            349
+          ],
+          "name": "Memory Integration",
+          "type": "section"
+        }
+      ]
+    },
+    "swarm-coordinator.md": {
+      "hash": "b28f6d742652",
+      "indexed_at": "2026-01-20T04:50:25.538522+00:00",
+      "language": "markdown",
+      "lines": 54,
+      "symbols": [
+        {
+          "docstring": "Specialized swarm management with batch coordination capabilities.",
+          "lines": [
+            3,
+            5
+          ],
+          "name": "Purpose",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                8,
+                19
+              ],
+              "name": "Option 1: Using MCP Tools (Preferred in Claude Code)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                20,
+                28
+              ],
+              "name": "Option 2: Using NPX CLI (Fallback when MCP not available)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                29,
+                34
+              ],
+              "name": "Option 3: Local Installation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6,
+            34
+          ],
+          "name": "Activation",
+          "type": "section"
+        },
+        {
+          "docstring": "- Swarm initialization - Agent management - Task distribution - Load balancing - Result collection",
+          "lines": [
+            35,
+            41
+          ],
+          "name": "Core Capabilities",
+          "type": "section"
+        },
+        {
+          "docstring": "- Hierarchical swarms - Mesh networks - Pipeline coordination - Adaptive strategies - Hybrid approaches",
+          "lines": [
+            42,
+            48
+          ],
+          "name": "Coordination Modes",
+          "type": "section"
+        },
+        {
+          "docstring": "- Dynamic scaling - Resource optimization - Failure recovery - Performance monitoring - Quality assurance",
+          "lines": [
+            49,
+            55
+          ],
+          "name": "Management Features",
+          "type": "section"
+        }
+      ]
+    },
+    "tdd.md": {
+      "hash": "fd48e2e17900",
+      "indexed_at": "2026-01-20T04:50:25.535922+00:00",
+      "language": "markdown",
+      "lines": 54,
+      "symbols": [
+        {
+          "docstring": "Test-driven development with TodoWrite planning and comprehensive testing.",
+          "lines": [
+            3,
+            5
+          ],
+          "name": "Purpose",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                8,
+                19
+              ],
+              "name": "Option 1: Using MCP Tools (Preferred in Claude Code)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                20,
+                28
+              ],
+              "name": "Option 2: Using NPX CLI (Fallback when MCP not available)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                29,
+                34
+              ],
+              "name": "Option 3: Local Installation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6,
+            34
+          ],
+          "name": "Activation",
+          "type": "section"
+        },
+        {
+          "docstring": "- Test-first development - Red-green-refactor cycle - Test suite design - Coverage optimization - Continuous testing",
+          "lines": [
+            35,
+            41
+          ],
+          "name": "Core Capabilities",
+          "type": "section"
+        },
+        {
+          "docstring": "1. Write failing tests 2. Implement minimum code 3. Make tests pass 4. Refactor code 5. Repeat cycle",
+          "lines": [
+            42,
+            48
+          ],
+          "name": "TDD Workflow",
+          "type": "section"
+        },
+        {
+          "docstring": "- Unit testing - Integration testing - End-to-end testing - Performance testing - Security testing",
+          "lines": [
+            49,
+            55
+          ],
+          "name": "Testing Strategies",
+          "type": "section"
+        }
+      ]
+    },
+    "tester.md": {
+      "hash": "5938dfcb7e80",
+      "indexed_at": "2026-01-20T04:50:25.536886+00:00",
+      "language": "markdown",
+      "lines": 54,
+      "symbols": [
+        {
+          "docstring": "Comprehensive testing with parallel execution capabilities.",
+          "lines": [
+            3,
+            5
+          ],
+          "name": "Purpose",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                8,
+                19
+              ],
+              "name": "Option 1: Using MCP Tools (Preferred in Claude Code)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                20,
+                28
+              ],
+              "name": "Option 2: Using NPX CLI (Fallback when MCP not available)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                29,
+                34
+              ],
+              "name": "Option 3: Local Installation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6,
+            34
+          ],
+          "name": "Activation",
+          "type": "section"
+        },
+        {
+          "docstring": "- Test planning - Test execution - Bug detection - Coverage analysis - Report generation",
+          "lines": [
+            35,
+            41
+          ],
+          "name": "Core Capabilities",
+          "type": "section"
+        },
+        {
+          "docstring": "- Unit tests - Integration tests - E2E tests - Performance tests - Security tests",
+          "lines": [
+            42,
+            48
+          ],
+          "name": "Test Types",
+          "type": "section"
+        },
+        {
+          "docstring": "- Concurrent test runs - Distributed testing - Load testing - Cross-browser testing - Multi-environment validation",
+          "lines": [
+            49,
+            55
+          ],
+          "name": "Parallel Features",
+          "type": "section"
+        }
+      ]
+    },
+    "tutorial.md": {
+      "hash": "bf36c571c221",
+      "indexed_at": "2026-01-20T04:50:25.536396+00:00",
+      "language": "markdown",
+      "lines": 79,
+      "symbols": [
+        {
+          "docstring": "You are the SPARC onboarding and education assistant. Your job is to guide users through the full SPARC development process using structured thinking",
+          "lines": [
+            8,
+            10
+          ],
+          "name": "Role Definition",
+          "type": "section"
+        },
+        {
+          "docstring": "You teach developers how to apply the SPARC methodology through actionable examples and mental models.",
+          "lines": [
+            11,
+            13
+          ],
+          "name": "Custom Instructions",
+          "type": "section"
+        },
+        {
+          "docstring": "- **read**: File reading and viewing",
+          "lines": [
+            14,
+            16
+          ],
+          "name": "Available Tools",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                19,
+                30
+              ],
+              "name": "Option 1: Using MCP Tools (Preferred in Claude Code)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                31,
+                45
+              ],
+              "name": "Option 2: Using NPX CLI (Fallback when MCP not available)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                46,
+                51
+              ],
+              "name": "Option 3: Local Installation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            17,
+            51
+          ],
+          "name": "Usage",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                54,
+                71
+              ],
+              "name": "Using MCP Tools (Preferred)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                72,
+                80
+              ],
+              "name": "Using NPX CLI (Fallback)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            52,
+            80
+          ],
+          "name": "Memory Integration",
+          "type": "section"
+        }
+      ]
+    },
+    "workflow-manager.md": {
+      "hash": "446e60777a5d",
+      "indexed_at": "2026-01-20T04:50:25.538272+00:00",
+      "language": "markdown",
+      "lines": 54,
+      "symbols": [
+        {
+          "docstring": "Process automation with TodoWrite planning and Task execution.",
+          "lines": [
+            3,
+            5
+          ],
+          "name": "Purpose",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                8,
+                19
+              ],
+              "name": "Option 1: Using MCP Tools (Preferred in Claude Code)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                20,
+                28
+              ],
+              "name": "Option 2: Using NPX CLI (Fallback when MCP not available)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                29,
+                34
+              ],
+              "name": "Option 3: Local Installation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6,
+            34
+          ],
+          "name": "Activation",
+          "type": "section"
+        },
+        {
+          "docstring": "- Workflow design - Process automation - Pipeline creation - Event handling - State management",
+          "lines": [
+            35,
+            41
+          ],
+          "name": "Core Capabilities",
+          "type": "section"
+        },
+        {
+          "docstring": "- Sequential flows - Parallel branches - Conditional logic - Loop iterations - Error handling",
+          "lines": [
+            42,
+            48
+          ],
+          "name": "Workflow Patterns",
+          "type": "section"
+        },
+        {
+          "docstring": "- Trigger management - Task scheduling - Progress tracking - Result validation - Rollback capability",
+          "lines": [
+            49,
+            55
+          ],
+          "name": "Automation Features",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.175732+00:00",
+  "version": "1.0"
+}

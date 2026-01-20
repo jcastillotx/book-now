@@ -1,0 +1,918 @@
+{
+  "directory": ".claude/commands/hooks",
+  "files": {
+    "README.md": {
+      "hash": "d9812b07a188",
+      "indexed_at": "2026-01-20T04:50:25.528404+00:00",
+      "language": "markdown",
+      "lines": 11,
+      "symbols": [
+        {
+          "docstring": "- [pre-task](./pre-task.md) - [post-task](./post-task.md) - [pre-edit](./pre-edit.md) - [post-edit](./post-edit.md) - [session-end](./session-end.md)",
+          "lines": [
+            5,
+            12
+          ],
+          "name": "Available Commands",
+          "type": "section"
+        }
+      ]
+    },
+    "overview.md": {
+      "hash": "756650fe0751",
+      "indexed_at": "2026-01-20T04:50:25.527551+00:00",
+      "language": "markdown",
+      "lines": 58,
+      "symbols": [
+        {
+          "docstring": "Automatically coordinate, format, and learn from Claude Code operations using hooks.",
+          "lines": [
+            3,
+            5
+          ],
+          "name": "Purpose",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **pre-edit**: Validate and assign agents before file modifications - **pre-bash**: Check command safety and resource requirements - **pre-task**: Au",
+              "lines": [
+                8,
+                12
+              ],
+              "name": "Pre-Operation Hooks",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **post-edit**: Auto-format code and train neural patterns - **post-bash**: Log execution and update metrics - **post-search**: Cache results and imp",
+              "lines": [
+                13,
+                17
+              ],
+              "name": "Post-Operation Hooks",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **mcp-initialized**: Persist swarm configuration - **agent-spawned**: Update agent roster - **task-orchestrated**: Monitor task progress - **neural-",
+              "lines": [
+                18,
+                23
+              ],
+              "name": "MCP Integration Hooks",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **notify**: Custom notifications with swarm status - **session-end**: Generate summary and save state - **session-restore**: Load previous session s",
+              "lines": [
+                24,
+                28
+              ],
+              "name": "Session Hooks",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6,
+            28
+          ],
+          "name": "Available Hooks",
+          "type": "section"
+        },
+        {
+          "docstring": "Hooks are configured in `.claude/settings.json`:",
+          "lines": [
+            29,
+            47
+          ],
+          "name": "Configuration",
+          "type": "section"
+        },
+        {
+          "docstring": "- \ud83e\udd16 Automatic agent assignment based on file type - \ud83c\udfa8 Consistent code formatting - \ud83e\udde0 Continuous neural pattern improvement - \ud83d\udcbe Cross-session memory pe",
+          "lines": [
+            48,
+            54
+          ],
+          "name": "Benefits",
+          "type": "section"
+        },
+        {
+          "docstring": "- [Pre-Edit Hook](./pre-edit.md) - [Post-Edit Hook](./post-edit.md) - [Session End Hook](./session-end.md)",
+          "lines": [
+            55,
+            58
+          ],
+          "name": "See Also",
+          "type": "section"
+        }
+      ]
+    },
+    "post-edit.md": {
+      "hash": "d4cc912712e4",
+      "indexed_at": "2026-01-20T04:50:25.528011+00:00",
+      "language": "markdown",
+      "lines": 117,
+      "symbols": [
+        {
+          "lines": [
+            5,
+            10
+          ],
+          "name": "Usage",
+          "type": "section"
+        },
+        {
+          "docstring": "- `--file, -f <path>` - File path that was edited - `--auto-format` - Automatically format code (default: true) - `--memory-key, -m <key>` - Store edi",
+          "lines": [
+            11,
+            18
+          ],
+          "name": "Options",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                21,
+                26
+              ],
+              "name": "Basic post-edit hook",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                27,
+                32
+              ],
+              "name": "With memory storage",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                33,
+                38
+              ],
+              "name": "Format and validate",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                39,
+                44
+              ],
+              "name": "Neural training",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            19,
+            44
+          ],
+          "name": "Examples",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Language-specific formatters - Prettier for JS/TS/JSON - Black for Python - gofmt for Go - Maintains consistency",
+              "lines": [
+                47,
+                54
+              ],
+              "name": "Auto Formatting",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Saves edit context - Records decisions made - Tracks implementation details - Enables knowledge sharing",
+              "lines": [
+                55,
+                61
+              ],
+              "name": "Memory Storage",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Learns from successful edits - Improves future suggestions - Adapts to coding style - Enhances coordination",
+              "lines": [
+                62,
+                68
+              ],
+              "name": "Pattern Training",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Checks syntax correctness - Runs linting rules - Validates formatting - Ensures quality",
+              "lines": [
+                69,
+                75
+              ],
+              "name": "Output Validation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            45,
+            75
+          ],
+          "name": "Features",
+          "type": "section"
+        },
+        {
+          "docstring": "This hook is automatically called by Claude Code when:",
+          "lines": [
+            76,
+            91
+          ],
+          "name": "Integration",
+          "type": "section"
+        },
+        {
+          "docstring": "Returns JSON with:",
+          "lines": [
+            92,
+            111
+          ],
+          "name": "Output",
+          "type": "section"
+        },
+        {
+          "docstring": "- `hook pre-edit` - Pre-edit preparation - `Edit` - File editing tool - `memory usage` - Memory management - `neural train` - Pattern training",
+          "lines": [
+            112,
+            118
+          ],
+          "name": "See Also",
+          "type": "section"
+        }
+      ]
+    },
+    "post-task.md": {
+      "hash": "1859b9ed7ae4",
+      "indexed_at": "2026-01-20T04:50:25.527316+00:00",
+      "language": "markdown",
+      "lines": 112,
+      "symbols": [
+        {
+          "lines": [
+            5,
+            10
+          ],
+          "name": "Usage",
+          "type": "section"
+        },
+        {
+          "docstring": "- `--task-id, -t <id>` - Task identifier for tracking - `--analyze-performance` - Generate performance metrics (default: true) - `--store-decisions` -",
+          "lines": [
+            11,
+            18
+          ],
+          "name": "Options",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                21,
+                26
+              ],
+              "name": "Basic post-task hook",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                27,
+                32
+              ],
+              "name": "With full analysis",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                33,
+                38
+              ],
+              "name": "Memory storage",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                39,
+                44
+              ],
+              "name": "Quick cleanup",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            19,
+            44
+          ],
+          "name": "Examples",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Measures execution time - Tracks token usage - Identifies bottlenecks - Suggests optimizations",
+              "lines": [
+                47,
+                53
+              ],
+              "name": "Performance Analysis",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Saves key decisions made - Records implementation choices - Stores error resolutions - Maintains knowledge base",
+              "lines": [
+                54,
+                60
+              ],
+              "name": "Decision Storage",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Exports successful patterns - Updates coordination models - Improves future performance - Trains on task outcomes",
+              "lines": [
+                61,
+                67
+              ],
+              "name": "Neural Learning",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Creates completion summary - Documents changes made - Lists files modified - Tracks metrics achieved",
+              "lines": [
+                68,
+                74
+              ],
+              "name": "Report Generation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            45,
+            74
+          ],
+          "name": "Features",
+          "type": "section"
+        },
+        {
+          "docstring": "This hook is automatically called by Claude Code when:",
+          "lines": [
+            75,
+            90
+          ],
+          "name": "Integration",
+          "type": "section"
+        },
+        {
+          "docstring": "Returns JSON with:",
+          "lines": [
+            91,
+            106
+          ],
+          "name": "Output",
+          "type": "section"
+        },
+        {
+          "docstring": "- `hook pre-task` - Pre-task setup - `performance report` - Detailed metrics - `memory usage` - Memory management - `neural patterns` - Pattern analys",
+          "lines": [
+            107,
+            113
+          ],
+          "name": "See Also",
+          "type": "section"
+        }
+      ]
+    },
+    "pre-edit.md": {
+      "hash": "43d0a4f70b4a",
+      "indexed_at": "2026-01-20T04:50:25.528911+00:00",
+      "language": "markdown",
+      "lines": 113,
+      "symbols": [
+        {
+          "lines": [
+            5,
+            10
+          ],
+          "name": "Usage",
+          "type": "section"
+        },
+        {
+          "docstring": "- `--file, -f <path>` - File path to be edited - `--auto-assign-agent` - Automatically assign best agent (default: true) - `--validate-syntax` - Pre-v",
+          "lines": [
+            11,
+            18
+          ],
+          "name": "Options",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                21,
+                26
+              ],
+              "name": "Basic pre-edit hook",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                27,
+                32
+              ],
+              "name": "With validation",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                33,
+                38
+              ],
+              "name": "Manual agent assignment",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                39,
+                44
+              ],
+              "name": "Safe editing with backup",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            19,
+            44
+          ],
+          "name": "Examples",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Analyzes file type and content - Assigns specialist agents - TypeScript \u2192 TypeScript expert - Database \u2192 Data specialist - Tests \u2192 QA engineer",
+              "lines": [
+                47,
+                54
+              ],
+              "name": "Auto Agent Assignment",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Pre-checks syntax validity - Identifies potential errors - Suggests corrections - Prevents broken code",
+              "lines": [
+                55,
+                61
+              ],
+              "name": "Syntax Validation",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Checks for git conflicts - Identifies concurrent edits - Warns about stale files - Suggests merge strategies",
+              "lines": [
+                62,
+                68
+              ],
+              "name": "Conflict Detection",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Creates safety backups - Enables quick rollback - Tracks edit history - Preserves originals",
+              "lines": [
+                69,
+                75
+              ],
+              "name": "File Backup",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            45,
+            75
+          ],
+          "name": "Features",
+          "type": "section"
+        },
+        {
+          "docstring": "This hook is automatically called by Claude Code when:",
+          "lines": [
+            76,
+            91
+          ],
+          "name": "Integration",
+          "type": "section"
+        },
+        {
+          "docstring": "Returns JSON with:",
+          "lines": [
+            92,
+            107
+          ],
+          "name": "Output",
+          "type": "section"
+        },
+        {
+          "docstring": "- `hook post-edit` - Post-edit processing - `Edit` - File editing tool - `MultiEdit` - Multiple edits tool - `agent spawn` - Manual agent creation",
+          "lines": [
+            108,
+            114
+          ],
+          "name": "See Also",
+          "type": "section"
+        }
+      ]
+    },
+    "pre-task.md": {
+      "hash": "93597737b83e",
+      "indexed_at": "2026-01-20T04:50:25.528235+00:00",
+      "language": "markdown",
+      "lines": 111,
+      "symbols": [
+        {
+          "lines": [
+            5,
+            10
+          ],
+          "name": "Usage",
+          "type": "section"
+        },
+        {
+          "docstring": "- `--description, -d <text>` - Task description for context - `--auto-spawn-agents` - Automatically spawn required agents (default: true) - `--load-me",
+          "lines": [
+            11,
+            18
+          ],
+          "name": "Options",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                21,
+                26
+              ],
+              "name": "Basic pre-task hook",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                27,
+                32
+              ],
+              "name": "With memory loading",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                33,
+                38
+              ],
+              "name": "Manual agent control",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                39,
+                44
+              ],
+              "name": "Full optimization",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            19,
+            44
+          ],
+          "name": "Examples",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Analyzes task requirements - Determines needed agent types - Spawns agents automatically - Configures agent parameters",
+              "lines": [
+                47,
+                53
+              ],
+              "name": "Auto Agent Assignment",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Retrieves relevant past decisions - Loads previous task contexts - Restores agent configurations - Maintains continuity",
+              "lines": [
+                54,
+                60
+              ],
+              "name": "Memory Loading",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Analyzes task structure - Selects best swarm topology - Configures communication patterns - Optimizes for performance",
+              "lines": [
+                61,
+                67
+              ],
+              "name": "Topology Optimization",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Evaluates task difficulty - Estimates time requirements - Suggests agent count - Identifies dependencies",
+              "lines": [
+                68,
+                74
+              ],
+              "name": "Complexity Estimation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            45,
+            74
+          ],
+          "name": "Features",
+          "type": "section"
+        },
+        {
+          "docstring": "This hook is automatically called by Claude Code when:",
+          "lines": [
+            75,
+            90
+          ],
+          "name": "Integration",
+          "type": "section"
+        },
+        {
+          "docstring": "Returns JSON with:",
+          "lines": [
+            91,
+            105
+          ],
+          "name": "Output",
+          "type": "section"
+        },
+        {
+          "docstring": "- `hook post-task` - Post-task cleanup - `agent spawn` - Manual agent creation - `memory usage` - Memory management - `swarm init` - Swarm initializat",
+          "lines": [
+            106,
+            112
+          ],
+          "name": "See Also",
+          "type": "section"
+        }
+      ]
+    },
+    "session-end.md": {
+      "hash": "6b34a5b3d63d",
+      "indexed_at": "2026-01-20T04:50:25.528635+00:00",
+      "language": "markdown",
+      "lines": 118,
+      "symbols": [
+        {
+          "lines": [
+            5,
+            10
+          ],
+          "name": "Usage",
+          "type": "section"
+        },
+        {
+          "docstring": "- `--session-id, -s <id>` - Session identifier to end - `--save-state` - Save current session state (default: true) - `--export-metrics` - Export sess",
+          "lines": [
+            11,
+            18
+          ],
+          "name": "Options",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                21,
+                26
+              ],
+              "name": "Basic session end",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                27,
+                32
+              ],
+              "name": "With full export",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                33,
+                38
+              ],
+              "name": "Quick close",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                39,
+                44
+              ],
+              "name": "Complete persistence",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            19,
+            44
+          ],
+          "name": "Examples",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Saves current context - Stores open files - Preserves task progress - Maintains decisions",
+              "lines": [
+                47,
+                53
+              ],
+              "name": "State Persistence",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Session duration - Commands executed - Files modified - Tokens consumed - Performance data",
+              "lines": [
+                54,
+                61
+              ],
+              "name": "Metric Export",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Work accomplished - Key decisions made - Problems solved - Next steps identified",
+              "lines": [
+                62,
+                68
+              ],
+              "name": "Summary Generation",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Removes temp files - Clears caches - Frees resources - Optimizes storage",
+              "lines": [
+                69,
+                75
+              ],
+              "name": "Cleanup Operations",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            45,
+            75
+          ],
+          "name": "Features",
+          "type": "section"
+        },
+        {
+          "docstring": "This hook is automatically called by Claude Code when:",
+          "lines": [
+            76,
+            91
+          ],
+          "name": "Integration",
+          "type": "section"
+        },
+        {
+          "docstring": "Returns JSON with:",
+          "lines": [
+            92,
+            112
+          ],
+          "name": "Output",
+          "type": "section"
+        },
+        {
+          "docstring": "- `hook session-start` - Session initialization - `hook session-restore` - Session restoration - `performance report` - Detailed metrics - `memory bac",
+          "lines": [
+            113,
+            119
+          ],
+          "name": "See Also",
+          "type": "section"
+        }
+      ]
+    },
+    "setup.md": {
+      "hash": "d24b951e66c2",
+      "indexed_at": "2026-01-20T04:50:25.527767+00:00",
+      "language": "markdown",
+      "lines": 103,
+      "symbols": [
+        {
+          "children": [
+            {
+              "lines": [
+                5,
+                14
+              ],
+              "name": "1. Initialize with Hooks",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                15,
+                23
+              ],
+              "name": "2. Test Hook Functionality",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Edit `.claude/settings.json` to customize:",
+              "lines": [
+                24,
+                43
+              ],
+              "name": "3. Customize Hooks",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            3,
+            43
+          ],
+          "name": "Quick Start",
+          "type": "section"
+        },
+        {
+          "docstring": "Hooks return JSON with: - `continue`: Whether to proceed (true/false) - `reason`: Explanation for decision - `metadata`: Additional context",
+          "lines": [
+            44,
+            62
+          ],
+          "name": "Hook Response Format",
+          "type": "section"
+        },
+        {
+          "docstring": "- Keep hooks lightweight (< 100ms) - Use caching for repeated operations - Batch related operations - Run non-critical hooks asynchronously",
+          "lines": [
+            63,
+            68
+          ],
+          "name": "Performance Tips",
+          "type": "section"
+        },
+        {
+          "lines": [
+            69,
+            77
+          ],
+          "name": "Debugging Hooks",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Already configured by default for common file types.",
+              "lines": [
+                80,
+                82
+              ],
+              "name": "Auto-Format on Save",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                83,
+                93
+              ],
+              "name": "Protected File Detection",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                94,
+                103
+              ],
+              "name": "Automatic Testing",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            78,
+            103
+          ],
+          "name": "Common Patterns",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.174342+00:00",
+  "version": "1.0"
+}

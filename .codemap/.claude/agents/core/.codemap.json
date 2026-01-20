@@ -1,0 +1,1180 @@
+{
+  "directory": ".claude/agents/core",
+  "files": {
+    "coder.md": {
+      "hash": "da218f02c801",
+      "indexed_at": "2026-01-20T04:50:25.550859+00:00",
+      "language": "markdown",
+      "lines": 453,
+      "symbols": [
+        {
+          "docstring": "1. **Code Implementation**: Write production-quality code that meets requirements 2. **API Design**: Create intuitive and well-documented interfaces 3",
+          "lines": [
+            99,
+            106
+          ],
+          "name": "Core Responsibilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                109,
+                136
+              ],
+              "name": "1. Code Quality Standards",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **SOLID Principles**: Always apply when designing classes - **DRY**: Eliminate duplication through abstraction - **KISS**: Keep implementations simp",
+              "lines": [
+                137,
+                143
+              ],
+              "name": "2. Design Patterns",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                144,
+                159
+              ],
+              "name": "3. Performance Considerations",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            107,
+            159
+          ],
+          "name": "Implementation Guidelines",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Review specifications thoroughly - Clarify ambiguities before coding - Consider edge cases and error scenarios",
+              "lines": [
+                162,
+                166
+              ],
+              "name": "1. Understand Requirements",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Plan the architecture - Define interfaces and contracts - Consider extensibility",
+              "lines": [
+                167,
+                171
+              ],
+              "name": "2. Design First",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                172,
+                188
+              ],
+              "name": "3. Test-Driven Development",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Start with core functionality - Add features incrementally - Refactor continuously",
+              "lines": [
+                189,
+                193
+              ],
+              "name": "4. Incremental Implementation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            160,
+            193
+          ],
+          "name": "Implementation Process",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                196,
+                221
+              ],
+              "name": "TypeScript/JavaScript",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                222,
+                233
+              ],
+              "name": "File Organization",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            194,
+            233
+          ],
+          "name": "Code Style Guidelines",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Never hardcode secrets - Validate all inputs - Sanitize outputs - Use parameterized queries - Implement proper authentication/authorization",
+              "lines": [
+                236,
+                242
+              ],
+              "name": "1. Security",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Write self-documenting code - Add comments for complex logic - Keep functions small (<20 lines) - Use meaningful variable names - Maintain consisten",
+              "lines": [
+                243,
+                249
+              ],
+              "name": "2. Maintainability",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Aim for >80% coverage - Test edge cases - Mock external dependencies - Write integration tests - Keep tests fast and isolated",
+              "lines": [
+                250,
+                256
+              ],
+              "name": "3. Testing",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                257,
+                269
+              ],
+              "name": "4. Documentation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            234,
+            269
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                272,
+                306
+              ],
+              "name": "Before Each Implementation: Learn from History (HNSW-Indexed)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                307,
+                335
+              ],
+              "name": "During Implementation: GNN-Enhanced Context Retrieval",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                336,
+                351
+              ],
+              "name": "Flash Attention for Large Codebases",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                352,
+                365
+              ],
+              "name": "SONA Adaptation (<0.05ms)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                366,
+                394
+              ],
+              "name": "After Implementation: Store Learning Patterns with EWC++",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            270,
+            394
+          ],
+          "name": "\ud83e\udde0 V3 Self-Learning Protocol",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                397,
+                412
+              ],
+              "name": "Use Attention for Code Review Consensus",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            395,
+            412
+          ],
+          "name": "\ud83e\udd1d Multi-Agent Coordination",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                415,
+                427
+              ],
+              "name": "Process Large Contexts Efficiently",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            413,
+            427
+          ],
+          "name": "\u26a1 Performance Optimization with Flash Attention",
+          "type": "section"
+        },
+        {
+          "docstring": "Track code quality improvements over time:",
+          "lines": [
+            428,
+            443
+          ],
+          "name": "\ud83d\udcca Continuous Improvement Metrics",
+          "type": "section"
+        },
+        {
+          "docstring": "- Coordinate with researcher for context (use GNN-enhanced search) - Follow planner's task breakdown (with MoE routing) - Provide clear handoffs to te",
+          "lines": [
+            444,
+            453
+          ],
+          "name": "Collaboration",
+          "type": "section"
+        }
+      ]
+    },
+    "planner.md": {
+      "hash": "8edaaa100c32",
+      "indexed_at": "2026-01-20T04:50:25.550403+00:00",
+      "language": "markdown",
+      "lines": 375,
+      "symbols": [
+        {
+          "docstring": "1. **Task Analysis**: Decompose complex requests into atomic, executable tasks 2. **Dependency Mapping**: Identify and document task dependencies and",
+          "lines": [
+            94,
+            101
+          ],
+          "name": "Core Responsibilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Analyze the complete scope of the request - Identify key objectives and success criteria - Determine complexity level and required expertise",
+              "lines": [
+                104,
+                108
+              ],
+              "name": "1. Initial Assessment",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Break down into concrete, measurable subtasks - Ensure each task has clear inputs and outputs - Create logical groupings and phases",
+              "lines": [
+                109,
+                113
+              ],
+              "name": "2. Task Decomposition",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Map inter-task dependencies - Identify critical path items - Flag potential bottlenecks",
+              "lines": [
+                114,
+                118
+              ],
+              "name": "3. Dependency Analysis",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Determine which agents are needed for each task - Allocate time and computational resources - Plan for parallel execution where possible",
+              "lines": [
+                119,
+                123
+              ],
+              "name": "4. Resource Allocation",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Identify potential failure points - Create contingency plans - Build in validation checkpoints",
+              "lines": [
+                124,
+                128
+              ],
+              "name": "5. Risk Mitigation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            102,
+            128
+          ],
+          "name": "Planning Process",
+          "type": "section"
+        },
+        {
+          "docstring": "Your planning output should include:",
+          "lines": [
+            129,
+            156
+          ],
+          "name": "Output Format",
+          "type": "section"
+        },
+        {
+          "docstring": "- Coordinate with other agents to validate feasibility - Update plans based on execution feedback - Maintain clear communication channels - Document a",
+          "lines": [
+            157,
+            163
+          ],
+          "name": "Collaboration Guidelines",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                166,
+                193
+              ],
+              "name": "Before Planning: Learn from History (HNSW-Indexed)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                194,
+                222
+              ],
+              "name": "During Planning: GNN-Enhanced Dependency Mapping",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                223,
+                241
+              ],
+              "name": "MoE Routing for Optimal Agent Assignment",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                242,
+                257
+              ],
+              "name": "Flash Attention for Fast Task Analysis",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                258,
+                271
+              ],
+              "name": "SONA Adaptation for Planning Patterns (<0.05ms)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                272,
+                300
+              ],
+              "name": "After Planning: Store Learning Patterns with EWC++",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            164,
+            300
+          ],
+          "name": "\ud83e\udde0 V3 Self-Learning Protocol",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                303,
+                318
+              ],
+              "name": "Topology-Aware Coordination",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                319,
+                332
+              ],
+              "name": "Hierarchical Planning with Queens and Workers",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            301,
+            332
+          ],
+          "name": "\ud83e\udd1d Multi-Agent Planning Coordination",
+          "type": "section"
+        },
+        {
+          "docstring": "Track planning quality over time:",
+          "lines": [
+            333,
+            348
+          ],
+          "name": "\ud83d\udcca Continuous Improvement Metrics",
+          "type": "section"
+        },
+        {
+          "docstring": "1. Always create plans that are: - Specific and actionable - Measurable and time-bound - Realistic and achievable - Flexible and adaptable",
+          "lines": [
+            349,
+            375
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        }
+      ]
+    },
+    "researcher.md": {
+      "hash": "68c6a9f80aa5",
+      "indexed_at": "2026-01-20T04:50:25.549536+00:00",
+      "language": "markdown",
+      "lines": 369,
+      "symbols": [
+        {
+          "docstring": "1. **Code Analysis**: Deep dive into codebases to understand implementation details 2. **Pattern Recognition**: Identify recurring patterns, best prac",
+          "lines": [
+            88,
+            95
+          ],
+          "name": "Core Responsibilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Use multiple search strategies (glob, grep, semantic search) - Read relevant files completely for context - Check multiple locations for related inf",
+              "lines": [
+                98,
+                103
+              ],
+              "name": "1. Information Gathering",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                104,
+                112
+              ],
+              "name": "2. Pattern Analysis",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Track import statements and module dependencies - Identify external package dependencies - Map internal module relationships - Document API contract",
+              "lines": [
+                113,
+                118
+              ],
+              "name": "3. Dependency Analysis",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Extract inline comments and JSDoc - Analyze README files and documentation - Review commit messages for context - Check issue trackers and PRs",
+              "lines": [
+                119,
+                124
+              ],
+              "name": "4. Documentation Mining",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            96,
+            124
+          ],
+          "name": "Research Methodology",
+          "type": "section"
+        },
+        {
+          "lines": [
+            125,
+            158
+          ],
+          "name": "Research Output Format",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                161,
+                170
+              ],
+              "name": "1. Broad to Narrow",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Search for class/function definitions - Find all usages and references - Track data flow through the system - Identify integration points",
+              "lines": [
+                171,
+                176
+              ],
+              "name": "2. Cross-Reference",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Review git history for context - Analyze commit patterns - Check for refactoring history - Understand evolution of code",
+              "lines": [
+                177,
+                182
+              ],
+              "name": "3. Historical Analysis",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            159,
+            182
+          ],
+          "name": "Search Strategies",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                185,
+                212
+              ],
+              "name": "Before Each Research Task: Learn from History (HNSW-Indexed)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                213,
+                241
+              ],
+              "name": "During Research: GNN-Enhanced Pattern Recognition",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                242,
+                257
+              ],
+              "name": "Multi-Head Attention for Source Synthesis",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                258,
+                273
+              ],
+              "name": "Flash Attention for Large Document Processing",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                274,
+                287
+              ],
+              "name": "SONA Adaptation for Research Patterns (<0.05ms)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                288,
+                316
+              ],
+              "name": "After Research: Store Learning Patterns with EWC++",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            183,
+            316
+          ],
+          "name": "\ud83e\udde0 V3 Self-Learning Protocol",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                319,
+                334
+              ],
+              "name": "Coordinate with Multiple Research Agents",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            317,
+            334
+          ],
+          "name": "\ud83e\udd1d Multi-Agent Research Coordination",
+          "type": "section"
+        },
+        {
+          "docstring": "Track research quality over time:",
+          "lines": [
+            335,
+            350
+          ],
+          "name": "\ud83d\udcca Continuous Improvement Metrics",
+          "type": "section"
+        },
+        {
+          "docstring": "- Share findings with planner for task decomposition (via memory patterns) - Provide context to coder for implementation (GNN-enhanced) - Supply teste",
+          "lines": [
+            351,
+            359
+          ],
+          "name": "Collaboration Guidelines",
+          "type": "section"
+        },
+        {
+          "docstring": "1. **Be Thorough**: Check multiple sources and validate findings (GNN-enhanced) 2. **Stay Organized**: Structure research logically and maintain clear",
+          "lines": [
+            360,
+            369
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        }
+      ]
+    },
+    "reviewer.md": {
+      "hash": "63df0284a3a5",
+      "indexed_at": "2026-01-20T04:50:25.549076+00:00",
+      "language": "markdown",
+      "lines": 520,
+      "symbols": [
+        {
+          "docstring": "1. **Code Quality Review**: Assess code structure, readability, and maintainability 2. **Security Audit**: Identify potential vulnerabilities and secu",
+          "lines": [
+            94,
+            101
+          ],
+          "name": "Core Responsibilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                104,
+                128
+              ],
+              "name": "1. Functionality Review",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                129,
+                156
+              ],
+              "name": "2. Security Review",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                157,
+                190
+              ],
+              "name": "3. Performance Review",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                191,
+                226
+              ],
+              "name": "4. Code Quality Review",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                227,
+                263
+              ],
+              "name": "5. Maintainability Review",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            102,
+            263
+          ],
+          "name": "Review Process",
+          "type": "section"
+        },
+        {
+          "lines": [
+            264,
+            266
+          ],
+          "name": "Review Feedback Format",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Clean architecture with good separation of concerns - Comprehensive error handling - Well-documented API endpoints",
+              "lines": [
+                269,
+                273
+              ],
+              "name": "\u2705 Strengths",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. **Security**: SQL injection vulnerability in user search (line 45) - Impact: High - Fix: Use parameterized queries",
+              "lines": [
+                274,
+                282
+              ],
+              "name": "\ud83d\udd34 Critical Issues",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. **Maintainability**: Extract magic numbers to constants 2. **Testing**: Add edge case tests for boundary conditions 3. **Documentation**: Update AP",
+              "lines": [
+                283,
+                287
+              ],
+              "name": "\ud83d\udfe1 Suggestions",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Code Coverage: 78% (Target: 80%) - Complexity: Average 4.2 (Good) - Duplication: 2.3% (Acceptable)",
+              "lines": [
+                288,
+                292
+              ],
+              "name": "\ud83d\udcca Metrics",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [ ] Fix SQL injection vulnerability - [ ] Optimize database queries - [ ] Add missing tests - [ ] Update documentation",
+              "lines": [
+                293,
+                299
+              ],
+              "name": "\ud83c\udfaf Action Items",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            267,
+            299
+          ],
+          "name": "Code Review Summary",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Focus on the code, not the person - Explain why something is an issue - Provide concrete suggestions - Acknowledge good practices",
+              "lines": [
+                302,
+                307
+              ],
+              "name": "1. Be Constructive",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Critical**: Security, data loss, crashes - **Major**: Performance, functionality bugs - **Minor**: Style, naming, documentation - **Suggestions**:",
+              "lines": [
+                308,
+                313
+              ],
+              "name": "2. Prioritize Issues",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Development stage - Time constraints - Team standards - Technical debt",
+              "lines": [
+                314,
+                319
+              ],
+              "name": "3. Consider Context",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            300,
+            319
+          ],
+          "name": "Review Guidelines",
+          "type": "section"
+        },
+        {
+          "lines": [
+            320,
+            329
+          ],
+          "name": "Automated Checks",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                332,
+                359
+              ],
+              "name": "Before Review: Learn from Past Patterns (HNSW-Indexed)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                360,
+                388
+              ],
+              "name": "During Review: GNN-Enhanced Issue Detection",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                389,
+                404
+              ],
+              "name": "Flash Attention for Fast Code Review",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                405,
+                418
+              ],
+              "name": "SONA Adaptation for Review Patterns (<0.05ms)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                419,
+                434
+              ],
+              "name": "Attention-Based Multi-Reviewer Consensus",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                435,
+                463
+              ],
+              "name": "After Review: Store Learning Patterns with EWC++",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            330,
+            463
+          ],
+          "name": "\ud83e\udde0 V3 Self-Learning Protocol",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                466,
+                478
+              ],
+              "name": "Consensus-Based Review with Attention",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                479,
+                491
+              ],
+              "name": "Route to Specialized Reviewers",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            464,
+            491
+          ],
+          "name": "\ud83e\udd1d Multi-Reviewer Coordination",
+          "type": "section"
+        },
+        {
+          "docstring": "Track review quality improvements:",
+          "lines": [
+            492,
+            507
+          ],
+          "name": "\ud83d\udcca Continuous Improvement Metrics",
+          "type": "section"
+        },
+        {
+          "docstring": "1. **Review Early and Often**: Don't wait for completion 2. **Keep Reviews Small**: <400 lines per review 3. **Use Checklists**: Ensure consistency (a",
+          "lines": [
+            508,
+            520
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        }
+      ]
+    },
+    "tester.md": {
+      "hash": "dfd995eae1c7",
+      "indexed_at": "2026-01-20T04:50:25.550002+00:00",
+      "language": "markdown",
+      "lines": 512,
+      "symbols": [
+        {
+          "docstring": "1. **Test Design**: Create comprehensive test suites covering all scenarios 2. **Test Implementation**: Write clear, maintainable test code 3. **Edge",
+          "lines": [
+            98,
+            105
+          ],
+          "name": "Core Responsibilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                108,
+                119
+              ],
+              "name": "1. Test Pyramid",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "lines": [
+                    122,
+                    153
+                  ],
+                  "name": "Unit Tests",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    154,
+                    184
+                  ],
+                  "name": "Integration Tests",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    185,
+                    200
+                  ],
+                  "name": "E2E Tests",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                120,
+                200
+              ],
+              "name": "2. Test Types",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                201,
+                236
+              ],
+              "name": "3. Edge Case Testing",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            106,
+            236
+          ],
+          "name": "Testing Strategy",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Statements: >80% - Branches: >75% - Functions: >80% - Lines: >80%",
+              "lines": [
+                239,
+                244
+              ],
+              "name": "1. Coverage Requirements",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Fast**: Tests should run quickly (<100ms for unit tests) - **Isolated**: No dependencies between tests - **Repeatable**: Same result every time -",
+              "lines": [
+                245,
+                251
+              ],
+              "name": "2. Test Characteristics",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            237,
+            251
+          ],
+          "name": "Test Quality Metrics",
+          "type": "section"
+        },
+        {
+          "lines": [
+            252,
+            280
+          ],
+          "name": "Performance Testing",
+          "type": "section"
+        },
+        {
+          "lines": [
+            281,
+            306
+          ],
+          "name": "Security Testing",
+          "type": "section"
+        },
+        {
+          "lines": [
+            307,
+            324
+          ],
+          "name": "Test Documentation",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                327,
+                354
+              ],
+              "name": "Before Testing: Learn from Past Failures (HNSW-Indexed)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                355,
+                383
+              ],
+              "name": "During Testing: GNN-Enhanced Test Case Discovery",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                384,
+                409
+              ],
+              "name": "Flash Attention for Fast Test Generation",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                410,
+                423
+              ],
+              "name": "SONA Adaptation for Test Patterns (<0.05ms)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                424,
+                452
+              ],
+              "name": "After Testing: Store Learning Patterns with EWC++",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            325,
+            452
+          ],
+          "name": "\ud83e\udde0 V3 Self-Learning Protocol",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                455,
+                469
+              ],
+              "name": "Optimize Test Coverage with Attention",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                470,
+                482
+              ],
+              "name": "Route to Specialized Test Experts",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            453,
+            482
+          ],
+          "name": "\ud83e\udd1d Multi-Agent Test Coordination",
+          "type": "section"
+        },
+        {
+          "docstring": "Track test quality improvements:",
+          "lines": [
+            483,
+            498
+          ],
+          "name": "\ud83d\udcca Continuous Improvement Metrics",
+          "type": "section"
+        },
+        {
+          "docstring": "1. **Test First**: Write tests before implementation (TDD) 2. **One Assertion**: Each test should verify one behavior 3. **Descriptive Names**: Test n",
+          "lines": [
+            499,
+            512
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.180893+00:00",
+  "version": "1.0"
+}

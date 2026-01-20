@@ -1,0 +1,205 @@
+{
+  "directory": ".claude/skills/swarm-orchestration",
+  "files": {
+    "SKILL.md": {
+      "hash": "9f0bc14c44ec",
+      "indexed_at": "2026-01-20T04:50:25.508166+00:00",
+      "language": "markdown",
+      "lines": 179,
+      "symbols": [
+        {
+          "docstring": "Orchestrates multi-agent swarms using agentic-flow's advanced coordination system. Supports mesh, hierarchical, and adaptive topologies with automatic",
+          "lines": [
+            8,
+            11
+          ],
+          "name": "What This Skill Does",
+          "type": "section"
+        },
+        {
+          "docstring": "- agentic-flow v1.5.11+ - Node.js 18+ - Understanding of distributed systems (helpful)",
+          "lines": [
+            12,
+            17
+          ],
+          "name": "Prerequisites",
+          "type": "section"
+        },
+        {
+          "lines": [
+            18,
+            34
+          ],
+          "name": "Quick Start",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                37,
+                46
+              ],
+              "name": "1. Mesh (Peer-to-Peer)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                47,
+                56
+              ],
+              "name": "2. Hierarchical (Queen-Worker)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                57,
+                65
+              ],
+              "name": "3. Adaptive (Dynamic)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            35,
+            65
+          ],
+          "name": "Topology Patterns",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                68,
+                81
+              ],
+              "name": "Parallel Execution",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                82,
+                92
+              ],
+              "name": "Pipeline Execution",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                93,
+                105
+              ],
+              "name": "Adaptive Execution",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            66,
+            105
+          ],
+          "name": "Task Orchestration",
+          "type": "section"
+        },
+        {
+          "lines": [
+            106,
+            118
+          ],
+          "name": "Memory Coordination",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                121,
+                129
+              ],
+              "name": "Load Balancing",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                130,
+                138
+              ],
+              "name": "Fault Tolerance",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                139,
+                145
+              ],
+              "name": "Performance Monitoring",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            119,
+            145
+          ],
+          "name": "Advanced Features",
+          "type": "section"
+        },
+        {
+          "lines": [
+            146,
+            158
+          ],
+          "name": "Integration with Hooks",
+          "type": "section"
+        },
+        {
+          "docstring": "1. **Start small**: Begin with 2-3 agents, scale up 2. **Use memory**: Share context through swarm memory 3. **Monitor metrics**: Track performance an",
+          "lines": [
+            159,
+            166
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "**Solution**: Verify memory access and enable hooks",
+              "lines": [
+                169,
+                171
+              ],
+              "name": "Issue: Agents not coordinating",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Solution**: Check topology (use adaptive) and enable load balancing",
+              "lines": [
+                172,
+                174
+              ],
+              "name": "Issue: Poor performance",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            167,
+            174
+          ],
+          "name": "Troubleshooting",
+          "type": "section"
+        },
+        {
+          "docstring": "- Swarm Guide: docs/swarm/orchestration.md - Topology Patterns: docs/swarm/topologies.md - Hooks Integration: docs/hooks/coordination.md",
+          "lines": [
+            175,
+            180
+          ],
+          "name": "Learn More",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.164501+00:00",
+  "version": "1.0"
+}

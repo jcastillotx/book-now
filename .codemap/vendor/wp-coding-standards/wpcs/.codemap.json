@@ -1,0 +1,1565 @@
+{
+  "directory": "vendor/wp-coding-standards/wpcs",
+  "files": {
+    "CHANGELOG.md": {
+      "hash": "9bda97ced5cb",
+      "indexed_at": "2026-01-20T04:50:16.143402+00:00",
+      "language": "markdown",
+      "lines": 1777,
+      "symbols": [
+        {
+          "docstring": "_No documentation available about unreleased changes as of yet._",
+          "lines": [
+            7,
+            10
+          ],
+          "name": "[Unreleased]",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Support for attributes on anonymous classes (PHP 8.0) and `readonly` anonymous classes (PHP 8.3) to the `WordPress.Security.EscapeOutput` sniff. Pro",
+              "lines": [
+                13,
+                17
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The minimum supported PHP version is now PHP 7.2 (was PHP 5.4). [#2614] - The minimum required `PHP_CodeSniffer` version to 3.13.4 (was 3.13.0). [#2",
+              "lines": [
+                18,
+                33
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The WordPress.PHP.POSIXFunctions sniff (as it is no longer relevant). [#2616]",
+              "lines": [
+                34,
+                36
+              ],
+              "name": "Deprecated",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- `wp_kses_allowed_html()` from the list of escaping functions. [#2566] This affects the `WordPress.Security.EscapeOutput` sniff.",
+              "lines": [
+                37,
+                40
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- `WordPress.DB.DirectDatabaseQuery`: false positive when function call to caching functions did not use the canonical function name. Props [@rodrigop",
+              "lines": [
+                41,
+                73
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            11,
+            73
+          ],
+          "name": "[3.3.0] - 2025-11-25",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- New `WordPress.WP.GetMetaSingle` sniff to the `WordPress-Extra` ruleset. Props [@rodrigoprimo]! [#2465] This sniff warns when `get_*_meta()` and `ge",
+              "lines": [
+                76,
+                83
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The minimum required `PHP_CodeSniffer` version to 3.13.0 (was 3.9.0). [#2532] - The minimum required `PHPCSUtils` version to 1.1.0 (was 1.0.10). [#2",
+              "lines": [
+                84,
+                104
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The `Generic.Functions.CallTimePassByReference` has been removed from the `WordPress-Extra` ruleset. Props [@rodrigoprimo]. [#2536] This sniff was d",
+              "lines": [
+                105,
+                108
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Sniffs based on the `AbstractClassRestrictionsSniff` could previously run into a PHPCS `Internal.Exception`, leading to fixes not being made. [#2500",
+              "lines": [
+                109,
+                132
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            74,
+            132
+          ],
+          "name": "[3.2.0] - 2025-07-24",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- WordPress-Core ruleset: now includes the `Universal.PHP.LowercasePHPTag` sniff. - WordPress-Extra ruleset: now includes the `Generic.CodeAnalysis.Re",
+              "lines": [
+                135,
+                140
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The minimum required `PHP_CodeSniffer` version to 3.9.0 (was 3.7.2). - The minimum required `PHPCSUtils` version to 1.0.10 (was 1.0.8). - The minimu",
+              "lines": [
+                141,
+                156
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- `WordPress.WP.PostsPerPage` could potentially result in an `Internal.Exception` when encountering a query string which doesn't include the value for",
+              "lines": [
+                157,
+                160
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            133,
+            160
+          ],
+          "name": "[3.1.0] - 2024-03-25",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- In WordPressCS 3.0.0, the functionality of the `WordPress.Security.EscapeOutput` sniff was updated to report unescaped message parameters passed to",
+              "lines": [
+                163,
+                166
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Updated the CI workflow to test the example ruleset for issues. - Funding files and updates in the Readme about funding the project.",
+              "lines": [
+                167,
+                170
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed a sniff name in the `phpcs.xml.dist.sample` file (case-sensitive sniff name). Props [@dawidurbanski].",
+              "lines": [
+                171,
+                174
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            161,
+            174
+          ],
+          "name": "[3.0.1] - 2023-09-14",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "At long last... WordPressCS 3.0.0 is here.",
+              "lines": [
+                177,
+                191
+              ],
+              "name": "Important information about this release:",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "- New Helper classes: - `ArrayWalkingFunctionsHelper` - `ConstantsHelper` * - `ContextHelper` * - `DeprecationHelper` * - `FormattingFunctionsHelper`",
+                  "lines": [
+                    249,
+                    277
+                  ],
+                  "name": "Added (internal/dev-only)",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "- Dependencies on the following packages: [PHPCSUtils](https://phpcsutils.com/), [PHPCSExtra](https://github.com/PHPCSStandards/PHPCSExtra) and the [C",
+              "lines": [
+                192,
+                277
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "- All non-abstract classes in WordPressCS are now `final` with the exception of the following four classes which are known to be extended by external",
+                  "lines": [
+                    357,
+                    366
+                  ],
+                  "name": "Changed (internal/dev-only)",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "- As of this version, installation via Composer is the only supported manner of installation. Installing in a different manner (git clone/PEAR/PHAR) i",
+              "lines": [
+                278,
+                366
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "- `AbstractArrayAssignmentRestrictionsSniff`: support for the optional `'callback'` key in the array returned by `getGroups()`. - `WordPressCS\\WordPre",
+                  "lines": [
+                    392,
+                    422
+                  ],
+                  "name": "Removed (internal/dev-only)",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "- Support for the deprecated, old-style WordPressCS native ignore annotations. Use the PHPCS native selective ignore annotations instead. - The follow",
+              "lines": [
+                367,
+                422
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- All sniffs which, in one way or another, check whether code represents a short list or a short array will now do so more accurately. This fixes vari",
+              "lines": [
+                423,
+                542
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            175,
+            542
+          ],
+          "name": "[3.0.0] - 2023-08-21",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- The `WordPress.WP.I18n` sniff contains a new check for translatable text strings which are wrapped in HTML tags, like `<h1>Translate me</h1>`. Those",
+              "lines": [
+                545,
+                548
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The default value for `minimum_supported_wp_version`, as used by a [number of sniffs detecting usage of deprecated WP features](https://github.com/W",
+              "lines": [
+                549,
+                554
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- All function call detection sniffs: fixed a bug where constants with the same name as one of the targeted functions could inadvertently be recognize",
+              "lines": [
+                555,
+                560
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            543,
+            560
+          ],
+          "name": "[2.3.0] - 2020-05-14",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Metrics to the `WordPress.Arrays.CommaAfterArrayItem` sniff. These can be displayed using `--report=info`. - The `sanitize_hex_color()` and the `san",
+              "lines": [
+                563,
+                566
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The recommended version of the suggested [Composer PHPCS plugin] is now `^0.6`.",
+              "lines": [
+                567,
+                569
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- `WordPress.PHP.NoSilencedErrors`: depending on the custom properties set, the metrics would be different. - `WordPress.WhiteSpace.ControlStructureSp",
+              "lines": [
+                570,
+                575
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            561,
+            575
+          ],
+          "name": "[2.2.1] - 2020-02-04",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- New `WordPress.DateTime.CurrentTimeTimestamp` sniff to the `WordPress-Core` ruleset, which checks against the use of the WP native `current_time()`",
+              "lines": [
+                581,
+                599
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The default value for `minimum_supported_wp_version`, as used by a [number of sniffs detecting usage of deprecated WP features](https://github.com/W",
+              "lines": [
+                600,
+                615
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The `WordPress.WP.TimezoneChange` sniff. Use the `WordPress.DateTime.RestrictedFunctions` instead. The deprecated sniff will be removed in WPCS 3.0.",
+              "lines": [
+                616,
+                619
+              ],
+              "name": "Deprecated",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- All sniffs in the `WordPress.Arrays` category will no longer treat _short lists_ as if they were a short array. - The `WordPress.NamingConventions.V",
+              "lines": [
+                620,
+                632
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "Note: The repository has moved. The new URL is https://github.com/WordPress/WordPress-Coding-Standards. The move does not affect the package name for",
+          "lines": [
+            576,
+            632
+          ],
+          "name": "[2.2.0] - 2019-11-11",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- The `WordPress.WP.CapitalPDangit` will now ignore misspelled instances of `WordPress` within constant declarations. This covers both constants decla",
+              "lines": [
+                635,
+                639
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- `paginate_comments_links()` from the list of auto-escaped functions `Sniff::$autoEscapedFunctions`. This affects the `WordPress.Security.EscapeOutpu",
+              "lines": [
+                640,
+                643
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The `$current_blog` and `$tag_ID` variables have been added to the list of WordPress global variables. This fixes some false positives from the `Wor",
+              "lines": [
+                644,
+                652
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            633,
+            652
+          ],
+          "name": "[2.1.1] - 2019-05-21",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- New `WordPress.PHP.IniSet` sniff to the `WordPress-Extra` ruleset. This sniff will detect calls to `ini_set()` and `ini_alter()` and warn against th",
+              "lines": [
+                655,
+                673
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Moved the `WordPress.PHP.StrictComparisons`, `WordPress.PHP.StrictInArray` and the `WordPress.CodeAnalysis.AssignmentInCondition` sniff from the `Wo",
+              "lines": [
+                674,
+                689
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- `ini_set` and `ini_alter` from the list of functions detected by the `WordPress.PHP.DiscouragedFunctions` sniff. These are now covered via the new `",
+              "lines": [
+                690,
+                694
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The `WordPress.NamingConventions.PrefixAllGlobals` sniff would underreport when global functions would be autoloaded via a Composer autoload `files`",
+              "lines": [
+                695,
+                728
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            653,
+            728
+          ],
+          "name": "[2.1.0] - 2019-04-08",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "WordPressCS 2.0.0 contains breaking changes, both for people using custom rulesets as well as for sniff developers who maintain a custom PHPCS standar",
+              "lines": [
+                731,
+                741
+              ],
+              "name": "Important information about this release:",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "- `WordPress-Extra`: Reverted back to including the `Squiz.WhiteSpace.LanguageConstructSpacing` sniff instead of the new `Generic.WhiteSpace.LanguageC",
+                  "lines": [
+                    744,
+                    746
+                  ],
+                  "name": "Fixed",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                742,
+                746
+              ],
+              "name": "Changes since 2.0.0-RC1",
+              "type": "subsection"
+            },
+            {
+              "docstring": "For a full list of changes from the 1.2.1 version, please review the following changelog: * https://github.com/WordPress/WordPress-Coding-Standards/re",
+              "lines": [
+                747,
+                751
+              ],
+              "name": "Changes since 1.2.1",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            729,
+            751
+          ],
+          "name": "[2.0.0] - 2019-01-16",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "This is the first release candidate for WordPressCS 2.0.0. WordPressCS 2.0.0 contains breaking changes, both for people using custom rulesets as well",
+              "lines": [
+                754,
+                765
+              ],
+              "name": "Important information about this release:",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- `Generic.PHP.DiscourageGoto`, `Generic.PHP.LowerCaseType`, `Generic.WhiteSpace.ArbitraryParenthesesSpacing` and `PSR12.Keywords.ShortFormTypeKeyword",
+              "lines": [
+                766,
+                769
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The minimum required `PHP_CodeSniffer` version to 3.3.1 (was 2.9.0). - The namespace used by WordPressCS has been changed from `WordPress` to `WordP",
+              "lines": [
+                770,
+                811
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The use of the [WordPressCS native whitelist comments](https://github.com/WordPress/WordPress-Coding-Standards/wiki/Whitelisting-code-which-flags-er",
+              "lines": [
+                812,
+                816
+              ],
+              "name": "Deprecated",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Support for PHP 5.3. PHP 5.4 is the minimum requirement for `PHP_CodeSniffer` 3.x. Includes removing any and all workarounds which were in place to",
+              "lines": [
+                817,
+                886
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Support for PHP 7.3. `PHP_CodeSniffer` < 3.3.1 was not fully compatible with PHP 7.3. Now the minimum required PHPCS has been upped to `PHP_CodeSnif",
+              "lines": [
+                887,
+                895
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            752,
+            895
+          ],
+          "name": "[2.0.0-RC1] - 2018-12-31",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- The default value for `minimum_supported_wp_version`, as used by a [number of sniffs detecting usage of deprecated WP features](https://github.com/W",
+              "lines": [
+                900,
+                904
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- `comment_author_email_link()`, `comment_author_email()`, `comment_author_IP()`, `comment_author_link()`, `comment_author_rss()`, `comment_author_url",
+              "lines": [
+                905,
+                907
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The `WordPress.WhiteSpace.PrecisionAlignment` sniff would loose the value of a custom set `ignoreAlignmentTokens` property when scanning more than o",
+              "lines": [
+                908,
+                911
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "Note: This will be the last release supporting PHP_CodeSniffer 2.x.",
+          "lines": [
+            896,
+            911
+          ],
+          "name": "[1.2.1] - 2018-12-18",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- New `WordPress.PHP.TypeCasts` sniff to the `WordPress-Core` ruleset. This new sniff checks that PHP type casts are: * lowercase; * short form, i.e.",
+              "lines": [
+                914,
+                936
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The `Sniff::valid_direct_scope()` method will now return the `$stackPtr` to the valid scope if a valid direct scope has been detected. Previously, i",
+              "lines": [
+                937,
+                949
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The `WordPress.WhiteSpace.CastStructureSpacing.NoSpaceAfterCloseParenthesis` error code as an error for the same issue was already being thrown by a",
+              "lines": [
+                950,
+                952
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The `WordPress.CodeAnalysis.EmptyStatement` would throw a false positive for an empty condition in a `for()` statement. - The `Sniff::is_class_prope",
+              "lines": [
+                953,
+                961
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            912,
+            961
+          ],
+          "name": "[1.2.0] - 2018-11-12",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- New `WordPress.PHP.NoSilencedErrors` sniff. This sniff replaces the `Generic.PHP.NoSilencedErrors` sniff which was previously used and included in t",
+              "lines": [
+                964,
+                975
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The `PEAR.Functions.FunctionCallSignature` sniff, which is part of the `WordPress-Core` ruleset, used to allow multiple function call parameters per",
+              "lines": [
+                976,
+                990
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The `WordPress.Security.ValidatedSanitizedInput` sniff will now recognize array keys in superglobals independently of the string quote-style used fo",
+              "lines": [
+                991,
+                1005
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            962,
+            1005
+          ],
+          "name": "[1.1.0] - 2018-09-10",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "If you use the WordPress Coding Standards with a custom ruleset, please be aware that a number of sniffs have been moved between categories and that t",
+              "lines": [
+                1008,
+                1021
+              ],
+              "name": "Important information about this release:",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- `WordPress.PHP.PregQuoteDelimiter` sniff to the `WordPress-Extra` ruleset to warn about calls to `preg_quote()` which don't pass the `$delimiter` pa",
+              "lines": [
+                1022,
+                1038
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The `WordPress` ruleset no longer includes the `WordPress-VIP` ruleset, nor does it include any of the (deprecated) `VIP` sniffs anymore. - The foll",
+              "lines": [
+                1039,
+                1083
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The `WordPress-VIP` ruleset has been deprecated. For checking a theme/plugin for hosting on the WordPress.com VIP platform, please use the [Automatt",
+              "lines": [
+                1084,
+                1120
+              ],
+              "name": "Deprecated",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- `cancel_comment_reply_link()`, `get_bookmark()`, `get_comment_date()`, `get_comment_time()`, `get_template_part()`, `has_post_thumbnail()`, `is_atta",
+              "lines": [
+                1121,
+                1125
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Compatibility with PHP 7.3. A change in PHP 7.3 was causing the `WordPress.DB.RestrictedClasses`, `WordPress.DB.RestrictedFunctions` and the `WordPr",
+              "lines": [
+                1126,
+                1192
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1006,
+            1192
+          ],
+          "name": "[1.0.0] - 2018-07-25",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- The `WordPress.NamingConventions.PrefixAllGlobals` sniff contained a bug which could inadvertently trigger class autoloading of the project being sn",
+              "lines": [
+                1195,
+                1197
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1193,
+            1197
+          ],
+          "name": "[0.14.1] - 2018-02-15",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- `WordPress.Arrays.MultipleStatementAlignment` sniff to the `WordPress-Core` ruleset which will align the array assignment operator for multi-item, m",
+              "lines": [
+                1200,
+                1218
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- When passing an array property via a custom ruleset to PHP_CodeSniffer, spaces around the key/value are taken as intentional and parsed as part of t",
+              "lines": [
+                1219,
+                1244
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The `WordPress.Arrays.ArrayIndentation` sniff did not correctly handle array items with multi-line strings as a value. - The `WordPress.Arrays.Array",
+              "lines": [
+                1245,
+                1258
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1198,
+            1258
+          ],
+          "name": "[0.14.0] - 2017-11-01",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Fatal error when using PHPCS 3.x with the `installed_paths` config variable set via the ruleset.",
+              "lines": [
+                1261,
+                1263
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1259,
+            1263
+          ],
+          "name": "[0.13.1] - 2017-08-07",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Support for PHP_CodeSniffer 3.0.2+. The minimum required PHPCS version (2.9.0) stays the same. - Support for the PHPCS 3 `--ignore-annotations` comm",
+              "lines": [
+                1266,
+                1269
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The minimum required PHP version is now 5.3 when used in combination with PHPCS 2.x and PHP 5.4 when used in combination with PHPCS 3.x. - The way t",
+              "lines": [
+                1270,
+                1277
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The `WordPress.Arrays.ArrayDeclaration` sniff has been deprecated. The last remaining checks this sniff contained have been moved to the `WordPress.",
+              "lines": [
+                1278,
+                1281
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- A minor bug where the auto-fixer could accidentally remove a comment near an array opener.",
+              "lines": [
+                1282,
+                1285
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1264,
+            1285
+          ],
+          "name": "[0.13.0] - 2017-08-03",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- A default file encoding setting to the `WordPress-Core` ruleset. All files sniffed will now be regarded as `utf-8` by default. - `WordPress.Arrays.A",
+              "lines": [
+                1288,
+                1313
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The minimum required PHP_CodeSniffer version to 2.9.0 (was 2.8.1). **Take note**: PHPCS 3.x is not (yet) supported. The next release is expected to",
+              "lines": [
+                1314,
+                1333
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- `Squiz.Commenting.LongConditionClosingComment` sniff from the `WordPress-Core` ruleset. This rule has been removed from the WP Coding Standards hand",
+              "lines": [
+                1334,
+                1339
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The `WordPress.Array.ArrayDeclarationSpacing` could be overeager when fixing associative arrays to be multi-line. Non-associative single-line arrays",
+              "lines": [
+                1340,
+                1354
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1286,
+            1354
+          ],
+          "name": "[0.12.0] - 2017-07-21",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "If you use the WordPress Coding Standards with a custom ruleset, please be aware that some of the checks have been moved between sniffs and that the n",
+              "lines": [
+                1357,
+                1367
+              ],
+              "name": "Important notes for end-users:",
+              "type": "subsection"
+            },
+            {
+              "docstring": "If you maintain or develop sniffs based upon the WordPress Coding Standards, most notably, if you use methods and properties from the `WordPress_Sniff",
+              "lines": [
+                1368,
+                1375
+              ],
+              "name": "Important notes for sniff developers:",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- `WordPress.WP.DeprecatedFunctions` sniff to the `WordPress-Extra` ruleset to check for usage of deprecated WP version and show errors/warnings depen",
+              "lines": [
+                1376,
+                1403
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The minimum required PHP version to 5.2 (was 5.1). - The minimum required PHP_CodeSniffer version to 2.8.1 (was 2.6). - Improved support for detecti",
+              "lines": [
+                1404,
+                1438
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Warnings thrown by individual sniffs about parse errors they encounter. This is left up to the `Generic.PHP.Syntax` sniff which is included in the `",
+              "lines": [
+                1439,
+                1444
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- `WordPress.Variables.GlobalVariables`: **_All known bugs have been fixed. If you'd previously disabled the sniff in your custom ruleset because of t",
+              "lines": [
+                1445,
+                1476
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1355,
+            1476
+          ],
+          "name": "[0.11.0] - 2017-03-20",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- `WordPress.WP.I18n` sniff to the `WordPress-Core` ruleset to flag dynamic translatable strings and text domains. - `WordPress.PHP.DisallowAlternativ",
+              "lines": [
+                1479,
+                1494
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The minimum required PHP_CodeSniffer version to 2.6.0. - Moved the `WordPress.WP.PreparedSQL` sniff from `WordPress-Extra` to `WordPress-Core`. - `W",
+              "lines": [
+                1495,
+                1511
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- `Squiz.Functions.FunctionDeclarationArgumentSpacing.SpacingBeforeClose` from the `WordPress-Core` standard (was causing duplicate messages for the s",
+              "lines": [
+                1512,
+                1518
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Error message precision for the `WordPress.NamingConventions.ValidVariableName` sniff. - Bug in the `WordPress.WhiteSpace.ControlStructureSpacing.Bl",
+              "lines": [
+                1519,
+                1530
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1477,
+            1530
+          ],
+          "name": "[0.10.0] - 2016-08-29",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- `count()` to the list of auto-escaped functions. - `Squiz.PHP.CommentedOutCode` sniff to `WordPress-VIP` ruleset. - Support for PHP 5.2. - `attachme",
+              "lines": [
+                1533,
+                1551
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Incorrect ternary detection in `WordPress.XSS.EscapeOutput` sniff. - False positives when detecting variables interpolated into strings in the `Word",
+              "lines": [
+                1552,
+                1560
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1531,
+            1560
+          ],
+          "name": "[0.9.0] - 2016-02-01",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- `implode()` and `join()` to the list of formatting functions in the `WordPress.XSS.EscapeOutput` sniff. This is useful when you need to have HTML in",
+              "lines": [
+                1563,
+                1573
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Sniffing for the number of spaces before a closure's opening parenthesis from the default configuration of the `WordPress.WhiteSpace.ControlStructur",
+              "lines": [
+                1574,
+                1578
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The `WordPress.XSS.EscapeOutput` sniff giving error messages with the closing parenthesis in them instead of the offending function's name.",
+              "lines": [
+                1579,
+                1582
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1561,
+            1582
+          ],
+          "name": "[0.8.0] - 2015-10-02",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- The default number of spaces before a closure's opening parenthesis from 1 to 0.",
+              "lines": [
+                1585,
+                1587
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1583,
+            1587
+          ],
+          "name": "[0.7.1] - 2015-08-31",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Automatic error fixing to the `WordPress.Arrays.ArrayKeySpacingRestrictions` sniff. - Functions and closures to the control structures checked by th",
+              "lines": [
+                1590,
+                1600
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- `WordPress.Functions.FunctionDeclarationArgumentSpacing` in favor of the upstream sniff `Squiz.Functions.FunctionDeclarationArgumentSpacing`.",
+              "lines": [
+                1601,
+                1604
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Reference to incorrect issue in the inline docs of the `WordPress.VIP.SessionVariableUsage` sniff. - `WordPress.XSS.EscapeOutput` sniff incorrectly",
+              "lines": [
+                1605,
+                1610
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1588,
+            1610
+          ],
+          "name": "[0.7.0] - 2015-08-30",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Support for `wp_cache_add()` and `wp_cache_delete()`, as well as custom cache functions,in the `WordPress.VIP.DirectDatabaseQuery` sniff.",
+              "lines": [
+                1613,
+                1616
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- `WordPress.Functions.FunctionRestrictions` and `WordPress.Variables.VariableRestrictions` from the `WordPress-VIP` standard, since they are just par",
+              "lines": [
+                1617,
+                1620
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1611,
+            1620
+          ],
+          "name": "[0.6.0] - 2015-06-30",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- `WordPress.CSRF.NonceVerification` sniff to flag form processing without nonce verification. - `in_array()` and `is_array()` to the list of sanitizi",
+              "lines": [
+                1623,
+                1638
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The `WordPress.VIP.ValidatedSanitizedInput` sniff to require sanitization of input even when it is being directly escaped and output. - The minimum",
+              "lines": [
+                1639,
+                1648
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The `WordPress.VIP.ValidatedSanitizedInput` sniff not reporting missing validation when reporting missing sanitization. - The `WordPress.VIP.Validat",
+              "lines": [
+                1649,
+                1652
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1621,
+            1652
+          ],
+          "name": "[0.5.0] - 2015-06-01",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Change log file. - Handling for string-interpolated input variables in the `WordPress.VIP.ValidatedSanitizedInput` sniff. - Errors for using uncache",
+              "lines": [
+                1655,
+                1675
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- `WordPress.Arrays.ArrayKeySpacingRestrictions` sniff to give errors for `NoSpacesAroundArrayKeys` and `SpacesAroundArrayKeys` instead of just warnin",
+              "lines": [
+                1676,
+                1680
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Errors for mixed key/keyless array elements in the `WordPress.Arrays.ArrayDeclaration` sniff. - BOM from `WordPress.WhiteSpace.OperatorSpacing` snif",
+              "lines": [
+                1681,
+                1686
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Incorrect errors for `else` statements using alternative syntax. - `WordPress.VIP.ValidatedSanitizedInput` sniff not always treating casting as sani",
+              "lines": [
+                1687,
+                1697
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1653,
+            1697
+          ],
+          "name": "[0.4.0] - 2015-05-01",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Use semantic version tags for releases.",
+              "lines": [
+                1702,
+                1704
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "See the comparison for full list.",
+          "lines": [
+            1698,
+            1704
+          ],
+          "name": "[0.3.0] - 2014-12-11",
+          "type": "section"
+        },
+        {
+          "docstring": "See the comparison for full list.",
+          "lines": [
+            1705,
+            1708
+          ],
+          "name": "[2013-10-06]",
+          "type": "section"
+        },
+        {
+          "docstring": "Initial tagged release.",
+          "lines": [
+            1709,
+            1778
+          ],
+          "name": "2013-06-11",
+          "type": "section"
+        }
+      ]
+    },
+    "README.md": {
+      "hash": "072de83910ec",
+      "indexed_at": "2026-01-20T04:50:17.500368+00:00",
+      "language": "markdown",
+      "lines": 261,
+      "symbols": [
+        {
+          "docstring": "This project is a collection of [PHP_CodeSniffer](https://github.com/PHPCSStandards/PHP_CodeSniffer) rules (sniffs) to validate code developed for Wor",
+          "lines": [
+            47,
+            52
+          ],
+          "name": "Introduction",
+          "type": "section"
+        },
+        {
+          "docstring": "The WordPress Coding Standards package requires: * PHP 7.2 or higher with the following extensions enabled: - [Filter](https://www.php.net/book.filter",
+          "lines": [
+            53,
+            66
+          ],
+          "name": "Minimum Requirements",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Run the following from the root of your project:",
+              "lines": [
+                75,
+                82
+              ],
+              "name": "Composer Project-based Installation",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Alternatively, you may want to install this standard globally:",
+              "lines": [
+                83,
+                90
+              ],
+              "name": "Composer Global Installation",
+              "type": "subsection"
+            },
+            {
+              "docstring": "If you installed WordPressCS using either of the above commands, you can upgrade to a newer version as follows:",
+              "lines": [
+                91,
+                101
+              ],
+              "name": "Updating your WordPressCS install to a newer version",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Once you have installed WordPressCS using either of the above commands, use it as follows:",
+              "lines": [
+                102,
+                115
+              ],
+              "name": "Using your WordPressCS install",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "As of [WordPressCS 3.0.0](https://make.wordpress.org/core/2023/08/21/wordpresscs-3-0-0-is-now-available/), installation via Composer using the below i",
+          "lines": [
+            67,
+            115
+          ],
+          "name": "Installation",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "The project encompasses a super-set of the sniffs that the WordPress community may need. If you use the `WordPress` standard you will get all the chec",
+              "lines": [
+                118,
+                129
+              ],
+              "name": "Standards subsets",
+              "type": "subsection"
+            },
+            {
+              "docstring": "If you need to further customize the selection of sniffs for your project - you can create a custom ruleset file.",
+              "lines": [
+                130,
+                137
+              ],
+              "name": "Using a custom ruleset",
+              "type": "subsection"
+            },
+            {
+              "docstring": "The WordPress Coding Standard contains a number of sniffs which are configurable. This means that you can turn parts of the sniff on or off, or change",
+              "lines": [
+                138,
+                148
+              ],
+              "name": "Customizing sniff behavior",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "The [PHPCompatibility](https://github.com/PHPCompatibility/PHPCompatibility) ruleset and its subset [PHPCompatibilityWP](https://github.com/PHPCompati",
+                  "lines": [
+                    151,
+                    171
+                  ],
+                  "name": "PHPCompatibility",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "For some additional checks around (undefined/unused) variables, the [`VariableAnalysis`](https://github.com/sirbrillig/phpcs-variable-analysis/) stand",
+                  "lines": [
+                    172,
+                    175
+                  ],
+                  "name": "VariableAnalysis",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "For those projects which deploy to the WordPress VIP platform, it is recommended to also use the [official WordPress VIP coding standards](https://git",
+                  "lines": [
+                    176,
+                    180
+                  ],
+                  "name": "VIP Coding Standards",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                149,
+                180
+              ],
+              "name": "Recommended additional rulesets",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            116,
+            180
+          ],
+          "name": "Rulesets",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Run the `phpcs` command line tool on a given file or directory, for example:",
+              "lines": [
+                183,
+                219
+              ],
+              "name": "Command line",
+              "type": "subsection"
+            },
+            {
+              "docstring": "The [wiki](https://github.com/WordPress/WordPress-Coding-Standards/wiki) contains links to various in- and external tutorials about setting up WordPre",
+              "lines": [
+                220,
+                224
+              ],
+              "name": "Using PHPCS and WordPressCS from within your IDE",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            181,
+            224
+          ],
+          "name": "How to use",
+          "type": "section"
+        },
+        {
+          "docstring": "- [Running in GitHub Actions](https://github.com/WordPress/WordPress-Coding-Standards/wiki/Running-in-GitHub-Actions) - [Running in Travis](https://gi",
+          "lines": [
+            225,
+            230
+          ],
+          "name": "Running your code through WordPressCS automatically using Continuous Integration tools",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Since version 1.2.0, WordPressCS has a special sniff category `Utils`.",
+              "lines": [
+                235,
+                250
+              ],
+              "name": "Tools shipped with WordPressCS",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "You can find information on how to deal with some of the more frequent issues in the [wiki](https://github.com/WordPress/WordPress-Coding-Standards/wi",
+          "lines": [
+            231,
+            250
+          ],
+          "name": "Fixing errors or ignoring them",
+          "type": "section"
+        },
+        {
+          "docstring": "See [CONTRIBUTING](.github/CONTRIBUTING.md), including information about [unit testing](.github/CONTRIBUTING.md#unit-testing) the standard.",
+          "lines": [
+            251,
+            254
+          ],
+          "name": "Contributing",
+          "type": "section"
+        },
+        {
+          "docstring": "If you want to sponsor the work on WordPressCS, you can do so by donating to the [PHP_CodeSniffer Open Collective](https://opencollective.com/php_code",
+          "lines": [
+            255,
+            258
+          ],
+          "name": "Funding",
+          "type": "section"
+        },
+        {
+          "docstring": "See [LICENSE](LICENSE) (MIT).",
+          "lines": [
+            259,
+            262
+          ],
+          "name": "License",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.143069+00:00",
+  "version": "1.0"
+}

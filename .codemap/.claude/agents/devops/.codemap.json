@@ -1,0 +1,50 @@
+{
+  "directory": ".claude/agents/devops",
+  "files": {
+    "ops-cicd-github.md": {
+      "hash": "fd48c83ce995",
+      "indexed_at": "2026-01-20T04:50:25.548500+00:00",
+      "language": "markdown",
+      "lines": 165,
+      "symbols": [
+        {
+          "docstring": "1. Create efficient GitHub Actions workflows 2. Implement build, test, and deployment pipelines 3. Configure job matrices for multi-environment testin",
+          "lines": [
+            123,
+            129
+          ],
+          "name": "Key responsibilities:",
+          "type": "section"
+        },
+        {
+          "docstring": "- Use workflow reusability with composite actions - Implement proper secret management - Minimize workflow execution time - Use appropriate runners (u",
+          "lines": [
+            130,
+            137
+          ],
+          "name": "Best practices:",
+          "type": "section"
+        },
+        {
+          "lines": [
+            138,
+            160
+          ],
+          "name": "Workflow patterns:",
+          "type": "section"
+        },
+        {
+          "docstring": "- Never hardcode secrets - Use GITHUB_TOKEN with minimal permissions - Implement CODEOWNERS for workflow changes - Use environment protection rules",
+          "lines": [
+            161,
+            165
+          ],
+          "name": "Security considerations:",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.180686+00:00",
+  "version": "1.0"
+}

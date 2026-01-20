@@ -1,0 +1,168 @@
+{
+  "directory": ".claude/agents/sona",
+  "files": {
+    "sona-learning-optimizer.md": {
+      "hash": "fcfad94bfffa",
+      "indexed_at": "2026-01-20T04:50:25.554753+00:00",
+      "language": "markdown",
+      "lines": 254,
+      "symbols": [
+        {
+          "docstring": "This agent uses claude-flow V3 tools exclusively: - `npx claude-flow@v3alpha hooks intelligence` - Trajectory tracking - `npx claude-flow@v3alpha neur",
+          "lines": [
+            111,
+            118
+          ],
+          "name": "V3 Integration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Learn from every task execution via trajectory tracking - Improve quality over time (+55% maximum) - No catastrophic forgetting (EWC++ via neural co",
+              "lines": [
+                121,
+                125
+              ],
+              "name": "1. Adaptive Learning",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- HNSW-indexed pattern retrieval (150x-12,500x faster) - Apply learned strategies to new tasks - Build pattern library over time",
+              "lines": [
+                126,
+                130
+              ],
+              "name": "2. Pattern Discovery",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- LoRA fine-tuning via claude-flow neural tools - 99% parameter reduction - 10-100x faster training",
+              "lines": [
+                131,
+                135
+              ],
+              "name": "3. Neural Training",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            119,
+            135
+          ],
+          "name": "Core Capabilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                138,
+                153
+              ],
+              "name": "Pattern Operations",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                154,
+                175
+              ],
+              "name": "Trajectory Tracking",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                176,
+                193
+              ],
+              "name": "Neural Operations",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            136,
+            193
+          ],
+          "name": "Commands",
+          "type": "section"
+        },
+        {
+          "docstring": "| Tool | Purpose | |------|---------| | `mcp__claude-flow__memory_search` | HNSW pattern retrieval (150x faster) | | `mcp__claude-flow__memory_usage`",
+          "lines": [
+            194,
+            203
+          ],
+          "name": "MCP Tool Integration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "1. **Initialize trajectory** via `hooks intelligence trajectory-start` 2. **Search for patterns** via `mcp__claude-flow__memory_search` 3. **Apply lea",
+              "lines": [
+                206,
+                210
+              ],
+              "name": "Before Each Task",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. **Track operations** via trajectory steps 2. **Monitor quality signals** through hook metadata 3. **Record intermediate results** for learning",
+              "lines": [
+                211,
+                215
+              ],
+              "name": "During Task Execution",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. **Calculate quality score** (0-1 scale) 2. **Record trajectory step** with outcome 3. **End trajectory** with final verdict 4. **Store pattern** vi",
+              "lines": [
+                216,
+                222
+              ],
+              "name": "After Each Task",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            204,
+            222
+          ],
+          "name": "Learning Pipeline",
+          "type": "section"
+        },
+        {
+          "docstring": "| Metric | Target | |--------|--------| | Pattern retrieval | <5ms (HNSW) | | Trajectory tracking | <1ms | | Quality assessment | <10ms | | Consolidat",
+          "lines": [
+            223,
+            231
+          ],
+          "name": "Performance Targets",
+          "type": "section"
+        },
+        {
+          "docstring": "| Iterations | Quality | Status | |-----------|---------|--------| | 1-10 | 75% | Learning | | 11-50 | 85% | Improving | | 51-100 | 92% | Optimized |",
+          "lines": [
+            232,
+            242
+          ],
+          "name": "Quality Improvement Over Time",
+          "type": "section"
+        },
+        {
+          "docstring": "1. \u2705 **Use claude-flow hooks** for trajectory tracking 2. \u2705 **Use MCP memory tools** for pattern storage 3. \u2705 **Calculate quality scores consistently*",
+          "lines": [
+            243,
+            255
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.182882+00:00",
+  "version": "1.0"
+}

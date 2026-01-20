@@ -1,0 +1,50 @@
+{
+  "directory": "vendor/psr/cache",
+  "files": {
+    "CHANGELOG.md": {
+      "hash": "a69c7961dbc9",
+      "indexed_at": "2026-01-20T04:49:41.394802+00:00",
+      "language": "markdown",
+      "lines": 16,
+      "symbols": [
+        {
+          "children": [
+            {
+              "docstring": "- Make spacing consistent in phpdoc annotations php-fig/cache#9 - chalasr - Fix grammar in phpdoc annotations php-fig/cache#10 - chalasr - Be more spe",
+              "lines": [
+                7,
+                13
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            5,
+            13
+          ],
+          "name": "1.0.1 - 2016-08-06",
+          "type": "section"
+        },
+        {
+          "docstring": "Initial stable release; reflects accepted PSR-6 specification",
+          "lines": [
+            14,
+            17
+          ],
+          "name": "1.0.0 - 2015-12-11",
+          "type": "section"
+        }
+      ]
+    },
+    "README.md": {
+      "hash": "8c67b845dd11",
+      "indexed_at": "2026-01-20T04:49:41.395020+00:00",
+      "language": "markdown",
+      "lines": 12,
+      "symbols": []
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.133360+00:00",
+  "version": "1.0"
+}

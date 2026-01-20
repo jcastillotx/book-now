@@ -1,0 +1,124 @@
+{
+  "directory": ".claude/helpers",
+  "files": {
+    "README.md": {
+      "hash": "07f45c553280",
+      "indexed_at": "2026-01-20T04:50:25.494219+00:00",
+      "language": "markdown",
+      "lines": 97,
+      "symbols": [
+        {
+          "lines": [
+            5,
+            19
+          ],
+          "name": "\ud83d\ude80 Quick Start",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **`v3.sh`** - Main command-line interface for all V3 operations",
+              "lines": [
+                22,
+                31
+              ],
+              "name": "\ud83c\udf9b\ufe0f V3 Master Tool",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **`update-v3-progress.sh`** - Update V3 development metrics",
+              "lines": [
+                32,
+                42
+              ],
+              "name": "\ud83d\udcca V3 Progress Management",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **`validate-v3-config.sh`** - Comprehensive environment validation - Checks all required directories and files - Validates JSON configuration files",
+              "lines": [
+                43,
+                50
+              ],
+              "name": "\ud83d\udd0d Configuration Validation",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **`v3-quick-status.sh`** - Compact development progress overview - Shows domain, agent, and DDD progress - Displays security and performance metrics",
+              "lines": [
+                51,
+                57
+              ],
+              "name": "\u26a1 Quick Status",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            20,
+            57
+          ],
+          "name": "Available Helpers",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Use kebab-case: `update-v3-progress.sh` - Include version prefix: `v3-*` for V3-specific helpers - Use descriptive names that indicate purpose",
+              "lines": [
+                60,
+                64
+              ],
+              "name": "File Naming",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Must be executable (`chmod +x`) - Include proper error handling (`set -e`) - Provide usage help when called without arguments - Use consistent exit",
+              "lines": [
+                65,
+                70
+              ],
+              "name": "Script Requirements",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Helpers are configured in `.claude/settings.json`:",
+              "lines": [
+                71,
+                82
+              ],
+              "name": "Configuration Integration",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            58,
+            82
+          ],
+          "name": "Helper Script Standards",
+          "type": "section"
+        },
+        {
+          "docstring": "1. **Security First**: All helpers must validate inputs 2. **Idempotent**: Scripts should be safe to run multiple times 3. **Fast Execution**: Keep he",
+          "lines": [
+            83,
+            90
+          ],
+          "name": "Development Guidelines",
+          "type": "section"
+        },
+        {
+          "docstring": "1. Create script in `.claude/helpers/` 2. Make executable: `chmod +x script-name.sh` 3. Add to settings.json helpers section 4. Test thoroughly before",
+          "lines": [
+            91,
+            97
+          ],
+          "name": "Adding New Helpers",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.156636+00:00",
+  "version": "1.0"
+}

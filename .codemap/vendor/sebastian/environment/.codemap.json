@@ -1,0 +1,505 @@
+{
+  "directory": "vendor/sebastian/environment",
+  "files": {
+    "ChangeLog.md": {
+      "hash": "055fc062588b",
+      "indexed_at": "2026-01-20T04:48:59.625048+00:00",
+      "language": "markdown",
+      "lines": 183,
+      "symbols": [
+        {
+          "children": [
+            {
+              "docstring": "* [#59](https://github.com/sebastianbergmann/environment/issues/59): Wrong usage of `stream_isatty()`, `fstat()` used without checking whether the fun",
+              "lines": [
+                7,
+                10
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            5,
+            10
+          ],
+          "name": "[5.1.5] - 2023-02-03",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#63](https://github.com/sebastianbergmann/environment/pull/63): `Runtime::getCurrentSettings()` does not correctly process INI settings",
+              "lines": [
+                13,
+                16
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            11,
+            16
+          ],
+          "name": "[5.1.4] - 2022-04-03",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Changed PHP version constraint in `composer.json` from `^7.3 || ^8.0` to `>=7.3`",
+              "lines": [
+                19,
+                22
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            17,
+            22
+          ],
+          "name": "[5.1.3] - 2020-09-28",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* This component is now supported on PHP 8",
+              "lines": [
+                25,
+                28
+              ],
+              "name": "Added",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            23,
+            28
+          ],
+          "name": "[5.1.2] - 2020-06-26",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Tests etc. are now ignored for archive exports",
+              "lines": [
+                31,
+                34
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            29,
+            34
+          ],
+          "name": "[5.1.1] - 2020-06-15",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* `Runtime::performsJustInTimeCompilation()` returns `true` if PHP 8's JIT is active, `false` otherwise",
+              "lines": [
+                37,
+                40
+              ],
+              "name": "Added",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            35,
+            40
+          ],
+          "name": "[5.1.0] - 2020-04-14",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#55](https://github.com/sebastianbergmann/environment/issues/55): `stty` command is executed even if no tty is available",
+              "lines": [
+                43,
+                46
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            41,
+            46
+          ],
+          "name": "[5.0.2] - 2020-03-31",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* `Runtime::getNameWithVersionAndCodeCoverageDriver()` now prioritizes PCOV over Xdebug when both extensions are loaded (just like php-code-coverage d",
+              "lines": [
+                49,
+                52
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            47,
+            52
+          ],
+          "name": "[5.0.1] - 2020-02-19",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* This component is no longer supported on PHP 7.1 and PHP 7.2",
+              "lines": [
+                55,
+                58
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            53,
+            58
+          ],
+          "name": "[5.0.0] - 2020-02-07",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#50](https://github.com/sebastianbergmann/environment/pull/50): Windows improvements to console capabilities",
+              "lines": [
+                61,
+                64
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* [#49](https://github.com/sebastianbergmann/environment/issues/49): Detection how OpCache handles docblocks does not work correctly when PHPDBG is us",
+              "lines": [
+                65,
+                68
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            59,
+            68
+          ],
+          "name": "[4.2.3] - 2019-11-20",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#44](https://github.com/sebastianbergmann/environment/pull/44): `TypeError` in `Console::getNumberOfColumnsInteractive()`",
+              "lines": [
+                71,
+                74
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            69,
+            74
+          ],
+          "name": "[4.2.2] - 2019-05-05",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Fixed an issue in `Runtime::getCurrentSettings()`",
+              "lines": [
+                77,
+                80
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            75,
+            80
+          ],
+          "name": "[4.2.1] - 2019-04-25",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#36](https://github.com/sebastianbergmann/environment/pull/36): `Runtime::getCurrentSettings()`",
+              "lines": [
+                83,
+                86
+              ],
+              "name": "Added",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            81,
+            86
+          ],
+          "name": "[4.2.0] - 2019-04-25",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Implemented `Runtime::getNameWithVersionAndCodeCoverageDriver()` method * [#34](https://github.com/sebastianbergmann/environment/pull/34): Support f",
+              "lines": [
+                89,
+                93
+              ],
+              "name": "Added",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            87,
+            93
+          ],
+          "name": "[4.1.0] - 2019-02-01",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#33](https://github.com/sebastianbergmann/environment/issues/33): `Runtime::discardsComments()` returns true too eagerly",
+              "lines": [
+                96,
+                99
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* Removed support for Zend Optimizer+ in `Runtime::discardsComments()`",
+              "lines": [
+                100,
+                103
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            94,
+            103
+          ],
+          "name": "[4.0.2] - 2019-01-28",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#31](https://github.com/sebastianbergmann/environment/issues/31): Regressions in `Console` class",
+              "lines": [
+                106,
+                109
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            104,
+            109
+          ],
+          "name": "[4.0.1] - 2018-11-25",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#25](https://github.com/sebastianbergmann/environment/pull/25): `Console::hasColorSupport()` does not work on Windows",
+              "lines": [
+                112,
+                115
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* This component is no longer supported on PHP 7.0",
+              "lines": [
+                116,
+                119
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            110,
+            119
+          ],
+          "name": "[4.0.0] - 2018-10-23 [YANKED]",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#21](https://github.com/sebastianbergmann/environment/issues/21): Equivalent of `PHP_OS_FAMILY` (for PHP < 7.2)",
+              "lines": [
+                122,
+                125
+              ],
+              "name": "Added",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            120,
+            125
+          ],
+          "name": "[3.1.0] - 2017-07-01",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#20](https://github.com/sebastianbergmann/environment/pull/20): PHP 7 mode of HHVM not forced",
+              "lines": [
+                128,
+                131
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            126,
+            131
+          ],
+          "name": "[3.0.4] - 2017-06-20",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#18](https://github.com/sebastianbergmann/environment/issues/18): `Uncaught TypeError: preg_match() expects parameter 2 to be string, null given`",
+              "lines": [
+                134,
+                137
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            132,
+            137
+          ],
+          "name": "[3.0.3] - 2017-05-18",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#17](https://github.com/sebastianbergmann/environment/issues/17): `Uncaught TypeError: trim() expects parameter 1 to be string, boolean given`",
+              "lines": [
+                140,
+                143
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            138,
+            143
+          ],
+          "name": "[3.0.2] - 2017-04-21",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Fixed inverted logic in `Runtime::discardsComments()`",
+              "lines": [
+                146,
+                149
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            144,
+            149
+          ],
+          "name": "[3.0.1] - 2017-04-21",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Implemented `Runtime::discardsComments()` for querying whether the PHP runtime discards annotations",
+              "lines": [
+                152,
+                155
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* This component is no longer supported on PHP 5.6",
+              "lines": [
+                156,
+                184
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            150,
+            184
+          ],
+          "name": "[3.0.0] - 2017-04-21",
+          "type": "section"
+        }
+      ]
+    },
+    "README.md": {
+      "hash": "35828e1470d4",
+      "indexed_at": "2026-01-20T04:49:00.754917+00:00",
+      "language": "markdown",
+      "lines": 21,
+      "symbols": [
+        {
+          "docstring": "You can add this library as a local, per-project dependency to your project using [Composer](https://getcomposer.org/):",
+          "lines": [
+            9,
+            22
+          ],
+          "name": "Installation",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.127773+00:00",
+  "version": "1.0"
+}

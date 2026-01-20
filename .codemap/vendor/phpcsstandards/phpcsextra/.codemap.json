@@ -1,0 +1,1747 @@
+{
+  "directory": "vendor/phpcsstandards/phpcsextra",
+  "files": {
+    "CHANGELOG.md": {
+      "hash": "336718fdf85a",
+      "indexed_at": "2026-01-20T04:50:08.041401+00:00",
+      "language": "markdown",
+      "lines": 781,
+      "symbols": [
+        {
+          "docstring": "_Nothing yet._",
+          "lines": [
+            13,
+            17
+          ],
+          "name": "[Unreleased]",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "* :wrench: :bar_chart: :books: New `Universal.Attributes.BracketSpacing` sniff to enforce a fixed number of spaces on the inside of attribute block br",
+                  "lines": [
+                    22,
+                    36
+                  ],
+                  "name": "Universal",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                20,
+                36
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* `Universal.WhiteSpace.CommaSpacing`: improved handling of commas in PHP attributes. [#391], [#412] - The spacing after a trailing comma (after the l",
+                  "lines": [
+                    39,
+                    46
+                  ],
+                  "name": "Universal",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* Composer: The minimum `PHP_CodeSniffer` requirement has been updated to `^3.13.5 || ^4.0.1` (was `^3.13.4 || ^4.0.0`). [#408] * Composer: The minimu",
+                  "lines": [
+                    47,
+                    67
+                  ],
+                  "name": "Other",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                37,
+                67
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            18,
+            67
+          ],
+          "name": "[1.5.0] - 2025-11-12",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "* Various housekeeping.",
+                  "lines": [
+                    72,
+                    75
+                  ],
+                  "name": "Other",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                70,
+                75
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* `Universal.OOStructures.AlphabeticExtendsImplements` incorrectly displayed the \"expected\" and \"found\" names. [#378] * `Universal.WhiteSpace.CommaSpa",
+                  "lines": [
+                    78,
+                    87
+                  ],
+                  "name": "Universal",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                76,
+                87
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            68,
+            87
+          ],
+          "name": "[1.4.2] - 2025-10-28",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "* Various housekeeping.",
+                  "lines": [
+                    92,
+                    96
+                  ],
+                  "name": "Other",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                90,
+                96
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* `Universal.PHP.NoFQNTrueFalseNull`: fix breakage due to upstream change in tokenization. [#375]",
+                  "lines": [
+                    99,
+                    105
+                  ],
+                  "name": "Universal",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                97,
+                105
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            88,
+            105
+          ],
+          "name": "[1.4.1] - 2025-09-05",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* All sniffs: compatibility with the new PHP_CodeSniffer `4.x` branch in anticipation of the PHP_CodeSniffer 4.0 release. [#367] PHPCSExtra should now",
+              "lines": [
+                108,
+                112
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* Composer: The minimum `PHP_CodeSniffer` requirement has been updated to `^3.13.0` (was `^3.12.1`). [#361] * Composer: The minimum `PHPCSUtils` requi",
+                  "lines": [
+                    115,
+                    120
+                  ],
+                  "name": "Other",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                113,
+                120
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* `Universal.WhiteSpace.PrecisionAlignment`: support for scanning JS/CSS files via this sniff is now deprecated. [#367]",
+                  "lines": [
+                    123,
+                    126
+                  ],
+                  "name": "Universal",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                121,
+                126
+              ],
+              "name": "Deprecated",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* `Universal.Arrays.DuplicateArrayKey`: false positives for numeric strings with leading/trailing underscores. Fixed via the update to PHPCSUtils 1.1.",
+                  "lines": [
+                    129,
+                    140
+                  ],
+                  "name": "Universal",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                127,
+                140
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            106,
+            140
+          ],
+          "name": "[1.4.0] - 2025-06-14",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "* Composer: The minimum `PHPCSUtils` requirement has been updated to `^1.0.12` (was `^1.0.9`). [#346] * Various housekeeping.",
+                  "lines": [
+                    145,
+                    149
+                  ],
+                  "name": "Other",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                143,
+                149
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* `Universal.UseStatements.DisallowMixedGroupUse`: the fixer could get confused when the \"base\" name for the group name contained a leading backslash,",
+                  "lines": [
+                    152,
+                    159
+                  ],
+                  "name": "Universal",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                150,
+                159
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            141,
+            159
+          ],
+          "name": "[1.3.1] - 2025-06-08",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "* :wrench: :books: New `Universal.PHP.NoFQNTrueFalseNull` sniff to forbid using `true`, `false` and `null` as fully qualified constants. Thanks [@rodr",
+                  "lines": [
+                    164,
+                    168
+                  ],
+                  "name": "Universal",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                162,
+                168
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* The `Universal.WhiteSpace.DisallowInlineTabs` sniff will now also check for inline tabs in heredoc/nowdoc openers and between the `yield` and `from`",
+                  "lines": [
+                    171,
+                    174
+                  ],
+                  "name": "Universal",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* Composer: The minimum `PHP_CodeSniffer` requirement has been updated to `^3.12.1` (was `^3.8.0`). [#330] * Developer happiness: prevent creating a `",
+                  "lines": [
+                    175,
+                    187
+                  ],
+                  "name": "Other",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                169,
+                187
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            160,
+            187
+          ],
+          "name": "[1.3.0] - 2025-04-21",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "* Composer: The minimum `PHP_CodeSniffer` requirement has been updated to `^3.8.0` (was `^3.7.2`). [#298] * Composer: The minimum `PHPCSUtils` require",
+                  "lines": [
+                    192,
+                    201
+                  ],
+                  "name": "Other",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                190,
+                201
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            188,
+            201
+          ],
+          "name": "[1.2.1] - 2023-12-08",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "* :wrench: :books: New `Universal.CodeAnalysis.NoDoubleNegative` sniff to detect double negatives (!!) and advise to use a boolean cast instead. Thank",
+                  "lines": [
+                    206,
+                    211
+                  ],
+                  "name": "Universal",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                204,
+                211
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* `NormalizedArrays.Arrays.CommaAfterLast`: the sniff now has two extra error codes to distinguish between multi-line arrays with the last array item",
+                  "lines": [
+                    214,
+                    220
+                  ],
+                  "name": "NormalizedArrays",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* Various housekeeping.",
+                  "lines": [
+                    221,
+                    231
+                  ],
+                  "name": "Other",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                212,
+                231
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            202,
+            231
+          ],
+          "name": "[1.2.0] - 2023-12-02",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "* Various housekeeping.",
+                  "lines": [
+                    236,
+                    239
+                  ],
+                  "name": "Other",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                234,
+                239
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* `Universal.CodeAnalysis.ConstructorDestructorReturn`: the sniff will now correctly ignore methods mirroring the class name (PHP-4 style constructors",
+                  "lines": [
+                    242,
+                    248
+                  ],
+                  "name": "Universal",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                240,
+                248
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            232,
+            248
+          ],
+          "name": "[1.1.2] - 2023-09-21",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "* `Modernize.FunctionCalls.Dirname`: the sniff will now respect a potentially set [`php_version` configuration option][php_version-config] and only re",
+                  "lines": [
+                    253,
+                    257
+                  ],
+                  "name": "Modernize",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* Various documentation improvements. Props in part to [@szepeviktor]. * Improved defensive coding in select places. * Various housekeeping.",
+                  "lines": [
+                    258,
+                    266
+                  ],
+                  "name": "Other",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                251,
+                266
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            249,
+            266
+          ],
+          "name": "[1.1.1] - 2023-08-26",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "* :wrench: :books: New `Universal.CodeAnalysis.NoEchoSprintf` sniff to detect use of the inefficient `echo [v]sprintf(...);` combi and recommends usin",
+                  "lines": [
+                    271,
+                    288
+                  ],
+                  "name": "Universal",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                269,
+                288
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* Minor performance improvements for the `Universal.Arrays.DuplicateArrayKey` and the `Universal.CodeAnalysis.ConstructorDestructorReturn` sniffs. [#2",
+                  "lines": [
+                    291,
+                    294
+                  ],
+                  "name": "Universal",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* Composer: The minimum `PHPCSUtils` requirement has been updated to `^1.0.8` (was `^1.0.6`). [#249], [#254] * Various housekeeping.",
+                  "lines": [
+                    295,
+                    313
+                  ],
+                  "name": "Other",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                289,
+                313
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            267,
+            313
+          ],
+          "name": "[1.1.0] - 2023-07-19",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "* Composer: The minimum `PHPCSUtils` requirement has been updated to `^1.0.6` (was `^1.0.0`). [#237] * Various housekeeping.",
+                  "lines": [
+                    318,
+                    322
+                  ],
+                  "name": "Other",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                316,
+                322
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* `Universal.Constants.LowercaseClassResolutionKeyword`: prevent false positives for function calls to methods called `class`. [#226]",
+                  "lines": [
+                    325,
+                    332
+                  ],
+                  "name": "Universal",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                323,
+                332
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            314,
+            332
+          ],
+          "name": "[1.0.4] - 2023-06-18",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "* `Universal.WhiteSpace.DisallowInlineTabs`: significant performance improvement. [#216], [#217]",
+                  "lines": [
+                    337,
+                    340
+                  ],
+                  "name": "Universal",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* Various housekeeping.",
+                  "lines": [
+                    341,
+                    344
+                  ],
+                  "name": "Other",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                335,
+                344
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* `Modernize.FunctionCalls.Dirname`: prevent false positives for attribute classes called `dirname`. [#211], [#213]",
+                  "lines": [
+                    347,
+                    356
+                  ],
+                  "name": "Modernize",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                345,
+                356
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            333,
+            356
+          ],
+          "name": "[1.0.3] - 2023-03-28",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "* `Universal.CodeAnalysis.ConstructorDestructorReturn`: the sniff will now respect a potentially set [`php_version` configuration option][php_version-",
+                  "lines": [
+                    361,
+                    368
+                  ],
+                  "name": "Universal",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                359,
+                368
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            357,
+            368
+          ],
+          "name": "[1.0.2] - 2023-01-10",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "* `Universal.CodeAnalysis.ConstructorDestructorReturn`: fixed false positive for return statements in nested functions/closures declared within constr",
+                  "lines": [
+                    373,
+                    380
+                  ],
+                  "name": "Universal",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                371,
+                380
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            369,
+            380
+          ],
+          "name": "[1.0.1] - 2023-01-05",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "* Updated various sniffs to take advantage of PHPCSUtils 1.0.0(-rc1). [#193], [#194], [#195] * Minor documentation improvements. * Various housekeepin",
+                  "lines": [
+                    393,
+                    398
+                  ],
+                  "name": "Other",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                391,
+                398
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* `Modernize.FunctionCalls.Dirname`: the sniff will now correctly recognize magic constants in a case-insensitive manner. [#187]",
+                  "lines": [
+                    401,
+                    412
+                  ],
+                  "name": "Modernize",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                399,
+                412
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "docstring": ":warning: Important: this package now requires [PHPCSUtils 1.0.0]. Please make sure you use `--with-[all-]dependencies` when running `composer update`",
+          "lines": [
+            381,
+            412
+          ],
+          "name": "[1.0.0] - 2023-01-04",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "* This is a new standard with one sniff to start with. * :wrench: :books: New `Modernize.FunctionCalls.Dirname` sniff to detect and auto-fix two typic",
+                  "lines": [
+                    419,
+                    423
+                  ],
+                  "name": "Modernize",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* :wrench: :bar_chart: :books: New `Universal.Classes.DisallowAnonClassParentheses` sniff to disallow the use of parentheses when declaring an anonymo",
+                  "lines": [
+                    424,
+                    463
+                  ],
+                  "name": "Universal",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                417,
+                463
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* `Universal.Arrays.DisallowShortArraySyntax`: the sniff will now record metrics about long vs short array usage. [#154] * `Universal.Arrays.Duplicate",
+                  "lines": [
+                    466,
+                    479
+                  ],
+                  "name": "Universal",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* Updated the sniffs for compatibility with PHPCSUtils 1.0.0-alpha4. [#134] * Updated the sniffs to correctly handle PHP 8.0/8.1/8.2 features whenever",
+                  "lines": [
+                    480,
+                    490
+                  ],
+                  "name": "Other",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                464,
+                490
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* `NormalizedArrays.Arrays.ArrayBraceSpacing`: the sniff now allows for trailing comments after the array opener in multi-line arrays. [#118] * `Norma",
+                  "lines": [
+                    495,
+                    500
+                  ],
+                  "name": "NormalizedArrays",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* `Universal.Arrays.DisallowShortArraySyntax`: nested short arrays in short lists will now be detected and fixed correctly. [#153] * `Universal.Contro",
+                  "lines": [
+                    501,
+                    582
+                  ],
+                  "name": "Universal",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "The upgrade to PHPCSUtils 1.0.0-alpha4 took care of a number of bugs, which potentially could have affected sniffs in this package.",
+              "lines": [
+                491,
+                582
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "docstring": ":warning: Important: this package now requires [PHPCSUtils 1.0.0-alpha4]. Please make sure you use `--with-[all-]dependencies` when running `composer",
+          "lines": [
+            413,
+            582
+          ],
+          "name": "[1.0.0-RC1] - 2022-12-07",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "* :wrench: :books: New `Universal.Arrays.DisallowShortArraySyntax` sniff to disallow short array syntax. [#40] In contrast to the PHPCS native `Generi",
+                  "lines": [
+                    587,
+                    621
+                  ],
+                  "name": "Universal",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                585,
+                621
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* The `master` branch has been renamed to `stable`. * Composer: The version requirements for the [Composer PHPCS plugin] have been widened to allow fo",
+                  "lines": [
+                    624,
+                    645
+                  ],
+                  "name": "Other",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                622,
+                645
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            583,
+            645
+          ],
+          "name": "[1.0.0-alpha3] - 2020-06-29",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "* :wrench: :bar_chart: :books: New `Universal.ControlStructures.DisallowAlternativeSyntax` sniff to disallow using the alternative syntax for control",
+                  "lines": [
+                    650,
+                    656
+                  ],
+                  "name": "Universal",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* Readme: installation instructions and sniff list. [#26]",
+                  "lines": [
+                    657,
+                    660
+                  ],
+                  "name": "Other",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                648,
+                660
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* `Universal.Arrays.DuplicateArrayKey`: wording of the error message. [#18] * `Universal.UseStatements.DisallowUseClass/Function/Const`: the error cod",
+                  "lines": [
+                    663,
+                    673
+                  ],
+                  "name": "Universal",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* Improved formatting of the CLI documentation which can be viewed using `--generator=text`. [#17] * Various housekeeping.",
+                  "lines": [
+                    674,
+                    678
+                  ],
+                  "name": "Other",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                661,
+                678
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* `Universal.Arrays.DuplicateArrayKey`: improved handling of parse errors. [#34] * `Universal.ControlStructures.IfElseDeclaration`: the fixer will now",
+                  "lines": [
+                    681,
+                    697
+                  ],
+                  "name": "Universal",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                679,
+                697
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            646,
+            697
+          ],
+          "name": "[1.0.0-alpha2] - 2020-02-18",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* :wrench: :bar_chart: :books: `NormalizedArrays.Arrays.ArrayBraceSpacing`: enforce consistent spacing for the open/close braces of array declarations",
+              "lines": [
+                709,
+                730
+              ],
+              "name": "NormalizedArrays",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* :books: `Universal.Arrays.DuplicateArrayKey`: detects duplicate array keys in array declarations. * :books: `Universal.Arrays.MixedArrayKeyTypes`: b",
+              "lines": [
+                731,
+                782
+              ],
+              "name": "Universal",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "Initial alpha release containing: * A `NormalizedArrays` standard which will contain a full set of sniffs to check the formatting of array declaration",
+          "lines": [
+            698,
+            782
+          ],
+          "name": "1.0.0-alpha1 - 2020-01-23",
+          "type": "section"
+        }
+      ]
+    },
+    "README.md": {
+      "hash": "cef1a9675d62",
+      "indexed_at": "2026-01-20T04:50:09.115270+00:00",
+      "language": "markdown",
+      "lines": 614,
+      "symbols": [
+        {
+          "docstring": "PHPCSExtra is a collection of sniffs and standards for use with [PHP_CodeSniffer][phpcs-gh].",
+          "lines": [
+            38,
+            42
+          ],
+          "name": "Introduction",
+          "type": "section"
+        },
+        {
+          "docstring": "* PHP 5.4 or higher. * [PHP_CodeSniffer][phpcs-gh] version **3.13.5**/**4.0.1** or higher. * [PHPCSUtils][phpcsutils-gh] version **1.2.0** or higher.",
+          "lines": [
+            43,
+            49
+          ],
+          "name": "Minimum Requirements",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Run the following from the root of your project:",
+              "lines": [
+                56,
+                63
+              ],
+              "name": "Composer Project-based Installation",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Alternatively, you may want to install this standard globally:",
+              "lines": [
+                64,
+                71
+              ],
+              "name": "Composer Global Installation",
+              "type": "subsection"
+            },
+            {
+              "docstring": "If you installed PHPCSExtra using either of the above commands, you can update to a newer version as follows:",
+              "lines": [
+                72,
+                91
+              ],
+              "name": "Updating to a newer version",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "Installing via Composer is highly recommended.",
+          "lines": [
+            50,
+            91
+          ],
+          "name": "Installation",
+          "type": "section"
+        },
+        {
+          "docstring": "Once this project is installed, you will see three new rulesets in the list of installed standards when you run `vendor/bin/phpcs -i`: `Modernize`, `N",
+          "lines": [
+            92,
+            102
+          ],
+          "name": "Features",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "This sniff will detect and auto-fix two typical code modernizations which can be made related to the `dirname()` function: 1. Since PHP 5.3, calls to",
+                  "lines": [
+                    116,
+                    127
+                  ],
+                  "name": "`Modernize.FunctionCalls.Dirname` :wrench: :books:",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                114,
+                127
+              ],
+              "name": "Modernize",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "Enforce consistent spacing for the open/close braces of array declarations.",
+                  "lines": [
+                    130,
+                    145
+                  ],
+                  "name": "`NormalizedArrays.Arrays.ArrayBraceSpacing` :wrench: :bar_chart: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Enforce/forbid a comma after the last item in an array declaration.",
+                  "lines": [
+                    146,
+                    160
+                  ],
+                  "name": "`NormalizedArrays.Arrays.CommaAfterLast` :wrench: :bar_chart: :books:",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                128,
+                160
+              ],
+              "name": "NormalizedArrays",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "Disallow short array syntax.",
+                  "lines": [
+                    163,
+                    168
+                  ],
+                  "name": "`Universal.Arrays.DisallowShortArraySyntax` :wrench: :bar_chart: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Detects duplicate array keys in array declarations.",
+                  "lines": [
+                    169,
+                    178
+                  ],
+                  "name": "`Universal.Arrays.DuplicateArrayKey` :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Best practice sniff: don't use a mix of integer and string keys for array items.",
+                  "lines": [
+                    179,
+                    182
+                  ],
+                  "name": "`Universal.Arrays.MixedArrayKeyTypes` :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Best practice sniff: don't use a mix of keyed and unkeyed array items.",
+                  "lines": [
+                    183,
+                    186
+                  ],
+                  "name": "`Universal.Arrays.MixedKeyedUnkeyedArray` :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Standardize the amount of spaces on the inside of attribute block brackets.",
+                  "lines": [
+                    187,
+                    197
+                  ],
+                  "name": "`Universal.Attributes.BracketSpacing` :wrench: :bar_chart: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Disallow the use of parentheses when instantiating an attribute without passing parameters.",
+                  "lines": [
+                    198,
+                    201
+                  ],
+                  "name": "`Universal.Attributes.DisallowAttributeParentheses` :wrench: :bar_chart: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Require the use of parentheses when instantiating an attribute, whether parameters are passed or not.",
+                  "lines": [
+                    202,
+                    205
+                  ],
+                  "name": "`Universal.Attributes.RequireAttributeParentheses` :wrench: :bar_chart: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Require a trailing comma for multi-line, multi-attribute attribute blocks and forbid trailing commas in single-line attribute blocks and in multi-line",
+                  "lines": [
+                    206,
+                    209
+                  ],
+                  "name": "`Universal.Attributes.TrailingComma` :wrench: :bar_chart: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Disallow the use of parentheses when declaring an anonymous class without passing parameters.",
+                  "lines": [
+                    210,
+                    213
+                  ],
+                  "name": "`Universal.Classes.DisallowAnonClassParentheses` :wrench: :bar_chart: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Require the use of parentheses when declaring an anonymous class, whether parameters are passed or not.",
+                  "lines": [
+                    214,
+                    217
+                  ],
+                  "name": "`Universal.Classes.RequireAnonClassParentheses` :wrench: :bar_chart: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Disallow classes being declared `final`.",
+                  "lines": [
+                    218,
+                    221
+                  ],
+                  "name": "`Universal.Classes.DisallowFinalClass` :wrench: :bar_chart: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Require all non-`abstract` classes to be declared `final`.",
+                  "lines": [
+                    222,
+                    228
+                  ],
+                  "name": "`Universal.Classes.RequireFinalClass` :wrench: :bar_chart: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Require a consistent modifier keyword order for class declarations.",
+                  "lines": [
+                    229,
+                    235
+                  ],
+                  "name": "`Universal.Classes.ModifierKeywordOrder` :wrench: :bar_chart: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* Disallows return type declarations on constructor/destructor methods - error code: `ReturnTypeFound`, auto-fixable. * Discourages constructor/destru",
+                  "lines": [
+                    236,
+                    243
+                  ],
+                  "name": "`Universal.CodeAnalysis.ConstructorDestructorReturn` :wrench: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Detects `foreach` control structures which use the same variable for both the key as well as the value assignment as this will lead to unexpected - an",
+                  "lines": [
+                    244,
+                    249
+                  ],
+                  "name": "`Universal.CodeAnalysis.ForeachUniqueAssignment` :wrench: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Detects double negation `!!` in code, which is effectively the same as a boolean cast, but with a much higher cognitive load. Also detects triple nega",
+                  "lines": [
+                    250,
+                    256
+                  ],
+                  "name": "`Universal.CodeAnalysis.NoDoubleNegative` :wrench: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Detects use of the inefficient `echo [v]sprintf(...);` combi. Use `[v]printf()` instead.",
+                  "lines": [
+                    257,
+                    260
+                  ],
+                  "name": "`Universal.CodeAnalysis.NoEchoSprintf` :wrench: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Detects using `static` instead of `self` in OO constructs which are `final`.",
+                  "lines": [
+                    261,
+                    267
+                  ],
+                  "name": "`Universal.CodeAnalysis.StaticInFinalClass` :wrench: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Enforce that the `class` keyword when used for class name resolution, i.e. `::class`, is in lowercase.",
+                  "lines": [
+                    268,
+                    271
+                  ],
+                  "name": "`Universal.Constants.LowercaseClassResolutionKeyword` :wrench: :bar_chart: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Require a consistent modifier keyword order for OO constant declarations.",
+                  "lines": [
+                    272,
+                    278
+                  ],
+                  "name": "`Universal.Constants.ModifierKeywordOrder` :wrench: :bar_chart: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Enforce uppercase when using PHP native magic constants, like `__FILE__` et al.",
+                  "lines": [
+                    279,
+                    282
+                  ],
+                  "name": "`Universal.Constants.UppercaseMagicConstants` :wrench: :bar_chart: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Disallow using the alternative syntax for control structures.",
+                  "lines": [
+                    283,
+                    291
+                  ],
+                  "name": "`Universal.ControlStructures.DisallowAlternativeSyntax` :wrench: :bar_chart: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Disallow `if` statements as the only statement in an `else` block.",
+                  "lines": [
+                    292,
+                    298
+                  ],
+                  "name": "`Universal.ControlStructures.DisallowLonelyIf` :wrench: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Verify that else(if) statements with braces are on a new line.",
+                  "lines": [
+                    299,
+                    302
+                  ],
+                  "name": "`Universal.ControlStructures.IfElseDeclaration` :wrench: :bar_chart: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Enforce for a file to either declare (global/namespaced) functions or declare OO structures, but not both.",
+                  "lines": [
+                    303,
+                    312
+                  ],
+                  "name": "`Universal.Files.SeparateFunctionsFromOO` :bar_chart: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Detects \"long\" closures and recommends using a named function instead.",
+                  "lines": [
+                    313,
+                    326
+                  ],
+                  "name": "`Universal.FunctionDeclarations.NoLongClosures` :bar_chart: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Enforce non-private, non-abstract methods in traits to be declared as `final`.",
+                  "lines": [
+                    327,
+                    332
+                  ],
+                  "name": "`Universal.FunctionDeclarations.RequireFinalMethodsInTraits` :wrench: :bar_chart: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Disallow the use of long `list`s.",
+                  "lines": [
+                    333,
+                    338
+                  ],
+                  "name": "`Universal.Lists.DisallowLongListSyntax` :wrench: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Disallow the use of short lists.",
+                  "lines": [
+                    339,
+                    342
+                  ],
+                  "name": "`Universal.Lists.DisallowShortListSyntax` :wrench: :bar_chart: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Disallow namespace declarations without a namespace name.",
+                  "lines": [
+                    343,
+                    348
+                  ],
+                  "name": "`Universal.Namespaces.DisallowDeclarationWithoutName` :bar_chart: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Disallow the use of the alternative namespace declaration syntax using curly braces.",
+                  "lines": [
+                    349,
+                    352
+                  ],
+                  "name": "`Universal.Namespaces.DisallowCurlyBraceSyntax` :bar_chart: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Enforce the use of the alternative namespace syntax using curly braces.",
+                  "lines": [
+                    353,
+                    356
+                  ],
+                  "name": "`Universal.Namespaces.EnforceCurlyBraceSyntax` :bar_chart: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Disallow the use of multiple namespaces within a file.",
+                  "lines": [
+                    357,
+                    360
+                  ],
+                  "name": "`Universal.Namespaces.OneDeclarationPerFile` :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Disallow function parameters using reserved keywords as names, as this can quickly become confusing when people use them in function calls using named",
+                  "lines": [
+                    361,
+                    367
+                  ],
+                  "name": "`Universal.NamingConventions.NoReservedKeywordParameterNames` :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Enforce that the names used in a class/enum \"implements\" statement or an interface \"extends\" statement are listed in alphabetic order.",
+                  "lines": [
+                    368,
+                    387
+                  ],
+                  "name": "`Universal.OOStructures.AlphabeticExtendsImplements` :wrench: :bar_chart: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Enforce that the concatenation operator for multi-line concatenations is in a preferred position, either always at the start of the next line or alway",
+                  "lines": [
+                    388,
+                    395
+                  ],
+                  "name": "`Universal.Operators.ConcatPosition` :wrench: :bar_chart: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Enforce the use of the boolean `&&` and `||` operators instead of the logical `and`/`or` operators.",
+                  "lines": [
+                    396,
+                    401
+                  ],
+                  "name": "`Universal.Operators.DisallowLogicalAndOr` :bar_chart: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Disallow the use of short ternaries `?:`.",
+                  "lines": [
+                    402,
+                    407
+                  ],
+                  "name": "`Universal.Operators.DisallowShortTernary` :bar_chart: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* Disallow the use of post-in/decrements in stand-alone statements - error codes: `PostDecrementFound` and `PostIncrementFound`. Using pre-in/decremen",
+                  "lines": [
+                    408,
+                    413
+                  ],
+                  "name": "`Universal.Operators.DisallowStandalonePostIncrementDecrement` :wrench: :bar_chart: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Enforce the use of strict comparisons.",
+                  "lines": [
+                    414,
+                    420
+                  ],
+                  "name": "`Universal.Operators.StrictComparisons` :wrench: :bar_chart: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Enforce spacing rules around the union, intersection and DNF type operators. * No space on either side of a union or intersection type operator. * No",
+                  "lines": [
+                    421,
+                    430
+                  ],
+                  "name": "`Universal.Operators.TypeSeparatorSpacing` :wrench: :bar_chart: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Disallow the use of parentheses when calling `exit` or `die` without passing parameters.",
+                  "lines": [
+                    431,
+                    434
+                  ],
+                  "name": "`Universal.PHP.DisallowExitDieParentheses` :wrench: :bar_chart: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Require the use of parentheses when calling `exit` or `die`, whether parameters are passed or not.",
+                  "lines": [
+                    435,
+                    438
+                  ],
+                  "name": "`Universal.PHP.RequireExitDieParentheses` :wrench: :bar_chart: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Enforces that the \"PHP\" in a PHP open tag is lowercase.",
+                  "lines": [
+                    439,
+                    442
+                  ],
+                  "name": "`Universal.PHP.LowercasePHPTag` :wrench: :bar_chart: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Forbids using `true`, `false` and `null` as fully qualified constants.",
+                  "lines": [
+                    443,
+                    446
+                  ],
+                  "name": "`Universal.PHP.NoFQNTrueFalseNull` :wrench: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Disallow short open echo tags `<?=` containing more than one PHP statement.",
+                  "lines": [
+                    447,
+                    450
+                  ],
+                  "name": "`Universal.PHP.OneStatementInShortEchoTag` :wrench: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Disallow group use statements which import a combination of namespace/OO construct, functions and/or constants in one statement.",
+                  "lines": [
+                    451,
+                    457
+                  ],
+                  "name": "`Universal.UseStatements.DisallowMixedGroupUse` :wrench: :bar_chart: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Forbid using import `use` statements for classes/traits/interfaces/enums.",
+                  "lines": [
+                    458,
+                    465
+                  ],
+                  "name": "`Universal.UseStatements.DisallowUseClass` :bar_chart: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Forbid using import `use` statements for constants.",
+                  "lines": [
+                    466,
+                    471
+                  ],
+                  "name": "`Universal.UseStatements.DisallowUseConst` :bar_chart: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Forbid using import `use` statements for functions.",
+                  "lines": [
+                    472,
+                    477
+                  ],
+                  "name": "`Universal.UseStatements.DisallowUseFunction` :bar_chart: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Enforce the use of a single space after the `use`, `function`, `const` keywords and both before and after the `as` keyword in import `use` statements.",
+                  "lines": [
+                    478,
+                    485
+                  ],
+                  "name": "`Universal.UseStatements.KeywordSpacing` :wrench: :bar_chart: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Enforce that `function` and `const` keywords when used in an import `use` statement are always lowercase.",
+                  "lines": [
+                    486,
+                    491
+                  ],
+                  "name": "`Universal.UseStatements.LowercaseFunctionConst` :wrench: :bar_chart: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Verify that a name being imported in an import `use` statement does not start with a leading backslash.",
+                  "lines": [
+                    492,
+                    499
+                  ],
+                  "name": "`Universal.UseStatements.NoLeadingBackslash` :wrench: :bar_chart: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Detects useless aliases in import use statements.",
+                  "lines": [
+                    500,
+                    506
+                  ],
+                  "name": "`Universal.UseStatements.NoUselessAliases` :wrench: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Standardize the amount of spacing between the `class` keyword and the open parenthesis (if any) for anonymous class declarations.",
+                  "lines": [
+                    507,
+                    513
+                  ],
+                  "name": "`Universal.WhiteSpace.AnonClassKeywordSpacing` :wrench: :bar_chart: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Enforce that there is no space before a comma and exactly one space, or a new line, after a comma.",
+                  "lines": [
+                    514,
+                    533
+                  ],
+                  "name": "`Universal.WhiteSpace.CommaSpacing` :wrench: :bar_chart: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Enforce using spaces for mid-line alignment.",
+                  "lines": [
+                    534,
+                    550
+                  ],
+                  "name": "`Universal.WhiteSpace.DisallowInlineTabs` :wrench: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Standardize the amount of spacing around the `...` in a first class callable.",
+                  "lines": [
+                    551,
+                    557
+                  ],
+                  "name": "`Universal.WhiteSpace.FirstClassCallableSpacing` :wrench: :bar_chart: :books:",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Enforce code indentation to always be a multiple of a tabstop, i.e. disallow precision alignment.",
+                  "lines": [
+                    558,
+                    593
+                  ],
+                  "name": "`Universal.WhiteSpace.PrecisionAlignment` :wrench: :books:",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                161,
+                593
+              ],
+              "name": "Universal",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "**Legend**: * :wrench: = Includes auto-fixer. _Use the `phpcbf` command to run the fixers._ * :bar_chart: = Includes metrics. _Use `phpcs` with `--rep",
+          "lines": [
+            103,
+            593
+          ],
+          "name": "Sniffs",
+          "type": "section"
+        },
+        {
+          "docstring": "Contributions to this project are welcome. Clone the repo, branch off from `develop`, make your changes, commit them and send in a pull request.",
+          "lines": [
+            594,
+            600
+          ],
+          "name": "Contributing",
+          "type": "section"
+        },
+        {
+          "docstring": "This code is released under the [GNU Lesser General Public License (LGPLv3)](LICENSE).",
+          "lines": [
+            601,
+            615
+          ],
+          "name": "License",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.139261+00:00",
+  "version": "1.0"
+}

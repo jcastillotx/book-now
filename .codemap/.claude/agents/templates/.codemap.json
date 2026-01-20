@@ -1,0 +1,2370 @@
+{
+  "directory": ".claude/agents/templates",
+  "files": {
+    "automation-smart-agent.md": {
+      "hash": "51be95aec74d",
+      "indexed_at": "2026-01-20T04:50:25.580262+00:00",
+      "language": "markdown",
+      "lines": 205,
+      "symbols": [
+        {
+          "docstring": "This agent implements intelligent, automated agent management by analyzing task requirements and dynamically spawning the most appropriate agents with",
+          "lines": [
+            28,
+            30
+          ],
+          "name": "Purpose",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Natural language understanding of requirements - Complexity assessment - Skill requirement identification - Resource need estimation - Dependency de",
+              "lines": [
+                33,
+                39
+              ],
+              "name": "1. Intelligent Task Analysis",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                40,
+                47
+              ],
+              "name": "2. Capability Matching",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- On-demand agent spawning - Custom capability assignment - Resource allocation - Topology optimization - Lifecycle management",
+              "lines": [
+                48,
+                54
+              ],
+              "name": "3. Dynamic Agent Creation",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Pattern recognition from past executions - Success rate tracking - Performance optimization - Predictive spawning - Continuous improvement",
+              "lines": [
+                55,
+                61
+              ],
+              "name": "4. Learning & Adaptation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            31,
+            61
+          ],
+          "name": "Core Functionality",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                64,
+                74
+              ],
+              "name": "1. Task-Based Spawning",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                75,
+                84
+              ],
+              "name": "2. Workload-Based Scaling",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                85,
+                94
+              ],
+              "name": "3. Skill-Based Matching",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            62,
+            94
+          ],
+          "name": "Automation Patterns",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Analyzes task patterns - Predicts upcoming needs - Pre-spawns agents - Reduces startup latency",
+              "lines": [
+                97,
+                102
+              ],
+              "name": "1. Predictive Spawning",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Tracks successful combinations - Identifies skill gaps - Suggests new capabilities - Evolves agent definitions",
+              "lines": [
+                103,
+                108
+              ],
+              "name": "2. Capability Learning",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Monitors utilization - Predicts resource needs - Implements just-in-time spawning - Manages agent lifecycle",
+              "lines": [
+                109,
+                114
+              ],
+              "name": "3. Resource Optimization",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            95,
+            114
+          ],
+          "name": "Intelligence Features",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "\"I need to refactor the payment system for better performance\" *Automatically spawns: Architect, Refactoring Specialist, Performance Analyst, Test Eng",
+              "lines": [
+                117,
+                120
+              ],
+              "name": "Automatic Team Assembly",
+              "type": "subsection"
+            },
+            {
+              "docstring": "\"Process these 1000 data files\" *Automatically scales processing agents based on workload*",
+              "lines": [
+                121,
+                124
+              ],
+              "name": "Dynamic Scaling",
+              "type": "subsection"
+            },
+            {
+              "docstring": "\"Debug this WebSocket connection issue\" *Finds and spawns agents with networking and real-time communication expertise*",
+              "lines": [
+                125,
+                128
+              ],
+              "name": "Intelligent Matching",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            115,
+            128
+          ],
+          "name": "Usage Examples",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Receives task breakdowns - Provides agent recommendations - Handles dynamic allocation - Reports capability gaps",
+              "lines": [
+                131,
+                136
+              ],
+              "name": "With Task Orchestrator",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Monitors agent efficiency - Identifies optimization opportunities - Adjusts spawning strategies - Learns from performance data",
+              "lines": [
+                137,
+                142
+              ],
+              "name": "With Performance Analyzer",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Stores successful patterns - Retrieves historical data - Learns from past executions - Maintains agent profiles",
+              "lines": [
+                143,
+                148
+              ],
+              "name": "With Memory Coordinator",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            129,
+            148
+          ],
+          "name": "Integration Points",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                151,
+                157
+              ],
+              "name": "1. Task Classification",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                158,
+                164
+              ],
+              "name": "2. Agent Performance Prediction",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                165,
+                171
+              ],
+              "name": "3. Workload Forecasting",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            149,
+            171
+          ],
+          "name": "Machine Learning Integration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "1. **Start Conservative**: Begin with known patterns 2. **Monitor Closely**: Track automation decisions 3. **Learn Iteratively**: Improve based on out",
+              "lines": [
+                174,
+                180
+              ],
+              "name": "Effective Automation",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Over-spawning agents for simple tasks - Under-estimating resource needs - Ignoring task dependencies - Poor capability matching",
+              "lines": [
+                181,
+                186
+              ],
+              "name": "Common Pitfalls",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            172,
+            186
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Balance speed vs. resource usage - Optimize cost vs. performance - Consider deadline constraints - Manage quality requirements",
+              "lines": [
+                189,
+                194
+              ],
+              "name": "1. Multi-Objective Optimization",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Change approach based on context - Learn from environment changes - Adjust to team preferences - Evolve with project needs",
+              "lines": [
+                195,
+                200
+              ],
+              "name": "2. Adaptive Strategies",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Detect struggling agents - Automatic reinforcement - Strategy adjustment - Graceful degradation",
+              "lines": [
+                201,
+                205
+              ],
+              "name": "3. Failure Recovery",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            187,
+            205
+          ],
+          "name": "Advanced Features",
+          "type": "section"
+        }
+      ]
+    },
+    "base-template-generator.md": {
+      "hash": "0a9c832a9ef5",
+      "indexed_at": "2026-01-20T04:50:25.580962+00:00",
+      "language": "markdown",
+      "lines": 268,
+      "symbols": [
+        {
+          "children": [
+            {
+              "lines": [
+                75,
+                98
+              ],
+              "name": "Before Generation: Learn from Successful Templates",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                99,
+                121
+              ],
+              "name": "During Generation: GNN for Similar Project Search",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                122,
+                141
+              ],
+              "name": "After Generation: Store Template Patterns",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            73,
+            141
+          ],
+          "name": "\ud83e\udde0 Self-Learning Protocol",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                144,
+                177
+              ],
+              "name": "Pattern-Based Template Generation",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                178,
+                245
+              ],
+              "name": "GNN-Enhanced Structure Search",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            142,
+            245
+          ],
+          "name": "\ud83c\udfaf Domain-Specific Optimizations",
+          "type": "section"
+        },
+        {
+          "lines": [
+            246,
+            269
+          ],
+          "name": "\ud83d\ude80 Fast Template Generation",
+          "type": "section"
+        }
+      ]
+    },
+    "coordinator-swarm-init.md": {
+      "hash": "421637362dff",
+      "indexed_at": "2026-01-20T04:50:25.580595+00:00",
+      "language": "markdown",
+      "lines": 90,
+      "symbols": [
+        {
+          "docstring": "This agent specializes in initializing and configuring agent swarms for optimal performance. It handles topology selection, resource allocation, and c",
+          "lines": [
+            27,
+            29
+          ],
+          "name": "Purpose",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Hierarchical**: For structured, top-down coordination - **Mesh**: For peer-to-peer collaboration - **Star**: For centralized control - **Ring**: F",
+              "lines": [
+                32,
+                37
+              ],
+              "name": "1. Topology Selection",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Allocates compute resources based on task complexity - Sets agent limits to prevent resource exhaustion - Configures memory namespaces for inter-age",
+              "lines": [
+                38,
+                42
+              ],
+              "name": "2. Resource Configuration",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Establishes message passing protocols - Sets up shared memory channels - Configures event-driven coordination",
+              "lines": [
+                43,
+                47
+              ],
+              "name": "3. Communication Setup",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            30,
+            47
+          ],
+          "name": "Core Functionality",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "\"Initialize a swarm for building a REST API\"",
+              "lines": [
+                50,
+                52
+              ],
+              "name": "Basic Initialization",
+              "type": "subsection"
+            },
+            {
+              "docstring": "\"Set up a hierarchical swarm with 8 agents for complex feature development\"",
+              "lines": [
+                53,
+                55
+              ],
+              "name": "Advanced Configuration",
+              "type": "subsection"
+            },
+            {
+              "docstring": "\"Create an auto-optimizing mesh swarm for distributed code analysis\"",
+              "lines": [
+                56,
+                58
+              ],
+              "name": "Topology Optimization",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            48,
+            58
+          ],
+          "name": "Usage Examples",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Task Orchestrator**: For task distribution after initialization - **Agent Spawner**: For creating specialized agents - **Performance Analyzer**: F",
+              "lines": [
+                61,
+                66
+              ],
+              "name": "Works With:",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Initialize swarm \u2192 Spawn agents \u2192 Orchestrate tasks 2. Setup topology \u2192 Monitor performance \u2192 Auto-optimize 3. Configure resources \u2192 Track utilizat",
+              "lines": [
+                67,
+                71
+              ],
+              "name": "Handoff Patterns:",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            59,
+            71
+          ],
+          "name": "Integration Points",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Choose topology based on task characteristics - Set reasonable agent limits (typically 3-10) - Configure appropriate memory namespaces - Enable moni",
+              "lines": [
+                74,
+                79
+              ],
+              "name": "Do:",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Over-provision agents for simple tasks - Use mesh topology for strictly sequential workflows - Ignore resource constraints - Skip initialization for",
+              "lines": [
+                80,
+                85
+              ],
+              "name": "Don't:",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            72,
+            85
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        },
+        {
+          "docstring": "- Validates topology selection - Checks resource availability - Handles initialization failures gracefully - Provides fallback configurations",
+          "lines": [
+            86,
+            90
+          ],
+          "name": "Error Handling",
+          "type": "section"
+        }
+      ]
+    },
+    "github-pr-manager.md": {
+      "hash": "6fdc7f9fb9b9",
+      "indexed_at": "2026-01-20T04:50:25.579248+00:00",
+      "language": "markdown",
+      "lines": 177,
+      "symbols": [
+        {
+          "docstring": "This agent specializes in managing the complete lifecycle of pull requests, from creation through review to merge, using GitHub's gh CLI and swarm coo",
+          "lines": [
+            30,
+            32
+          ],
+          "name": "Purpose",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Creates PRs with comprehensive descriptions - Sets up review assignments - Configures auto-merge when appropriate - Links related issues automatical",
+              "lines": [
+                35,
+                40
+              ],
+              "name": "1. PR Creation & Management",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Spawns specialized review agents - Coordinates security, performance, and code quality reviews - Aggregates feedback from multiple reviewers - Manag",
+              "lines": [
+                41,
+                46
+              ],
+              "name": "2. Review Coordination",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Squash**: For feature branches with many commits - **Merge**: For preserving complete history - **Rebase**: For linear history - Handles merge con",
+              "lines": [
+                47,
+                52
+              ],
+              "name": "3. Merge Strategies",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Monitors test status - Ensures all checks pass - Coordinates with deployment pipelines - Handles rollback if needed",
+              "lines": [
+                53,
+                58
+              ],
+              "name": "4. CI/CD Integration",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            33,
+            58
+          ],
+          "name": "Core Functionality",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "\"Create a PR for the feature/auth-system branch\"",
+              "lines": [
+                61,
+                63
+              ],
+              "name": "Simple PR Creation",
+              "type": "subsection"
+            },
+            {
+              "docstring": "\"Create a PR with multi-stage review including security audit and performance testing\"",
+              "lines": [
+                64,
+                66
+              ],
+              "name": "Complex Review Workflow",
+              "type": "subsection"
+            },
+            {
+              "docstring": "\"Set up auto-merge for the bugfix PR after all tests pass\"",
+              "lines": [
+                67,
+                69
+              ],
+              "name": "Automated Merge",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            59,
+            69
+          ],
+          "name": "Usage Examples",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                72,
+                81
+              ],
+              "name": "1. Standard Feature PR",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                82,
+                90
+              ],
+              "name": "2. Hotfix PR",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                91,
+                99
+              ],
+              "name": "3. Large Feature PR",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            70,
+            99
+          ],
+          "name": "Workflow Patterns",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                102,
+                116
+              ],
+              "name": "Common Commands",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            100,
+            116
+          ],
+          "name": "GitHub CLI Integration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "1. Initialize review swarm 2. Spawn specialized agents: - Code quality reviewer - Security auditor - Performance analyzer - Documentation checker 3. C",
+              "lines": [
+                119,
+                128
+              ],
+              "name": "Review Swarm Setup",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Code Review Coordinator**: For detailed code analysis - **Release Manager**: For version coordination - **Issue Tracker**: For linked issue update",
+              "lines": [
+                129,
+                134
+              ],
+              "name": "Integration with Other Agents",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            117,
+            134
+          ],
+          "name": "Multi-Agent Coordination",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                137,
+                138
+              ],
+              "name": "PR Description Template",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            135,
+            138
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        },
+        {
+          "docstring": "Brief description of changes",
+          "lines": [
+            139,
+            141
+          ],
+          "name": "Summary",
+          "type": "section"
+        },
+        {
+          "docstring": "Why these changes are needed",
+          "lines": [
+            142,
+            144
+          ],
+          "name": "Motivation",
+          "type": "section"
+        },
+        {
+          "docstring": "- List of specific changes - Breaking changes highlighted",
+          "lines": [
+            145,
+            148
+          ],
+          "name": "Changes",
+          "type": "section"
+        },
+        {
+          "docstring": "- How changes were tested - Test coverage metrics",
+          "lines": [
+            149,
+            152
+          ],
+          "name": "Testing",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Assign domain experts for specialized reviews - Use draft PRs for early feedback - Batch similar PRs for efficiency - Maintain clear review SLAs",
+              "lines": [
+                159,
+                164
+              ],
+              "name": "Review Coordination",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "- [ ] Tests pass - [ ] Documentation updated - [ ] No breaking changes (or documented)",
+          "lines": [
+            153,
+            164
+          ],
+          "name": "Checklist",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "1. **Merge Conflicts**: Automated resolution for simple cases 2. **Failed Tests**: Retry flaky tests, investigate persistent failures 3. **Review Dela",
+              "lines": [
+                167,
+                172
+              ],
+              "name": "Common Issues",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Automatic rebase for outdated branches - Conflict resolution assistance - Alternative merge strategies - Rollback procedures",
+              "lines": [
+                173,
+                177
+              ],
+              "name": "Recovery Strategies",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            165,
+            177
+          ],
+          "name": "Error Handling",
+          "type": "section"
+        }
+      ]
+    },
+    "implementer-sparc-coder.md": {
+      "hash": "557129b56ec9",
+      "indexed_at": "2026-01-20T04:50:25.578177+00:00",
+      "language": "markdown",
+      "lines": 259,
+      "symbols": [
+        {
+          "docstring": "This agent specializes in the implementation phases of SPARC methodology, focusing on transforming specifications and designs into high-quality, teste",
+          "lines": [
+            36,
+            38
+          ],
+          "name": "Purpose",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Write failing tests first (Red) - Implement minimal code to pass (Green) - Refactor for quality (Refactor) - Maintain high test coverage (>80%)",
+              "lines": [
+                41,
+                46
+              ],
+              "name": "1. Test-Driven Development (TDD)",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Create multiple test files simultaneously - Implement related features in parallel - Batch file operations for efficiency - Coordinate multi-compone",
+              "lines": [
+                47,
+                52
+              ],
+              "name": "2. Parallel Implementation",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Clean, readable code - Consistent naming conventions - Proper error handling - Comprehensive documentation - Performance optimization",
+              "lines": [
+                53,
+                59
+              ],
+              "name": "3. Code Quality Standards",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            39,
+            59
+          ],
+          "name": "Core Implementation Principles",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                62,
+                70
+              ],
+              "name": "Phase 1: Test Creation (Red)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                71,
+                79
+              ],
+              "name": "Phase 2: Implementation (Green)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                80,
+                88
+              ],
+              "name": "Phase 3: Refinement (Refactor)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            60,
+            88
+          ],
+          "name": "Implementation Workflow",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                91,
+                111
+              ],
+              "name": "1. Service Implementation",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                112,
+                128
+              ],
+              "name": "2. API Route Pattern",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                129,
+                150
+              ],
+              "name": "3. Test Pattern",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            89,
+            150
+          ],
+          "name": "Code Patterns",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                153,
+                165
+              ],
+              "name": "Code Organization",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. **Single Responsibility**: Each function/class does one thing 2. **DRY Principle**: Don't repeat yourself 3. **YAGNI**: You aren't gonna need it 4.",
+              "lines": [
+                166,
+                172
+              ],
+              "name": "Implementation Guidelines",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            151,
+            172
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Receives specifications and designs - Reports implementation progress - Requests clarification when needed - Delivers tested code",
+              "lines": [
+                175,
+                180
+              ],
+              "name": "With SPARC Coordinator",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Coordinates test strategy - Ensures coverage requirements - Handles test automation - Validates quality metrics",
+              "lines": [
+                181,
+                186
+              ],
+              "name": "With Testing Agents",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Prepares code for review - Addresses feedback - Implements suggestions - Maintains standards",
+              "lines": [
+                187,
+                192
+              ],
+              "name": "With Code Review Agents",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            173,
+            192
+          ],
+          "name": "Integration Patterns",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Choose efficient data structures - Optimize time complexity - Reduce space complexity - Cache when appropriate",
+              "lines": [
+                195,
+                200
+              ],
+              "name": "1. Algorithm Optimization",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Efficient queries - Proper indexing - Connection pooling - Query optimization",
+              "lines": [
+                201,
+                206
+              ],
+              "name": "2. Database Optimization",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Response compression - Pagination - Caching strategies - Rate limiting",
+              "lines": [
+                207,
+                212
+              ],
+              "name": "3. API Optimization",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            193,
+            212
+          ],
+          "name": "Performance Optimization",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                215,
+                225
+              ],
+              "name": "1. Graceful Degradation",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                226,
+                240
+              ],
+              "name": "2. Error Recovery",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            213,
+            240
+          ],
+          "name": "Error Handling Patterns",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                243,
+                254
+              ],
+              "name": "1. Code Comments",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- API documentation - Setup instructions - Configuration options - Usage examples",
+              "lines": [
+                255,
+                259
+              ],
+              "name": "2. README Updates",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            241,
+            259
+          ],
+          "name": "Documentation Standards",
+          "type": "section"
+        }
+      ]
+    },
+    "memory-coordinator.md": {
+      "hash": "8aeb10fad6f5",
+      "indexed_at": "2026-01-20T04:50:25.577810+00:00",
+      "language": "markdown",
+      "lines": 187,
+      "symbols": [
+        {
+          "docstring": "This agent manages the distributed memory system that enables knowledge persistence across sessions and facilitates information sharing between agents",
+          "lines": [
+            32,
+            34
+          ],
+          "name": "Purpose",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Store**: Save data with optional TTL and encryption - **Retrieve**: Fetch stored data by key or pattern - **Search**: Find relevant memories using",
+              "lines": [
+                37,
+                43
+              ],
+              "name": "1. Memory Operations",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Project-specific namespaces - Agent-specific memory areas - Shared collaboration spaces - Time-based partitions - Security boundaries",
+              "lines": [
+                44,
+                50
+              ],
+              "name": "2. Namespace Management",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Automatic compression for large entries - Deduplication of similar content - Smart indexing for fast retrieval - Garbage collection for expired data",
+              "lines": [
+                51,
+                57
+              ],
+              "name": "3. Data Optimization",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            35,
+            57
+          ],
+          "name": "Core Functionality",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                60,
+                70
+              ],
+              "name": "1. Project Context",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                71,
+                81
+              ],
+              "name": "2. Agent Coordination",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                82,
+                92
+              ],
+              "name": "3. Learning & Patterns",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            58,
+            92
+          ],
+          "name": "Memory Patterns",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "\"Remember that we're using PostgreSQL for the user database with connection pooling enabled\"",
+              "lines": [
+                95,
+                97
+              ],
+              "name": "Storing Project Context",
+              "type": "subsection"
+            },
+            {
+              "docstring": "\"What did we decide about the authentication architecture?\"",
+              "lines": [
+                98,
+                100
+              ],
+              "name": "Retrieving Past Decisions",
+              "type": "subsection"
+            },
+            {
+              "docstring": "\"Continue from where we left off with the payment integration\"",
+              "lines": [
+                101,
+                103
+              ],
+              "name": "Cross-Session Continuity",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            93,
+            103
+          ],
+          "name": "Usage Examples",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Stores task decomposition plans - Maintains execution state - Shares results between phases - Tracks dependencies",
+              "lines": [
+                106,
+                111
+              ],
+              "name": "With Task Orchestrator",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Persists phase outputs - Maintains architectural decisions - Stores test strategies - Keeps quality metrics",
+              "lines": [
+                112,
+                117
+              ],
+              "name": "With SPARC Agents",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Stores performance baselines - Tracks optimization history - Maintains bottleneck patterns - Records improvement metrics",
+              "lines": [
+                118,
+                123
+              ],
+              "name": "With Performance Analyzer",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            104,
+            123
+          ],
+          "name": "Integration Patterns",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "1. **Use Clear Keys**: `project/auth/jwt-config` 2. **Set Appropriate TTL**: Don't store temporary data forever 3. **Namespace Properly**: Organize by",
+              "lines": [
+                126,
+                132
+              ],
+              "name": "Effective Memory Usage",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                133,
+                140
+              ],
+              "name": "Memory Hierarchies",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            124,
+            140
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Context-aware search - Relevance ranking - Fuzzy matching - Semantic similarity",
+              "lines": [
+                143,
+                148
+              ],
+              "name": "1. Smart Retrieval",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Linked memory entries - Dependency tracking - Version history - Audit trails",
+              "lines": [
+                149,
+                154
+              ],
+              "name": "2. Memory Chains",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Shared workspaces - Conflict resolution - Merge strategies - Access control",
+              "lines": [
+                155,
+                160
+              ],
+              "name": "3. Collaborative Memory",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            141,
+            160
+          ],
+          "name": "Advanced Features",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Encryption at rest - Secure key management - Access control lists - Audit logging",
+              "lines": [
+                163,
+                168
+              ],
+              "name": "Data Protection",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Data retention policies - Right to be forgotten - Export capabilities - Anonymization options",
+              "lines": [
+                169,
+                174
+              ],
+              "name": "Compliance",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            161,
+            174
+          ],
+          "name": "Security & Privacy",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Hot data in fast storage - Cold data compressed - Predictive prefetching - Lazy loading",
+              "lines": [
+                177,
+                182
+              ],
+              "name": "Caching Strategy",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Distributed storage - Sharding by namespace - Replication for reliability - Load balancing",
+              "lines": [
+                183,
+                187
+              ],
+              "name": "Scalability",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            175,
+            187
+          ],
+          "name": "Performance Optimization",
+          "type": "section"
+        }
+      ]
+    },
+    "orchestrator-task.md": {
+      "hash": "4af1f8472260",
+      "indexed_at": "2026-01-20T04:50:25.578522+00:00",
+      "language": "markdown",
+      "lines": 139,
+      "symbols": [
+        {
+          "docstring": "The Task Orchestrator is the central coordination agent responsible for breaking down complex objectives into executable subtasks, managing their exec",
+          "lines": [
+            27,
+            29
+          ],
+          "name": "Purpose",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Analyzes complex objectives - Identifies logical subtasks and components - Determines optimal execution order - Creates dependency graphs",
+              "lines": [
+                32,
+                37
+              ],
+              "name": "1. Task Decomposition",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Parallel**: Independent tasks executed simultaneously - **Sequential**: Ordered execution with dependencies - **Adaptive**: Dynamic strategy based",
+              "lines": [
+                38,
+                43
+              ],
+              "name": "2. Execution Strategy",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Real-time task status tracking - Dependency resolution - Bottleneck identification - Progress reporting via TodoWrite",
+              "lines": [
+                44,
+                49
+              ],
+              "name": "3. Progress Management",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Aggregates outputs from multiple agents - Resolves conflicts and inconsistencies - Produces unified deliverables - Stores results in memory for futu",
+              "lines": [
+                50,
+                55
+              ],
+              "name": "4. Result Synthesis",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            30,
+            55
+          ],
+          "name": "Core Functionality",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "\"Orchestrate the development of a user authentication system with email verification, password reset, and 2FA\"",
+              "lines": [
+                58,
+                60
+              ],
+              "name": "Complex Feature Development",
+              "type": "subsection"
+            },
+            {
+              "docstring": "\"Coordinate analysis, design, implementation, and testing phases for the payment processing module\"",
+              "lines": [
+                61,
+                63
+              ],
+              "name": "Multi-Stage Processing",
+              "type": "subsection"
+            },
+            {
+              "docstring": "\"Execute unit tests, integration tests, and documentation updates simultaneously\"",
+              "lines": [
+                64,
+                66
+              ],
+              "name": "Parallel Execution",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            56,
+            66
+          ],
+          "name": "Usage Examples",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                69,
+                77
+              ],
+              "name": "1. Feature Development Pattern",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                78,
+                85
+              ],
+              "name": "2. Bug Fix Pattern",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                86,
+                93
+              ],
+              "name": "3. Refactoring Pattern",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            67,
+            93
+          ],
+          "name": "Task Patterns",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Swarm Initializer**: Provides initialized agent pool - **Agent Spawner**: Creates specialized agents on demand",
+              "lines": [
+                96,
+                99
+              ],
+              "name": "Upstream Agents:",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **SPARC Agents**: Execute specific methodology phases - **GitHub Agents**: Handle version control operations - **Testing Agents**: Validate implemen",
+              "lines": [
+                100,
+                104
+              ],
+              "name": "Downstream Agents:",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Performance Analyzer**: Tracks execution efficiency - **Swarm Monitor**: Provides resource utilization data",
+              "lines": [
+                105,
+                108
+              ],
+              "name": "Monitoring Agents:",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            94,
+            108
+          ],
+          "name": "Integration Points",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Start with clear task decomposition - Identify true dependencies vs artificial constraints - Maximize parallelization opportunities - Use TodoWrite",
+              "lines": [
+                111,
+                117
+              ],
+              "name": "Effective Orchestration:",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Over-decomposition leading to coordination overhead - Ignoring natural task boundaries - Sequential execution of parallelizable tasks - Poor depende",
+              "lines": [
+                118,
+                123
+              ],
+              "name": "Common Pitfalls:",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            109,
+            123
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Adjusts strategy based on progress - Handles unexpected blockers - Reallocates resources as needed",
+              "lines": [
+                126,
+                130
+              ],
+              "name": "1. Dynamic Re-planning",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Hierarchical task breakdown - Sub-orchestrators for complex components - Recursive decomposition for large projects",
+              "lines": [
+                131,
+                135
+              ],
+              "name": "2. Multi-Level Orchestration",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Critical path optimization - Resource contention resolution - Deadline-aware scheduling",
+              "lines": [
+                136,
+                139
+              ],
+              "name": "3. Intelligent Priority Management",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            124,
+            139
+          ],
+          "name": "Advanced Features",
+          "type": "section"
+        }
+      ]
+    },
+    "performance-analyzer.md": {
+      "hash": "97e3cff2daf0",
+      "indexed_at": "2026-01-20T04:50:25.578895+00:00",
+      "language": "markdown",
+      "lines": 199,
+      "symbols": [
+        {
+          "docstring": "This agent specializes in identifying and resolving performance bottlenecks in development workflows, agent coordination, and system operations.",
+          "lines": [
+            28,
+            30
+          ],
+          "name": "Purpose",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Execution Time**: Tasks taking longer than expected - **Resource Constraints**: CPU, memory, or I/O limitations - **Coordination Overhead**: Ineff",
+              "lines": [
+                33,
+                39
+              ],
+              "name": "1. Bottleneck Types",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Real-time monitoring of task execution - Pattern analysis across multiple runs - Resource utilization tracking - Dependency chain analysis - Communi",
+              "lines": [
+                40,
+                46
+              ],
+              "name": "2. Detection Methods",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Parallelization opportunities - Resource reallocation - Algorithm improvements - Caching strategies - Topology optimization",
+              "lines": [
+                47,
+                53
+              ],
+              "name": "3. Optimization Strategies",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            31,
+            53
+          ],
+          "name": "Analysis Capabilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                56,
+                64
+              ],
+              "name": "1. Data Collection Phase",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                65,
+                73
+              ],
+              "name": "2. Analysis Phase",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                74,
+                82
+              ],
+              "name": "3. Recommendation Phase",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            54,
+            82
+          ],
+          "name": "Analysis Workflow",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "**Symptoms**: One agent handling complex tasks alone **Solution**: Spawn specialized agents for parallel work",
+              "lines": [
+                85,
+                88
+              ],
+              "name": "1. Single Agent Overload",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Symptoms**: Tasks waiting unnecessarily **Solution**: Identify parallelization opportunities",
+              "lines": [
+                89,
+                92
+              ],
+              "name": "2. Sequential Task Chain",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Symptoms**: Agents waiting for resources **Solution**: Increase limits or optimize usage",
+              "lines": [
+                93,
+                96
+              ],
+              "name": "3. Resource Starvation",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Symptoms**: Excessive inter-agent messages **Solution**: Batch operations or change topology",
+              "lines": [
+                97,
+                100
+              ],
+              "name": "4. Communication Overhead",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Symptoms**: High complexity operations **Solution**: Algorithm optimization or caching",
+              "lines": [
+                101,
+                104
+              ],
+              "name": "5. Inefficient Algorithms",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            83,
+            104
+          ],
+          "name": "Common Bottleneck Patterns",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Provides performance feedback - Suggests execution strategy changes - Monitors improvement impact",
+              "lines": [
+                107,
+                111
+              ],
+              "name": "With Orchestration Agents",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Receives real-time metrics - Correlates system health data - Tracks long-term trends",
+              "lines": [
+                112,
+                116
+              ],
+              "name": "With Monitoring Agents",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Hands off specific optimization tasks - Validates optimization results - Maintains performance baselines",
+              "lines": [
+                117,
+                121
+              ],
+              "name": "With Optimization Agents",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            105,
+            121
+          ],
+          "name": "Integration Points",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "1. **Task Execution Time**: Average, P95, P99 2. **Resource Utilization**: CPU, Memory, I/O 3. **Parallelization Ratio**: Parallel vs Sequential 4. **",
+              "lines": [
+                124,
+                130
+              ],
+              "name": "Key Performance Indicators",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                131,
+                132
+              ],
+              "name": "Report Format",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            122,
+            132
+          ],
+          "name": "Metrics and Reporting",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Overall performance score - Critical bottlenecks identified - Recommended actions",
+              "lines": [
+                135,
+                139
+              ],
+              "name": "Executive Summary",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Bottleneck: [Description] - Impact: [Severity] - Root Cause: [Analysis] - Recommendation: [Action] - Expected Improvement: [Percentage]",
+              "lines": [
+                140,
+                146
+              ],
+              "name": "Detailed Findings",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Performance over time - Improvement tracking - Regression detection",
+              "lines": [
+                147,
+                152
+              ],
+              "name": "Trend Analysis",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            133,
+            152
+          ],
+          "name": "Performance Analysis Report",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "**Analysis**: Sequential test execution taking 10 minutes **Recommendation**: Parallelize test suites **Result**: 70% reduction to 3 minutes",
+              "lines": [
+                155,
+                159
+              ],
+              "name": "Example 1: Slow Test Execution",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Analysis**: Hierarchical topology causing bottleneck **Recommendation**: Switch to mesh for this workload **Result**: 40% improvement in coordinatio",
+              "lines": [
+                160,
+                164
+              ],
+              "name": "Example 2: Agent Coordination Delay",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Analysis**: Large file operations causing swapping **Recommendation**: Stream processing instead of loading **Result**: 90% memory usage reduction",
+              "lines": [
+                165,
+                169
+              ],
+              "name": "Example 3: Memory Pressure",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            153,
+            169
+          ],
+          "name": "Optimization Examples",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Set up baseline metrics - Monitor performance trends - Alert on regressions - Regular optimization cycles",
+              "lines": [
+                172,
+                177
+              ],
+              "name": "Continuous Monitoring",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Analyze before issues become critical - Predict bottlenecks from patterns - Plan capacity ahead of need - Implement gradual optimizations",
+              "lines": [
+                178,
+                183
+              ],
+              "name": "Proactive Analysis",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            170,
+            183
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- ML-based bottleneck prediction - Capacity planning recommendations - Workload-specific optimizations",
+              "lines": [
+                186,
+                190
+              ],
+              "name": "1. Predictive Analysis",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Self-tuning parameters - Dynamic resource allocation - Adaptive execution strategies",
+              "lines": [
+                191,
+                195
+              ],
+              "name": "2. Automated Optimization",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Compare optimization strategies - Measure real-world impact - Data-driven decisions",
+              "lines": [
+                196,
+                199
+              ],
+              "name": "3. A/B Testing",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            184,
+            199
+          ],
+          "name": "Advanced Features",
+          "type": "section"
+        }
+      ]
+    },
+    "sparc-coordinator.md": {
+      "hash": "a65d4b539b88",
+      "indexed_at": "2026-01-20T04:50:25.579918+00:00",
+      "language": "markdown",
+      "lines": 514,
+      "symbols": [
+        {
+          "docstring": "This agent orchestrates the complete SPARC (Specification, Pseudocode, Architecture, Refinement, Completion) methodology with **hierarchical coordinat",
+          "lines": [
+            100,
+            102
+          ],
+          "name": "Purpose",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                105,
+                143
+              ],
+              "name": "Before SPARC Cycle: Learn from Past Methodology Executions",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                144,
+                169
+              ],
+              "name": "During SPARC Cycle: Hierarchical Coordination",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                170,
+                188
+              ],
+              "name": "MoE Routing for Phase Specialist Selection",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                189,
+                223
+              ],
+              "name": "After SPARC Cycle: Store Complete Methodology Learning",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            103,
+            223
+          ],
+          "name": "\ud83e\udde0 Self-Learning Protocol for SPARC Coordination",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                226,
+                244
+              ],
+              "name": "Queen Level (Strategic Coordination)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                245,
+                262
+              ],
+              "name": "Worker Level (Phase Execution)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            224,
+            262
+          ],
+          "name": "\ud83d\udc51 Hierarchical SPARC Coordination Pattern",
+          "type": "section"
+        },
+        {
+          "lines": [
+            263,
+            302
+          ],
+          "name": "\ud83c\udfaf MoE Expert Routing for SPARC Phases",
+          "type": "section"
+        },
+        {
+          "lines": [
+            303,
+            322
+          ],
+          "name": "\u26a1 Cross-Phase Learning with Attention",
+          "type": "section"
+        },
+        {
+          "lines": [
+            323,
+            340
+          ],
+          "name": "\ud83d\udcca SPARC Cycle Improvement Tracking",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                343,
+                351
+              ],
+              "name": "Before: Traditional SPARC coordination",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                352,
+                361
+              ],
+              "name": "After: Self-learning SPARC coordination (v2.0.0-alpha)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            341,
+            361
+          ],
+          "name": "\u26a1 Performance Benefits",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Detailed requirements gathering - User story creation - Acceptance criteria definition - Edge case identification",
+              "lines": [
+                364,
+                369
+              ],
+              "name": "1. Specification Phase",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Algorithm design - Logic flow planning - Data structure selection - Complexity analysis",
+              "lines": [
+                370,
+                375
+              ],
+              "name": "2. Pseudocode Phase",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- System design - Component definition - Interface contracts - Integration planning",
+              "lines": [
+                376,
+                381
+              ],
+              "name": "3. Architecture Phase",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- TDD implementation - Iterative improvement - Performance optimization - Code quality enhancement",
+              "lines": [
+                382,
+                387
+              ],
+              "name": "4. Refinement Phase",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Integration testing - Documentation finalization - Deployment preparation - Handoff procedures",
+              "lines": [
+                388,
+                393
+              ],
+              "name": "5. Completion Phase",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            362,
+            393
+          ],
+          "name": "SPARC Phases Overview",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                396,
+                408
+              ],
+              "name": "Phase Transitions",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. **Specification Complete**: All requirements documented 2. **Algorithms Validated**: Logic verified and optimized 3. **Design Approved**: Architect",
+              "lines": [
+                409,
+                415
+              ],
+              "name": "Quality Gates",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            394,
+            415
+          ],
+          "name": "Orchestration Workflow",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "1. **SPARC Researcher**: Requirements and feasibility 2. **SPARC Designer**: Architecture and interfaces 3. **SPARC Coder**: Implementation and refine",
+              "lines": [
+                418,
+                424
+              ],
+              "name": "Specialized SPARC Agents",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Spawn multiple agents for independent components - Coordinate cross-functional reviews - Parallelize testing and documentation - Synchronize at phas",
+              "lines": [
+                425,
+                430
+              ],
+              "name": "Parallel Execution Patterns",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            416,
+            430
+          ],
+          "name": "Agent Coordination",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "\"Use SPARC methodology to develop a user authentication system\"",
+              "lines": [
+                433,
+                435
+              ],
+              "name": "Complete SPARC Cycle",
+              "type": "subsection"
+            },
+            {
+              "docstring": "\"Execute SPARC architecture phase for microservices design\"",
+              "lines": [
+                436,
+                438
+              ],
+              "name": "Specific Phase Focus",
+              "type": "subsection"
+            },
+            {
+              "docstring": "\"Apply SPARC to develop API, frontend, and database layers simultaneously\"",
+              "lines": [
+                439,
+                441
+              ],
+              "name": "Parallel Component Development",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            431,
+            441
+          ],
+          "name": "Usage Examples",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Receives high-level objectives - Breaks down by SPARC phases - Coordinates phase execution - Reports progress back",
+              "lines": [
+                444,
+                449
+              ],
+              "name": "With Task Orchestrator",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Creates branches for each phase - Manages PRs at phase boundaries - Coordinates reviews at quality gates - Handles merge workflows",
+              "lines": [
+                450,
+                455
+              ],
+              "name": "With GitHub Agents",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Integrates TDD in refinement - Coordinates test coverage - Manages test automation - Validates quality metrics",
+              "lines": [
+                456,
+                461
+              ],
+              "name": "With Testing Agents",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            442,
+            461
+          ],
+          "name": "Integration Patterns",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "1. **Never skip phases** - Each builds on the previous 2. **Enforce quality gates** - No shortcuts 3. **Document decisions** - Maintain traceability 4",
+              "lines": [
+                464,
+                469
+              ],
+              "name": "Phase Execution",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. **Feature Development** - Full SPARC cycle - Emphasis on specification - Thorough testing",
+              "lines": [
+                470,
+                485
+              ],
+              "name": "Common Patterns",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            462,
+            485
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Phase outputs and decisions - Quality gate results - Architectural decisions - Test strategies - Lessons learned",
+              "lines": [
+                488,
+                494
+              ],
+              "name": "Stored Artifacts",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Check previous similar projects - Reuse architectural patterns - Apply learned optimizations - Avoid past pitfalls",
+              "lines": [
+                495,
+                500
+              ],
+              "name": "Retrieval Patterns",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            486,
+            500
+          ],
+          "name": "Memory Integration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Specification completeness - Algorithm efficiency - Architecture clarity - Code quality scores - Documentation coverage",
+              "lines": [
+                503,
+                509
+              ],
+              "name": "Phase Metrics",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Time per phase - Quality gate pass rate - Defect discovery timing - Methodology compliance",
+              "lines": [
+                510,
+                514
+              ],
+              "name": "Overall Metrics",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            501,
+            514
+          ],
+          "name": "Success Metrics",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.190636+00:00",
+  "version": "1.0"
+}

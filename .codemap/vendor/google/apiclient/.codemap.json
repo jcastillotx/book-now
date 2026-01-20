@@ -1,0 +1,651 @@
+{
+  "directory": "vendor/google/apiclient",
+  "files": {
+    "CHANGELOG.md": {
+      "hash": "8cd43f57eed4",
+      "indexed_at": "2026-01-20T04:50:18.011107+00:00",
+      "language": "markdown",
+      "lines": 142,
+      "symbols": [
+        {
+          "children": [
+            {
+              "docstring": "* Support firebase/php-jwt version 6.0 and 7.0 ([#2696](https://github.com/googleapis/google-api-php-client/issues/2696)) ([70ea42a](https://github.co",
+              "lines": [
+                6,
+                10
+              ],
+              "name": "Features",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* Upload assets release job ([#2671](https://github.com/googleapis/google-api-php-client/issues/2671)) ([0f56ea7](https://github.com/googleapis/google",
+              "lines": [
+                11,
+                14
+              ],
+              "name": "Bug Fixes",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            3,
+            14
+          ],
+          "name": "[2.19.0](https://github.com/googleapis/google-api-php-client/compare/v2.18.4...v2.19.0) (2026-01-09)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Ensure credentials can be of type FetchAuthTokenInterface ([#2684](https://github.com/googleapis/google-api-php-client/issues/2684)) ([ed70802](http",
+              "lines": [
+                18,
+                21
+              ],
+              "name": "Bug Fixes",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            15,
+            21
+          ],
+          "name": "[2.18.4](https://github.com/googleapis/google-api-php-client/compare/v2.18.3...v2.18.4) (2025-09-29)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Convert Finder lazy iterator to array before deletion ([#2663](https://github.com/googleapis/google-api-php-client/issues/2663)) ([c699405](https://",
+              "lines": [
+                25,
+                28
+              ],
+              "name": "Bug Fixes",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            22,
+            28
+          ],
+          "name": "[2.18.3](https://github.com/googleapis/google-api-php-client/compare/v2.18.2...v2.18.3) (2025-04-08)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Correct type for jwt constructor arg ([#2648](https://github.com/googleapis/google-api-php-client/issues/2648)) ([31a9861](https://github.com/google",
+              "lines": [
+                32,
+                35
+              ],
+              "name": "Bug Fixes",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            29,
+            35
+          ],
+          "name": "[2.18.2](https://github.com/googleapis/google-api-php-client/compare/v2.18.1...v2.18.2) (2024-12-16)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Implicitly marking parameter  as nullable is deprecated ([#2638](https://github.com/googleapis/google-api-php-client/issues/2638)) ([de57db2](https:",
+              "lines": [
+                39,
+                42
+              ],
+              "name": "Bug Fixes",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            36,
+            42
+          ],
+          "name": "[2.18.1](https://github.com/googleapis/google-api-php-client/compare/v2.18.0...v2.18.1) (2024-11-24)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* **docs:** Use doctum shared workflow for reference docs ([#2618](https://github.com/googleapis/google-api-php-client/issues/2618)) ([242e2cb](https:",
+              "lines": [
+                46,
+                50
+              ],
+              "name": "Features",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* Explicit token caching issue ([#2358](https://github.com/googleapis/google-api-php-client/issues/2358)) ([dc13e5e](https://github.com/googleapis/goo",
+              "lines": [
+                51,
+                54
+              ],
+              "name": "Bug Fixes",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            43,
+            54
+          ],
+          "name": "[2.18.0](https://github.com/googleapis/google-api-php-client/compare/v2.17.0...v2.18.0) (2024-10-16)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Add logger to client constructor config ([#2606](https://github.com/googleapis/google-api-php-client/issues/2606)) ([1f47133](https://github.com/goo",
+              "lines": [
+                58,
+                62
+              ],
+              "name": "Features",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            55,
+            62
+          ],
+          "name": "[2.17.0](https://github.com/googleapis/google-api-php-client/compare/v2.16.0...v2.17.0) (2024-07-10)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Add universe domain support ([#2563](https://github.com/googleapis/google-api-php-client/issues/2563)) ([35895de](https://github.com/googleapis/goog",
+              "lines": [
+                66,
+                69
+              ],
+              "name": "Features",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            63,
+            69
+          ],
+          "name": "[2.16.0](https://github.com/googleapis/google-api-php-client/compare/v2.15.4...v2.16.0) (2024-04-24)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Updates phpseclib because of a security issue ([#2574](https://github.com/googleapis/google-api-php-client/issues/2574)) ([633d41f](https://github.c",
+              "lines": [
+                73,
+                76
+              ],
+              "name": "Bug Fixes",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            70,
+            76
+          ],
+          "name": "[2.15.4](https://github.com/googleapis/google-api-php-client/compare/v2.15.3...v2.15.4) (2024-03-06)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Guzzle dependency version ([#2546](https://github.com/googleapis/google-api-php-client/issues/2546)) ([c270f28](https://github.com/googleapis/google",
+              "lines": [
+                80,
+                83
+              ],
+              "name": "Bug Fixes",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            77,
+            83
+          ],
+          "name": "[2.15.3](https://github.com/googleapis/google-api-php-client/compare/v2.15.2...v2.15.3) (2024-01-04)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Disallow vulnerable guzzle versions ([#2536](https://github.com/googleapis/google-api-php-client/issues/2536)) ([d1830ed](https://github.com/googlea",
+              "lines": [
+                87,
+                92
+              ],
+              "name": "Bug Fixes",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            84,
+            92
+          ],
+          "name": "[2.15.2](https://github.com/googleapis/google-api-php-client/compare/v2.15.1...v2.15.2) (2024-01-03)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Upgrade min phpseclib version ([#2499](https://github.com/googleapis/google-api-php-client/issues/2499)) ([8e7fae2](https://github.com/googleapis/go",
+              "lines": [
+                96,
+                99
+              ],
+              "name": "Bug Fixes",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            93,
+            99
+          ],
+          "name": "[2.15.1](https://github.com/googleapis/google-api-php-client/compare/v2.15.0...v2.15.1) (2023-09-12)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Add pkce support and upgrade examples ([#2438](https://github.com/googleapis/google-api-php-client/issues/2438)) ([bded223](https://github.com/googl",
+              "lines": [
+                103,
+                107
+              ],
+              "name": "Features",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            100,
+            107
+          ],
+          "name": "[2.15.0](https://github.com/googleapis/google-api-php-client/compare/v2.14.0...v2.15.0) (2023-05-18)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* User-supplied query params for auth url ([#2432](https://github.com/googleapis/google-api-php-client/issues/2432)) ([74a7d7b](https://github.com/goo",
+              "lines": [
+                111,
+                114
+              ],
+              "name": "Features",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            108,
+            114
+          ],
+          "name": "[2.14.0](https://github.com/googleapis/google-api-php-client/compare/v2.13.2...v2.14.0) (2023-05-11)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Calling class_exists with null in Google\\Model ([#2405](https://github.com/googleapis/google-api-php-client/issues/2405)) ([5ed4edc](https://github.",
+              "lines": [
+                118,
+                121
+              ],
+              "name": "Bug Fixes",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            115,
+            121
+          ],
+          "name": "[2.13.2](https://github.com/googleapis/google-api-php-client/compare/v2.13.1...v2.13.2) (2023-03-23)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Allow dynamic properties on model classes ([#2408](https://github.com/googleapis/google-api-php-client/issues/2408)) ([11080d5](https://github.com/g",
+              "lines": [
+                125,
+                128
+              ],
+              "name": "Bug Fixes",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            122,
+            128
+          ],
+          "name": "[2.13.1](https://github.com/googleapis/google-api-php-client/compare/v2.13.0...v2.13.1) (2023-03-13)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Make auth http client config extends from default client config ([#2348](https://github.com/googleapis/google-api-php-client/issues/2348)) ([2640250",
+              "lines": [
+                132,
+                136
+              ],
+              "name": "Features",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* Don't send content-type header if no post body exists ([#2288](https://github.com/googleapis/google-api-php-client/issues/2288)) ([654c0e2](https://",
+              "lines": [
+                137,
+                143
+              ],
+              "name": "Bug Fixes",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            129,
+            143
+          ],
+          "name": "[2.13.0](https://github.com/googleapis/google-api-php-client/compare/v2.12.6...v2.13.0) (2022-12-19)",
+          "type": "section"
+        }
+      ]
+    },
+    "README.md": {
+      "hash": "ae27bc0dcb25",
+      "indexed_at": "2026-01-20T04:50:18.012106+00:00",
+      "language": "markdown",
+      "lines": 513,
+      "symbols": [
+        {
+          "docstring": "For Google Cloud Platform APIs such as [Datastore][cloud-datastore], [Cloud Storage][cloud-storage], [Pub/Sub][cloud-pubsub], and [Compute Engine][clo",
+          "lines": [
+            18,
+            26
+          ],
+          "name": "Google Cloud Platform",
+          "type": "section"
+        },
+        {
+          "docstring": "* [PHP 8.0 or higher](https://www.php.net/)",
+          "lines": [
+            27,
+            29
+          ],
+          "name": "Requirements ##",
+          "type": "section"
+        },
+        {
+          "docstring": "The [docs folder](docs/) provides detailed guides for using this library.",
+          "lines": [
+            30,
+            33
+          ],
+          "name": "Developer Documentation ##",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "There are over 200 Google API services. The chances are good that you will not want them all. In order to avoid shipping these dependencies with your",
+                  "lines": [
+                    67,
+                    119
+                  ],
+                  "name": "Cleaning up unused services",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "The preferred method is via [composer](https://getcomposer.org/). Follow the [installation instructions](https://getcomposer.org/doc/00-intro.md) if y",
+              "lines": [
+                38,
+                119
+              ],
+              "name": "Composer",
+              "type": "subsection"
+            },
+            {
+              "docstring": "If you prefer not to use composer, you can download the package in its entirety. The [Releases](https://github.com/googleapis/google-api-php-client/re",
+              "lines": [
+                120,
+                132
+              ],
+              "name": "Download the Release",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "You can use **Composer** or simply **Download the Release**",
+          "lines": [
+            34,
+            132
+          ],
+          "name": "Installation ##",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                144,
+                165
+              ],
+              "name": "Basic Example ###",
+              "type": "subsection"
+            },
+            {
+              "docstring": "> An example of this can be seen in [`examples/simple-file-upload.php`](examples/simple-file-upload.php).",
+              "lines": [
+                166,
+                201
+              ],
+              "name": "Authentication with OAuth ###",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "If you want to a specific JSON key instead of using `GOOGLE_APPLICATION_CREDENTIALS` environment variable, you can do this:",
+                  "lines": [
+                    238,
+                    250
+                  ],
+                  "name": "How to use a specific JSON key",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "> An example of this can be seen in [`examples/service-account.php`](examples/service-account.php).",
+              "lines": [
+                202,
+                250
+              ],
+              "name": "Authentication with Service Accounts ###",
+              "type": "subsection"
+            },
+            {
+              "docstring": "The classes used to call the API in [google-api-php-client-services](https://github.com/googleapis/google-api-php-client-services) are autogenerated.",
+              "lines": [
+                251,
+                333
+              ],
+              "name": "Making Requests ###",
+              "type": "subsection"
+            },
+            {
+              "docstring": "If Google Authentication is desired for external applications, or a Google API is not available yet in this library, HTTP requests can be made directl",
+              "lines": [
+                334,
+                360
+              ],
+              "name": "Making HTTP Requests Directly ###",
+              "type": "subsection"
+            },
+            {
+              "docstring": "It is recommended to use another caching library to improve performance. This can be done by passing a [PSR-6](https://www.php-fig.org/psr/psr-6/) com",
+              "lines": [
+                361,
+                382
+              ],
+              "name": "Caching ###",
+              "type": "subsection"
+            },
+            {
+              "docstring": "When using [Refresh Tokens](https://developers.google.com/identity/protocols/OAuth2InstalledApp#offline) or [Service Account Credentials](https://deve",
+              "lines": [
+                383,
+                394
+              ],
+              "name": "Updating Tokens ###",
+              "type": "subsection"
+            },
+            {
+              "docstring": "It is often very useful to debug your API calls by viewing the raw HTTP request. This library supports the use of [Charles Web Proxy](https://www.char",
+              "lines": [
+                395,
+                413
+              ],
+              "name": "Debugging Your HTTP Request using Charles ###",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Google API Client uses [Guzzle](http://docs.guzzlephp.org/) as its default HTTP client. That means that you can control your HTTP requests in the same",
+              "lines": [
+                414,
+                434
+              ],
+              "name": "Controlling HTTP Client Configuration Directly",
+              "type": "subsection"
+            },
+            {
+              "docstring": "When using OAuth2 3LO (e.g. you're a client requesting credentials from a 3rd party, such as in the [simple file upload example](examples/simple-file-",
+              "lines": [
+                435,
+                456
+              ],
+              "name": "Partial Consent and Granted Scopes",
+              "type": "subsection"
+            },
+            {
+              "docstring": "YouTube: https://github.com/youtube/api-samples/tree/master/php",
+              "lines": [
+                457,
+                460
+              ],
+              "name": "Service Specific Examples ###",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "See the [`examples/`](examples) directory for examples of the key client features. You can view them in your browser by running the php built-in web s",
+          "lines": [
+            133,
+            460
+          ],
+          "name": "Examples ##",
+          "type": "section"
+        },
+        {
+          "docstring": "Please see the [contributing](.github/CONTRIBUTING.md) page for more information. In particular, we love pull requests - but please make sure to sign",
+          "lines": [
+            461,
+            464
+          ],
+          "name": "How Do I Contribute? ##",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "For support with the library the best place to ask is via the google-api-php-client tag on StackOverflow: https://stackoverflow.com/questions/tagged/g",
+              "lines": [
+                467,
+                472
+              ],
+              "name": "What do I do if something isn't working? ###",
+              "type": "subsection"
+            },
+            {
+              "docstring": "If X is a feature of the library, file away! If X is an example of using a specific service, the best place to go is to the teams for those specific A",
+              "lines": [
+                473,
+                476
+              ],
+              "name": "I want an example of X! ###",
+              "type": "subsection"
+            },
+            {
+              "docstring": "The _Google\\Service_ classes are generally automatically generated from the API discovery documents: https://developers.google.com/discovery/. Sometim",
+              "lines": [
+                477,
+                480
+              ],
+              "name": "Why do some Google\\Service classes have weird names? ###",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Some services return XML or similar by default, rather than JSON, which is what the library supports. You can request a JSON response by adding an 'al",
+              "lines": [
+                481,
+                490
+              ],
+              "name": "How do I deal with non-JSON response types? ###",
+              "type": "subsection"
+            },
+            {
+              "docstring": "The library strips out nulls from the objects sent to the Google APIs as it is the default value of all of the uninitialized properties. To work aroun",
+              "lines": [
+                491,
+                494
+              ],
+              "name": "How do I set a field to null? ###",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            465,
+            494
+          ],
+          "name": "Frequently Asked Questions ##",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "To check for coding style violations, run",
+              "lines": [
+                501,
+                514
+              ],
+              "name": "Coding Style",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "Run the PHPUnit tests with PHPUnit. You can configure an API key and token in BaseTest.php to run all calls, but this will require some setup on the G",
+          "lines": [
+            495,
+            514
+          ],
+          "name": "Code Quality ##",
+          "type": "section"
+        }
+      ]
+    },
+    "SECURITY.md": {
+      "hash": "f045875316da",
+      "indexed_at": "2026-01-20T04:50:18.012605+00:00",
+      "language": "markdown",
+      "lines": 7,
+      "symbols": []
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.144924+00:00",
+  "version": "1.0"
+}

@@ -1,0 +1,429 @@
+{
+  "directory": "vendor/sebastian/type",
+  "files": {
+    "ChangeLog.md": {
+      "hash": "2204cf23a9e3",
+      "indexed_at": "2026-01-20T04:48:50.533797+00:00",
+      "language": "markdown",
+      "lines": 169,
+      "symbols": [
+        {
+          "children": [
+            {
+              "docstring": "* [#28](https://github.com/sebastianbergmann/type/pull/28): Potential undefined offset warning/notice",
+              "lines": [
+                7,
+                10
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            5,
+            10
+          ],
+          "name": "[3.2.1] - 2023-02-03",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#25](https://github.com/sebastianbergmann/type/issues/25): Support Disjunctive Normal Form types * Added `ReflectionMapper::fromParameterTypes()` *",
+              "lines": [
+                13,
+                19
+              ],
+              "name": "Added",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            11,
+            19
+          ],
+          "name": "[3.2.0] - 2022-09-12",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#21](https://github.com/sebastianbergmann/type/issues/21): Support `true` as stand-alone type",
+              "lines": [
+                22,
+                25
+              ],
+              "name": "Added",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            20,
+            25
+          ],
+          "name": "[3.1.0] - 2022-08-29",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Support for intersection types introduced in PHP 8.1 * Support for the `never` return type introduced in PHP 8.1 * Added `Type::isCallable()`, `Type",
+              "lines": [
+                28,
+                33
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* Renamed `ReflectionMapper::fromMethodReturnType(ReflectionMethod $method)` to `ReflectionMapper::fromReturnType(ReflectionFunctionAbstract $function",
+              "lines": [
+                34,
+                37
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* Removed `Type::getReturnTypeDeclaration()` (use `Type::asString()` instead and prefix its result with `': '`) * Removed `TypeName::getNamespaceName(",
+              "lines": [
+                38,
+                44
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            26,
+            44
+          ],
+          "name": "[3.0.0] - 2022-03-15",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Fixed regression introduced in 2.3.3",
+              "lines": [
+                47,
+                50
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            45,
+            50
+          ],
+          "name": "[2.3.4] - 2021-06-15",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#15](https://github.com/sebastianbergmann/type/issues/15): \"false\" pseudo type is not handled properly",
+              "lines": [
+                53,
+                56
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            51,
+            56
+          ],
+          "name": "[2.3.3] - 2021-06-15 [YANKED]",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Fixed handling of tentatively declared return types",
+              "lines": [
+                59,
+                62
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            57,
+            62
+          ],
+          "name": "[2.3.2] - 2021-06-04",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* `SebastianBergmann\\Type\\Exception` now correctly extends `\\Throwable`",
+              "lines": [
+                65,
+                68
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            63,
+            68
+          ],
+          "name": "[2.3.1] - 2020-10-26",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#14](https://github.com/sebastianbergmann/type/issues/14): Support for `static` return type that is introduced in PHP 8",
+              "lines": [
+                71,
+                74
+              ],
+              "name": "Added",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            69,
+            74
+          ],
+          "name": "[2.3.0] - 2020-10-06",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Changed PHP version constraint in `composer.json` from `^7.3 || ^8.0` to `>=7.3`",
+              "lines": [
+                77,
+                80
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            75,
+            80
+          ],
+          "name": "[2.2.2] - 2020-09-28",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Fixed handling of `mixed` type in `ReflectionMapper::fromMethodReturnType()`",
+              "lines": [
+                83,
+                86
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            81,
+            86
+          ],
+          "name": "[2.2.1] - 2020-07-05",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Added `MixedType` object for representing PHP 8's `mixed` type",
+              "lines": [
+                89,
+                92
+              ],
+              "name": "Added",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            87,
+            92
+          ],
+          "name": "[2.2.0] - 2020-07-05",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* This component is now supported on PHP 8",
+              "lines": [
+                95,
+                98
+              ],
+              "name": "Added",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            93,
+            98
+          ],
+          "name": "[2.1.1] - 2020-06-26",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Added `UnionType` object for representing PHP 8's Union Types * Added `ReflectionMapper::fromMethodReturnType()` for mapping `\\ReflectionMethod::get",
+              "lines": [
+                101,
+                107
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* Deprecated `Type::getReturnTypeDeclaration()` (use `Type::asString()` instead and prefix its result with `': '`) * Deprecated `TypeName::getNamespac",
+              "lines": [
+                108,
+                114
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            99,
+            114
+          ],
+          "name": "[2.1.0] - 2020-06-01",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* This component is no longer supported on PHP 7.2",
+              "lines": [
+                117,
+                120
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            115,
+            120
+          ],
+          "name": "[2.0.0] - 2020-02-07",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Fixed class name comparison in `ObjectType` to be case-insensitive",
+              "lines": [
+                123,
+                126
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            121,
+            126
+          ],
+          "name": "[1.1.3] - 2019-07-02",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Fixed handling of `object` type",
+              "lines": [
+                129,
+                132
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            127,
+            132
+          ],
+          "name": "[1.1.2] - 2019-06-19",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Fixed autoloading of `callback_function.php` fixture file",
+              "lines": [
+                135,
+                138
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            133,
+            138
+          ],
+          "name": "[1.1.1] - 2019-06-08",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Added support for `callable` type * Added support for `iterable` type",
+              "lines": [
+                141,
+                145
+              ],
+              "name": "Added",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            139,
+            145
+          ],
+          "name": "[1.1.0] - 2019-06-07",
+          "type": "section"
+        },
+        {
+          "docstring": "* Initial release based on [code contributed by Michel Hartmann to PHPUnit](https://github.com/sebastianbergmann/phpunit/pull/3673)",
+          "lines": [
+            146,
+            170
+          ],
+          "name": "[1.0.0] - 2019-06-06",
+          "type": "section"
+        }
+      ]
+    },
+    "README.md": {
+      "hash": "5b3253f8157a",
+      "indexed_at": "2026-01-20T04:48:51.529719+00:00",
+      "language": "markdown",
+      "lines": 20,
+      "symbols": [
+        {
+          "docstring": "You can add this library as a local, per-project dependency to your project using [Composer](https://getcomposer.org/):",
+          "lines": [
+            8,
+            21
+          ],
+          "name": "Installation",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.126324+00:00",
+  "version": "1.0"
+}

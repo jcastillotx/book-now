@@ -1,0 +1,425 @@
+{
+  "directory": ".claude/agents/goal",
+  "files": {
+    "agent.md": {
+      "hash": "9d8a8539a3ce",
+      "indexed_at": "2026-01-20T04:50:25.584972+00:00",
+      "language": "markdown",
+      "lines": 816,
+      "symbols": [
+        {
+          "children": [
+            {
+              "docstring": "- Hierarchical goal breakdown using dependency analysis - Graph-based representation of goal-action relationships - Automatic identification of prereq",
+              "lines": [
+                10,
+                15
+              ],
+              "name": "\ud83e\udde0 Dynamic Goal Decomposition",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Action-state graph optimization using advanced matrix operations - Cost-benefit analysis through diagonally dominant system solving - Real-time plan",
+              "lines": [
+                16,
+                21
+              ],
+              "name": "\u26a1 Sublinear Optimization",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- PageRank-based action and goal prioritization - Multi-objective optimization with weighted criteria - Critical path identification for time-sensitiv",
+              "lines": [
+                22,
+                27
+              ],
+              "name": "\ud83c\udfaf Intelligent Prioritization",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Temporal computational advantage for future state prediction - Proactive action planning before conditions materialize - Risk assessment and conting",
+              "lines": [
+                28,
+                33
+              ],
+              "name": "\ud83d\udd2e Predictive Planning",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Distributed goal achievement through swarm coordination - Load balancing for parallel objective execution - Inter-agent communication for shared goa",
+              "lines": [
+                34,
+                39
+              ],
+              "name": "\ud83e\udd1d Multi-Agent Coordination",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            8,
+            39
+          ],
+          "name": "Core Capabilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- `mcp__sublinear-time-solver__solve` - Optimize action sequences and resource allocation - `mcp__sublinear-time-solver__pageRank` - Prioritize goals",
+              "lines": [
+                42,
+                50
+              ],
+              "name": "Sublinear-Time Solver Tools",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- `mcp__flow-nexus__swarm_init` - Initialize multi-agent execution systems - `mcp__flow-nexus__task_orchestrate` - Execute planned action sequences -",
+              "lines": [
+                51,
+                57
+              ],
+              "name": "Claude Flow Integration Tools",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            40,
+            57
+          ],
+          "name": "Primary Tools",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                60,
+                110
+              ],
+              "name": "1. State Space Modeling",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                111,
+                143
+              ],
+              "name": "2. Action Graph Construction",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                144,
+                169
+              ],
+              "name": "3. Goal Prioritization with PageRank",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                170,
+                197
+              ],
+              "name": "4. Temporal Advantage Planning",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                198,
+                248
+              ],
+              "name": "5. A* Search with Sublinear Optimization",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            58,
+            248
+          ],
+          "name": "Workflow",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                251,
+                287
+              ],
+              "name": "Swarm-Based Planning",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                288,
+                312
+              ],
+              "name": "Consensus-Based Decision Making",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            249,
+            312
+          ],
+          "name": "\ud83c\udf10 Multi-Agent Coordination",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                315,
+                349
+              ],
+              "name": "1. Hierarchical Goal Decomposition",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                350,
+                425
+              ],
+              "name": "2. Dynamic Replanning",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                426,
+                478
+              ],
+              "name": "3. Learning from Execution",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            313,
+            478
+          ],
+          "name": "\ud83c\udfaf Advanced Planning Workflows",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                481,
+                535
+              ],
+              "name": "Behavior Tree Implementation",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                536,
+                589
+              ],
+              "name": "Utility-Based Action Selection",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            479,
+            589
+          ],
+          "name": "\ud83c\udfae Gaming AI Integration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                592,
+                620
+              ],
+              "name": "Example 1: Complex Project Planning",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                621,
+                639
+              ],
+              "name": "Example 2: Resource Allocation Optimization",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                640,
+                655
+              ],
+              "name": "Example 3: Predictive Action Planning",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                656,
+                679
+              ],
+              "name": "Example 4: Multi-Agent Goal Coordination",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                680,
+                704
+              ],
+              "name": "Example 5: Adaptive Replanning",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            590,
+            704
+          ],
+          "name": "Usage Examples",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Complex Multi-Step Objectives**: When goals require multiple interconnected actions - **Resource Constraints**: When optimization of time, cost, o",
+              "lines": [
+                707,
+                713
+              ],
+              "name": "When to Use GOAP",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                714,
+                726
+              ],
+              "name": "Goal Structure Optimization",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Coordinate with swarm agents** for distributed execution - **Use neural agents** for learning from past planning success - **Integrate with workfl",
+              "lines": [
+                727,
+                732
+              ],
+              "name": "Integration with Other Agents",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Matrix Sparsity**: Use sparse representations for large goal networks - **Incremental Updates**: Update existing plans rather than rebuilding - **",
+              "lines": [
+                733,
+                738
+              ],
+              "name": "Performance Optimization",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                739,
+                751
+              ],
+              "name": "Error Handling & Resilience",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Real-time Progress Tracking**: Monitor action completion and resource usage - **Deviation Detection**: Identify when actual progress differs from",
+              "lines": [
+                752,
+                757
+              ],
+              "name": "Monitoring & Adaptation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            705,
+            757
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                760,
+                777
+              ],
+              "name": "Customizing Planning Parameters",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                778,
+                795
+              ],
+              "name": "Error Handling and Recovery",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            758,
+            795
+          ],
+          "name": "\ud83d\udd27 Advanced Configuration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Leverage light-speed delays for predictive planning: - Plan actions before market data arrives from distant sources - Optimize resource allocation wit",
+              "lines": [
+                798,
+                803
+              ],
+              "name": "Temporal Computational Advantage",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Model goals as constraint satisfaction problems - Use graph theory for dependency analysis - Apply linear algebra for optimization - Implement feedb",
+              "lines": [
+                804,
+                809
+              ],
+              "name": "Matrix-Based Goal Modeling",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Generate novel action combinations through matrix operations - Explore solution spaces beyond obvious approaches - Identify emergent opportunities f",
+              "lines": [
+                810,
+                816
+              ],
+              "name": "Creative Solution Discovery",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            796,
+            816
+          ],
+          "name": "Advanced Features",
+          "type": "section"
+        }
+      ]
+    },
+    "goal-planner.md": {
+      "hash": "d075440c59a4",
+      "indexed_at": "2026-01-20T04:50:25.585162+00:00",
+      "language": "markdown",
+      "lines": 73,
+      "symbols": [
+        {
+          "lines": [
+            50,
+            73
+          ],
+          "name": "MCP Integration Examples",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.194726+00:00",
+  "version": "1.0"
+}

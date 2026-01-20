@@ -1,0 +1,655 @@
+{
+  "directory": ".claude/skills/sparc-methodology",
+  "files": {
+    "SKILL.md": {
+      "hash": "1f0c7e6e8405",
+      "indexed_at": "2026-01-20T04:50:25.496846+00:00",
+      "language": "markdown",
+      "lines": 1115,
+      "symbols": [
+        {
+          "docstring": "SPARC (Specification, Pseudocode, Architecture, Refinement, Completion) is a systematic development methodology integrated with Claude Flow's multi-ag",
+          "lines": [
+            18,
+            21
+          ],
+          "name": "Overview",
+          "type": "section"
+        },
+        {
+          "docstring": "1. [Core Philosophy](#core-philosophy) 2. [Development Phases](#development-phases) 3. [Available Modes](#available-modes) 4. [Activation Methods](#ac",
+          "lines": [
+            22,
+            35
+          ],
+          "name": "Table of Contents",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "1. **Specification Before Code**: Define requirements and constraints clearly 2. **Design Before Implementation**: Plan architecture and components 3.",
+              "lines": [
+                47,
+                56
+              ],
+              "name": "Key Principles",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "SPARC methodology emphasizes:",
+          "lines": [
+            36,
+            56
+          ],
+          "name": "Core Philosophy",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "**Goal**: Define requirements, constraints, and success criteria",
+              "lines": [
+                59,
+                69
+              ],
+              "name": "Phase 1: Specification",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Goal**: Design system structure and component interfaces",
+              "lines": [
+                70,
+                80
+              ],
+              "name": "Phase 2: Architecture",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Goal**: Implement features with test-first approach",
+              "lines": [
+                81,
+                91
+              ],
+              "name": "Phase 3: Refinement (TDD Implementation)",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Goal**: Ensure code quality, security, and performance",
+              "lines": [
+                92,
+                102
+              ],
+              "name": "Phase 4: Review",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Goal**: Integration, deployment, and monitoring",
+              "lines": [
+                103,
+                115
+              ],
+              "name": "Phase 5: Completion",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            57,
+            115
+          ],
+          "name": "Development Phases",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "Multi-agent task orchestration with TodoWrite/Task/Memory coordination.",
+                  "lines": [
+                    120,
+                    138
+                  ],
+                  "name": "`orchestrator`",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Specialized swarm management for complex multi-agent workflows.",
+                  "lines": [
+                    139,
+                    148
+                  ],
+                  "name": "`swarm-coordinator`",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Process automation and workflow orchestration.",
+                  "lines": [
+                    149,
+                    158
+                  ],
+                  "name": "`workflow-manager`",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Parallel task execution for high-throughput operations.",
+                  "lines": [
+                    159,
+                    170
+                  ],
+                  "name": "`batch-executor`",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                118,
+                170
+              ],
+              "name": "Core Orchestration Modes",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "Autonomous code generation with batch file operations.",
+                  "lines": [
+                    173,
+                    202
+                  ],
+                  "name": "`coder`",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "System design with Memory-based coordination.",
+                  "lines": [
+                    203,
+                    238
+                  ],
+                  "name": "`architect`",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Test-driven development with comprehensive testing.",
+                  "lines": [
+                    239,
+                    275
+                  ],
+                  "name": "`tdd`",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Code review using batch file analysis.",
+                  "lines": [
+                    276,
+                    316
+                  ],
+                  "name": "`reviewer`",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                171,
+                316
+              ],
+              "name": "Development Modes",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "Deep research with parallel WebSearch/WebFetch and Memory coordination.",
+                  "lines": [
+                    319,
+                    355
+                  ],
+                  "name": "`researcher`",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Code and data analysis with pattern recognition.",
+                  "lines": [
+                    356,
+                    365
+                  ],
+                  "name": "`analyzer`",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Performance optimization and bottleneck resolution.",
+                  "lines": [
+                    366,
+                    377
+                  ],
+                  "name": "`optimizer`",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                317,
+                377
+              ],
+              "name": "Analysis and Research Modes",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "UI/UX design with accessibility focus.",
+                  "lines": [
+                    380,
+                    389
+                  ],
+                  "name": "`designer`",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Creative problem-solving and novel solutions.",
+                  "lines": [
+                    390,
+                    399
+                  ],
+                  "name": "`innovator`",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Comprehensive documentation generation.",
+                  "lines": [
+                    400,
+                    409
+                  ],
+                  "name": "`documenter`",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Systematic debugging and issue resolution.",
+                  "lines": [
+                    410,
+                    419
+                  ],
+                  "name": "`debugger`",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Comprehensive testing beyond TDD.",
+                  "lines": [
+                    420,
+                    429
+                  ],
+                  "name": "`tester`",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Knowledge management and context preservation.",
+                  "lines": [
+                    430,
+                    441
+                  ],
+                  "name": "`memory-manager`",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                378,
+                441
+              ],
+              "name": "Creative and Support Modes",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            116,
+            441
+          ],
+          "name": "Available Modes",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "**Best for**: Integrated Claude Code workflows with full orchestration capabilities",
+              "lines": [
+                444,
+                477
+              ],
+              "name": "Method 1: MCP Tools (Preferred in Claude Code)",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Best for**: Terminal usage or when MCP tools unavailable",
+              "lines": [
+                478,
+                507
+              ],
+              "name": "Method 2: NPX CLI (Fallback)",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Best for**: Projects with local claude-flow installation",
+              "lines": [
+                508,
+                518
+              ],
+              "name": "Method 3: Local Installation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            442,
+            518
+          ],
+          "name": "Activation Methods",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "**Best for**: Complex projects with clear delegation hierarchy",
+              "lines": [
+                521,
+                544
+              ],
+              "name": "Pattern 1: Hierarchical Coordination",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Best for**: Collaborative tasks requiring peer-to-peer communication",
+              "lines": [
+                545,
+                556
+              ],
+              "name": "Pattern 2: Mesh Coordination",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Best for**: Ordered workflow execution (spec \u2192 design \u2192 code \u2192 test \u2192 review)",
+              "lines": [
+                557,
+                574
+              ],
+              "name": "Pattern 3: Sequential Pipeline",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Best for**: Independent tasks that can run concurrently",
+              "lines": [
+                575,
+                591
+              ],
+              "name": "Pattern 4: Parallel Execution",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Best for**: Dynamic workloads with changing requirements",
+              "lines": [
+                592,
+                605
+              ],
+              "name": "Pattern 5: Adaptive Strategy",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            519,
+            605
+          ],
+          "name": "Orchestration Patterns",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                608,
+                656
+              ],
+              "name": "Complete TDD Workflow",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                657,
+                683
+              ],
+              "name": "Red-Green-Refactor Cycle",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            606,
+            683
+          ],
+          "name": "TDD Workflows",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "**Always use Memory for cross-agent coordination**:",
+              "lines": [
+                686,
+                707
+              ],
+              "name": "1. Memory Integration",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Batch all related operations in single message**:",
+              "lines": [
+                708,
+                725
+              ],
+              "name": "2. Parallel Operations",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Every SPARC mode should use hooks**:",
+              "lines": [
+                726,
+                740
+              ],
+              "name": "3. Hook Integration",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Maintain minimum 90% coverage**:",
+              "lines": [
+                741,
+                750
+              ],
+              "name": "4. Test Coverage",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Document as you build**:",
+              "lines": [
+                751,
+                760
+              ],
+              "name": "5. Documentation",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Never save to root folder**:",
+              "lines": [
+                761,
+                776
+              ],
+              "name": "6. File Organization",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            684,
+            776
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                779,
+                838
+              ],
+              "name": "Example 1: Full-Stack Development",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                839,
+                878
+              ],
+              "name": "Example 2: Research-Driven Innovation",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                879,
+                916
+              ],
+              "name": "Example 3: Legacy Code Refactoring",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            777,
+            916
+          ],
+          "name": "Integration Examples",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                919,
+                937
+              ],
+              "name": "Workflow 1: Feature Development",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                938,
+                953
+              ],
+              "name": "Workflow 2: Bug Investigation",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                954,
+                969
+              ],
+              "name": "Workflow 3: Performance Optimization",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                970,
+                987
+              ],
+              "name": "Workflow 4: Complete Pipeline",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            917,
+            987
+          ],
+          "name": "Common Workflows",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                990,
+                1000
+              ],
+              "name": "Neural Pattern Training",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                1001,
+                1014
+              ],
+              "name": "Cross-Session Memory",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                1015,
+                1031
+              ],
+              "name": "GitHub Integration",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                1032,
+                1055
+              ],
+              "name": "Performance Monitoring",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            988,
+            1055
+          ],
+          "name": "Advanced Features",
+          "type": "section"
+        },
+        {
+          "docstring": "**Proven Results**: - **84.8%** SWE-Bench solve rate - **32.3%** token reduction through optimizations - **2.8-4.4x** speed improvement with parallel",
+          "lines": [
+            1056,
+            1066
+          ],
+          "name": "Performance Benefits",
+          "type": "section"
+        },
+        {
+          "docstring": "- **Documentation**: https://github.com/ruvnet/claude-flow - **Issues**: https://github.com/ruvnet/claude-flow/issues - **NPM Package**: https://www.n",
+          "lines": [
+            1067,
+            1075
+          ],
+          "name": "Support and Resources",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                1078,
+                1096
+              ],
+              "name": "Most Common Commands",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                1097,
+                1116
+              ],
+              "name": "Most Common MCP Calls",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1076,
+            1116
+          ],
+          "name": "Quick Reference",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.158026+00:00",
+  "version": "1.0"
+}

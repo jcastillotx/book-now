@@ -1,0 +1,305 @@
+{
+  "directory": "vendor/phar-io/version",
+  "files": {
+    "CHANGELOG.md": {
+      "hash": "5f625dcf96fe",
+      "indexed_at": "2026-01-20T04:49:44.915749+00:00",
+      "language": "markdown",
+      "lines": 142,
+      "symbols": [
+        {
+          "children": [
+            {
+              "docstring": "- Have ExactVersionConstraint honor build metadata (added in 3.2.0)",
+              "lines": [
+                7,
+                11
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            5,
+            11
+          ],
+          "name": "[3.2.1] - 2022-02-21",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Build metadata is now supported and considered for equality checks only",
+              "lines": [
+                14,
+                18
+              ],
+              "name": "Added",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            12,
+            18
+          ],
+          "name": "[3.2.0] - 2022-02-21",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- [#28](https://github.com/phar-io/version/issues/28): `VersionConstraintParser` does not support logical OR represented by single pipe (|) (Thanks @l",
+              "lines": [
+                21,
+                25
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            19,
+            25
+          ],
+          "name": "[3.1.1] - 2022-02-07",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Internal Refactoring - More scalar types",
+              "lines": [
+                28,
+                32
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [#24](https://github.com/phar-io/version/issues/24): `Version::getOriginalString()` added (Thanks @addshore) - Version constraints using the caret o",
+              "lines": [
+                33,
+                38
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [#23](https://github.com/phar-io/version/pull/23): Tilde operator without patch level",
+              "lines": [
+                39,
+                44
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            26,
+            44
+          ],
+          "name": "[3.1.0] - 2021-02-23",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- [#22](https://github.com/phar-io/version/pull/22): make dev suffix rank works for uppercase too",
+              "lines": [
+                47,
+                50
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            45,
+            50
+          ],
+          "name": "[3.0.4] - 14.12.2020",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Comparator method `Version::equals()` added",
+              "lines": [
+                53,
+                57
+              ],
+              "name": "Added",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            51,
+            57
+          ],
+          "name": "[3.0.3] - 30.11.2020",
+          "type": "section"
+        },
+        {
+          "docstring": "This release now supports PHP 7.2+ and PHP ^8.0. No other changes included.",
+          "lines": [
+            58,
+            62
+          ],
+          "name": "[3.0.2] - 27.06.2020",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Internal Refactoring - More scalar types",
+              "lines": [
+                72,
+                76
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed Constraint processing Regression for ^1.2  and ~1.2",
+              "lines": [
+                77,
+                81
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "__Potential BC Break Notice:__ `Version::getVersionString()` no longer returns `v` prefixes in case the \"input\" string contained one. These are not pa",
+          "lines": [
+            63,
+            81
+          ],
+          "name": "[3.0.1] - 09.05.2020",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Require PHP 7.2+ - All code now uses strict mode - Scalar types have been added as needed",
+              "lines": [
+                84,
+                89
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- The technically invalid format using 'v' prefix (\"v1.2.3\") is now properly supported",
+              "lines": [
+                90,
+                94
+              ],
+              "name": "Added",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            82,
+            94
+          ],
+          "name": "[3.0.0] - 05.05.2020",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Versions without a pre-release suffix are now always considered greater than versions with a pre-release suffix. Example: `3.0.0 > 3.0.0-alpha.1`",
+              "lines": [
+                97,
+                102
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            95,
+            102
+          ],
+          "name": "[2.0.1] - 08.07.2018",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- [#11](https://github.com/phar-io/version/issues/11): Added support for pre-release version suffixes. Supported values are: - `dev` - `beta` (also ab",
+              "lines": [
+                111,
+                124
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- reorganized the source directories",
+              "lines": [
+                125,
+                128
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [#10](https://github.com/phar-io/version/issues/10): Version numbers containing a numeric suffix as seen in Debian packages are now supported.",
+              "lines": [
+                129,
+                143
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "Changes to public API:",
+          "lines": [
+            103,
+            143
+          ],
+          "name": "[2.0.0] - 23.06.2018",
+          "type": "section"
+        }
+      ]
+    },
+    "README.md": {
+      "hash": "5b22b08ba710",
+      "indexed_at": "2026-01-20T04:49:46.124210+00:00",
+      "language": "markdown",
+      "lines": 61,
+      "symbols": [
+        {
+          "docstring": "You can add this library as a local, per-project dependency to your project using [Composer](https://getcomposer.org/):",
+          "lines": [
+            7,
+            16
+          ],
+          "name": "Installation",
+          "type": "section"
+        },
+        {
+          "docstring": "A Version constraint describes a range of versions or a discrete version number. The format of version numbers follows the schema of [semantic version",
+          "lines": [
+            17,
+            28
+          ],
+          "name": "Version constraints",
+          "type": "section"
+        },
+        {
+          "docstring": "Parsing version constraints and check discrete versions for compliance:",
+          "lines": [
+            29,
+            62
+          ],
+          "name": "Usage examples",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.134662+00:00",
+  "version": "1.0"
+}

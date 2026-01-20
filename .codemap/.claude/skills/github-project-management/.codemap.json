@@ -1,0 +1,984 @@
+{
+  "directory": ".claude/skills/github-project-management",
+  "files": {
+    "SKILL.md": {
+      "hash": "914aa3cb28e4",
+      "indexed_at": "2026-01-20T04:50:25.513548+00:00",
+      "language": "markdown",
+      "lines": 1277,
+      "symbols": [
+        {
+          "docstring": "A comprehensive skill for managing GitHub projects using AI swarm coordination. This skill combines intelligent issue management, automated project bo",
+          "lines": [
+            37,
+            40
+          ],
+          "name": "Overview",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                43,
+                55
+              ],
+              "name": "Basic Issue Creation with Swarm Coordination",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                56,
+                70
+              ],
+              "name": "Project Board Quick Setup",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            41,
+            70
+          ],
+          "name": "Quick Start",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "lines": [
+                    78,
+                    116
+                  ],
+                  "name": "Single Issue with Swarm Coordination",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    117,
+                    141
+                  ],
+                  "name": "Batch Issue Creation",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    142,
+                    165
+                  ],
+                  "name": "Transform Issues into Swarm Tasks",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Execute swarm operations via issue comments:",
+                  "lines": [
+                    166,
+                    183
+                  ],
+                  "name": "Issue Comment Commands",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    184,
+                    208
+                  ],
+                  "name": "Auto-Label Based on Content",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    209,
+                    230
+                  ],
+                  "name": "Automated Triage System",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    231,
+                    246
+                  ],
+                  "name": "Break Down Issues into Subtasks",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "<details> <summary><strong>Automated Issue Creation</strong></summary>",
+              "lines": [
+                73,
+                246
+              ],
+              "name": "1. Issue Management & Triage",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            71,
+            246
+          ],
+          "name": "Core Capabilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                266,
+                288
+              ],
+              "name": "Automated Progress Updates",
+              "type": "subsubsection"
+            },
+            {
+              "docstring": "\\(.completed | map(\"- \u2705 \" + .) | join(\"\\n\"))",
+              "lines": [
+                289,
+                291
+              ],
+              "name": "Completed Tasks",
+              "type": "subsection"
+            },
+            {
+              "docstring": "\\(.in_progress | map(\"- \ud83d\udd04 \" + .) | join(\"\\n\"))",
+              "lines": [
+                292,
+                294
+              ],
+              "name": "In Progress",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "lines": [
+                    314,
+                    356
+                  ],
+                  "name": "Auto-Close Stale Issues with Swarm Analysis",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "\\(.remaining | map(\"- \u23f3 \" + .) | join(\"\\n\"))",
+              "lines": [
+                295,
+                356
+              ],
+              "name": "Remaining",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "lines": [
+                    362,
+                    381
+                  ],
+                  "name": "Connect Swarm to GitHub Project",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    382,
+                    433
+                  ],
+                  "name": "Board Mapping Configuration",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    434,
+                    454
+                  ],
+                  "name": "Real-time Board Sync",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    455,
+                    478
+                  ],
+                  "name": "Convert Issues to Project Cards",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    479,
+                    488
+                  ],
+                  "name": "Auto-Assignment",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    489,
+                    500
+                  ],
+                  "name": "Intelligent Card State Transitions",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    501,
+                    515
+                  ],
+                  "name": "Bulk Operations",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    516,
+                    545
+                  ],
+                  "name": "View Configuration",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    546,
+                    576
+                  ],
+                  "name": "Dashboard Configuration",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "<details> <summary><strong>Board Initialization & Configuration</strong></summary>",
+              "lines": [
+                357,
+                576
+              ],
+              "name": "2. Project Board Automation",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "lines": [
+                    582,
+                    599
+                  ],
+                  "name": "Initialize Sprint with Swarm Coordination",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    600,
+                    610
+                  ],
+                  "name": "Agile Development Board Setup",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    611,
+                    628
+                  ],
+                  "name": "Kanban Flow Board Setup",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    629,
+                    651
+                  ],
+                  "name": "Board Analytics",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    652,
+                    668
+                  ],
+                  "name": "Performance Reports",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    669,
+                    694
+                  ],
+                  "name": "KPI Tracking",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    695,
+                    707
+                  ],
+                  "name": "Release Coordination",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "<details> <summary><strong>Sprint Management</strong></summary>",
+              "lines": [
+                577,
+                707
+              ],
+              "name": "3. Sprint Planning & Tracking",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "lines": [
+                    713,
+                    736
+                  ],
+                  "name": "Cross-Board Sync",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    737,
+                    746
+                  ],
+                  "name": "Dependency Resolution",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    747,
+                    761
+                  ],
+                  "name": "Epic Coordination",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    762,
+                    776
+                  ],
+                  "name": "Multi-Repo Issue Management",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    777,
+                    787
+                  ],
+                  "name": "Work Distribution",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    788,
+                    798
+                  ],
+                  "name": "Standup Automation",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    799,
+                    813
+                  ],
+                  "name": "Review Coordination",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "<details> <summary><strong>Multi-Board Synchronization</strong></summary>",
+              "lines": [
+                708,
+                813
+              ],
+              "name": "4. Advanced Coordination",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "$CHECKLIST\"",
+          "lines": [
+            247,
+            813
+          ],
+          "name": "Subtasks",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                816,
+                818
+              ],
+              "name": "Integration Issue Template",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            814,
+            818
+          ],
+          "name": "Issue Templates",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "[Brief description of integration requirements]",
+              "lines": [
+                821,
+                823
+              ],
+              "name": "Overview",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [ ] Component A integration - [ ] Component B validation - [ ] Testing and verification - [ ] Documentation updates",
+              "lines": [
+                824,
+                829
+              ],
+              "name": "Objectives",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "- [ ] Package.json updates - [ ] Version compatibility - [ ] Import statements",
+                  "lines": [
+                    831,
+                    835
+                  ],
+                  "name": "Dependencies",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "- [ ] Core feature integration - [ ] API compatibility - [ ] Performance validation",
+                  "lines": [
+                    836,
+                    840
+                  ],
+                  "name": "Functionality",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "- [ ] Unit tests - [ ] Integration tests - [ ] End-to-end validation",
+                  "lines": [
+                    841,
+                    845
+                  ],
+                  "name": "Testing",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                830,
+                845
+              ],
+              "name": "Integration Areas",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Coordinator**: Overall progress tracking - **Analyst**: Technical validation - **Tester**: Quality assurance - **Documenter**: Documentation updat",
+              "lines": [
+                846,
+                851
+              ],
+              "name": "Swarm Coordination",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Updates will be posted automatically by swarm agents during implementation.",
+              "lines": [
+                852,
+                858
+              ],
+              "name": "Progress Tracking",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                859,
+                861
+              ],
+              "name": "Bug Report Template",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            819,
+            861
+          ],
+          "name": "\ud83d\udd04 Integration Task",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "[Clear description of the issue]",
+              "lines": [
+                864,
+                866
+              ],
+              "name": "Problem Description",
+              "type": "subsection"
+            },
+            {
+              "docstring": "[What should happen]",
+              "lines": [
+                867,
+                869
+              ],
+              "name": "Expected Behavior",
+              "type": "subsection"
+            },
+            {
+              "docstring": "[What actually happens]",
+              "lines": [
+                870,
+                872
+              ],
+              "name": "Actual Behavior",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. [Step 1] 2. [Step 2] 3. [Step 3]",
+              "lines": [
+                873,
+                877
+              ],
+              "name": "Reproduction Steps",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Package: [package name and version] - Node.js: [version] - OS: [operating system]",
+              "lines": [
+                878,
+                882
+              ],
+              "name": "Environment",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [ ] Root cause analysis - [ ] Fix implementation - [ ] Testing and validation - [ ] Regression testing",
+              "lines": [
+                883,
+                888
+              ],
+              "name": "Investigation Plan",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Debugger**: Issue investigation - **Coder**: Fix implementation - **Tester**: Validation and testing",
+              "lines": [
+                889,
+                897
+              ],
+              "name": "Swarm Assignment",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                898,
+                900
+              ],
+              "name": "Feature Request Template",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            862,
+            900
+          ],
+          "name": "\ud83d\udc1b Bug Report",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "[Clear description of the proposed feature]",
+              "lines": [
+                903,
+                905
+              ],
+              "name": "Feature Description",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. [Use case 1] 2. [Use case 2] 3. [Use case 3]",
+              "lines": [
+                906,
+                910
+              ],
+              "name": "Use Cases",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [ ] Criterion 1 - [ ] Criterion 2 - [ ] Criterion 3",
+              "lines": [
+                911,
+                915
+              ],
+              "name": "Acceptance Criteria",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "- [ ] Architecture design - [ ] API design - [ ] UI/UX mockups",
+                  "lines": [
+                    917,
+                    921
+                  ],
+                  "name": "Design",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "- [ ] Core implementation - [ ] Integration with existing features - [ ] Performance optimization",
+                  "lines": [
+                    922,
+                    926
+                  ],
+                  "name": "Development",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "- [ ] Unit tests - [ ] Integration tests - [ ] User acceptance testing",
+                  "lines": [
+                    927,
+                    931
+                  ],
+                  "name": "Testing",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                916,
+                931
+              ],
+              "name": "Implementation Approach",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Architect**: Design and planning - **Coder**: Implementation - **Tester**: Quality assurance - **Documenter**: Documentation",
+              "lines": [
+                932,
+                941
+              ],
+              "name": "Swarm Coordination",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                942,
+                973
+              ],
+              "name": "Swarm Task Template",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            901,
+            973
+          ],
+          "name": "\u2728 Feature Request",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                976,
+                997
+              ],
+              "name": "GitHub Actions for Issue Management",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                998,
+                1012
+              ],
+              "name": "Board Integration Workflow",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            974,
+            1012
+          ],
+          "name": "Workflow Integration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                1015,
+                1025
+              ],
+              "name": "Bug Investigation Swarm",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                1026,
+                1036
+              ],
+              "name": "Feature Implementation Swarm",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                1037,
+                1049
+              ],
+              "name": "Technical Debt Refactoring",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1013,
+            1049
+          ],
+          "name": "Specialized Issue Strategies",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Always initialize swarm for complex issues - Assign specialized agents based on issue type - Use memory for progress coordination - Regular automate",
+              "lines": [
+                1052,
+                1057
+              ],
+              "name": "1. Swarm-Coordinated Issue Management",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Clear column definitions with consistent naming - Systematic labeling strategy across repositories - Regular board grooming and maintenance - Well-d",
+              "lines": [
+                1058,
+                1063
+              ],
+              "name": "2. Board Organization",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Bidirectional sync validation - Conflict resolution strategies - Comprehensive audit trails - Regular backups of project data",
+              "lines": [
+                1064,
+                1069
+              ],
+              "name": "3. Data Integrity",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Comprehensive training materials - Clear, documented workflows - Regular team reviews and retrospectives - Active feedback loops for improvement",
+              "lines": [
+                1070,
+                1075
+              ],
+              "name": "4. Team Adoption",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Consistent labeling strategy across repositories - Priority-based issue sorting and assignment - Milestone integration for project coordination - Ag",
+              "lines": [
+                1076,
+                1081
+              ],
+              "name": "5. Smart Labeling and Organization",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Regular automated updates with swarm coordination - Progress metrics and completion tracking - Cross-issue dependency management - Real-time status",
+              "lines": [
+                1082,
+                1089
+              ],
+              "name": "6. Automated Progress Tracking",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1050,
+            1089
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                1092,
+                1101
+              ],
+              "name": "Sync Issues",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                1102,
+                1112
+              ],
+              "name": "Performance Optimization",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                1113,
+                1125
+              ],
+              "name": "Data Recovery",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1090,
+            1125
+          ],
+          "name": "Troubleshooting",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Automatic tracking of: - Issue creation and resolution times - Agent productivity metrics - Project milestone progress - Cross-repository coordination",
+              "lines": [
+                1128,
+                1138
+              ],
+              "name": "Performance Metrics",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Weekly progress summaries - Agent performance analytics - Project health metrics - Integration success rates - Team collaboration metrics - Quality",
+              "lines": [
+                1139,
+                1147
+              ],
+              "name": "Reporting Features",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                1148,
+                1156
+              ],
+              "name": "Issue Resolution Time",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                1157,
+                1167
+              ],
+              "name": "Swarm Effectiveness",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1126,
+            1167
+          ],
+          "name": "Metrics & Analytics",
+          "type": "section"
+        },
+        {
+          "docstring": "1. **Command Authorization**: Validate user permissions before executing commands 2. **Rate Limiting**: Prevent spam and abuse of issue commands 3. **",
+          "lines": [
+            1168,
+            1178
+          ],
+          "name": "Security & Permissions",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- `github-pr-workflow` - Link issues to pull requests automatically - `github-release-management` - Coordinate release issues and milestones - `sparc-",
+              "lines": [
+                1181,
+                1188
+              ],
+              "name": "Seamless Integration With:",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1179,
+            1188
+          ],
+          "name": "Integration with Other Skills",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                1191,
+                1197
+              ],
+              "name": "Full-Stack Feature Development",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1189,
+            1197
+          ],
+          "name": "Complete Workflow Example",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Implement real-time collaboration features using WebSockets.",
+              "lines": [
+                1200,
+                1202
+              ],
+              "name": "Overview",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [ ] WebSocket server setup - [ ] Client-side integration - [ ] Presence tracking - [ ] Conflict resolution - [ ] Testing and documentation",
+              "lines": [
+                1203,
+                1209
+              ],
+              "name": "Objectives",
+              "type": "subsection"
+            },
+            {
+              "docstring": "This feature will use mesh topology for parallel development. EOF )\" \\ --label \"enhancement,swarm-ready,high-priority\"",
+              "lines": [
+                1210,
+                1240
+              ],
+              "name": "Swarm Coordination",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1198,
+            1240
+          ],
+          "name": "Feature: Real-time Collaboration",
+          "type": "section"
+        },
+        {
+          "lines": [
+            1241,
+            1265
+          ],
+          "name": "Quick Reference Commands",
+          "type": "section"
+        },
+        {
+          "docstring": "- [GitHub CLI Documentation](https://cli.github.com/manual/) - [GitHub Projects Documentation](https://docs.github.com/en/issues/planning-and-tracking",
+          "lines": [
+            1266,
+            1278
+          ],
+          "name": "Additional Resources",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.167283+00:00",
+  "version": "1.0"
+}

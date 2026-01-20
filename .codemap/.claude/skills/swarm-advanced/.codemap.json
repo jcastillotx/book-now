@@ -1,0 +1,536 @@
+{
+  "directory": ".claude/skills/swarm-advanced",
+  "files": {
+    "SKILL.md": {
+      "hash": "c96f5b22bdcb",
+      "indexed_at": "2026-01-20T04:50:25.505161+00:00",
+      "language": "markdown",
+      "lines": 973,
+      "symbols": [
+        {
+          "children": [
+            {
+              "lines": [
+                16,
+                24
+              ],
+              "name": "Prerequisites",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                25,
+                36
+              ],
+              "name": "Basic Pattern",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            14,
+            36
+          ],
+          "name": "Quick Start",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "**Mesh Topology** - Peer-to-peer communication, best for research and analysis - All agents communicate directly - High flexibility and resilience - U",
+              "lines": [
+                39,
+                60
+              ],
+              "name": "Swarm Topologies",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Adaptive** - Dynamic adjustment based on task complexity **Balanced** - Equal distribution of work across agents **Specialized** - Task-specific age",
+              "lines": [
+                61,
+                67
+              ],
+              "name": "Agent Strategies",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            37,
+            67
+          ],
+          "name": "Core Concepts",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Deep research through parallel information gathering, analysis, and synthesis.",
+              "lines": [
+                70,
+                72
+              ],
+              "name": "Purpose",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                73,
+                120
+              ],
+              "name": "Architecture",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "lines": [
+                    123,
+                    156
+                  ],
+                  "name": "Phase 1: Information Gathering",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    157,
+                    183
+                  ],
+                  "name": "Phase 2: Analysis and Validation",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    184,
+                    213
+                  ],
+                  "name": "Phase 3: Knowledge Management",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    214,
+                    239
+                  ],
+                  "name": "Phase 4: Report Generation",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                121,
+                239
+              ],
+              "name": "Research Workflow",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                240,
+                250
+              ],
+              "name": "CLI Fallback",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            68,
+            250
+          ],
+          "name": "Pattern 1: Research Swarm",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Full-stack development through coordinated specialist agents.",
+              "lines": [
+                253,
+                255
+              ],
+              "name": "Purpose",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                256,
+                287
+              ],
+              "name": "Architecture",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "lines": [
+                    290,
+                    308
+                  ],
+                  "name": "Phase 1: Architecture and Design",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    309,
+                    343
+                  ],
+                  "name": "Phase 2: Parallel Implementation",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    344,
+                    363
+                  ],
+                  "name": "Phase 3: Testing and Validation",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    364,
+                    383
+                  ],
+                  "name": "Phase 4: Review and Deployment",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                288,
+                383
+              ],
+              "name": "Development Workflow",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                384,
+                393
+              ],
+              "name": "CLI Fallback",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            251,
+            393
+          ],
+          "name": "Pattern 2: Development Swarm",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Comprehensive quality assurance through distributed testing.",
+              "lines": [
+                396,
+                398
+              ],
+              "name": "Purpose",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                399,
+                457
+              ],
+              "name": "Architecture",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "lines": [
+                    460,
+                    492
+                  ],
+                  "name": "Phase 1: Test Planning",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    493,
+                    532
+                  ],
+                  "name": "Phase 2: Parallel Test Execution",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    533,
+                    557
+                  ],
+                  "name": "Phase 3: Performance and Security",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    558,
+                    583
+                  ],
+                  "name": "Phase 4: Monitoring and Reporting",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                458,
+                583
+              ],
+              "name": "Testing Workflow",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                584,
+                593
+              ],
+              "name": "CLI Fallback",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            394,
+            593
+          ],
+          "name": "Pattern 3: Testing Swarm",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Deep code and system analysis through specialized analyzers.",
+              "lines": [
+                596,
+                598
+              ],
+              "name": "Purpose",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                599,
+                646
+              ],
+              "name": "Architecture",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                647,
+                670
+              ],
+              "name": "Analysis Workflow",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            594,
+            670
+          ],
+          "name": "Pattern 4: Analysis Swarm",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                673,
+                707
+              ],
+              "name": "Error Handling and Fault Tolerance",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                708,
+                737
+              ],
+              "name": "Memory and State Management",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                738,
+                764
+              ],
+              "name": "Neural Pattern Learning",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                765,
+                802
+              ],
+              "name": "Workflow Automation",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                803,
+                828
+              ],
+              "name": "Performance Optimization",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                829,
+                859
+              ],
+              "name": "Monitoring and Metrics",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            671,
+            859
+          ],
+          "name": "Advanced Techniques",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Mesh**: Research, brainstorming, collaborative analysis - **Hierarchical**: Structured development, sequential workflows - **Star**: Testing, vali",
+              "lines": [
+                862,
+                868
+              ],
+              "name": "1. Choosing the Right Topology",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Assign specific capabilities to each agent - Avoid overlapping responsibilities - Use coordination agents for complex workflows - Leverage memory fo",
+              "lines": [
+                869,
+                875
+              ],
+              "name": "2. Agent Specialization",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Identify independent tasks for parallelization - Use sequential execution for dependent tasks - Monitor resource usage during parallel execution - I",
+              "lines": [
+                876,
+                882
+              ],
+              "name": "3. Parallel Execution",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Use namespaces to organize memory - Set appropriate TTL values - Create regular backups - Implement state snapshots for checkpoints",
+              "lines": [
+                883,
+                889
+              ],
+              "name": "4. Memory Management",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Monitor swarm health regularly - Collect and analyze metrics - Optimize topology based on performance - Use neural patterns to learn from success",
+              "lines": [
+                890,
+                896
+              ],
+              "name": "5. Monitoring and Optimization",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Implement fault tolerance strategies - Use auto-recovery mechanisms - Analyze error patterns - Create fallback workflows",
+              "lines": [
+                897,
+                903
+              ],
+              "name": "6. Error Recovery",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            860,
+            903
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                906,
+                913
+              ],
+              "name": "Example 1: AI Research Project",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                914,
+                921
+              ],
+              "name": "Example 2: Full-Stack Application",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                922,
+                929
+              ],
+              "name": "Example 3: Security Audit",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                930,
+                937
+              ],
+              "name": "Example 4: Performance Optimization",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            904,
+            937
+          ],
+          "name": "Real-World Examples",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "**Issue**: Swarm agents not coordinating properly **Solution**: Check topology selection, verify memory usage, enable monitoring",
+              "lines": [
+                940,
+                953
+              ],
+              "name": "Common Issues",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            938,
+            953
+          ],
+          "name": "Troubleshooting",
+          "type": "section"
+        },
+        {
+          "docstring": "- `sparc-methodology` - Systematic development workflow - `github-integration` - Repository management and automation - `neural-patterns` - AI-powered",
+          "lines": [
+            954,
+            960
+          ],
+          "name": "Related Skills",
+          "type": "section"
+        },
+        {
+          "docstring": "- [Claude Flow Documentation](https://github.com/ruvnet/claude-flow) - [Swarm Orchestration Guide](https://github.com/ruvnet/claude-flow/wiki/swarm) -",
+          "lines": [
+            961,
+            974
+          ],
+          "name": "References",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.162779+00:00",
+  "version": "1.0"
+}

@@ -1,0 +1,14 @@
+{
+  "directory": "vendor/psr/log",
+  "files": {
+    "README.md": {
+      "hash": "4f2bc231e87c",
+      "indexed_at": "2026-01-20T04:49:41.396491+00:00",
+      "language": "markdown",
+      "lines": 58,
+      "symbols": []
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.133874+00:00",
+  "version": "1.0"
+}

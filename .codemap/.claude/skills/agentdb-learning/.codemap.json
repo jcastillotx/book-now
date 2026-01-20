@@ -1,0 +1,320 @@
+{
+  "directory": ".claude/skills/agentdb-learning",
+  "files": {
+    "SKILL.md": {
+      "hash": "5e52ac69d880",
+      "indexed_at": "2026-01-20T04:50:25.512006+00:00",
+      "language": "markdown",
+      "lines": 545,
+      "symbols": [
+        {
+          "docstring": "Provides access to 9 reinforcement learning algorithms via AgentDB's plugin system. Create, train, and deploy learning plugins for autonomous agents t",
+          "lines": [
+            8,
+            13
+          ],
+          "name": "What This Skill Does",
+          "type": "section"
+        },
+        {
+          "docstring": "- Node.js 18+ - AgentDB v1.0.7+ (via agentic-flow) - Basic understanding of reinforcement learning (recommended)",
+          "lines": [
+            14,
+            21
+          ],
+          "name": "Prerequisites",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                24,
+                39
+              ],
+              "name": "Create Learning Plugin",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                40,
+                53
+              ],
+              "name": "List Available Templates",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                54,
+                67
+              ],
+              "name": "Manage Plugins",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            22,
+            67
+          ],
+          "name": "Quick Start with CLI",
+          "type": "section"
+        },
+        {
+          "lines": [
+            68,
+            114
+          ],
+          "name": "Quick Start with API",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "**Type**: Offline Reinforcement Learning **Best For**: Learning from logged experiences, imitation learning **Strengths**: No online interaction neede",
+              "lines": [
+                117,
+                144
+              ],
+              "name": "1. Decision Transformer (Recommended)",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Type**: Value-Based RL (Off-Policy) **Best For**: Discrete action spaces, sample efficiency **Strengths**: Proven, simple, works well for small/medi",
+              "lines": [
+                145,
+                171
+              ],
+              "name": "2. Q-Learning",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Type**: Value-Based RL (On-Policy) **Best For**: Safe exploration, risk-sensitive tasks **Strengths**: More conservative than Q-Learning, better for",
+              "lines": [
+                172,
+                196
+              ],
+              "name": "3. SARSA",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Type**: Policy Gradient with Value Baseline **Best For**: Continuous actions, variance reduction **Strengths**: Stable, works for continuous/discret",
+              "lines": [
+                197,
+                222
+              ],
+              "name": "4. Actor-Critic",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Type**: Query-Based Learning **Best For**: Label-efficient learning, human-in-the-loop **Strengths**: Minimizes labeling cost, focuses on uncertain",
+              "lines": [
+                223,
+                234
+              ],
+              "name": "5. Active Learning",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Type**: Robustness Enhancement **Best For**: Safety, robustness to perturbations **Strengths**: Improves model robustness, adversarial defense",
+              "lines": [
+                235,
+                246
+              ],
+              "name": "6. Adversarial Training",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Type**: Progressive Difficulty Training **Best For**: Complex tasks, faster convergence **Strengths**: Stable learning, faster convergence on hard t",
+              "lines": [
+                247,
+                258
+              ],
+              "name": "7. Curriculum Learning",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Type**: Distributed Learning **Best For**: Privacy, distributed data **Strengths**: Privacy-preserving, scalable",
+              "lines": [
+                259,
+                270
+              ],
+              "name": "8. Federated Learning",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Type**: Transfer Learning **Best For**: Related tasks, knowledge sharing **Strengths**: Faster learning on new tasks, better generalization",
+              "lines": [
+                271,
+                284
+              ],
+              "name": "9. Multi-Task Learning",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            115,
+            284
+          ],
+          "name": "Available Learning Algorithms (9 Total)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                287,
+                318
+              ],
+              "name": "1. Collect Experiences",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                319,
+                338
+              ],
+              "name": "2. Train Model",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                339,
+                359
+              ],
+              "name": "3. Evaluate Performance",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            285,
+            359
+          ],
+          "name": "Training Workflow",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                362,
+                378
+              ],
+              "name": "Experience Replay",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                379,
+                396
+              ],
+              "name": "Prioritized Experience Replay",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                397,
+                418
+              ],
+              "name": "Multi-Agent Training",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            360,
+            418
+          ],
+          "name": "Advanced Training Techniques",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                421,
+                438
+              ],
+              "name": "Batch Training",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                439,
+                456
+              ],
+              "name": "Incremental Learning",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            419,
+            456
+          ],
+          "name": "Performance Optimization",
+          "type": "section"
+        },
+        {
+          "docstring": "Combine learning with reasoning for better performance:",
+          "lines": [
+            457,
+            480
+          ],
+          "name": "Integration with Reasoning Agents",
+          "type": "section"
+        },
+        {
+          "lines": [
+            481,
+            498
+          ],
+          "name": "CLI Operations",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                501,
+                510
+              ],
+              "name": "Issue: Training not converging",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                511,
+                525
+              ],
+              "name": "Issue: Overfitting",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                526,
+                533
+              ],
+              "name": "Issue: Slow training",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            499,
+            533
+          ],
+          "name": "Troubleshooting",
+          "type": "section"
+        },
+        {
+          "docstring": "- **Algorithm Papers**: See docs/algorithms/ for detailed papers - **GitHub**: https://github.com/ruvnet/agentic-flow/tree/main/packages/agentdb - **M",
+          "lines": [
+            534,
+            546
+          ],
+          "name": "Learn More",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.166774+00:00",
+  "version": "1.0"
+}

@@ -1,0 +1,288 @@
+{
+  "directory": "vendor/sebastian/global-state",
+  "files": {
+    "ChangeLog.md": {
+      "hash": "a54a14057f14",
+      "indexed_at": "2026-01-20T04:48:33.121132+00:00",
+      "language": "markdown",
+      "lines": 100,
+      "symbols": [
+        {
+          "children": [
+            {
+              "docstring": "* Do not use `ReflectionProperty::setAccessible()` with PHP >= 8.1",
+              "lines": [
+                7,
+                10
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            5,
+            10
+          ],
+          "name": "[5.0.8] - 2025-08-10",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Do not use implicitly nullable parameters",
+              "lines": [
+                13,
+                16
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            11,
+            16
+          ],
+          "name": "[5.0.7] - 2024-03-02",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Changed usage of `ReflectionProperty::setValue()` to be compatible with PHP 8.3",
+              "lines": [
+                19,
+                22
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            17,
+            22
+          ],
+          "name": "[5.0.6] - 2023-08-02",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#34](https://github.com/sebastianbergmann/global-state/pull/34): Uninitialised typed static properties are not handled correctly",
+              "lines": [
+                25,
+                28
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            23,
+            28
+          ],
+          "name": "[5.0.5] - 2022-02-14",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* The `$includeTraits` parameter of `SebastianBergmann\\GlobalState\\Snapshot::__construct()` is not respected",
+              "lines": [
+                31,
+                34
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            29,
+            34
+          ],
+          "name": "[5.0.4] - 2022-02-10",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* `SebastianBergmann\\GlobalState\\CodeExporter::globalVariables()` now generates code that is compatible with PHP 8.1",
+              "lines": [
+                37,
+                40
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            35,
+            40
+          ],
+          "name": "[5.0.3] - 2021-06-11",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* `SebastianBergmann\\GlobalState\\Exception` now correctly extends `\\Throwable`",
+              "lines": [
+                43,
+                46
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            41,
+            46
+          ],
+          "name": "[5.0.2] - 2020-10-26",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Changed PHP version constraint in `composer.json` from `^7.3 || ^8.0` to `>=7.3`",
+              "lines": [
+                49,
+                52
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            47,
+            52
+          ],
+          "name": "[5.0.1] - 2020-09-28",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* The `SebastianBergmann\\GlobalState\\Blacklist` class has been renamed to `SebastianBergmann\\GlobalState\\ExcludeList`",
+              "lines": [
+                55,
+                58
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            53,
+            58
+          ],
+          "name": "[5.0.0] - 2020-08-07",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* This component is no longer supported on PHP 7.2",
+              "lines": [
+                61,
+                64
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            59,
+            64
+          ],
+          "name": "[4.0.0] - 2020-02-07",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* The `$includeTraits` parameter of `SebastianBergmann\\GlobalState\\Snapshot::__construct()` is not respected",
+              "lines": [
+                67,
+                70
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            65,
+            70
+          ],
+          "name": "[3.0.2] - 2022-02-10",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Changed PHP version constraint in `composer.json` from `^7.2` to `>=7.2`",
+              "lines": [
+                73,
+                76
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            71,
+            76
+          ],
+          "name": "[3.0.1] - 2020-11-30",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* `Snapshot::canBeSerialized()` now recursively checks arrays and object graphs for variables that cannot be serialized",
+              "lines": [
+                79,
+                82
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* This component is no longer supported on PHP 7.0 and PHP 7.1",
+              "lines": [
+                83,
+                101
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            77,
+            101
+          ],
+          "name": "[3.0.0] - 2019-02-01",
+          "type": "section"
+        }
+      ]
+    },
+    "README.md": {
+      "hash": "3a8d3f7816d6",
+      "indexed_at": "2026-01-20T04:48:34.239731+00:00",
+      "language": "markdown",
+      "lines": 20,
+      "symbols": [
+        {
+          "docstring": "You can add this library as a local, per-project dependency to your project using [Composer](https://getcomposer.org/):",
+          "lines": [
+            8,
+            21
+          ],
+          "name": "Installation",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.122343+00:00",
+  "version": "1.0"
+}

@@ -1,0 +1,662 @@
+{
+  "directory": ".claude/skills/github-code-review",
+  "files": {
+    "SKILL.md": {
+      "hash": "6ed59c79ed71",
+      "indexed_at": "2026-01-20T04:50:25.509912+00:00",
+      "language": "markdown",
+      "lines": 1140,
+      "symbols": [
+        {
+          "children": [
+            {
+              "lines": [
+                27,
+                35
+              ],
+              "name": "Simple Review",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                36,
+                52
+              ],
+              "name": "Complete Review Workflow",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            25,
+            52
+          ],
+          "name": "\ud83c\udfaf Quick Start",
+          "type": "section"
+        },
+        {
+          "docstring": "<details> <summary><strong>Core Features</strong></summary>",
+          "lines": [
+            53,
+            98
+          ],
+          "name": "\ud83d\udcda Table of Contents",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Deploy specialized AI agents for comprehensive code review:",
+              "lines": [
+                101,
+                129
+              ],
+              "name": "Multi-Agent Review System",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            99,
+            129
+          ],
+          "name": "\ud83d\ude80 Core Features",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "**Focus:** Identify security vulnerabilities and suggest fixes",
+              "lines": [
+                132,
+                211
+              ],
+              "name": "Security Review Agent",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Focus:** Analyze performance impact and optimization opportunities",
+              "lines": [
+                212,
+                251
+              ],
+              "name": "Performance Review Agent",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Focus:** Evaluate design patterns and architectural decisions",
+              "lines": [
+                252,
+                291
+              ],
+              "name": "Architecture Review Agent",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Focus:** Enforce coding standards and best practices",
+              "lines": [
+                292,
+                330
+              ],
+              "name": "Style & Convention Agent",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            130,
+            330
+          ],
+          "name": "\ud83e\udd16 Specialized Review Agents",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                333,
+                346
+              ],
+              "name": "Create Swarm from PR",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Map PR labels to specialized agents:",
+              "lines": [
+                347,
+                363
+              ],
+              "name": "Label-Based Agent Assignment",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                364,
+                375
+              ],
+              "name": "Topology Selection by PR Size",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            331,
+            375
+          ],
+          "name": "\ud83d\udd04 PR-Based Swarm Management",
+          "type": "section"
+        },
+        {
+          "docstring": "Execute swarm commands directly from PR comments:",
+          "lines": [
+            376,
+            419
+          ],
+          "name": "\ud83c\udfac PR Comment Commands",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                422,
+                460
+              ],
+              "name": "Configuration File",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                461,
+                489
+              ],
+              "name": "Custom Review Triggers",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            420,
+            489
+          ],
+          "name": "\u2699\ufe0f Review Configuration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                492,
+                550
+              ],
+              "name": "Auto-Review on PR Creation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            490,
+            550
+          ],
+          "name": "\ud83e\udd16 Automated Workflows",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                553,
+                586
+              ],
+              "name": "Generate Contextual Review Comments",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                587,
+                599
+              ],
+              "name": "Batch Comment Management",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            551,
+            599
+          ],
+          "name": "\ud83d\udcac Intelligent Comment Generation",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                602,
+                615
+              ],
+              "name": "Status Checks",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                616,
+                629
+              ],
+              "name": "Define Quality Gates",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                630,
+                642
+              ],
+              "name": "Track Review Metrics",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            600,
+            642
+          ],
+          "name": "\ud83d\udeaa Quality Gates & Checks",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Analyze PRs with full project context:",
+              "lines": [
+                645,
+                658
+              ],
+              "name": "Context-Aware Reviews",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Train review agents on your codebase patterns:",
+              "lines": [
+                659,
+                677
+              ],
+              "name": "Learning from History",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Coordinate reviews across related pull requests:",
+              "lines": [
+                678,
+                690
+              ],
+              "name": "Cross-PR Analysis",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                691,
+                702
+              ],
+              "name": "Multi-PR Swarm Coordination",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            643,
+            702
+          ],
+          "name": "\ud83c\udf93 Advanced Features",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                705,
+                758
+              ],
+              "name": "Create Custom Agent",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                759,
+                770
+              ],
+              "name": "Register Custom Agent",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            703,
+            770
+          ],
+          "name": "\ud83d\udee0\ufe0f Custom Review Agents",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                773,
+                799
+              ],
+              "name": "Integration with Build Pipeline",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                800,
+                809
+              ],
+              "name": "Automated PR Fixes",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                810,
+                825
+              ],
+              "name": "Progress Updates to PR",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            771,
+            825
+          ],
+          "name": "\ud83d\udd27 CI/CD Integration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                828,
+                839
+              ],
+              "name": "Example 1: Security-Critical PR",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                840,
+                851
+              ],
+              "name": "Example 2: Performance-Sensitive PR",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                852,
+                863
+              ],
+              "name": "Example 3: UI Component PR",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                864,
+                874
+              ],
+              "name": "Example 4: Feature Development PR",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                875,
+                887
+              ],
+              "name": "Example 5: Bug Fix PR",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            826,
+            887
+          ],
+          "name": "\ud83d\udccb Complete Workflow Examples",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                890,
+                898
+              ],
+              "name": "Review Dashboard",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                899,
+                909
+              ],
+              "name": "Generate Review Reports",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                910,
+                919
+              ],
+              "name": "PR Swarm Analytics",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                920,
+                931
+              ],
+              "name": "Export to GitHub Insights",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            888,
+            931
+          ],
+          "name": "\ud83d\udcca Monitoring & Analytics",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "1. **Token Permissions**: Ensure GitHub tokens have minimal required scopes 2. **Command Validation**: Validate all PR comments before execution 3. **",
+              "lines": [
+                934,
+                941
+              ],
+              "name": "Best Practices",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [ ] GitHub token scoped to repository only - [ ] Webhook signatures verified - [ ] Command injection protection enabled - [ ] Rate limiting configur",
+              "lines": [
+                942,
+                953
+              ],
+              "name": "Security Checklist",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            932,
+            953
+          ],
+          "name": "\ud83d\udd10 Security Considerations",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- \u2705 Define clear review criteria upfront - \u2705 Set appropriate severity thresholds - \u2705 Configure agent specializations for your stack - \u2705 Establish over",
+              "lines": [
+                956,
+                961
+              ],
+              "name": "1. Review Configuration",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- \u2705 Provide actionable, specific feedback - \u2705 Include code examples with suggestions - \u2705 Reference documentation and best practices - \u2705 Maintain respe",
+              "lines": [
+                962,
+                967
+              ],
+              "name": "2. Comment Quality",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- \u2705 Cache analysis results to avoid redundant work - \u2705 Use incremental reviews for large PRs - \u2705 Enable parallel agent execution - \u2705 Batch comment ope",
+              "lines": [
+                968,
+                973
+              ],
+              "name": "3. Performance Optimization",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                974,
+                977
+              ],
+              "name": "4. PR Templates",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            954,
+            977
+          ],
+          "name": "\ud83d\udcda Best Practices",
+          "type": "section"
+        },
+        {
+          "docstring": "- Topology: [mesh/hierarchical/ring/star] - Max Agents: [number] - Auto-spawn: [yes/no] - Priority: [high/medium/low]",
+          "lines": [
+            978,
+            983
+          ],
+          "name": "Swarm Configuration",
+          "type": "section"
+        },
+        {
+          "docstring": "- [ ] Task 1 description - [ ] Task 2 description - [ ] Task 3 description",
+          "lines": [
+            984,
+            988
+          ],
+          "name": "Tasks for Swarm",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                996,
+                1014
+              ],
+              "name": "5. Auto-Merge When Ready",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "- [ ] Security review - [ ] Performance analysis - [ ] Architecture validation - [ ] Accessibility check",
+          "lines": [
+            989,
+            1014
+          ],
+          "name": "Review Focus Areas",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "1. **Claude Code** reads PR diff and context 2. **Swarm** coordinates review approach based on PR type 3. **Agents** work in parallel on different rev",
+              "lines": [
+                1017,
+                1024
+              ],
+              "name": "Workflow Pattern",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                1025,
+                1055
+              ],
+              "name": "Example: Complete PR Management",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1015,
+            1055
+          ],
+          "name": "\ud83d\udd17 Integration with Claude Code",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "<details> <summary><strong>Issue: Review agents not spawning</strong></summary>",
+              "lines": [
+                1058,
+                1112
+              ],
+              "name": "Common Issues",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1056,
+            1112
+          ],
+          "name": "\ud83c\udd98 Troubleshooting",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- `github-pr-manager` - Comprehensive PR lifecycle management - `github-workflow-automation` - Automate GitHub workflows - `swarm-coordination` - Adva",
+              "lines": [
+                1115,
+                1119
+              ],
+              "name": "Related Skills",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [GitHub CLI Documentation](https://cli.github.com/manual/) - [RUV Swarm Guide](https://github.com/ruvnet/ruv-swarm) - [Claude Flow Integration](http",
+              "lines": [
+                1120,
+                1124
+              ],
+              "name": "Documentation",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- GitHub Issues: Report bugs and request features - Community: Join discussions and share experiences - Examples: Browse example configurations and wo",
+              "lines": [
+                1125,
+                1131
+              ],
+              "name": "Support",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1113,
+            1131
+          ],
+          "name": "\ud83d\udcd6 Additional Resources",
+          "type": "section"
+        },
+        {
+          "docstring": "This skill is part of the Claude Code Flow project and is licensed under the MIT License.",
+          "lines": [
+            1132,
+            1141
+          ],
+          "name": "\ud83d\udcc4 License",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.164950+00:00",
+  "version": "1.0"
+}

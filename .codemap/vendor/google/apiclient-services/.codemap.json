@@ -1,0 +1,40 @@
+{
+  "directory": "vendor/google/apiclient-services",
+  "files": {
+    "README.md": {
+      "hash": "a76d1a322128",
+      "indexed_at": "2026-01-20T04:50:18.013905+00:00",
+      "language": "markdown",
+      "lines": 19,
+      "symbols": [
+        {
+          "docstring": "[Google API PHP Client](https://github.com/googleapis/google-api-php-client/releases)",
+          "lines": [
+            10,
+            13
+          ],
+          "name": "Requirements",
+          "type": "section"
+        },
+        {
+          "docstring": "This library is automatically updated daily with new API changes, and tagged weekly. It is installed as part of the [Google API PHP Client](https://gi",
+          "lines": [
+            14,
+            20
+          ],
+          "name": "Usage",
+          "type": "section"
+        }
+      ]
+    },
+    "SECURITY.md": {
+      "hash": "f045875316da",
+      "indexed_at": "2026-01-20T04:50:18.014622+00:00",
+      "language": "markdown",
+      "lines": 7,
+      "symbols": []
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.145427+00:00",
+  "version": "1.0"
+}

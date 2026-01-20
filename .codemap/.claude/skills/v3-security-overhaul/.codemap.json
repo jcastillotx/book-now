@@ -1,0 +1,109 @@
+{
+  "directory": ".claude/skills/v3-security-overhaul",
+  "files": {
+    "SKILL.md": {
+      "hash": "4123b78d5a2d",
+      "indexed_at": "2026-01-20T04:50:25.504147+00:00",
+      "language": "markdown",
+      "lines": 82,
+      "symbols": [
+        {
+          "docstring": "Orchestrates comprehensive security overhaul for claude-flow v3, addressing critical vulnerabilities and establishing security-first development pract",
+          "lines": [
+            8,
+            11
+          ],
+          "name": "What This Skill Does",
+          "type": "section"
+        },
+        {
+          "lines": [
+            12,
+            20
+          ],
+          "name": "Quick Start",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                23,
+                28
+              ],
+              "name": "CVE-1: Vulnerable Dependencies",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                29,
+                38
+              ],
+              "name": "CVE-2: Weak Password Hashing",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                39,
+                44
+              ],
+              "name": "CVE-3: Hardcoded Credentials",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            21,
+            44
+          ],
+          "name": "Critical Security Fixes",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                47,
+                57
+              ],
+              "name": "Input Validation (Zod)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                58,
+                68
+              ],
+              "name": "Path Sanitization",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                69,
+                76
+              ],
+              "name": "Safe Command Execution",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            45,
+            76
+          ],
+          "name": "Security Patterns",
+          "type": "section"
+        },
+        {
+          "docstring": "- **Security Score**: 90/100 (npm audit + custom scans) - **CVE Resolution**: 100% of critical vulnerabilities fixed - **Test Coverage**: >95% securit",
+          "lines": [
+            77,
+            82
+          ],
+          "name": "Success Metrics",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.162594+00:00",
+  "version": "1.0"
+}

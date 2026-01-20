@@ -1,0 +1,2943 @@
+{
+  "directory": "docs",
+  "files": {
+    "API_GUIDE.md": {
+      "hash": "d91c15354ac2",
+      "indexed_at": "2026-01-20T04:48:29.205813+00:00",
+      "language": "markdown",
+      "lines": 867,
+      "symbols": [
+        {
+          "docstring": "1. [Overview](#overview) 2. [Stripe Payment Integration](#stripe-payment-integration) 3. [Google Calendar Integration](#google-calendar-integration) 4",
+          "lines": [
+            7,
+            19
+          ],
+          "name": "Table of Contents",
+          "type": "section"
+        },
+        {
+          "docstring": "Book Now integrates with three external services:",
+          "lines": [
+            20,
+            33
+          ],
+          "name": "Overview",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Stripe handles all payment processing using the Payment Intents API for SCA (Strong Customer Authentication) compliance.",
+              "lines": [
+                36,
+                39
+              ],
+              "name": "Overview",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "1. Go to [stripe.com](https://stripe.com) 2. Click **Start now** 3. Complete registration 4. Verify your business (for live payments)",
+                  "lines": [
+                    42,
+                    48
+                  ],
+                  "name": "1. Create Stripe Account",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "1. Log in to [Stripe Dashboard](https://dashboard.stripe.com) 2. Navigate to **Developers > API keys** 3. Copy your keys:",
+                  "lines": [
+                    49,
+                    62
+                  ],
+                  "name": "2. Retrieve API Keys",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "1. Go to **Book Now > Settings > Payments** 2. Select API Mode (Test or Live) 3. Enter Publishable Key 4. Enter Secret Key 5. Click **Save Settings**",
+                  "lines": [
+                    63,
+                    70
+                  ],
+                  "name": "3. Configure in Book Now",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Click **Test Connection** button.",
+                  "lines": [
+                    71,
+                    91
+                  ],
+                  "name": "4. Test Connection",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Webhooks notify your site of payment events.",
+                  "lines": [
+                    92,
+                    110
+                  ],
+                  "name": "5. Configure Webhooks",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                40,
+                110
+              ],
+              "name": "Setup Steps",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Use these for testing (any future expiry, any CVC):",
+              "lines": [
+                111,
+                121
+              ],
+              "name": "Stripe Test Cards",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                122,
+                137
+              ],
+              "name": "Payment Flow",
+              "type": "subsection"
+            },
+            {
+              "docstring": "| Endpoint | Purpose | |----------|---------| | `POST /v1/payment_intents` | Create payment intent | | `POST /v1/payment_intents/:id/confirm` | Confir",
+              "lines": [
+                138,
+                148
+              ],
+              "name": "API Endpoints Used",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            34,
+            148
+          ],
+          "name": "Stripe Payment Integration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Google Calendar integration allows automatic event creation when bookings are made, and can read busy times for availability calculation.",
+              "lines": [
+                151,
+                154
+              ],
+              "name": "Overview",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "1. Go to [Google Cloud Console](https://console.cloud.google.com) 2. Click project dropdown > **New Project** 3. Name: \"Book Now Integration\" 4. Click",
+                  "lines": [
+                    157,
+                    163
+                  ],
+                  "name": "1. Create Google Cloud Project",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "1. Go to **APIs & Services > Library** 2. Search \"Google Calendar API\" 3. Click **Enable**",
+                  "lines": [
+                    164,
+                    169
+                  ],
+                  "name": "2. Enable Calendar API",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "1. Go to **APIs & Services > OAuth consent screen** 2. User Type: **External** 3. Fill required fields: - App name: Your business name - User support",
+                  "lines": [
+                    170,
+                    183
+                  ],
+                  "name": "3. Configure OAuth Consent Screen",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "1. Go to **APIs & Services > Credentials** 2. Click **Create Credentials > OAuth client ID** 3. Application type: **Web application** 4. Name: \"Book N",
+                  "lines": [
+                    184,
+                    196
+                  ],
+                  "name": "4. Create OAuth Credentials",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "1. Go to **Book Now > Settings > Integrations** 2. In Google Calendar section: - Enter Client ID - Enter Client Secret 3. Click **Save Settings** 4. C",
+                  "lines": [
+                    197,
+                    208
+                  ],
+                  "name": "5. Configure in Book Now",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Click **Test Connection** button.",
+                  "lines": [
+                    209,
+                    232
+                  ],
+                  "name": "6. Test Connection",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                155,
+                232
+              ],
+              "name": "Setup Steps",
+              "type": "subsection"
+            },
+            {
+              "docstring": "| Scope | Purpose | |-------|---------| | `calendar` | Full calendar access | | `calendar.events` | Event CRUD operations |",
+              "lines": [
+                233,
+                239
+              ],
+              "name": "Required Scopes",
+              "type": "subsection"
+            },
+            {
+              "docstring": "| Endpoint | Purpose | |----------|---------| | `POST /calendar/v3/calendars/:id/events` | Create event | | `PUT /calendar/v3/calendars/:id/events/:ev",
+              "lines": [
+                240,
+                249
+              ],
+              "name": "API Endpoints Used",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Events created in Google Calendar:",
+              "lines": [
+                250,
+                267
+              ],
+              "name": "Event Format",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            149,
+            267
+          ],
+          "name": "Google Calendar Integration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Microsoft Calendar integration syncs with Outlook/Microsoft 365 calendars via the Microsoft Graph API.",
+              "lines": [
+                270,
+                273
+              ],
+              "name": "Overview",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "1. Go to [Azure Portal](https://portal.azure.com) 2. Search for **App registrations** 3. Click **New registration** 4. Configure: - Name: \"Book Now In",
+                  "lines": [
+                    276,
+                    290
+                  ],
+                  "name": "1. Register Azure AD Application",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "1. Go to **Certificates & secrets** 2. Click **New client secret** 3. Description: \"Book Now\" 4. Expiration: Choose (recommend 24 months) 5. Click **A",
+                  "lines": [
+                    291,
+                    299
+                  ],
+                  "name": "2. Create Client Secret",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "1. Go to **API permissions** 2. Click **Add a permission** 3. Select **Microsoft Graph** 4. Choose **Delegated permissions** 5. Add: - `Calendars.Read",
+                  "lines": [
+                    300,
+                    311
+                  ],
+                  "name": "3. Configure API Permissions",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "1. Go to **Book Now > Settings > Integrations** 2. In Microsoft Calendar section: - Enter Application (Client) ID - Enter Client Secret 3. Click **Sav",
+                  "lines": [
+                    312,
+                    324
+                  ],
+                  "name": "4. Configure in Book Now",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Click **Test Connection** button.",
+                  "lines": [
+                    325,
+                    349
+                  ],
+                  "name": "5. Test Connection",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                274,
+                349
+              ],
+              "name": "Setup Steps",
+              "type": "subsection"
+            },
+            {
+              "docstring": "| Permission | Type | Purpose | |------------|------|---------| | Calendars.ReadWrite | Delegated | Calendar access | | User.Read | Delegated | Get us",
+              "lines": [
+                350,
+                356
+              ],
+              "name": "Required Permissions",
+              "type": "subsection"
+            },
+            {
+              "docstring": "| Endpoint | Purpose | |----------|---------| | `POST /me/calendar/events` | Create event | | `PATCH /me/calendar/events/{id}` | Update event | | `DEL",
+              "lines": [
+                357,
+                366
+              ],
+              "name": "API Endpoints Used",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Events created in Microsoft Calendar:",
+              "lines": [
+                367,
+                384
+              ],
+              "name": "Event Format",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            268,
+            384
+          ],
+          "name": "Microsoft Calendar Integration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                387,
+                392
+              ],
+              "name": "Base URL",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "List all active consultation types.",
+                  "lines": [
+                    395,
+                    425
+                  ],
+                  "name": "GET /consultation-types",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Get available time slots.",
+                  "lines": [
+                    426,
+                    456
+                  ],
+                  "name": "GET /availability",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Create a new booking.",
+                  "lines": [
+                    457,
+                    491
+                  ],
+                  "name": "POST /bookings",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Create Stripe Payment Intent.",
+                  "lines": [
+                    492,
+                    515
+                  ],
+                  "name": "POST /payment/create-intent",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                393,
+                515
+              ],
+              "name": "Public Endpoints",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "Test Stripe connection.",
+                  "lines": [
+                    520,
+                    542
+                  ],
+                  "name": "POST /admin/test-stripe",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Test Google Calendar connection.",
+                  "lines": [
+                    543,
+                    558
+                  ],
+                  "name": "POST /admin/test-google",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Test Microsoft Calendar connection.",
+                  "lines": [
+                    559,
+                    576
+                  ],
+                  "name": "POST /admin/test-microsoft",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "Require authentication with `manage_options` capability.",
+              "lines": [
+                516,
+                576
+              ],
+              "name": "Admin Endpoints",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            385,
+            576
+          ],
+          "name": "REST API Reference",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "**Endpoint:**",
+              "lines": [
+                579,
+                599
+              ],
+              "name": "Stripe Webhooks",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            577,
+            599
+          ],
+          "name": "Webhooks",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "**Location:** Book Now > Settings > Payments",
+              "lines": [
+                604,
+                640
+              ],
+              "name": "Stripe Test Connection",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Location:** Book Now > Settings > Integrations",
+              "lines": [
+                641,
+                691
+              ],
+              "name": "Google Calendar Test Connection",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Location:** Book Now > Settings > Integrations",
+              "lines": [
+                692,
+                752
+              ],
+              "name": "Microsoft Calendar Test Connection",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Each test button shows: - Loading spinner during test - Green checkmark on success - Red X with error message on failure - Detailed response informati",
+              "lines": [
+                753,
+                794
+              ],
+              "name": "Test Connection UI",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "Each integration has a Test Connection button in the admin settings.",
+          "lines": [
+            600,
+            794
+          ],
+          "name": "Test Connection Features",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "| Error | Cause | Solution | |-------|-------|----------| | Invalid API key | Wrong key entered | Copy key again from Stripe | | Account not verified",
+              "lines": [
+                797,
+                805
+              ],
+              "name": "Stripe Issues",
+              "type": "subsection"
+            },
+            {
+              "docstring": "| Error | Cause | Solution | |-------|-------|----------| | Invalid credentials | Wrong Client ID/Secret | Regenerate credentials | | Token expired |",
+              "lines": [
+                806,
+                814
+              ],
+              "name": "Google Calendar Issues",
+              "type": "subsection"
+            },
+            {
+              "docstring": "| Error | Cause | Solution | |-------|-------|----------| | AADSTS50011 | Wrong redirect URI | Update in Azure Portal | | Insufficient privileges | Mi",
+              "lines": [
+                815,
+                823
+              ],
+              "name": "Microsoft Calendar Issues",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Enable debug logging:**",
+              "lines": [
+                824,
+                840
+              ],
+              "name": "General Debugging",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            795,
+            840
+          ],
+          "name": "Troubleshooting",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "All API keys and secrets are: - Encrypted using WordPress salts - Stored in wp_options - Never exposed in frontend - Masked in admin display",
+              "lines": [
+                843,
+                850
+              ],
+              "name": "API Key Storage",
+              "type": "subsection"
+            },
+            {
+              "docstring": "OAuth tokens are: - Encrypted before storage - Refreshed automatically - Invalidated on disconnect",
+              "lines": [
+                851,
+                857
+              ],
+              "name": "OAuth Token Storage",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Stripe: Signature verification with signing secret - All endpoints: Nonce verification for admin actions - Capability checks on all admin endpoints",
+              "lines": [
+                858,
+                868
+              ],
+              "name": "Webhook Security",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            841,
+            868
+          ],
+          "name": "Security Notes",
+          "type": "section"
+        }
+      ]
+    },
+    "DESIGN_SYSTEM.md": {
+      "hash": "63a884098241",
+      "indexed_at": "2026-01-20T04:48:29.205126+00:00",
+      "language": "markdown",
+      "lines": 102,
+      "symbols": [
+        {
+          "children": [
+            {
+              "docstring": "The following colors are commonly used:",
+              "lines": [
+                9,
+                25
+              ],
+              "name": "Colors",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Font Family**: Inherits from the active WordPress theme. - **Font Sizes**: Common sizes are `14px`, `16px`, `18px`, `20px`, `24px`. - **Font Weigh",
+              "lines": [
+                26,
+                31
+              ],
+              "name": "Typography",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Spacing is managed with `margin` and `padding` using pixel values. Common values are `8px`, `10px`, `15px`, `20px`, `30px`. - Layouts are often crea",
+              "lines": [
+                32,
+                36
+              ],
+              "name": "Spacing & Sizing",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "There is no formal system for design tokens. All styling values are hardcoded in the CSS files. When implementing new designs, strive to use the exist",
+          "lines": [
+            5,
+            36
+          ],
+          "name": "1. Token Definitions",
+          "type": "section"
+        },
+        {
+          "docstring": "The plugin does not use a component library in the modern sense (e.g., React or Vue components). Instead, UI is rendered through a combination of Word",
+          "lines": [
+            37,
+            51
+          ],
+          "name": "2. Component Library",
+          "type": "section"
+        },
+        {
+          "docstring": "- **UI Frameworks**: None. The frontend uses plain JavaScript and relies on jQuery, which is bundled with WordPress. - **Styling Libraries**: None. Pl",
+          "lines": [
+            52,
+            57
+          ],
+          "name": "3. Frameworks & Libraries",
+          "type": "section"
+        },
+        {
+          "docstring": "The plugin does not currently use any image assets (`.jpg`, `.png`, `.svg`). The UI is built entirely with CSS and an icon font.",
+          "lines": [
+            58,
+            63
+          ],
+          "name": "4. Asset Management",
+          "type": "section"
+        },
+        {
+          "docstring": "The plugin uses **WordPress Dashicons**, which is the icon font included with WordPress.",
+          "lines": [
+            64,
+            77
+          ],
+          "name": "5. Icon System",
+          "type": "section"
+        },
+        {
+          "docstring": "- **Methodology**: The project uses a BEM-like naming convention for CSS classes (e.g., `booknow-form-wrapper`, `booknow-form-nav__button`). This is n",
+          "lines": [
+            78,
+            92
+          ],
+          "name": "6. Styling Approach",
+          "type": "section"
+        },
+        {
+          "docstring": "The codebase is organized as a standard WordPress plugin:",
+          "lines": [
+            93,
+            103
+          ],
+          "name": "7. Project Structure",
+          "type": "section"
+        }
+      ]
+    },
+    "HELP.md": {
+      "hash": "ceddc06c41ab",
+      "indexed_at": "2026-01-20T04:48:29.203673+00:00",
+      "language": "markdown",
+      "lines": 782,
+      "symbols": [
+        {
+          "docstring": "1. [Getting Started](#getting-started) 2. [Dashboard Overview](#dashboard-overview) 3. [Managing Bookings](#managing-bookings) 4. [Consultation Types]",
+          "lines": [
+            7,
+            24
+          ],
+          "name": "Table of Contents",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "1. **Create a Consultation Type** - Go to Book Now > Consultation Types > Add New - Enter name, duration, and price - Click Publish",
+              "lines": [
+                27,
+                52
+              ],
+              "name": "Quick Start (5 Minutes)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            25,
+            52
+          ],
+          "name": "Getting Started",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- List of appointments scheduled for today - Quick access to booking details - Status indicators",
+              "lines": [
+                57,
+                61
+              ],
+              "name": "Today's Bookings",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Next 7 days of appointments - Calendar preview - Quick stats",
+              "lines": [
+                62,
+                66
+              ],
+              "name": "Upcoming Bookings",
+              "type": "subsection"
+            },
+            {
+              "docstring": "| Metric | Description | |--------|-------------| | Total Bookings | All-time booking count | | This Month | Current month bookings | | Revenue | Paym",
+              "lines": [
+                67,
+                74
+              ],
+              "name": "Statistics",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Quick view of connected services: - Stripe (Payment) - Google Calendar - Microsoft Calendar",
+              "lines": [
+                75,
+                82
+              ],
+              "name": "Integration Status",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "The dashboard (Book Now > Dashboard) shows:",
+          "lines": [
+            53,
+            82
+          ],
+          "name": "Dashboard Overview",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "**Navigate to:** Book Now > Bookings",
+              "lines": [
+                85,
+                98
+              ],
+              "name": "Viewing Bookings",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Use the filter bar to find bookings:",
+              "lines": [
+                99,
+                107
+              ],
+              "name": "Filtering Bookings",
+              "type": "subsection"
+            },
+            {
+              "docstring": "| Status | Meaning | Color | |--------|---------|-------| | Pending | Awaiting payment | Yellow | | Confirmed | Payment received | Green | | Cancelled",
+              "lines": [
+                108,
+                118
+              ],
+              "name": "Booking Statuses",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Click any booking to see:",
+              "lines": [
+                119,
+                144
+              ],
+              "name": "Viewing Booking Details",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Click on the booking 2. Click **Edit** 3. Modify details: - Reschedule date/time - Update customer info - Change status - Add admin notes 4. Click",
+              "lines": [
+                145,
+                155
+              ],
+              "name": "Editing a Booking",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Open booking details 2. Click **Cancel Booking** 3. Choose refund option: - Full refund - Partial refund - No refund 4. Optionally add cancellation",
+              "lines": [
+                156,
+                168
+              ],
+              "name": "Cancelling a Booking",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Open booking details 2. Click **Refund** 3. Enter refund amount 4. Add refund reason (optional) 5. Click **Process Refund**",
+              "lines": [
+                169,
+                178
+              ],
+              "name": "Processing Refunds",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Apply any filters needed 2. Click **Export** 3. Choose format (CSV) 4. Download file",
+              "lines": [
+                179,
+                189
+              ],
+              "name": "Exporting Bookings",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            83,
+            189
+          ],
+          "name": "Managing Bookings",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "**Navigate to:** Book Now > Consultation Types > Add New",
+              "lines": [
+                192,
+                217
+              ],
+              "name": "Creating a Consultation Type",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Go to Book Now > Consultation Types 2. Hover over type and click **Edit** 3. Make changes 4. Click **Update**",
+              "lines": [
+                218,
+                224
+              ],
+              "name": "Editing Consultation Types",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Hover over type 2. Click **Duplicate** 3. Edit the copy as needed 4. Save",
+              "lines": [
+                225,
+                231
+              ],
+              "name": "Duplicating a Type",
+              "type": "subsection"
+            },
+            {
+              "docstring": "To hide a type without deleting:",
+              "lines": [
+                232,
+                241
+              ],
+              "name": "Deactivating a Type",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Hover over type 2. Click **Trash**",
+              "lines": [
+                242,
+                250
+              ],
+              "name": "Deleting a Type",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            190,
+            250
+          ],
+          "name": "Consultation Types",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Categories help organize consultation types into groups. Examples: - \"Coaching\" (Life Coaching, Career Coaching) - \"Business\" (Strategy Sessions, Cons",
+              "lines": [
+                253,
+                259
+              ],
+              "name": "What Are Categories?",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Navigate to:** Book Now > Categories",
+              "lines": [
+                260,
+                269
+              ],
+              "name": "Creating Categories",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**In Consultation Types:** - Edit a consultation type - Select category from dropdown - Save",
+              "lines": [
+                270,
+                282
+              ],
+              "name": "Using Categories",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Categories can have parent-child relationships:",
+              "lines": [
+                283,
+                297
+              ],
+              "name": "Hierarchical Categories",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            251,
+            297
+          ],
+          "name": "Categories",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "**Navigate to:** Book Now > Availability",
+              "lines": [
+                300,
+                322
+              ],
+              "name": "Weekly Schedule",
+              "type": "subsection"
+            },
+            {
+              "docstring": "To add lunch breaks or other gaps:",
+              "lines": [
+                323,
+                333
+              ],
+              "name": "Adding Breaks",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Block specific dates (vacations, holidays):",
+              "lines": [
+                334,
+                343
+              ],
+              "name": "Date Overrides",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Set different hours for specific dates:",
+              "lines": [
+                344,
+                354
+              ],
+              "name": "Custom Hours",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Set availability for specific consultation types:",
+              "lines": [
+                355,
+                365
+              ],
+              "name": "Consultation-Specific Availability",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            298,
+            365
+          ],
+          "name": "Availability Management",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "**Navigate to:** Book Now > Settings > Payments",
+              "lines": [
+                368,
+                380
+              ],
+              "name": "Payment Settings",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Enter API keys 2. Click **Save** 3. Click **Test Connection**",
+              "lines": [
+                381,
+                389
+              ],
+              "name": "Testing Connection",
+              "type": "subsection"
+            },
+            {
+              "docstring": "| Status | Meaning | |--------|---------| | Pending | Awaiting payment | | Paid | Payment successful | | Failed | Payment declined | | Refunded | Full",
+              "lines": [
+                390,
+                399
+              ],
+              "name": "Payment Statuses",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Open booking details 2. Click Stripe reference link 3. Opens Stripe Dashboard to that payment",
+              "lines": [
+                400,
+                405
+              ],
+              "name": "Viewing Payments in Stripe",
+              "type": "subsection"
+            },
+            {
+              "docstring": "When a payment fails: 1. Booking marked as \"Pending\" 2. Customer notified 3. Admin alerted 4. Customer can retry payment",
+              "lines": [
+                406,
+                415
+              ],
+              "name": "Handling Failed Payments",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            366,
+            415
+          ],
+          "name": "Payment Management",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "**Connect:** 1. Go to Settings > Integrations 2. Enter Client ID and Secret 3. Click **Connect Google Calendar** 4. Authorize access 5. Select calenda",
+              "lines": [
+                418,
+                437
+              ],
+              "name": "Google Calendar",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Connect:** 1. Go to Settings > Integrations 2. Enter Application ID and Secret 3. Click **Connect Microsoft Calendar** 4. Authorize access 5. Select",
+              "lines": [
+                438,
+                447
+              ],
+              "name": "Microsoft Calendar",
+              "type": "subsection"
+            },
+            {
+              "docstring": "| Option | Description | |--------|-------------| | Sync Direction | One-way or bidirectional | | Block Busy Times | Use calendar for availability | |",
+              "lines": [
+                448,
+                455
+              ],
+              "name": "Sync Options",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Events not appearing:** - Verify connection (Test Connection button) - Check correct calendar selected - View sync logs",
+              "lines": [
+                456,
+                468
+              ],
+              "name": "Troubleshooting Sync",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            416,
+            468
+          ],
+          "name": "Calendar Integrations",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "| Email | Recipient | Trigger | |-------|-----------|---------| | Booking Confirmation | Customer | After successful booking | | Booking Reminder | Cu",
+              "lines": [
+                471,
+                480
+              ],
+              "name": "Email Types",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Navigate to:** Book Now > Settings > Emails",
+              "lines": [
+                481,
+                491
+              ],
+              "name": "Email Settings",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Go to Settings > Emails 2. Select email type 3. Edit subject and body 4. Use template variables (see below) 5. Save",
+              "lines": [
+                492,
+                499
+              ],
+              "name": "Customizing Templates",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Use these placeholders in emails:",
+              "lines": [
+                500,
+                516
+              ],
+              "name": "Template Variables",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Go to Settings > Emails 2. Click **Send Test Email** 3. Check your inbox",
+              "lines": [
+                517,
+                524
+              ],
+              "name": "Testing Emails",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            469,
+            524
+          ],
+          "name": "Email Notifications",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Complete booking wizard.",
+              "lines": [
+                527,
+                546
+              ],
+              "name": "[book_now_form]",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Calendar availability view.",
+              "lines": [
+                547,
+                563
+              ],
+              "name": "[book_now_calendar]",
+              "type": "subsection"
+            },
+            {
+              "docstring": "List view of available slots.",
+              "lines": [
+                564,
+                580
+              ],
+              "name": "[book_now_list]",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Consultation type cards display.",
+              "lines": [
+                581,
+                600
+              ],
+              "name": "[book_now_types]",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Single consultation type with booking.",
+              "lines": [
+                601,
+                618
+              ],
+              "name": "[book_now_single]",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            525,
+            618
+          ],
+          "name": "Shortcodes Reference",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "| Setting | Purpose | |---------|---------| | Business Name | Used in emails and receipts | | Timezone | Your business timezone | | Date Format | Date",
+              "lines": [
+                621,
+                634
+              ],
+              "name": "General Settings",
+              "type": "subsection"
+            },
+            {
+              "docstring": "| Setting | Purpose | |---------|---------| | API Mode | Test or Live | | Publishable Key | Stripe public key | | Secret Key | Stripe secret key | | W",
+              "lines": [
+                635,
+                644
+              ],
+              "name": "Payment Settings",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Google Calendar:** | Setting | Purpose | |---------|---------| | Client ID | OAuth client ID | | Client Secret | OAuth client secret | | Calendar |",
+              "lines": [
+                645,
+                662
+              ],
+              "name": "Integration Settings",
+              "type": "subsection"
+            },
+            {
+              "docstring": "| Setting | Purpose | |---------|---------| | From Name | Email sender name | | From Email | Email sender address | | Reply-To | Reply address | | Adm",
+              "lines": [
+                663,
+                672
+              ],
+              "name": "Email Settings",
+              "type": "subsection"
+            },
+            {
+              "docstring": "| Setting | Purpose | |---------|---------| | Primary Color | Main brand color | | Secondary Color | Accent color | | Button Style | Rounded, square,",
+              "lines": [
+                673,
+                684
+              ],
+              "name": "Styling Settings",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            619,
+            684
+          ],
+          "name": "Settings Reference",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "**Q: Can I have multiple consultation types?** A: Yes, create as many as needed with different durations and prices.",
+              "lines": [
+                687,
+                697
+              ],
+              "name": "General Questions",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Q: What payment methods are supported?** A: All major credit/debit cards via Stripe (Visa, Mastercard, Amex, etc.)",
+              "lines": [
+                698,
+                711
+              ],
+              "name": "Payments",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Q: Do I need Google or Microsoft calendar?** A: No, they're optional. Bookings work without calendar sync.",
+              "lines": [
+                712,
+                722
+              ],
+              "name": "Calendar",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Q: Does it work with page builders?** A: Yes, shortcodes work with Elementor, Divi, Beaver Builder, etc.",
+              "lines": [
+                723,
+                735
+              ],
+              "name": "Technical",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            685,
+            735
+          ],
+          "name": "FAQ",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "| Shortcut | Action | |----------|--------| | `s` | Focus search field | | `n` | New booking/type | | `?` | Show help |",
+              "lines": [
+                738,
+                745
+              ],
+              "name": "Admin Pages",
+              "type": "subsection"
+            },
+            {
+              "docstring": "| Shortcut | Action | |----------|--------| | `Tab` | Next field | | `Shift+Tab` | Previous field | | `Enter` | Submit/Next step | | `Esc` | Close mod",
+              "lines": [
+                746,
+                756
+              ],
+              "name": "Booking Form (Frontend)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            736,
+            756
+          ],
+          "name": "Keyboard Shortcuts",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Installation Guide:** [INSTALL.md](INSTALL.md) - **API Documentation:** [API_GUIDE.md](API_GUIDE.md) - **Technical Specs:** [TECH_STACK.md](TECH_S",
+              "lines": [
+                759,
+                764
+              ],
+              "name": "Resources",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- GitHub Issues: [Report a bug](https://github.com/jcastillotx/book-now/issues) - Documentation: Check docs folder",
+              "lines": [
+                765,
+                769
+              ],
+              "name": "Support",
+              "type": "subsection"
+            },
+            {
+              "docstring": "When reporting issues, include: 1. WordPress version 2. PHP version 3. Plugin version 4. Error messages (from debug.log) 5. Steps to reproduce",
+              "lines": [
+                770,
+                783
+              ],
+              "name": "Debug Information",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            757,
+            783
+          ],
+          "name": "Getting More Help",
+          "type": "section"
+        }
+      ]
+    },
+    "PROJECT_SPEC.md": {
+      "hash": "5aba409d0078",
+      "indexed_at": "2026-01-20T04:48:29.202404+00:00",
+      "language": "markdown",
+      "lines": 722,
+      "symbols": [
+        {
+          "docstring": "**Project Name:** Book Now **Company:** Kre8iv Tech **Version:** 1.0.0 **Document Version:** 1.0 **Last Updated:** 2026-01-08",
+          "lines": [
+            3,
+            14
+          ],
+          "name": "Executive Summary",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Provide businesses with a seamless, all-in-one consultation booking solution that: - Displays available consultation types with pricing - Shows real-t",
+              "lines": [
+                17,
+                25
+              ],
+              "name": "1.1 Purpose",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Primary Users (Site Visitors):** - Clients seeking to book consultations - Customers browsing available services - Users comparing consultation opti",
+              "lines": [
+                26,
+                37
+              ],
+              "name": "1.2 Target Users",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Reduce manual scheduling overhead 2. Collect payments upfront or as deposits 3. Eliminate double-booking through calendar integration 4. Provide pr",
+              "lines": [
+                38,
+                47
+              ],
+              "name": "1.3 Business Goals",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            15,
+            47
+          ],
+          "name": "1. Project Overview",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "A multi-step wizard for completing bookings:",
+                  "lines": [
+                    52,
+                    88
+                  ],
+                  "name": "2.1.1 Booking Form (`[book_now_form]`)",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "A monthly calendar displaying availability:",
+                  "lines": [
+                    89,
+                    98
+                  ],
+                  "name": "2.1.2 Calendar View (`[book_now_calendar]`)",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "A day-by-day list of available slots:",
+                  "lines": [
+                    99,
+                    108
+                  ],
+                  "name": "2.1.3 List View (`[book_now_list]`)",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Display consultation offerings:",
+                  "lines": [
+                    109,
+                    118
+                  ],
+                  "name": "2.1.4 Consultation Type Cards (`[book_now_types]`)",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                50,
+                118
+              ],
+              "name": "2.1 Frontend Features",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "Main overview screen showing: - Today's bookings - Upcoming bookings (next 7 days) - Recent bookings - Quick statistics (total bookings, revenue) - In",
+                  "lines": [
+                    121,
+                    129
+                  ],
+                  "name": "2.2.1 Dashboard",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "**Bookings List:** - Sortable/filterable table - Search by customer name, email, reference - Filter by status, date range, consultation type - Bulk ac",
+                  "lines": [
+                    130,
+                    155
+                  ],
+                  "name": "2.2.2 Booking Management",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "**Types List:** - All consultation types with key info - Quick edit inline - Reorder/sort - Duplicate type - Activate/deactivate",
+                  "lines": [
+                    156,
+                    179
+                  ],
+                  "name": "2.2.3 Consultation Types Management",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "- Create/edit/delete categories - Hierarchical categories (parent/child) - Category description - Category image - Display order",
+                  "lines": [
+                    180,
+                    187
+                  ],
+                  "name": "2.2.4 Categories Management",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "**Weekly Schedule:** - Set available hours per day - Different hours for different days - Multiple time blocks per day (e.g., 9-12, 2-5)",
+                  "lines": [
+                    188,
+                    203
+                  ],
+                  "name": "2.2.5 Availability Settings",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "**General Settings:** - Business name - Business timezone - Date/time formats - Default currency - Booking page URL - Terms and conditions URL - Priva",
+                  "lines": [
+                    204,
+                    262
+                  ],
+                  "name": "2.2.6 Settings Pages",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                119,
+                262
+              ],
+              "name": "2.2 Admin Features",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "**Requirements:** - PCI-compliant card collection via Stripe Elements - Payment Intents API for SCA compliance - Support for major card types - Webhoo",
+                  "lines": [
+                    265,
+                    287
+                  ],
+                  "name": "2.3.1 Stripe Payment Integration",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "**Requirements:** - OAuth 2.0 authentication flow - Create events when booking confirmed - Update events when booking modified - Delete events when bo",
+                  "lines": [
+                    288,
+                    305
+                  ],
+                  "name": "2.3.2 Google Calendar Integration",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "**Requirements:** - OAuth 2.0 via Azure AD - Create/update/delete calendar events - Read free/busy information - Support for personal and work account",
+                  "lines": [
+                    306,
+                    322
+                  ],
+                  "name": "2.3.3 Microsoft 365/Outlook Integration",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                263,
+                322
+              ],
+              "name": "2.3 API Integrations",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            48,
+            322
+          ],
+          "name": "2. Functional Requirements",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Page load time < 3 seconds - AJAX operations < 1 second response - Support for 100+ consultation types - Handle 1000+ bookings without degradation -",
+              "lines": [
+                325,
+                332
+              ],
+              "name": "3.1 Performance",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- All API keys encrypted at rest - HTTPS required for payment pages - CSRF protection on all forms - SQL injection prevention - XSS prevention - Rate",
+              "lines": [
+                333,
+                343
+              ],
+              "name": "3.2 Security",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- WordPress 6.0+ - PHP 8.0+ - MySQL 5.7+ / MariaDB 10.3+ - Modern browsers (Chrome, Firefox, Safari, Edge) - Mobile responsive design - Screen reader",
+              "lines": [
+                344,
+                352
+              ],
+              "name": "3.3 Compatibility",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- All strings translatable - POT file generation - Date/time format localization - Currency format localization - RTL language support",
+              "lines": [
+                353,
+                360
+              ],
+              "name": "3.4 Internationalization",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Efficient database schema - Caching where appropriate - Lazy loading of assets - API rate limit handling",
+              "lines": [
+                361,
+                369
+              ],
+              "name": "3.5 Scalability",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            323,
+            369
+          ],
+          "name": "3. Non-Functional Requirements",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "1. **As a visitor**, I want to see available consultation types so I can choose the right service.",
+              "lines": [
+                372,
+                385
+              ],
+              "name": "4.1 Site Visitor Stories",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. **As a business owner**, I want to define consultation types with custom pricing and duration so I can offer different services.",
+              "lines": [
+                386,
+                405
+              ],
+              "name": "4.2 Business Owner Stories",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            370,
+            405
+          ],
+          "name": "4. User Stories",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "| Column | Type | Description | |--------|------|-------------| | id | BIGINT(20) UNSIGNED | Primary key | | name | VARCHAR(255) | Display name | | sl",
+                  "lines": [
+                    410,
+                    435
+                  ],
+                  "name": "`{prefix}booknow_consultation_types`",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "| Column | Type | Description | |--------|------|-------------| | id | BIGINT(20) UNSIGNED | Primary key | | name | VARCHAR(255) | Category name | | s",
+                  "lines": [
+                    436,
+                    448
+                  ],
+                  "name": "`{prefix}booknow_categories`",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "| Column | Type | Description | |--------|------|-------------| | id | BIGINT(20) UNSIGNED | Primary key | | reference_number | VARCHAR(20) | Unique b",
+                  "lines": [
+                    449,
+                    479
+                  ],
+                  "name": "`{prefix}booknow_bookings`",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "| Column | Type | Description | |--------|------|-------------| | id | BIGINT(20) UNSIGNED | Primary key | | rule_type | VARCHAR(20) | weekly/specific",
+                  "lines": [
+                    480,
+                    493
+                  ],
+                  "name": "`{prefix}booknow_availability`",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "| Column | Type | Description | |--------|------|-------------| | id | BIGINT(20) UNSIGNED | Primary key | | booking_id | BIGINT(20) UNSIGNED | Foreig",
+                  "lines": [
+                    494,
+                    508
+                  ],
+                  "name": "`{prefix}booknow_email_log`",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                408,
+                508
+              ],
+              "name": "5.1 Tables",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            406,
+            508
+          ],
+          "name": "5. Database Schema",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Complete booking wizard form.",
+              "lines": [
+                511,
+                531
+              ],
+              "name": "6.1 `[book_now_form]`",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Calendar view showing availability.",
+              "lines": [
+                532,
+                548
+              ],
+              "name": "6.2 `[book_now_calendar]`",
+              "type": "subsection"
+            },
+            {
+              "docstring": "List view of available slots.",
+              "lines": [
+                549,
+                565
+              ],
+              "name": "6.3 `[book_now_list]`",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Display consultation type cards.",
+              "lines": [
+                566,
+                585
+              ],
+              "name": "6.4 `[book_now_types]`",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Single consultation type with booking form.",
+              "lines": [
+                586,
+                602
+              ],
+              "name": "6.5 `[book_now_single]`",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            509,
+            602
+          ],
+          "name": "6. Shortcode Reference",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "All public endpoints: `/wp-json/book-now/v1/`",
+              "lines": [
+                605,
+                620
+              ],
+              "name": "7.1 Public Endpoints",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Requires authentication with `manage_options` capability.",
+              "lines": [
+                621,
+                638
+              ],
+              "name": "7.2 Admin Endpoints",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            603,
+            638
+          ],
+          "name": "7. REST API Endpoints",
+          "type": "section"
+        },
+        {
+          "docstring": "Before development begins, please clarify:",
+          "lines": [
+            639,
+            664
+          ],
+          "name": "8. Questions & Clarifications",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "The following must be complete for initial release:",
+              "lines": [
+                667,
+                682
+              ],
+              "name": "9.1 Minimum Viable Product (MVP)",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [ ] No PHP errors or warnings - [ ] No JavaScript console errors - [ ] Mobile responsive on all views - [ ] WPCS code standards compliance - [ ] Sec",
+              "lines": [
+                683,
+                693
+              ],
+              "name": "9.2 Quality Requirements",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            665,
+            693
+          ],
+          "name": "9. Acceptance Criteria",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "*To be created during design phase*",
+              "lines": [
+                696,
+                699
+              ],
+              "name": "Appendix A: Wireframes",
+              "type": "subsection"
+            },
+            {
+              "docstring": "*Template designs and variable reference*",
+              "lines": [
+                700,
+                703
+              ],
+              "name": "Appendix B: Email Templates",
+              "type": "subsection"
+            },
+            {
+              "docstring": "*Step-by-step Stripe configuration*",
+              "lines": [
+                704,
+                707
+              ],
+              "name": "Appendix C: Stripe Setup Guide",
+              "type": "subsection"
+            },
+            {
+              "docstring": "*OAuth app setup instructions*",
+              "lines": [
+                708,
+                711
+              ],
+              "name": "Appendix D: Google Calendar Setup",
+              "type": "subsection"
+            },
+            {
+              "docstring": "*Azure AD app registration guide*",
+              "lines": [
+                712,
+                723
+              ],
+              "name": "Appendix E: Microsoft Calendar Setup",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            694,
+            723
+          ],
+          "name": "10. Appendices",
+          "type": "section"
+        }
+      ]
+    },
+    "TECH_STACK.md": {
+      "hash": "d5fb3ce5323f",
+      "indexed_at": "2026-01-20T04:48:29.206907+00:00",
+      "language": "markdown",
+      "lines": 527,
+      "symbols": [
+        {
+          "children": [
+            {
+              "docstring": "| Component | Requirement | Notes | |-----------|-------------|-------| | WordPress Version | 6.0+ | Required for modern block editor and REST API fea",
+              "lines": [
+                9,
+                16
+              ],
+              "name": "WordPress",
+              "type": "subsection"
+            },
+            {
+              "docstring": "| Requirement | Details | |-------------|---------| | SSL Certificate | **Required** for Stripe payment processing | | cURL Extension | Required for A",
+              "lines": [
+                17,
+                27
+              ],
+              "name": "Server Requirements",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            7,
+            27
+          ],
+          "name": "Core Platform",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **WordPress Plugin API** - Core plugin architecture - **WordPress Settings API** - Settings management - **WordPress REST API** - Frontend/backend c",
+              "lines": [
+                30,
+                36
+              ],
+              "name": "PHP Framework",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **WordPress $wpdb** - Database abstraction layer - **Custom Tables** - Plugin-specific data storage - **WordPress Options API** - Settings storage",
+              "lines": [
+                37,
+                41
+              ],
+              "name": "Database",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "**stripe/stripe-php (v10.x)** - Official Stripe PHP library - Payment Intents API support - Webhook signature verification - PCI-compliant tokenizatio",
+                  "lines": [
+                    61,
+                    82
+                  ],
+                  "name": "Library Details",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                42,
+                82
+              ],
+              "name": "PHP Libraries (Composer)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            28,
+            82
+          ],
+          "name": "Backend Technologies",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "| Technology | Version | Purpose | |------------|---------|---------| | HTML5 | - | Semantic markup | | CSS3 | - | Styling and layout | | JavaScript |",
+              "lines": [
+                85,
+                92
+              ],
+              "name": "Core Frontend",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **CSS Custom Properties** - Theming and customization - **BEM Methodology** - Class naming convention - **Flexbox/Grid** - Layout systems - **Mobile",
+              "lines": [
+                93,
+                98
+              ],
+              "name": "CSS Architecture",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Bundled with WordPress (no additional load):** - jQuery (DOM manipulation) - wp.ajax (AJAX handling) - wp.api (REST API client)",
+              "lines": [
+                99,
+                120
+              ],
+              "name": "JavaScript Libraries",
+              "type": "subsection"
+            },
+            {
+              "docstring": "If using asset compilation:",
+              "lines": [
+                121,
+                140
+              ],
+              "name": "Build Tools (Optional)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            83,
+            140
+          ],
+          "name": "Frontend Technologies",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "| Aspect | Details | |--------|---------| | API Version | Latest (auto-managed by library) | | Authentication | Secret Key (server-side) | | Frontend",
+              "lines": [
+                143,
+                164
+              ],
+              "name": "Stripe Payment API",
+              "type": "subsection"
+            },
+            {
+              "docstring": "| Aspect | Details | |--------|---------| | API | Google Calendar API v3 | | Authentication | OAuth 2.0 | | Token Storage | WordPress options (encrypt",
+              "lines": [
+                165,
+                185
+              ],
+              "name": "Google Calendar API",
+              "type": "subsection"
+            },
+            {
+              "docstring": "| Aspect | Details | |--------|---------| | API | Microsoft Graph v1.0 | | Authentication | OAuth 2.0 via Azure AD | | Token Storage | WordPress optio",
+              "lines": [
+                186,
+                208
+              ],
+              "name": "Microsoft Graph API",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            141,
+            208
+          ],
+          "name": "API Integrations",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "| Tool | Purpose | |------|---------| | PHP_CodeSniffer | PHP code standards | | WordPress Coding Standards | WP-specific rules | | PHPUnit | Unit tes",
+              "lines": [
+                211,
+                219
+              ],
+              "name": "Code Quality",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Recommended Extensions:** - PHP Intelephense (PHP support) - WordPress Snippets - ESLint (JavaScript) - Prettier (code formatting) - GitLens (Git in",
+              "lines": [
+                220,
+                237
+              ],
+              "name": "IDE/Editor Setup",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Recommended Environments:** 1. **Local by Flywheel** - Easiest setup 2. **XAMPP/MAMP** - Traditional approach 3. **Docker** - Containerized environm",
+              "lines": [
+                238,
+                256
+              ],
+              "name": "Local Development",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            209,
+            256
+          ],
+          "name": "Development Tools",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "| Table | Purpose | |-------|---------| | `{prefix}booknow_consultation_types` | Service definitions | | `{prefix}booknow_categories` | Type categoriz",
+              "lines": [
+                259,
+                268
+              ],
+              "name": "Custom Tables",
+              "type": "subsection"
+            },
+            {
+              "docstring": "| Table | Usage | |-------|-------| | `wp_options` | Plugin settings storage | | `wp_usermeta` | User-specific settings |",
+              "lines": [
+                269,
+                275
+              ],
+              "name": "WordPress Tables Used",
+              "type": "subsection"
+            },
+            {
+              "docstring": "| Data Type | Storage | |-----------|---------| | Plugin settings | `wp_options` (serialized arrays) | | API credentials | `wp_options` (encrypted) |",
+              "lines": [
+                276,
+                288
+              ],
+              "name": "Data Storage Strategy",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            257,
+            288
+          ],
+          "name": "Database Schema",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "| Layer | Implementation | |-------|----------------| | Admin Access | WordPress capabilities (`manage_options`) | | REST API (Public) | Nonce verific",
+              "lines": [
+                291,
+                300
+              ],
+              "name": "Authentication & Authorization",
+              "type": "subsection"
+            },
+            {
+              "docstring": "| Concern | Solution | |---------|----------| | SQL Injection | `$wpdb->prepare()` | | XSS | `esc_html()`, `esc_attr()`, `esc_url()` | | CSRF | WordPr",
+              "lines": [
+                301,
+                310
+              ],
+              "name": "Data Protection",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                311,
+                328
+              ],
+              "name": "Encryption",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            289,
+            328
+          ],
+          "name": "Security Architecture",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "| What | How | |------|-----| | Availability calculations | WordPress transients | | API responses | Short-term transients | | Static assets | Browser",
+              "lines": [
+                331,
+                339
+              ],
+              "name": "Caching Strategy",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Conditional loading (only on pages with shortcodes) - Minified CSS/JS in production - Async/defer for non-critical scripts - CDN for Stripe.js",
+              "lines": [
+                340,
+                346
+              ],
+              "name": "Asset Loading",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Proper indexes on frequently queried columns - Efficient queries with specific column selection - Pagination for large result sets - Query caching w",
+              "lines": [
+                347,
+                355
+              ],
+              "name": "Database Optimization",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            329,
+            355
+          ],
+          "name": "Performance Considerations",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                358,
+                379
+              ],
+              "name": "Directory Structure",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                380,
+                391
+              ],
+              "name": "Build Process",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Update version in main plugin file 2. Update version in readme.txt 3. Run `composer install --no-dev` 4. Generate POT file for translations 5. Crea",
+              "lines": [
+                392,
+                401
+              ],
+              "name": "Release Checklist",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            356,
+            401
+          ],
+          "name": "Deployment Architecture",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "| Browser | Version | |---------|---------| | Chrome | Last 2 versions | | Firefox | Last 2 versions | | Safari | Last 2 versions | | Edge | Last 2 ve",
+              "lines": [
+                404,
+                414
+              ],
+              "name": "Supported Browsers",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Internet Explorer (all versions) - Opera Mini - Browsers without JavaScript",
+              "lines": [
+                415,
+                420
+              ],
+              "name": "Not Supported",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Core booking works without JavaScript (form fallback) - Enhanced UX with JavaScript enabled - Graceful degradation for older browsers",
+              "lines": [
+                421,
+                428
+              ],
+              "name": "Progressive Enhancement",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            402,
+            428
+          ],
+          "name": "Browser Support",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                431,
+                439
+              ],
+              "name": "Error Logging",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                440,
+                446
+              ],
+              "name": "Debug Mode",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Query Monitor (WordPress plugin) - Debug Bar (WordPress plugin) - Stripe Dashboard (payment monitoring) - Google API Console (Calendar API usage)",
+              "lines": [
+                447,
+                455
+              ],
+              "name": "Recommended Monitoring Tools",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            429,
+            455
+          ],
+          "name": "Monitoring & Logging",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Feature branches: `claude/<feature>-<session-id>` - Meaningful commit messages - No compiled assets in repository - `.gitignore` for vendor/node_mod",
+              "lines": [
+                458,
+                464
+              ],
+              "name": "Git Strategy",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                465,
+                477
+              ],
+              "name": ".gitignore",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            456,
+            477
+          ],
+          "name": "Version Control",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- [WordPress Plugin Handbook](https://developer.wordpress.org/plugins/) - [WordPress Coding Standards](https://developer.wordpress.org/coding-standard",
+              "lines": [
+                480,
+                488
+              ],
+              "name": "Official Documentation",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                489,
+                528
+              ],
+              "name": "Useful WordPress Functions",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            478,
+            528
+          ],
+          "name": "External Resources",
+          "type": "section"
+        }
+      ]
+    },
+    "TODO.md": {
+      "hash": "fb2976300bf3",
+      "indexed_at": "2026-01-20T04:48:29.204613+00:00",
+      "language": "markdown",
+      "lines": 520,
+      "symbols": [
+        {
+          "children": [
+            {
+              "docstring": "- [x] Create main plugin file `book-now-kre8iv.php` with proper headers - [x] Create `uninstall.php` for clean removal - [x] Set up directory structur",
+              "lines": [
+                15,
+                26
+              ],
+              "name": "1.1 Plugin Scaffolding \u2705",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [x] Design final database schema - [x] Create `booknow_consultation_types` table - [x] Create `booknow_categories` table - [x] Create `booknow_booki",
+              "lines": [
+                27,
+                37
+              ],
+              "name": "1.2 Database Schema \u2705",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [x] Register main admin menu \"Book Now\" - [x] Add Dashboard submenu - [x] Add Bookings submenu - [x] Add Consultation Types submenu - [x] Add Catego",
+              "lines": [
+                38,
+                47
+              ],
+              "name": "1.3 Admin Menu Structure \u2705",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [x] Create settings registration system - [x] Implement settings API wrapper - [x] Create settings page renderer - [x] Add settings sanitization - [",
+              "lines": [
+                48,
+                57
+              ],
+              "name": "1.4 Settings Framework \u2705",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            13,
+            57
+          ],
+          "name": "Phase 1: Foundation \u2705 COMPLETE",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- [x] Create `Book_Now_Consultation_Type` model class - [x] Implement create consultation type - [x] Implement read/get consultation types - [x] Imple",
+              "lines": [
+                60,
+                71
+              ],
+              "name": "2.1 Consultation Types CRUD \u2705",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [x] Create `Book_Now_Category` model class - [x] Implement category CRUD operations - [x] Add hierarchical support (parent/child) - [x] Create admin",
+              "lines": [
+                72,
+                79
+              ],
+              "name": "2.2 Categories CRUD \u2705",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [x] Create `Book_Now_Availability` class - [x] Implement weekly schedule rules - [x] Implement specific date rules - [x] Implement date blocking rul",
+              "lines": [
+                80,
+                90
+              ],
+              "name": "2.3 Availability System \u2705",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [x] Create `Book_Now_Booking` model class - [x] Implement create booking - [x] Implement read bookings with filtering - [x] Implement update booking",
+              "lines": [
+                91,
+                103
+              ],
+              "name": "2.4 Booking CRUD \u2705",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [x] Create `Book_Now_REST_API` class - [x] Register REST namespace - [x] Implement GET `/consultation-types` - [x] Implement GET `/consultation-type",
+              "lines": [
+                104,
+                119
+              ],
+              "name": "2.5 REST API Endpoints \u2705",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            58,
+            119
+          ],
+          "name": "Phase 2: Core Booking Engine \u2705 COMPLETE",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- [x] Create `Book_Now_Shortcodes` class - [x] Register all shortcodes - [x] Create shortcode attribute parser - [x] Set up conditional asset loading",
+              "lines": [
+                122,
+                127
+              ],
+              "name": "3.1 Shortcode System \u2705",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [x] Create form wizard HTML structure - [x] Implement Step 1: Type selection - [x] Implement Step 2: Date/time selection - [x] Implement Step 3: Cus",
+              "lines": [
+                128,
+                141
+              ],
+              "name": "3.2 Booking Form Wizard \u2705",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [x] Create calendar HTML structure - [x] Implement month navigation - [x] Render availability on calendar - [x] Handle date selection - [x] Show slo",
+              "lines": [
+                142,
+                150
+              ],
+              "name": "3.3 Calendar View \u2705",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [x] Create list view HTML structure - [x] Fetch and display available slots - [x] Group by date - [x] Add expand/collapse for times - [x] Implement",
+              "lines": [
+                151,
+                158
+              ],
+              "name": "3.4 List View \u2705",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [x] Create card component HTML - [x] Style grid layout - [x] Style list layout - [x] Add category filtering - [x] Implement responsive design - [x]",
+              "lines": [
+                159,
+                166
+              ],
+              "name": "3.5 Consultation Type Cards \u2705",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [x] Create base CSS variables - [x] Style booking form wizard - [x] Style calendar component - [x] Style list component - [x] Style consultation car",
+              "lines": [
+                167,
+                178
+              ],
+              "name": "3.6 Styling \u2705",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            120,
+            178
+          ],
+          "name": "Phase 3: Frontend Components \u2705 COMPLETE",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- [x] Create `Book_Now_Stripe` class - [x] Add Stripe PHP library via Composer - [x] Create settings page for Stripe keys - [x] Implement test/live mo",
+              "lines": [
+                181,
+                189
+              ],
+              "name": "4.1 Stripe Setup \u2705",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [x] Implement Payment Intent creation - [x] Add Stripe Elements to payment step - [x] Handle card validation - [x] Process payment confirmation - [x",
+              "lines": [
+                190,
+                198
+              ],
+              "name": "4.2 Payment Flow \u2705",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [x] Create webhook endpoint - [x] Implement signature verification - [x] Handle `payment_intent.succeeded` - [x] Handle `payment_intent.payment_fail",
+              "lines": [
+                199,
+                207
+              ],
+              "name": "4.3 Stripe Webhooks \u2705",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [x] Create refund functionality - [x] Add refund button to admin - [x] Handle partial refunds - [x] Update booking status on refund - [x] Send refun",
+              "lines": [
+                208,
+                216
+              ],
+              "name": "4.4 Refund Processing \u2705",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            179,
+            216
+          ],
+          "name": "Phase 4: Payment Integration \u2705 COMPLETE",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- [x] Create `Book_Now_Google_Calendar` class - [x] Add Google API client library - [x] Create OAuth connection flow - [x] Store OAuth tokens securely",
+              "lines": [
+                219,
+                233
+              ],
+              "name": "5.1 Google Calendar Integration \u2705",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [x] Create `Book_Now_Microsoft_Calendar` class - [x] Add Microsoft Graph SDK - [x] Create Azure AD OAuth flow - [x] Store OAuth tokens securely - [x",
+              "lines": [
+                234,
+                246
+              ],
+              "name": "5.2 Microsoft Calendar Integration \u2705",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [x] Create sync manager class (`Book_Now_Calendar_Sync`) - [x] Implement automatic event creation on booking - [x] Implement event update on booking",
+              "lines": [
+                247,
+                258
+              ],
+              "name": "5.3 Sync Logic \u2705",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            217,
+            258
+          ],
+          "name": "Phase 5: Calendar Sync \u2705 COMPLETE",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- [x] Create `Book_Now_Notifications` class - [x] Create email template loader - [x] Implement template variable replacement - [x] Create HTML email w",
+              "lines": [
+                261,
+                267
+              ],
+              "name": "6.1 Email Template System \u2705",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [x] Create booking confirmation template - [x] Create booking reminder template - [x] Create cancellation notification template - [x] Create admin n",
+              "lines": [
+                268,
+                276
+              ],
+              "name": "6.2 Email Templates \u2705",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [x] Implement email sending function - [x] Add email queue for bulk sending - [x] Log all sent emails - [x] Handle send failures - [x] Add test emai",
+              "lines": [
+                277,
+                285
+              ],
+              "name": "6.3 Email Sending \u2705",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [x] Set up WordPress cron for reminders - [x] Implement reminder sending logic - [x] Add configurable reminder timing - [x] Prevent duplicate remind",
+              "lines": [
+                286,
+                294
+              ],
+              "name": "6.4 Reminder System \u2705",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            259,
+            294
+          ],
+          "name": "Phase 6: Notifications \u2705 COMPLETE",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- [x] Create dashboard widget layout - [x] Show today's bookings - [x] Show upcoming bookings - [x] Display quick statistics - [x] Show integration st",
+              "lines": [
+                297,
+                304
+              ],
+              "name": "7.1 Dashboard \u2705",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [x] Complete General settings page - [x] Complete Payment settings page - [x] Complete Integrations settings page - [x] Complete Email settings page",
+              "lines": [
+                305,
+                312
+              ],
+              "name": "7.2 Settings Pages \u2705",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [x] Create admin CSS file - [x] Create admin JavaScript file - [x] Add date picker libraries - [x] Add color picker for styling - [x] Create admin U",
+              "lines": [
+                313,
+                321
+              ],
+              "name": "7.3 Admin Assets \u2705",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            295,
+            321
+          ],
+          "name": "Phase 7: Admin Interface Polish \u2705 COMPLETE",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- [~] Set up PHPUnit (structure ready, tests need writing) - [ ] Test consultation type model - [ ] Test booking model - [ ] Test availability calcula",
+              "lines": [
+                324,
+                332
+              ],
+              "name": "8.1 Unit Tests",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [!] Test complete booking flow (requires live WordPress) - [!] Test payment processing (requires live WordPress) - [!] Test calendar sync (requires",
+              "lines": [
+                333,
+                339
+              ],
+              "name": "8.2 Integration Tests",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [x] Audit all database queries - [x] Review all user input handling - [x] Check nonce verification - [x] Review capability checks - [x] Test for XSS",
+              "lines": [
+                340,
+                348
+              ],
+              "name": "8.3 Security Review \u2705",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [x] Run PHPCS with WordPress standards - [x] Fix all coding standard issues - [x] Add inline documentation - [x] Generate PHPDoc documentation - [x]",
+              "lines": [
+                349,
+                358
+              ],
+              "name": "8.4 Code Quality \u2705",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            322,
+            358
+          ],
+          "name": "Phase 8: Testing & Quality \u2705 CODE COMPLETE",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- [x] Document all hooks and filters - [x] Document REST API endpoints (API_GUIDE.md) - [x] Document database schema - [x] Create code examples - [x]",
+              "lines": [
+                361,
+                367
+              ],
+              "name": "9.1 Developer Documentation \u2705",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [x] Create getting started guide (INSTALLATION.md) - [x] Document consultation type setup - [x] Document availability configuration - [x] Create pay",
+              "lines": [
+                368,
+                377
+              ],
+              "name": "9.2 User Documentation \u2705",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [x] Write readme.txt - [ ] Create plugin banner (design needed) - [ ] Create plugin icon (design needed) - [ ] Prepare screenshots (requires live Wo",
+              "lines": [
+                378,
+                386
+              ],
+              "name": "9.3 WordPress.org Assets",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            359,
+            386
+          ],
+          "name": "Phase 9: Documentation \u2705 COMPLETE",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- [!] Full end-to-end testing (requires live WordPress) - [!] Test on fresh WordPress install (requires live WordPress) - [!] Test plugin activation/d",
+              "lines": [
+                389,
+                397
+              ],
+              "name": "10.1 Final Testing",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [ ] Update version numbers - [x] Generate final POT file - [ ] Create release build script - [ ] Create distributable ZIP - [ ] Tag release in Git -",
+              "lines": [
+                398,
+                407
+              ],
+              "name": "10.2 Release",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            387,
+            407
+          ],
+          "name": "Phase 10: Launch Preparation \ud83d\udd04 IN PROGRESS",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- [x] **Fixed Fatal Error:** Class 'Book_Now_Loader' not found - Issue: Loader class instantiated before file was loaded - Fix: Reorganized dependency",
+              "lines": [
+                410,
+                424
+              ],
+              "name": "Critical Fixes Applied \u2705",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            408,
+            424
+          ],
+          "name": "Recent Bug Fixes (2024-01-08)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- [ ] Recurring appointments - [ ] Group bookings - [ ] Multiple staff/providers - [ ] Waiting list - [ ] Promo codes/discounts - [ ] Additional payme",
+              "lines": [
+                427,
+                445
+              ],
+              "name": "Nice to Have (Post-MVP)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            425,
+            445
+          ],
+          "name": "Backlog / Future Features",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Phase 1:** Foundation - COMPLETE - **Phase 2:** Core Booking Engine - COMPLETE - **Phase 3:** Frontend Components - COMPLETE - **Phase 4:** Paymen",
+              "lines": [
+                448,
+                459
+              ],
+              "name": "\u2705 100% Code Complete",
+              "type": "subsection"
+            },
+            {
+              "docstring": "All pending items marked with [!] require a live WordPress environment for testing: - Frontend booking flow testing - Admin interface testing - Paymen",
+              "lines": [
+                460,
+                469
+              ],
+              "name": "\ud83d\udd04 Pending Items",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Total Tasks:** 250+ - **Completed:** 240+ (96%) - **Code Complete:** 100% - **Runtime Testing:** Pending (requires live WordPress)",
+              "lines": [
+                470,
+                477
+              ],
+              "name": "\ud83d\udcca Completion Statistics",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            446,
+            477
+          ],
+          "name": "Summary Status",
+          "type": "section"
+        },
+        {
+          "lines": [
+            478,
+            492
+          ],
+          "name": "Dependencies Installed",
+          "type": "section"
+        },
+        {
+          "docstring": "1. **Pull Latest Code:**",
+          "lines": [
+            493,
+            521
+          ],
+          "name": "Next Steps for Deployment",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.116543+00:00",
+  "version": "1.0"
+}

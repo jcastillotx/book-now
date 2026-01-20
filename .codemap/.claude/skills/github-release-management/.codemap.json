@@ -1,0 +1,753 @@
+{
+  "directory": ".claude/skills/github-release-management",
+  "files": {
+    "SKILL.md": {
+      "hash": "54f05b96e4e2",
+      "indexed_at": "2026-01-20T04:50:25.506484+00:00",
+      "language": "markdown",
+      "lines": 1081,
+      "symbols": [
+        {
+          "children": [
+            {
+              "lines": [
+                30,
+                44
+              ],
+              "name": "Simple Release Flow",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                45,
+                55
+              ],
+              "name": "Full Automated Release",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            28,
+            55
+          ],
+          "name": "Quick Start",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Semantic version analysis and suggestion - Breaking change detection from commits - Release timeline generation - Multi-package version coordination",
+              "lines": [
+                58,
+                63
+              ],
+              "name": "1. Release Planning & Version Management",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Multi-stage test orchestration - Cross-platform compatibility testing - Performance regression detection - Security vulnerability scanning",
+              "lines": [
+                64,
+                69
+              ],
+              "name": "2. Automated Testing & Validation",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Multi-platform build coordination - Parallel artifact generation - Progressive deployment strategies - Automated rollback mechanisms",
+              "lines": [
+                70,
+                75
+              ],
+              "name": "3. Build & Deployment Orchestration",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Automated changelog generation - Release notes with categorization - Migration guide creation - Stakeholder notification",
+              "lines": [
+                76,
+                83
+              ],
+              "name": "4. Documentation & Communication",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            56,
+            83
+          ],
+          "name": "Core Capabilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "lines": [
+                    88,
+                    104
+                  ],
+                  "name": "Create Release Draft",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    105,
+                    113
+                  ],
+                  "name": "Basic Version Bump",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    114,
+                    124
+                  ],
+                  "name": "Simple Deployment",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                86,
+                124
+              ],
+              "name": "Essential Release Commands",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                125,
+                144
+              ],
+              "name": "Quick Integration Example",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            84,
+            144
+          ],
+          "name": "Progressive Disclosure: Level 1 - Basic Usage",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "lines": [
+                    149,
+                    167
+                  ],
+                  "name": "Initialize Release Swarm",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    168,
+                    218
+                  ],
+                  "name": "Coordinated Release Workflow",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                147,
+                218
+              ],
+              "name": "AI Swarm Release Orchestration",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "lines": [
+                    221,
+                    247
+                  ],
+                  "name": "Changelog Agent",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    248,
+                    264
+                  ],
+                  "name": "Version Agent",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    265,
+                    281
+                  ],
+                  "name": "Build Agent",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    282,
+                    291
+                  ],
+                  "name": "Test Agent",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    292,
+                    303
+                  ],
+                  "name": "Deploy Agent",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                219,
+                303
+              ],
+              "name": "Release Agent Specializations",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            145,
+            303
+          ],
+          "name": "Progressive Disclosure: Level 2 - Swarm Coordination",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "lines": [
+                    308,
+                    335
+                  ],
+                  "name": "Monorepo Release Strategy",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                306,
+                335
+              ],
+              "name": "Multi-Package Release Coordination",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "lines": [
+                    338,
+                    368
+                  ],
+                  "name": "Staged Rollout Configuration",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    369,
+                    379
+                  ],
+                  "name": "Execute Staged Deployment",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                336,
+                379
+              ],
+              "name": "Progressive Deployment Strategy",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "lines": [
+                    382,
+                    392
+                  ],
+                  "name": "Coordinated Multi-Repo Release",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    393,
+                    413
+                  ],
+                  "name": "Cross-Repo Dependency Management",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                380,
+                413
+              ],
+              "name": "Multi-Repository Coordination",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "lines": [
+                    416,
+                    428
+                  ],
+                  "name": "Emergency Hotfix Workflow",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    429,
+                    458
+                  ],
+                  "name": "Automated Hotfix Process",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                414,
+                458
+              ],
+              "name": "Hotfix Emergency Procedures",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            304,
+            458
+          ],
+          "name": "Progressive Disclosure: Level 3 - Advanced Workflows",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "lines": [
+                    463,
+                    575
+                  ],
+                  "name": "Comprehensive Release Config",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                461,
+                575
+              ],
+              "name": "Release Configuration Management",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "lines": [
+                    578,
+                    596
+                  ],
+                  "name": "Comprehensive Validation Suite",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    597,
+                    607
+                  ],
+                  "name": "Backward Compatibility Testing",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    608,
+                    618
+                  ],
+                  "name": "Performance Regression Detection",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                576,
+                618
+              ],
+              "name": "Advanced Testing Strategies",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "lines": [
+                    621,
+                    631
+                  ],
+                  "name": "Real-Time Release Monitoring",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    632,
+                    642
+                  ],
+                  "name": "Release Analytics & Insights",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    643,
+                    657
+                  ],
+                  "name": "Automated Rollback Configuration",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                619,
+                657
+              ],
+              "name": "Release Monitoring & Analytics",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "lines": [
+                    660,
+                    671
+                  ],
+                  "name": "Security Scanning",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    672,
+                    684
+                  ],
+                  "name": "Compliance Validation",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                658,
+                684
+              ],
+              "name": "Security & Compliance",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            459,
+            684
+          ],
+          "name": "Progressive Disclosure: Level 4 - Enterprise Features",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                687,
+                836
+              ],
+              "name": "Complete Release Workflow",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                837,
+                874
+              ],
+              "name": "Hotfix Workflow",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            685,
+            874
+          ],
+          "name": "GitHub Actions Integration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "- **Weekly**: Patch releases with bug fixes - **Bi-weekly**: Minor releases with features - **Quarterly**: Major releases with breaking changes - **On",
+                  "lines": [
+                    879,
+                    884
+                  ],
+                  "name": "1. Regular Release Cadence",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "- Code freeze 3 days before release - Only critical bug fixes allowed - Beta testing period for major releases - Stakeholder communication plan",
+                  "lines": [
+                    885,
+                    890
+                  ],
+                  "name": "2. Feature Freeze Strategy",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "- Strict semantic versioning compliance - Breaking changes only in major versions - Deprecation warnings one minor version ahead - Cross-package versi",
+                  "lines": [
+                    891,
+                    896
+                  ],
+                  "name": "3. Version Management Rules",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                877,
+                896
+              ],
+              "name": "Release Planning Guidelines",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "- Automated testing at every stage - Security scanning before release - Performance benchmarking - Documentation generation",
+                  "lines": [
+                    899,
+                    904
+                  ],
+                  "name": "1. Comprehensive CI/CD Pipeline",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "- Canary releases for early detection - Staged rollouts with monitoring - Automated health checks - Quick rollback mechanisms",
+                  "lines": [
+                    905,
+                    910
+                  ],
+                  "name": "2. Progressive Deployment",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "- Real-time error tracking - Performance metrics collection - User adoption analytics - Feedback collection automation",
+                  "lines": [
+                    911,
+                    916
+                  ],
+                  "name": "3. Monitoring & Observability",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                897,
+                916
+              ],
+              "name": "Automation Recommendations",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "- Categorized changes by type - Breaking changes highlighted - Migration guides for major versions - Contributor attribution",
+                  "lines": [
+                    919,
+                    924
+                  ],
+                  "name": "1. Changelog Requirements",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "- High-level feature summaries - Detailed technical changes - Upgrade instructions - Known issues and limitations",
+                  "lines": [
+                    925,
+                    930
+                  ],
+                  "name": "2. Release Notes Content",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "- Automated API doc generation - Example code updates - Deprecation notices - Version compatibility matrix",
+                  "lines": [
+                    931,
+                    938
+                  ],
+                  "name": "3. API Documentation",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                917,
+                938
+              ],
+              "name": "Documentation Standards",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            875,
+            938
+          ],
+          "name": "Best Practices & Patterns",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                941,
+                952
+              ],
+              "name": "Issue: Failed Release Build",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                953,
+                966
+              ],
+              "name": "Issue: Test Failures in CI",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                967,
+                981
+              ],
+              "name": "Issue: Deployment Rollback Needed",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                982,
+                996
+              ],
+              "name": "Issue: Version Conflicts",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            939,
+            996
+          ],
+          "name": "Troubleshooting & Common Issues",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Release Planning**: < 2 minutes - **Build Process**: 3-8 minutes (varies by project) - **Test Execution**: 5-15 minutes - **Deployment**: 2-5 minu",
+              "lines": [
+                999,
+                1005
+              ],
+              "name": "Expected Performance",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. **Parallel Execution**: Use swarm coordination for concurrent tasks 2. **Caching**: Enable build and dependency caching 3. **Incremental Builds**:",
+              "lines": [
+                1006,
+                1011
+              ],
+              "name": "Optimization Tips",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Release Frequency**: Target weekly minor releases - **Lead Time**: < 2 hours from commit to production - **Failure Rate**: < 2% of releases requir",
+              "lines": [
+                1012,
+                1019
+              ],
+              "name": "Success Metrics",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            997,
+            1019
+          ],
+          "name": "Performance Metrics & Benchmarks",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- [GitHub CLI Documentation](https://cli.github.com/manual/) - [Semantic Versioning Spec](https://semver.org/) - [Claude Flow SPARC Guide](../../docs/",
+              "lines": [
+                1022,
+                1027
+              ],
+              "name": "Documentation",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **github-pr-management**: PR review and merge automation - **github-workflow-automation**: CI/CD workflow orchestration - **multi-repo-coordination*",
+              "lines": [
+                1028,
+                1033
+              ],
+              "name": "Related Skills",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Issues: https://github.com/ruvnet/claude-flow/issues - Discussions: https://github.com/ruvnet/claude-flow/discussions - Documentation: https://claud",
+              "lines": [
+                1034,
+                1040
+              ],
+              "name": "Support & Community",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1020,
+            1040
+          ],
+          "name": "Related Resources",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- [ ] Version numbers updated across all packages - [ ] Changelog generated and reviewed - [ ] Breaking changes documented with migration guide - [ ]",
+              "lines": [
+                1043,
+                1054
+              ],
+              "name": "Pre-Release Checklist",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [ ] Release branch created and validated - [ ] CI/CD pipeline completed successfully - [ ] Artifacts built and verified - [ ] GitHub release created",
+              "lines": [
+                1055,
+                1066
+              ],
+              "name": "Release Checklist",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [ ] Release announcement published - [ ] Monitoring dashboards reviewed - [ ] Error rates within normal range - [ ] Performance metrics stable - [ ]",
+              "lines": [
+                1067,
+                1082
+              ],
+              "name": "Post-Release Checklist",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            1041,
+            1082
+          ],
+          "name": "Appendix: Release Checklist Template",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.163361+00:00",
+  "version": "1.0"
+}

@@ -1,0 +1,597 @@
+{
+  "directory": ".claude/skills/pair-programming",
+  "files": {
+    "SKILL.md": {
+      "hash": "32ef344d86f6",
+      "indexed_at": "2026-01-20T04:50:25.516471+00:00",
+      "language": "markdown",
+      "lines": 1202,
+      "symbols": [
+        {
+          "docstring": "This skill provides professional pair programming capabilities with AI assistance, supporting multiple collaboration modes, continuous verification, a",
+          "lines": [
+            10,
+            21
+          ],
+          "name": "What This Skill Does",
+          "type": "section"
+        },
+        {
+          "docstring": "**Required:** - Claude Flow CLI installed (`npm install -g claude-flow@alpha`) - Git repository (optional but recommended)",
+          "lines": [
+            22,
+            32
+          ],
+          "name": "Prerequisites",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                35,
+                40
+              ],
+              "name": "Basic Session",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                41,
+                51
+              ],
+              "name": "TDD Session",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            33,
+            51
+          ],
+          "name": "Quick Start",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "lines": [
+                    56,
+                    80
+                  ],
+                  "name": "Starting Sessions",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    81,
+                    98
+                  ],
+                  "name": "Session Management",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                54,
+                98
+              ],
+              "name": "Session Control Commands",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "You write code while AI provides guidance.",
+                  "lines": [
+                    101,
+                    135
+                  ],
+                  "name": "Driver Mode",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "AI writes code while you provide direction.",
+                  "lines": [
+                    136,
+                    170
+                  ],
+                  "name": "Navigator Mode",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Automatically alternates roles at intervals.",
+                  "lines": [
+                    171,
+                    197
+                  ],
+                  "name": "Switch Mode",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "**TDD Mode** - Test-Driven Development:",
+                  "lines": [
+                    198,
+                    235
+                  ],
+                  "name": "Specialized Modes",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                99,
+                235
+              ],
+              "name": "Available Modes",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "lines": [
+                    238,
+                    264
+                  ],
+                  "name": "Code Commands",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    265,
+                    285
+                  ],
+                  "name": "Testing Commands",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    286,
+                    306
+                  ],
+                  "name": "Review Commands",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    307,
+                    327
+                  ],
+                  "name": "Navigation Commands",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    328,
+                    348
+                  ],
+                  "name": "Git Commands",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    349,
+                    366
+                  ],
+                  "name": "AI Partner Commands",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    367,
+                    381
+                  ],
+                  "name": "Metrics Commands",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    382,
+                    396
+                  ],
+                  "name": "Role & Mode Commands",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                236,
+                396
+              ],
+              "name": "In-Session Commands",
+              "type": "subsection"
+            },
+            {
+              "docstring": "| Alias | Full Command | |-------|-------------| | `/s` | `/suggest` | | `/e` | `/explain` | | `/t` | `/test` | | `/r` | `/review` | | `/c` | `/commit",
+              "lines": [
+                397,
+                411
+              ],
+              "name": "Command Shortcuts",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "Create `.claude-flow/pair-config.json`:",
+                  "lines": [
+                    414,
+                    428
+                  ],
+                  "name": "Basic Configuration",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    429,
+                    529
+                  ],
+                  "name": "Complete Configuration",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    530,
+                    558
+                  ],
+                  "name": "Built-in Agents",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    559,
+                    576
+                  ],
+                  "name": "CLI Configuration",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Create reusable profiles:",
+                  "lines": [
+                    577,
+                    623
+                  ],
+                  "name": "Profile Management",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                412,
+                623
+              ],
+              "name": "Configuration",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "Implementing user authentication with JWT tokens:",
+                  "lines": [
+                    626,
+                    672
+                  ],
+                  "name": "Example 1: Feature Implementation",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Debugging a memory leak in Node.js:",
+                  "lines": [
+                    673,
+                    713
+                  ],
+                  "name": "Example 2: Bug Fixing",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Building shopping cart with test-driven development:",
+                  "lines": [
+                    714,
+                    755
+                  ],
+                  "name": "Example 3: TDD Session",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Modernizing legacy code:",
+                  "lines": [
+                    756,
+                    803
+                  ],
+                  "name": "Example 4: Code Refactoring",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Optimizing slow React application:",
+                  "lines": [
+                    804,
+                    848
+                  ],
+                  "name": "Example 5: Performance Optimization",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Building RESTful API with Express:",
+                  "lines": [
+                    849,
+                    893
+                  ],
+                  "name": "Example 6: API Development",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                624,
+                893
+              ],
+              "name": "Real-World Examples",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "lines": [
+                    896,
+                    927
+                  ],
+                  "name": "Quick Start Templates",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                894,
+                927
+              ],
+              "name": "Session Templates",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "lines": [
+                    930,
+                    961
+                  ],
+                  "name": "Session Status",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    962,
+                    991
+                  ],
+                  "name": "Session History",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    992,
+                    1007
+                  ],
+                  "name": "Session Persistence",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    1008,
+                    1023
+                  ],
+                  "name": "Background Sessions",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                928,
+                1023
+              ],
+              "name": "Session Management",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "Define in configuration:",
+                  "lines": [
+                    1026,
+                    1045
+                  ],
+                  "name": "Custom Commands",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    1046,
+                    1052
+                  ],
+                  "name": "Command Chaining",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    1053,
+                    1065
+                  ],
+                  "name": "Session Recording",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "**With Git:**",
+                  "lines": [
+                    1066,
+                    1082
+                  ],
+                  "name": "Integration Options",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                1024,
+                1082
+              ],
+              "name": "Advanced Features",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "1. **Clear Goals** - Define session objectives upfront 2. **Appropriate Mode** - Choose based on task type 3. **Enable Verification** - For critical c",
+                  "lines": [
+                    1085,
+                    1092
+                  ],
+                  "name": "Session Practices",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "1. **Test Early** - Run tests after each change 2. **Verify Before Commit** - Check truth scores 3. **Review Security** - Always for sensitive code 4.",
+                  "lines": [
+                    1093,
+                    1100
+                  ],
+                  "name": "Code Practices",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "- **Driver Mode**: When learning, controlling implementation - **Navigator Mode**: For rapid prototyping, generation - **Switch Mode**: Long sessions,",
+                  "lines": [
+                    1101,
+                    1109
+                  ],
+                  "name": "Mode Selection",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                1083,
+                1109
+              ],
+              "name": "Best Practices",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "- Check agent availability - Verify configuration file syntax - Ensure clean workspace - Review log files",
+                  "lines": [
+                    1112,
+                    1117
+                  ],
+                  "name": "Session Won't Start",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "- Use `--recover` to restore - Check network connection - Verify background processes - Review auto-save files",
+                  "lines": [
+                    1118,
+                    1123
+                  ],
+                  "name": "Session Disconnected",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "- Reduce verification threshold - Disable continuous testing - Check system resources - Use lighter AI model",
+                  "lines": [
+                    1124,
+                    1129
+                  ],
+                  "name": "Poor Performance",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "- Validate JSON syntax - Check file permissions - Review priority order (CLI > env > project > user > global) - Run `claude-flow pair config validate`",
+                  "lines": [
+                    1130,
+                    1135
+                  ],
+                  "name": "Configuration Issues",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                1110,
+                1135
+              ],
+              "name": "Troubleshooting",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "lines": [
+                    1138,
+                    1145
+                  ],
+                  "name": "Truth Score Thresholds",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    1146,
+                    1153
+                  ],
+                  "name": "Coverage Thresholds",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    1154,
+                    1161
+                  ],
+                  "name": "Complexity Thresholds",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                1136,
+                1161
+              ],
+              "name": "Quality Metrics",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Override configuration via environment:",
+              "lines": [
+                1162,
+                1173
+              ],
+              "name": "Environment Variables",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Navigate history: - `\u2191/\u2193` - Navigate through command history - `Ctrl+R` - Search command history - `!!` - Repeat last command - `!<n>` - Run command n",
+              "lines": [
+                1174,
+                1181
+              ],
+              "name": "Command History",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Default shortcuts:",
+              "lines": [
+                1182,
+                1195
+              ],
+              "name": "Keyboard Shortcuts (Configurable)",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- `claude-flow pair --help` - Show help - `claude-flow pair config` - Manage configuration - `claude-flow pair profile` - Manage profiles - `claude-fl",
+              "lines": [
+                1196,
+                1203
+              ],
+              "name": "Related Commands",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            52,
+            1203
+          ],
+          "name": "Complete Guide",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.169743+00:00",
+  "version": "1.0"
+}

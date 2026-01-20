@@ -1,0 +1,228 @@
+{
+  "directory": ".claude/skills/v3-swarm-coordination",
+  "files": {
+    "SKILL.md": {
+      "hash": "5edfd5e1e675",
+      "indexed_at": "2026-01-20T04:50:25.515420+00:00",
+      "language": "markdown",
+      "lines": 340,
+      "symbols": [
+        {
+          "docstring": "Orchestrates the complete 15-agent hierarchical mesh swarm for claude-flow v3 implementation, coordinating parallel execution across domains while mai",
+          "lines": [
+            8,
+            11
+          ],
+          "name": "What This Skill Does",
+          "type": "section"
+        },
+        {
+          "lines": [
+            12,
+            28
+          ],
+          "name": "Quick Start",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                31,
+                48
+              ],
+              "name": "Hierarchical Mesh Topology",
+              "type": "subsection"
+            },
+            {
+              "docstring": "| ID | Agent | Domain | Phase | Responsibility | |----|-------|--------|-------|----------------| | 1 | Queen Coordinator | Orchestration | All | GitH",
+              "lines": [
+                49,
+                67
+              ],
+              "name": "Agent Roster",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            29,
+            67
+          ],
+          "name": "15-Agent Swarm Architecture",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "**Active Agents**: #1, #2-4, #5-6",
+              "lines": [
+                70,
+                89
+              ],
+              "name": "Phase 1: Foundation (Week 1-2)",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Active Agents**: #1, #5-9, #13",
+              "lines": [
+                90,
+                104
+              ],
+              "name": "Phase 2: Core Systems (Week 3-6)",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Active Agents**: #1, #10-12, #13-14",
+              "lines": [
+                105,
+                119
+              ],
+              "name": "Phase 3: Integration (Week 7-10)",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Active Agents**: All 15",
+              "lines": [
+                120,
+                137
+              ],
+              "name": "Phase 4: Release (Week 11-14)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            68,
+            137
+          ],
+          "name": "Implementation Phases",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                140,
+                175
+              ],
+              "name": "Dependency Management",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                176,
+                215
+              ],
+              "name": "GitHub Integration",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                216,
+                247
+              ],
+              "name": "Communication Bus",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            138,
+            247
+          ],
+          "name": "Coordination Patterns",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                250,
+                267
+              ],
+              "name": "Parallel Efficiency Monitoring",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                268,
+                293
+              ],
+              "name": "Load Balancing",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            248,
+            293
+          ],
+          "name": "Performance Coordination",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- [ ] **Parallel Efficiency**: >85% agent utilization time - [ ] **Dependency Resolution**: Zero deadlocks or blocking issues - [ ] **Communication La",
+              "lines": [
+                296,
+                302
+              ],
+              "name": "Swarm Coordination",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [ ] **ADR Coverage**: All 10 ADRs implemented successfully - [ ] **Performance**: 2.49x-7.47x Flash Attention achieved - [ ] **Search**: 150x-12,500",
+              "lines": [
+                303,
+                309
+              ],
+              "name": "Implementation Targets",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            294,
+            309
+          ],
+          "name": "Success Metrics",
+          "type": "section"
+        },
+        {
+          "docstring": "- `v3-security-overhaul` - Security domain coordination - `v3-memory-unification` - Memory system coordination - `v3-integration-deep` - Integration d",
+          "lines": [
+            310,
+            316
+          ],
+          "name": "Related V3 Skills",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                319,
+                326
+              ],
+              "name": "Initialize Complete V3 Swarm",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                327,
+                340
+              ],
+              "name": "Phase-based Execution",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            317,
+            340
+          ],
+          "name": "Usage Examples",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.169456+00:00",
+  "version": "1.0"
+}

@@ -1,0 +1,229 @@
+{
+  "directory": "vendor/theseer/tokenizer",
+  "files": {
+    "CHANGELOG.md": {
+      "hash": "43e8b4618ac0",
+      "indexed_at": "2026-01-20T04:50:21.042959+00:00",
+      "language": "markdown",
+      "lines": 87,
+      "symbols": [
+        {
+          "children": [
+            {
+              "docstring": "* Do not use implicitly nullable parameters",
+              "lines": [
+                7,
+                10
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            5,
+            10
+          ],
+          "name": "[1.2.3] - 2024-03-03",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#18](https://github.com/theseer/tokenizer/issues/18): Tokenizer fails on protobuf metadata files",
+              "lines": [
+                13,
+                17
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            11,
+            17
+          ],
+          "name": "[1.2.2] - 2023-11-20",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#13](https://github.com/theseer/tokenizer/issues/13): Fatal error when tokenizing files that contain only a single empty line",
+              "lines": [
+                20,
+                24
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            18,
+            24
+          ],
+          "name": "[1.2.1] - 2021-07-28",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Whitespace handling in general (only noticable in the intermediate `TokenCollection`) is now consitent",
+              "lines": [
+                29,
+                32
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* Updated `Tokenizer` to deal with changed whitespace handling in PHP 8.0 The XMLSerializer was unaffected.",
+              "lines": [
+                33,
+                38
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "This release is now PHP 8.0 compliant.",
+          "lines": [
+            25,
+            38
+          ],
+          "name": "[1.2.0] - 2020-07-13",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Ensure XMLSerializer can deal with empty token collections",
+              "lines": [
+                41,
+                44
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* [#2](https://github.com/theseer/tokenizer/issues/2): Fatal error in infection / phpunit",
+              "lines": [
+                45,
+                49
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            39,
+            49
+          ],
+          "name": "[1.1.3] - 2019-06-14",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Reverted PHPUnit 8 test update to stay PHP 7.0 compliant",
+              "lines": [
+                52,
+                56
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            50,
+            56
+          ],
+          "name": "[1.1.2] - 2019-04-04",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#1](https://github.com/theseer/tokenizer/issues/1): Empty file causes invalid array read",
+              "lines": [
+                59,
+                62
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* Tests should now be PHPUnit 8 compliant",
+              "lines": [
+                63,
+                67
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            57,
+            67
+          ],
+          "name": "[1.1.1] - 2019-04-03",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Allow use of custom namespace for XML serialization",
+              "lines": [
+                70,
+                74
+              ],
+              "name": "Added",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            68,
+            74
+          ],
+          "name": "[1.1.0] - 2017-04-07",
+          "type": "section"
+        },
+        {
+          "docstring": "Initial Release",
+          "lines": [
+            75,
+            88
+          ],
+          "name": "[1.0.0] - 2017-04-05",
+          "type": "section"
+        }
+      ]
+    },
+    "README.md": {
+      "hash": "a194c62d2bd8",
+      "indexed_at": "2026-01-20T04:50:22.503727+00:00",
+      "language": "markdown",
+      "lines": 47,
+      "symbols": [
+        {
+          "docstring": "You can add this library as a local, per-project dependency to your project using [Composer](https://getcomposer.org/):",
+          "lines": [
+            7,
+            16
+          ],
+          "name": "Installation",
+          "type": "section"
+        },
+        {
+          "lines": [
+            17,
+            48
+          ],
+          "name": "Usage examples",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.145815+00:00",
+  "version": "1.0"
+}

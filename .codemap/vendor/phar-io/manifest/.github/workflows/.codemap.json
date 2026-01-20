@@ -1,0 +1,568 @@
+{
+  "directory": "vendor/phar-io/manifest/.github/workflows",
+  "files": {
+    "ci.yml": {
+      "hash": "c6dcd51f3055",
+      "indexed_at": "2026-01-20T04:49:48.447160+00:00",
+      "language": "yaml",
+      "lines": 86,
+      "symbols": [
+        {
+          "docstring": "\"CI\"",
+          "lines": [
+            1,
+            2
+          ],
+          "name": "name",
+          "type": "key"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "lines": [
+                    5,
+                    6
+                  ],
+                  "name": "branches",
+                  "type": "list"
+                }
+              ],
+              "lines": [
+                4,
+                6
+              ],
+              "name": "push",
+              "type": "section"
+            },
+            {
+              "docstring": "null",
+              "lines": [
+                7,
+                8
+              ],
+              "name": "pull_request",
+              "type": "key"
+            }
+          ],
+          "lines": [
+            3,
+            8
+          ],
+          "name": "on",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "\"QA\"",
+                  "lines": [
+                    11,
+                    12
+                  ],
+                  "name": "name",
+                  "type": "key"
+                },
+                {
+                  "docstring": "\"ubuntu-latest\"",
+                  "lines": [
+                    13,
+                    14
+                  ],
+                  "name": "runs-on",
+                  "type": "key"
+                },
+                {
+                  "children": [
+                    {
+                      "docstring": "\"Checkout\"",
+                      "lines": [
+                        16,
+                        16
+                      ],
+                      "name": "name",
+                      "type": "item"
+                    },
+                    {
+                      "docstring": "\"actions/checkout@v3.5.2\"",
+                      "lines": [
+                        17,
+                        18
+                      ],
+                      "name": "uses",
+                      "type": "key"
+                    },
+                    {
+                      "docstring": "\"Set up PHP\"",
+                      "lines": [
+                        19,
+                        19
+                      ],
+                      "name": "name",
+                      "type": "item"
+                    },
+                    {
+                      "docstring": "\"shivammathur/setup-php@2.25.1\"",
+                      "lines": [
+                        20,
+                        20
+                      ],
+                      "name": "uses",
+                      "type": "key"
+                    },
+                    {
+                      "children": [
+                        {
+                          "docstring": "\"none\"",
+                          "lines": [
+                            22,
+                            22
+                          ],
+                          "name": "coverage",
+                          "type": "key"
+                        },
+                        {
+                          "docstring": "\"8.0\"",
+                          "lines": [
+                            23,
+                            23
+                          ],
+                          "name": "php-version",
+                          "type": "key"
+                        },
+                        {
+                          "docstring": "\"phive\"",
+                          "lines": [
+                            24,
+                            25
+                          ],
+                          "name": "tools",
+                          "type": "key"
+                        }
+                      ],
+                      "lines": [
+                        21,
+                        25
+                      ],
+                      "name": "with",
+                      "type": "section"
+                    },
+                    {
+                      "docstring": "\"Install dependencies with composer\"",
+                      "lines": [
+                        26,
+                        26
+                      ],
+                      "name": "name",
+                      "type": "item"
+                    },
+                    {
+                      "docstring": "\"composer install --no-interaction --optimize-autoloader --prefer-dist\"",
+                      "lines": [
+                        27,
+                        28
+                      ],
+                      "name": "run",
+                      "type": "key"
+                    },
+                    {
+                      "docstring": "\"Install dependencies with phive\"",
+                      "lines": [
+                        29,
+                        29
+                      ],
+                      "name": "name",
+                      "type": "item"
+                    },
+                    {
+                      "children": [
+                        {
+                          "docstring": "${{ secrets.GITHUB_TOKEN }}",
+                          "lines": [
+                            31,
+                            31
+                          ],
+                          "name": "GITHUB_AUTH_TOKEN",
+                          "type": "key"
+                        }
+                      ],
+                      "lines": [
+                        30,
+                        31
+                      ],
+                      "name": "env",
+                      "type": "section"
+                    },
+                    {
+                      "docstring": "\"ant install-tools\"",
+                      "lines": [
+                        32,
+                        33
+                      ],
+                      "name": "run",
+                      "type": "key"
+                    },
+                    {
+                      "docstring": "\"Run php-cs-fixer\"",
+                      "lines": [
+                        34,
+                        34
+                      ],
+                      "name": "name",
+                      "type": "item"
+                    },
+                    {
+                      "docstring": "\"ant php-cs-fixer\"",
+                      "lines": [
+                        35,
+                        36
+                      ],
+                      "name": "run",
+                      "type": "key"
+                    },
+                    {
+                      "docstring": "\"Run psalm\"",
+                      "lines": [
+                        37,
+                        37
+                      ],
+                      "name": "name",
+                      "type": "item"
+                    },
+                    {
+                      "docstring": "\"ant psalm\"",
+                      "lines": [
+                        38,
+                        39
+                      ],
+                      "name": "run",
+                      "type": "key"
+                    }
+                  ],
+                  "lines": [
+                    15,
+                    39
+                  ],
+                  "name": "steps",
+                  "type": "list"
+                }
+              ],
+              "lines": [
+                10,
+                39
+              ],
+              "name": "qa",
+              "type": "section"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "\"Tests\"",
+                  "lines": [
+                    41,
+                    42
+                  ],
+                  "name": "name",
+                  "type": "key"
+                },
+                {
+                  "docstring": "\"ubuntu-latest\"",
+                  "lines": [
+                    43,
+                    44
+                  ],
+                  "name": "runs-on",
+                  "type": "key"
+                },
+                {
+                  "children": [
+                    {
+                      "docstring": "false",
+                      "lines": [
+                        46,
+                        47
+                      ],
+                      "name": "fail-fast",
+                      "type": "key"
+                    },
+                    {
+                      "children": [
+                        {
+                          "lines": [
+                            49,
+                            56
+                          ],
+                          "name": "php-versions",
+                          "type": "list"
+                        }
+                      ],
+                      "lines": [
+                        48,
+                        56
+                      ],
+                      "name": "matrix",
+                      "type": "section"
+                    }
+                  ],
+                  "lines": [
+                    45,
+                    56
+                  ],
+                  "name": "strategy",
+                  "type": "section"
+                },
+                {
+                  "children": [
+                    {
+                      "docstring": "\"Checkout\"",
+                      "lines": [
+                        58,
+                        58
+                      ],
+                      "name": "name",
+                      "type": "item"
+                    },
+                    {
+                      "docstring": "\"actions/checkout@v3.5.2\"",
+                      "lines": [
+                        59,
+                        60
+                      ],
+                      "name": "uses",
+                      "type": "key"
+                    },
+                    {
+                      "docstring": "\"Set up PHP\"",
+                      "lines": [
+                        61,
+                        61
+                      ],
+                      "name": "name",
+                      "type": "item"
+                    },
+                    {
+                      "docstring": "\"shivammathur/setup-php@2.25.1\"",
+                      "lines": [
+                        62,
+                        62
+                      ],
+                      "name": "uses",
+                      "type": "key"
+                    },
+                    {
+                      "children": [
+                        {
+                          "docstring": "\"${{ secrets.GITHUB_TOKEN }}\"",
+                          "lines": [
+                            64,
+                            64
+                          ],
+                          "name": "COMPOSER_TOKEN",
+                          "type": "key"
+                        }
+                      ],
+                      "lines": [
+                        63,
+                        64
+                      ],
+                      "name": "env",
+                      "type": "section"
+                    },
+                    {
+                      "children": [
+                        {
+                          "docstring": "\"pcov\"",
+                          "lines": [
+                            66,
+                            66
+                          ],
+                          "name": "coverage",
+                          "type": "key"
+                        },
+                        {
+                          "docstring": "\"${{ env.extensions }}\"",
+                          "lines": [
+                            67,
+                            67
+                          ],
+                          "name": "extensions",
+                          "type": "key"
+                        },
+                        {
+                          "docstring": "\"display_errors=On, error_reporting=-1, memory_limit=2G\"",
+                          "lines": [
+                            68,
+                            68
+                          ],
+                          "name": "ini-values",
+                          "type": "key"
+                        },
+                        {
+                          "docstring": "\"${{ matrix.php-versions }}\"",
+                          "lines": [
+                            69,
+                            69
+                          ],
+                          "name": "php-version",
+                          "type": "key"
+                        },
+                        {
+                          "docstring": "\"phive\"",
+                          "lines": [
+                            70,
+                            71
+                          ],
+                          "name": "tools",
+                          "type": "key"
+                        }
+                      ],
+                      "lines": [
+                        65,
+                        71
+                      ],
+                      "name": "with",
+                      "type": "section"
+                    },
+                    {
+                      "docstring": "\"Install dependencies with composer\"",
+                      "lines": [
+                        72,
+                        72
+                      ],
+                      "name": "name",
+                      "type": "item"
+                    },
+                    {
+                      "docstring": "\"composer install --no-interaction --optimize-autoloader --prefer-dist\"",
+                      "lines": [
+                        73,
+                        74
+                      ],
+                      "name": "run",
+                      "type": "key"
+                    },
+                    {
+                      "docstring": "\"Install dependencies with phive\"",
+                      "lines": [
+                        75,
+                        75
+                      ],
+                      "name": "name",
+                      "type": "item"
+                    },
+                    {
+                      "children": [
+                        {
+                          "docstring": "${{ secrets.GITHUB_TOKEN }}",
+                          "lines": [
+                            77,
+                            77
+                          ],
+                          "name": "GITHUB_AUTH_TOKEN",
+                          "type": "key"
+                        }
+                      ],
+                      "lines": [
+                        76,
+                        77
+                      ],
+                      "name": "env",
+                      "type": "section"
+                    },
+                    {
+                      "docstring": "\"ant install-tools\"",
+                      "lines": [
+                        78,
+                        79
+                      ],
+                      "name": "run",
+                      "type": "key"
+                    },
+                    {
+                      "docstring": "\"Run PHPUnit\"",
+                      "lines": [
+                        80,
+                        80
+                      ],
+                      "name": "name",
+                      "type": "item"
+                    },
+                    {
+                      "docstring": "\"tools/phpunit --coverage-clover build/logs/clover.xml\"",
+                      "lines": [
+                        81,
+                        82
+                      ],
+                      "name": "run",
+                      "type": "key"
+                    },
+                    {
+                      "docstring": "\"Send code coverage report to codecov.io\"",
+                      "lines": [
+                        83,
+                        83
+                      ],
+                      "name": "name",
+                      "type": "item"
+                    },
+                    {
+                      "docstring": "\"codecov/codecov-action@v3.1.4\"",
+                      "lines": [
+                        84,
+                        84
+                      ],
+                      "name": "uses",
+                      "type": "key"
+                    },
+                    {
+                      "children": [
+                        {
+                          "docstring": "\"build/logs/clover.xml\"",
+                          "lines": [
+                            86,
+                            87
+                          ],
+                          "name": "files",
+                          "type": "key"
+                        }
+                      ],
+                      "lines": [
+                        85,
+                        87
+                      ],
+                      "name": "with",
+                      "type": "section"
+                    }
+                  ],
+                  "lines": [
+                    57,
+                    87
+                  ],
+                  "name": "steps",
+                  "type": "list"
+                }
+              ],
+              "lines": [
+                40,
+                87
+              ],
+              "name": "tests",
+              "type": "section"
+            }
+          ],
+          "lines": [
+            9,
+            87
+          ],
+          "name": "jobs",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.135114+00:00",
+  "version": "1.0"
+}

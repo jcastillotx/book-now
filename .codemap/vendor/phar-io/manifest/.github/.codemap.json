@@ -1,0 +1,24 @@
+{
+  "directory": "vendor/phar-io/manifest/.github",
+  "files": {
+    "FUNDING.yml": {
+      "hash": "994156f5c63e",
+      "indexed_at": "2026-01-20T04:49:47.335834+00:00",
+      "language": "yaml",
+      "lines": 3,
+      "symbols": [
+        {
+          "docstring": "[theseer]",
+          "lines": [
+            3,
+            4
+          ],
+          "name": "github",
+          "type": "collection"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.134982+00:00",
+  "version": "1.0"
+}

@@ -1,0 +1,381 @@
+{
+  "directory": ".claude/skills/agentdb-optimization",
+  "files": {
+    "SKILL.md": {
+      "hash": "0438ee74207a",
+      "indexed_at": "2026-01-20T04:50:25.510533+00:00",
+      "language": "markdown",
+      "lines": 509,
+      "symbols": [
+        {
+          "docstring": "Provides comprehensive performance optimization techniques for AgentDB vector databases. Achieve 150x-12,500x performance improvements through quantiz",
+          "lines": [
+            8,
+            13
+          ],
+          "name": "What This Skill Does",
+          "type": "section"
+        },
+        {
+          "docstring": "- Node.js 18+ - AgentDB v1.0.7+ (via agentic-flow) - Existing AgentDB database or application",
+          "lines": [
+            14,
+            21
+          ],
+          "name": "Prerequisites",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                24,
+                36
+              ],
+              "name": "Run Performance Benchmarks",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                37,
+                53
+              ],
+              "name": "Enable Optimizations",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            22,
+            53
+          ],
+          "name": "Quick Start",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "**Best For**: Large-scale deployments (1M+ vectors), memory-constrained environments **Trade-off**: ~2-5% accuracy loss, 32x memory reduction, 10x fas",
+              "lines": [
+                56,
+                78
+              ],
+              "name": "1. Binary Quantization (32x Reduction)",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Best For**: Balanced performance/accuracy, moderate datasets **Trade-off**: ~1-2% accuracy loss, 4x memory reduction, 3x faster",
+              "lines": [
+                79,
+                101
+              ],
+              "name": "2. Scalar Quantization (4x Reduction)",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Best For**: High-dimensional vectors, balanced compression **Trade-off**: ~3-7% accuracy loss, 8-16x memory reduction, 5x faster",
+              "lines": [
+                102,
+                124
+              ],
+              "name": "3. Product Quantization (8-16x Reduction)",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Best For**: Maximum accuracy, small datasets **Trade-off**: No accuracy loss, full memory usage",
+              "lines": [
+                125,
+                138
+              ],
+              "name": "4. No Quantization (Full Precision)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            54,
+            138
+          ],
+          "name": "Quantization Strategies",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "AgentDB automatically builds HNSW indices:",
+              "lines": [
+                143,
+                158
+              ],
+              "name": "Automatic HNSW",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                159,
+                186
+              ],
+              "name": "HNSW Parameters",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "**Hierarchical Navigable Small World** - O(log n) search complexity",
+          "lines": [
+            139,
+            186
+          ],
+          "name": "HNSW Indexing",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                189,
+                207
+              ],
+              "name": "In-Memory Pattern Cache",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                208,
+                221
+              ],
+              "name": "LRU Cache Behavior",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            187,
+            221
+          ],
+          "name": "Caching Strategies",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                224,
+                253
+              ],
+              "name": "Batch Insert (500x Faster)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                254,
+                267
+              ],
+              "name": "Batch Retrieval",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            222,
+            267
+          ],
+          "name": "Batch Operations",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                270,
+                287
+              ],
+              "name": "Automatic Consolidation",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                288,
+                299
+              ],
+              "name": "Manual Optimization",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                300,
+                312
+              ],
+              "name": "Pruning Strategies",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            268,
+            312
+          ],
+          "name": "Memory Optimization",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                315,
+                329
+              ],
+              "name": "Database Statistics",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                330,
+                345
+              ],
+              "name": "Runtime Metrics",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            313,
+            345
+          ],
+          "name": "Performance Monitoring",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                348,
+                360
+              ],
+              "name": "Recipe 1: Maximum Speed (Sacrifice Accuracy)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                361,
+                373
+              ],
+              "name": "Recipe 2: Balanced Performance",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                374,
+                386
+              ],
+              "name": "Recipe 3: Maximum Accuracy",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                387,
+                400
+              ],
+              "name": "Recipe 4: Memory-Constrained (Mobile/Edge)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            346,
+            400
+          ],
+          "name": "Optimization Recipes",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                403,
+                412
+              ],
+              "name": "Small Scale (<10K vectors)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                413,
+                422
+              ],
+              "name": "Medium Scale (10K-100K vectors)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                423,
+                432
+              ],
+              "name": "Large Scale (100K-1M vectors)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                433,
+                445
+              ],
+              "name": "Massive Scale (>1M vectors)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            401,
+            445
+          ],
+          "name": "Scaling Strategies",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                448,
+                457
+              ],
+              "name": "Issue: High memory usage",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                458,
+                471
+              ],
+              "name": "Issue: Slow search performance",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                472,
+                483
+              ],
+              "name": "Issue: Low accuracy",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            446,
+            483
+          ],
+          "name": "Troubleshooting",
+          "type": "section"
+        },
+        {
+          "docstring": "**Test System**: AMD Ryzen 9 5950X, 64GB RAM",
+          "lines": [
+            484,
+            497
+          ],
+          "name": "Performance Benchmarks",
+          "type": "section"
+        },
+        {
+          "docstring": "- **Quantization Paper**: docs/quantization-techniques.pdf - **HNSW Algorithm**: docs/hnsw-index.pdf - **GitHub**: https://github.com/ruvnet/agentic-f",
+          "lines": [
+            498,
+            510
+          ],
+          "name": "Learn More",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.165457+00:00",
+  "version": "1.0"
+}

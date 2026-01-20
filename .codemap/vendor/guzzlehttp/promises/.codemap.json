@@ -1,0 +1,708 @@
+{
+  "directory": "vendor/guzzlehttp/promises",
+  "files": {
+    "CHANGELOG.md": {
+      "hash": "e206131b3ba8",
+      "indexed_at": "2026-01-20T04:50:22.508404+00:00",
+      "language": "markdown",
+      "lines": 187,
+      "symbols": [
+        {
+          "children": [
+            {
+              "docstring": "- PHP 8.5 support",
+              "lines": [
+                6,
+                10
+              ],
+              "name": "Added",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            4,
+            10
+          ],
+          "name": "2.3.0 - 2025-08-22",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Revert \"Allow an empty EachPromise to be resolved by running the queue\"",
+              "lines": [
+                13,
+                17
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            11,
+            17
+          ],
+          "name": "2.2.0 - 2025-03-27",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Allow an empty EachPromise to be resolved by running the queue",
+              "lines": [
+                20,
+                24
+              ],
+              "name": "Added",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            18,
+            24
+          ],
+          "name": "2.1.0 - 2025-03-27",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Once settled, don't allow further rejection of additional promises",
+              "lines": [
+                27,
+                31
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            25,
+            31
+          ],
+          "name": "2.0.4 - 2024-10-17",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- PHP 8.4 support",
+              "lines": [
+                34,
+                38
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            32,
+            38
+          ],
+          "name": "2.0.3 - 2024-07-18",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Replaced `call_user_func*` with native calls",
+              "lines": [
+                41,
+                45
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            39,
+            45
+          ],
+          "name": "2.0.2 - 2023-12-03",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- PHP 8.3 support",
+              "lines": [
+                48,
+                52
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            46,
+            52
+          ],
+          "name": "2.0.1 - 2023-08-03",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Added PHP 7 type hints",
+              "lines": [
+                55,
+                58
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- All previously non-final non-exception classes have been marked as soft-final",
+              "lines": [
+                59,
+                62
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Dropped PHP < 7.2 support - All functions in the `GuzzleHttp\\Promise` namespace",
+              "lines": [
+                63,
+                68
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            53,
+            68
+          ],
+          "name": "2.0.0 - 2023-05-21",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Removed remaining usage of deprecated functions",
+              "lines": [
+                71,
+                75
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            69,
+            75
+          ],
+          "name": "1.5.3 - 2023-05-21",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Officially support PHP 8.2",
+              "lines": [
+                78,
+                82
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            76,
+            82
+          ],
+          "name": "1.5.2 - 2022-08-07",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Revert \"Call handler when waiting on fulfilled/rejected Promise\" - Fix pool memory leak when empty array of promises provided",
+              "lines": [
+                85,
+                90
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            83,
+            90
+          ],
+          "name": "1.5.1 - 2021-10-22",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Call handler when waiting on fulfilled/rejected Promise - Officially support PHP 8.1",
+              "lines": [
+                93,
+                97
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fix manually settle promises generated with `Utils::task`",
+              "lines": [
+                98,
+                102
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            91,
+            102
+          ],
+          "name": "1.5.0 - 2021-10-07",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Fixed `each_limit` skipping promises and failing",
+              "lines": [
+                105,
+                109
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            103,
+            109
+          ],
+          "name": "1.4.1 - 2021-02-18",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Support for PHP 8 - Optional `$recursive` flag to `all` - Replaced functions by static methods",
+              "lines": [
+                112,
+                117
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fix empty `each` processing - Fix promise handling for Iterators of non-unique keys - Fixed `method_exists` crashes on PHP 8 - Memory leak on except",
+              "lines": [
+                118,
+                125
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            110,
+            125
+          ],
+          "name": "1.4.0 - 2020-09-30",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- `wait()` foreign promise compatibility",
+              "lines": [
+                128,
+                132
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            126,
+            132
+          ],
+          "name": "1.3.1 - 2016-12-20",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Adds support for custom task queues.",
+              "lines": [
+                135,
+                138
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed coroutine promise memory leak.",
+              "lines": [
+                139,
+                143
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            133,
+            143
+          ],
+          "name": "1.3.0 - 2016-11-18",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Update to now catch `\\Throwable` on PHP 7+",
+              "lines": [
+                146,
+                150
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            144,
+            150
+          ],
+          "name": "1.2.0 - 2016-05-18",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Update EachPromise to prevent recurring on a iterator when advancing, as this could trigger fatal generator errors. - Update Promise to allow recurs",
+              "lines": [
+                153,
+                159
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            151,
+            159
+          ],
+          "name": "1.1.0 - 2016-03-07",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Update EachPromise to immediately resolve when the underlying promise iterator is empty. Previously, such a promise would throw an exception when it",
+              "lines": [
+                162,
+                168
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            160,
+            168
+          ],
+          "name": "1.0.3 - 2015-10-15",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Conditionally require functions.php.",
+              "lines": [
+                171,
+                175
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            169,
+            175
+          ],
+          "name": "1.0.2 - 2015-05-15",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Updating EachPromise to call next on the underlying promise iterator as late as possible to ensure that generators that generate new requests based",
+              "lines": [
+                178,
+                184
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            176,
+            184
+          ],
+          "name": "1.0.1 - 2015-06-24",
+          "type": "section"
+        },
+        {
+          "docstring": "- Initial release",
+          "lines": [
+            185,
+            188
+          ],
+          "name": "1.0.0 - 2015-05-12",
+          "type": "section"
+        }
+      ]
+    },
+    "README.md": {
+      "hash": "a2afc22d0233",
+      "indexed_at": "2026-01-20T04:50:22.511260+00:00",
+      "language": "markdown",
+      "lines": 559,
+      "symbols": [
+        {
+          "docstring": "- [Promises/A+](https://promisesaplus.com/) implementation. - Promise resolution and chaining is handled iteratively, allowing for \"infinite\" promise",
+          "lines": [
+            20,
+            31
+          ],
+          "name": "Features",
+          "type": "section"
+        },
+        {
+          "lines": [
+            32,
+            38
+          ],
+          "name": "Installation",
+          "type": "section"
+        },
+        {
+          "docstring": "| Version | Status              | PHP Version  | |---------|---------------------|--------------| | 1.x     | Security fixes only | >=5.5,<8.3   | | 2",
+          "lines": [
+            39,
+            46
+          ],
+          "name": "Version Guidance",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Callbacks are registered with the `then` method by providing an optional `$onFulfilled` followed by an optional `$onRejected` function.",
+              "lines": [
+                54,
+                80
+              ],
+              "name": "Callbacks",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Promises are fulfilled using the `resolve($value)` method. Resolving a promise with any value other than a `GuzzleHttp\\Promise\\RejectedPromise` will t",
+              "lines": [
+                81,
+                107
+              ],
+              "name": "Resolving a Promise",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Promises can be chained one after the other. Each then in the chain is a new promise. The return value of a promise is what's forwarded to the next pr",
+              "lines": [
+                108,
+                137
+              ],
+              "name": "Promise Forwarding",
+              "type": "subsection"
+            },
+            {
+              "docstring": "When a promise is rejected, the `$onRejected` callbacks are invoked with the rejection reason.",
+              "lines": [
+                138,
+                154
+              ],
+              "name": "Promise Rejection",
+              "type": "subsection"
+            },
+            {
+              "docstring": "If an exception is thrown in an `$onRejected` callback, subsequent `$onRejected` callbacks are invoked with the thrown exception as the reason.",
+              "lines": [
+                155,
+                210
+              ],
+              "name": "Rejection Forwarding",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "A *promise* represents the eventual result of an asynchronous operation. The primary way of interacting with a promise is through its `then` method, w",
+          "lines": [
+            47,
+            210
+          ],
+          "name": "Quick Start",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "When synchronously waiting on a promise, you are joining the state of the promise into the current state of execution (i.e., return the value of the p",
+              "lines": [
+                263,
+                289
+              ],
+              "name": "Unwrapping a Promise",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "You can synchronously force promises to complete using a promise's `wait` method. When creating a promise, you can provide a wait function that is use",
+          "lines": [
+            211,
+            289
+          ],
+          "name": "Synchronous Wait",
+          "type": "section"
+        },
+        {
+          "docstring": "You can cancel a promise that has not yet been fulfilled using the `cancel()` method of a promise. When creating a promise you can provide an optional",
+          "lines": [
+            290,
+            297
+          ],
+          "name": "Cancellation",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "When creating a promise object, you can provide an optional `$waitFn` and `$cancelFn`. `$waitFn` is a function that is invoked with no arguments and i",
+              "lines": [
+                300,
+                362
+              ],
+              "name": "Promise",
+              "type": "subsection"
+            },
+            {
+              "docstring": "A fulfilled promise can be created to represent a promise that has been fulfilled.",
+              "lines": [
+                363,
+                379
+              ],
+              "name": "FulfilledPromise",
+              "type": "subsection"
+            },
+            {
+              "docstring": "A rejected promise can be created to represent a promise that has been rejected.",
+              "lines": [
+                380,
+                396
+              ],
+              "name": "RejectedPromise",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            298,
+            396
+          ],
+          "name": "API",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "In order to keep the stack size constant, Guzzle promises are resolved asynchronously using a task queue. When waiting on promises synchronously, the",
+              "lines": [
+                423,
+                448
+              ],
+              "name": "Event Loop Integration",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "This library works with foreign promises that have a `then` method. This means you can use Guzzle promises with [React promises](https://github.com/re",
+          "lines": [
+            397,
+            448
+          ],
+          "name": "Promise Interoperability",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "By shuffling pending handlers from one owner to another, promises are resolved iteratively, allowing for \"infinite\" then chaining.",
+              "lines": [
+                451,
+                486
+              ],
+              "name": "Promise Resolution and Chaining is Handled Iteratively",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Some promise libraries implement promises using a deferred object to represent a computation and a promise object to represent the delivery of the res",
+              "lines": [
+                487,
+                512
+              ],
+              "name": "A Promise is the Deferred",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            449,
+            512
+          ],
+          "name": "Implementation Notes",
+          "type": "section"
+        },
+        {
+          "docstring": "A static API was first introduced in 1.4.0, in order to mitigate problems with functions conflicting between global and local copies of the package. T",
+          "lines": [
+            513,
+            544
+          ],
+          "name": "Upgrading from Function API",
+          "type": "section"
+        },
+        {
+          "docstring": "If you discover a security vulnerability within this package, please send an email to security@tidelift.com. All security vulnerabilities will be prom",
+          "lines": [
+            545,
+            549
+          ],
+          "name": "Security",
+          "type": "section"
+        },
+        {
+          "docstring": "Guzzle is made available under the MIT License (MIT). Please see [License File](LICENSE) for more information.",
+          "lines": [
+            550,
+            554
+          ],
+          "name": "License",
+          "type": "section"
+        },
+        {
+          "docstring": "Available as part of the Tidelift Subscription",
+          "lines": [
+            555,
+            560
+          ],
+          "name": "For Enterprise",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.146137+00:00",
+  "version": "1.0"
+}

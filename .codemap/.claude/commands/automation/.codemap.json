@@ -1,0 +1,478 @@
+{
+  "directory": ".claude/commands/automation",
+  "files": {
+    "README.md": {
+      "hash": "21aaf8198cc8",
+      "indexed_at": "2026-01-20T04:50:25.530000+00:00",
+      "language": "markdown",
+      "lines": 9,
+      "symbols": [
+        {
+          "docstring": "- [auto-agent](./auto-agent.md) - [smart-spawn](./smart-spawn.md) - [workflow-select](./workflow-select.md)",
+          "lines": [
+            5,
+            10
+          ],
+          "name": "Available Commands",
+          "type": "section"
+        }
+      ]
+    },
+    "auto-agent.md": {
+      "hash": "40f23f854dc0",
+      "indexed_at": "2026-01-20T04:50:25.529182+00:00",
+      "language": "markdown",
+      "lines": 122,
+      "symbols": [
+        {
+          "lines": [
+            5,
+            10
+          ],
+          "name": "Usage",
+          "type": "section"
+        },
+        {
+          "docstring": "- `--task, -t <description>` - Task description for agent analysis - `--max-agents, -m <number>` - Maximum agents to spawn (default: auto) - `--min-ag",
+          "lines": [
+            11,
+            18
+          ],
+          "name": "Options",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                21,
+                26
+              ],
+              "name": "Basic auto-spawning",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                27,
+                32
+              ],
+              "name": "Constrained spawning",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                33,
+                38
+              ],
+              "name": "Analysis only",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                39,
+                44
+              ],
+              "name": "Minimal strategy",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            19,
+            44
+          ],
+          "name": "Examples",
+          "type": "section"
+        },
+        {
+          "docstring": "1. **Task Analysis**",
+          "lines": [
+            45,
+            73
+          ],
+          "name": "How It Works",
+          "type": "section"
+        },
+        {
+          "docstring": "- **Architect**: System design, architecture decisions - **Coder**: Implementation, code generation - **Tester**: Test creation, quality assurance - *",
+          "lines": [
+            74,
+            82
+          ],
+          "name": "Agent Types Selected",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Maximum efficiency - May spawn more agents - Best for complex tasks - Highest resource usage",
+              "lines": [
+                85,
+                91
+              ],
+              "name": "Optimal",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Minimum viable agents - Conservative approach - Good for simple tasks - Lowest resource usage",
+              "lines": [
+                92,
+                98
+              ],
+              "name": "Minimal",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Middle ground - Adaptive to complexity - Default strategy - Good performance/resource ratio",
+              "lines": [
+                99,
+                105
+              ],
+              "name": "Balanced",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            83,
+            105
+          ],
+          "name": "Strategies",
+          "type": "section"
+        },
+        {
+          "lines": [
+            106,
+            116
+          ],
+          "name": "Integration with Claude Code",
+          "type": "section"
+        },
+        {
+          "docstring": "- `agent spawn` - Manual agent creation - `swarm init` - Initialize swarm manually - `smart spawn` - Intelligent agent spawning - `workflow select` -",
+          "lines": [
+            117,
+            123
+          ],
+          "name": "See Also",
+          "type": "section"
+        }
+      ]
+    },
+    "self-healing.md": {
+      "hash": "2371e11f0a45",
+      "indexed_at": "2026-01-20T04:50:25.529810+00:00",
+      "language": "markdown",
+      "lines": 106,
+      "symbols": [
+        {
+          "docstring": "Automatically detect and recover from errors without interrupting your flow.",
+          "lines": [
+            3,
+            5
+          ],
+          "name": "Purpose",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Monitors for: - Failed commands - Syntax errors - Missing dependencies - Broken tests",
+              "lines": [
+                8,
+                14
+              ],
+              "name": "1. Error Detection",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Missing Dependencies:**",
+              "lines": [
+                15,
+                40
+              ],
+              "name": "2. Automatic Recovery",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Each recovery improves future prevention: - Patterns saved to knowledge base - Similar errors prevented proactively - Recovery strategies optimized",
+              "lines": [
+                41,
+                65
+              ],
+              "name": "3. Learning from Failures",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6,
+            65
+          ],
+          "name": "Self-Healing Features",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                68,
+                91
+              ],
+              "name": "MCP Tool Coordination",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                92,
+                101
+              ],
+              "name": "Fallback Hook Configuration",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            66,
+            101
+          ],
+          "name": "Self-Healing Integration",
+          "type": "section"
+        },
+        {
+          "docstring": "- \ud83d\udee1\ufe0f Resilient workflows - \ud83d\udd04 Automatic recovery - \ud83d\udcda Learns from errors - \u23f1\ufe0f Saves debugging time",
+          "lines": [
+            102,
+            106
+          ],
+          "name": "Benefits",
+          "type": "section"
+        }
+      ]
+    },
+    "session-memory.md": {
+      "hash": "2c174e08416e",
+      "indexed_at": "2026-01-20T04:50:25.530201+00:00",
+      "language": "markdown",
+      "lines": 90,
+      "symbols": [
+        {
+          "docstring": "Maintain context and learnings across Claude Code sessions for continuous improvement.",
+          "lines": [
+            3,
+            5
+          ],
+          "name": "Purpose",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "At session end, automatically saves: - Active agents and specializations - Task history and patterns - Performance metrics - Neural network weights -",
+              "lines": [
+                8,
+                15
+              ],
+              "name": "1. Automatic State Persistence",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                16,
+                35
+              ],
+              "name": "2. Session Restoration",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Project Memory:** - File relationships - Common edit patterns - Testing approaches - Build configurations",
+              "lines": [
+                36,
+                55
+              ],
+              "name": "3. Memory Types",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                56,
+                85
+              ],
+              "name": "4. Privacy & Control",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6,
+            85
+          ],
+          "name": "Memory Features",
+          "type": "section"
+        },
+        {
+          "docstring": "- \ud83e\udde0 Contextual awareness - \ud83d\udcc8 Cumulative learning - \u26a1 Faster task completion - \ud83c\udfaf Personalized optimization",
+          "lines": [
+            86,
+            90
+          ],
+          "name": "Benefits",
+          "type": "section"
+        }
+      ]
+    },
+    "smart-agents.md": {
+      "hash": "238825c0f83e",
+      "indexed_at": "2026-01-20T04:50:25.529590+00:00",
+      "language": "markdown",
+      "lines": 73,
+      "symbols": [
+        {
+          "docstring": "Automatically spawn the right agents at the right time without manual intervention.",
+          "lines": [
+            3,
+            5
+          ],
+          "name": "Purpose",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "When editing files, agents auto-spawn: - **JavaScript/TypeScript**: Coder agent - **Markdown**: Researcher agent - **JSON/YAML**: Analyst agent - **Mu",
+              "lines": [
+                8,
+                14
+              ],
+              "name": "1. File Type Detection",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                15,
+                23
+              ],
+              "name": "2. Task Complexity",
+              "type": "subsection"
+            },
+            {
+              "docstring": "The system monitors workload and spawns additional agents when: - Task queue grows - Complexity increases - Parallel opportunities exist",
+              "lines": [
+                24,
+                42
+              ],
+              "name": "3. Dynamic Scaling",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6,
+            42
+          ],
+          "name": "Auto-Spawning Triggers",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Uses Claude Flow MCP tools for agent coordination:",
+              "lines": [
+                45,
+                62
+              ],
+              "name": "MCP Tool Integration",
+              "type": "subsection"
+            },
+            {
+              "docstring": "If MCP tools are unavailable:",
+              "lines": [
+                63,
+                68
+              ],
+              "name": "Fallback Configuration",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            43,
+            68
+          ],
+          "name": "Configuration",
+          "type": "section"
+        },
+        {
+          "docstring": "- \ud83e\udd16 Zero manual agent management - \ud83c\udfaf Perfect agent selection - \ud83d\udcc8 Dynamic scaling - \ud83d\udcbe Resource efficiency",
+          "lines": [
+            69,
+            73
+          ],
+          "name": "Benefits",
+          "type": "section"
+        }
+      ]
+    },
+    "smart-spawn.md": {
+      "hash": "f0a60dcc2d04",
+      "indexed_at": "2026-01-20T04:50:25.529359+00:00",
+      "language": "markdown",
+      "lines": 25,
+      "symbols": [
+        {
+          "lines": [
+            5,
+            9
+          ],
+          "name": "Usage",
+          "type": "section"
+        },
+        {
+          "docstring": "- `--analyze` - Analyze before spawning - `--threshold <n>` - Spawn threshold - `--topology <type>` - Preferred topology",
+          "lines": [
+            10,
+            14
+          ],
+          "name": "Options",
+          "type": "section"
+        },
+        {
+          "lines": [
+            15,
+            26
+          ],
+          "name": "Examples",
+          "type": "section"
+        }
+      ]
+    },
+    "workflow-select.md": {
+      "hash": "296b3c5dc631",
+      "indexed_at": "2026-01-20T04:50:25.530399+00:00",
+      "language": "markdown",
+      "lines": 25,
+      "symbols": [
+        {
+          "lines": [
+            5,
+            9
+          ],
+          "name": "Usage",
+          "type": "section"
+        },
+        {
+          "docstring": "- `--task <description>` - Task description - `--constraints <list>` - Workflow constraints - `--preview` - Preview without executing",
+          "lines": [
+            10,
+            14
+          ],
+          "name": "Options",
+          "type": "section"
+        },
+        {
+          "lines": [
+            15,
+            26
+          ],
+          "name": "Examples",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.174987+00:00",
+  "version": "1.0"
+}

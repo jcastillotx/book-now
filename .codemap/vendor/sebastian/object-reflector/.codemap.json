@@ -1,0 +1,164 @@
+{
+  "directory": "vendor/sebastian/object-reflector",
+  "files": {
+    "ChangeLog.md": {
+      "hash": "1173b84dd067",
+      "indexed_at": "2026-01-20T04:48:37.570489+00:00",
+      "language": "markdown",
+      "lines": 55,
+      "symbols": [
+        {
+          "children": [
+            {
+              "docstring": "* `SebastianBergmann\\ObjectReflector\\Exception` now correctly extends `\\Throwable`",
+              "lines": [
+                7,
+                10
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            5,
+            10
+          ],
+          "name": "[2.0.4] - 2020-10-26",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Changed PHP version constraint in `composer.json` from `^7.3 || ^8.0` to `>=7.3`",
+              "lines": [
+                13,
+                16
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            11,
+            16
+          ],
+          "name": "[2.0.3] - 2020-09-28",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* This component is now supported on PHP 8",
+              "lines": [
+                19,
+                22
+              ],
+              "name": "Added",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            17,
+            22
+          ],
+          "name": "[2.0.2] - 2020-06-26",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Tests etc. are now ignored for archive exports",
+              "lines": [
+                25,
+                28
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            23,
+            28
+          ],
+          "name": "[2.0.1] - 2020-06-15",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* This component is no longer supported on PHP 7.0, PHP 7.1, and PHP 7.2",
+              "lines": [
+                31,
+                34
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            29,
+            34
+          ],
+          "name": "[2.0.0] - 2020-02-07",
+          "type": "section"
+        },
+        {
+          "docstring": "* Fixed [#1](https://github.com/sebastianbergmann/object-reflector/issues/1): Attributes with non-string names are not handled correctly",
+          "lines": [
+            35,
+            38
+          ],
+          "name": "[1.1.1] - 2017-03-29",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Changed implementation of `ObjectReflector::getattributes()` to use `(array)` cast instead of `ReflectionObject`",
+              "lines": [
+                41,
+                44
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            39,
+            44
+          ],
+          "name": "[1.1.0] - 2017-03-16",
+          "type": "section"
+        },
+        {
+          "docstring": "* Initial release",
+          "lines": [
+            45,
+            56
+          ],
+          "name": "1.0.0 - 2017-03-12",
+          "type": "section"
+        }
+      ]
+    },
+    "README.md": {
+      "hash": "012936792e33",
+      "indexed_at": "2026-01-20T04:48:38.754067+00:00",
+      "language": "markdown",
+      "lines": 20,
+      "symbols": [
+        {
+          "docstring": "You can add this library as a local, per-project dependency to your project using [Composer](https://getcomposer.org/):",
+          "lines": [
+            8,
+            21
+          ],
+          "name": "Installation",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.122979+00:00",
+  "version": "1.0"
+}

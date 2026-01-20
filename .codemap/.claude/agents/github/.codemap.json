@@ -1,0 +1,4541 @@
+{
+  "directory": ".claude/agents/github",
+  "files": {
+    "code-review-swarm.md": {
+      "hash": "efa6a68ed070",
+      "indexed_at": "2026-01-20T04:50:25.567146+00:00",
+      "language": "markdown",
+      "lines": 377,
+      "symbols": [
+        {
+          "docstring": "Deploy specialized AI agents to perform comprehensive, intelligent code reviews that go beyond traditional static analysis, enhanced with **self-learn",
+          "lines": [
+            87,
+            89
+          ],
+          "name": "Overview",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                92,
+                132
+              ],
+              "name": "Before Each Review: Learn from Past Reviews",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                133,
+                168
+              ],
+              "name": "During Review: GNN-Enhanced Code Analysis",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                169,
+                196
+              ],
+              "name": "Multi-Agent Review Coordination with Attention",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                197,
+                228
+              ],
+              "name": "After Review: Store Learning Patterns",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            90,
+            228
+          ],
+          "name": "\ud83e\udde0 Self-Learning Protocol (v2.0.0-alpha)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                231,
+                248
+              ],
+              "name": "Pattern-Based Issue Detection",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                249,
+                271
+              ],
+              "name": "GNN-Enhanced Similar Code Search",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                272,
+                289
+              ],
+              "name": "Attention-Based Review Focus",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            229,
+            289
+          ],
+          "name": "\ud83c\udfaf GitHub-Specific Review Optimizations",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                292,
+                310
+              ],
+              "name": "1. Multi-Agent Review System",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "lines": [
+                    313,
+                    337
+                  ],
+                  "name": "Security Agent",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                311,
+                337
+              ],
+              "name": "2. Specialized Review Agents",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            290,
+            337
+          ],
+          "name": "Core Features",
+          "type": "section"
+        },
+        {
+          "docstring": "| Metric | Target | Enabled By | |--------|--------|------------| | **Review Accuracy** | +12.4% vs baseline | GNN Search | | **False Positive Reducti",
+          "lines": [
+            338,
+            347
+          ],
+          "name": "\ud83d\udcc8 Performance Targets",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                350,
+                378
+              ],
+              "name": "Example: Security Review with Learning",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            348,
+            378
+          ],
+          "name": "\ud83d\udd27 Implementation Examples",
+          "type": "section"
+        }
+      ]
+    },
+    "github-modes.md": {
+      "hash": "2640c10081fb",
+      "indexed_at": "2026-01-20T04:50:25.567515+00:00",
+      "language": "markdown",
+      "lines": 173,
+      "symbols": [
+        {
+          "docstring": "This document describes all GitHub integration modes available in Claude-Flow with ruv-swarm coordination. Each mode is optimized for specific GitHub",
+          "lines": [
+            29,
+            31
+          ],
+          "name": "Overview",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "**GitHub workflow orchestration and coordination** - **Coordination Mode**: Hierarchical - **Max Parallel Operations**: 10 - **Batch Optimized**: Yes",
+              "lines": [
+                34,
+                42
+              ],
+              "name": "gh-coordinator",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Pull request management and review coordination** - **Review Mode**: Automated - **Multi-reviewer**: Yes - **Conflict Resolution**: Intelligent - **",
+              "lines": [
+                43,
+                51
+              ],
+              "name": "pr-manager",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Issue management and project coordination** - **Issue Workflow**: Automated - **Label Management**: Smart - **Progress Tracking**: Real-time - **Too",
+              "lines": [
+                52,
+                60
+              ],
+              "name": "issue-tracker",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Release coordination and deployment** - **Release Pipeline**: Automated - **Versioning**: Semantic - **Deployment**: Multi-stage - **Tools**: gh pr",
+              "lines": [
+                61,
+                69
+              ],
+              "name": "release-manager",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            32,
+            69
+          ],
+          "name": "GitHub Workflow Modes",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "**Repository structure and organization** - **Structure Optimization**: Yes - **Multi-repo**: Support - **Template Management**: Advanced - **Tools**:",
+              "lines": [
+                72,
+                80
+              ],
+              "name": "repo-architect",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Automated code review and quality assurance** - **Review Quality**: Deep - **Security Analysis**: Yes - **Performance Check**: Automated - **Tools**",
+              "lines": [
+                81,
+                89
+              ],
+              "name": "code-reviewer",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Branch management and workflow coordination** - **Branch Strategy**: GitFlow - **Merge Strategy**: Intelligent - **Conflict Prevention**: Proactive",
+              "lines": [
+                90,
+                98
+              ],
+              "name": "branch-manager",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            70,
+            98
+          ],
+          "name": "Repository Management Modes",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "**Multi-package synchronization** - **Package Sync**: Intelligent - **Version Alignment**: Automatic - **Dependency Resolution**: Advanced - **Tools**",
+              "lines": [
+                101,
+                109
+              ],
+              "name": "sync-coordinator",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**CI/CD pipeline coordination** - **Pipeline Management**: Advanced - **Test Coordination**: Parallel - **Deployment**: Automated - **Tools**: gh pr c",
+              "lines": [
+                110,
+                118
+              ],
+              "name": "ci-orchestrator",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Security and compliance management** - **Security Scan**: Automated - **Compliance Check**: Continuous - **Vulnerability Management**: Proactive - *",
+              "lines": [
+                119,
+                127
+              ],
+              "name": "security-guardian",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            99,
+            127
+          ],
+          "name": "Integration Commands",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                130,
+                134
+              ],
+              "name": "Creating a coordinated pull request workflow:",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                135,
+                139
+              ],
+              "name": "Managing repository synchronization:",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                140,
+                144
+              ],
+              "name": "Setting up automated issue tracking:",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            128,
+            144
+          ],
+          "name": "Usage Examples",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                149,
+                159
+              ],
+              "name": "Parallel GitHub Operations Example:",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "All GitHub modes support batch operations for maximum efficiency:",
+          "lines": [
+            145,
+            159
+          ],
+          "name": "Batch Operations",
+          "type": "section"
+        },
+        {
+          "docstring": "All GitHub modes can be enhanced with ruv-swarm coordination:",
+          "lines": [
+            160,
+            173
+          ],
+          "name": "Integration with ruv-swarm",
+          "type": "section"
+        }
+      ]
+    },
+    "issue-tracker.md": {
+      "hash": "e26999861850",
+      "indexed_at": "2026-01-20T04:50:25.569227+00:00",
+      "language": "markdown",
+      "lines": 576,
+      "symbols": [
+        {
+          "docstring": "Intelligent issue management and project coordination with ruv-swarm integration for automated tracking, progress monitoring, and team coordination, e",
+          "lines": [
+            91,
+            93
+          ],
+          "name": "Purpose",
+          "type": "section"
+        },
+        {
+          "docstring": "- **Automated issue creation** with smart templates and labeling - **Progress tracking** with swarm-coordinated updates - **Multi-agent collaboration*",
+          "lines": [
+            94,
+            100
+          ],
+          "name": "Core Capabilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                103,
+                139
+              ],
+              "name": "Before Issue Triage: Learn from History",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                140,
+                174
+              ],
+              "name": "During Triage: GNN-Enhanced Issue Search",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                175,
+                200
+              ],
+              "name": "Multi-Agent Priority Ranking with Attention",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                201,
+                232
+              ],
+              "name": "After Resolution: Store Learning Patterns",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            101,
+            232
+          ],
+          "name": "\ud83e\udde0 Self-Learning Protocol (v2.0.0-alpha)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                235,
+                251
+              ],
+              "name": "Smart Issue Classification",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                252,
+                269
+              ],
+              "name": "Attention-Based Priority Ranking",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                270,
+                296
+              ],
+              "name": "GNN-Enhanced Duplicate Detection",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            233,
+            296
+          ],
+          "name": "\ud83c\udfaf GitHub-Specific Optimizations",
+          "type": "section"
+        },
+        {
+          "docstring": "- `mcp__github__create_issue` - `mcp__github__list_issues` - `mcp__github__get_issue` - `mcp__github__update_issue` - `mcp__github__add_issue_comment`",
+          "lines": [
+            297,
+            306
+          ],
+          "name": "Tools Available",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                309,
+                346
+              ],
+              "name": "1. Create Coordinated Issue with Swarm Tracking",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                347,
+                385
+              ],
+              "name": "2. Automated Progress Updates",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                386,
+                405
+              ],
+              "name": "3. Multi-Issue Project Coordination",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            307,
+            405
+          ],
+          "name": "Usage Patterns",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                408,
+                451
+              ],
+              "name": "Complete Issue Management Workflow:",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            406,
+            451
+          ],
+          "name": "Batch Operations Example",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                454,
+                455
+              ],
+              "name": "Integration Issue Template:",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            452,
+            455
+          ],
+          "name": "Smart Issue Templates",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "[Brief description of integration requirements]",
+              "lines": [
+                458,
+                460
+              ],
+              "name": "Overview",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [ ] Component A integration - [ ] Component B validation - [ ] Testing and verification - [ ] Documentation updates",
+              "lines": [
+                461,
+                466
+              ],
+              "name": "Objectives",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "- [ ] Package.json updates - [ ] Version compatibility - [ ] Import statements",
+                  "lines": [
+                    468,
+                    472
+                  ],
+                  "name": "Dependencies",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "- [ ] Core feature integration - [ ] API compatibility - [ ] Performance validation",
+                  "lines": [
+                    473,
+                    477
+                  ],
+                  "name": "Functionality",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "- [ ] Unit tests - [ ] Integration tests - [ ] End-to-end validation",
+                  "lines": [
+                    478,
+                    482
+                  ],
+                  "name": "Testing",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                467,
+                482
+              ],
+              "name": "Integration Areas",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Coordinator**: Overall progress tracking - **Analyst**: Technical validation - **Tester**: Quality assurance - **Documenter**: Documentation updat",
+              "lines": [
+                483,
+                488
+              ],
+              "name": "Swarm Coordination",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Updates will be posted automatically by swarm agents during implementation.",
+              "lines": [
+                489,
+                495
+              ],
+              "name": "Progress Tracking",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                496,
+                497
+              ],
+              "name": "Bug Report Template:",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            456,
+            497
+          ],
+          "name": "\ud83d\udd04 Integration Task",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "[Clear description of the issue]",
+              "lines": [
+                500,
+                502
+              ],
+              "name": "Problem Description",
+              "type": "subsection"
+            },
+            {
+              "docstring": "[What should happen]",
+              "lines": [
+                503,
+                505
+              ],
+              "name": "Expected Behavior",
+              "type": "subsection"
+            },
+            {
+              "docstring": "[What actually happens]",
+              "lines": [
+                506,
+                508
+              ],
+              "name": "Actual Behavior",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. [Step 1] 2. [Step 2] 3. [Step 3]",
+              "lines": [
+                509,
+                513
+              ],
+              "name": "Reproduction Steps",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Package: [package name and version] - Node.js: [version] - OS: [operating system]",
+              "lines": [
+                514,
+                518
+              ],
+              "name": "Environment",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [ ] Root cause analysis - [ ] Fix implementation - [ ] Testing and validation - [ ] Regression testing",
+              "lines": [
+                519,
+                524
+              ],
+              "name": "Investigation Plan",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Debugger**: Issue investigation - **Coder**: Fix implementation - **Tester**: Validation and testing",
+              "lines": [
+                525,
+                533
+              ],
+              "name": "Swarm Assignment",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            498,
+            533
+          ],
+          "name": "\ud83d\udc1b Bug Report",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Always initialize swarm for complex issues - Assign specialized agents based on issue type - Use memory for progress coordination",
+              "lines": [
+                536,
+                540
+              ],
+              "name": "1. **Swarm-Coordinated Issue Management**",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Regular automated updates with swarm coordination - Progress metrics and completion tracking - Cross-issue dependency management",
+              "lines": [
+                541,
+                545
+              ],
+              "name": "2. **Automated Progress Tracking**",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Consistent labeling strategy across repositories - Priority-based issue sorting and assignment - Milestone integration for project coordination",
+              "lines": [
+                546,
+                550
+              ],
+              "name": "3. **Smart Labeling and Organization**",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Create multiple related issues simultaneously - Bulk updates for project-wide changes - Coordinated cross-repository issue management",
+              "lines": [
+                551,
+                555
+              ],
+              "name": "4. **Batch Issue Operations**",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            534,
+            555
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- `/github pr-manager` - Link issues to pull requests - `/github release-manager` - Coordinate release issues - `/sparc orchestrator` - Complex projec",
+              "lines": [
+                558,
+                563
+              ],
+              "name": "Seamless integration with:",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            556,
+            563
+          ],
+          "name": "Integration with Other Modes",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Issue creation and resolution times - Agent productivity metrics - Project milestone progress - Cross-repository coordination efficiency",
+              "lines": [
+                566,
+                571
+              ],
+              "name": "Automatic tracking of:",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Weekly progress summaries - Agent performance analytics - Project health metrics - Integration success rates",
+              "lines": [
+                572,
+                576
+              ],
+              "name": "Reporting features:",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            564,
+            576
+          ],
+          "name": "Metrics and Analytics",
+          "type": "section"
+        }
+      ]
+    },
+    "multi-repo-swarm.md": {
+      "hash": "4399c35b3e91",
+      "indexed_at": "2026-01-20T04:50:25.565726+00:00",
+      "language": "markdown",
+      "lines": 553,
+      "symbols": [
+        {
+          "docstring": "Coordinate AI swarms across multiple repositories, enabling organization-wide automation and intelligent cross-project collaboration.",
+          "lines": [
+            37,
+            39
+          ],
+          "name": "Overview",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                42,
+                62
+              ],
+              "name": "1. Cross-Repo Initialization",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                63,
+                87
+              ],
+              "name": "2. Repository Discovery",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                88,
+                128
+              ],
+              "name": "3. Synchronized Operations",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            40,
+            128
+          ],
+          "name": "Core Features",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                131,
+                163
+              ],
+              "name": "Multi-Repo Config File",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                164,
+                184
+              ],
+              "name": "Repository Roles",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            129,
+            184
+          ],
+          "name": "Configuration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                187,
+                237
+              ],
+              "name": "Dependency Management",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                238,
+                247
+              ],
+              "name": "Refactoring Operations",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                248,
+                257
+              ],
+              "name": "Security Updates",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            185,
+            257
+          ],
+          "name": "Orchestration Commands",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                260,
+                280
+              ],
+              "name": "1. Webhook-Based Coordination",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                281,
+                299
+              ],
+              "name": "2. GraphQL Federation",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                300,
+                313
+              ],
+              "name": "3. Event Streaming",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            258,
+            313
+          ],
+          "name": "Communication Strategies",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                316,
+                325
+              ],
+              "name": "1. Distributed Task Queue",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                326,
+                335
+              ],
+              "name": "2. Cross-Repo Testing",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                336,
+                345
+              ],
+              "name": "3. Monorepo Migration",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            314,
+            345
+          ],
+          "name": "Advanced Features",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                348,
+                356
+              ],
+              "name": "Multi-Repo Dashboard",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                357,
+                365
+              ],
+              "name": "Dependency Graph",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                366,
+                374
+              ],
+              "name": "Health Monitoring",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            346,
+            374
+          ],
+          "name": "Monitoring & Visualization",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                377,
+                391
+              ],
+              "name": "1. Eventually Consistent",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                392,
+                404
+              ],
+              "name": "2. Strong Consistency",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                405,
+                419
+              ],
+              "name": "3. Hybrid Approach",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            375,
+            419
+          ],
+          "name": "Synchronization Patterns",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                422,
+                431
+              ],
+              "name": "1. Microservices Coordination",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                432,
+                442
+              ],
+              "name": "2. Library Updates",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                443,
+                452
+              ],
+              "name": "3. Organization-Wide Changes",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            420,
+            452
+          ],
+          "name": "Use Cases",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Clear repository roles and boundaries - Consistent naming conventions - Documented dependencies - Shared configuration standards",
+              "lines": [
+                455,
+                460
+              ],
+              "name": "1. Repository Organization",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Use appropriate sync strategies - Implement circuit breakers - Monitor latency and failures - Clear error propagation",
+              "lines": [
+                461,
+                466
+              ],
+              "name": "2. Communication",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Secure cross-repo authentication - Encrypted communication channels - Audit trail for all operations - Principle of least privilege",
+              "lines": [
+                467,
+                472
+              ],
+              "name": "3. Security",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            453,
+            472
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                475,
+                483
+              ],
+              "name": "Caching Strategy",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                484,
+                492
+              ],
+              "name": "Parallel Execution",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                493,
+                501
+              ],
+              "name": "Resource Pooling",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            473,
+            501
+          ],
+          "name": "Performance Optimization",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                504,
+                512
+              ],
+              "name": "Connectivity Issues",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                513,
+                521
+              ],
+              "name": "Memory Synchronization",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                522,
+                530
+              ],
+              "name": "Performance Bottlenecks",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            502,
+            530
+          ],
+          "name": "Troubleshooting",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                533,
+                542
+              ],
+              "name": "Full-Stack Application Update",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                543,
+                553
+              ],
+              "name": "Cross-Team Collaboration",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            531,
+            553
+          ],
+          "name": "Examples",
+          "type": "section"
+        }
+      ]
+    },
+    "pr-manager.md": {
+      "hash": "931d3c265bc0",
+      "indexed_at": "2026-01-20T04:50:25.565149+00:00",
+      "language": "markdown",
+      "lines": 438,
+      "symbols": [
+        {
+          "docstring": "Comprehensive pull request management with swarm coordination for automated reviews, testing, and merge workflows, enhanced with **self-learning** and",
+          "lines": [
+            95,
+            97
+          ],
+          "name": "Purpose",
+          "type": "section"
+        },
+        {
+          "docstring": "- **Multi-reviewer coordination** with swarm agents - **Automated conflict resolution** and merge strategies - **Comprehensive testing** integration a",
+          "lines": [
+            98,
+            104
+          ],
+          "name": "Core Capabilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                107,
+                147
+              ],
+              "name": "Before Each PR Task: Learn from History",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                148,
+                180
+              ],
+              "name": "During PR Management: GNN-Enhanced Code Search",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                181,
+                207
+              ],
+              "name": "Multi-Agent Coordination with Attention",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                208,
+                240
+              ],
+              "name": "After PR Completion: Store Learning Patterns",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            105,
+            240
+          ],
+          "name": "\ud83e\udde0 Self-Learning Protocol (v2.0.0-alpha)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                243,
+                256
+              ],
+              "name": "Smart Merge Decision Making",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                257,
+                272
+              ],
+              "name": "Attention-Based Conflict Resolution",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                273,
+                294
+              ],
+              "name": "GNN-Enhanced Review Coordination",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            241,
+            294
+          ],
+          "name": "\ud83c\udfaf GitHub-Specific Optimizations",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                297,
+                322
+              ],
+              "name": "1. Create and Manage PR with Swarm Coordination",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                323,
+                341
+              ],
+              "name": "2. Automated Multi-File Review",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                342,
+                364
+              ],
+              "name": "3. Merge Coordination with Testing",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            295,
+            364
+          ],
+          "name": "Usage Patterns",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                367,
+                394
+              ],
+              "name": "Complete PR Lifecycle in Parallel:",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            365,
+            394
+          ],
+          "name": "Batch Operations Example",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Initialize swarm before complex PR operations - Assign specialized agents for different review aspects - Use memory for cross-agent coordination",
+              "lines": [
+                397,
+                401
+              ],
+              "name": "1. **Always Use Swarm Coordination**",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Combine multiple GitHub API calls in single messages - Parallel file operations for large PRs - Coordinate testing and validation simultaneously",
+              "lines": [
+                402,
+                406
+              ],
+              "name": "2. **Batch PR Operations**",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Automated conflict detection and resolution - Multi-agent review for comprehensive coverage - Performance and security validation integration",
+              "lines": [
+                407,
+                411
+              ],
+              "name": "3. **Intelligent Review Strategy**",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Use TodoWrite for PR milestone tracking - GitHub issue integration for project coordination - Real-time status updates through swarm memory",
+              "lines": [
+                412,
+                416
+              ],
+              "name": "4. **Progress Tracking**",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            395,
+            416
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- `/github issue-tracker` - For project coordination - `/github branch-manager` - For branch strategy - `/github ci-orchestrator` - For CI/CD integrat",
+              "lines": [
+                419,
+                425
+              ],
+              "name": "Works seamlessly with:",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            417,
+            425
+          ],
+          "name": "Integration with Other Modes",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Network failures during GitHub API calls - Merge conflicts with intelligent resolution - Test failures with automatic re-runs - Review bottlenecks w",
+              "lines": [
+                428,
+                433
+              ],
+              "name": "Automatic retry logic for:",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- No single point of failure - Automatic agent failover - Progress preservation across interruptions - Comprehensive error reporting and recovery",
+              "lines": [
+                434,
+                438
+              ],
+              "name": "Swarm coordination ensures:",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            426,
+            438
+          ],
+          "name": "Error Handling",
+          "type": "section"
+        }
+      ]
+    },
+    "project-board-sync.md": {
+      "hash": "f3d3692e0402",
+      "indexed_at": "2026-01-20T04:50:25.568297+00:00",
+      "language": "markdown",
+      "lines": 509,
+      "symbols": [
+        {
+          "docstring": "Synchronize AI swarms with GitHub Projects for visual task management, progress tracking, and team coordination.",
+          "lines": [
+            41,
+            43
+          ],
+          "name": "Overview",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                46,
+                65
+              ],
+              "name": "1. Board Initialization",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                66,
+                79
+              ],
+              "name": "2. Task Synchronization",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                80,
+                88
+              ],
+              "name": "3. Real-time Updates",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            44,
+            88
+          ],
+          "name": "Core Features",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                91,
+                136
+              ],
+              "name": "Board Mapping Configuration",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                137,
+                165
+              ],
+              "name": "View Configuration",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            89,
+            165
+          ],
+          "name": "Configuration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                168,
+                176
+              ],
+              "name": "1. Auto-Assignment",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                177,
+                185
+              ],
+              "name": "2. Progress Tracking",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                186,
+                196
+              ],
+              "name": "3. Smart Card Movement",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            166,
+            196
+          ],
+          "name": "Automation Features",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                199,
+                217
+              ],
+              "name": "Create Cards from Issues",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                218,
+                226
+              ],
+              "name": "Bulk Operations",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                227,
+                239
+              ],
+              "name": "Card Templates",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            197,
+            239
+          ],
+          "name": "Board Commands",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                242,
+                252
+              ],
+              "name": "1. Multi-Board Sync",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                253,
+                262
+              ],
+              "name": "2. Cross-Organization Sync",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                263,
+                272
+              ],
+              "name": "3. External Tool Integration",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            240,
+            272
+          ],
+          "name": "Advanced Synchronization",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                275,
+                297
+              ],
+              "name": "Board Analytics",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                298,
+                325
+              ],
+              "name": "Custom Dashboards",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                326,
+                335
+              ],
+              "name": "Reports",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            273,
+            335
+          ],
+          "name": "Visualization & Reporting",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                338,
+                347
+              ],
+              "name": "Sprint Management",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                348,
+                357
+              ],
+              "name": "Milestone Tracking",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                358,
+                367
+              ],
+              "name": "Release Planning",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            336,
+            367
+          ],
+          "name": "Workflow Integration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                370,
+                379
+              ],
+              "name": "Work Distribution",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                380,
+                389
+              ],
+              "name": "Standup Automation",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                390,
+                399
+              ],
+              "name": "Review Coordination",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            368,
+            399
+          ],
+          "name": "Team Collaboration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Clear column definitions - Consistent labeling system - Regular board grooming - Automation rules",
+              "lines": [
+                402,
+                407
+              ],
+              "name": "1. Board Organization",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Bidirectional sync validation - Conflict resolution strategies - Audit trails - Regular backups",
+              "lines": [
+                408,
+                413
+              ],
+              "name": "2. Data Integrity",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Training materials - Clear workflows - Regular reviews - Feedback loops",
+              "lines": [
+                414,
+                419
+              ],
+              "name": "3. Team Adoption",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            400,
+            419
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                422,
+                430
+              ],
+              "name": "Sync Issues",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                431,
+                440
+              ],
+              "name": "Performance",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                441,
+                450
+              ],
+              "name": "Data Recovery",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            420,
+            450
+          ],
+          "name": "Troubleshooting",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                453,
+                462
+              ],
+              "name": "Agile Development Board",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                463,
+                474
+              ],
+              "name": "Kanban Flow Board",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                475,
+                483
+              ],
+              "name": "Research Project Board",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            451,
+            483
+          ],
+          "name": "Examples",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                486,
+                498
+              ],
+              "name": "Performance Metrics",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                499,
+                509
+              ],
+              "name": "Team Metrics",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            484,
+            509
+          ],
+          "name": "Metrics & KPIs",
+          "type": "section"
+        }
+      ]
+    },
+    "release-manager.md": {
+      "hash": "52a040ef0e67",
+      "indexed_at": "2026-01-20T04:50:25.562248+00:00",
+      "language": "markdown",
+      "lines": 605,
+      "symbols": [
+        {
+          "docstring": "Automated release coordination and deployment with ruv-swarm orchestration for seamless version management, testing, and deployment across multiple pa",
+          "lines": [
+            84,
+            86
+          ],
+          "name": "Purpose",
+          "type": "section"
+        },
+        {
+          "docstring": "- **Automated release pipelines** with comprehensive testing - **Version coordination** across multiple packages - **Deployment orchestration** with r",
+          "lines": [
+            87,
+            93
+          ],
+          "name": "Core Capabilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                96,
+                131
+              ],
+              "name": "Before Release: Learn from Past Releases",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                132,
+                166
+              ],
+              "name": "During Release: GNN-Enhanced Dependency Analysis",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                167,
+                197
+              ],
+              "name": "Multi-Agent Go/No-Go Decision with Attention",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                198,
+                230
+              ],
+              "name": "After Release: Store Learning Patterns",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            94,
+            230
+          ],
+          "name": "\ud83e\udde0 Self-Learning Protocol (v2.0.0-alpha)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                233,
+                246
+              ],
+              "name": "Smart Deployment Strategy Selection",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                247,
+                264
+              ],
+              "name": "Attention-Based Risk Assessment",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                265,
+                288
+              ],
+              "name": "GNN-Enhanced Change Impact Analysis",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            231,
+            288
+          ],
+          "name": "\ud83c\udfaf GitHub-Specific Optimizations",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                291,
+                316
+              ],
+              "name": "1. Coordinated Release Preparation",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                317,
+                344
+              ],
+              "name": "2. Multi-Package Version Coordination",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            289,
+            344
+          ],
+          "name": "Usage Patterns",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Comprehensive GitHub workflow integration - Enhanced swarm coordination capabilities - Advanced MCP tools suite",
+              "lines": [
+                347,
+                351
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Aligned Node.js version requirements - Improved package synchronization - Enhanced documentation structure",
+              "lines": [
+                352,
+                356
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Dependency resolution issues - Integration test reliability - Memory coordination optimization` } ], message: \"release: Prepare v1.0.72 with GitHub",
+              "lines": [
+                357,
+                366
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                367,
+                387
+              ],
+              "name": "3. Automated Release Validation",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **GitHub Workflow Integration**: Complete GitHub command suite with swarm coordination - **Package Synchronization**: Aligned versions and dependenc",
+              "lines": [
+                388,
+                393
+              ],
+              "name": "\ud83c\udfaf Release Highlights",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **claude-flow**: v1.0.71 \u2192 v1.0.72 - **ruv-swarm**: v1.0.11 \u2192 v1.0.12",
+              "lines": [
+                394,
+                397
+              ],
+              "name": "\ud83d\udce6 Package Updates",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "- GitHub command modes: pr-manager, issue-tracker, sync-coordinator, release-manager - Swarm-coordinated GitHub workflows - Advanced MCP tools integra",
+                  "lines": [
+                    399,
+                    404
+                  ],
+                  "name": "Added",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "- Node.js requirement aligned to >=20.0.0 across packages - Enhanced swarm coordination protocols - Improved package dependency management - Updated i",
+                  "lines": [
+                    405,
+                    410
+                  ],
+                  "name": "Changed",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "- Dependency resolution issues between packages - Integration test reliability improvements - Memory coordination optimization - Documentation synchro",
+                  "lines": [
+                    411,
+                    416
+                  ],
+                  "name": "Fixed",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                398,
+                416
+              ],
+              "name": "\ud83d\udd27 Changes",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [x] Unit tests: All passing - [x] Integration tests: 89% success rate - [x] Lint checks: Clean - [x] Build verification: Successful - [x] Cross-pack",
+              "lines": [
+                417,
+                424
+              ],
+              "name": "\u2705 Validation Results",
+              "type": "subsection"
+            },
+            {
+              "docstring": "This release was coordinated using ruv-swarm agents: - **Release Coordinator**: Overall release management - **QA Engineer**: Comprehensive testing va",
+              "lines": [
+                425,
+                432
+              ],
+              "name": "\ud83d\udc1d Swarm Coordination",
+              "type": "subsection"
+            },
+            {
+              "docstring": "This release is production-ready with comprehensive validation and testing.",
+              "lines": [
+                433,
+                440
+              ],
+              "name": "\ud83c\udf81 Ready for Deployment",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            345,
+            440
+          ],
+          "name": "[1.0.72] - ${new Date().toISOString().split('T')[0]}",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                443,
+                505
+              ],
+              "name": "Complete Release Pipeline:",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            441,
+            505
+          ],
+          "name": "Batch Release Workflow",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                508,
+                517
+              ],
+              "name": "1. **Semantic Versioning Strategy**",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                518,
+                529
+              ],
+              "name": "2. **Multi-Stage Validation**",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                530,
+                539
+              ],
+              "name": "3. **Rollback Strategy**",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            506,
+            539
+          ],
+          "name": "Release Strategies",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Multi-package test coordination - Integration test validation - Performance regression detection - Security vulnerability scanning",
+              "lines": [
+                542,
+                547
+              ],
+              "name": "1. **Comprehensive Testing**",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Automated changelog generation - Release notes with detailed changes - Migration guides for breaking changes - API documentation updates",
+              "lines": [
+                548,
+                553
+              ],
+              "name": "2. **Documentation Management**",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Staged deployment with validation - Rollback mechanisms and procedures - Performance monitoring during deployment - User communication and notificat",
+              "lines": [
+                554,
+                559
+              ],
+              "name": "3. **Deployment Coordination**",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Semantic versioning compliance - Cross-package version coordination - Dependency compatibility validation - Breaking change documentation",
+              "lines": [
+                560,
+                565
+              ],
+              "name": "4. **Version Management**",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            540,
+            565
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                568,
+                592
+              ],
+              "name": "GitHub Actions Integration:",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            566,
+            592
+          ],
+          "name": "Integration with CI/CD",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Test coverage percentage - Integration success rate - Deployment time metrics - Rollback frequency",
+              "lines": [
+                595,
+                600
+              ],
+              "name": "Release Quality Metrics:",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Performance regression detection - Error rate monitoring - User adoption metrics - Feedback collection and analysis",
+              "lines": [
+                601,
+                605
+              ],
+              "name": "Automated Monitoring:",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            593,
+            605
+          ],
+          "name": "Monitoring and Metrics",
+          "type": "section"
+        }
+      ]
+    },
+    "release-swarm.md": {
+      "hash": "b509a75c6f3d",
+      "indexed_at": "2026-01-20T04:50:25.563354+00:00",
+      "language": "markdown",
+      "lines": 583,
+      "symbols": [
+        {
+          "docstring": "Orchestrate complex software releases using AI swarms that handle everything from changelog generation to multi-platform deployment.",
+          "lines": [
+            42,
+            44
+          ],
+          "name": "Overview",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                47,
+                67
+              ],
+              "name": "1. Release Planning",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                68,
+                77
+              ],
+              "name": "2. Automated Versioning",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                78,
+                109
+              ],
+              "name": "3. Release Orchestration",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            45,
+            109
+          ],
+          "name": "Core Features",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                112,
+                158
+              ],
+              "name": "Release Config File",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            110,
+            158
+          ],
+          "name": "Release Configuration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                161,
+                201
+              ],
+              "name": "Changelog Agent",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                202,
+                218
+              ],
+              "name": "Version Agent",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                219,
+                235
+              ],
+              "name": "Build Agent",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                236,
+                245
+              ],
+              "name": "Test Agent",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                246,
+                255
+              ],
+              "name": "Deploy Agent",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            159,
+            255
+          ],
+          "name": "Release Agents",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                258,
+                280
+              ],
+              "name": "1. Progressive Deployment",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                281,
+                290
+              ],
+              "name": "2. Multi-Repo Releases",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                291,
+                300
+              ],
+              "name": "3. Hotfix Automation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            256,
+            300
+          ],
+          "name": "Advanced Features",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                303,
+                373
+              ],
+              "name": "Standard Release Flow",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                374,
+                383
+              ],
+              "name": "Continuous Deployment",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            301,
+            383
+          ],
+          "name": "Release Workflows",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                386,
+                400
+              ],
+              "name": "Pre-Release Checks",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                401,
+                410
+              ],
+              "name": "Compatibility Testing",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                411,
+                420
+              ],
+              "name": "Security Scanning",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            384,
+            420
+          ],
+          "name": "Release Validation",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                423,
+                432
+              ],
+              "name": "Release Monitoring",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                433,
+                445
+              ],
+              "name": "Automated Rollback",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                446,
+                455
+              ],
+              "name": "Release Analytics",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            421,
+            455
+          ],
+          "name": "Monitoring & Rollback",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                458,
+                467
+              ],
+              "name": "Auto-Generated Docs",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                468,
+                472
+              ],
+              "name": "Release Notes",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            456,
+            472
+          ],
+          "name": "Documentation",
+          "type": "section"
+        },
+        {
+          "docstring": "- Major feature X with 50% performance improvement - New API endpoints for feature Y - Enhanced security with feature Z",
+          "lines": [
+            473,
+            477
+          ],
+          "name": "\ud83c\udf89 Highlights",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Detailed description of the feature...",
+              "lines": [
+                479,
+                481
+              ],
+              "name": "Feature Name (#PR)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            478,
+            481
+          ],
+          "name": "\ud83d\ude80 Features",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Description of the fix...",
+              "lines": [
+                483,
+                485
+              ],
+              "name": "Fixed issue with... (#PR)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            482,
+            485
+          ],
+          "name": "\ud83d\udc1b Bug Fixes",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Before: `/api/old-endpoint` - After: `/api/new-endpoint` - Migration: Update all client calls...",
+              "lines": [
+                487,
+                491
+              ],
+              "name": "API endpoint renamed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            486,
+            491
+          ],
+          "name": "\ud83d\udca5 Breaking Changes",
+          "type": "section"
+        },
+        {
+          "docstring": "- Reduced memory usage by 30% - API response time improved by 200ms",
+          "lines": [
+            492,
+            495
+          ],
+          "name": "\ud83d\udcc8 Performance Improvements",
+          "type": "section"
+        },
+        {
+          "docstring": "- Updated dependencies to patch CVE-XXXX - Enhanced authentication mechanism",
+          "lines": [
+            496,
+            499
+          ],
+          "name": "\ud83d\udd12 Security Updates",
+          "type": "section"
+        },
+        {
+          "docstring": "- Added examples for new features - Updated API reference - New troubleshooting guide",
+          "lines": [
+            500,
+            504
+          ],
+          "name": "\ud83d\udcda Documentation",
+          "type": "section"
+        },
+        {
+          "docstring": "Thanks to all contributors who made this release possible!",
+          "lines": [
+            505,
+            508
+          ],
+          "name": "\ud83d\ude4f Contributors",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Regular release cycles - Feature freeze periods - Beta testing phases - Clear communication",
+              "lines": [
+                511,
+                516
+              ],
+              "name": "1. Release Planning",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Comprehensive CI/CD - Automated testing - Progressive rollouts - Monitoring and alerts",
+              "lines": [
+                517,
+                522
+              ],
+              "name": "2. Automation",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Up-to-date changelogs - Migration guides - API documentation - Example updates",
+              "lines": [
+                523,
+                528
+              ],
+              "name": "3. Documentation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            509,
+            528
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                531,
+                540
+              ],
+              "name": "NPM Package Release",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                541,
+                550
+              ],
+              "name": "Docker Image Release",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                551,
+                560
+              ],
+              "name": "Mobile App Release",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            529,
+            560
+          ],
+          "name": "Integration Examples",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                563,
+                572
+              ],
+              "name": "Hotfix Process",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                573,
+                583
+              ],
+              "name": "Rollback Procedure",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            561,
+            583
+          ],
+          "name": "Emergency Procedures",
+          "type": "section"
+        }
+      ]
+    },
+    "repo-architect.md": {
+      "hash": "52b6991e4d2d",
+      "indexed_at": "2026-01-20T04:50:25.569820+00:00",
+      "language": "markdown",
+      "lines": 398,
+      "symbols": [
+        {
+          "docstring": "Repository structure optimization and multi-repo management with ruv-swarm coordination for scalable project architecture and development workflows.",
+          "lines": [
+            43,
+            45
+          ],
+          "name": "Purpose",
+          "type": "section"
+        },
+        {
+          "docstring": "- **Repository structure optimization** with best practices - **Multi-repository coordination** and synchronization - **Template management** for cons",
+          "lines": [
+            46,
+            52
+          ],
+          "name": "Capabilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                55,
+                82
+              ],
+              "name": "1. Repository Structure Analysis and Optimization",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                83,
+                144
+              ],
+              "name": "2. Multi-Repository Template Creation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            53,
+            144
+          ],
+          "name": "Usage Patterns",
+          "type": "section"
+        },
+        {
+          "docstring": "\\`\\`\\`bash npx claude-flow init --sparc npm install npx claude-flow start --ui \\`\\`\\`",
+          "lines": [
+            145,
+            151
+          ],
+          "name": "Quick Start",
+          "type": "section"
+        },
+        {
+          "docstring": "- \ud83e\udde0 ruv-swarm integration - \ud83c\udfaf SPARC development modes - \ud83d\udd27 GitHub workflow automation - \ud83d\udcca Advanced coordination capabilities",
+          "lines": [
+            152,
+            157
+          ],
+          "name": "Features",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                166,
+                196
+              ],
+              "name": "3. Cross-Repository Synchronization",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "See CLAUDE.md for complete integration instructions.` } ], message: \"feat: Create standardized Claude project template with ruv-swarm integration\" }",
+          "lines": [
+            158,
+            196
+          ],
+          "name": "Documentation",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                199,
+                269
+              ],
+              "name": "Complete Repository Architecture Optimization:",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            197,
+            269
+          ],
+          "name": "Batch Architecture Operations",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                272,
+                301
+              ],
+              "name": "1. **Monorepo Structure Pattern**",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                302,
+                324
+              ],
+              "name": "2. **Command Structure Pattern**",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                325,
+                345
+              ],
+              "name": "3. **Integration Pattern**",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            270,
+            345
+          ],
+          "name": "Architecture Patterns",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Consistent directory organization across repositories - Standardized configuration files and formats - Clear separation of concerns and responsibili",
+              "lines": [
+                348,
+                353
+              ],
+              "name": "1. **Structure Optimization**",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Reusable project templates for consistency - Standardized issue and PR templates - Workflow templates for common operations - Documentation template",
+              "lines": [
+                354,
+                359
+              ],
+              "name": "2. **Template Management**",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Cross-repository dependency management - Synchronized version and release management - Consistent coding standards and practices - Automated cross-r",
+              "lines": [
+                360,
+                365
+              ],
+              "name": "3. **Multi-Repository Coordination**",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Comprehensive architecture documentation - Clear integration guides and examples - Maintainable and up-to-date documentation - User-friendly onboard",
+              "lines": [
+                366,
+                371
+              ],
+              "name": "4. **Documentation Architecture**",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            346,
+            371
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Repository structure consistency score - Documentation coverage percentage - Cross-repository integration success rate - Template adoption and usage",
+              "lines": [
+                374,
+                379
+              ],
+              "name": "Architecture Health Metrics:",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Structure drift detection - Best practices compliance checking - Performance impact analysis - Scalability assessment and recommendations",
+              "lines": [
+                380,
+                385
+              ],
+              "name": "Automated Analysis:",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            372,
+            385
+          ],
+          "name": "Monitoring and Analysis",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- `/github sync-coordinator` - For cross-repo synchronization - `/github release-manager` - For coordinated releases - `/sparc architect` - For detail",
+              "lines": [
+                388,
+                393
+              ],
+              "name": "Seamless integration with:",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Automated structure validation - Continuous architecture improvement - Best practices enforcement - Documentation generation and maintenance",
+              "lines": [
+                394,
+                398
+              ],
+              "name": "Workflow Enhancement:",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            386,
+            398
+          ],
+          "name": "Integration with Development Workflow",
+          "type": "section"
+        }
+      ]
+    },
+    "swarm-issue.md": {
+      "hash": "47aae21ae486",
+      "indexed_at": "2026-01-20T04:50:25.558819+00:00",
+      "language": "markdown",
+      "lines": 573,
+      "symbols": [
+        {
+          "docstring": "Transform GitHub Issues into intelligent swarm tasks, enabling automatic task decomposition and agent coordination with advanced multi-agent orchestra",
+          "lines": [
+            35,
+            37
+          ],
+          "name": "Overview",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                40,
+                63
+              ],
+              "name": "1. Issue-to-Swarm Conversion",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Execute swarm operations via issue comments:",
+              "lines": [
+                64,
+                75
+              ],
+              "name": "2. Issue Comment Commands",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                76,
+                105
+              ],
+              "name": "3. Issue Templates for Swarms",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            38,
+            105
+          ],
+          "name": "Core Features",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                108,
+                131
+              ],
+              "name": "Auto-Label Based on Content",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                132,
+                140
+              ],
+              "name": "Dynamic Agent Assignment",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            106,
+            140
+          ],
+          "name": "Issue Label Automation",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                143,
+                168
+              ],
+              "name": "Initialize from Issue",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                169,
+                184
+              ],
+              "name": "Task Decomposition",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            141,
+            184
+          ],
+          "name": "Issue Swarm Commands",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                204,
+                226
+              ],
+              "name": "Progress Tracking",
+              "type": "subsection"
+            },
+            {
+              "docstring": "\\(.completed | map(\"- \u2705 \" + .) | join(\"\\n\"))",
+              "lines": [
+                227,
+                229
+              ],
+              "name": "Completed Tasks",
+              "type": "subsection"
+            },
+            {
+              "docstring": "\\(.in_progress | map(\"- \ud83d\udd04 \" + .) | join(\"\\n\"))",
+              "lines": [
+                230,
+                232
+              ],
+              "name": "In Progress",
+              "type": "subsection"
+            },
+            {
+              "docstring": "\\(.remaining | map(\"- \u23f3 \" + .) | join(\"\\n\"))",
+              "lines": [
+                233,
+                246
+              ],
+              "name": "Remaining",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "$CHECKLIST\"",
+          "lines": [
+            185,
+            246
+          ],
+          "name": "Subtasks",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                249,
+                257
+              ],
+              "name": "1. Issue Dependencies",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                258,
+                266
+              ],
+              "name": "2. Epic Management",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                267,
+                275
+              ],
+              "name": "3. Issue Templates",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            247,
+            275
+          ],
+          "name": "Advanced Features",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                278,
+                298
+              ],
+              "name": "GitHub Actions for Issues",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                299,
+                310
+              ],
+              "name": "Issue Board Integration",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            276,
+            310
+          ],
+          "name": "Workflow Integration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                313,
+                322
+              ],
+              "name": "Bug Reports",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                323,
+                332
+              ],
+              "name": "Feature Requests",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                333,
+                342
+              ],
+              "name": "Technical Debt",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            311,
+            342
+          ],
+          "name": "Issue Types & Strategies",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                345,
+                388
+              ],
+              "name": "Auto-Close Stale Issues",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                389,
+                398
+              ],
+              "name": "Issue Triage",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                399,
+                407
+              ],
+              "name": "Duplicate Detection",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            343,
+            407
+          ],
+          "name": "Automation Examples",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                410,
+                418
+              ],
+              "name": "1. Issue-PR Linking",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                419,
+                427
+              ],
+              "name": "2. Milestone Coordination",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                428,
+                436
+              ],
+              "name": "3. Cross-Repo Issues",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            408,
+            436
+          ],
+          "name": "Integration Patterns",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                439,
+                446
+              ],
+              "name": "Issue Resolution Time",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                447,
+                454
+              ],
+              "name": "Swarm Effectiveness",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            437,
+            454
+          ],
+          "name": "Metrics & Analytics",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Include swarm configuration options - Provide task breakdown structure - Set clear acceptance criteria - Include complexity estimates",
+              "lines": [
+                457,
+                462
+              ],
+              "name": "1. Issue Templates",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Use consistent swarm-related labels - Map labels to agent types - Priority indicators for swarm - Status tracking labels",
+              "lines": [
+                463,
+                468
+              ],
+              "name": "2. Label Strategy",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Clear command syntax - Progress updates in threads - Summary comments for decisions - Link to relevant PRs",
+              "lines": [
+                469,
+                474
+              ],
+              "name": "3. Comment Etiquette",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            455,
+            474
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        },
+        {
+          "docstring": "1. **Command Authorization**: Validate user permissions before executing commands 2. **Rate Limiting**: Prevent spam and abuse of issue commands 3. **",
+          "lines": [
+            475,
+            481
+          ],
+          "name": "Security & Permissions",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                484,
+                493
+              ],
+              "name": "Complex Bug Investigation",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                494,
+                503
+              ],
+              "name": "Feature Implementation",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                504,
+                513
+              ],
+              "name": "Documentation Update",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            482,
+            513
+          ],
+          "name": "Examples",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                516,
+                539
+              ],
+              "name": "Multi-Agent Issue Processing",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                540,
+                573
+              ],
+              "name": "Automated Swarm Hooks Integration",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            514,
+            573
+          ],
+          "name": "Swarm Coordination Features",
+          "type": "section"
+        }
+      ]
+    },
+    "swarm-pr.md": {
+      "hash": "920b501f42e8",
+      "indexed_at": "2026-01-20T04:50:25.561154+00:00",
+      "language": "markdown",
+      "lines": 428,
+      "symbols": [
+        {
+          "docstring": "Create and manage AI swarms directly from GitHub Pull Requests, enabling seamless integration with your development workflow through intelligent multi",
+          "lines": [
+            39,
+            41
+          ],
+          "name": "Overview",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                44,
+                56
+              ],
+              "name": "1. PR-Based Swarm Creation",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Execute swarm commands via PR comments:",
+              "lines": [
+                57,
+                67
+              ],
+              "name": "2. PR Comment Commands",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                68,
+                92
+              ],
+              "name": "3. Automated PR Workflows",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            42,
+            92
+          ],
+          "name": "Core Features",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Map PR labels to agent types:",
+              "lines": [
+                95,
+                109
+              ],
+              "name": "Automatic Agent Assignment",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                110,
+                117
+              ],
+              "name": "Label-Based Topology",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            93,
+            117
+          ],
+          "name": "PR Label Integration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                120,
+                132
+              ],
+              "name": "Initialize from PR",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                133,
+                145
+              ],
+              "name": "Progress Updates",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                146,
+                165
+              ],
+              "name": "Code Review Integration",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            118,
+            165
+          ],
+          "name": "PR Swarm Commands",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                168,
+                176
+              ],
+              "name": "1. Multi-PR Swarm Coordination",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                177,
+                184
+              ],
+              "name": "2. PR Dependency Analysis",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                185,
+                192
+              ],
+              "name": "3. Automated PR Fixes",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            166,
+            192
+          ],
+          "name": "Advanced Features",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                195,
+                197
+              ],
+              "name": "1. PR Templates",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            193,
+            197
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        },
+        {
+          "docstring": "- Topology: [mesh/hierarchical/ring/star] - Max Agents: [number] - Auto-spawn: [yes/no] - Priority: [high/medium/low]",
+          "lines": [
+            198,
+            203
+          ],
+          "name": "Swarm Configuration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                209,
+                218
+              ],
+              "name": "2. Status Checks",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                219,
+                235
+              ],
+              "name": "3. PR Merge Automation",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "- [ ] Task 1 description - [ ] Task 2 description",
+          "lines": [
+            204,
+            235
+          ],
+          "name": "Tasks for Swarm",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                238,
+                257
+              ],
+              "name": "Setup Webhook Handler",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            236,
+            257
+          ],
+          "name": "Webhook Integration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                260,
+                268
+              ],
+              "name": "Feature Development PR",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                269,
+                277
+              ],
+              "name": "Bug Fix PR",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                278,
+                286
+              ],
+              "name": "Documentation PR",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            258,
+            286
+          ],
+          "name": "Examples",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                289,
+                296
+              ],
+              "name": "PR Swarm Analytics",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                297,
+                304
+              ],
+              "name": "Dashboard Integration",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            287,
+            304
+          ],
+          "name": "Metrics & Reporting",
+          "type": "section"
+        },
+        {
+          "docstring": "1. **Token Permissions**: Ensure GitHub tokens have appropriate scopes 2. **Command Validation**: Validate all PR comments before execution 3. **Rate",
+          "lines": [
+            305,
+            311
+          ],
+          "name": "Security Considerations",
+          "type": "section"
+        },
+        {
+          "docstring": "When using with Claude Code: 1. Claude Code reads PR diff and context 2. Swarm coordinates approach based on PR type 3. Agents work in parallel on dif",
+          "lines": [
+            312,
+            320
+          ],
+          "name": "Integration with Claude Code",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                323,
+                353
+              ],
+              "name": "Multi-Agent PR Analysis",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                354,
+                402
+              ],
+              "name": "Swarm-Coordinated PR Lifecycle",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                403,
+                428
+              ],
+              "name": "Intelligent PR Merge Coordination",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            321,
+            428
+          ],
+          "name": "Advanced Swarm PR Coordination",
+          "type": "section"
+        }
+      ]
+    },
+    "sync-coordinator.md": {
+      "hash": "36bc5d88b803",
+      "indexed_at": "2026-01-20T04:50:25.564531+00:00",
+      "language": "markdown",
+      "lines": 452,
+      "symbols": [
+        {
+          "docstring": "Multi-package synchronization and version alignment with ruv-swarm coordination for seamless integration between claude-code-flow and ruv-swarm packag",
+          "lines": [
+            39,
+            41
+          ],
+          "name": "Purpose",
+          "type": "section"
+        },
+        {
+          "docstring": "- **Package synchronization** with intelligent dependency resolution - **Version alignment** across multiple repositories - **Cross-package integratio",
+          "lines": [
+            42,
+            48
+          ],
+          "name": "Capabilities",
+          "type": "section"
+        },
+        {
+          "docstring": "- `mcp__github__push_files` - `mcp__github__create_or_update_file` - `mcp__github__get_file_contents` - `mcp__github__create_pull_request` - `mcp__git",
+          "lines": [
+            49,
+            57
+          ],
+          "name": "Tools Available",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                60,
+                92
+              ],
+              "name": "1. Synchronize Package Dependencies",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                93,
+                118
+              ],
+              "name": "2. Documentation Synchronization",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                119,
+                150
+              ],
+              "name": "3. Cross-Package Feature Integration",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- \u2705 Comprehensive GitHub command modes - \u2705 Swarm-coordinated PR management - \u2705 Automated issue tracking - \u2705 Cross-package synchronization",
+              "lines": [
+                151,
+                156
+              ],
+              "name": "Features Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Claude-code-flow: GitHub command modes in .claude/commands/github/ - ruv-swarm: GitHub coordination hooks and utilities - Documentation: Synchronize",
+              "lines": [
+                157,
+                161
+              ],
+              "name": "Integration Points",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [x] Package dependency verification - [x] Integration test suite - [x] Documentation validation - [x] Cross-package compatibility",
+              "lines": [
+                162,
+                167
+              ],
+              "name": "Testing",
+              "type": "subsection"
+            },
+            {
+              "docstring": "This integration uses ruv-swarm agents for: - Multi-agent GitHub workflow management - Automated testing and validation - Progress tracking and coordi",
+              "lines": [
+                168,
+                179
+              ],
+              "name": "Swarm Coordination",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            58,
+            179
+          ],
+          "name": "Usage Patterns",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                182,
+                238
+              ],
+              "name": "Complete Package Sync Workflow:",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            180,
+            238
+          ],
+          "name": "Batch Synchronization Example",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                241,
+                256
+              ],
+              "name": "1. **Version Alignment Strategy**",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                257,
+                272
+              ],
+              "name": "2. **Documentation Sync Pattern**",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                273,
+                288
+              ],
+              "name": "3. **Integration Testing Matrix**",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            239,
+            288
+          ],
+          "name": "Synchronization Strategies",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Use batch operations for related changes - Maintain consistency across all sync operations - Implement rollback mechanisms for failed syncs",
+              "lines": [
+                291,
+                295
+              ],
+              "name": "1. **Atomic Synchronization**",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Semantic versioning alignment - Dependency compatibility validation - Automated version bump coordination",
+              "lines": [
+                296,
+                300
+              ],
+              "name": "2. **Version Management**",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Single source of truth for shared concepts - Package-specific customizations - Automated documentation validation",
+              "lines": [
+                301,
+                305
+              ],
+              "name": "3. **Documentation Consistency**",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Cross-package test validation - Integration test automation - Performance regression detection",
+              "lines": [
+                306,
+                310
+              ],
+              "name": "4. **Testing Integration**",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            289,
+            310
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Package version alignment percentage - Documentation consistency score - Integration test success rate - Synchronization completion time",
+              "lines": [
+                313,
+                318
+              ],
+              "name": "Sync Quality Metrics:",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Weekly sync status reports - Dependency drift detection - Documentation divergence alerts - Integration health monitoring",
+              "lines": [
+                319,
+                324
+              ],
+              "name": "Automated Reporting:",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            311,
+            324
+          ],
+          "name": "Monitoring and Metrics",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                327,
+                357
+              ],
+              "name": "Multi-Agent Coordination Architecture",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                358,
+                389
+              ],
+              "name": "Intelligent Conflict Resolution",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                390,
+                412
+              ],
+              "name": "Comprehensive Synchronization Metrics",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            325,
+            412
+          ],
+          "name": "Advanced Swarm Synchronization Features",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                415,
+                441
+              ],
+              "name": "Swarm-Coordinated Error Recovery",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Version conflict resolution with swarm consensus - Merge conflict detection and multi-agent resolution - Test failure recovery with adaptive strateg",
+              "lines": [
+                442,
+                447
+              ],
+              "name": "Automatic handling of:",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Swarm-coordinated automated rollback on critical failures - Multi-agent incremental sync retry mechanisms - Intelligent intervention points for comp",
+              "lines": [
+                448,
+                452
+              ],
+              "name": "Recovery procedures:",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            413,
+            452
+          ],
+          "name": "Error Handling and Recovery",
+          "type": "section"
+        }
+      ]
+    },
+    "workflow-automation.md": {
+      "hash": "959993a97a91",
+      "indexed_at": "2026-01-20T04:50:25.566599+00:00",
+      "language": "markdown",
+      "lines": 903,
+      "symbols": [
+        {
+          "docstring": "Integrate AI swarms with GitHub Actions to create intelligent, self-organizing CI/CD pipelines that adapt to your codebase through advanced multi-agen",
+          "lines": [
+            95,
+            97
+          ],
+          "name": "Overview",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                100,
+                135
+              ],
+              "name": "Before Workflow Creation: Learn from Past Workflows",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                136,
+                170
+              ],
+              "name": "During Workflow Execution: GNN-Enhanced Optimization",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                171,
+                198
+              ],
+              "name": "Multi-Agent Workflow Optimization with Attention",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                199,
+                230
+              ],
+              "name": "After Workflow Run: Store Learning Patterns",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            98,
+            230
+          ],
+          "name": "\ud83e\udde0 Self-Learning Protocol (v2.0.0-alpha)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                233,
+                248
+              ],
+              "name": "Pattern-Based Workflow Generation",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                249,
+                266
+              ],
+              "name": "Attention-Based Job Prioritization",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                267,
+                291
+              ],
+              "name": "GNN-Enhanced Failure Prediction",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                292,
+                310
+              ],
+              "name": "Adaptive Workflow Learning",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            231,
+            310
+          ],
+          "name": "\ud83c\udfaf GitHub-Specific Optimizations",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                313,
+                338
+              ],
+              "name": "1. Swarm-Powered Actions",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                339,
+                347
+              ],
+              "name": "2. Dynamic Workflow Generation",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                348,
+                358
+              ],
+              "name": "3. Intelligent Test Selection",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            311,
+            358
+          ],
+          "name": "Core Features",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                361,
+                385
+              ],
+              "name": "Multi-Language Detection",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                386,
+                417
+              ],
+              "name": "Adaptive Security Scanning",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            359,
+            417
+          ],
+          "name": "Workflow Templates",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                420,
+                429
+              ],
+              "name": "Pipeline Optimization",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                430,
+                446
+              ],
+              "name": "Failure Analysis",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                447,
+                455
+              ],
+              "name": "Resource Management",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            418,
+            455
+          ],
+          "name": "Action Commands",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                458,
+                476
+              ],
+              "name": "1. Self-Healing CI/CD",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                477,
+                502
+              ],
+              "name": "2. Progressive Deployment",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                503,
+                520
+              ],
+              "name": "3. Performance Regression Detection",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            456,
+            520
+          ],
+          "name": "Advanced Workflows",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                523,
+                548
+              ],
+              "name": "Swarm Action Development",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            521,
+            548
+          ],
+          "name": "Custom Actions",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                551,
+                571
+              ],
+              "name": "Dynamic Test Matrix",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                572,
+                580
+              ],
+              "name": "Intelligent Parallelization",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            549,
+            580
+          ],
+          "name": "Matrix Strategies",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                583,
+                592
+              ],
+              "name": "Workflow Analytics",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                593,
+                601
+              ],
+              "name": "Cost Optimization",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                602,
+                610
+              ],
+              "name": "Failure Patterns",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            581,
+            610
+          ],
+          "name": "Monitoring & Insights",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                613,
+                637
+              ],
+              "name": "1. PR Validation Swarm",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                638,
+                657
+              ],
+              "name": "2. Release Automation",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                658,
+                676
+              ],
+              "name": "3. Documentation Updates",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            611,
+            676
+          ],
+          "name": "Integration Examples",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Use reusable workflows for swarm operations - Implement proper caching strategies - Set appropriate timeouts - Use workflow dependencies wisely",
+              "lines": [
+                679,
+                684
+              ],
+              "name": "1. Workflow Organization",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Store swarm configs in secrets - Use OIDC for authentication - Implement least-privilege principles - Audit swarm operations",
+              "lines": [
+                685,
+                690
+              ],
+              "name": "2. Security",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Cache swarm dependencies - Use appropriate runner sizes - Implement early termination - Optimize parallel execution",
+              "lines": [
+                691,
+                696
+              ],
+              "name": "3. Performance",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            677,
+            696
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                699,
+                707
+              ],
+              "name": "Predictive Failures",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                708,
+                716
+              ],
+              "name": "Workflow Recommendations",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                717,
+                725
+              ],
+              "name": "Automated Optimization",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            697,
+            725
+          ],
+          "name": "Advanced Features",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                728,
+                737
+              ],
+              "name": "Debug Mode",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                738,
+                746
+              ],
+              "name": "Performance Profiling",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            726,
+            746
+          ],
+          "name": "Debugging & Troubleshooting",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                749,
+                785
+              ],
+              "name": "Multi-Agent Pipeline Orchestration",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                786,
+                812
+              ],
+              "name": "Intelligent Performance Monitoring",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                813,
+                869
+              ],
+              "name": "Dynamic Workflow Generation",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                870,
+                903
+              ],
+              "name": "Continuous Learning and Optimization",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            747,
+            903
+          ],
+          "name": "Advanced Swarm Workflow Automation",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.185387+00:00",
+  "version": "1.0"
+}

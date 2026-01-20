@@ -1,0 +1,296 @@
+{
+  "directory": ".claude/skills/v3-core-implementation",
+  "files": {
+    "SKILL.md": {
+      "hash": "9eb11363e804",
+      "indexed_at": "2026-01-20T04:50:25.503050+00:00",
+      "language": "markdown",
+      "lines": 797,
+      "symbols": [
+        {
+          "docstring": "Implements the core TypeScript modules for claude-flow v3 following Domain-Driven Design principles, clean architecture patterns, and modern TypeScrip",
+          "lines": [
+            8,
+            11
+          ],
+          "name": "What This Skill Does",
+          "type": "section"
+        },
+        {
+          "lines": [
+            12,
+            23
+          ],
+          "name": "Quick Start",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                26,
+                71
+              ],
+              "name": "Domain Structure",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            24,
+            71
+          ],
+          "name": "Core Implementation Architecture",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                74,
+                118
+              ],
+              "name": "Entity Base Class",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                119,
+                146
+              ],
+              "name": "Value Object Base Class",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                147,
+                167
+              ],
+              "name": "Aggregate Root",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            72,
+            167
+          ],
+          "name": "Base Domain Classes",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                170,
+                258
+              ],
+              "name": "Task Entity",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                259,
+                331
+              ],
+              "name": "Task Value Objects",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            168,
+            331
+          ],
+          "name": "Task Management Domain Implementation",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                334,
+                373
+              ],
+              "name": "Task Scheduling Service",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            332,
+            373
+          ],
+          "name": "Domain Services",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                376,
+                388
+              ],
+              "name": "Task Repository Interface",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                389,
+                446
+              ],
+              "name": "SQLite Implementation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            374,
+            446
+          ],
+          "name": "Repository Interfaces & Implementations",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                449,
+                529
+              ],
+              "name": "Use Case Implementation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            447,
+            529
+          ],
+          "name": "Application Layer",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                532,
+                585
+              ],
+              "name": "Container Configuration",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            530,
+            585
+          ],
+          "name": "Dependency Injection Setup",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                588,
+                624
+              ],
+              "name": "Strict TypeScript Setup",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            586,
+            624
+          ],
+          "name": "Modern TypeScript Configuration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                627,
+                682
+              ],
+              "name": "Domain Unit Tests",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                683,
+                727
+              ],
+              "name": "Integration Tests",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            625,
+            727
+          ],
+          "name": "Testing Implementation",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                730,
+                764
+              ],
+              "name": "Entity Caching",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            728,
+            764
+          ],
+          "name": "Performance Optimizations",
+          "type": "section"
+        },
+        {
+          "docstring": "- [ ] **Domain Isolation**: 100% clean dependency boundaries - [ ] **Test Coverage**: >90% unit test coverage for domain logic - [ ] **Type Safety**:",
+          "lines": [
+            765,
+            773
+          ],
+          "name": "Success Metrics",
+          "type": "section"
+        },
+        {
+          "docstring": "- `v3-ddd-architecture` - DDD architectural design - `v3-mcp-optimization` - MCP server integration - `v3-memory-unification` - AgentDB repository int",
+          "lines": [
+            774,
+            780
+          ],
+          "name": "Related V3 Skills",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                783,
+                790
+              ],
+              "name": "Complete Core Implementation",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                791,
+                797
+              ],
+              "name": "Domain-Specific Implementation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            781,
+            797
+          ],
+          "name": "Usage Examples",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.161661+00:00",
+  "version": "1.0"
+}

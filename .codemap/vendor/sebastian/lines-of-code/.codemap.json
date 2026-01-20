@@ -1,0 +1,126 @@
+{
+  "directory": "vendor/sebastian/lines-of-code",
+  "files": {
+    "ChangeLog.md": {
+      "hash": "4763fee68679",
+      "indexed_at": "2026-01-20T04:48:48.506539+00:00",
+      "language": "markdown",
+      "lines": 41,
+      "symbols": [
+        {
+          "children": [
+            {
+              "docstring": "* This component is now compatible with `nikic/php-parser` 5.0",
+              "lines": [
+                7,
+                10
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            5,
+            10
+          ],
+          "name": "[1.0.4] - 2023-12-22",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Files that do not contain a newline were not handled correctly",
+              "lines": [
+                13,
+                16
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* A line of code is no longer considered to be a Logical Line of Code if it does not contain an `Expr` node",
+              "lines": [
+                17,
+                20
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            11,
+            20
+          ],
+          "name": "[1.0.3] - 2020-11-28",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* `SebastianBergmann\\LinesOfCode\\Exception` now correctly extends `\\Throwable`",
+              "lines": [
+                23,
+                26
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            21,
+            26
+          ],
+          "name": "[1.0.2] - 2020-10-26",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Changed PHP version constraint in `composer.json` from `^7.3 || ^8.0` to `>=7.3`",
+              "lines": [
+                29,
+                32
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            27,
+            32
+          ],
+          "name": "[1.0.1] - 2020-09-28",
+          "type": "section"
+        },
+        {
+          "docstring": "* Initial release",
+          "lines": [
+            33,
+            42
+          ],
+          "name": "[1.0.0] - 2020-07-22",
+          "type": "section"
+        }
+      ]
+    },
+    "README.md": {
+      "hash": "e80cfe79b7fe",
+      "indexed_at": "2026-01-20T04:48:49.547038+00:00",
+      "language": "markdown",
+      "lines": 22,
+      "symbols": [
+        {
+          "docstring": "You can add this library as a local, per-project dependency to your project using [Composer](https://getcomposer.org/):",
+          "lines": [
+            10,
+            23
+          ],
+          "name": "Installation",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.126105+00:00",
+  "version": "1.0"
+}

@@ -1,0 +1,226 @@
+{
+  "directory": "vendor/psr/http-message/docs",
+  "files": {
+    "PSR7-Interfaces.md": {
+      "hash": "255d8acfecf5",
+      "indexed_at": "2026-01-20T04:49:41.398559+00:00",
+      "language": "markdown",
+      "lines": 130,
+      "symbols": [
+        {
+          "docstring": "| Method Name                        | Description | Notes | |------------------------------------| ----------- | ----- | | `getProtocolVersion()`",
+          "lines": [
+            17,
+            33
+          ],
+          "name": "`Psr\\Http\\Message\\MessageInterface` Methods",
+          "type": "section"
+        },
+        {
+          "docstring": "Same methods as `Psr\\Http\\Message\\MessageInterface`  + the following methods:",
+          "lines": [
+            34,
+            47
+          ],
+          "name": "`Psr\\Http\\Message\\RequestInterface` Methods",
+          "type": "section"
+        },
+        {
+          "docstring": "Same methods as `Psr\\Http\\Message\\RequestInterface`  + the following methods:",
+          "lines": [
+            48,
+            66
+          ],
+          "name": "`Psr\\Http\\Message\\ServerRequestInterface` Methods",
+          "type": "section"
+        },
+        {
+          "docstring": "Same methods as `Psr\\Http\\Message\\MessageInterface`  + the following methods:",
+          "lines": [
+            67,
+            76
+          ],
+          "name": "`Psr\\Http\\Message\\ResponseInterface` Methods:",
+          "type": "section"
+        },
+        {
+          "docstring": "| Method Name                        | Description | Notes | |------------------------------------| ----------- | ----- | | `__toString()` | Reads all",
+          "lines": [
+            77,
+            95
+          ],
+          "name": "`Psr\\Http\\Message\\StreamInterface` Methods",
+          "type": "section"
+        },
+        {
+          "docstring": "| Method Name                        | Description | Notes | |------------------------------------| ----------- | ----- | | `getScheme()` | Retrieve t",
+          "lines": [
+            96,
+            116
+          ],
+          "name": "`Psr\\Http\\Message\\UriInterface` Methods",
+          "type": "section"
+        },
+        {
+          "docstring": "| Method Name                        | Description | Notes | |------------------------------------| ----------- | ----- | | `getStream()` | Retrieve a",
+          "lines": [
+            117,
+            131
+          ],
+          "name": "`Psr\\Http\\Message\\UploadedFileInterface` Methods",
+          "type": "section"
+        }
+      ]
+    },
+    "PSR7-Usage.md": {
+      "hash": "49daf54cea10",
+      "indexed_at": "2026-01-20T04:49:41.398265+00:00",
+      "language": "markdown",
+      "lines": 159,
+      "symbols": [
+        {
+          "docstring": "All PSR-7 applications comply with these interfaces They were created to establish a standard between middleware implementations.",
+          "lines": [
+            1,
+            23
+          ],
+          "name": "PSR-7 Usage",
+          "type": "subsection"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                26,
+                31
+              ],
+              "name": "Adding headers to response:",
+              "type": "subsubsection"
+            },
+            {
+              "lines": [
+                32,
+                37
+              ],
+              "name": "Appending values to headers",
+              "type": "subsubsection"
+            },
+            {
+              "lines": [
+                38,
+                46
+              ],
+              "name": "Checking if header exists:",
+              "type": "subsubsection"
+            },
+            {
+              "lines": [
+                47,
+                55
+              ],
+              "name": "Getting comma-separated values from a header (also applies to request)",
+              "type": "subsubsection"
+            },
+            {
+              "lines": [
+                56,
+                63
+              ],
+              "name": "Getting array of value from a header (also applies to request)",
+              "type": "subsubsection"
+            },
+            {
+              "lines": [
+                64,
+                74
+              ],
+              "name": "Removing headers from HTTP Messages",
+              "type": "subsubsection"
+            }
+          ],
+          "lines": [
+            24,
+            74
+          ],
+          "name": "Working with HTTP Headers",
+          "type": "subsection"
+        },
+        {
+          "children": [
+            {
+              "docstring": "> This method makes the body handling easier to understand and is useful when repeatedly calling body methods. (You only call `getBody()` once). Using",
+              "lines": [
+                78,
+                92
+              ],
+              "name": "1. Getting the body separately",
+              "type": "subsubsection"
+            },
+            {
+              "docstring": "> This method is useful when only performing few operations as the `$request->getBody()` statement fragment is required",
+              "lines": [
+                93,
+                100
+              ],
+              "name": "2. Working directly on response",
+              "type": "subsubsection"
+            }
+          ],
+          "docstring": "When working with the PSR-7 there are two methods of implementation:",
+          "lines": [
+            75,
+            100
+          ],
+          "name": "Working with HTTP Message Body",
+          "type": "subsection"
+        },
+        {
+          "docstring": "The following snippet gets the contents of a stream contents. > Note: Streams must be rewinded, if content was written into streams, it will be ignore",
+          "lines": [
+            101,
+            111
+          ],
+          "name": "Getting the body contents",
+          "type": "subsection"
+        },
+        {
+          "lines": [
+            112,
+            119
+          ],
+          "name": "Append to body",
+          "type": "subsection"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                136,
+                150
+              ],
+              "name": "Prepending by rewriting separately",
+              "type": "subsubsection"
+            },
+            {
+              "lines": [
+                151,
+                160
+              ],
+              "name": "Prepending by using contents as a string",
+              "type": "subsubsection"
+            }
+          ],
+          "docstring": "Prepending is different when it comes to streams. The content must be copied before writing the content to be prepended. The following example will ex",
+          "lines": [
+            120,
+            160
+          ],
+          "name": "Prepend to body",
+          "type": "subsection"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.134136+00:00",
+  "version": "1.0"
+}

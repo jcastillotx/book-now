@@ -1,0 +1,400 @@
+{
+  "directory": "vendor/phpunit/php-file-iterator",
+  "files": {
+    "ChangeLog.md": {
+      "hash": "934e11088237",
+      "indexed_at": "2026-01-20T04:50:04.049889+00:00",
+      "language": "markdown",
+      "lines": 144,
+      "symbols": [
+        {
+          "children": [
+            {
+              "docstring": "* [#73](https://github.com/sebastianbergmann/php-file-iterator/pull/73): Micro performance improvements on parsing paths",
+              "lines": [
+                7,
+                10
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            5,
+            10
+          ],
+          "name": "[3.0.6] - 2021-12-02",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Changed PHP version constraint in `composer.json` from `^7.3 || ^8.0` to `>=7.3`",
+              "lines": [
+                13,
+                16
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            11,
+            16
+          ],
+          "name": "[3.0.5] - 2020-09-28",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#67](https://github.com/sebastianbergmann/php-file-iterator/issues/67): `TypeError` in `SebastianBergmann\\FileIterator\\Iterator::accept()`",
+              "lines": [
+                19,
+                22
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            17,
+            22
+          ],
+          "name": "[3.0.4] - 2020-07-11",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* This component is now supported on PHP 8",
+              "lines": [
+                25,
+                28
+              ],
+              "name": "Added",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            23,
+            28
+          ],
+          "name": "[3.0.3] - 2020-06-26",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Tests etc. are now ignored for archive exports",
+              "lines": [
+                31,
+                34
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            29,
+            34
+          ],
+          "name": "[3.0.2] - 2020-06-15",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#64](https://github.com/sebastianbergmann/php-file-iterator/issues/64): Release tarball contains Composer PHAR",
+              "lines": [
+                37,
+                40
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            35,
+            40
+          ],
+          "name": "[3.0.1] - 2020-04-18",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* This component is no longer supported on PHP 7.1 and PHP 7.2",
+              "lines": [
+                43,
+                46
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            41,
+            46
+          ],
+          "name": "[3.0.0] - 2020-02-07",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#73](https://github.com/sebastianbergmann/php-file-iterator/pull/73): Micro performance improvements on parsing paths",
+              "lines": [
+                49,
+                52
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* [#74](https://github.com/sebastianbergmann/php-file-iterator/pull/74): Document return type of `SebastianBergmann\\FileIterator\\Iterator::accept()` s",
+              "lines": [
+                53,
+                56
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            47,
+            56
+          ],
+          "name": "[2.0.5] - 2021-12-02",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Added `ReturnTypeWillChange` attribute to `SebastianBergmann\\FileIterator\\Iterator::accept()` because the return type of `\\FilterIterator::accept()`",
+              "lines": [
+                59,
+                62
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            57,
+            62
+          ],
+          "name": "[2.0.4] - 2021-07-19",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Changed PHP version constraint in `composer.json` from `^7.1` to `>=7.1`",
+              "lines": [
+                65,
+                68
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            63,
+            68
+          ],
+          "name": "[2.0.3] - 2020-11-30",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#48](https://github.com/sebastianbergmann/php-file-iterator/issues/48): Excluding an array that contains false ends up excluding the current workin",
+              "lines": [
+                71,
+                74
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            69,
+            74
+          ],
+          "name": "[2.0.2] - 2018-09-13",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#46](https://github.com/sebastianbergmann/php-file-iterator/issues/46): Regression with hidden parent directory",
+              "lines": [
+                77,
+                80
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            75,
+            80
+          ],
+          "name": "[2.0.1] - 2018-06-11",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#30](https://github.com/sebastianbergmann/php-file-iterator/issues/30): Exclude is not considered if it is a parent of the base path",
+              "lines": [
+                83,
+                86
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* This component now uses namespaces",
+              "lines": [
+                87,
+                90
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* This component is no longer supported on PHP 5.3, PHP 5.4, PHP 5.5, PHP 5.6, and PHP 7.0",
+              "lines": [
+                91,
+                94
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            81,
+            94
+          ],
+          "name": "[2.0.0] - 2018-05-28",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#37](https://github.com/sebastianbergmann/php-file-iterator/issues/37): Regression caused by fix for [#30](https://github.com/sebastianbergmann/php",
+              "lines": [
+                97,
+                100
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            95,
+            100
+          ],
+          "name": "[1.4.5] - 2017-11-27",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#30](https://github.com/sebastianbergmann/php-file-iterator/issues/30): Exclude is not considered if it is a parent of the base path",
+              "lines": [
+                103,
+                106
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            101,
+            106
+          ],
+          "name": "[1.4.4] - 2017-11-27",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#34](https://github.com/sebastianbergmann/php-file-iterator/issues/34): Factory should use canonical directory names",
+              "lines": [
+                109,
+                112
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            107,
+            112
+          ],
+          "name": "[1.4.3] - 2017-11-25",
+          "type": "section"
+        },
+        {
+          "docstring": "No changes",
+          "lines": [
+            113,
+            116
+          ],
+          "name": "[1.4.2] - 2016-11-26",
+          "type": "section"
+        },
+        {
+          "docstring": "No changes",
+          "lines": [
+            117,
+            120
+          ],
+          "name": "[1.4.1] - 2015-07-26",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#23](https://github.com/sebastianbergmann/php-file-iterator/pull/23): Added support for wildcards (glob) in exclude",
+              "lines": [
+                123,
+                145
+              ],
+              "name": "Added",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            121,
+            145
+          ],
+          "name": "1.4.0 - 2015-04-02",
+          "type": "section"
+        }
+      ]
+    },
+    "README.md": {
+      "hash": "dbe2346ad43b",
+      "indexed_at": "2026-01-20T04:50:05.484597+00:00",
+      "language": "markdown",
+      "lines": 14,
+      "symbols": [
+        {
+          "docstring": "You can add this library as a local, per-project dependency to your project using [Composer](https://getcomposer.org/):",
+          "lines": [
+            5,
+            15
+          ],
+          "name": "Installation",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.138078+00:00",
+  "version": "1.0"
+}

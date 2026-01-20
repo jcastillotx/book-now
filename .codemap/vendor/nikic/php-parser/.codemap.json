@@ -1,0 +1,14 @@
+{
+  "directory": "vendor/nikic/php-parser",
+  "files": {
+    "README.md": {
+      "hash": "8c89ec56744b",
+      "indexed_at": "2026-01-20T04:50:24.124372+00:00",
+      "language": "markdown",
+      "lines": 233,
+      "symbols": []
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.149328+00:00",
+  "version": "1.0"
+}

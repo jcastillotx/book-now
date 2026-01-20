@@ -1,0 +1,49 @@
+{
+  "directory": "vendor/paragonie/constant_time_encoding",
+  "files": {
+    "README.md": {
+      "hash": "76f804fb8b5c",
+      "indexed_at": "2026-01-20T04:50:06.909696+00:00",
+      "language": "markdown",
+      "lines": 88,
+      "symbols": [
+        {
+          "docstring": "Version 3 of this library should work on **PHP 8** or newer.",
+          "lines": [
+            24,
+            33
+          ],
+          "name": "PHP Version Requirements",
+          "type": "section"
+        },
+        {
+          "lines": [
+            34,
+            39
+          ],
+          "name": "How to Install",
+          "type": "section"
+        },
+        {
+          "lines": [
+            40,
+            84
+          ],
+          "name": "How to Use",
+          "type": "section"
+        },
+        {
+          "docstring": "If your company uses this library in their products or services, you may be interested in [purchasing a support contract from Paragon Initiative Enter",
+          "lines": [
+            85,
+            89
+          ],
+          "name": "Support Contracts",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.139088+00:00",
+  "version": "1.0"
+}

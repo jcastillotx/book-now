@@ -1,0 +1,286 @@
+{
+  "directory": "tests",
+  "files": {
+    "README.md": {
+      "hash": "0230ed020239",
+      "indexed_at": "2026-01-20T04:48:29.197219+00:00",
+      "language": "markdown",
+      "lines": 267,
+      "symbols": [
+        {
+          "docstring": "This test suite provides coverage for critical components including booking management, availability calculation, email/error logging, encryption, Str",
+          "lines": [
+            5,
+            10
+          ],
+          "name": "Overview",
+          "type": "section"
+        },
+        {
+          "lines": [
+            11,
+            28
+          ],
+          "name": "Test Structure",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                31,
+                35
+              ],
+              "name": "All Tests",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                36,
+                40
+              ],
+              "name": "Unit Tests Only",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                41,
+                45
+              ],
+              "name": "Integration Tests Only",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                46,
+                50
+              ],
+              "name": "Specific Test File",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                51,
+                55
+              ],
+              "name": "With Coverage Report",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            29,
+            55
+          ],
+          "name": "Running Tests",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "**BookingTest.php** - Booking Model - Create booking with validation - Retrieve bookings by ID, date, reference - Update booking status and payment -",
+              "lines": [
+                58,
+                100
+              ],
+              "name": "Unit Tests",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**CalendarSyncTest.php** - Calendar Integration - Google Calendar and Microsoft Calendar sync - Graceful handling of API failures - Check availability",
+              "lines": [
+                101,
+                117
+              ],
+              "name": "Integration Tests",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            56,
+            117
+          ],
+          "name": "Test Categories",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Booking creation and validation - Payment processing - Data encryption - Availability calculation",
+              "lines": [
+                122,
+                127
+              ],
+              "name": "Priority Areas (90%+ coverage)",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Email/error logging - Calendar synchronization - Helper functions",
+              "lines": [
+                128,
+                132
+              ],
+              "name": "Secondary Areas (60%+ coverage)",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Third-party integrations (mocked) - i18n/l10n functions - Loader classes",
+              "lines": [
+                133,
+                137
+              ],
+              "name": "Excluded from Coverage",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "Target: 70% code coverage focusing on critical paths",
+          "lines": [
+            118,
+            137
+          ],
+          "name": "Coverage Goals",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Test class: `{ClassName}Test.php` - Test method: `test_{method}_{scenario}` - Data provider: `{test_name}_provider`",
+              "lines": [
+                140,
+                144
+              ],
+              "name": "Test Naming Convention",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                145,
+                165
+              ],
+              "name": "Example Test",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. **Arrange-Act-Assert pattern** - Clear test structure 2. **Mock external dependencies** - Database, APIs, WordPress functions 3. **Test one thing**",
+              "lines": [
+                166,
+                173
+              ],
+              "name": "Best Practices",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            138,
+            173
+          ],
+          "name": "Writing New Tests",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                186,
+                201
+              ],
+              "name": "Example Mock Usage",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "The test suite provides comprehensive WordPress function mocks in `bootstrap.php`:",
+          "lines": [
+            174,
+            201
+          ],
+          "name": "Mocking WordPress",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                209,
+                220
+              ],
+              "name": "CI Commands",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "Tests run automatically on: - Pull requests - Commits to main branch - Pre-deployment checks",
+          "lines": [
+            202,
+            220
+          ],
+          "name": "Continuous Integration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Ensure Composer autoloader is up to date:",
+              "lines": [
+                223,
+                228
+              ],
+              "name": "Tests Fail with \"Class not found\"",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Check that `$wpdb` mock is properly configured in setUp():",
+              "lines": [
+                229,
+                237
+              ],
+              "name": "Database Errors",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Add mock function to `tests/bootstrap.php`:",
+              "lines": [
+                238,
+                247
+              ],
+              "name": "WordPress Function Undefined",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            221,
+            247
+          ],
+          "name": "Troubleshooting",
+          "type": "section"
+        },
+        {
+          "docstring": "Test execution time targets: - Unit tests: < 10 seconds - Integration tests: < 30 seconds - Full suite: < 1 minute",
+          "lines": [
+            248,
+            254
+          ],
+          "name": "Performance",
+          "type": "section"
+        },
+        {
+          "docstring": "When adding new features: 1. Write tests first (TDD) 2. Ensure > 70% coverage for new code 3. Update this README if adding new test categories 4. Run",
+          "lines": [
+            255,
+            262
+          ],
+          "name": "Contributing",
+          "type": "section"
+        },
+        {
+          "docstring": "- [PHPUnit Documentation](https://phpunit.de/documentation.html) - [WordPress Plugin Unit Tests](https://make.wordpress.org/cli/handbook/misc/plugin-u",
+          "lines": [
+            263,
+            268
+          ],
+          "name": "Resources",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.116007+00:00",
+  "version": "1.0"
+}

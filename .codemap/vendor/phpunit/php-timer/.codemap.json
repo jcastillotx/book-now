@@ -1,0 +1,414 @@
+{
+  "directory": "vendor/phpunit/php-timer",
+  "files": {
+    "ChangeLog.md": {
+      "hash": "4959a1ba4ef7",
+      "indexed_at": "2026-01-20T04:49:49.494019+00:00",
+      "language": "markdown",
+      "lines": 138,
+      "symbols": [
+        {
+          "children": [
+            {
+              "docstring": "* `SebastianBergmann\\Timer\\Exception` now correctly extends `\\Throwable`",
+              "lines": [
+                7,
+                10
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            5,
+            10
+          ],
+          "name": "[5.0.3] - 2020-10-26",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Changed PHP version constraint in `composer.json` from `^7.3 || ^8.0` to `>=7.3`",
+              "lines": [
+                13,
+                16
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            11,
+            16
+          ],
+          "name": "[5.0.2] - 2020-09-28",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* This component is now supported on PHP 8",
+              "lines": [
+                19,
+                22
+              ],
+              "name": "Added",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            17,
+            22
+          ],
+          "name": "[5.0.1] - 2020-06-26",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Parameter type for `SebastianBergmann\\Timer\\Duration::fromMicroseconds()` was changed from `int` to `float` * Parameter type for `SebastianBergmann\\",
+              "lines": [
+                25,
+                30
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* [#31](https://github.com/sebastianbergmann/php-timer/issues/31): Type Error on 32-bit systems (where `hrtime()` returns `float` instead of `int`)",
+              "lines": [
+                31,
+                34
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            23,
+            34
+          ],
+          "name": "[5.0.0] - 2020-06-07",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Introduced `Duration` value object for encapsulating a duration with nanosecond granularity * Introduced `ResourceUsageFormatter` object for formatt",
+              "lines": [
+                37,
+                41
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* The methods of `Timer` are no longer static * `Timer::stop()` now returns a `Duration` value object",
+              "lines": [
+                42,
+                46
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* Functionality that is now implemented in `Duration` and `ResourceUsageFormatter` has been removed from `Timer`",
+              "lines": [
+                47,
+                50
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            35,
+            50
+          ],
+          "name": "[4.0.0] - 2020-06-01",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* `Timer::timeSinceStartOfRequest()` no longer tries `$_SERVER['REQUEST_TIME']` when `$_SERVER['REQUEST_TIME_FLOAT']` is not available (`$_SERVER['REQ",
+              "lines": [
+                53,
+                57
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                58,
+                59
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            51,
+            59
+          ],
+          "name": "[3.1.4] - 2020-04-20",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* `Timer::timeSinceStartOfRequest()` now raises an exception if `$_SERVER['REQUEST_TIME_FLOAT']` does not contain a `float` (or `$_SERVER['REQUEST_TIM",
+              "lines": [
+                62,
+                65
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            60,
+            65
+          ],
+          "name": "[3.1.3] - 2020-04-20",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Improved the fix for [#30](https://github.com/sebastianbergmann/php-timer/issues/30) and restored usage of `hrtime()`",
+              "lines": [
+                68,
+                71
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            66,
+            71
+          ],
+          "name": "[3.1.2] - 2020-04-17",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#30](https://github.com/sebastianbergmann/php-timer/issues/30): Resolution of time returned by `Timer::stop()` is different than before (this rever",
+              "lines": [
+                74,
+                77
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            72,
+            77
+          ],
+          "name": "[3.1.1] - 2020-04-17",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* `Timer::secondsToShortTimeString()` as alternative to `Timer::secondsToTimeString()`",
+              "lines": [
+                80,
+                83
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* `Timer::start()` and `Timer::stop()` now use `hrtime()` (high resolution monotonic timer) instead of `microtime()` * `Timer::timeSinceStartOfRequest",
+              "lines": [
+                84,
+                89
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            78,
+            89
+          ],
+          "name": "[3.1.0] - 2020-04-17",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* This component is no longer supported on PHP 7.1 and PHP 7.2",
+              "lines": [
+                92,
+                95
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            90,
+            95
+          ],
+          "name": "[3.0.0] - 2020-02-07",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#21](https://github.com/sebastianbergmann/php-timer/pull/21): Formatting of memory consumption does not work on 32bit systems",
+              "lines": [
+                98,
+                101
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            96,
+            101
+          ],
+          "name": "[2.1.2] - 2019-06-07",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Improved formatting of memory consumption for `resourceUsage()`",
+              "lines": [
+                104,
+                107
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            102,
+            107
+          ],
+          "name": "[2.1.1] - 2019-02-20",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Improved formatting of memory consumption for `resourceUsage()`",
+              "lines": [
+                110,
+                113
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            108,
+            113
+          ],
+          "name": "[2.1.0] - 2019-02-20",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* This component now uses namespaces",
+              "lines": [
+                116,
+                119
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* This component is no longer supported on PHP 5.3, PHP 5.4, PHP 5.5, PHP 5.6, and PHP 7.0",
+              "lines": [
+                120,
+                139
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            114,
+            139
+          ],
+          "name": "[2.0.0] - 2018-02-01",
+          "type": "section"
+        }
+      ]
+    },
+    "README.md": {
+      "hash": "b486a5a3207f",
+      "indexed_at": "2026-01-20T04:49:50.526433+00:00",
+      "language": "markdown",
+      "lines": 104,
+      "symbols": [
+        {
+          "docstring": "You can add this library as a local, per-project dependency to your project using [Composer](https://getcomposer.org/):",
+          "lines": [
+            8,
+            21
+          ],
+          "name": "Installation",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                24,
+                59
+              ],
+              "name": "Basic Timing",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "lines": [
+                    62,
+                    85
+                  ],
+                  "name": "Explicit duration",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    86,
+                    105
+                  ],
+                  "name": "Duration since PHP Startup (using unreliable `$_SERVER['REQUEST_TIME_FLOAT']`)",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                60,
+                105
+              ],
+              "name": "Resource Consumption",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            22,
+            105
+          ],
+          "name": "Usage",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.135640+00:00",
+  "version": "1.0"
+}

@@ -1,0 +1,146 @@
+{
+  "directory": "vendor/sebastian/recursion-context",
+  "files": {
+    "ChangeLog.md": {
+      "hash": "38f2ebae0dd7",
+      "indexed_at": "2026-01-20T04:48:46.510247+00:00",
+      "language": "markdown",
+      "lines": 47,
+      "symbols": [
+        {
+          "children": [
+            {
+              "docstring": "* Do not use `SplObjectStorage` methods that will be deprecated in PHP 8.5",
+              "lines": [
+                7,
+                10
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            5,
+            10
+          ],
+          "name": "[4.0.6] - 2025-08-10",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#26](https://github.com/sebastianbergmann/recursion-context/pull/26): Don't clobber `null` values if `array_key_exists(PHP_INT_MAX, $array)`",
+              "lines": [
+                13,
+                16
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            11,
+            16
+          ],
+          "name": "[4.0.5] - 2023-02-03",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* `SebastianBergmann\\RecursionContext\\Exception` now correctly extends `\\Throwable`",
+              "lines": [
+                19,
+                22
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            17,
+            22
+          ],
+          "name": "[4.0.4] - 2020-10-26",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#21](https://github.com/sebastianbergmann/recursion-context/pull/21): Add type annotations for in/out parameters * Changed PHP version constraint i",
+              "lines": [
+                25,
+                29
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            23,
+            29
+          ],
+          "name": "[4.0.3] - 2020-09-28",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* This component is now supported on PHP 8",
+              "lines": [
+                32,
+                35
+              ],
+              "name": "Added",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            30,
+            35
+          ],
+          "name": "[4.0.2] - 2020-06-26",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Tests etc. are now ignored for archive exports",
+              "lines": [
+                38,
+                48
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            36,
+            48
+          ],
+          "name": "[4.0.1] - 2020-06-15",
+          "type": "section"
+        }
+      ]
+    },
+    "README.md": {
+      "hash": "a4c60abd6ae7",
+      "indexed_at": "2026-01-20T04:48:47.525816+00:00",
+      "language": "markdown",
+      "lines": 18,
+      "symbols": [
+        {
+          "docstring": "You can add this library as a local, per-project dependency to your project using [Composer](https://getcomposer.org/):",
+          "lines": [
+            6,
+            19
+          ],
+          "name": "Installation",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.125840+00:00",
+  "version": "1.0"
+}

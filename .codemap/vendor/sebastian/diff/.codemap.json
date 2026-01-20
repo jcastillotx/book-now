@@ -1,0 +1,354 @@
+{
+  "directory": "vendor/sebastian/diff",
+  "files": {
+    "ChangeLog.md": {
+      "hash": "c7c385efdbc2",
+      "indexed_at": "2026-01-20T04:48:44.450502+00:00",
+      "language": "markdown",
+      "lines": 103,
+      "symbols": [
+        {
+          "children": [
+            {
+              "docstring": "* Do not use implicitly nullable parameters",
+              "lines": [
+                7,
+                10
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            5,
+            10
+          ],
+          "name": "[4.0.6] - 2024-03-02",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#118](https://github.com/sebastianbergmann/diff/pull/118): Improve performance of `MemoryEfficientLongestCommonSubsequenceCalculator` * [#119](http",
+              "lines": [
+                13,
+                17
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            11,
+            17
+          ],
+          "name": "[4.0.5] - 2023-05-07",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* `SebastianBergmann\\Diff\\Exception` now correctly extends `\\Throwable`",
+              "lines": [
+                20,
+                23
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            18,
+            23
+          ],
+          "name": "[4.0.4] - 2020-10-26",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Changed PHP version constraint in `composer.json` from `^7.3 || ^8.0` to `>=7.3`",
+              "lines": [
+                26,
+                29
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            24,
+            29
+          ],
+          "name": "[4.0.3] - 2020-09-28",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* This component is now supported on PHP 8",
+              "lines": [
+                32,
+                35
+              ],
+              "name": "Added",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            30,
+            35
+          ],
+          "name": "[4.0.2] - 2020-06-30",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#99](https://github.com/sebastianbergmann/diff/pull/99): Regression in unified diff output of identical strings",
+              "lines": [
+                38,
+                41
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            36,
+            41
+          ],
+          "name": "[4.0.1] - 2020-05-08",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Removed support for PHP 7.1 and PHP 7.2",
+              "lines": [
+                44,
+                47
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            42,
+            47
+          ],
+          "name": "[4.0.0] - 2020-02-07",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* `Chunk::setLines()` now ensures that the `$lines` array only contains `Line` objects",
+              "lines": [
+                50,
+                53
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            48,
+            53
+          ],
+          "name": "[3.0.2] - 2019-02-04",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Removed `\"minimum-stability\": \"dev\",` from `composer.json`",
+              "lines": [
+                56,
+                59
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            54,
+            59
+          ],
+          "name": "[3.0.1] - 2018-06-10",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* The default `DiffOutputBuilderInterface` implementation now generates context lines (unchanged lines)",
+              "lines": [
+                64,
+                67
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* Removed support for PHP 7.0",
+              "lines": [
+                68,
+                71
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* [#70](https://github.com/sebastianbergmann/diff/issues/70): Diffing of arrays no longer works",
+              "lines": [
+                72,
+                75
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "* The `StrictUnifiedDiffOutputBuilder` implementation of the `DiffOutputBuilderInterface` was added",
+          "lines": [
+            60,
+            75
+          ],
+          "name": "[3.0.0] - 2018-02-01",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#66](https://github.com/sebastianbergmann/diff/pull/66): Restored backwards compatibility for PHPUnit 6.1.4, 6.2.0, 6.2.1, 6.2.2, and 6.2.3",
+              "lines": [
+                78,
+                81
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            76,
+            81
+          ],
+          "name": "[2.0.1] - 2017-08-03",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#64](https://github.com/sebastianbergmann/diff/pull/64): Show line numbers for chunks of a diff",
+              "lines": [
+                84,
+                87
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* This component is no longer supported on PHP 5.6",
+              "lines": [
+                88,
+                104
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            82,
+            104
+          ],
+          "name": "[2.0.0] - 2017-07-11 [YANKED]",
+          "type": "section"
+        }
+      ]
+    },
+    "README.md": {
+      "hash": "4d2d7d114409",
+      "indexed_at": "2026-01-20T04:48:45.441939+00:00",
+      "language": "markdown",
+      "lines": 202,
+      "symbols": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "The `Differ` class can be used to generate a textual representation of the difference between two strings:",
+                  "lines": [
+                    24,
+                    46
+                  ],
+                  "name": "Generating diff",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "This is default builder, which generates the output close to udiff and is used by PHPUnit.",
+                  "lines": [
+                    47,
+                    65
+                  ],
+                  "name": "UnifiedDiffOutputBuilder",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Generates (strict) Unified diff's (unidiffs) with hunks, similar to `diff -u` and compatible with `patch` and `git apply`.",
+                  "lines": [
+                    66,
+                    90
+                  ],
+                  "name": "StrictUnifiedDiffOutputBuilder",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Output only the lines that differ.",
+                  "lines": [
+                    91,
+                    108
+                  ],
+                  "name": "DiffOnlyOutputBuilder",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "You can pass any output builder to the `Differ` class as longs as it implements the `DiffOutputBuilderInterface`.",
+                  "lines": [
+                    109,
+                    112
+                  ],
+                  "name": "DiffOutputBuilderInterface",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "The `Parser` class can be used to parse a unified diff into an object graph:",
+                  "lines": [
+                    113,
+                    203
+                  ],
+                  "name": "Parsing diff",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                22,
+                203
+              ],
+              "name": "Usage",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "You can add this library as a local, per-project dependency to your project using [Composer](https://getcomposer.org/):",
+          "lines": [
+            8,
+            203
+          ],
+          "name": "Installation",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.125321+00:00",
+  "version": "1.0"
+}

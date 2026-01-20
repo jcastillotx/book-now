@@ -1,0 +1,368 @@
+{
+  "directory": ".claude/agents/analysis",
+  "files": {
+    "analyze-code-quality.md": {
+      "hash": "e5bc37f36d3f",
+      "indexed_at": "2026-01-20T04:50:25.551204+00:00",
+      "language": "markdown",
+      "lines": 181,
+      "symbols": [
+        {
+          "docstring": "1. Identify code smells and anti-patterns 2. Evaluate code complexity and maintainability 3. Check adherence to coding standards 4. Suggest refactorin",
+          "lines": [
+            133,
+            139
+          ],
+          "name": "Key responsibilities:",
+          "type": "section"
+        },
+        {
+          "docstring": "- **Readability**: Clear naming, proper comments, consistent formatting - **Maintainability**: Low complexity, high cohesion, low coupling - **Perform",
+          "lines": [
+            140,
+            146
+          ],
+          "name": "Analysis criteria:",
+          "type": "section"
+        },
+        {
+          "docstring": "- Long methods (>50 lines) - Large classes (>500 lines) - Duplicate code - Dead code - Complex conditionals - Feature envy - Inappropriate intimacy -",
+          "lines": [
+            147,
+            156
+          ],
+          "name": "Code smell detection:",
+          "type": "section"
+        },
+        {
+          "lines": [
+            157,
+            158
+          ],
+          "name": "Review output format:",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Overall Quality Score: X/10 - Files Analyzed: N - Issues Found: N - Technical Debt Estimate: X hours",
+              "lines": [
+                161,
+                166
+              ],
+              "name": "Summary",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. [Issue description] - File: path/to/file.js:line - Severity: High - Suggestion: [Improvement]",
+              "lines": [
+                167,
+                172
+              ],
+              "name": "Critical Issues",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [Smell type]: [Description]",
+              "lines": [
+                173,
+                175
+              ],
+              "name": "Code Smells",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [Opportunity]: [Benefit]",
+              "lines": [
+                176,
+                178
+              ],
+              "name": "Refactoring Opportunities",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [Good practice observed]",
+              "lines": [
+                179,
+                181
+              ],
+              "name": "Positive Findings",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            159,
+            181
+          ],
+          "name": "Code Quality Analysis Report",
+          "type": "section"
+        }
+      ]
+    },
+    "code-analyzer.md": {
+      "hash": "18fdae19443f",
+      "indexed_at": "2026-01-20T04:50:25.551527+00:00",
+      "language": "markdown",
+      "lines": 210,
+      "symbols": [
+        {
+          "children": [
+            {
+              "docstring": "- Analyze code structure and organization - Evaluate naming conventions and consistency - Check for proper error handling - Assess code readability an",
+              "lines": [
+                33,
+                39
+              ],
+              "name": "1. Code Quality Assessment",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Identify performance bottlenecks - Detect inefficient algorithms - Find memory leaks and resource issues - Analyze time and space complexity - Sugge",
+              "lines": [
+                40,
+                46
+              ],
+              "name": "2. Performance Analysis",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Scan for common vulnerabilities - Check for input validation issues - Identify potential injection points - Review authentication/authorization - De",
+              "lines": [
+                47,
+                53
+              ],
+              "name": "3. Security Review",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Evaluate design patterns usage - Check for architectural consistency - Identify coupling and cohesion issues - Review module dependencies - Assess s",
+              "lines": [
+                54,
+                60
+              ],
+              "name": "4. Architecture Analysis",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Identify areas needing refactoring - Track code duplication - Find outdated dependencies - Detect deprecated API usage - Prioritize technical improv",
+              "lines": [
+                61,
+                67
+              ],
+              "name": "5. Technical Debt Management",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            31,
+            67
+          ],
+          "name": "Core Responsibilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                70,
+                79
+              ],
+              "name": "Phase 1: Initial Scan",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. **Static Analysis** - Run linters and type checkers - Execute security scanners - Perform complexity analysis - Check test coverage",
+              "lines": [
+                80,
+                98
+              ],
+              "name": "Phase 2: Deep Analysis",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                99,
+                107
+              ],
+              "name": "Phase 3: Report Generation",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            68,
+            107
+          ],
+          "name": "Analysis Workflow",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Coder**: Provide improvement suggestions - **Reviewer**: Supply analysis data for reviews - **Tester**: Identify areas needing tests - **Architect",
+              "lines": [
+                110,
+                115
+              ],
+              "name": "With Other Agents",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Automated quality gates - Pull request analysis - Continuous monitoring - Trend tracking",
+              "lines": [
+                116,
+                121
+              ],
+              "name": "With CI/CD Pipeline",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            108,
+            121
+          ],
+          "name": "Integration Points",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Cyclomatic complexity - Lines of code (LOC) - Code duplication percentage - Test coverage - Documentation coverage",
+              "lines": [
+                124,
+                130
+              ],
+              "name": "Code Quality Metrics",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Big O complexity analysis - Memory usage patterns - Database query efficiency - API response times - Resource utilization",
+              "lines": [
+                131,
+                137
+              ],
+              "name": "Performance Metrics",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Vulnerability count by severity - Security hotspots - Dependency vulnerabilities - Code injection risks - Authentication weaknesses",
+              "lines": [
+                138,
+                144
+              ],
+              "name": "Security Metrics",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            122,
+            144
+          ],
+          "name": "Analysis Metrics",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Run analysis on every commit - Track metrics over time - Set quality thresholds - Automate reporting",
+              "lines": [
+                147,
+                152
+              ],
+              "name": "1. Continuous Analysis",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Provide specific recommendations - Include code examples - Prioritize by impact - Offer fix suggestions",
+              "lines": [
+                153,
+                158
+              ],
+              "name": "2. Actionable Insights",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Consider project standards - Respect team conventions - Understand business requirements - Account for technical constraints",
+              "lines": [
+                159,
+                164
+              ],
+              "name": "3. Context Awareness",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            145,
+            164
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        },
+        {
+          "lines": [
+            165,
+            167
+          ],
+          "name": "Example Analysis Output",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Quality Score**: 8.2/10 - **Issues Found**: 47 (12 high, 23 medium, 12 low) - **Coverage**: 78% - **Technical Debt**: 3.2 days",
+              "lines": [
+                170,
+                175
+              ],
+              "name": "Summary",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. **SQL Injection Risk** in `UserController.search()` - Severity: High - Fix: Use parameterized queries",
+              "lines": [
+                176,
+                184
+              ],
+              "name": "Critical Issues",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. Refactor `OrderService` to reduce complexity 2. Add input validation to API endpoints 3. Update deprecated dependencies 4. Improve test coverage in",
+              "lines": [
+                185,
+                191
+              ],
+              "name": "Recommendations",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            168,
+            191
+          ],
+          "name": "Code Analysis Report",
+          "type": "section"
+        },
+        {
+          "docstring": "The agent uses these memory keys for persistence: - `analysis/code-quality` - Overall quality metrics - `analysis/security` - Security scan results -",
+          "lines": [
+            192,
+            200
+          ],
+          "name": "Memory Keys",
+          "type": "section"
+        },
+        {
+          "docstring": "When working in a swarm: 1. Share analysis results immediately 2. Coordinate with reviewers on PRs 3. Prioritize critical security issues 4. Track imp",
+          "lines": [
+            201,
+            210
+          ],
+          "name": "Coordination Protocol",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.181637+00:00",
+  "version": "1.0"
+}

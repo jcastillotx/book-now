@@ -1,0 +1,2068 @@
+{
+  "directory": "vendor/phpcsstandards/phpcsutils",
+  "files": {
+    "CHANGELOG.md": {
+      "hash": "8be153f8b60c",
+      "indexed_at": "2026-01-20T04:50:10.311897+00:00",
+      "language": "markdown",
+      "lines": 1425,
+      "symbols": [
+        {
+          "docstring": "_Nothing yet._",
+          "lines": [
+            8,
+            12
+          ],
+          "name": "[Unreleased]",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "* `BCTokens::castTokens()`: sync with PHPCS 4.0.2 - added the `T_VOID_CAST` token (when available). [#742]",
+                  "lines": [
+                    17,
+                    20
+                  ],
+                  "name": "PHPCS Backcompat",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                15,
+                20
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* `FunctionDeclarations::getProperties()`: more defensive coding against parse errors/live coding. [#740]",
+                  "lines": [
+                    23,
+                    26
+                  ],
+                  "name": "Utils",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* Various housekeeping.",
+                  "lines": [
+                    27,
+                    34
+                  ],
+                  "name": "Other",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                21,
+                34
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            13,
+            34
+          ],
+          "name": "[1.2.2] - 2025-12-08",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "* The `AbstractArrayDeclarationSniff::getActualArrayKey()` method could cause deprecation notices and even fatal errors, when a PHPCS scan would be ru",
+                  "lines": [
+                    39,
+                    45
+                  ],
+                  "name": "Abstract Sniffs",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                37,
+                45
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            35,
+            45
+          ],
+          "name": "[1.2.1] - 2025-11-17",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "* New [`PHPCSUtils\\Utils\\AttributeBlock`][`AttributeBlock`] class: Utility functions to examine attribute blocks. [#720], [#729] For the purposes of t",
+                  "lines": [
+                    50,
+                    61
+                  ],
+                  "name": "Utils",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                48,
+                61
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* Dropped support for [PHP_CodeSniffer] < 3.13.5/4.0.1. [#729] Please ensure you run `composer update phpcsstandards/phpcsutils --with-dependencies` t",
+                  "lines": [
+                    64,
+                    74
+                  ],
+                  "name": "Other",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                62,
+                74
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            46,
+            74
+          ],
+          "name": "[1.2.0] - 2025-11-11",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "* Various housekeeping.",
+                  "lines": [
+                    79,
+                    82
+                  ],
+                  "name": "Other",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                77,
+                82
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* `BCFile::getMemberProperties()`: sync with PHPCS 3.13.4 - fix PHP 8.5 \"Using null as an array offset\" deprecation notice. [#711]",
+                  "lines": [
+                    85,
+                    91
+                  ],
+                  "name": "PHPCS Backcompat",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                83,
+                91
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            75,
+            91
+          ],
+          "name": "[1.1.3] - 2025-10-16",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "* `BCFile::getMemberProperties()`: sync with PHPCS 3.13.3 - support for PHP 8.4 abstract properties. [#698]",
+                  "lines": [
+                    96,
+                    99
+                  ],
+                  "name": "PHPCS BackCompat",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* `Variables::getMemberProperties()`: support for PHP 8.4 abstract properties. [#698]",
+                  "lines": [
+                    100,
+                    103
+                  ],
+                  "name": "Utils",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                94,
+                103
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* `TypeString::normalizeCase()` will now also normalize a fully qualified `true`, `false` or `null` type to unqualified. [#702]",
+                  "lines": [
+                    106,
+                    109
+                  ],
+                  "name": "Utils",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* Dropped support for [PHP_CodeSniffer] < 3.13.3. [#698] Please ensure you run `composer update phpcsstandards/phpcsutils --with-dependencies` to bene",
+                  "lines": [
+                    110,
+                    115
+                  ],
+                  "name": "Other",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                104,
+                115
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* `TypeString::isNullable()`: a type string with a fully qualified `null` was not recognized as nullable. [#702] * `TypeString::isKeyword()`: a fully",
+                  "lines": [
+                    118,
+                    128
+                  ],
+                  "name": "Utils",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                116,
+                128
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            92,
+            128
+          ],
+          "name": "[1.1.2] - 2025-09-05",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "* The [`PHPCSUtils\\TestUtils\\UtilityMethodTestCase`][`UtilityMethodTestCase`] now uses the PHP_CodeSniffer `LocalFile` instead of the `DummyFile` clas",
+                  "lines": [
+                    133,
+                    136
+                  ],
+                  "name": "TestUtils",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                131,
+                136
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* Prevent PHP 8.5 deprecation notices for `Reflection*::setAccessible()` in the [`PHPCSUtils\\TestUtils\\UtilityMethodTestCase`][`UtilityMethodTestCase`",
+                  "lines": [
+                    139,
+                    146
+                  ],
+                  "name": "TestUtils",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                137,
+                146
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            129,
+            146
+          ],
+          "name": "[1.1.1] - 2025-08-10",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "* `BCFile::findExtendedClassName()`: sync with PHPCS 4.0.0 - support for namespace relative names when used as the _extended_ parent class name. [#674",
+                  "lines": [
+                    154,
+                    173
+                  ],
+                  "name": "PHPCS BackCompat",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* New [`PHPCSUtils\\TestUtils\\ConfigDouble`][`ConfigDouble`] class as a lightweight and more stable alternative to directly using the PHPCS native `Con",
+                  "lines": [
+                    174,
+                    184
+                  ],
+                  "name": "TestUtils",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* New [`Collections::constantTypeTokens()`][`Collections`] method to support PHP 8.3 typed class constants. [#562] * New [`Collections::ternaryOperato",
+                  "lines": [
+                    185,
+                    192
+                  ],
+                  "name": "Tokens",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* New [`PHPCSUtils\\Utils\\Constants`][`Constants`] class: Utility functions to examine (class) constants. [#562] Initially available method: `getProper",
+                  "lines": [
+                    193,
+                    211
+                  ],
+                  "name": "Utils",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "Compatibility with the new PHP_CodeSniffer `4.x` branch in anticipation of the PHP_CodeSniffer 4.0 release. [#674], [#679] PHPCSUtils should now be fu",
+              "lines": [
+                149,
+                211
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* The `AbstractArrayDeclarationSniff::process()` method will no longer hide exceptions about a non-integer or non-existent stack pointer being passed.",
+                  "lines": [
+                    227,
+                    231
+                  ],
+                  "name": "Abstract Sniffs",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* `BCFile::getDeclarationName()`: sync with PHPCS 3.12.0 - prevent incorrect result during live coding for unfinished closures. [#644] * `BCFile::getD",
+                  "lines": [
+                    232,
+                    239
+                  ],
+                  "name": "PHPCS BackCompat",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* The [`PHPCSUtils\\TestUtils\\UtilityMethodTestCase`][`UtilityMethodTestCase`] is now officially compatible with PHPUnit 11 and will no longer generate",
+                  "lines": [
+                    240,
+                    243
+                  ],
+                  "name": "TestUtils",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* [`Parentheses`]: all methods will now recognize closer `use()` as a parentheses owner. [#674] Note: PHPCS natively does not recognize closure `use`",
+                  "lines": [
+                    244,
+                    252
+                  ],
+                  "name": "Utils",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* Dropped support for [PHP_CodeSniffer] < 3.13.0. [#629], [#653] Please ensure you run `composer update phpcsstandards/phpcsutils --with-dependencies`",
+                  "lines": [
+                    253,
+                    258
+                  ],
+                  "name": "Other",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "* The exceptions thrown by PHPCSUtils native utilities have been made more modular and more specific. [#598], [#599], [#600] - Passing a parameter of",
+              "lines": [
+                212,
+                258
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* The (internal) `PHPCSUtils\\TestUtils\\UtilityMethodTestCase::setStaticConfigProperty()` method. [#550] This method has become redundant with the intr",
+                  "lines": [
+                    261,
+                    265
+                  ],
+                  "name": "TestUtils",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                259,
+                265
+              ],
+              "name": "Deprecated",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* The javascript specific `T_ZSR_EQUAL` token from the `BCTokens::assignmentTokens()` array, as per PHPCS 4.0.0. [#674] * The javascript specific `T_O",
+                  "lines": [
+                    268,
+                    273
+                  ],
+                  "name": "PHPCS BackCompat",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                266,
+                273
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* `AbstractArrayDeclarationSniff::getActualArrayKey()`: will now handle FQN `true`/`false`/`null` correctly. [#668]",
+                  "lines": [
+                    276,
+                    279
+                  ],
+                  "name": "Abstract Sniffs",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* `Context::inForeachCondition()` could misidentify the `as` keyword for `foreach` when the iterable expression contained an array declaration in whic",
+                  "lines": [
+                    280,
+                    315
+                  ],
+                  "name": "Utils",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                274,
+                315
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            147,
+            315
+          ],
+          "name": "[1.1.0] - 2025-06-12",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "* `BCFile::getMemberProperties()`: sync with PHPCS 3.10.0 - support for PHP 8.2 DNF types. [#604] * `BCFile::getMethodProperties()`: sync with PHPCS 3",
+                  "lines": [
+                    320,
+                    325
+                  ],
+                  "name": "PHPCS BackCompat",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* `FunctionDeclarations::getParameters()`: support for PHP 8.2 DNF types. [#604] * `FunctionDeclarations::getProperties()`: support for PHP 8.2 DNF ty",
+                  "lines": [
+                    326,
+                    331
+                  ],
+                  "name": "Utils",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                318,
+                331
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* `Collections::parameterTypeTokens()`, `Collections::propertyTypeTokens()` and `Collections::returnTypeTokens()`: now include the new `T_TYPE_OPEN_PA",
+                  "lines": [
+                    334,
+                    337
+                  ],
+                  "name": "Tokens",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* `ControlStructures::getCaughtExceptions()`: will now silently ignore parse errors in the code under scan which prevent the method from analyzing a `",
+                  "lines": [
+                    338,
+                    342
+                  ],
+                  "name": "Utils",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* Dropped support for [PHP_CodeSniffer] < 3.10.0. [#603] Please ensure you run `composer update phpcsstandards/phpcsutils --with-dependencies` to bene",
+                  "lines": [
+                    343,
+                    348
+                  ],
+                  "name": "Other",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                332,
+                348
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* `UseStatements::splitImportUseStatement()`: the values in the return array will now never include a leading backslash. [#590] Previously the behavio",
+                  "lines": [
+                    351,
+                    361
+                  ],
+                  "name": "Utils",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                349,
+                361
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            316,
+            361
+          ],
+          "name": "[1.0.12] - 2024-05-20",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "* Various housekeeping and documentation improvements. Includes a contribution from [@fredden].",
+                  "lines": [
+                    366,
+                    369
+                  ],
+                  "name": "Other",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                364,
+                369
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* `BCFile::getMethodProperties()`: small performance improvement & more defensive coding, in line with same fix in PHPCS 3.9.2. [#573]",
+                  "lines": [
+                    372,
+                    375
+                  ],
+                  "name": "PHPCS BackCompat",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* `FunctionDeclarations::getProperties()`: small performance improvement & more defensive coding, in line with same fix in PHPCS 3.9.2. [#573]",
+                  "lines": [
+                    376,
+                    382
+                  ],
+                  "name": "Utils",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                370,
+                382
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            362,
+            382
+          ],
+          "name": "[1.0.11] - 2024-04-24",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "* Dropped support for [PHP_CodeSniffer] < 3.9.0. [#561] Please ensure you run `composer update phpcsstandards/phpcsutils --with-dependencies` to benef",
+                  "lines": [
+                    387,
+                    392
+                  ],
+                  "name": "Other",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                385,
+                392
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* `NamingConventions::AZ_UPPER` constant. [#563] * `NamingConventions::AZ_LOWER` constant. [#563]",
+                  "lines": [
+                    395,
+                    399
+                  ],
+                  "name": "Utils",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                393,
+                399
+              ],
+              "name": "Deprecated",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* `BackCompat\\Helper::getEncoding()`: PHP 8.4 deprecation notice. [#568] * `BackCompat\\Helper::ignoreAnnotations()`: PHP 8.4 deprecation notice. [#568",
+                  "lines": [
+                    402,
+                    411
+                  ],
+                  "name": "PHPCS BackCompat",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                400,
+                411
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            383,
+            411
+          ],
+          "name": "[1.0.10] - 2024-03-18",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "* `BCFile::getMemberProperties()`: sync with PHPCS 3.8.0 - support for PHP 8.2 `true` type. [#524] * `BCFile::getMethodProperties()`: sync with PHPCS",
+                  "lines": [
+                    416,
+                    421
+                  ],
+                  "name": "PHPCS BackCompat",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                414,
+                421
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* Significant performance improvement for the [`UtilityMethodTestCase`]. [#525]",
+                  "lines": [
+                    424,
+                    427
+                  ],
+                  "name": "TestUtils",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* Dropped support for [PHP_CodeSniffer] < 3.8.0. [#523] Please ensure you run `composer update phpcsstandards/phpcsutils --with-dependencies` to benef",
+                  "lines": [
+                    428,
+                    439
+                  ],
+                  "name": "Other",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                422,
+                439
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            412,
+            439
+          ],
+          "name": "[1.0.9] - 2023-12-08",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "* `BCFile::getDeclarationName()`: sync with PHPCS 3.8.0 - support for functions called `self`, `parent` or `static` which return by reference. [#494]",
+                  "lines": [
+                    444,
+                    447
+                  ],
+                  "name": "PHPCS BackCompat",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* Various housekeeping and minor documentation improvements.",
+                  "lines": [
+                    448,
+                    451
+                  ],
+                  "name": "Other",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                442,
+                451
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* The [`SpacesFixer`] will no longer throw an (incorrect) exception when the second pointer passed is a comment token and this comment token is the la",
+                  "lines": [
+                    454,
+                    461
+                  ],
+                  "name": "Fixers",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                452,
+                461
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            440,
+            461
+          ],
+          "name": "[1.0.8] - 2023-07-17",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "* Various housekeeping and maintenance updates, including making the test suite compatible with PHPUnit 10.",
+                  "lines": [
+                    466,
+                    469
+                  ],
+                  "name": "Other",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                464,
+                469
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* The `Arrays::getDoubleArrowPtr()` method could previously get confused over a double arrow in a keyed list used as an array value. [#485]",
+                  "lines": [
+                    472,
+                    478
+                  ],
+                  "name": "Utils",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                470,
+                478
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            462,
+            478
+          ],
+          "name": "[1.0.7] - 2023-07-10",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "* `BCFile::getClassProperties()`: sync with PHPCS 3.8.0 - support for PHP 8.2 `readonly` classes. [#470] * `BCFile::getMethodParameters()`: sync with",
+                  "lines": [
+                    483,
+                    487
+                  ],
+                  "name": "PHPCS BackCompat",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* The results of the following methods will now (also) be cached for improved performance when multiple sniffs call these functions for the same token",
+                  "lines": [
+                    488,
+                    495
+                  ],
+                  "name": "Utils",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* Various small housekeeping and maintenance updates.",
+                  "lines": [
+                    496,
+                    499
+                  ],
+                  "name": "Other",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                481,
+                499
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                500,
+                501
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* `AbstractArrayDeclarationSniff`: fixed a potential \"Trying to access array offset on value of type bool\" PHP notice. [#476] * `AbstractArrayDeclarat",
+              "lines": [
+                502,
+                516
+              ],
+              "name": "Abstract Sniffs",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            479,
+            516
+          ],
+          "name": "[1.0.6] - 2023-05-27",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "* The `Lists::getAssignments()` method could previously get confused over exotic list keys. Fixed now. [#459]",
+                  "lines": [
+                    521,
+                    527
+                  ],
+                  "name": "Utils",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                519,
+                527
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            517,
+            527
+          ],
+          "name": "[1.0.5] - 2023-04-17",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "* Minor documentation improvements.",
+                  "lines": [
+                    532,
+                    535
+                  ],
+                  "name": "Other",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                530,
+                535
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* The `FunctionDeclarations::getParameters()` method will now correctly handle constructor promoted properties with `readonly`, but without explicit v",
+                  "lines": [
+                    538,
+                    544
+                  ],
+                  "name": "Utils",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                536,
+                544
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            528,
+            544
+          ],
+          "name": "[1.0.4] - 2023-04-15",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "* Various small housekeeping and maintenance updates.",
+                  "lines": [
+                    549,
+                    552
+                  ],
+                  "name": "Other",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                547,
+                552
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* The `PassedParameters` class now allows for function calls to global functions called `self()`, `parent()` or `static()`. [#452]",
+                  "lines": [
+                    555,
+                    561
+                  ],
+                  "name": "Utils",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                553,
+                561
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            545,
+            561
+          ],
+          "name": "[1.0.3] - 2023-04-13",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "* The `Collections::arrayOpenTokensBC()`, `Collections::arrayTokensBC()`, `Collections::listOpenTokensBC()`, `Collections::listTokensBC()`, `Collectio",
+                  "lines": [
+                    566,
+                    571
+                  ],
+                  "name": "Tokens",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* Minor documentation improvements. * Various small housekeeping and maintenance updates.",
+                  "lines": [
+                    572,
+                    576
+                  ],
+                  "name": "Other",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                564,
+                576
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* The `Lists::isShortList()` method will now correctly recognize a short list nested in a long list as a short list. [#446] Note: this is a parse erro",
+                  "lines": [
+                    579,
+                    587
+                  ],
+                  "name": "Utils",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                577,
+                587
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            562,
+            587
+          ],
+          "name": "[1.0.2] - 2023-03-28",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "* Composer: The version requirements for the [Composer PHPCS plugin] have been widened to allow for version 1.0.0. [#428] Please ensure you run `compo",
+                  "lines": [
+                    592,
+                    602
+                  ],
+                  "name": "Other",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                590,
+                602
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            588,
+            602
+          ],
+          "name": "[1.0.1] - 2023-01-05",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "* Minor documentation improvements. * Maintainability improvements.",
+                  "lines": [
+                    614,
+                    619
+                  ],
+                  "name": "Other",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                612,
+                619
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "For the full list of features, please see the changelogs of the alpha/rc releases: * [1.0.0-rc1](https://github.com/PHPCSStandards/PHPCSUtils/releases",
+          "lines": [
+            603,
+            619
+          ],
+          "name": "[1.0.0] - 2023-01-04",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "* New [`Collections::constantModifierKeywords()`][`Collections`] method. [#400] * New [`Collections::listOpenTokensBC()`][`Collections`] method. [#405",
+                  "lines": [
+                    624,
+                    628
+                  ],
+                  "name": "Tokens",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                622,
+                628
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* `ObjectDeclarations::getClassProperties()`: the array return value will now include `'abstract_token'`, `'final_token'`, and `'readonly_token'` inde",
+                  "lines": [
+                    631,
+                    634
+                  ],
+                  "name": "Utils",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* Various housekeeping and CI maintenance.",
+                  "lines": [
+                    635,
+                    638
+                  ],
+                  "name": "Other",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                629,
+                638
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Everything which was previously deprecated in the [1.0.0-alpha4 release], has now been removed. [#410]",
+              "lines": [
+                639,
+                652
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* `Arrays::getOpenClose()`: small efficiency fix. [#406] * `ControlStructures::hasBody()`: correctly identify that a control structure does not have a",
+                  "lines": [
+                    655,
+                    671
+                  ],
+                  "name": "Utils",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                653,
+                671
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            620,
+            671
+          ],
+          "name": "[1.0.0-rc1] - 2022-12-27",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Support for PHP_CodeSniffer < 3.7.1 has been dropped after consultation with the principle external standards which depend on PHPCSUtils. [#347]",
+              "lines": [
+                679,
+                684
+              ],
+              "name": "Breaking Changes",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* `BCTokens::magicConstants()` as introduced in PHPCS 3.5.6. [#172] The same token array previously already existed in PHPCSUtils as `Collections::$ma",
+                  "lines": [
+                    721,
+                    725
+                  ],
+                  "name": "PHPCS Backcompat",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* New [`UtilityMethodTestCase::usesPhp8NameTokens()`][UtilityMethodTestCase::usesPhp8NameTokens] method as a helper for tests using token position cal",
+                  "lines": [
+                    726,
+                    729
+                  ],
+                  "name": "TestUtils",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* New [`PHPCSUtils\\Tokens\\TokenHelper`][`TokenHelper`] class: Utility functions for working with tokens and token collections. [#304] This class initi",
+                  "lines": [
+                    730,
+                    742
+                  ],
+                  "name": "Tokens",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* New [`PHPCSUtils\\Utils\\Context`][`Context`] class: Utility functions to determine the context in which an arbitrary token is used. [#219]. [#390] In",
+                  "lines": [
+                    743,
+                    758
+                  ],
+                  "name": "Utils",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* PHPCSUtils will now cache the results of (potentially) token walking intensive or processing intensive function calls during a run. [#332], [#377] T",
+                  "lines": [
+                    759,
+                    774
+                  ],
+                  "name": "Other",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "Now support for PHPCS < 3.7.1 has been dropped, this edition adds support to all functionality in PHPCSUtils for new syntaxes and features from PHP 8.",
+              "lines": [
+                685,
+                774
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* All token array methods in the [`BCTokens`] class are fully up-to-date with the upstream `PHP_CodeSniffer\\Util\\Tokens` properties as per PHPCS `mast",
+                  "lines": [
+                    777,
+                    785
+                  ],
+                  "name": "PHPCS Backcompat",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* `UtilityMethodTestCase`: all properties contained in the test case class will now always be reset after the tests have run. [#325] * `UtilityMethodT",
+                  "lines": [
+                    786,
+                    792
+                  ],
+                  "name": "TestUtils",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* `Collections::functionCallTokens()` and `Collections::parameterPassingTokens()`: now include the `T_PARENT` token. [#328] This accounts for a change",
+                  "lines": [
+                    793,
+                    799
+                  ],
+                  "name": "Tokens",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* `Arrays::isShortArray()`/`Lists::isShortList()`: the underlying logic has been completely refactored for improved accuracy and improved performance.",
+                  "lines": [
+                    800,
+                    828
+                  ],
+                  "name": "Utils",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* The `master` branch has been renamed to `stable`. [#397] * :warning: All non-`abstract` classes in this package are now `final`. [#376] * The parame",
+                  "lines": [
+                    829,
+                    840
+                  ],
+                  "name": "Other",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                775,
+                840
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "[`Collections`] class: direct access to the properties in the class is now deprecated for forward-compatibility reasons. All properties have a replace",
+                  "lines": [
+                    845,
+                    890
+                  ],
+                  "name": "Tokens",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* `ControlStructures::getDeclareScopeOpenClose()`: this method is no longer needed, check the `scope_opener`/`scope_closer` on the `T_DECLARE` token i",
+                  "lines": [
+                    891,
+                    896
+                  ],
+                  "name": "Utils",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* The `PHPCS23Utils` standard, which is no longer needed now support for PHPCS < 3.7.1 has been dropped. [#347]",
+                  "lines": [
+                    897,
+                    900
+                  ],
+                  "name": "Other",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": ":warning: Everything which has currently been deprecated, will be removed before the final `1.0.0` version of PHPCSUtils is tagged.",
+              "lines": [
+                841,
+                900
+              ],
+              "name": "Deprecated",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* The following constants, which were only intended for internal use, have been removed: [#347] - `PHPCSUtils\\Utils\\Numbers::REGEX_NUMLIT_STRING` - `P",
+                  "lines": [
+                    905,
+                    911
+                  ],
+                  "name": "Utils",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "* Support for PHPCS < 3.7.1. [#347]",
+              "lines": [
+                901,
+                911
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* `AbstractArrayDeclarationSniff::getActualArrayKey()`: will now handle escaped vars in heredoc array keys better. [#379]",
+                  "lines": [
+                    914,
+                    917
+                  ],
+                  "name": "Abstract Sniffs",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* [`SpacesFixer`]: in a specific new line vs trailing comment situation, the fixer would incorrectly add a stray new line. [#229]",
+                  "lines": [
+                    918,
+                    921
+                  ],
+                  "name": "Fixers",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* `UtilityMethodTestCase::getTargetToken()`: will now throw a `PHPCSUtils\\Exceptions\\TestMarkerNotFound` exception if the provided test marker comment",
+                  "lines": [
+                    922,
+                    926
+                  ],
+                  "name": "TestUtils",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* `Collections::parameterTypeTokens()`, `Collections::propertyTypeTokens()` and `Collections::returnTypeTokens()`: include the `namespace` keyword for",
+                  "lines": [
+                    927,
+                    930
+                  ],
+                  "name": "Tokens",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* `Arrays::isShortArray()`/`Lists::isShortList()`: fixed a number of bugs which previously resulted in an incorrect short list/short array determinati",
+                  "lines": [
+                    931,
+                    1057
+                  ],
+                  "name": "Utils",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                912,
+                1057
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "Notes: * While still in alpha, some BC-breaks may be introduced. These are clearly indicated in the changelog with the :warning: symbol. * Until PHPCS",
+          "lines": [
+            672,
+            1057
+          ],
+          "name": "[1.0.0-alpha4] - 2022-10-25",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "* `BCFile::getMethodProperties()`: support for \"static\" as a return type (PHP 8.0). [#134], [PHPCS#2952]",
+                  "lines": [
+                    1075,
+                    1078
+                  ],
+                  "name": "PHPCS BackCompat",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* [`UtilityMethodTestCase`]: new public `$phpcsVersion` property for use in tests. [#107] **Note**: if the PHPCS version is needed within a data provi",
+                  "lines": [
+                    1079,
+                    1083
+                  ],
+                  "name": "TestUtils",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* New [`Collections::$incrementDecrementOperators`][`Collections`] property. [#130] * New [`Collections::$magicConstants`][`Collections`] property. [#",
+                  "lines": [
+                    1084,
+                    1102
+                  ],
+                  "name": "Tokens",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* `FunctionDeclarations::getProperties()`: support for \"static\" as a return type (PHP 8.0). [#134]",
+                  "lines": [
+                    1103,
+                    1106
+                  ],
+                  "name": "Utils",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "* New [`PHPCSUtils\\Utils\\NamingConventions`][`NamingConventions`] class: Utility functions for working with identifier names (namespace names, class/t",
+              "lines": [
+                1068,
+                1106
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* `BCFile::getDeclarationName()`: has been made compatible with PHPCS 4.x. [#110] * `BCFile::getMethodProperties()`: has been made compatible with PHP",
+                  "lines": [
+                    1109,
+                    1117
+                  ],
+                  "name": "PHPCS BackCompat",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* [`UtilityMethodTestCase`]: tests for JS/CSS will now automatically be skipped when run in combination with PHPCS 4.x (which drops JS/CSS support). [",
+                  "lines": [
+                    1118,
+                    1122
+                  ],
+                  "name": "TestUtils",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* `Collections::$parameterTypeTokens`: has been made compatible with PHPCS 4.x. [#109] :warning: This removes support for PHPCS < 3.3.0 from the prope",
+                  "lines": [
+                    1123,
+                    1131
+                  ],
+                  "name": "Tokens",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* `FunctionDeclarations::getArrowFunctionOpenClose()`: has been made compatible with PHPCS 4.x. [#109] * `FunctionDeclarations::getProperties()`: has",
+                  "lines": [
+                    1132,
+                    1140
+                  ],
+                  "name": "Utils",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* Composer: PHPCSUtils can now be installed in combination with PHPCS `4.0.x-dev@dev` for testing purposes. * Composer: The version requirements for t",
+                  "lines": [
+                    1141,
+                    1150
+                  ],
+                  "name": "Other",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                1107,
+                1150
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* `AbstractArrayDeclarationSniff`: improved parse error handling. [#99]",
+                  "lines": [
+                    1153,
+                    1156
+                  ],
+                  "name": "Abstract Sniffs",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* `BCFile::findEndOfStatement()`: now supports arrow functions when used as a function argument, in line with the same change made in PHPCS 3.5.5. [#1",
+                  "lines": [
+                    1157,
+                    1161
+                  ],
+                  "name": "PHPCS BackCompat",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* `FunctionDeclarations::getArrowFunctionOpenClose()`: now supports arrow functions when used as a function argument, in line with the same change mad",
+                  "lines": [
+                    1162,
+                    1223
+                  ],
+                  "name": "Utils",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                1151,
+                1223
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "Notes:",
+          "lines": [
+            1058,
+            1223
+          ],
+          "name": "[1.0.0-alpha3] - 2020-06-29",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "* `BCFile::isReference()`: support for arrow functions returning by reference. [#77] * `BCFile::getMethodParameters()`: support for arrow functions. [",
+                  "lines": [
+                    1236,
+                    1244
+                  ],
+                  "name": "PHPCS BackCompat",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* New [`Collections::$alternativeControlStructureSyntaxTokens`][`Collections`] property. [#70] * New [`Collections::$alternativeControlStructureSyntax",
+                  "lines": [
+                    1245,
+                    1251
+                  ],
+                  "name": "Tokens",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* `Arrays::getDoubleArrowPtr()`: support for arrow functions. [#77], [#79], [#84] * `FunctionDeclarations::getParameters()`: support for arrow functio",
+                  "lines": [
+                    1252,
+                    1260
+                  ],
+                  "name": "Utils",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* Documentation website at <https://phpcsutils.com/>",
+                  "lines": [
+                    1261,
+                    1264
+                  ],
+                  "name": "Other",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "* New [`PHPCSUtils\\Utils\\ControlStructures`][`ControlStructures`] class: Utility functions for use when examining control structures. [#70] * New [`PH",
+              "lines": [
+                1230,
+                1264
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "* `BCFile::getCondition()`: sync with PHPCS 3.5.4 - added support for new `$first` parameter. [#73]",
+                  "lines": [
+                    1267,
+                    1270
+                  ],
+                  "name": "PHPCS BackCompat",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* The `Collections::$returnTypeTokens` property now includes `T_ARRAY` to allow for supporting arrow functions in PHPCS < 3.5.3. [#77]",
+                  "lines": [
+                    1271,
+                    1274
+                  ],
+                  "name": "Tokens",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* :warning: `Conditions::getCondition()`: sync with PHPCS 3.5.4 - renamed the existing `$reverse` parameter to `$first` and reversing the meaning of t",
+                  "lines": [
+                    1275,
+                    1279
+                  ],
+                  "name": "Utils",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "* Various housekeeping.",
+                  "lines": [
+                    1280,
+                    1297
+                  ],
+                  "name": "Other",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                1265,
+                1297
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "Note:",
+          "lines": [
+            1224,
+            1297
+          ],
+          "name": "[1.0.0-alpha2] - 2020-02-16",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [`AbstractArrayDeclarationSniff`]: to examine array declarations.",
+              "lines": [
+                1312,
+                1315
+              ],
+              "name": "Abstract Sniffs",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* [`BCFile`]: Backport of the latest versions of PHPCS native utility functions from the `PHP_CodeSniffer\\Files\\File` class to make them available in",
+              "lines": [
+                1316,
+                1321
+              ],
+              "name": "BackCompat",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* [`SpacesFixer`]: Utility to check and, if necessary, fix the whitespace between two tokens.",
+              "lines": [
+                1322,
+                1325
+              ],
+              "name": "Fixers",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* [`UtilityMethodTestCase`]: Base class for use when testing utility methods for PHP_CodeSniffer. Compatible with both PHPCS 2.x as well as 3.x. Suppo",
+              "lines": [
+                1326,
+                1331
+              ],
+              "name": "TestUtils",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* [`Collections`]: Collections of related tokens as often used and needed for sniffs. These are additional \"token groups\" to compliment the ones avail",
+              "lines": [
+                1332,
+                1336
+              ],
+              "name": "Tokens",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* [`Arrays`]: Utility functions for use when examining arrays. * [`Conditions`]: Utility functions for use when examining token conditions. * [`Functi",
+              "lines": [
+                1337,
+                1426
+              ],
+              "name": "Utils",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "Initial alpha release containing:",
+          "lines": [
+            1298,
+            1426
+          ],
+          "name": "1.0.0-alpha1 - 2020-01-23",
+          "type": "section"
+        }
+      ]
+    },
+    "README.md": {
+      "hash": "0798bec36829",
+      "indexed_at": "2026-01-20T04:50:11.620540+00:00",
+      "language": "markdown",
+      "lines": 297,
+      "symbols": [
+        {
+          "children": [
+            {
+              "docstring": "Whether you need to split an `array` into the individual items, are trying to determine which variables are being assigned to in a `list()` or are fig",
+              "lines": [
+                43,
+                50
+              ],
+              "name": "An ever-growing number of utility functions for use with PHP_CodeSniffer",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Collections of related tokens often-used and needed for sniffs. These are additional \"token groups\" to compliment the ones available through the PHPCS",
+              "lines": [
+                51,
+                55
+              ],
+              "name": "A collection of static properties and methods for often-used token groups",
+              "type": "subsection"
+            },
+            {
+              "docstring": "These classes take most of the heavy lifting away for some frequently occurring sniff types.",
+              "lines": [
+                56,
+                59
+              ],
+              "name": "Several abstract sniff classes which your sniffs can extend",
+              "type": "subsection"
+            },
+            {
+              "docstring": "An abstract `UtilityMethodTestCase` class to support testing of your utility methods written for PHP_CodeSniffer. Supports PHPUnit 4.x up to 11.x.",
+              "lines": [
+                60,
+                64
+              ],
+              "name": "Test utilities",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Normally to use the latest version of PHP_CodeSniffer native utility functions, you would have to raise the minimum requirements of your external PHPC",
+              "lines": [
+                65,
+                70
+              ],
+              "name": "Use the latest version of PHP_CodeSniffer native utility functions",
+              "type": "subsection"
+            },
+            {
+              "docstring": "To see detailed information about all the available abstract sniffs, utility functions and PHPCS helper functions, have a read through the [extensive",
+              "lines": [
+                71,
+                77
+              ],
+              "name": "Fully documented",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "[PHPCSUtils][phpcsutils-repo] is a set of utilities to aid developers of sniffs for [PHP_CodeSniffer] (or \"PHPCS\" for short).",
+          "lines": [
+            35,
+            77
+          ],
+          "name": "Features",
+          "type": "section"
+        },
+        {
+          "docstring": "* PHP 5.4 or higher. * [PHP_CodeSniffer] 3.13.5+/4.0.1+. * Recommended PHP extensions for optimal functionality: - PCRE with Unicode support (normally",
+          "lines": [
+            78,
+            85
+          ],
+          "name": "Minimum Requirements",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "If your unit tests use the PHP_CodeSniffer native unit test suite, all is good.",
+                  "lines": [
+                    114,
+                    122
+                  ],
+                  "name": "Running your unit tests",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "If your external PHP_CodeSniffer standard only supports Composer-based installs, integrating PHPCSUtils is pretty straight forward.",
+              "lines": [
+                88,
+                122
+              ],
+              "name": "Composer-based",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "To support non-Composer based installs for running your sniff unit tests, you will need to adjust the PHPUnit `bootstrap.php` file to allow for passin",
+                  "lines": [
+                    163,
+                    216
+                  ],
+                  "name": "Running your unit tests",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "In this case, more than anything, you will need to update the non-Composer installation instructions for your end-users.",
+              "lines": [
+                123,
+                216
+              ],
+              "name": "Non-Composer based integration",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            86,
+            216
+          ],
+          "name": "Integrating PHPCSUtils in your external PHPCS standard",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "A: As PHPCSUtils is registered with PHPCS as an external standard and PHPCSUtils complies with the naming requirements of PHPCS, the PHPCS native auto",
+              "lines": [
+                221,
+                224
+              ],
+              "name": "Q: How does this all work without an external standard needing to register an autoloader?",
+              "type": "subsection"
+            },
+            {
+              "docstring": "A: No. PHPCSUtils will only work for those sniffs which explicitly use the PHPCSUtils functionality.",
+              "lines": [
+                225,
+                230
+              ],
+              "name": "Q: Does using PHPCSUtils have any effect on the PHPCS native sniffs?",
+              "type": "subsection"
+            },
+            {
+              "docstring": "A: JS/CSS support will be removed from `PHP_CodeSniffer` in PHPCS 4.x. While at this time, some of the utilities _may_ work with JS/CSS files, PHPCSUt",
+              "lines": [
+                231,
+                235
+              ],
+              "name": "Q: Do the utilities work with javascript/CSS files?",
+              "type": "subsection"
+            },
+            {
+              "docstring": "A: No. The UTF-8 file encoding is the only officially supported encoding. Support for other encodings may incidentally work, but is not officially sup",
+              "lines": [
+                236,
+                246
+              ],
+              "name": "Q: Are all file encodings supported?",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "<div class=\"faq\">",
+          "lines": [
+            217,
+            246
+          ],
+          "name": "Frequently Asked Questions",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "1. Check that the version of PHPCSUtils the user has installed complies with the minimum version of PHPCSUtils your standard requires. If not, they wi",
+              "lines": [
+                251,
+                278
+              ],
+              "name": "Q: A user reports a fatal \"class not found\" error for a class from PHPCSUtils",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "<div class=\"faq\">",
+          "lines": [
+            247,
+            278
+          ],
+          "name": "Potential Support Questions from your End-Users",
+          "type": "section"
+        },
+        {
+          "docstring": "Contributions to this project are welcome. Clone the repo, branch off from `develop`, make your changes, commit them and send in a pull request.",
+          "lines": [
+            279,
+            285
+          ],
+          "name": "Contributing",
+          "type": "section"
+        },
+        {
+          "docstring": "This code is released under the [GNU Lesser General Public License (LGPLv3)](LICENSE).",
+          "lines": [
+            286,
+            298
+          ],
+          "name": "License",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.140805+00:00",
+  "version": "1.0"
+}

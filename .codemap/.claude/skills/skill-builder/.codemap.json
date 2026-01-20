@@ -1,0 +1,1223 @@
+{
+  "directory": ".claude/skills/skill-builder",
+  "files": {
+    "SKILL.md": {
+      "hash": "3ebb2c70e4d8",
+      "indexed_at": "2026-01-20T04:50:25.502373+00:00",
+      "language": "markdown",
+      "lines": 910,
+      "symbols": [
+        {
+          "docstring": "Creates production-ready Claude Code Skills with proper YAML frontmatter, progressive disclosure architecture, and complete file/folder structure. Thi",
+          "lines": [
+            8,
+            11
+          ],
+          "name": "What This Skill Does",
+          "type": "section"
+        },
+        {
+          "docstring": "- Claude Code 2.0+ or Claude.ai with Skills support - Basic understanding of Markdown and YAML - Text editor or IDE",
+          "lines": [
+            12,
+            17
+          ],
+          "name": "Prerequisites",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                20,
+                34
+              ],
+              "name": "Creating Your First Skill",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            18,
+            34
+          ],
+          "name": "Quick Start",
+          "type": "section"
+        },
+        {
+          "docstring": "[Your instructions here]",
+          "lines": [
+            35,
+            37
+          ],
+          "name": "What This Skill Does",
+          "type": "section"
+        },
+        {
+          "docstring": "[Basic usage] EOF",
+          "lines": [
+            38,
+            47
+          ],
+          "name": "Quick Start",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "**`name`** (REQUIRED): - **Type**: String - **Max Length**: 64 characters - **Format**: Human-friendly display name - **Usage**: Shown in skill lists,",
+                  "lines": [
+                    62,
+                    91
+                  ],
+                  "name": "Field Requirements",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    92,
+                    123
+                  ],
+                  "name": "YAML Formatting Rules",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "Every SKILL.md **must** start with YAML frontmatter containing exactly two required fields:",
+              "lines": [
+                50,
+                123
+              ],
+              "name": "\ud83d\udccb YAML Frontmatter (REQUIRED)",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "lines": [
+                    126,
+                    135
+                  ],
+                  "name": "Minimal Skill (Required)",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    136,
+                    159
+                  ],
+                  "name": "Full-Featured Skill (Recommended)",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "**Personal Skills** (available across all projects):",
+                  "lines": [
+                    160,
+                    183
+                  ],
+                  "name": "Skills Locations",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                124,
+                183
+              ],
+              "name": "\ud83d\udcc2 Directory Structure",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "**Loaded**: At Claude Code startup, always **Size**: ~200 chars per skill **Purpose**: Enable autonomous skill matching **Context**: Loaded into syste",
+                  "lines": [
+                    188,
+                    202
+                  ],
+                  "name": "Level 1: Metadata (Name + Description)",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "**Loaded**: When skill is triggered/matched **Size**: ~1-10KB typically **Purpose**: Main instructions and procedures **Context**: Only loaded for ACT",
+                  "lines": [
+                    203,
+                    211
+                  ],
+                  "name": "Level 2: SKILL.md Body",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "Claude Code uses a **3-level progressive disclosure system** to scale to 100+ skills without context penalty:",
+              "lines": [
+                184,
+                211
+              ],
+              "name": "\ud83c\udfaf Progressive Disclosure Architecture",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            48,
+            211
+          ],
+          "name": "Complete Specification",
+          "type": "section"
+        },
+        {
+          "docstring": "[Main instructions - loaded only when skill is active]",
+          "lines": [
+            212,
+            214
+          ],
+          "name": "What This Skill Does",
+          "type": "section"
+        },
+        {
+          "docstring": "[Basic procedures]",
+          "lines": [
+            215,
+            217
+          ],
+          "name": "Quick Start",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "**Loaded**: On-demand as Claude navigates **Size**: Variable (KB to MB) **Purpose**: Deep reference, examples, schemas **Context**: Loaded only when C",
+              "lines": [
+                222,
+                240
+              ],
+              "name": "Level 3+: Referenced Files",
+              "type": "subsubsection"
+            },
+            {
+              "children": [
+                {
+                  "lines": [
+                    243,
+                    252
+                  ],
+                  "name": "Recommended 4-Level Structure",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                241,
+                252
+              ],
+              "name": "\ud83d\udcdd SKILL.md Content Structure",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "[Detailed instructions]",
+          "lines": [
+            218,
+            252
+          ],
+          "name": "Step-by-Step Guide",
+          "type": "section"
+        },
+        {
+          "docstring": "Brief 2-3 sentence description of the skill.",
+          "lines": [
+            253,
+            255
+          ],
+          "name": "Level 1: Overview (Always Read First)",
+          "type": "section"
+        },
+        {
+          "docstring": "- Requirement 1 - Requirement 2",
+          "lines": [
+            256,
+            259
+          ],
+          "name": "Prerequisites",
+          "type": "section"
+        },
+        {
+          "docstring": "1. Primary function 2. Secondary function 3. Key benefit",
+          "lines": [
+            260,
+            266
+          ],
+          "name": "What This Skill Does",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                269,
+                274
+              ],
+              "name": "Basic Usage",
+              "type": "subsection"
+            },
+            {
+              "docstring": "1. **Scenario 1**: How to... 2. **Scenario 2**: How to...",
+              "lines": [
+                275,
+                280
+              ],
+              "name": "Common Scenarios",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            267,
+            280
+          ],
+          "name": "Level 2: Quick Start (For Fast Onboarding)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "lines": [
+                    285,
+                    293
+                  ],
+                  "name": "Step 1: Initial Setup",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "- Configuration option 1 - Configuration option 2",
+                  "lines": [
+                    294,
+                    297
+                  ],
+                  "name": "Step 2: Configuration",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "- Run the main command - Verify results",
+                  "lines": [
+                    298,
+                    301
+                  ],
+                  "name": "Step 3: Execution",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                283,
+                301
+              ],
+              "name": "Step-by-Step Guide",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "lines": [
+                    304,
+                    308
+                  ],
+                  "name": "Option 1: Custom Configuration",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    309,
+                    315
+                  ],
+                  "name": "Option 2: Integration",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                302,
+                315
+              ],
+              "name": "Advanced Options",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            281,
+            315
+          ],
+          "name": "Level 3: Detailed Instructions (For Deep Work)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "**Symptoms**: What you see **Cause**: Why it happens **Solution**: How to fix",
+                  "lines": [
+                    320,
+                    327
+                  ],
+                  "name": "Issue: Common Problem",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "**Solution**: Steps to resolve",
+                  "lines": [
+                    328,
+                    330
+                  ],
+                  "name": "Issue: Another Problem",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                318,
+                330
+              ],
+              "name": "Troubleshooting",
+              "type": "subsection"
+            },
+            {
+              "docstring": "See [API_REFERENCE.md](docs/API_REFERENCE.md)",
+              "lines": [
+                331,
+                333
+              ],
+              "name": "Complete API Reference",
+              "type": "subsection"
+            },
+            {
+              "docstring": "See [examples/](resources/examples/)",
+              "lines": [
+                334,
+                336
+              ],
+              "name": "Examples",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [Related Skill 1](#) - [Related Skill 2](#)",
+              "lines": [
+                337,
+                340
+              ],
+              "name": "Related Skills",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [External Link 1](https://example.com) - [Documentation](https://docs.example.com)",
+              "lines": [
+                341,
+                347
+              ],
+              "name": "Resources",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "**Front-Load Keywords**:",
+                  "lines": [
+                    350,
+                    378
+                  ],
+                  "name": "Writing Effective Descriptions",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "**Keep Level 1 Brief** (Overview):",
+                  "lines": [
+                    379,
+                    382
+                  ],
+                  "name": "Progressive Disclosure Writing",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                348,
+                382
+              ],
+              "name": "\ud83c\udfa8 Content Best Practices",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            316,
+            382
+          ],
+          "name": "Level 4: Reference (Rarely Needed)",
+          "type": "section"
+        },
+        {
+          "docstring": "Creates production-ready React components with TypeScript, hooks, and tests in 3 steps.",
+          "lines": [
+            383,
+            388
+          ],
+          "name": "What This Skill Does",
+          "type": "section"
+        },
+        {
+          "lines": [
+            389,
+            397
+          ],
+          "name": "Quick Start",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "1. Run generator 2. Choose template 3. Customize options [Detailed explanations]",
+              "lines": [
+                400,
+                408
+              ],
+              "name": "Creating a Basic Component",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            398,
+            408
+          ],
+          "name": "Step-by-Step Guide",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "docstring": "**Purpose**: Executable scripts that Claude can run **Location**: `scripts/` in skill directory **Usage**: Referenced from SKILL.md",
+                  "lines": [
+                    417,
+                    434
+                  ],
+                  "name": "Scripts Directory",
+                  "type": "subsubsection"
+                }
+              ],
+              "lines": [
+                415,
+                434
+              ],
+              "name": "\ud83d\udee0\ufe0f Adding Scripts and Resources",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "For complex scenarios like HOCs, render props, or custom hooks, see [ADVANCED.md](docs/ADVANCED.md).",
+          "lines": [
+            409,
+            434
+          ],
+          "name": "Advanced Configuration",
+          "type": "section"
+        },
+        {
+          "docstring": "Run the setup script:",
+          "lines": [
+            435,
+            440
+          ],
+          "name": "Setup",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "**Purpose**: Templates, examples, schemas, static files **Location**: `resources/` in skill directory **Usage**: Referenced or copied by scripts",
+              "lines": [
+                448,
+                471
+              ],
+              "name": "Resources Directory",
+              "type": "subsubsection"
+            }
+          ],
+          "docstring": "Validate your configuration:",
+          "lines": [
+            441,
+            471
+          ],
+          "name": "Validation",
+          "type": "section"
+        },
+        {
+          "docstring": "Use the component template:",
+          "lines": [
+            472,
+            477
+          ],
+          "name": "Templates",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "lines": [
+                    490,
+                    495
+                  ],
+                  "name": "Markdown Links",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    496,
+                    501
+                  ],
+                  "name": "Relative File Paths",
+                  "type": "subsubsection"
+                },
+                {
+                  "lines": [
+                    502,
+                    503
+                  ],
+                  "name": "Inline File Content",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "Claude can navigate to referenced files automatically. Use these patterns:",
+              "lines": [
+                486,
+                503
+              ],
+              "name": "\ud83d\udd17 File References and Navigation",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "See working examples in `resources/examples/`: - `basic-example/` - Simple component - `advanced-example/` - With hooks and context",
+          "lines": [
+            478,
+            503
+          ],
+          "name": "Examples",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Before publishing a skill, verify:",
+              "lines": [
+                517,
+                557
+              ],
+              "name": "\u2705 Validation Checklist",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "See `resources/examples/config.json`:",
+          "lines": [
+            504,
+            557
+          ],
+          "name": "Example Configuration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                560,
+                569
+              ],
+              "name": "Template 1: Basic Skill (Minimal)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            558,
+            569
+          ],
+          "name": "Skill Builder Templates",
+          "type": "section"
+        },
+        {
+          "docstring": "[2-3 sentences describing functionality]",
+          "lines": [
+            570,
+            572
+          ],
+          "name": "What This Skill Does",
+          "type": "section"
+        },
+        {
+          "lines": [
+            573,
+            577
+          ],
+          "name": "Quick Start",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "[Instructions]",
+              "lines": [
+                580,
+                582
+              ],
+              "name": "Step 1: Setup",
+              "type": "subsection"
+            },
+            {
+              "docstring": "[Instructions]",
+              "lines": [
+                583,
+                585
+              ],
+              "name": "Step 2: Usage",
+              "type": "subsection"
+            },
+            {
+              "docstring": "[Instructions]",
+              "lines": [
+                586,
+                588
+              ],
+              "name": "Step 3: Verify",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            578,
+            588
+          ],
+          "name": "Step-by-Step Guide",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                594,
+                603
+              ],
+              "name": "Template 2: Intermediate Skill (With Scripts)",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "- **Issue**: Problem description - **Solution**: Fix description",
+          "lines": [
+            589,
+            603
+          ],
+          "name": "Troubleshooting",
+          "type": "section"
+        },
+        {
+          "docstring": "- Requirement 1 - Requirement 2",
+          "lines": [
+            604,
+            607
+          ],
+          "name": "Prerequisites",
+          "type": "section"
+        },
+        {
+          "docstring": "1. Primary function 2. Secondary function 3. Integration capability",
+          "lines": [
+            608,
+            612
+          ],
+          "name": "What This Skill Does",
+          "type": "section"
+        },
+        {
+          "lines": [
+            613,
+            618
+          ],
+          "name": "Quick Start",
+          "type": "section"
+        },
+        {
+          "docstring": "Edit `config.json`:",
+          "lines": [
+            619,
+            627
+          ],
+          "name": "Configuration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "[Steps for 80% use case]",
+              "lines": [
+                630,
+                632
+              ],
+              "name": "Basic Usage",
+              "type": "subsection"
+            },
+            {
+              "docstring": "[Steps for complex scenarios]",
+              "lines": [
+                633,
+                635
+              ],
+              "name": "Advanced Usage",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            628,
+            635
+          ],
+          "name": "Step-by-Step Guide",
+          "type": "section"
+        },
+        {
+          "docstring": "- `scripts/setup.sh` - Initial setup - `scripts/generate.sh` - Code generation - `scripts/validate.sh` - Validation",
+          "lines": [
+            636,
+            640
+          ],
+          "name": "Available Scripts",
+          "type": "section"
+        },
+        {
+          "docstring": "- Templates: `resources/templates/` - Examples: `resources/examples/`",
+          "lines": [
+            641,
+            644
+          ],
+          "name": "Resources",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                649,
+                658
+              ],
+              "name": "Template 3: Advanced Skill (Full-Featured)",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "[Common issues and solutions]",
+          "lines": [
+            645,
+            658
+          ],
+          "name": "Troubleshooting",
+          "type": "section"
+        },
+        {
+          "docstring": "[Brief 2-3 sentence description]",
+          "lines": [
+            659,
+            661
+          ],
+          "name": "Overview",
+          "type": "section"
+        },
+        {
+          "docstring": "- Technology 1 (version X+) - Technology 2 (version Y+) - API keys or credentials",
+          "lines": [
+            662,
+            666
+          ],
+          "name": "Prerequisites",
+          "type": "section"
+        },
+        {
+          "docstring": "1. **Core Feature**: Description 2. **Integration**: Description 3. **Automation**: Description",
+          "lines": [
+            667,
+            673
+          ],
+          "name": "What This Skill Does",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                676,
+                680
+              ],
+              "name": "Installation",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                681,
+                694
+              ],
+              "name": "First Use",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            674,
+            694
+          ],
+          "name": "Quick Start (60 seconds)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Edit `config.json`:",
+              "lines": [
+                697,
+                705
+              ],
+              "name": "Basic Configuration",
+              "type": "subsection"
+            },
+            {
+              "docstring": "See [Configuration Guide](docs/CONFIGURATION.md)",
+              "lines": [
+                706,
+                710
+              ],
+              "name": "Advanced Configuration",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            695,
+            710
+          ],
+          "name": "Configuration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "[Detailed steps]",
+              "lines": [
+                713,
+                715
+              ],
+              "name": "1. Initial Setup",
+              "type": "subsection"
+            },
+            {
+              "docstring": "[Main procedures]",
+              "lines": [
+                716,
+                718
+              ],
+              "name": "2. Core Workflow",
+              "type": "subsection"
+            },
+            {
+              "docstring": "[Integration steps]",
+              "lines": [
+                719,
+                723
+              ],
+              "name": "3. Integration",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            711,
+            723
+          ],
+          "name": "Step-by-Step Guide",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                726,
+                730
+              ],
+              "name": "Feature 1: Custom Templates",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                731,
+                735
+              ],
+              "name": "Feature 2: Batch Processing",
+              "type": "subsection"
+            },
+            {
+              "docstring": "See [CI/CD Guide](docs/CICD.md)",
+              "lines": [
+                736,
+                740
+              ],
+              "name": "Feature 3: CI/CD Integration",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            724,
+            740
+          ],
+          "name": "Advanced Features",
+          "type": "section"
+        },
+        {
+          "docstring": "| Script | Purpose | Usage | |--------|---------|-------| | `install.sh` | Install dependencies | `./scripts/install.sh` | | `generate.sh` | Generate",
+          "lines": [
+            741,
+            751
+          ],
+          "name": "Scripts Reference",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- `resources/templates/basic.template` - Basic template - `resources/templates/advanced.template` - Advanced template",
+              "lines": [
+                754,
+                757
+              ],
+              "name": "Templates",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- `resources/examples/basic/` - Simple example - `resources/examples/advanced/` - Complex example - `resources/examples/integration/` - Integration ex",
+              "lines": [
+                758,
+                762
+              ],
+              "name": "Examples",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- `resources/schemas/config.schema.json` - Configuration schema - `resources/schemas/output.schema.json` - Output validation",
+              "lines": [
+                763,
+                768
+              ],
+              "name": "Schemas",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            752,
+            768
+          ],
+          "name": "Resources",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "**Symptoms**: Error during `install.sh` **Cause**: Missing dependencies **Solution**:",
+              "lines": [
+                771,
+                780
+              ],
+              "name": "Issue: Installation Failed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Symptoms**: Validation script fails **Solution**: See [Troubleshooting Guide](docs/TROUBLESHOOTING.md)",
+              "lines": [
+                781,
+                786
+              ],
+              "name": "Issue: Validation Errors",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            769,
+            786
+          ],
+          "name": "Troubleshooting",
+          "type": "section"
+        },
+        {
+          "docstring": "Complete API documentation: [API_REFERENCE.md](docs/API_REFERENCE.md)",
+          "lines": [
+            787,
+            789
+          ],
+          "name": "API Reference",
+          "type": "section"
+        },
+        {
+          "docstring": "- [Related Skill 1](../related-skill-1/) - [Related Skill 2](../related-skill-2/)",
+          "lines": [
+            790,
+            793
+          ],
+          "name": "Related Skills",
+          "type": "section"
+        },
+        {
+          "docstring": "- [Official Documentation](https://example.com/docs) - [GitHub Repository](https://github.com/example/repo) - [Community Forum](https://forum.example.",
+          "lines": [
+            794,
+            808
+          ],
+          "name": "Resources",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                811,
+                820
+              ],
+              "name": "Example 1: Simple Documentation Skill",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            809,
+            820
+          ],
+          "name": "Examples from the Wild",
+          "type": "section"
+        },
+        {
+          "docstring": "Creates well-structured README.md files with badges, installation, usage, and contribution sections.",
+          "lines": [
+            821,
+            823
+          ],
+          "name": "What This Skill Does",
+          "type": "section"
+        },
+        {
+          "lines": [
+            824,
+            835
+          ],
+          "name": "Quick Start",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                840,
+                849
+              ],
+              "name": "Example 2: Code Generation Skill",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "Edit sections in `resources/templates/sections/` before generating.",
+          "lines": [
+            836,
+            849
+          ],
+          "name": "Customization",
+          "type": "section"
+        },
+        {
+          "docstring": "- Node.js 18+ - React 18+ - TypeScript 5+",
+          "lines": [
+            850,
+            854
+          ],
+          "name": "Prerequisites",
+          "type": "section"
+        },
+        {
+          "lines": [
+            855,
+            865
+          ],
+          "name": "Quick Start",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                868,
+                872
+              ],
+              "name": "1. Run Generator",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Basic: Simple functional component - With State: useState hooks - With Context: useContext integration - With API: Data fetching component",
+              "lines": [
+                873,
+                878
+              ],
+              "name": "2. Choose Template",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Edit generated files in `src/components/ComponentName/`",
+              "lines": [
+                879,
+                881
+              ],
+              "name": "3. Customize",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            866,
+            881
+          ],
+          "name": "Step-by-Step Guide",
+          "type": "section"
+        },
+        {
+          "docstring": "See `resources/templates/` for available component templates.",
+          "lines": [
+            882,
+            887
+          ],
+          "name": "Templates",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- [Anthropic Agent Skills Documentation](https://docs.claude.com/en/docs/agents-and-tools/agent-skills) - [GitHub Skills Repository](https://github.co",
+              "lines": [
+                890,
+                894
+              ],
+              "name": "Official Resources",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [Skills Marketplace](https://github.com/anthropics/skills) - Browse community skills - [Anthropic Discord](https://discord.gg/anthropic) - Get help",
+              "lines": [
+                895,
+                898
+              ],
+              "name": "Community",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Multi-file skills with complex navigation - Skills that spawn other skills - Integration with MCP tools - Dynamic skill generation",
+              "lines": [
+                899,
+                911
+              ],
+              "name": "Advanced Topics",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            888,
+            911
+          ],
+          "name": "Learn More",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.160851+00:00",
+  "version": "1.0"
+}

@@ -1,0 +1,221 @@
+{
+  "directory": "vendor/sebastian/exporter",
+  "files": {
+    "ChangeLog.md": {
+      "hash": "8943c8805d4a",
+      "indexed_at": "2026-01-20T04:49:01.899403+00:00",
+      "language": "markdown",
+      "lines": 67,
+      "symbols": [
+        {
+          "children": [
+            {
+              "docstring": "* Suppress `unexpected NAN value was coerced to string` warning triggered on PHP 8.5",
+              "lines": [
+                7,
+                10
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            5,
+            10
+          ],
+          "name": "[4.0.8] - 2025-09-24",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Suppress `not representable as an int, cast occurred` warning triggered on PHP 8.5",
+              "lines": [
+                13,
+                16
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            11,
+            16
+          ],
+          "name": "[4.0.7] - 2025-09-22",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Do not use implicitly nullable parameters",
+              "lines": [
+                19,
+                22
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            17,
+            22
+          ],
+          "name": "[4.0.6] - 2024-03-02",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#47](https://github.com/sebastianbergmann/exporter/pull/47): Fix `float` export precision",
+              "lines": [
+                25,
+                28
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            23,
+            28
+          ],
+          "name": "[4.0.5] - 2022-09-14",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#37](https://github.com/sebastianbergmann/exporter/pull/37): Improve export of closed resources",
+              "lines": [
+                31,
+                34
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            29,
+            34
+          ],
+          "name": "[4.0.4] - 2021-11-11",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Changed PHP version constraint in `composer.json` from `^7.3 || ^8.0` to `>=7.3`",
+              "lines": [
+                37,
+                40
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            35,
+            40
+          ],
+          "name": "[4.0.3] - 2020-09-28",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* This component is now supported on PHP 8",
+              "lines": [
+                43,
+                46
+              ],
+              "name": "Added",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            41,
+            46
+          ],
+          "name": "[4.0.2] - 2020-06-26",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Tests etc. are now ignored for archive exports",
+              "lines": [
+                49,
+                52
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            47,
+            52
+          ],
+          "name": "[4.0.1] - 2020-06-15",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* This component is no longer supported on PHP 7.0, PHP 7.1, and PHP 7.2",
+              "lines": [
+                55,
+                68
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            53,
+            68
+          ],
+          "name": "[4.0.0] - 2020-02-07",
+          "type": "section"
+        }
+      ]
+    },
+    "README.md": {
+      "hash": "56a11897c2e9",
+      "indexed_at": "2026-01-20T04:49:02.896218+00:00",
+      "language": "markdown",
+      "lines": 174,
+      "symbols": [
+        {
+          "docstring": "You can add this library as a local, per-project dependency to your project using [Composer](https://getcomposer.org/):",
+          "lines": [
+            8,
+            21
+          ],
+          "name": "Installation",
+          "type": "section"
+        },
+        {
+          "docstring": "Exporting:",
+          "lines": [
+            22,
+            45
+          ],
+          "name": "Usage",
+          "type": "section"
+        },
+        {
+          "docstring": "Exporting simple types:",
+          "lines": [
+            46,
+            175
+          ],
+          "name": "Data Types",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.128284+00:00",
+  "version": "1.0"
+}

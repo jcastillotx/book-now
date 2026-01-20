@@ -1,0 +1,4048 @@
+{
+  "directory": "vendor/stripe/stripe-php",
+  "files": {
+    "CHANGELOG.md": {
+      "hash": "58c9469ae0d4",
+      "indexed_at": "2026-01-20T04:48:29.222565+00:00",
+      "language": "markdown",
+      "lines": 2072,
+      "symbols": [
+        {
+          "docstring": "* [#1546](https://github.com/stripe/stripe-php/pull/1546) Update generated code * Add support for new value `payment_reversal` on enum `BalanceTransac",
+          "lines": [
+            3,
+            7
+          ],
+          "name": "10.21.0 - 2023-08-10",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1539](https://github.com/stripe/stripe-php/pull/1539) Update generated code * Add support for `subscription_details` on `Invoice` * Add support fo",
+          "lines": [
+            8,
+            12
+          ],
+          "name": "10.20.0 - 2023-08-03",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1534](https://github.com/stripe/stripe-php/pull/1534) Update generated code * Improve PHPDoc type for `ApplicationFee.refunds` * Add support for `",
+          "lines": [
+            13,
+            21
+          ],
+          "name": "10.19.0 - 2023-07-27",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1533](https://github.com/stripe/stripe-php/pull/1533) Update generated code * Add support for new value `service_tax` on enum `TaxRate.tax_type` *",
+          "lines": [
+            22,
+            27
+          ],
+          "name": "10.18.0 - 2023-07-20",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1525](https://github.com/stripe/stripe-php/pull/1525) Update generated code * Add support for new resource `Tax.Settings` * Add support for `retri",
+          "lines": [
+            28,
+            37
+          ],
+          "name": "10.17.0 - 2023-07-13",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1517](https://github.com/stripe/stripe-php/pull/1517) Update generated code * Add support for new value `application_fees_not_allowed` on enum `St",
+          "lines": [
+            38,
+            47
+          ],
+          "name": "10.16.0 - 2023-06-29",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1506](https://github.com/stripe/stripe-php/pull/1506) Update generated code * Add support for `preferred_locales` on `Issuing.Cardholder`",
+          "lines": [
+            48,
+            51
+          ],
+          "name": "10.15.0 - 2023-06-08",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1503](https://github.com/stripe/stripe-php/pull/1503) Update generated code * Add support for `zip` on `PaymentMethod` * Add support for new value",
+          "lines": [
+            52,
+            61
+          ],
+          "name": "10.14.0 - 2023-05-25",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1490](https://github.com/stripe/stripe-php/pull/1490) Update generated code * Add support for `paypal` on `PaymentMethod` * Add support for `effec",
+          "lines": [
+            62,
+            76
+          ],
+          "name": "10.13.0 - 2023-05-11",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1473](https://github.com/stripe/stripe-php/pull/1473) Update generated code * Add back `deleted` from `Invoice.status`.",
+          "lines": [
+            77,
+            80
+          ],
+          "name": "10.12.1 - 2023-04-04",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1470](https://github.com/stripe/stripe-php/pull/1470) Update generated code * Remove support for `create` method on resource `Tax.Transaction` * T",
+          "lines": [
+            81,
+            90
+          ],
+          "name": "10.12.0 - 2023-03-30",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1458](https://github.com/stripe/stripe-php/pull/1458) Update generated code * Add support for new resources `Tax.CalculationLineItem`, `Tax.Calcul",
+          "lines": [
+            91,
+            100
+          ],
+          "name": "10.11.0 - 2023-03-23",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1457](https://github.com/stripe/stripe-php/pull/1457) API Updates * Add support for `future_requirements` and `requirements` on `BankAccount` * Ad",
+          "lines": [
+            101,
+            112
+          ],
+          "name": "10.10.0 - 2023-03-16",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1453](https://github.com/stripe/stripe-php/pull/1453) Restore StripeClient.getService",
+          "lines": [
+            113,
+            115
+          ],
+          "name": "10.9.1 - 2023-03-14",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1450](https://github.com/stripe/stripe-php/pull/1450) API Updates * Add support for `cancellation_details` on `Subscription` * Fix return types on",
+          "lines": [
+            116,
+            122
+          ],
+          "name": "10.9.0 - 2023-03-09",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1447](https://github.com/stripe/stripe-php/pull/1447) API Updates * Add support for `reconciliation_status` on `Payout` * Add support for new valu",
+          "lines": [
+            123,
+            127
+          ],
+          "name": "10.8.0 - 2023-03-02",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1444](https://github.com/stripe/stripe-php/pull/1444) API Updates * Add support for new value `igst` on enum `TaxRate.tax_type`",
+          "lines": [
+            128,
+            131
+          ],
+          "name": "10.7.0 - 2023-02-23",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1443](https://github.com/stripe/stripe-php/pull/1443) Remove init.php from the list of ignored files",
+          "lines": [
+            132,
+            134
+          ],
+          "name": "10.6.1 - 2023-02-21",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1441](https://github.com/stripe/stripe-php/pull/1441) API Updates * Add support for `refund_payment` method on resource `Terminal.Reader` * Add su",
+          "lines": [
+            135,
+            146
+          ],
+          "name": "10.6.0 - 2023-02-16",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1439](https://github.com/stripe/stripe-php/pull/1439) API Updates * Add support for `resume` method on resource `Subscription` * Add support for `",
+          "lines": [
+            147,
+            155
+          ],
+          "name": "10.5.0 - 2023-02-02",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1381](https://github.com/stripe/stripe-php/pull/1381) Add getService methods to StripeClient and AbstractServiceFactory to allow mocking * [#1424]",
+          "lines": [
+            156,
+            164
+          ],
+          "name": "10.4.0 - 2023-01-19",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1413](https://github.com/stripe/stripe-php/pull/1413) API Updates Change `CheckoutSession.cancel_url` to be nullable.",
+          "lines": [
+            165,
+            168
+          ],
+          "name": "10.3.0 - 2022-12-22",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1411](https://github.com/stripe/stripe-php/pull/1411) API Updates * Add support for new value `invoice_overpaid` on enum `CustomerBalanceTransacti",
+          "lines": [
+            169,
+            174
+          ],
+          "name": "10.2.0 - 2022-12-15",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1405](https://github.com/stripe/stripe-php/pull/1405) API Updates * Add support for `flow` on `BillingPortal.Session` * [#1404](https://github.com",
+          "lines": [
+            175,
+            187
+          ],
+          "name": "10.1.0 - 2022-12-06",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#1382](https://github.com/stripe/stripe-php/pull/1382) Mark `resource.save` as deprecated. Prefer the static update method that doesn't require ret",
+              "lines": [
+                195,
+                208
+              ],
+              "name": "Deprecated",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- [#1377](https://github.com/stripe/stripe-php/pull/1377) Removed deprecated `Sku` resource and service - [#1375](https://github.com/stripe/stripe-php",
+              "lines": [
+                209,
+                216
+              ],
+              "name": "\u26a0\ufe0f Removed",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "* [#1392](https://github.com/stripe/stripe-php/pull/1392) Next major release changes",
+          "lines": [
+            188,
+            216
+          ],
+          "name": "10.0.0 - 2022-11-16",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1394](https://github.com/stripe/stripe-php/pull/1394) API Updates * Add support for new values `eg_tin`, `ph_tin`, and `tr_tin` on enum `TaxId.typ",
+          "lines": [
+            217,
+            223
+          ],
+          "name": "9.9.0 - 2022-11-08",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1383](https://github.com/stripe/stripe-php/pull/1383) API Updates * Add support for new values `jp_trn` and `ke_pin` on enum `TaxId.type` * [#1293",
+          "lines": [
+            224,
+            229
+          ],
+          "name": "9.8.0 - 2022-10-20",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1376](https://github.com/stripe/stripe-php/pull/1376) API Updates * Add support for `network_data` on `Issuing.Authorization` * [#1374](https://gi",
+          "lines": [
+            230,
+            236
+          ],
+          "name": "9.7.0 - 2022-10-13",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1365](https://github.com/stripe/stripe-php/pull/1365) API Updates * Add support for `from_invoice` and `latest_revision` on `Invoice` * Add suppor",
+          "lines": [
+            237,
+            244
+          ],
+          "name": "9.6.0 - 2022-09-15",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1364](https://github.com/stripe/stripe-php/pull/1364) API Updates * Add support for new value `terminal_reader_splashscreen` on enum `File.purpose",
+          "lines": [
+            245,
+            249
+          ],
+          "name": "9.5.0 - 2022-09-06",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1362](https://github.com/stripe/stripe-php/pull/1362) API Updates * Add support for `login_page` on `BillingPortal.Configuration` * [#1360](https:",
+          "lines": [
+            250,
+            258
+          ],
+          "name": "9.4.0 - 2022-08-26",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1355](https://github.com/stripe/stripe-php/pull/1355) API Updates * Change type of `Treasury.OutboundTransfer.destination_payment_method` from `st",
+          "lines": [
+            259,
+            264
+          ],
+          "name": "9.3.0 - 2022-08-23",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1352](https://github.com/stripe/stripe-php/pull/1352) API Updates * Add support for new resource `CustomerCashBalanceTransaction` * Add support fo",
+          "lines": [
+            265,
+            272
+          ],
+          "name": "9.2.0 - 2022-08-19",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1348](https://github.com/stripe/stripe-php/pull/1348) API Updates * Add support for `payment_method_collection` on `Checkout.Session` and `Payment",
+          "lines": [
+            273,
+            279
+          ],
+          "name": "9.1.0 - 2022-08-11",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Add `alternate_statement_descriptors`, `authorization_code`, and `level3` properties to `Charge` resource. * Add `previewLines` method to `CreditNot",
+              "lines": [
+                291,
+                298
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* Updated certificate bundle ([#1314](https://github.com/stripe/stripe-php/pull/1314)) * Add `params` parameter to `close` method in `Dispute` resourc",
+              "lines": [
+                299,
+                302
+              ],
+              "name": "\u26a0\ufe0f Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* Remove deprecated `AlipayAccount`, `BitcoinReceiver`, `BitcoinTransaction`, `Recipient`, `RecipientTransfer`, and `ThreeDSecure` resources. * Remove",
+              "lines": [
+                303,
+                323
+              ],
+              "name": "\u26a0\ufe0f Removed",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "Breaking changes that arose during code generation of the library that we postponed for the next major version. For changes to the SDK, read more deta",
+          "lines": [
+            280,
+            323
+          ],
+          "name": "9.0.0 - 2022-08-02",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1332](https://github.com/stripe/stripe-php/pull/1332) API Updates * Add support for `default_currency` and `invoice_credit_balance` on `Customer`",
+          "lines": [
+            324,
+            328
+          ],
+          "name": "8.12.0 - 2022-07-25",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1324](https://github.com/stripe/stripe-php/pull/1324) API Updates * Add support for new value `blik` on enum `PaymentLink.payment_method_types[]`",
+          "lines": [
+            329,
+            338
+          ],
+          "name": "8.11.0 - 2022-07-18",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1319](https://github.com/stripe/stripe-php/pull/1319) API Updates * Add support for `currency_options` on `Coupon` and `Price` * Add support for `",
+          "lines": [
+            339,
+            345
+          ],
+          "name": "8.10.0 - 2022-07-07",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1316](https://github.com/stripe/stripe-php/pull/1316) API Updates * Add support for `deliver_card`, `fail_card`, `return_card`, and `ship_card` te",
+          "lines": [
+            346,
+            356
+          ],
+          "name": "8.9.0 - 2022-06-29",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1302](https://github.com/stripe/stripe-php/pull/1302) API Updates * Add support for `custom_unit_amount` on `Price` * [#1301](https://github.com/s",
+          "lines": [
+            357,
+            363
+          ],
+          "name": "8.8.0 - 2022-06-23",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1306](https://github.com/stripe/stripe-php/pull/1306) API Updates * Add support for `fund_cash_balance` test helper method on resource `Customer`",
+          "lines": [
+            364,
+            376
+          ],
+          "name": "8.7.0 - 2022-06-17",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1300](https://github.com/stripe/stripe-php/pull/1300) API Updates * Add support for `attach_to_self` and `flow_directions` on `SetupAttempt`",
+          "lines": [
+            377,
+            380
+          ],
+          "name": "8.6.0 - 2022-06-08",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1298](https://github.com/stripe/stripe-php/pull/1298) API Updates * Add support for `radar_options` on `Charge` and `PaymentMethod` * Add support",
+          "lines": [
+            381,
+            385
+          ],
+          "name": "8.5.0 - 2022-06-01",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1296](https://github.com/stripe/stripe-php/pull/1296) API Updates * Add support for `persons` method on resource `Account` * Add support for `bala",
+          "lines": [
+            386,
+            393
+          ],
+          "name": "8.4.0 - 2022-05-26",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1294](https://github.com/stripe/stripe-php/pull/1294) API Updates * Add support for new resource `Apps.Secret` * Add support for `affirm` and `lin",
+          "lines": [
+            394,
+            400
+          ],
+          "name": "8.3.0 - 2022-05-23",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1286](https://github.com/stripe/stripe-php/pull/1286) API Updates * Add support for new resources `Treasury.CreditReversal`, `Treasury.DebitRevers",
+          "lines": [
+            401,
+            410
+          ],
+          "name": "8.2.0 - 2022-05-19",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1284](https://github.com/stripe/stripe-php/pull/1284) API Updates * Add support for `consent_collection`, `customer_creation`, `payment_intent_dat",
+          "lines": [
+            411,
+            415
+          ],
+          "name": "8.1.0 - 2022-05-11",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1283](https://github.com/stripe/stripe-php/pull/1283) Major version release of v8.0.0. The [migration guide](https://github.com/stripe/stripe-php/",
+          "lines": [
+            416,
+            427
+          ],
+          "name": "8.0.0 - 2022-05-09",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1282](https://github.com/stripe/stripe-php/pull/1282) API Updates * Add support for `default_price` on `Product` * Add support for `instructions_e",
+          "lines": [
+            428,
+            433
+          ],
+          "name": "7.128.0 - 2022-05-05",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1281](https://github.com/stripe/stripe-php/pull/1281) API Updates * Add support for new resources `FinancialConnections.AccountOwner`, `FinancialC",
+          "lines": [
+            434,
+            440
+          ],
+          "name": "7.127.0 - 2022-05-05",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1276](https://github.com/stripe/stripe-php/pull/1276) API Updates * Add support for new resource `CashBalance` * Change type of `BillingPortal.Con",
+          "lines": [
+            441,
+            450
+          ],
+          "name": "7.126.0 - 2022-05-03",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1270](https://github.com/stripe/stripe-php/pull/1270) API Updates * Add support for `expire` test helper method on resource `Refund`",
+          "lines": [
+            451,
+            454
+          ],
+          "name": "7.125.0 - 2022-04-21",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1265](https://github.com/stripe/stripe-php/pull/1265) API Updates * Add support for new resources `FundingInstructions` and `Terminal.Configuratio",
+          "lines": [
+            455,
+            464
+          ],
+          "name": "7.124.0 - 2022-04-18",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1263](https://github.com/stripe/stripe-php/pull/1263) API Updates * Add support for `increment_authorization` method on resource `PaymentIntent` *",
+          "lines": [
+            465,
+            471
+          ],
+          "name": "7.123.0 - 2022-04-13",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1261](https://github.com/stripe/stripe-php/pull/1261) API Updates * Add support for `apply_customer_balance` method on resource `PaymentIntent` *",
+          "lines": [
+            472,
+            478
+          ],
+          "name": "7.122.0 - 2022-04-08",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1258](https://github.com/stripe/stripe-php/pull/1258) API Updates * Add support for `cancel_action`, `process_payment_intent`, `process_setup_inte",
+          "lines": [
+            479,
+            483
+          ],
+          "name": "7.121.0 - 2022-03-30",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1257](https://github.com/stripe/stripe-php/pull/1257) API Updates * Add support for Search API * Add support for `search` method on resources `Cha",
+          "lines": [
+            484,
+            488
+          ],
+          "name": "7.120.0 - 2022-03-29",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1256](https://github.com/stripe/stripe-php/pull/1256) API Updates * Add support for PayNow and US Bank Accounts Debits payments * Add support for",
+          "lines": [
+            489,
+            495
+          ],
+          "name": "7.119.0 - 2022-03-25",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1255](https://github.com/stripe/stripe-php/pull/1255) API Updates * Add support for `cancel` method on resource `Refund` * Add support for new val",
+          "lines": [
+            496,
+            502
+          ],
+          "name": "7.118.0 - 2022-03-23",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1254](https://github.com/stripe/stripe-php/pull/1254) API Updates * Add support for `status` on `Card` * [#1251](https://github.com/stripe/stripe-",
+          "lines": [
+            503,
+            508
+          ],
+          "name": "7.117.0 - 2022-03-18",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1248](https://github.com/stripe/stripe-php/pull/1248) API Updates * Add support for `proration_details` on `InvoiceLineItem`",
+          "lines": [
+            509,
+            513
+          ],
+          "name": "7.116.0 - 2022-03-02",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1245](https://github.com/stripe/stripe-php/pull/1245) [#1247](https://github.com/stripe/stripe-php/pull/1247) API Updates * Add support for new re",
+          "lines": [
+            514,
+            522
+          ],
+          "name": "7.115.0 - 2022-03-01",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1243](https://github.com/stripe/stripe-php/pull/1243) Add test * [#1240](https://github.com/stripe/stripe-php/pull/1240) API Updates * Add support",
+          "lines": [
+            523,
+            528
+          ],
+          "name": "7.114.0 - 2022-02-15",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1239](https://github.com/stripe/stripe-php/pull/1239) API Updates * Add `REASON_EXPIRED_UNCAPTURED_CHARGE` enum value on `Refund`.",
+          "lines": [
+            529,
+            532
+          ],
+          "name": "7.113.0 - 2022-02-03",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1235](https://github.com/stripe/stripe-php/pull/1235) API Updates * Add support for `phone_number_collection` on `PaymentLink` * Add support for n",
+          "lines": [
+            533,
+            538
+          ],
+          "name": "7.112.0 - 2022-01-25",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1233](https://github.com/stripe/stripe-php/pull/1233) API Updates * Add support for new resource `PaymentLink` * Add support for `payment_link` on",
+          "lines": [
+            539,
+            543
+          ],
+          "name": "7.111.0 - 2022-01-20",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1232](https://github.com/stripe/stripe-php/pull/1232) API Updates * Add support for `paid_out_of_band` on `Invoice`",
+          "lines": [
+            544,
+            547
+          ],
+          "name": "7.110.0 - 2022-01-13",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1231](https://github.com/stripe/stripe-php/pull/1231) API Updates * Add support for `customer_creation` on `Checkout.Session` * [#1227](https://gi",
+          "lines": [
+            548,
+            552
+          ],
+          "name": "7.109.0 - 2022-01-12",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1226](https://github.com/stripe/stripe-php/pull/1226) Upgrade php-cs-fixer to 3.4.0. * [#1222](https://github.com/stripe/stripe-php/pull/1222) API",
+          "lines": [
+            553,
+            558
+          ],
+          "name": "7.108.0 - 2021-12-22",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1219](https://github.com/stripe/stripe-php/pull/1219) API Updates * Add support for `metadata` on `BillingPortal.Configuration` * Add support for",
+          "lines": [
+            559,
+            563
+          ],
+          "name": "7.107.0 - 2021-12-09",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1218](https://github.com/stripe/stripe-php/pull/1218) API Updates * Add support for new values `ge_vat` and `ua_vat` on enum `TaxId.type` * [#1216",
+          "lines": [
+            564,
+            569
+          ],
+          "name": "7.106.0 - 2021-12-09",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1213](https://github.com/stripe/stripe-php/pull/1213) PHP 8.1 missing ReturnTypeWillChange annotations. * As of this version, PHP 8.1 is officiall",
+          "lines": [
+            570,
+            573
+          ],
+          "name": "7.105.0 - 2021-12-06",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1211](https://github.com/stripe/stripe-php/pull/1211) PHPStan compatibility with PHP8.x * [#1209](https://github.com/stripe/stripe-php/pull/1209)",
+          "lines": [
+            574,
+            577
+          ],
+          "name": "7.104.0 - 2021-12-01",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1206](https://github.com/stripe/stripe-php/pull/1206) API Updates * Add support for new value `jct` on enum `TaxRate.tax_type`",
+          "lines": [
+            578,
+            581
+          ],
+          "name": "7.103.0 - 2021-11-19",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1205](https://github.com/stripe/stripe-php/pull/1205) API Updates * Add support for `automatic_payment_methods` on `PaymentIntent`",
+          "lines": [
+            582,
+            585
+          ],
+          "name": "7.102.0 - 2021-11-17",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1203](https://github.com/stripe/stripe-php/pull/1203) API Updates * Add support for new resource `ShippingRate` * Add support for `shipping_option",
+          "lines": [
+            586,
+            592
+          ],
+          "name": "7.101.0 - 2021-11-16",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1190](https://github.com/stripe/stripe-php/pull/1190) API Updates * Add support for `klarna` on `PaymentMethod`.",
+          "lines": [
+            593,
+            596
+          ],
+          "name": "7.100.0 - 2021-10-11",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1188](https://github.com/stripe/stripe-php/pull/1188) API Updates * Add support for `list_payment_methods` method on resource `Customer`",
+          "lines": [
+            597,
+            600
+          ],
+          "name": "7.99.0 - 2021-10-11",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1187](https://github.com/stripe/stripe-php/pull/1187) API Updates * Add support for `phone_number_collection` on `Checkout.Session` * Add support",
+          "lines": [
+            601,
+            606
+          ],
+          "name": "7.98.0 - 2021-10-07",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1181](https://github.com/stripe/stripe-php/pull/1181) API Updates * Add support for `full_name_aliases` on `Person`",
+          "lines": [
+            607,
+            610
+          ],
+          "name": "7.97.0 - 2021-09-16",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1178](https://github.com/stripe/stripe-php/pull/1178) API Updates * Add support for livemode on Reporting.ReportType * Add support for new value `",
+          "lines": [
+            611,
+            615
+          ],
+          "name": "7.96.0 - 2021-09-15",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1177](https://github.com/stripe/stripe-php/pull/1177) API Updates * Add support for `future_requirements` on `Account`, `Capability`, and `Person`",
+          "lines": [
+            616,
+            620
+          ],
+          "name": "7.95.0 - 2021-09-01",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1173](https://github.com/stripe/stripe-php/pull/1173) API Updates * Add support for new value `fil` on enum `Checkout.Session.locale` * Add suppor",
+          "lines": [
+            621,
+            625
+          ],
+          "name": "7.94.0 - 2021-08-19",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1172](https://github.com/stripe/stripe-php/pull/1172) API Updates * Add support for `locale` on `BillingPortal.Session`",
+          "lines": [
+            626,
+            631
+          ],
+          "name": "7.93.0 - 2021-08-11",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1167](https://github.com/stripe/stripe-php/pull/1167) API Updates * Add support for `account_type` on `BankAccount` * Add support for new value `r",
+          "lines": [
+            632,
+            636
+          ],
+          "name": "7.92.0 - 2021-07-28",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1164](https://github.com/stripe/stripe-php/pull/1164) API Updates * Add support for new values `hr`, `ko`, and `vi` on enum `Checkout.Session.loca",
+          "lines": [
+            637,
+            641
+          ],
+          "name": "7.91.0 - 2021-07-22",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1163](https://github.com/stripe/stripe-php/pull/1163) API Updates * Add support for `wallet` on `Issuing.Transaction` * [#1160](https://github.com",
+          "lines": [
+            642,
+            646
+          ],
+          "name": "7.90.0 - 2021-07-20",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1158](https://github.com/stripe/stripe-php/pull/1158) API Updates * Add support for `list_computed_upfront_line_items` method on resource `Quote`",
+          "lines": [
+            647,
+            651
+          ],
+          "name": "7.89.0 - 2021-07-14",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1152](https://github.com/stripe/stripe-php/pull/1152) API Updates * Add support for new resource `Quote` * Add support for `quote` on `Invoice` *",
+          "lines": [
+            652,
+            663
+          ],
+          "name": "7.88.0 - 2021-07-09",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1149](https://github.com/stripe/stripe-php/pull/1149) API Updates * Add support for `wechat_pay` on `PaymentMethod` * [#1143](https://github.com/s",
+          "lines": [
+            664,
+            669
+          ],
+          "name": "7.87.0 - 2021-06-30",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1145](https://github.com/stripe/stripe-php/pull/1145) API Updates * Add support for `boleto` on `PaymentMethod`. * Add support for `il_vat` as a m",
+          "lines": [
+            670,
+            674
+          ],
+          "name": "7.86.0 - 2021-06-25",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1142](https://github.com/stripe/stripe-php/pull/1142) API Updates * Add support for new TaxId types: `ca_pst_mb`, `ca_pst_bc`, `ca_gst_hst`, and `",
+          "lines": [
+            675,
+            678
+          ],
+          "name": "7.85.0 - 2021-06-18",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1141](https://github.com/stripe/stripe-php/pull/1141) Update PHPDocs * Add support for `url` on `Checkout\\Session`",
+          "lines": [
+            679,
+            683
+          ],
+          "name": "7.84.0 - 2021-06-16",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1140](https://github.com/stripe/stripe-php/pull/1140) API Updates * Added support for `tax_id_collection` on `Checkout\\Session` and `Checkout\\Sess",
+          "lines": [
+            684,
+            688
+          ],
+          "name": "7.83.0 - 2021-06-07",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1136](https://github.com/stripe/stripe-php/pull/1136) Update PHPDocs * Add support for `controller` on `Account`.",
+          "lines": [
+            689,
+            692
+          ],
+          "name": "7.82.0 - 2021-06-04",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1135](https://github.com/stripe/stripe-php/pull/1135) API Updates * Add support for new resource `TaxCode` * Add support for `automatic_tax` `Invo",
+          "lines": [
+            693,
+            701
+          ],
+          "name": "7.81.0 - 2021-06-04",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1130](https://github.com/stripe/stripe-php/pull/1130) Update PHPDocs",
+          "lines": [
+            702,
+            704
+          ],
+          "name": "7.80.0 - 2021-05-26",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1126](https://github.com/stripe/stripe-php/pull/1126) API Updates * Added support for new resource `Identity.VerificationReport` * Added support f",
+          "lines": [
+            705,
+            710
+          ],
+          "name": "7.79.0 - 2021-05-19",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1120](https://github.com/stripe/stripe-php/pull/1120) Update PHPDocs * Add support for `Radar.EarlyFraudWarning.payment_intent`",
+          "lines": [
+            711,
+            714
+          ],
+          "name": "7.78.0 - 2021-05-05",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1110](https://github.com/stripe/stripe-php/pull/1110) Update PHPDocs * Add support for `acss_debit` on `PaymentMethod` * Add support for `payment_",
+          "lines": [
+            715,
+            720
+          ],
+          "name": "7.77.0 - 2021-04-12",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1100](https://github.com/stripe/stripe-php/pull/1100) Update PHPDocs * Added support for `amount_shipping` on `Checkout.Session.total_details` * [",
+          "lines": [
+            721,
+            725
+          ],
+          "name": "7.76.0 - 2021-03-22",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1094](https://github.com/stripe/stripe-php/pull/1094) Add support for Billing Portal Configuration API",
+          "lines": [
+            726,
+            728
+          ],
+          "name": "7.75.0 - 2021-02-22",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1093](https://github.com/stripe/stripe-php/pull/1093) Update PHPDocs * Add support for on_behalf_of to Invoice",
+          "lines": [
+            729,
+            732
+          ],
+          "name": "7.74.0 - 2021-02-17",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1091](https://github.com/stripe/stripe-php/pull/1091) Update PHPDocs * Add support for `afterpay_clearpay` on `PaymentMethod`.",
+          "lines": [
+            733,
+            736
+          ],
+          "name": "7.73.0 - 2021-02-16",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1089](https://github.com/stripe/stripe-php/pull/1089) Update PHPDocs * Add support for `afterpay_clearpay_payments` on `Account.capabilities` * Ad",
+          "lines": [
+            737,
+            741
+          ],
+          "name": "7.72.0 - 2021-02-08",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1087](https://github.com/stripe/stripe-php/pull/1087) Update PHPDocs * [#1086](https://github.com/stripe/stripe-php/pull/1086) Update CA cert bund",
+          "lines": [
+            742,
+            745
+          ],
+          "name": "7.71.0 - 2021-02-05",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1085](https://github.com/stripe/stripe-php/pull/1085) Update PHPDocs * Add support for `nationality` on `Person` * Add member `gb_vat` of `TaxID`",
+          "lines": [
+            746,
+            751
+          ],
+          "name": "7.70.0 - 2021-02-03",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1079](https://github.com/stripe/stripe-php/pull/1079) Update PHPDocs",
+          "lines": [
+            752,
+            754
+          ],
+          "name": "7.69.0 - 2021-01-21",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1063](https://github.com/stripe/stripe-php/pull/1063) Multiple API changes * [#1061](https://github.com/stripe/stripe-php/pull/1061) Bump phpDocum",
+          "lines": [
+            755,
+            758
+          ],
+          "name": "7.68.0 - 2021-01-14",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1060](https://github.com/stripe/stripe-php/pull/1060) Improve PHPDocs for `Discount` * [#1059](https://github.com/stripe/stripe-php/pull/1059) Upg",
+          "lines": [
+            759,
+            763
+          ],
+          "name": "7.67.0 - 2020-12-09",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1054](https://github.com/stripe/stripe-php/pull/1054) Improve error message for invalid keys in StripeClient",
+          "lines": [
+            764,
+            766
+          ],
+          "name": "7.66.1 - 2020-12-01",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1053](https://github.com/stripe/stripe-php/pull/1053) Update PHPDocs",
+          "lines": [
+            767,
+            769
+          ],
+          "name": "7.66.0 - 2020-11-24",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1050](https://github.com/stripe/stripe-php/pull/1050) Added constants for `proration_behavior` on `Subscription`",
+          "lines": [
+            770,
+            772
+          ],
+          "name": "7.65.0 - 2020-11-19",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1049](https://github.com/stripe/stripe-php/pull/1049) Update PHPDocs",
+          "lines": [
+            773,
+            775
+          ],
+          "name": "7.64.0 - 2020-11-18",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1048](https://github.com/stripe/stripe-php/pull/1048) Update PHPDocs * [#1046](https://github.com/stripe/stripe-php/pull/1046) Force IPv4 resolvin",
+          "lines": [
+            776,
+            779
+          ],
+          "name": "7.63.0 - 2020-11-17",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1041](https://github.com/stripe/stripe-php/pull/1041) Add missing constants on `Event` * [#1038](https://github.com/stripe/stripe-php/pull/1038) U",
+          "lines": [
+            780,
+            783
+          ],
+          "name": "7.62.0 - 2020-11-09",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1030](https://github.com/stripe/stripe-php/pull/1030) Add support for `jp_rn` and `ru_kpp` as a `type` on `TaxId`",
+          "lines": [
+            784,
+            786
+          ],
+          "name": "7.61.0 - 2020-10-20",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1027](https://github.com/stripe/stripe-php/pull/1027) Warn if opts are in params",
+          "lines": [
+            787,
+            789
+          ],
+          "name": "7.60.0 - 2020-10-15",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1026](https://github.com/stripe/stripe-php/pull/1026) Add support for the Payout Reverse API",
+          "lines": [
+            790,
+            792
+          ],
+          "name": "7.58.0 - 2020-10-14",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1020](https://github.com/stripe/stripe-php/pull/1020) Add support for the `SetupAttempt` resource and List API",
+          "lines": [
+            793,
+            795
+          ],
+          "name": "7.57.0 - 2020-09-29",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1019](https://github.com/stripe/stripe-php/pull/1019) Update PHPDocs",
+          "lines": [
+            796,
+            798
+          ],
+          "name": "7.56.0 - 2020-09-25",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1018](https://github.com/stripe/stripe-php/pull/1018) Multiple API changes * Updated PHPDocs * Added `TYPE_CONTRIBUTION` as a constant on `Balance",
+          "lines": [
+            799,
+            803
+          ],
+          "name": "7.55.0 - 2020-09-24",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1017](https://github.com/stripe/stripe-php/pull/1017) Updated PHPDoc",
+          "lines": [
+            804,
+            806
+          ],
+          "name": "7.54.0 - 2020-09-23",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1015](https://github.com/stripe/stripe-php/pull/1015) Bugfix: don't error on systems with php_uname in disablefunctions with whitespace",
+          "lines": [
+            807,
+            809
+          ],
+          "name": "7.53.1 - 2020-09-22",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1016](https://github.com/stripe/stripe-php/pull/1016) Updated PHPDocs",
+          "lines": [
+            810,
+            812
+          ],
+          "name": "7.53.0 - 2020-09-21",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1010](https://github.com/stripe/stripe-php/pull/1010) Update PHPDocs",
+          "lines": [
+            813,
+            815
+          ],
+          "name": "7.52.0 - 2020-09-08",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1007](https://github.com/stripe/stripe-php/pull/1007) Multiple API changes * Add support for the Issuing Dispute Submit API * Add constants for `p",
+          "lines": [
+            816,
+            821
+          ],
+          "name": "7.51.0 - 2020-09-02",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#1005](https://github.com/stripe/stripe-php/pull/1005) Updated PHPDocs",
+          "lines": [
+            822,
+            824
+          ],
+          "name": "7.50.0 - 2020-08-28",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#998](https://github.com/stripe/stripe-php/pull/998) PHPDocs updated",
+          "lines": [
+            825,
+            827
+          ],
+          "name": "7.49.0 - 2020-08-19",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#997](https://github.com/stripe/stripe-php/pull/997) PHPDocs updated * [#996](https://github.com/stripe/stripe-php/pull/996) Fixing telemetry",
+          "lines": [
+            828,
+            831
+          ],
+          "name": "7.48.0 - 2020-08-17",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#994](https://github.com/stripe/stripe-php/pull/994) Nullable balance_transactions on issuing disputes * [#991](https://github.com/stripe/stripe-ph",
+          "lines": [
+            832,
+            835
+          ],
+          "name": "7.47.0 - 2020-08-13",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#990](https://github.com/stripe/stripe-php/pull/990) PHPdoc changes",
+          "lines": [
+            836,
+            838
+          ],
+          "name": "7.46.1 - 2020-08-07",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#989](https://github.com/stripe/stripe-php/pull/989) Add support for the `PromotionCode` resource and APIs",
+          "lines": [
+            839,
+            841
+          ],
+          "name": "7.46.0 - 2020-08-05",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#981](https://github.com/stripe/stripe-php/pull/981) PHPdoc updates",
+          "lines": [
+            842,
+            844
+          ],
+          "name": "7.45.0 - 2020-07-28",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#948](https://github.com/stripe/stripe-php/pull/948) Add `first()` and `last()` functions to `Collection`",
+          "lines": [
+            845,
+            847
+          ],
+          "name": "7.44.0 - 2020-07-20",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#975](https://github.com/stripe/stripe-php/pull/975) Add support for `political_exposure` on `Person`",
+          "lines": [
+            848,
+            850
+          ],
+          "name": "7.43.0 - 2020-07-17",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#974](https://github.com/stripe/stripe-php/pull/974) Add new constants for `purpose` on `File`",
+          "lines": [
+            851,
+            853
+          ],
+          "name": "7.42.0 - 2020-07-15",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#973](https://github.com/stripe/stripe-php/pull/973) Multiple PHPDoc fixes",
+          "lines": [
+            854,
+            856
+          ],
+          "name": "7.41.1 - 2020-07-15",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#971](https://github.com/stripe/stripe-php/pull/971) Adds enum values for `billing_address_collection` on Checkout `Session`",
+          "lines": [
+            857,
+            859
+          ],
+          "name": "7.41.0 - 2020-07-14",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#964](https://github.com/stripe/stripe-php/pull/964) Add OAuthService",
+          "lines": [
+            860,
+            862
+          ],
+          "name": "7.40.0 - 2020-07-06",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#960](https://github.com/stripe/stripe-php/pull/960) Add constants for `payment_behavior` on `Subscription`",
+          "lines": [
+            863,
+            865
+          ],
+          "name": "7.39.0 - 2020-06-25",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#959](https://github.com/stripe/stripe-php/pull/959) Add multiple constants missing for `Event`",
+          "lines": [
+            866,
+            868
+          ],
+          "name": "7.38.0 - 2020-06-24",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#957](https://github.com/stripe/stripe-php/pull/957) Updated PHPDocs",
+          "lines": [
+            869,
+            871
+          ],
+          "name": "7.37.2 - 2020-06-23",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#952](https://github.com/stripe/stripe-php/pull/952) Improve PHPDoc",
+          "lines": [
+            872,
+            874
+          ],
+          "name": "7.37.1 - 2020-06-11",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#950](https://github.com/stripe/stripe-php/pull/950) Add support for `id_npwp` and `my_frp` as `type` on `TaxId`",
+          "lines": [
+            875,
+            877
+          ],
+          "name": "7.37.0 - 2020-06-09",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#946](https://github.com/stripe/stripe-php/pull/946) Update PHPDoc",
+          "lines": [
+            878,
+            880
+          ],
+          "name": "7.36.2 - 2020-06-03",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#938](https://github.com/stripe/stripe-php/pull/938) Remove extra array_keys() call. * [#942](https://github.com/stripe/stripe-php/pull/942) fix au",
+          "lines": [
+            881,
+            884
+          ],
+          "name": "7.36.1 - 2020-05-28",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#937](https://github.com/stripe/stripe-php/pull/937) Add support for `ae_trn`, `cl_tin` and `sa_vat` as `type` on `TaxId`",
+          "lines": [
+            885,
+            887
+          ],
+          "name": "7.36.0 - 2020-05-21",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#936](https://github.com/stripe/stripe-php/pull/936) Add `anticipation_repayment` as a `type` on `BalanceTransaction`",
+          "lines": [
+            888,
+            890
+          ],
+          "name": "7.35.0 - 2020-05-20",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#934](https://github.com/stripe/stripe-php/pull/934) Add support for `issuing_dispute` as a `type` on `BalanceTransaction`",
+          "lines": [
+            891,
+            893
+          ],
+          "name": "7.34.0 - 2020-05-18",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#933](https://github.com/stripe/stripe-php/pull/933) Services bugfix: convert nested null params to empty strings",
+          "lines": [
+            894,
+            896
+          ],
+          "name": "7.33.1 - 2020-05-15",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#771](https://github.com/stripe/stripe-php/pull/771) Introduce client/services API. The [migration guide](https://github.com/stripe/stripe-php/wiki",
+          "lines": [
+            897,
+            899
+          ],
+          "name": "7.33.0 - 2020-05-14",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#932](https://github.com/stripe/stripe-php/pull/932) Fix multiple PHPDoc",
+          "lines": [
+            900,
+            902
+          ],
+          "name": "7.32.1 - 2020-05-13",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#931](https://github.com/stripe/stripe-php/pull/931) Add support for the `LineItem` resource and APIs",
+          "lines": [
+            903,
+            905
+          ],
+          "name": "7.32.0 - 2020-05-11",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#927](https://github.com/stripe/stripe-php/pull/927) Add support for new tax IDs",
+          "lines": [
+            906,
+            908
+          ],
+          "name": "7.31.0 - 2020-05-01",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#924](https://github.com/stripe/stripe-php/pull/924) Add support for the `Price` resource and APIs",
+          "lines": [
+            909,
+            911
+          ],
+          "name": "7.30.0 - 2020-04-29",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#920](https://github.com/stripe/stripe-php/pull/920) Add support for the `Session` resource and APIs on the `BillingPortal` namespace",
+          "lines": [
+            912,
+            914
+          ],
+          "name": "7.29.0 - 2020-04-22",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#915](https://github.com/stripe/stripe-php/pull/915) Improve PHPdocs for many classes",
+          "lines": [
+            915,
+            917
+          ],
+          "name": "7.28.1 - 2020-04-10",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#912](https://github.com/stripe/stripe-php/pull/912) Preserve backwards compatibility for typoed `TYPE_ADJUSTEMENT` enum. * [#911](https://github.c",
+          "lines": [
+            918,
+            922
+          ],
+          "name": "7.28.0 - 2020-04-03",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#899](https://github.com/stripe/stripe-php/pull/899) Convert keys to strings in `StripeObject::toArray()`",
+          "lines": [
+            923,
+            925
+          ],
+          "name": "7.27.3 - 2020-03-18",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#894](https://github.com/stripe/stripe-php/pull/894) Multiple PHPDocs changes",
+          "lines": [
+            926,
+            928
+          ],
+          "name": "7.27.2 - 2020-03-13",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#890](https://github.com/stripe/stripe-php/pull/890) Update PHPdoc",
+          "lines": [
+            929,
+            931
+          ],
+          "name": "7.27.1 - 2020-03-03",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#889](https://github.com/stripe/stripe-php/pull/889) Add new constants for `type` on `TaxId`",
+          "lines": [
+            932,
+            934
+          ],
+          "name": "7.27.0 - 2020-02-28",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#886](https://github.com/stripe/stripe-php/pull/886) Add support for listing Checkout `Session` * [#883](https://github.com/stripe/stripe-php/pull/",
+          "lines": [
+            935,
+            938
+          ],
+          "name": "7.26.0 - 2020-02-26",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#879](https://github.com/stripe/stripe-php/pull/879) Make `\\Stripe\\Collection` implement `\\Countable` * [#875](https://github.com/stripe/stripe-php",
+          "lines": [
+            939,
+            947
+          ],
+          "name": "7.25.0 - 2020-02-14",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#862](https://github.com/stripe/stripe-php/pull/862) Better PHPDoc * [#865](https://github.com/stripe/stripe-php/pull/865) Get closer to `@PhpCsFix",
+          "lines": [
+            948,
+            951
+          ],
+          "name": "7.24.0 - 2020-02-10",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#860](https://github.com/stripe/stripe-php/pull/860) Add PHPDoc types for expandable fields * [#858](https://github.com/stripe/stripe-php/pull/858)",
+          "lines": [
+            952,
+            960
+          ],
+          "name": "7.23.0 - 2020-02-05",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#849](https://github.com/stripe/stripe-php/pull/849) Add new constants for `type` on `TaxId` * [#843](https://github.com/stripe/stripe-php/pull/843",
+          "lines": [
+            961,
+            965
+          ],
+          "name": "7.22.0 - 2020-01-31",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#840](https://github.com/stripe/stripe-php/pull/840) Update phpdocs across multiple resources.",
+          "lines": [
+            966,
+            968
+          ],
+          "name": "7.21.1 - 2020-01-29",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#839](https://github.com/stripe/stripe-php/pull/839) Add support for `TYPE_ES_CIF` on `TaxId`",
+          "lines": [
+            969,
+            971
+          ],
+          "name": "7.21.0 - 2020-01-28",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#836](https://github.com/stripe/stripe-php/pull/836) Add new type values for `TaxId`",
+          "lines": [
+            972,
+            974
+          ],
+          "name": "7.20.0 - 2020-01-23",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#831](https://github.com/stripe/stripe-php/pull/831) Fix incorrect `UnexpectedValueException` instantiation",
+          "lines": [
+            975,
+            977
+          ],
+          "name": "7.19.1 - 2020-01-14",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#830](https://github.com/stripe/stripe-php/pull/830) Add support for `CreditNoteLineItem`",
+          "lines": [
+            978,
+            980
+          ],
+          "name": "7.19.0 - 2020-01-14",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#829](https://github.com/stripe/stripe-php/pull/829) Don't call php_uname function if disabled by php.ini",
+          "lines": [
+            981,
+            983
+          ],
+          "name": "7.18.0 - 2020-01-13",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#821](https://github.com/stripe/stripe-php/pull/821) Improve PHPDoc types for `ApiErrorException.get/setJsonBody()` methods",
+          "lines": [
+            984,
+            986
+          ],
+          "name": "7.17.0 - 2020-01-08",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#826](https://github.com/stripe/stripe-php/pull/826) Rename remaining `$options` to `$opts` * [#825](https://github.com/stripe/stripe-php/pull/825)",
+          "lines": [
+            987,
+            990
+          ],
+          "name": "7.16.0 - 2020-01-06",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#824](https://github.com/stripe/stripe-php/pull/824) Add constant `TYPE_SG_UEN` to `TaxId`",
+          "lines": [
+            991,
+            993
+          ],
+          "name": "7.15.0 - 2020-01-06",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#816](https://github.com/stripe/stripe-php/pull/816) Disable autoloader when checking for `Throwable`",
+          "lines": [
+            994,
+            996
+          ],
+          "name": "7.14.2 - 2019-12-04",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#812](https://github.com/stripe/stripe-php/pull/812) Fix invalid PHPdoc on `Subscription`",
+          "lines": [
+            997,
+            999
+          ],
+          "name": "7.14.1 - 2019-11-26",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#811](https://github.com/stripe/stripe-php/pull/811) Add support for `CreditNote` preview.",
+          "lines": [
+            1000,
+            1002
+          ],
+          "name": "7.14.0 - 2019-11-26",
+          "type": "section"
+        },
+        {
+          "docstring": "* [#808](https://github.com/stripe/stripe-php/pull/808) Add support for listing lines on an Invoice directly via `Invoice::allLines()`",
+          "lines": [
+            1003,
+            1005
+          ],
+          "name": "7.13.0 - 2019-11-19",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#805](https://github.com/stripe/stripe-php/pull/805) Add Source::allSourceTransactions and SubscriptionItem::allUsageRecordSummaries -   [#798](h",
+          "lines": [
+            1006,
+            1011
+          ],
+          "name": "7.12.0 - 2019-11-08",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#797](https://github.com/stripe/stripe-php/pull/797) Add support for reverse pagination",
+          "lines": [
+            1012,
+            1015
+          ],
+          "name": "7.11.0 - 2019-11-06",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#795](https://github.com/stripe/stripe-php/pull/795) Add support for `Mandate`",
+          "lines": [
+            1016,
+            1019
+          ],
+          "name": "7.10.0 - 2019-11-05",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#794](https://github.com/stripe/stripe-php/pull/794) Add PHPDoc to `ApiResponse` -   [#792](https://github.com/stripe/stripe-php/pull/792) Use si",
+          "lines": [
+            1020,
+            1024
+          ],
+          "name": "7.9.0 - 2019-11-05",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#790](https://github.com/stripe/stripe-php/pull/790) Mark nullable fields in PHPDoc -   [#788](https://github.com/stripe/stripe-php/pull/788) Ear",
+          "lines": [
+            1025,
+            1030
+          ],
+          "name": "7.8.0 - 2019-11-05",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#781](https://github.com/stripe/stripe-php/pull/781) Fix telemetry header -   [#780](https://github.com/stripe/stripe-php/pull/780) Contributor C",
+          "lines": [
+            1031,
+            1035
+          ],
+          "name": "7.7.1 - 2019-10-25",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#776](https://github.com/stripe/stripe-php/pull/776) Add `CAPABILITY_TRANSFERS` to `Account` -   [#778](https://github.com/stripe/stripe-php/pull",
+          "lines": [
+            1036,
+            1040
+          ],
+          "name": "7.7.0 - 2019-10-23",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#770](https://github.com/stripe/stripe-php/pull/770) Add missing constants for Customer's `TaxId`",
+          "lines": [
+            1041,
+            1044
+          ],
+          "name": "7.6.0 - 2019-10-22",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#768](https://github.com/stripe/stripe-php/pull/768) Redact API key in `RequestOptions` debug info",
+          "lines": [
+            1045,
+            1048
+          ],
+          "name": "7.5.0 - 2019-10-18",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#764](https://github.com/stripe/stripe-php/pull/764) Add support for HTTP request monitoring callback",
+          "lines": [
+            1049,
+            1052
+          ],
+          "name": "7.4.0 - 2019-10-15",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#755](https://github.com/stripe/stripe-php/pull/755) Respect Stripe-Should-Retry and Retry-After headers",
+          "lines": [
+            1053,
+            1056
+          ],
+          "name": "7.3.1 - 2019-10-07",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#752](https://github.com/stripe/stripe-php/pull/752) Add `payment_intent.canceled` and `setup_intent.canceled` events -   [#749](https://github.c",
+          "lines": [
+            1057,
+            1061
+          ],
+          "name": "7.3.0 - 2019-10-02",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#746](https://github.com/stripe/stripe-php/pull/746) Add missing decline codes",
+          "lines": [
+            1062,
+            1065
+          ],
+          "name": "7.2.2 - 2019-09-24",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#744](https://github.com/stripe/stripe-php/pull/744) Added new PHPDoc",
+          "lines": [
+            1066,
+            1069
+          ],
+          "name": "7.2.1 - 2019-09-23",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#738](https://github.com/stripe/stripe-php/pull/738) Added missing constants for `SetupIntent` events",
+          "lines": [
+            1070,
+            1073
+          ],
+          "name": "7.2.0 - 2019-09-17",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#737](https://github.com/stripe/stripe-php/pull/737) Added new PHPDoc",
+          "lines": [
+            1074,
+            1077
+          ],
+          "name": "7.1.1 - 2019-09-16",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#736](https://github.com/stripe/stripe-php/pull/736) Make `CaseInsensitiveArray` countable and traversable",
+          "lines": [
+            1078,
+            1081
+          ],
+          "name": "7.1.0 - 2019-09-13",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#729](https://github.com/stripe/stripe-php/pull/729) Fix usage of `SignatureVerificationException` in PHPDoc blocks",
+          "lines": [
+            1082,
+            1085
+          ],
+          "name": "7.0.2 - 2019-09-06",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#728](https://github.com/stripe/stripe-php/pull/728) Clean up Collection",
+          "lines": [
+            1086,
+            1089
+          ],
+          "name": "7.0.1 - 2019-09-05",
+          "type": "section"
+        },
+        {
+          "docstring": "Major version release. The [migration guide](https://github.com/stripe/stripe-php/wiki/Migration-guide-for-v7) contains a detailed list of backwards-i",
+          "lines": [
+            1090,
+            1122
+          ],
+          "name": "7.0.0 - 2019-09-03",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#722](https://github.com/stripe/stripe-php/pull/722) Make `LoggerInterface::error` compatible with its PSR-3 counterpart -   [#714](https://githu",
+          "lines": [
+            1123,
+            1130
+          ],
+          "name": "6.43.1 - 2019-08-29",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#694](https://github.com/stripe/stripe-php/pull/694) Add `SubscriptionItem::createUsageRecord` method",
+          "lines": [
+            1131,
+            1134
+          ],
+          "name": "6.43.0 - 2019-08-09",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#688](https://github.com/stripe/stripe-php/pull/688) Remove `SubscriptionScheduleRevision` -   Note that this is technically a breaking change, h",
+          "lines": [
+            1135,
+            1139
+          ],
+          "name": "6.42.0 - 2019-08-09",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#683](https://github.com/stripe/stripe-php/pull/683) Move the List Balance History API to `/v1/balance_transactions`",
+          "lines": [
+            1140,
+            1143
+          ],
+          "name": "6.41.0 - 2019-07-31",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#675](https://github.com/stripe/stripe-php/pull/675) Add support for `SetupIntent` resource and APIs",
+          "lines": [
+            1144,
+            1147
+          ],
+          "name": "6.40.0 - 2019-06-27",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#676](https://github.com/stripe/stripe-php/pull/676) Fix exception message in `CustomerBalanceTransaction::update()`",
+          "lines": [
+            1148,
+            1151
+          ],
+          "name": "6.39.2 - 2019-06-26",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#674](https://github.com/stripe/stripe-php/pull/674) Add new constants for `collection_method` on `Invoice`",
+          "lines": [
+            1152,
+            1155
+          ],
+          "name": "6.39.1 - 2019-06-25",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#673](https://github.com/stripe/stripe-php/pull/673) Enable request latency telemetry by default",
+          "lines": [
+            1156,
+            1159
+          ],
+          "name": "6.39.0 - 2019-06-24",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#649](https://github.com/stripe/stripe-php/pull/649) Add support for `CustomerBalanceTransaction` resource and APIs",
+          "lines": [
+            1160,
+            1163
+          ],
+          "name": "6.38.0 - 2019-06-17",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#671](https://github.com/stripe/stripe-php/pull/671) Add new PHPDoc -   [#672](https://github.com/stripe/stripe-php/pull/672) Add constants for `",
+          "lines": [
+            1164,
+            1168
+          ],
+          "name": "6.37.2 - 2019-06-17",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#670](https://github.com/stripe/stripe-php/pull/670) Add new PHPDoc",
+          "lines": [
+            1169,
+            1172
+          ],
+          "name": "6.37.1 - 2019-06-14",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#663](https://github.com/stripe/stripe-php/pull/663) Add support for `radar.early_fraud_warning` resource",
+          "lines": [
+            1173,
+            1176
+          ],
+          "name": "6.37.0 - 2019-05-23",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#661](https://github.com/stripe/stripe-php/pull/661) Add constants for new TaxId types -   [#662](https://github.com/stripe/stripe-php/pull/662)",
+          "lines": [
+            1177,
+            1181
+          ],
+          "name": "6.36.0 - 2019-05-22",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#655](https://github.com/stripe/stripe-php/pull/655) Add constants for payment intent statuses -   [#659](https://github.com/stripe/stripe-php/pu",
+          "lines": [
+            1182,
+            1187
+          ],
+          "name": "6.35.2 - 2019-05-20",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#658](https://github.com/stripe/stripe-php/pull/658) Use absolute value when checking timestamp tolerance",
+          "lines": [
+            1188,
+            1191
+          ],
+          "name": "6.35.1 - 2019-05-20",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#651](https://github.com/stripe/stripe-php/pull/651) Add support for the Capability resource and APIs",
+          "lines": [
+            1192,
+            1195
+          ],
+          "name": "6.35.0 - 2019-05-14",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#654](https://github.com/stripe/stripe-php/pull/654) Fix typo in definition of `Event::PAYMENT_METHOD_ATTACHED` constant",
+          "lines": [
+            1196,
+            1199
+          ],
+          "name": "6.34.6 - 2019-05-13",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#647](https://github.com/stripe/stripe-php/pull/647) Set the return type to static for more operations",
+          "lines": [
+            1200,
+            1203
+          ],
+          "name": "6.34.5 - 2019-05-06",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#650](https://github.com/stripe/stripe-php/pull/650) Add missing constants for Event types",
+          "lines": [
+            1204,
+            1207
+          ],
+          "name": "6.34.4 - 2019-05-06",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#644](https://github.com/stripe/stripe-php/pull/644) Update return type to `static` to improve static analysis -   [#645](https://github.com/stri",
+          "lines": [
+            1208,
+            1212
+          ],
+          "name": "6.34.3 - 2019-05-01",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#642](https://github.com/stripe/stripe-php/pull/642) Fix an issue where existing idempotency keys would be overwritten when using automatic retri",
+          "lines": [
+            1213,
+            1216
+          ],
+          "name": "6.34.2 - 2019-04-26",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#640](https://github.com/stripe/stripe-php/pull/640) Add missing phpdocs",
+          "lines": [
+            1217,
+            1220
+          ],
+          "name": "6.34.1 - 2019-04-25",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#626](https://github.com/stripe/stripe-php/pull/626) Add support for the `TaxRate` resource and APIs -   [#639](https://github.com/stripe/stripe-",
+          "lines": [
+            1221,
+            1225
+          ],
+          "name": "6.34.0 - 2019-04-24",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#630](https://github.com/stripe/stripe-php/pull/630) Add support for the `TaxId` resource and APIs",
+          "lines": [
+            1226,
+            1229
+          ],
+          "name": "6.33.0 - 2019-04-22",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#636](https://github.com/stripe/stripe-php/pull/636) Correct type of `$personId` in PHPDoc",
+          "lines": [
+            1230,
+            1233
+          ],
+          "name": "6.32.1 - 2019-04-19",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#621](https://github.com/stripe/stripe-php/pull/621) Add support for `CreditNote`",
+          "lines": [
+            1234,
+            1237
+          ],
+          "name": "6.32.0 - 2019-04-18",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#628](https://github.com/stripe/stripe-php/pull/628) Add constants for `person.*` event types -   [#628](https://github.com/stripe/stripe-php/pul",
+          "lines": [
+            1238,
+            1242
+          ],
+          "name": "6.31.5 - 2019-04-12",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#624](https://github.com/stripe/stripe-php/pull/624) Fix encoding of nested parameters in multipart requests",
+          "lines": [
+            1243,
+            1246
+          ],
+          "name": "6.31.4 - 2019-04-05",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#623](https://github.com/stripe/stripe-php/pull/623) Only use HTTP/2 with curl >= 7.60.0",
+          "lines": [
+            1247,
+            1250
+          ],
+          "name": "6.31.3 - 2019-04-02",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#619](https://github.com/stripe/stripe-php/pull/619) Fix PHPDoc return types for list methods for nested resources",
+          "lines": [
+            1251,
+            1254
+          ],
+          "name": "6.31.2 - 2019-03-25",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#612](https://github.com/stripe/stripe-php/pull/612) Add a lot of constants -   [#614](https://github.com/stripe/stripe-php/pull/614) Add missing",
+          "lines": [
+            1255,
+            1259
+          ],
+          "name": "6.31.1 - 2019-03-22",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#600](https://github.com/stripe/stripe-php/pull/600) Add support for the `PaymentMethod` resource and APIs -   [#606](https://github.com/stripe/s",
+          "lines": [
+            1260,
+            1265
+          ],
+          "name": "6.31.0 - 2019-03-18",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#607](https://github.com/stripe/stripe-php/pull/607) Correctly handle case where a metadata key is called `metadata`",
+          "lines": [
+            1266,
+            1269
+          ],
+          "name": "6.30.5 - 2019-03-11",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#602](https://github.com/stripe/stripe-php/pull/602) Add `subscription_schedule` to `Subscription` for PHPDoc.",
+          "lines": [
+            1270,
+            1273
+          ],
+          "name": "6.30.4 - 2019-02-27",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#603](https://github.com/stripe/stripe-php/pull/603) Improve PHPDoc on the `Source` object to cover all types of Sources currently supported.",
+          "lines": [
+            1274,
+            1277
+          ],
+          "name": "6.30.3 - 2019-02-26",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#601](https://github.com/stripe/stripe-php/pull/601) Fix PHPDoc across multiple resources and add support for new events.",
+          "lines": [
+            1278,
+            1281
+          ],
+          "name": "6.30.2 - 2019-02-25",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#599](https://github.com/stripe/stripe-php/pull/599) Fix PHPDoc for `SubscriptionSchedule` and `SubscriptionScheduleRevision`",
+          "lines": [
+            1282,
+            1285
+          ],
+          "name": "6.30.1 - 2019-02-16",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#590](https://github.com/stripe/stripe-php/pull/590) Add support for `SubscriptionSchedule` and `SubscriptionScheduleRevision`",
+          "lines": [
+            1286,
+            1289
+          ],
+          "name": "6.30.0 - 2019-02-12",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#592](https://github.com/stripe/stripe-php/pull/592) Some more PHPDoc fixes",
+          "lines": [
+            1290,
+            1293
+          ],
+          "name": "6.29.3 - 2019-01-31",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#591](https://github.com/stripe/stripe-php/pull/591) Fix PHPDoc for nested resources",
+          "lines": [
+            1294,
+            1297
+          ],
+          "name": "6.29.2 - 2019-01-31",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#566](https://github.com/stripe/stripe-php/pull/566) Fix dangling message contents -   [#586](https://github.com/stripe/stripe-php/pull/586) Don'",
+          "lines": [
+            1298,
+            1302
+          ],
+          "name": "6.29.1 - 2019-01-25",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#579](https://github.com/stripe/stripe-php/pull/579) Rename `CheckoutSession` to `Session` and move it under the `Checkout` namespace. This is a",
+          "lines": [
+            1303,
+            1306
+          ],
+          "name": "6.29.0 - 2019-01-23",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#580](https://github.com/stripe/stripe-php/pull/580) Properly serialize `individual` on `Account` objects",
+          "lines": [
+            1307,
+            1310
+          ],
+          "name": "6.28.1 - 2019-01-21",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#576](https://github.com/stripe/stripe-php/pull/576) Add support for iterating directly over `Collection` instances",
+          "lines": [
+            1311,
+            1314
+          ],
+          "name": "6.28.0 - 2019-01-03",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#571](https://github.com/stripe/stripe-php/pull/571) Add support for the `CheckoutSession` resource",
+          "lines": [
+            1315,
+            1318
+          ],
+          "name": "6.27.0 - 2018-12-21",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#568](https://github.com/stripe/stripe-php/pull/568) Enable persistent connections",
+          "lines": [
+            1319,
+            1322
+          ],
+          "name": "6.26.0 - 2018-12-11",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#567](https://github.com/stripe/stripe-php/pull/567) Add support for account links",
+          "lines": [
+            1323,
+            1326
+          ],
+          "name": "6.25.0 - 2018-12-10",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#562](https://github.com/stripe/stripe-php/pull/562) Add support for the Review resource -   [#564](https://github.com/stripe/stripe-php/pull/564",
+          "lines": [
+            1327,
+            1331
+          ],
+          "name": "6.24.0 - 2018-11-28",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#542](https://github.com/stripe/stripe-php/pull/542) Add support for `ValueList` and `ValueListItem` for Radar",
+          "lines": [
+            1332,
+            1335
+          ],
+          "name": "6.23.0 - 2018-11-27",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#561](https://github.com/stripe/stripe-php/pull/561) Add cast and some docs to telemetry introduced in 6.22.0/549",
+          "lines": [
+            1336,
+            1339
+          ],
+          "name": "6.22.1 - 2018-11-20",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#549](https://github.com/stripe/stripe-php/pull/549) Add support for client telemetry",
+          "lines": [
+            1340,
+            1343
+          ],
+          "name": "6.22.0 - 2018-11-15",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#548](https://github.com/stripe/stripe-php/pull/548) Don't mutate `Exception` class properties from `OAuthBase` error",
+          "lines": [
+            1344,
+            1347
+          ],
+          "name": "6.21.1 - 2018-11-12",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#537](https://github.com/stripe/stripe-php/pull/537) Add new API endpoints for the `Invoice` resource.",
+          "lines": [
+            1348,
+            1351
+          ],
+          "name": "6.21.0 - 2018-11-08",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#546](https://github.com/stripe/stripe-php/pull/546) Drop files from the Composer package that aren't needed in the release",
+          "lines": [
+            1352,
+            1355
+          ],
+          "name": "6.20.1 - 2018-11-07",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#536](https://github.com/stripe/stripe-php/pull/536) Add support for the `Person` resource -   [#541](https://github.com/stripe/stripe-php/pull/5",
+          "lines": [
+            1356,
+            1360
+          ],
+          "name": "6.20.0 - 2018-10-30",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#539](https://github.com/stripe/stripe-php/pull/539) Fix methods on `\\Stripe\\PaymentIntent` to properly pass arguments to the API.",
+          "lines": [
+            1361,
+            1364
+          ],
+          "name": "6.19.5 - 2018-10-17",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#534](https://github.com/stripe/stripe-php/pull/534) Fix PSR-4 autoloading for `\\Stripe\\FileUpload` class alias",
+          "lines": [
+            1365,
+            1368
+          ],
+          "name": "6.19.4 - 2018-10-11",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#530](https://github.com/stripe/stripe-php/pull/530) Add constants for `flow` (`FLOW_*`), `status` (`STATUS_*`) and `usage` (`USAGE_*`) on `\\Stri",
+          "lines": [
+            1369,
+            1372
+          ],
+          "name": "6.19.3 - 2018-10-09",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#531](https://github.com/stripe/stripe-php/pull/531) Store HTTP response headers in case-insensitive array",
+          "lines": [
+            1373,
+            1376
+          ],
+          "name": "6.19.2 - 2018-10-08",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#526](https://github.com/stripe/stripe-php/pull/526) Ignore null values in request parameters",
+          "lines": [
+            1377,
+            1380
+          ],
+          "name": "6.19.1 - 2018-09-25",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#523](https://github.com/stripe/stripe-php/pull/523) Add support for Stripe Terminal",
+          "lines": [
+            1381,
+            1384
+          ],
+          "name": "6.19.0 - 2018-09-24",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#520](https://github.com/stripe/stripe-php/pull/520) Rename `\\Stripe\\FileUpload` to `\\Stripe\\File`",
+          "lines": [
+            1385,
+            1388
+          ],
+          "name": "6.18.0 - 2018-09-24",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#522](https://github.com/stripe/stripe-php/pull/522) Fix warning when adding a new additional owner to an existing array",
+          "lines": [
+            1389,
+            1392
+          ],
+          "name": "6.17.2 - 2018-09-18",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#517](https://github.com/stripe/stripe-php/pull/517) Integer-index encode all sequential arrays",
+          "lines": [
+            1393,
+            1396
+          ],
+          "name": "6.17.1 - 2018-09-14",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#514](https://github.com/stripe/stripe-php/pull/514) Add support for reporting resources",
+          "lines": [
+            1397,
+            1400
+          ],
+          "name": "6.17.0 - 2018-09-05",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#509](https://github.com/stripe/stripe-php/pull/509) Add support for usage record summaries",
+          "lines": [
+            1401,
+            1404
+          ],
+          "name": "6.16.0 - 2018-08-23",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#504](https://github.com/stripe/stripe-php/pull/504) Add cancel support for topups",
+          "lines": [
+            1405,
+            1408
+          ],
+          "name": "6.15.0 - 2018-08-03",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#505](https://github.com/stripe/stripe-php/pull/505) Add support for file links",
+          "lines": [
+            1409,
+            1412
+          ],
+          "name": "6.14.0 - 2018-08-02",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#502](https://github.com/stripe/stripe-php/pull/502) Add `isDeleted()` method to `\\Stripe\\StripeObject`",
+          "lines": [
+            1413,
+            1416
+          ],
+          "name": "6.13.0 - 2018-07-31",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#501](https://github.com/stripe/stripe-php/pull/501) Add support for scheduled query runs (`\\Stripe\\Sigma\\ScheduledQueryRun`) for Sigma",
+          "lines": [
+            1417,
+            1420
+          ],
+          "name": "6.12.0 - 2018-07-28",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#500](https://github.com/stripe/stripe-php/pull/500) Add support for Stripe Issuing",
+          "lines": [
+            1421,
+            1424
+          ],
+          "name": "6.11.0 - 2018-07-26",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#498](https://github.com/stripe/stripe-php/pull/498) Internal improvements to the `\\Stripe\\ApiResource.classUrl()` method",
+          "lines": [
+            1425,
+            1428
+          ],
+          "name": "6.10.4 - 2018-07-19",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#497](https://github.com/stripe/stripe-php/pull/497) Use HTTP/2 only for HTTPS requests",
+          "lines": [
+            1429,
+            1432
+          ],
+          "name": "6.10.3 - 2018-07-16",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#494](https://github.com/stripe/stripe-php/pull/494) Enable HTTP/2 support",
+          "lines": [
+            1433,
+            1436
+          ],
+          "name": "6.10.2 - 2018-07-11",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#493](https://github.com/stripe/stripe-php/pull/493) Add PHPDoc for `auto_advance` on `\\Stripe\\Invoice`",
+          "lines": [
+            1437,
+            1440
+          ],
+          "name": "6.10.1 - 2018-07-10",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#488](https://github.com/stripe/stripe-php/pull/488) Add support for `$appPartnerId` to `Stripe::setAppInfo()`",
+          "lines": [
+            1441,
+            1444
+          ],
+          "name": "6.10.0 - 2018-06-28",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#487](https://github.com/stripe/stripe-php/pull/487) Add support for payment intents",
+          "lines": [
+            1445,
+            1448
+          ],
+          "name": "6.9.0 - 2018-06-28",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#486](https://github.com/stripe/stripe-php/pull/486) Make `Account.deauthorize()` return the `StripeObject` from the API",
+          "lines": [
+            1449,
+            1452
+          ],
+          "name": "6.8.2 - 2018-06-24",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#472](https://github.com/stripe/stripe-php/pull/472) Added phpDoc for `ApiRequestor` and others, especially regarding thrown errors",
+          "lines": [
+            1453,
+            1456
+          ],
+          "name": "6.8.1 - 2018-06-13",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#481](https://github.com/stripe/stripe-php/pull/481) Add new `\\Stripe\\Discount` and `\\Stripe\\OrderItem` classes, add more PHPDoc describing objec",
+          "lines": [
+            1457,
+            1460
+          ],
+          "name": "6.8.0 - 2018-06-13",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#480](https://github.com/stripe/stripe-php/pull/480) PHPDoc changes for API version 2018-05-21 and the addition of the new `CHARGE_EXPIRED` event",
+          "lines": [
+            1461,
+            1464
+          ],
+          "name": "6.7.4 - 2018-05-29",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#479](https://github.com/stripe/stripe-php/pull/479) Fix unnecessary traits on `\\Stripe\\InvoiceLineItem`",
+          "lines": [
+            1465,
+            1468
+          ],
+          "name": "6.7.3 - 2018-05-28",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#471](https://github.com/stripe/stripe-php/pull/471) Add `OBJECT_NAME` constant to all API resource classes, add `\\Stripe\\InvoiceLineItem` class",
+          "lines": [
+            1469,
+            1472
+          ],
+          "name": "6.7.2 - 2018-05-28",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#468](https://github.com/stripe/stripe-php/pull/468) Update fields in PHP docs for accuracy",
+          "lines": [
+            1473,
+            1476
+          ],
+          "name": "6.7.1 - 2018-05-13",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#466](https://github.com/stripe/stripe-php/pull/466) Add support for issuer fraud records",
+          "lines": [
+            1477,
+            1480
+          ],
+          "name": "6.7.0 - 2018-05-09",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#460](https://github.com/stripe/stripe-php/pull/460) Add support for flexible billing primitives",
+          "lines": [
+            1481,
+            1484
+          ],
+          "name": "6.6.0 - 2018-04-11",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#461](https://github.com/stripe/stripe-php/pull/461) Don't zero keys on non-`metadata` subobjects",
+          "lines": [
+            1485,
+            1488
+          ],
+          "name": "6.5.0 - 2018-04-05",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#458](https://github.com/stripe/stripe-php/pull/458) Add PHPDoc for `account` on `\\Stripe\\Event`",
+          "lines": [
+            1489,
+            1492
+          ],
+          "name": "6.4.2 - 2018-03-17",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#455](https://github.com/stripe/stripe-php/pull/455) Fix namespaces in PHPDoc -   [#456](https://github.com/stripe/stripe-php/pull/456) Fix names",
+          "lines": [
+            1493,
+            1497
+          ],
+          "name": "6.4.1 - 2018-03-02",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#453](https://github.com/stripe/stripe-php/pull/453) Add constants for `reason` (`REASON_*`) and `status` (`STATUS_*`) on `\\Stripe\\Dispute`",
+          "lines": [
+            1498,
+            1501
+          ],
+          "name": "6.4.0 - 2018-02-28",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#452](https://github.com/stripe/stripe-php/pull/452) Add PHPDoc for `amount_paid` and `amount_remaining` on `\\Stripe\\Invoice`",
+          "lines": [
+            1502,
+            1505
+          ],
+          "name": "6.3.2 - 2018-02-27",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#443](https://github.com/stripe/stripe-php/pull/443) Add event types as constants to `\\Stripe\\Event` class",
+          "lines": [
+            1506,
+            1509
+          ],
+          "name": "6.3.1 - 2018-02-26",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#450](https://github.com/stripe/stripe-php/pull/450) Add support for `code` attribute on all Stripe exceptions",
+          "lines": [
+            1510,
+            1513
+          ],
+          "name": "6.3.0 - 2018-02-23",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#440](https://github.com/stripe/stripe-php/pull/440) Add support for topups -   [#442](https://github.com/stripe/stripe-php/pull/442) Fix PHPDoc",
+          "lines": [
+            1514,
+            1518
+          ],
+          "name": "6.2.0 - 2018-02-21",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#435](https://github.com/stripe/stripe-php/pull/435) Fix header persistence on `Collection` objects -   [#436](https://github.com/stripe/stripe-p",
+          "lines": [
+            1519,
+            1523
+          ],
+          "name": "6.1.0 - 2018-02-12",
+          "type": "section"
+        },
+        {
+          "docstring": "Major version release. List of backwards incompatible changes to watch out for:",
+          "lines": [
+            1524,
+            1547
+          ],
+          "name": "6.0.0 - 2018-02-07",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#431](https://github.com/stripe/stripe-php/pull/431) Update PHPDoc @property tags for latest API version",
+          "lines": [
+            1548,
+            1551
+          ],
+          "name": "5.9.2 - 2018-02-07",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#427](https://github.com/stripe/stripe-php/pull/427) Add and update PHPDoc @property tags on all API resources",
+          "lines": [
+            1552,
+            1555
+          ],
+          "name": "5.9.1 - 2018-02-06",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#421](https://github.com/stripe/stripe-php/pull/421) Updated bundled CA certificates -   [#423](https://github.com/stripe/stripe-php/pull/423) Es",
+          "lines": [
+            1556,
+            1560
+          ],
+          "name": "5.9.0 - 2018-01-17",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#403](https://github.com/stripe/stripe-php/pull/403) Add `__debugInfo()` magic method to `StripeObject`",
+          "lines": [
+            1561,
+            1564
+          ],
+          "name": "5.8.0 - 2017-12-20",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#390](https://github.com/stripe/stripe-php/pull/390) Remove some unsupported API methods -   [#391](https://github.com/stripe/stripe-php/pull/391",
+          "lines": [
+            1565,
+            1570
+          ],
+          "name": "5.7.0 - 2017-11-28",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#386](https://github.com/stripe/stripe-php/pull/386) Support for exchange rates APIs",
+          "lines": [
+            1571,
+            1574
+          ],
+          "name": "5.6.0 - 2017-10-31",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#387](https://github.com/stripe/stripe-php/pull/387) Allow `personal_address_kana` and `personal_address_kanji` to be updated on an account",
+          "lines": [
+            1575,
+            1578
+          ],
+          "name": "5.5.1 - 2017-10-30",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#385](https://github.com/stripe/stripe-php/pull/385) Support for listing source transactions",
+          "lines": [
+            1579,
+            1582
+          ],
+          "name": "5.5.0 - 2017-10-27",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#383](https://github.com/stripe/stripe-php/pull/383) Add static methods to manipulate resources from parent -   `Account` gains methods for exter",
+          "lines": [
+            1583,
+            1590
+          ],
+          "name": "5.4.0 - 2017-10-24",
+          "type": "section"
+        },
+        {
+          "docstring": "-   [#378](https://github.com/stripe/stripe-php/pull/378) Rename source `delete` to `detach` (and deprecate the former)",
+          "lines": [
+            1591,
+            1594
+          ],
+          "name": "5.3.0 - 2017-10-11",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add PHPDoc for `Card`",
+          "lines": [
+            1595,
+            1598
+          ],
+          "name": "5.2.3 - 2017-09-27",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Fix deserialization mapping of `FileUpload` objects",
+          "lines": [
+            1599,
+            1602
+          ],
+          "name": "5.2.2 - 2017-09-20",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Serialized `shipping` nested attribute",
+          "lines": [
+            1603,
+            1606
+          ],
+          "name": "5.2.1 - 2017-09-14",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add support for `InvalidClient` OAuth error",
+          "lines": [
+            1607,
+            1610
+          ],
+          "name": "5.2.0 - 2017-08-29",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Allow `address_kana` and `address_kanji` to be updated for custom accounts",
+          "lines": [
+            1611,
+            1614
+          ],
+          "name": "5.1.3 - 2017-08-14",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Fix documented return type of `autoPagingIterator()` (was missing namespace)",
+          "lines": [
+            1615,
+            1618
+          ],
+          "name": "5.1.2 - 2017-08-01",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Fix order returns to use the right URL `/v1/order_returns`",
+          "lines": [
+            1619,
+            1622
+          ],
+          "name": "5.1.1 - 2017-07-03",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add support for OAuth",
+          "lines": [
+            1623,
+            1626
+          ],
+          "name": "5.1.0 - 2017-06-30",
+          "type": "section"
+        },
+        {
+          "docstring": "-   `pay` on invoice now takes params as well as opts",
+          "lines": [
+            1627,
+            1630
+          ],
+          "name": "5.0.0 - 2017-06-27",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add support for ephemeral keys",
+          "lines": [
+            1631,
+            1634
+          ],
+          "name": "4.13.0 - 2017-06-19",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Clients can implement `getUserAgentInfo()` to add additional user agent information",
+          "lines": [
+            1635,
+            1638
+          ],
+          "name": "4.12.0 - 2017-06-05",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Implement `Countable` for `AttachedObject` (`metadata` and `additional_owners`)",
+          "lines": [
+            1639,
+            1642
+          ],
+          "name": "4.11.0 - 2017-06-05",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add support for login links",
+          "lines": [
+            1643,
+            1646
+          ],
+          "name": "4.10.0 - 2017-05-25",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Fix docs to include arrays on `$id` parameter for retrieve methods",
+          "lines": [
+            1647,
+            1650
+          ],
+          "name": "4.9.1 - 2017-05-10",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Support for checking webhook signatures",
+          "lines": [
+            1651,
+            1654
+          ],
+          "name": "4.9.0 - 2017-04-28",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Allow nested field `payout_schedule` to be updated",
+          "lines": [
+            1655,
+            1658
+          ],
+          "name": "4.8.1 - 2017-04-24",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add `\\Stripe\\Stripe::setLogger()` to support an external PSR-3 compatible logger",
+          "lines": [
+            1659,
+            1662
+          ],
+          "name": "4.8.0 - 2017-04-20",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add support for payouts and recipient transfers",
+          "lines": [
+            1663,
+            1666
+          ],
+          "name": "4.7.0 - 2017-04-10",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Please see 4.7.0 instead (no-op release)",
+          "lines": [
+            1667,
+            1670
+          ],
+          "name": "4.6.0 - 2017-04-06",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Remove hard dependency on cURL",
+          "lines": [
+            1671,
+            1674
+          ],
+          "name": "4.5.1 - 2017-03-22",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Support for detaching sources from customers",
+          "lines": [
+            1675,
+            1678
+          ],
+          "name": "4.5.0 - 2017-03-20",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Correct handling of `owner` parameter when updating sources",
+          "lines": [
+            1679,
+            1682
+          ],
+          "name": "4.4.2 - 2017-02-27",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Correct the error check on a bad JSON decoding",
+          "lines": [
+            1683,
+            1686
+          ],
+          "name": "4.4.1 - 2017-02-24",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add support for updating sources",
+          "lines": [
+            1687,
+            1690
+          ],
+          "name": "4.4.0 - 2017-01-18",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add support for verifying sources",
+          "lines": [
+            1691,
+            1694
+          ],
+          "name": "4.3.0 - 2016-11-30",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add retrieve method for 3-D Secure resources",
+          "lines": [
+            1695,
+            1698
+          ],
+          "name": "4.2.0 - 2016-11-21",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add docblock with model properties for `Plan`",
+          "lines": [
+            1699,
+            1702
+          ],
+          "name": "4.1.1 - 2016-10-21",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Support for 403 status codes (permission denied)",
+          "lines": [
+            1703,
+            1706
+          ],
+          "name": "4.1.0 - 2016-10-18",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Fix transfer reversal materialization -   Fixes for some property definitions in docblocks",
+          "lines": [
+            1707,
+            1711
+          ],
+          "name": "4.0.1 - 2016-10-17",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Support for subscription items -   Drop attempt to force TLS 1.2: please note that this could be breaking if you're using old OS distributions or",
+          "lines": [
+            1712,
+            1716
+          ],
+          "name": "4.0.0 - 2016-09-28",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add support for Apple Pay domains",
+          "lines": [
+            1717,
+            1720
+          ],
+          "name": "3.23.0 - 2016-09-15",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add `Stripe::setAppInfo` to allow plugins to register user agent information",
+          "lines": [
+            1721,
+            1724
+          ],
+          "name": "3.22.0 - 2016-09-13",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add `Source` model for generic payment sources",
+          "lines": [
+            1725,
+            1728
+          ],
+          "name": "3.21.0 - 2016-08-25",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add `getDeclineCode` to card errors",
+          "lines": [
+            1729,
+            1732
+          ],
+          "name": "3.20.0 - 2016-08-08",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Opt requests directly into TLS 1.2 where OpenSSL >= 1.0.1 (see #277 for context)",
+          "lines": [
+            1733,
+            1736
+          ],
+          "name": "3.19.0 - 2016-07-29",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add new `STATUS_` constants for subscriptions",
+          "lines": [
+            1737,
+            1740
+          ],
+          "name": "3.18.0 - 2016-07-28",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Fix auto-paging iterator so that it plays nicely with `iterator_to_array`",
+          "lines": [
+            1741,
+            1744
+          ],
+          "name": "3.17.1 - 2016-07-28",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add field annotations to model classes for better editor hinting",
+          "lines": [
+            1745,
+            1748
+          ],
+          "name": "3.17.0 - 2016-07-14",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add `ThreeDSecure` model for 3-D secure payments",
+          "lines": [
+            1749,
+            1752
+          ],
+          "name": "3.16.0 - 2016-07-12",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add static `update` method to all resources that can be changed.",
+          "lines": [
+            1753,
+            1756
+          ],
+          "name": "3.15.0 - 2016-06-29",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Make sure that cURL never sends `Expects: 100-continue`, even on large request bodies",
+          "lines": [
+            1757,
+            1760
+          ],
+          "name": "3.14.3 - 2016-06-20",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add `inventory` under `SKU` to list of keys that have nested data and can be updated",
+          "lines": [
+            1761,
+            1764
+          ],
+          "name": "3.14.2 - 2016-06-03",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Fix some inconsistencies in PHPDoc",
+          "lines": [
+            1765,
+            1768
+          ],
+          "name": "3.14.1 - 2016-05-27",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add support for returning Relay orders",
+          "lines": [
+            1769,
+            1772
+          ],
+          "name": "3.14.0 - 2016-05-25",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add `list`, `create`, `update`, `retrieve`, and `delete` methods to the Subscription class",
+          "lines": [
+            1773,
+            1776
+          ],
+          "name": "3.13.0 - 2016-05-04",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Additional check on value arrays for some extra safety",
+          "lines": [
+            1777,
+            1780
+          ],
+          "name": "3.12.1 - 2016-04-07",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Fix bug `refreshFrom` on `StripeObject` would not take an `$opts` array -   Fix bug where `$opts` not passed to parent `save` method in `Account`",
+          "lines": [
+            1781,
+            1787
+          ],
+          "name": "3.12.0 - 2016-03-31",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Allow `CurlClient` to be initialized with default `CURLOPT_*` options",
+          "lines": [
+            1788,
+            1791
+          ],
+          "name": "3.11.0 - 2016-03-22",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Fix bug where request params and options were ignored in `ApplicationFee`'s `refund.`",
+          "lines": [
+            1792,
+            1795
+          ],
+          "name": "3.10.1 - 2016-03-22",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add `reject` on `Account` to support the new API feature",
+          "lines": [
+            1796,
+            1799
+          ],
+          "name": "3.10.0 - 2016-03-15",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Fix error when an object's metadata is set more than once",
+          "lines": [
+            1800,
+            1803
+          ],
+          "name": "3.9.2 - 2016-03-04",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Fix encoding behavior of nested arrays for requests (see #227)",
+          "lines": [
+            1804,
+            1807
+          ],
+          "name": "3.9.1 - 2016-02-24",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add automatic pagination mechanism with `autoPagingIterator()` -   Allow global account ID to be set with `Stripe::setAccountId()`",
+          "lines": [
+            1808,
+            1812
+          ],
+          "name": "3.9.0 - 2016-02-09",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add `CountrySpec` model for looking up country payment information",
+          "lines": [
+            1813,
+            1816
+          ],
+          "name": "3.8.0 - 2016-02-08",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Update bundled CA certs",
+          "lines": [
+            1817,
+            1820
+          ],
+          "name": "3.7.1 - 2016-02-01",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Support deleting Relay products and SKUs",
+          "lines": [
+            1821,
+            1824
+          ],
+          "name": "3.7.0 - 2016-01-27",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Allow configuration of HTTP client timeouts",
+          "lines": [
+            1825,
+            1828
+          ],
+          "name": "3.6.0 - 2016-01-05",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add a verification routine for external accounts",
+          "lines": [
+            1829,
+            1832
+          ],
+          "name": "3.5.0 - 2015-12-01",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Products, SKUs, and Orders -- https://stripe.com/relay",
+          "lines": [
+            1833,
+            1836
+          ],
+          "name": "3.4.0 - 2015-09-14",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add support for 429 Rate Limit response",
+          "lines": [
+            1837,
+            1840
+          ],
+          "name": "3.3.0 - 2015-09-11",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add refund listing and retrieval without an associated charge",
+          "lines": [
+            1841,
+            1844
+          ],
+          "name": "3.2.0 - 2015-08-17",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add dispute listing and retrieval -   Add support for manage account deletion",
+          "lines": [
+            1845,
+            1849
+          ],
+          "name": "3.1.0 - 2015-08-03",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Rename `\\Stripe\\Object` to `\\Stripe\\StripeObject` (PHP 7 compatibility) -   Rename `getCode` and `getParam` in exceptions to `getStripeCode` and `",
+          "lines": [
+            1850,
+            1856
+          ],
+          "name": "3.0.0 - 2015-07-28",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add request ID to all Stripe exceptions",
+          "lines": [
+            1857,
+            1860
+          ],
+          "name": "2.3.0 - 2015-07-06",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add support for Alipay accounts as sources -   Add support for bank accounts as sources (private beta) -   Add support for bank accounts and cards",
+          "lines": [
+            1861,
+            1866
+          ],
+          "name": "2.2.0 - 2015-06-01",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Fix CA certificate file path (thanks @lphilps & @matthewarkin)",
+          "lines": [
+            1867,
+            1870
+          ],
+          "name": "2.1.4 - 2015-05-13",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Fix to account updating to permit `tos_acceptance` and `personal_address` to be set properly -   Fix to Transfer reversal creation (thanks @neatne",
+          "lines": [
+            1871,
+            1876
+          ],
+          "name": "2.1.3 - 2015-05-12",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Remove SSL cert revokation checking (all pre-Heartbleed certs have expired) -   Bug fixes to account updating",
+          "lines": [
+            1877,
+            1881
+          ],
+          "name": "2.1.2 - 2015-04-10",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Support transfer reversals",
+          "lines": [
+            1882,
+            1885
+          ],
+          "name": "2.1.1 - 2015-02-27",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Support new API version (2015-02-18) -   Added Bitcoin Receiever update and delete actions -   Edited tests to prefer \"source\" over \"card\" as per",
+          "lines": [
+            1886,
+            1891
+          ],
+          "name": "2.1.0 - 2015-02-19",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Fix to fetching endpoints that use a non-default baseUrl (`FileUpload`)",
+          "lines": [
+            1892,
+            1895
+          ],
+          "name": "2.0.1 - 2015-02-16",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Bumped minimum version to 5.3.3 -   Switched to Stripe namespace instead of Stripe\\_ class name prefiexes (thanks @chadicus!) -   Switched tests t",
+          "lines": [
+            1896,
+            1904
+          ],
+          "name": "2.0.0 - 2015-02-14",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Support making bitcoin charges through BitcoinReceiver source object",
+          "lines": [
+            1905,
+            1908
+          ],
+          "name": "1.18.0 - 2015-01-21",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Adding support for creating file uploads.",
+          "lines": [
+            1909,
+            1912
+          ],
+          "name": "1.17.5 - 2014-12-23",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Saving objects fetched with a custom key now works (thanks @JustinHook & @jpasilan) -   Added methods for reporting charges as safe or fraudulent",
+          "lines": [
+            1913,
+            1917
+          ],
+          "name": "1.17.4 - 2014-12-15",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Better handling of HHVM support for SSL certificate blacklist checking.",
+          "lines": [
+            1918,
+            1921
+          ],
+          "name": "1.17.3 - 2014-11-06",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Coupons now are backed by a `Stripe_Coupon` instead of `Stripe_Object`, and support updating metadata -   Running operations (`create`, `retrieve`",
+          "lines": [
+            1922,
+            1926
+          ],
+          "name": "1.17.2 - 2014-09-23",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Requests now send Content-Type header",
+          "lines": [
+            1927,
+            1930
+          ],
+          "name": "1.17.1 - 2014-07-31",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Application Fee refunds now a list instead of array -   HHVM now works -   Small bug fixes (thanks @bencromwell & @fastest963) -   `__toString` no",
+          "lines": [
+            1931,
+            1937
+          ],
+          "name": "1.17.0 - 2014-07-29",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add metadata for refunds and disputes",
+          "lines": [
+            1938,
+            1941
+          ],
+          "name": "1.16.0 - 2014-06-17",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Support canceling transfers",
+          "lines": [
+            1942,
+            1945
+          ],
+          "name": "1.15.0 - 2014-05-28",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Support cards for recipients.",
+          "lines": [
+            1946,
+            1949
+          ],
+          "name": "1.14.1 - 2014-05-21",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Fix bug in account resource where `id` wasn't in the result",
+          "lines": [
+            1950,
+            1953
+          ],
+          "name": "1.13.1 - 2014-05-15",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add support for certificate blacklisting -   Update ca bundle -   Drop support for HHVM (Temporarily)",
+          "lines": [
+            1954,
+            1959
+          ],
+          "name": "1.13.0 - 2014-04-10",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add Stripe_RateLimitError for catching rate limit errors. -   Update to Zend coding style (thanks, @jpiasetz)",
+          "lines": [
+            1960,
+            1964
+          ],
+          "name": "1.12.0 - 2014-04-01",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add support for multiple subscriptions per customer",
+          "lines": [
+            1965,
+            1968
+          ],
+          "name": "1.11.0 - 2014-01-29",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add new ApplicationFee",
+          "lines": [
+            1969,
+            1972
+          ],
+          "name": "1.10.1 - 2013-12-02",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Fix a bug where a null nestable object causes warnings to fire.",
+          "lines": [
+            1973,
+            1976
+          ],
+          "name": "1.9.1 - 2013-11-08",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add support for metadata API.",
+          "lines": [
+            1977,
+            1980
+          ],
+          "name": "1.9.0 - 2013-10-16",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add support for closing disputes.",
+          "lines": [
+            1981,
+            1984
+          ],
+          "name": "1.8.4 - 2013-09-18",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add new Balance and BalanceTransaction",
+          "lines": [
+            1985,
+            1988
+          ],
+          "name": "1.8.3 - 2013-08-13",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add support for unsetting attributes by updating to NULL. Setting properties to a blank string is now an error.",
+          "lines": [
+            1989,
+            1992
+          ],
+          "name": "1.8.2 - 2013-08-12",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add support for multiple cards API (Stripe API version 2013-07-12: https://stripe.com/docs/upgrades#2013-07-05)",
+          "lines": [
+            1993,
+            1996
+          ],
+          "name": "1.8.1 - 2013-07-12",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Allow Transfers to be creatable -   Add new Recipient resource",
+          "lines": [
+            1997,
+            2001
+          ],
+          "name": "1.8.0 - 2013-04-11",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add 'id' to the list of permanent object attributes",
+          "lines": [
+            2002,
+            2005
+          ],
+          "name": "1.7.15 - 2013-02-21",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Don't re-encode strings that are already encoded in UTF-8. If you were previously using plan or coupon objects with UTF-8 IDs, they may have been",
+          "lines": [
+            2006,
+            2010
+          ],
+          "name": "1.7.14 - 2013-02-20",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add support for passing options when retrieving Stripe objects e.g., Stripe_Charge::retrieve(array(\"id\"=>\"foo\", \"expand\" => array(\"customer\"))); S",
+          "lines": [
+            2011,
+            2014
+          ],
+          "name": "1.7.13 - 2013-02-01",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add support for setting a Stripe API version override",
+          "lines": [
+            2015,
+            2018
+          ],
+          "name": "1.7.12 - 2013-01-15",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Version bump to cleanup constants and such (fix issue #26)",
+          "lines": [
+            2019,
+            2022
+          ],
+          "name": "1.7.11 - 2012-12-30",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add support for updating charge disputes. -   Fix bug preventing retrieval of null attributes",
+          "lines": [
+            2023,
+            2027
+          ],
+          "name": "1.7.10 - 2012-11-08",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Fix usage under autoloaders such as the one generated by composer (fix issue #22)",
+          "lines": [
+            2028,
+            2031
+          ],
+          "name": "1.7.9 - 2012-11-08",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add support for creating invoices. -   Add support for new invoice lines return format -   Add support for new list objects",
+          "lines": [
+            2032,
+            2037
+          ],
+          "name": "1.7.8 - 2012-10-30",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Get all of the various version numbers in the repo in sync (no other changes)",
+          "lines": [
+            2038,
+            2041
+          ],
+          "name": "1.7.7 - 2012-09-14",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add update and pay methods to Invoice resource",
+          "lines": [
+            2042,
+            2045
+          ],
+          "name": "1.7.6 - 2012-08-31",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Change internal function names so that Stripe_SingletonApiRequest is E_STRICT-clean (github issue #16)",
+          "lines": [
+            2046,
+            2049
+          ],
+          "name": "1.7.5 - 2012-08-23",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Bugfix so that Stripe objects (e.g. Customer, Charge objects) used in API calls are transparently converted to their object IDs",
+          "lines": [
+            2050,
+            2053
+          ],
+          "name": "1.7.4 - 2012-08-21",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add new Account resource",
+          "lines": [
+            2054,
+            2057
+          ],
+          "name": "1.7.3 - 2012-08-15",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Make clearer that you should be including lib/Stripe.php, not test/Stripe.php (github issue #14)",
+          "lines": [
+            2058,
+            2061
+          ],
+          "name": "1.7.2 - 2012-06-26",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Add missing argument to Stripe_InvalidRequestError constructor in Stripe_ApiResource::instanceUrl. Fixes a warning when Stripe_ApiResource::instan",
+          "lines": [
+            2062,
+            2065
+          ],
+          "name": "1.7.1 - 2012-05-24",
+          "type": "section"
+        },
+        {
+          "docstring": "-   Support Composer and Packagist (github issue #9) -   Add new deleteDiscount method to Stripe_Customer -   Add new Transfer resource -   Switch fro",
+          "lines": [
+            2066,
+            2073
+          ],
+          "name": "1.7.0 - 2012-05-17",
+          "type": "section"
+        }
+      ]
+    },
+    "README.md": {
+      "hash": "32e65cb9914f",
+      "indexed_at": "2026-01-20T04:48:29.223163+00:00",
+      "language": "markdown",
+      "lines": 298,
+      "symbols": [
+        {
+          "docstring": "PHP 5.6.0 and later.",
+          "lines": [
+            15,
+            18
+          ],
+          "name": "Requirements",
+          "type": "section"
+        },
+        {
+          "docstring": "You can install the bindings via [Composer](http://getcomposer.org/). Run the following command:",
+          "lines": [
+            19,
+            32
+          ],
+          "name": "Composer",
+          "type": "section"
+        },
+        {
+          "docstring": "If you do not wish to use Composer, you can download the [latest release](https://github.com/stripe/stripe-php/releases). Then, to use the bindings, i",
+          "lines": [
+            33,
+            40
+          ],
+          "name": "Manual Installation",
+          "type": "section"
+        },
+        {
+          "docstring": "The bindings require the following extensions in order to work properly:",
+          "lines": [
+            41,
+            50
+          ],
+          "name": "Dependencies",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "You can continue to use the legacy integration patterns used prior to version [7.33.0](https://github.com/stripe/stripe-php/blob/master/CHANGELOG.md#7",
+              "lines": [
+                65,
+                68
+              ],
+              "name": "Client/service patterns vs legacy patterns",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "Simple usage looks like:",
+          "lines": [
+            51,
+            68
+          ],
+          "name": "Getting Started",
+          "type": "section"
+        },
+        {
+          "docstring": "See the [PHP API docs](https://stripe.com/docs/api/?lang=php#intro).",
+          "lines": [
+            69,
+            74
+          ],
+          "name": "Documentation",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "If you are using PHP 5.4 or 5.5, you should consider upgrading your environment as those versions have been past end of life since September 2015 and",
+              "lines": [
+                77,
+                81
+              ],
+              "name": "PHP 5.4 & 5.5",
+              "type": "subsection"
+            },
+            {
+              "docstring": "If you are using PHP 5.3, you should upgrade your environment as this version has been past end of life since August 2014. Otherwise, you can download",
+              "lines": [
+                82,
+                86
+              ],
+              "name": "PHP 5.3",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            75,
+            86
+          ],
+          "name": "Legacy Version Support",
+          "type": "section"
+        },
+        {
+          "docstring": "> **Note** > We do not recommend decreasing the timeout for non-read-only calls (e.g. charge creation), since even if you locally timeout, the request",
+          "lines": [
+            87,
+            108
+          ],
+          "name": "Custom Request Timeouts",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "The library does minimal logging, but it can be configured with a [`PSR-3` compatible logger][psr3] so that messages end up there instead of `error_lo",
+              "lines": [
+                122,
+                131
+              ],
+              "name": "Configuring a Logger",
+              "type": "subsection"
+            },
+            {
+              "docstring": "You can access the data from the last API response on any object via `getLastResponse()`.",
+              "lines": [
+                132,
+                142
+              ],
+              "name": "Accessing response data",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Stripe's API now requires that [all connections use TLS 1.2](https://stripe.com/blog/upgrading-tls). Some systems (most notably some older CentOS and",
+              "lines": [
+                143,
+                153
+              ],
+              "name": "SSL / TLS compatibility issues",
+              "type": "subsection"
+            },
+            {
+              "docstring": "For apps that need to use multiple keys during the lifetime of a process, like one that uses [Stripe Connect][connect], it's also possible to set a pe",
+              "lines": [
+                154,
+                171
+              ],
+              "name": "Per-request Configuration",
+              "type": "subsection"
+            },
+            {
+              "docstring": "By default, the library will use its own internal bundle of known CA certificates, but it's possible to configure your own:",
+              "lines": [
+                172,
+                180
+              ],
+              "name": "Configuring CA Bundles",
+              "type": "subsection"
+            },
+            {
+              "docstring": "The library can be configured to automatically retry requests that fail due to an intermittent network problem:",
+              "lines": [
+                181,
+                192
+              ],
+              "name": "Configuring Automatic Retries",
+              "type": "subsection"
+            },
+            {
+              "docstring": "By default, the library sends request latency telemetry to Stripe. These numbers help Stripe improve the overall latency of its API for all users.",
+              "lines": [
+                193,
+                203
+              ],
+              "name": "Request latency telemetry",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Stripe has features in the beta phase that can be accessed via the beta version of this package. We would love for you to try these and share feedback",
+              "lines": [
+                204,
+                225
+              ],
+              "name": "Beta SDKs",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "Need to set a proxy for your requests? Pass in the requisite `CURLOPT_*` array to the CurlClient constructor, using the same syntax as `curl_stopt_arr",
+          "lines": [
+            109,
+            225
+          ],
+          "name": "Custom cURL Options (e.g. proxies)",
+          "type": "section"
+        },
+        {
+          "docstring": "New features and bug fixes are released on the latest major version of the Stripe PHP library. If you are on an older major version, we recommend that",
+          "lines": [
+            226,
+            229
+          ],
+          "name": "Support",
+          "type": "section"
+        },
+        {
+          "docstring": "Get [Composer][composer]. For example, on Mac OS:",
+          "lines": [
+            230,
+            276
+          ],
+          "name": "Development",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "See the \"SSL / TLS compatibility issues\" paragraph above for full context. If you want to ensure that your plugin can be used on all systems, you shou",
+              "lines": [
+                287,
+                299
+              ],
+              "name": "SSL / TLS configuration option",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "Are you writing a plugin that integrates Stripe and embeds our library? Then please use the `setAppInfo` function to identify your plugin. For example",
+          "lines": [
+            277,
+            299
+          ],
+          "name": "Attention plugin developers",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.118780+00:00",
+  "version": "1.0"
+}

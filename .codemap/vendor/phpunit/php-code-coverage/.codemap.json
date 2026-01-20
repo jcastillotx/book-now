@@ -1,0 +1,1437 @@
+{
+  "directory": "vendor/phpunit/php-code-coverage",
+  "files": {
+    "ChangeLog-9.2.md": {
+      "hash": "17d2b7e04325",
+      "indexed_at": "2026-01-20T04:50:00.115112+00:00",
+      "language": "markdown",
+      "lines": 584,
+      "symbols": [
+        {
+          "children": [
+            {
+              "docstring": "* Updated dependencies (so that users that install using Composer's `--prefer-lowest` CLI option also get recent versions)",
+              "lines": [
+                7,
+                10
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            5,
+            10
+          ],
+          "name": "[9.2.32] - 2024-08-22",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Do not use implicitly nullable parameters",
+              "lines": [
+                13,
+                16
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            11,
+            16
+          ],
+          "name": "[9.2.31] - 2024-03-02",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* This component is now compatible with `nikic/php-parser` 5.0",
+              "lines": [
+                19,
+                22
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            17,
+            22
+          ],
+          "name": "[9.2.30] - 2023-12-22",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#1012](https://github.com/sebastianbergmann/php-code-coverage/issues/1012): Cobertura report pulls functions from report scope, not the individual",
+              "lines": [
+                25,
+                28
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            23,
+            28
+          ],
+          "name": "[9.2.29] - 2023-09-19",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#1011](https://github.com/sebastianbergmann/php-code-coverage/pull/1011): Avoid serialization of cache data in PHP report",
+              "lines": [
+                31,
+                34
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            29,
+            34
+          ],
+          "name": "[9.2.28] - 2023-09-12",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* The result of `CodeCoverage::getReport()` is now cached",
+              "lines": [
+                37,
+                40
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* Static analysis cache keys do not include configuration settings that affect source code parsing * The Clover, Cobertura, Crap4j, and PHP report wri",
+              "lines": [
+                41,
+                45
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            35,
+            45
+          ],
+          "name": "[9.2.27] - 2023-07-26",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Improved the legend on the file pages of the HTML code coverage report",
+              "lines": [
+                48,
+                51
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            46,
+            51
+          ],
+          "name": "[9.2.26] - 2023-03-06",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#981](https://github.com/sebastianbergmann/php-code-coverage/issues/981): `CodeUnitFindingVisitor` does not support DNF types",
+              "lines": [
+                54,
+                57
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            52,
+            57
+          ],
+          "name": "[9.2.25] - 2023-02-25",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#970](https://github.com/sebastianbergmann/php-code-coverage/issues/970): CSS and JavaScript assets are now referenced using `?v=%s` URLs in the HT",
+              "lines": [
+                60,
+                63
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            58,
+            63
+          ],
+          "name": "[9.2.24] - 2023-01-26",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#971](https://github.com/sebastianbergmann/php-code-coverage/issues/971): PHP report does not handle serialized code coverage data larger than 2 GB",
+              "lines": [
+                66,
+                70
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            64,
+            70
+          ],
+          "name": "[9.2.23] - 2022-12-28",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#969](https://github.com/sebastianbergmann/php-code-coverage/pull/969): Fixed identifying line with `throw` as executable",
+              "lines": [
+                73,
+                76
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            71,
+            76
+          ],
+          "name": "[9.2.22] - 2022-12-18",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#964](https://github.com/sebastianbergmann/php-code-coverage/pull/964): Changed how executable lines are identified",
+              "lines": [
+                79,
+                82
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            77,
+            82
+          ],
+          "name": "[9.2.21] - 2022-12-14",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#960](https://github.com/sebastianbergmann/php-code-coverage/issues/960): New body font-size is way too big",
+              "lines": [
+                85,
+                88
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            83,
+            88
+          ],
+          "name": "[9.2.20] - 2022-12-13",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#949](https://github.com/sebastianbergmann/php-code-coverage/pull/949): Various issues related to identifying executable lines",
+              "lines": [
+                91,
+                94
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* Tweaked CSS for HTML report * Updated bundled CSS/JavaScript components used for HTML report: Bootstrap 4.6.2 and jQuery 3.6.1",
+              "lines": [
+                95,
+                99
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            89,
+            99
+          ],
+          "name": "[9.2.19] - 2022-11-18",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#935](https://github.com/sebastianbergmann/php-code-coverage/pull/935): Cobertura package name attribute is always empty * [#946](https://github.co",
+              "lines": [
+                102,
+                106
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            100,
+            106
+          ],
+          "name": "[9.2.18] - 2022-10-27",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#928](https://github.com/sebastianbergmann/php-code-coverage/pull/928): Avoid unnecessary `is_file()` calls * [#931](https://github.com/sebastianbe",
+              "lines": [
+                109,
+                113
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* [#926](https://github.com/sebastianbergmann/php-code-coverage/pull/926): Static Analysis cache does not work with `open_basedir`",
+              "lines": [
+                114,
+                117
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            107,
+            117
+          ],
+          "name": "[9.2.17] - 2022-08-30",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#926](https://github.com/sebastianbergmann/php-code-coverage/issues/926): File view has wrong colouring for the first column",
+              "lines": [
+                120,
+                123
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            118,
+            123
+          ],
+          "name": "[9.2.16] - 2022-08-20",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#885](https://github.com/sebastianbergmann/php-code-coverage/issues/885): Files that have only `\\r` (CR, 0x0d) EOL characters are not handled corre",
+              "lines": [
+                126,
+                130
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            124,
+            130
+          ],
+          "name": "[9.2.15] - 2022-03-07",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#904](https://github.com/sebastianbergmann/php-code-coverage/issues/904): Lines of code containing the `match` keyword were not recognized as execu",
+              "lines": [
+                133,
+                137
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            131,
+            137
+          ],
+          "name": "[9.2.14] - 2022-02-28",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* The contents of the static analysis sourcecode files is now used to generate the static analysis cache version identifier",
+              "lines": [
+                140,
+                143
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* Reverted rename of `SebastianBergmann\\CodeCoverage\\ProcessedCodeCoverageData` to `SebastianBergmann\\CodeCoverage\\Data\\ProcessedCodeCoverageData` (th",
+              "lines": [
+                144,
+                149
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            138,
+            149
+          ],
+          "name": "[9.2.13] - 2022-02-23",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#898](https://github.com/sebastianbergmann/php-code-coverage/pull/898): Use content hash instead of `filemtime()` to determine cache hit/miss",
+              "lines": [
+                152,
+                155
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* [#736](https://github.com/sebastianbergmann/php-code-coverage/issues/736): HTML report generator allows invalid values for low upper bound and high",
+              "lines": [
+                156,
+                161
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            150,
+            161
+          ],
+          "name": "[9.2.12] - 2022-02-23 [YANKED]",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* `CoveredFileAnalyser` and `UncoveredFileAnalyser` have been combined to `FileAnalyser` * Updated bundled CSS/JavaScript components used for HTML rep",
+              "lines": [
+                164,
+                168
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* [#889](https://github.com/sebastianbergmann/php-code-coverage/issues/889): Code Coverage depends on autoload order",
+              "lines": [
+                169,
+                172
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            162,
+            172
+          ],
+          "name": "[9.2.11] - 2022-02-18",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#887](https://github.com/sebastianbergmann/php-code-coverage/issues/887): Document return type of `CodeUnitFindingVisitor::enterNode()` so that Sym",
+              "lines": [
+                175,
+                178
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            173,
+            178
+          ],
+          "name": "[9.2.10] - 2021-12-05",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#882](https://github.com/sebastianbergmann/php-code-coverage/issues/882): PHPUnit 9.2.8 has wrong version number",
+              "lines": [
+                181,
+                184
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            179,
+            184
+          ],
+          "name": "[9.2.9] - 2021-11-19",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#866](https://github.com/sebastianbergmann/php-code-coverage/issues/866): `CodeUnitFindingVisitor` does not handle `enum` type introduced in PHP 8.",
+              "lines": [
+                187,
+                192
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            185,
+            192
+          ],
+          "name": "[9.2.8] - 2021-10-30",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#860](https://github.com/sebastianbergmann/php-code-coverage/pull/860): Empty value for `XDEBUG_MODE` environment variable is not handled correctly",
+              "lines": [
+                195,
+                198
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            193,
+            198
+          ],
+          "name": "[9.2.7] - 2021-09-17",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#846](https://github.com/sebastianbergmann/php-code-coverage/issues/846): Method name should not appear in the method signature attribute of Cobert",
+              "lines": [
+                201,
+                204
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            199,
+            204
+          ],
+          "name": "[9.2.6] - 2021-03-28",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#831](https://github.com/sebastianbergmann/php-code-coverage/issues/831): Files that do not contain a newline are not handled correctly",
+              "lines": [
+                207,
+                210
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            205,
+            210
+          ],
+          "name": "[9.2.5] - 2020-11-28",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#834](https://github.com/sebastianbergmann/php-code-coverage/issues/834): Support `XDEBUG_MODE` environment variable",
+              "lines": [
+                213,
+                216
+              ],
+              "name": "Added",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            211,
+            216
+          ],
+          "name": "[9.2.4] - 2020-11-27",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Bumped required version of `nikic/php-parser`",
+              "lines": [
+                219,
+                222
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            217,
+            222
+          ],
+          "name": "[9.2.3] - 2020-10-30",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#820](https://github.com/sebastianbergmann/php-code-coverage/issues/820): Hidden dependency on PHPUnit",
+              "lines": [
+                225,
+                228
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            223,
+            228
+          ],
+          "name": "[9.2.2] - 2020-10-28",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* `SebastianBergmann\\CodeCoverage\\Exception` now correctly extends `\\Throwable`",
+              "lines": [
+                231,
+                234
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            229,
+            234
+          ],
+          "name": "[9.2.1] - 2020-10-26",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#812](https://github.com/sebastianbergmann/php-code-coverage/pull/812): Support for Cobertura XML report format",
+              "lines": [
+                237,
+                240
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* Reduced the number of I/O operations performed by the static analysis cache",
+              "lines": [
+                241,
+                244
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            235,
+            244
+          ],
+          "name": "[9.2.0] - 2020-10-02",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#811](https://github.com/sebastianbergmann/php-code-coverage/issues/811): `T_FN` constant is used on PHP 7.3 where it is not available",
+              "lines": [
+                247,
+                250
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            245,
+            250
+          ],
+          "name": "[9.1.11] - 2020-09-19",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* `SebastianBergmann\\CodeCoverage\\Driver\\Selector::forLineCoverage()` and `SebastianBergmann\\CodeCoverage\\Driver\\Selector::forLineAndPathCoverage()` h",
+              "lines": [
+                253,
+                256
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* [#810](https://github.com/sebastianbergmann/php-code-coverage/issues/810): `SebastianBergmann\\CodeCoverage\\Driver\\Driver::forLineCoverage()` and `Se",
+              "lines": [
+                257,
+                260
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* `SebastianBergmann\\CodeCoverage\\Driver\\Driver::forLineCoverage()` and `SebastianBergmann\\CodeCoverage\\Driver\\Driver::forLineAndPathCoverage()` are n",
+              "lines": [
+                261,
+                264
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            251,
+            264
+          ],
+          "name": "[9.1.10] - 2020-09-18",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#808](https://github.com/sebastianbergmann/php-code-coverage/issues/808): `PHP Warning: Use of undefined constant T_MATCH`",
+              "lines": [
+                267,
+                270
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            265,
+            270
+          ],
+          "name": "[9.1.9] - 2020-09-15",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#800](https://github.com/sebastianbergmann/php-code-coverage/pull/800): All files on the inclusion list are no longer loaded when `SebastianBergman",
+              "lines": [
+                273,
+                276
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* [#799](https://github.com/sebastianbergmann/php-code-coverage/issues/799): Uncovered new line at end of file",
+              "lines": [
+                277,
+                280
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            271,
+            280
+          ],
+          "name": "[9.1.8] - 2020-09-07",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Fixed regressions introduced in versions 9.1.5 and 9.1.6",
+              "lines": [
+                283,
+                286
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            281,
+            286
+          ],
+          "name": "[9.1.7] - 2020-09-03",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#799](https://github.com/sebastianbergmann/php-code-coverage/issues/799): Uncovered new line at end of file * [#803](https://github.com/sebastianbe",
+              "lines": [
+                289,
+                293
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            287,
+            293
+          ],
+          "name": "[9.1.6] - 2020-08-31",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#800](https://github.com/sebastianbergmann/php-code-coverage/pull/800): All files on the inclusion list are no longer loaded when `SebastianBergman",
+              "lines": [
+                296,
+                299
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* [#797](https://github.com/sebastianbergmann/php-code-coverage/pull/797): Class name is wrongly removed from namespace name",
+              "lines": [
+                300,
+                303
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            294,
+            303
+          ],
+          "name": "[9.1.5] - 2020-08-27",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#793](https://github.com/sebastianbergmann/php-code-coverage/issues/793): Lines with `::class` constant are not covered",
+              "lines": [
+                306,
+                309
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            304,
+            309
+          ],
+          "name": "[9.1.4] - 2020-08-13",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Changed PHP-Parser usage to parse sourcecode according to the PHP version we are currently running on instead of using emulative lexing",
+              "lines": [
+                312,
+                315
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            310,
+            315
+          ],
+          "name": "[9.1.3] - 2020-08-10",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#791](https://github.com/sebastianbergmann/php-code-coverage/pull/791): Cache Warmer does not warm all caches",
+              "lines": [
+                318,
+                321
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            316,
+            321
+          ],
+          "name": "[9.1.2] - 2020-08-10",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Added `SebastianBergmann\\CodeCoverage::cacheDirectory()` method for querying where the cache writes its files",
+              "lines": [
+                324,
+                327
+              ],
+              "name": "Added",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            322,
+            327
+          ],
+          "name": "[9.1.1] - 2020-08-10",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Implemented a persistent cache for information gathered using PHP-Parser based static analysis (hereinafter referred to as \"cache\") * Added `Sebasti",
+              "lines": [
+                330,
+                337
+              ],
+              "name": "Added",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            328,
+            337
+          ],
+          "name": "[9.1.0] - 2020-08-10",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#761](https://github.com/sebastianbergmann/php-code-coverage/pull/761): Support for Branch Coverage and Path Coverage * Added `SebastianBergmann\\Co",
+              "lines": [
+                340,
+                347
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* [#746](https://github.com/sebastianbergmann/php-code-coverage/pull/746): Remove some ancient workarounds for very old Xdebug versions * [#747](https",
+              "lines": [
+                348,
+                366
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* [#700](https://github.com/sebastianbergmann/php-code-coverage/pull/700): Throw an exception if code coverage fails to write to disk",
+              "lines": [
+                367,
+                370
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* `SebastianBergmann\\CodeCoverage\\CodeCoverage::setCacheTokens()` and `SebastianBergmann\\CodeCoverage\\CodeCoverage::getCacheTokens()` have been remove",
+              "lines": [
+                371,
+                386
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            338,
+            386
+          ],
+          "name": "[9.0.0] - 2020-08-07",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#750](https://github.com/sebastianbergmann/php-code-coverage/pull/750): Inconsistent handling of namespaces * [#751](https://github.com/sebastianbe",
+              "lines": [
+                389,
+                394
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            387,
+            394
+          ],
+          "name": "[8.0.2] - 2020-05-23",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#731](https://github.com/sebastianbergmann/php-code-coverage/pull/731): Confusing footer in the HTML report",
+              "lines": [
+                397,
+                400
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            395,
+            400
+          ],
+          "name": "[8.0.1] - 2020-02-19",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#721](https://github.com/sebastianbergmann/php-code-coverage/pull/721): Workaround for PHP bug [#79191](https://bugs.php.net/bug.php?id=79191)",
+              "lines": [
+                403,
+                406
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* This component is no longer supported on PHP 7.2",
+              "lines": [
+                407,
+                410
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            401,
+            410
+          ],
+          "name": "[8.0.0] - 2020-02-07",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Bumped required version of php-token-stream",
+              "lines": [
+                413,
+                416
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            411,
+            416
+          ],
+          "name": "[7.0.15] - 2021-07-26",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#837](https://github.com/sebastianbergmann/php-code-coverage/issues/837): Allow version 4 of php-token-stream",
+              "lines": [
+                419,
+                422
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            417,
+            422
+          ],
+          "name": "[7.0.14] - 2020-12-02",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Changed PHP version constraint in `composer.json` from `^7.2` to `>=7.2` to allow installation of this version of this library on PHP 8. However, th",
+              "lines": [
+                425,
+                428
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            423,
+            428
+          ],
+          "name": "[7.0.13] - 2020-11-30",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#834](https://github.com/sebastianbergmann/php-code-coverage/issues/834): Support `XDEBUG_MODE` environment variable",
+              "lines": [
+                431,
+                434
+              ],
+              "name": "Added",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            429,
+            434
+          ],
+          "name": "[7.0.12] - 2020-11-27",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Support for Xdebug 3",
+              "lines": [
+                437,
+                440
+              ],
+              "name": "Added",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            435,
+            440
+          ],
+          "name": "[7.0.11] - 2020-11-27",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#710](https://github.com/sebastianbergmann/php-code-coverage/pull/710): Code Coverage does not work in PhpStorm",
+              "lines": [
+                443,
+                446
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            441,
+            446
+          ],
+          "name": "[7.0.10] - 2019-11-20",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#709](https://github.com/sebastianbergmann/php-code-coverage/pull/709): Prioritize PCOV over Xdebug",
+              "lines": [
+                449,
+                452
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            447,
+            452
+          ],
+          "name": "[7.0.9] - 2019-11-20",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Updated bundled CSS/JavaScript components used for HTML report: Bootstrap 4.3.1, jQuery 3.4.1, and popper.js 1.15.0",
+              "lines": [
+                455,
+                458
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            453,
+            458
+          ],
+          "name": "[7.0.8] - 2019-09-17",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Bumped required version of php-token-stream",
+              "lines": [
+                461,
+                464
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            459,
+            464
+          ],
+          "name": "[7.0.7] - 2019-07-25",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Bumped required version of php-token-stream",
+              "lines": [
+                467,
+                470
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            465,
+            470
+          ],
+          "name": "[7.0.6] - 2019-07-08",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#681](https://github.com/sebastianbergmann/php-code-coverage/pull/681): `use function` statements are not ignored",
+              "lines": [
+                473,
+                476
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            471,
+            476
+          ],
+          "name": "[7.0.5] - 2019-06-06",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#682](https://github.com/sebastianbergmann/php-code-coverage/pull/682): Code that is not executed is reported as being executed when using PCOV",
+              "lines": [
+                479,
+                482
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            477,
+            482
+          ],
+          "name": "[7.0.4] - 2019-05-29",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#671](https://github.com/sebastianbergmann/php-code-coverage/issues/671): `TypeError` when directory name is a number",
+              "lines": [
+                485,
+                488
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            483,
+            488
+          ],
+          "name": "[7.0.3] - 2019-02-26",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Updated bundled CSS/JavaScript components used for HTML report: Bootstrap 4.3.0",
+              "lines": [
+                491,
+                494
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* [#667](https://github.com/sebastianbergmann/php-code-coverage/pull/667): `TypeError` in PHP reporter",
+              "lines": [
+                495,
+                498
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            489,
+            498
+          ],
+          "name": "[7.0.2] - 2019-02-15",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#664](https://github.com/sebastianbergmann/php-code-coverage/issues/664): `TypeError` when whitelisted file does not exist",
+              "lines": [
+                501,
+                504
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            499,
+            504
+          ],
+          "name": "[7.0.1] - 2019-02-01",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#663](https://github.com/sebastianbergmann/php-code-coverage/pull/663): Support for PCOV",
+              "lines": [
+                507,
+                510
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* [#654](https://github.com/sebastianbergmann/php-code-coverage/issues/654): HTML report fails to load assets * [#655](https://github.com/sebastianber",
+              "lines": [
+                511,
+                515
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* This component is no longer supported on PHP 7.1",
+              "lines": [
+                516,
+                585
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            505,
+            585
+          ],
+          "name": "[7.0.0] - 2019-02-01",
+          "type": "section"
+        }
+      ]
+    },
+    "README.md": {
+      "hash": "01eeabffe671",
+      "indexed_at": "2026-01-20T04:49:58.614367+00:00",
+      "language": "markdown",
+      "lines": 48,
+      "symbols": [
+        {
+          "docstring": "You can add this library as a local, per-project dependency to your project using [Composer](https://getcomposer.org/):",
+          "lines": [
+            9,
+            22
+          ],
+          "name": "Installation",
+          "type": "section"
+        },
+        {
+          "lines": [
+            23,
+            49
+          ],
+          "name": "Usage",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.136977+00:00",
+  "version": "1.0"
+}

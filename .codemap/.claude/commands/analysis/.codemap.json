@@ -1,0 +1,451 @@
+{
+  "directory": ".claude/commands/analysis",
+  "files": {
+    "COMMAND_COMPLIANCE_REPORT.md": {
+      "hash": "8e72f8fedc88",
+      "indexed_at": "2026-01-20T04:50:25.517500+00:00",
+      "language": "markdown",
+      "lines": 54,
+      "symbols": [
+        {
+          "docstring": "Reviewed all command files in `.claude/commands/analysis/` directory to ensure proper usage of: - `mcp__claude-flow__*` tools (preferred) - `npx claud",
+          "lines": [
+            3,
+            8
+          ],
+          "name": "Overview",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "**Status**: \u2705 Updated **Changes Made**: - Replaced `npx ruv-swarm hook session-end --export-metrics` with proper MCP tool call - Updated to: `Tool: mc",
+              "lines": [
+                11,
+                28
+              ],
+              "name": "1. token-efficiency.md",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Status**: \u2705 Compliant (No changes needed) **Reason**: Already uses proper `mcp__claude-flow__task_results` tool format",
+              "lines": [
+                29,
+                32
+              ],
+              "name": "2. performance-bottlenecks.md",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            9,
+            32
+          ],
+          "name": "Files Reviewed",
+          "type": "section"
+        },
+        {
+          "docstring": "- **Total files reviewed**: 2 - **Files updated**: 1 - **Files already compliant**: 1 - **Compliance rate after updates**: 100%",
+          "lines": [
+            33,
+            39
+          ],
+          "name": "Summary",
+          "type": "section"
+        },
+        {
+          "docstring": "1. **MCP Tool Usage**: All direct tool calls now use `mcp__claude-flow__*` format 2. **Parameter Format**: JSON parameters properly structured 3. **Co",
+          "lines": [
+            40,
+            46
+          ],
+          "name": "Compliance Patterns Enforced",
+          "type": "section"
+        },
+        {
+          "docstring": "1. All analysis commands now follow the proper pattern 2. No direct bash commands or implementation calls remain 3. Token usage analysis properly inte",
+          "lines": [
+            47,
+            54
+          ],
+          "name": "Recommendations",
+          "type": "section"
+        }
+      ]
+    },
+    "README.md": {
+      "hash": "e65e139f0769",
+      "indexed_at": "2026-01-20T04:50:25.518093+00:00",
+      "language": "markdown",
+      "lines": 9,
+      "symbols": [
+        {
+          "docstring": "- [bottleneck-detect](./bottleneck-detect.md) - [token-usage](./token-usage.md) - [performance-report](./performance-report.md)",
+          "lines": [
+            5,
+            10
+          ],
+          "name": "Available Commands",
+          "type": "section"
+        }
+      ]
+    },
+    "bottleneck-detect.md": {
+      "hash": "2873e9bdeb14",
+      "indexed_at": "2026-01-20T04:50:25.517285+00:00",
+      "language": "markdown",
+      "lines": 162,
+      "symbols": [
+        {
+          "lines": [
+            5,
+            10
+          ],
+          "name": "Usage",
+          "type": "section"
+        },
+        {
+          "docstring": "- `--swarm-id, -s <id>` - Analyze specific swarm (default: current) - `--time-range, -t <range>` - Analysis period: 1h, 24h, 7d, all (default: 1h) - `",
+          "lines": [
+            11,
+            18
+          ],
+          "name": "Options",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                21,
+                26
+              ],
+              "name": "Basic bottleneck detection",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                27,
+                32
+              ],
+              "name": "Analyze specific swarm",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                33,
+                38
+              ],
+              "name": "Last 24 hours with export",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                39,
+                44
+              ],
+              "name": "Auto-fix detected issues",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            19,
+            44
+          ],
+          "name": "Examples",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Message queue delays - Agent response times - Coordination overhead - Memory access patterns",
+              "lines": [
+                47,
+                53
+              ],
+              "name": "Communication Bottlenecks",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Task completion times - Agent utilization rates - Parallel execution efficiency - Resource contention",
+              "lines": [
+                54,
+                60
+              ],
+              "name": "Processing Bottlenecks",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Cache hit rates - Memory access patterns - Storage I/O performance - Neural pattern loading",
+              "lines": [
+                61,
+                67
+              ],
+              "name": "Memory Bottlenecks",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- API call latency - MCP communication delays - External service timeouts - Concurrent request limits",
+              "lines": [
+                68,
+                74
+              ],
+              "name": "Network Bottlenecks",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            45,
+            74
+          ],
+          "name": "Metrics Analyzed",
+          "type": "section"
+        },
+        {
+          "lines": [
+            75,
+            109
+          ],
+          "name": "Output Format",
+          "type": "section"
+        },
+        {
+          "docstring": "When using `--fix`, the following optimizations may be applied:",
+          "lines": [
+            110,
+            136
+          ],
+          "name": "Automatic Fixes",
+          "type": "section"
+        },
+        {
+          "docstring": "Typical improvements after bottleneck resolution:",
+          "lines": [
+            137,
+            145
+          ],
+          "name": "Performance Impact",
+          "type": "section"
+        },
+        {
+          "lines": [
+            146,
+            156
+          ],
+          "name": "Integration with Claude Code",
+          "type": "section"
+        },
+        {
+          "docstring": "- `performance report` - Detailed performance analysis - `token usage` - Token optimization analysis - `swarm monitor` - Real-time monitoring - `cache",
+          "lines": [
+            157,
+            163
+          ],
+          "name": "See Also",
+          "type": "section"
+        }
+      ]
+    },
+    "performance-bottlenecks.md": {
+      "hash": "61e9e3a163b2",
+      "indexed_at": "2026-01-20T04:50:25.518513+00:00",
+      "language": "markdown",
+      "lines": 59,
+      "symbols": [
+        {
+          "docstring": "Identify and resolve performance bottlenecks in your development workflow.",
+          "lines": [
+            3,
+            5
+          ],
+          "name": "Purpose",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "The post-task hook automatically analyzes: - Execution time vs. complexity - Agent utilization rates - Resource constraints - Operation patterns",
+              "lines": [
+                8,
+                14
+              ],
+              "name": "1. Real-time Detection",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Time Bottlenecks:** - Tasks taking > 5 minutes - Sequential operations that could parallelize - Redundant file operations",
+              "lines": [
+                15,
+                31
+              ],
+              "name": "2. Common Bottlenecks",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                32,
+                57
+              ],
+              "name": "3. Improvement Suggestions",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6,
+            57
+          ],
+          "name": "Automated Analysis",
+          "type": "section"
+        },
+        {
+          "docstring": "The system learns from each task to prevent future bottlenecks!",
+          "lines": [
+            58,
+            59
+          ],
+          "name": "Continuous Optimization",
+          "type": "section"
+        }
+      ]
+    },
+    "performance-report.md": {
+      "hash": "e67bea8ba6da",
+      "indexed_at": "2026-01-20T04:50:25.517912+00:00",
+      "language": "markdown",
+      "lines": 25,
+      "symbols": [
+        {
+          "lines": [
+            5,
+            9
+          ],
+          "name": "Usage",
+          "type": "section"
+        },
+        {
+          "docstring": "- `--format <type>` - Report format (json, html, markdown) - `--include-metrics` - Include detailed metrics - `--compare <id>` - Compare with previous",
+          "lines": [
+            10,
+            14
+          ],
+          "name": "Options",
+          "type": "section"
+        },
+        {
+          "lines": [
+            15,
+            26
+          ],
+          "name": "Examples",
+          "type": "section"
+        }
+      ]
+    },
+    "token-efficiency.md": {
+      "hash": "ecb6c03b491c",
+      "indexed_at": "2026-01-20T04:50:25.517706+00:00",
+      "language": "markdown",
+      "lines": 45,
+      "symbols": [
+        {
+          "docstring": "Reduce token consumption while maintaining quality through intelligent coordination.",
+          "lines": [
+            3,
+            5
+          ],
+          "name": "Purpose",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Search results cached for 5 minutes - File content cached during session - Pattern recognition reduces redundant searches",
+              "lines": [
+                8,
+                12
+              ],
+              "name": "1. Smart Caching",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Agents share context automatically - Avoid duplicate file reads - Batch related operations",
+              "lines": [
+                13,
+                17
+              ],
+              "name": "2. Efficient Coordination",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                18,
+                34
+              ],
+              "name": "3. Measurement & Tracking",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6,
+            34
+          ],
+          "name": "Optimization Strategies",
+          "type": "section"
+        },
+        {
+          "docstring": "1. **Use Task tool** for complex searches 2. **Enable caching** in pre-search hooks 3. **Batch operations** when possible 4. **Review session summarie",
+          "lines": [
+            35,
+            40
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        },
+        {
+          "docstring": "- \ud83d\udcc9 32.3% average token reduction - \ud83c\udfaf More focused operations - \ud83d\udd04 Intelligent result reuse - \ud83d\udcca Cumulative improvements",
+          "lines": [
+            41,
+            45
+          ],
+          "name": "Token Reduction Results",
+          "type": "section"
+        }
+      ]
+    },
+    "token-usage.md": {
+      "hash": "cbadb3c474d7",
+      "indexed_at": "2026-01-20T04:50:25.518292+00:00",
+      "language": "markdown",
+      "lines": 25,
+      "symbols": [
+        {
+          "lines": [
+            5,
+            9
+          ],
+          "name": "Usage",
+          "type": "section"
+        },
+        {
+          "docstring": "- `--period <time>` - Analysis period (1h, 24h, 7d, 30d) - `--by-agent` - Break down by agent - `--by-operation` - Break down by operation type",
+          "lines": [
+            10,
+            14
+          ],
+          "name": "Options",
+          "type": "section"
+        },
+        {
+          "lines": [
+            15,
+            26
+          ],
+          "name": "Examples",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.170234+00:00",
+  "version": "1.0"
+}

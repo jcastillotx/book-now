@@ -1,0 +1,190 @@
+{
+  "directory": "vendor/sebastian/resource-operations",
+  "files": {
+    "ChangeLog.md": {
+      "hash": "c0e21f34bc13",
+      "indexed_at": "2026-01-20T04:49:03.897305+00:00",
+      "language": "markdown",
+      "lines": 59,
+      "symbols": [
+        {
+          "docstring": "No functional changes.",
+          "lines": [
+            5,
+            8
+          ],
+          "name": "[3.0.4] - 2024-03-14",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Changed PHP version constraint in `composer.json` from `^7.3 || ^8.0` to `>=7.3`",
+              "lines": [
+                11,
+                14
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            9,
+            14
+          ],
+          "name": "[3.0.3] - 2020-09-28",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* This component is now supported on PHP 8",
+              "lines": [
+                17,
+                20
+              ],
+              "name": "Added",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            15,
+            20
+          ],
+          "name": "[3.0.2] - 2020-06-26",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Tests etc. are now ignored for archive exports",
+              "lines": [
+                23,
+                26
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            21,
+            26
+          ],
+          "name": "[3.0.1] - 2020-06-15",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* This component is no longer supported on PHP 7.1 and PHP 7.2",
+              "lines": [
+                29,
+                32
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            27,
+            32
+          ],
+          "name": "[3.0.0] - 2020-02-07",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Functions and methods with nullable parameters of type `resource` are now also considered",
+              "lines": [
+                35,
+                38
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            33,
+            38
+          ],
+          "name": "[2.0.1] - 2018-10-04",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [FunctionSignatureMap.php](https://raw.githubusercontent.com/phan/phan/master/src/Phan/Language/Internal/FunctionSignatureMap.php) from `phan/phan`",
+              "lines": [
+                41,
+                44
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* This component is no longer supported on PHP 5.6 and PHP 7.0",
+              "lines": [
+                45,
+                48
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            39,
+            48
+          ],
+          "name": "[2.0.0] - 2018-09-27",
+          "type": "section"
+        },
+        {
+          "docstring": "* Initial release",
+          "lines": [
+            49,
+            60
+          ],
+          "name": "1.0.0 - 2015-07-28",
+          "type": "section"
+        }
+      ]
+    },
+    "README.md": {
+      "hash": "8d12680c1c5d",
+      "indexed_at": "2026-01-20T04:49:05.122489+00:00",
+      "language": "markdown",
+      "lines": 14,
+      "symbols": [
+        {
+          "docstring": "You can add this library as a local, per-project dependency to your project using [Composer](https://getcomposer.org/):",
+          "lines": [
+            5,
+            15
+          ],
+          "name": "Installation",
+          "type": "section"
+        }
+      ]
+    },
+    "SECURITY.md": {
+      "hash": "a4b9f39223c5",
+      "indexed_at": "2026-01-20T04:49:06.124079+00:00",
+      "language": "markdown",
+      "lines": 30,
+      "symbols": [
+        {
+          "docstring": "The library that is developed in this repository was either extracted from [PHPUnit](https://github.com/sebastianbergmann/phpunit) or developed specif",
+          "lines": [
+            21,
+            31
+          ],
+          "name": "Web Context",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.128625+00:00",
+  "version": "1.0"
+}

@@ -1,0 +1,138 @@
+{
+  "directory": ".claude/skills/v3-memory-unification",
+  "files": {
+    "SKILL.md": {
+      "hash": "4853ec2fec84",
+      "indexed_at": "2026-01-20T04:50:25.508557+00:00",
+      "language": "markdown",
+      "lines": 174,
+      "symbols": [
+        {
+          "docstring": "Consolidates disparate memory systems into unified AgentDB backend with HNSW vector search, achieving 150x-12,500x search performance improvements whi",
+          "lines": [
+            8,
+            11
+          ],
+          "name": "What This Skill Does",
+          "type": "section"
+        },
+        {
+          "lines": [
+            12,
+            24
+          ],
+          "name": "Quick Start",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                27,
+                47
+              ],
+              "name": "Legacy Systems \u2192 AgentDB",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            25,
+            47
+          ],
+          "name": "Systems to Unify",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                50,
+                72
+              ],
+              "name": "Unified Memory Service",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                73,
+                92
+              ],
+              "name": "HNSW Vector Search",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            48,
+            92
+          ],
+          "name": "Implementation Architecture",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                95,
+                104
+              ],
+              "name": "Phase 1: Foundation",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                105,
+                130
+              ],
+              "name": "Phase 2: Data Migration",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            93,
+            130
+          ],
+          "name": "Migration Strategy",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                133,
+                158
+              ],
+              "name": "Learning Pattern Storage",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            131,
+            158
+          ],
+          "name": "SONA Integration",
+          "type": "section"
+        },
+        {
+          "docstring": "- **Search Speed**: 150x-12,500x improvement via HNSW - **Memory Usage**: 50-75% reduction through optimization - **Query Latency**: <100ms for 1M+ en",
+          "lines": [
+            159,
+            166
+          ],
+          "name": "Performance Targets",
+          "type": "section"
+        },
+        {
+          "docstring": "- [ ] All 7 legacy memory systems migrated to AgentDB - [ ] 150x-12,500x search performance validated - [ ] 50-75% memory usage reduction achieved - [",
+          "lines": [
+            167,
+            174
+          ],
+          "name": "Success Metrics",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.164759+00:00",
+  "version": "1.0"
+}

@@ -1,0 +1,312 @@
+{
+  "directory": ".claude/skills/agentdb-advanced",
+  "files": {
+    "SKILL.md": {
+      "hash": "e5524686b1e9",
+      "indexed_at": "2026-01-20T04:50:25.507065+00:00",
+      "language": "markdown",
+      "lines": 550,
+      "symbols": [
+        {
+          "docstring": "Covers advanced AgentDB capabilities for distributed systems, multi-database coordination, custom distance metrics, hybrid search (vector + metadata),",
+          "lines": [
+            8,
+            13
+          ],
+          "name": "What This Skill Does",
+          "type": "section"
+        },
+        {
+          "docstring": "- Node.js 18+ - AgentDB v1.0.7+ (via agentic-flow) - Understanding of distributed systems (for QUIC sync) - Vector search fundamentals",
+          "lines": [
+            14,
+            22
+          ],
+          "name": "Prerequisites",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "QUIC (Quick UDP Internet Connections) enables sub-millisecond latency synchronization between AgentDB instances across network boundaries with automat",
+              "lines": [
+                25,
+                35
+              ],
+              "name": "What is QUIC Sync?",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                36,
+                60
+              ],
+              "name": "Enable QUIC Sync",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                61,
+                74
+              ],
+              "name": "QUIC Configuration",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                75,
+                98
+              ],
+              "name": "Multi-Node Deployment",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            23,
+            98
+          ],
+          "name": "QUIC Synchronization",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Best for normalized vectors, semantic similarity:",
+              "lines": [
+                101,
+                124
+              ],
+              "name": "Cosine Similarity (Default)",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Best for spatial data, geometric similarity:",
+              "lines": [
+                125,
+                148
+              ],
+              "name": "Euclidean Distance (L2)",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Best for pre-normalized vectors, fast computation:",
+              "lines": [
+                149,
+                171
+              ],
+              "name": "Dot Product",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                172,
+                190
+              ],
+              "name": "Custom Distance Metrics",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            99,
+            190
+          ],
+          "name": "Distance Metrics",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "Combine vector similarity with metadata filtering:",
+              "lines": [
+                193,
+                231
+              ],
+              "name": "Basic Hybrid Search",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                232,
+                248
+              ],
+              "name": "Advanced Filtering",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Combine vector and metadata scores:",
+              "lines": [
+                249,
+                269
+              ],
+              "name": "Weighted Hybrid Search",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            191,
+            269
+          ],
+          "name": "Hybrid Search (Vector + Metadata)",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                272,
+                293
+              ],
+              "name": "Multiple Databases",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                294,
+                316
+              ],
+              "name": "Database Sharding",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            270,
+            316
+          ],
+          "name": "Multi-Database Management",
+          "type": "section"
+        },
+        {
+          "docstring": "Retrieve diverse results to avoid redundancy:",
+          "lines": [
+            317,
+            348
+          ],
+          "name": "MMR (Maximal Marginal Relevance)",
+          "type": "section"
+        },
+        {
+          "docstring": "Generate rich context from multiple memories:",
+          "lines": [
+            349,
+            371
+          ],
+          "name": "Context Synthesis",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                374,
+                397
+              ],
+              "name": "Connection Pooling",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                398,
+                418
+              ],
+              "name": "Error Handling",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                419,
+                442
+              ],
+              "name": "Monitoring and Logging",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            372,
+            442
+          ],
+          "name": "Production Patterns",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                445,
+                457
+              ],
+              "name": "Database Import/Export",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                458,
+                472
+              ],
+              "name": "Database Optimization",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            443,
+            472
+          ],
+          "name": "CLI Advanced Operations",
+          "type": "section"
+        },
+        {
+          "lines": [
+            473,
+            499
+          ],
+          "name": "Environment Variables",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                502,
+                514
+              ],
+              "name": "Issue: QUIC sync not working",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                515,
+                526
+              ],
+              "name": "Issue: Hybrid search returns no results",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                527,
+                538
+              ],
+              "name": "Issue: Memory consolidation too aggressive",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            500,
+            538
+          ],
+          "name": "Troubleshooting",
+          "type": "section"
+        },
+        {
+          "docstring": "- **QUIC Protocol**: docs/quic-synchronization.pdf - **Hybrid Search**: docs/hybrid-search-guide.md - **GitHub**: https://github.com/ruvnet/agentic-fl",
+          "lines": [
+            539,
+            551
+          ],
+          "name": "Learn More",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.163903+00:00",
+  "version": "1.0"
+}

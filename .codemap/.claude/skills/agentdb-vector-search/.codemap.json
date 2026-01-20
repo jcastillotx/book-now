@@ -1,0 +1,308 @@
+{
+  "directory": ".claude/skills/agentdb-vector-search",
+  "files": {
+    "SKILL.md": {
+      "hash": "beecdac71c19",
+      "indexed_at": "2026-01-20T04:50:25.514999+00:00",
+      "language": "markdown",
+      "lines": 339,
+      "symbols": [
+        {
+          "docstring": "Implements vector-based semantic search using AgentDB's high-performance vector database with **150x-12,500x faster** operations than traditional solu",
+          "lines": [
+            8,
+            11
+          ],
+          "name": "What This Skill Does",
+          "type": "section"
+        },
+        {
+          "docstring": "- Node.js 18+ - AgentDB v1.0.7+ (via agentic-flow or standalone) - OpenAI API key (for embeddings) or custom embedding model",
+          "lines": [
+            12,
+            17
+          ],
+          "name": "Prerequisites",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                20,
+                38
+              ],
+              "name": "Initialize Vector Database",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                39,
+                61
+              ],
+              "name": "Query Vector Database",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                62,
+                74
+              ],
+              "name": "Import/Export Vectors",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            18,
+            74
+          ],
+          "name": "Quick Start with CLI",
+          "type": "section"
+        },
+        {
+          "lines": [
+            75,
+            118
+          ],
+          "name": "Quick Start with API",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                121,
+                129
+              ],
+              "name": "1. Vector Storage",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                130,
+                138
+              ],
+              "name": "2. Similarity Search",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                139,
+                151
+              ],
+              "name": "3. Hybrid Search (Vector + Metadata)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            119,
+            151
+          ],
+          "name": "Core Features",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                154,
+                171
+              ],
+              "name": "RAG (Retrieval Augmented Generation)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                172,
+                181
+              ],
+              "name": "Batch Operations",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            152,
+            181
+          ],
+          "name": "Advanced Usage",
+          "type": "section"
+        },
+        {
+          "lines": [
+            182,
+            196
+          ],
+          "name": "MCP Server Integration",
+          "type": "section"
+        },
+        {
+          "lines": [
+            197,
+            209
+          ],
+          "name": "Performance Benchmarks",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                214,
+                220
+              ],
+              "name": "Binary Quantization (32x reduction)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                221,
+                227
+              ],
+              "name": "Scalar Quantization (4x reduction)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                228,
+                234
+              ],
+              "name": "Product Quantization (8-16x reduction)",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "AgentDB provides multiple quantization strategies for memory efficiency:",
+          "lines": [
+            210,
+            234
+          ],
+          "name": "Quantization Options",
+          "type": "section"
+        },
+        {
+          "lines": [
+            235,
+            247
+          ],
+          "name": "Distance Metrics",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **O(log n) search complexity** - **Sub-millisecond retrieval** (<100\u00b5s) - **Automatic index building**",
+              "lines": [
+                250,
+                254
+              ],
+              "name": "HNSW Indexing",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **1000 pattern in-memory cache** - **<1ms pattern retrieval** - **Automatic cache invalidation**",
+              "lines": [
+                255,
+                259
+              ],
+              "name": "Caching",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Diverse result sets** - **Avoid redundancy** - **Balance relevance and diversity**",
+              "lines": [
+                260,
+                264
+              ],
+              "name": "MMR (Maximal Marginal Relevance)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            248,
+            264
+          ],
+          "name": "Advanced Features",
+          "type": "section"
+        },
+        {
+          "docstring": "1. **Enable HNSW indexing**: Automatic with AgentDB, 10-100x faster 2. **Use quantization**: Binary (32x), Scalar (4x), Product (8-16x) memory reducti",
+          "lines": [
+            265,
+            273
+          ],
+          "name": "Performance Tips",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                276,
+                283
+              ],
+              "name": "Issue: Slow search performance",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                284,
+                289
+              ],
+              "name": "Issue: High memory usage",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                290,
+                298
+              ],
+              "name": "Issue: Poor relevance",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                299,
+                308
+              ],
+              "name": "Issue: Wrong dimensions",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            274,
+            308
+          ],
+          "name": "Troubleshooting",
+          "type": "section"
+        },
+        {
+          "lines": [
+            309,
+            322
+          ],
+          "name": "Database Statistics",
+          "type": "section"
+        },
+        {
+          "docstring": "- **Vector Search**: <100\u00b5s (HNSW indexing) - **Pattern Retrieval**: <1ms (with cache) - **Batch Insert**: 2ms for 100 vectors - **Memory Efficiency**",
+          "lines": [
+            323,
+            331
+          ],
+          "name": "Performance Characteristics",
+          "type": "section"
+        },
+        {
+          "docstring": "- GitHub: https://github.com/ruvnet/agentic-flow/tree/main/packages/agentdb - Documentation: node_modules/agentic-flow/docs/AGENTDB_INTEGRATION.md - M",
+          "lines": [
+            332,
+            340
+          ],
+          "name": "Learn More",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.169112+00:00",
+  "version": "1.0"
+}

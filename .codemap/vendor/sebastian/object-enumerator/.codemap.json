@@ -1,0 +1,260 @@
+{
+  "directory": "vendor/sebastian/object-enumerator",
+  "files": {
+    "ChangeLog.md": {
+      "hash": "5221866fd377",
+      "indexed_at": "2026-01-20T04:48:35.444905+00:00",
+      "language": "markdown",
+      "lines": 88,
+      "symbols": [
+        {
+          "children": [
+            {
+              "docstring": "* `SebastianBergmann\\ObjectEnumerator\\Exception` now correctly extends `\\Throwable`",
+              "lines": [
+                7,
+                10
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            5,
+            10
+          ],
+          "name": "[4.0.4] - 2020-10-26",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Changed PHP version constraint in `composer.json` from `^7.3 || ^8.0` to `>=7.3`",
+              "lines": [
+                13,
+                16
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            11,
+            16
+          ],
+          "name": "[4.0.3] - 2020-09-28",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* This component is now supported on PHP 8",
+              "lines": [
+                19,
+                22
+              ],
+              "name": "Added",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            17,
+            22
+          ],
+          "name": "[4.0.2] - 2020-06-26",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Tests etc. are now ignored for archive exports",
+              "lines": [
+                25,
+                28
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            23,
+            28
+          ],
+          "name": "[4.0.1] - 2020-06-15",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* This component is no longer supported on PHP 7.0, PHP 7.1, and PHP 7.2",
+              "lines": [
+                31,
+                34
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            29,
+            34
+          ],
+          "name": "[4.0.0] - 2020-02-07",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Bumped required version of `sebastian/object-reflector`",
+              "lines": [
+                37,
+                40
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            35,
+            40
+          ],
+          "name": "[3.0.3] - 2017-08-03",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* `sebastian/object-reflector` is now a dependency",
+              "lines": [
+                43,
+                46
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            41,
+            46
+          ],
+          "name": "[3.0.2] - 2017-03-12",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Objects aggregated in inherited attributes are not enumerated",
+              "lines": [
+                49,
+                52
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            47,
+            52
+          ],
+          "name": "[3.0.1] - 2017-03-12",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* This component is no longer supported on PHP 5.6",
+              "lines": [
+                55,
+                58
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            53,
+            58
+          ],
+          "name": "[3.0.0] - 2017-03-03",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Fixed [#2](https://github.com/sebastianbergmann/phpunit/pull/2): Exceptions in `ReflectionProperty::getValue()` are not handled",
+              "lines": [
+                61,
+                64
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            59,
+            64
+          ],
+          "name": "[2.0.1] - 2017-02-18",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* This component is now compatible with `sebastian/recursion-context: ~1.0.4`",
+              "lines": [
+                67,
+                70
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            65,
+            70
+          ],
+          "name": "[2.0.0] - 2016-11-19",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Initial release",
+              "lines": [
+                73,
+                89
+              ],
+              "name": "Added",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            71,
+            89
+          ],
+          "name": "1.0.0 - 2016-02-04",
+          "type": "section"
+        }
+      ]
+    },
+    "README.md": {
+      "hash": "fd333e54d85f",
+      "indexed_at": "2026-01-20T04:48:36.447400+00:00",
+      "language": "markdown",
+      "lines": 20,
+      "symbols": [
+        {
+          "docstring": "You can add this library as a local, per-project dependency to your project using [Composer](https://getcomposer.org/):",
+          "lines": [
+            8,
+            21
+          ],
+          "name": "Installation",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.122674+00:00",
+  "version": "1.0"
+}

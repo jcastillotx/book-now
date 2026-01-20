@@ -1,0 +1,145 @@
+{
+  "directory": "vendor/phpunit/php-invoker",
+  "files": {
+    "ChangeLog.md": {
+      "hash": "a2280ceca20e",
+      "indexed_at": "2026-01-20T04:50:01.626992+00:00",
+      "language": "markdown",
+      "lines": 48,
+      "symbols": [
+        {
+          "children": [
+            {
+              "docstring": "* Changed PHP version constraint in `composer.json` from `^7.3 || ^8.0` to `>=7.3`",
+              "lines": [
+                7,
+                10
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            5,
+            10
+          ],
+          "name": "[3.1.1] - 2020-09-28",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* [#14](https://github.com/sebastianbergmann/php-invoker/pull/14): Clear alarm in `finally` block",
+              "lines": [
+                13,
+                16
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            11,
+            16
+          ],
+          "name": "[3.1.0] - 2020-08-06",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* This component is now supported on PHP 8",
+              "lines": [
+                19,
+                22
+              ],
+              "name": "Added",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            17,
+            22
+          ],
+          "name": "[3.0.2] - 2020-06-26",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Tests etc. are now ignored for archive exports",
+              "lines": [
+                25,
+                28
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            23,
+            28
+          ],
+          "name": "[3.0.1] - 2020-06-15",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "* Added `canInvokeWithTimeout()` method to check requirements for the functionality provided by this component to work",
+              "lines": [
+                31,
+                34
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* Moved `\"ext-pcntl\": \"*\"` requirement from `require` to `suggest` so that this component can be installed even if `ext/pcntl` is not available * `inv",
+              "lines": [
+                35,
+                39
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "* This component is no longer supported on PHP 7.1 and PHP 7.2",
+              "lines": [
+                40,
+                49
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            29,
+            49
+          ],
+          "name": "[3.0.0] - 2020-02-07",
+          "type": "section"
+        }
+      ]
+    },
+    "README.md": {
+      "hash": "c26e8299b0ab",
+      "indexed_at": "2026-01-20T04:50:02.890916+00:00",
+      "language": "markdown",
+      "lines": 18,
+      "symbols": [
+        {
+          "docstring": "You can add this library as a local, per-project dependency to your project using [Composer](https://getcomposer.org/):",
+          "lines": [
+            6,
+            19
+          ],
+          "name": "Installation",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.137890+00:00",
+  "version": "1.0"
+}

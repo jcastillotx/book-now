@@ -1,0 +1,648 @@
+{
+  "directory": ".claude/agents/consensus",
+  "files": {
+    "byzantine-coordinator.md": {
+      "hash": "5c1dab70fccd",
+      "indexed_at": "2026-01-20T04:50:25.542464+00:00",
+      "language": "markdown",
+      "lines": 63,
+      "symbols": [
+        {
+          "docstring": "1. **PBFT Protocol Management**: Execute three-phase practical Byzantine fault tolerance 2. **Malicious Actor Detection**: Identify and isolate Byzant",
+          "lines": [
+            30,
+            37
+          ],
+          "name": "Core Responsibilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Deploy PBFT three-phase protocol for secure consensus - Maintain security with up to f < n/3 malicious nodes - Implement threshold signature schemes",
+              "lines": [
+                40,
+                45
+              ],
+              "name": "Byzantine Fault Tolerance",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Apply cryptographic signatures for message authenticity - Implement zero-knowledge proofs for vote verification - Deploy replay attack prevention wi",
+              "lines": [
+                46,
+                51
+              ],
+              "name": "Security Integration",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Detect network partitions automatically - Reconcile conflicting states after partition healing - Adjust quorum size dynamically based on connectivit",
+              "lines": [
+                52,
+                57
+              ],
+              "name": "Network Resilience",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            38,
+            57
+          ],
+          "name": "Implementation Approach",
+          "type": "section"
+        },
+        {
+          "docstring": "- Coordinate with Security Manager for cryptographic validation - Interface with Quorum Manager for fault tolerance adjustments - Integrate with Perfo",
+          "lines": [
+            58,
+            63
+          ],
+          "name": "Collaboration",
+          "type": "section"
+        }
+      ]
+    },
+    "crdt-synchronizer.md": {
+      "hash": "b0ca8c4f4237",
+      "indexed_at": "2026-01-20T04:50:25.540235+00:00",
+      "language": "markdown",
+      "lines": 997,
+      "symbols": [
+        {
+          "docstring": "1. **CRDT Implementation**: Deploy state-based and operation-based conflict-free data types 2. **Data Structure Management**: Handle counters, sets, r",
+          "lines": [
+            30,
+            37
+          ],
+          "name": "Core Responsibilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                40,
+                120
+              ],
+              "name": "Base CRDT Framework",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                121,
+                217
+              ],
+              "name": "G-Counter Implementation",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                218,
+                361
+              ],
+              "name": "OR-Set Implementation",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                362,
+                434
+              ],
+              "name": "LWW-Register Implementation",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                435,
+                600
+              ],
+              "name": "RGA (Replicated Growable Array) Implementation",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                601,
+                685
+              ],
+              "name": "Delta-State CRDT Framework",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            38,
+            685
+          ],
+          "name": "Technical Implementation",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                688,
+                713
+              ],
+              "name": "Memory Coordination for CRDT State",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                714,
+                737
+              ],
+              "name": "Performance Monitoring",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            686,
+            737
+          ],
+          "name": "MCP Integration Hooks",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                740,
+                818
+              ],
+              "name": "Causal Consistency Tracker",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                819,
+                934
+              ],
+              "name": "CRDT Composition Framework",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            738,
+            934
+          ],
+          "name": "Advanced CRDT Features",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                937,
+                997
+              ],
+              "name": "CRDT-Enhanced Consensus",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            935,
+            997
+          ],
+          "name": "Integration with Consensus Protocols",
+          "type": "section"
+        }
+      ]
+    },
+    "gossip-coordinator.md": {
+      "hash": "946d66b6f530",
+      "indexed_at": "2026-01-20T04:50:25.541263+00:00",
+      "language": "markdown",
+      "lines": 63,
+      "symbols": [
+        {
+          "docstring": "1. **Epidemic Dissemination**: Implement push/pull gossip protocols for information spread 2. **Peer Management**: Handle random peer selection and fa",
+          "lines": [
+            30,
+            37
+          ],
+          "name": "Core Responsibilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Deploy push gossip protocol for proactive information spreading - Implement pull gossip protocol for reactive information retrieval - Execute push-p",
+              "lines": [
+                40,
+                45
+              ],
+              "name": "Epidemic Information Spread",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Ensure eventual consistency through state synchronization - Execute Merkle tree comparison for efficient difference detection - Manage vector clocks",
+              "lines": [
+                46,
+                51
+              ],
+              "name": "Anti-Entropy Protocols",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Handle seamless integration of new nodes via join protocol - Detect unresponsive or failed nodes through failure detection - Manage graceful node de",
+              "lines": [
+                52,
+                57
+              ],
+              "name": "Membership and Topology",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            38,
+            57
+          ],
+          "name": "Implementation Approach",
+          "type": "section"
+        },
+        {
+          "docstring": "- Interface with Performance Benchmarker for gossip optimization - Coordinate with CRDT Synchronizer for conflict-free data types - Integrate with Quo",
+          "lines": [
+            58,
+            63
+          ],
+          "name": "Collaboration",
+          "type": "section"
+        }
+      ]
+    },
+    "performance-benchmarker.md": {
+      "hash": "7084eeadbde4",
+      "indexed_at": "2026-01-20T04:50:25.541024+00:00",
+      "language": "markdown",
+      "lines": 851,
+      "symbols": [
+        {
+          "docstring": "1. **Protocol Benchmarking**: Measure throughput, latency, and scalability across consensus algorithms 2. **Resource Monitoring**: Track CPU, memory,",
+          "lines": [
+            30,
+            37
+          ],
+          "name": "Core Responsibilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                40,
+                135
+              ],
+              "name": "Core Benchmarking Framework",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                136,
+                279
+              ],
+              "name": "Throughput Measurement System",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                280,
+                410
+              ],
+              "name": "Latency Analysis System",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                411,
+                608
+              ],
+              "name": "Resource Usage Monitor",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                609,
+                793
+              ],
+              "name": "Adaptive Performance Optimizer",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            38,
+            793
+          ],
+          "name": "Technical Implementation",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                796,
+                825
+              ],
+              "name": "Performance Metrics Storage",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                826,
+                851
+              ],
+              "name": "Neural Performance Learning",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            794,
+            851
+          ],
+          "name": "MCP Integration Hooks",
+          "type": "section"
+        }
+      ]
+    },
+    "quorum-manager.md": {
+      "hash": "9902ac56027d",
+      "indexed_at": "2026-01-20T04:50:25.542251+00:00",
+      "language": "markdown",
+      "lines": 823,
+      "symbols": [
+        {
+          "docstring": "1. **Dynamic Quorum Calculation**: Adapt quorum requirements based on real-time network conditions 2. **Membership Management**: Handle seamless node",
+          "lines": [
+            30,
+            37
+          ],
+          "name": "Core Responsibilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                40,
+                182
+              ],
+              "name": "Core Quorum Management System",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                183,
+                364
+              ],
+              "name": "Network-Based Quorum Strategy",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                365,
+                544
+              ],
+              "name": "Performance-Based Quorum Strategy",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                545,
+                754
+              ],
+              "name": "Fault Tolerance Strategy",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            38,
+            754
+          ],
+          "name": "Technical Implementation",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                757,
+                782
+              ],
+              "name": "Quorum State Management",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                783,
+                807
+              ],
+              "name": "Performance Monitoring Integration",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                808,
+                823
+              ],
+              "name": "Task Orchestration for Quorum Changes",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            755,
+            823
+          ],
+          "name": "MCP Integration Hooks",
+          "type": "section"
+        }
+      ]
+    },
+    "raft-manager.md": {
+      "hash": "fbf05a0e1d8b",
+      "indexed_at": "2026-01-20T04:50:25.540496+00:00",
+      "language": "markdown",
+      "lines": 63,
+      "symbols": [
+        {
+          "docstring": "1. **Leader Election**: Coordinate randomized timeout-based leader selection 2. **Log Replication**: Ensure reliable propagation of entries to followe",
+          "lines": [
+            30,
+            37
+          ],
+          "name": "Core Responsibilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Execute randomized timeout-based elections to prevent split votes - Manage candidate state transitions and vote collection - Maintain leadership thr",
+              "lines": [
+                40,
+                45
+              ],
+              "name": "Leader Election Protocol",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Implement append entries protocol for reliable log propagation - Ensure log consistency guarantees across all follower nodes - Track commit index an",
+              "lines": [
+                46,
+                51
+              ],
+              "name": "Log Replication System",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Detect leader failures and trigger new elections - Handle network partitions while maintaining consistency - Recover failed nodes to consistent stat",
+              "lines": [
+                52,
+                57
+              ],
+              "name": "Fault Tolerance Features",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            38,
+            57
+          ],
+          "name": "Implementation Approach",
+          "type": "section"
+        },
+        {
+          "docstring": "- Coordinate with Quorum Manager for membership adjustments - Interface with Performance Benchmarker for optimization analysis - Integrate with CRDT S",
+          "lines": [
+            58,
+            63
+          ],
+          "name": "Collaboration",
+          "type": "section"
+        }
+      ]
+    },
+    "security-manager.md": {
+      "hash": "368a57778c93",
+      "indexed_at": "2026-01-20T04:50:25.541742+00:00",
+      "language": "markdown",
+      "lines": 622,
+      "symbols": [
+        {
+          "docstring": "1. **Cryptographic Infrastructure**: Deploy threshold cryptography and zero-knowledge proofs 2. **Attack Detection**: Identify Byzantine, Sybil, Eclip",
+          "lines": [
+            30,
+            37
+          ],
+          "name": "Core Responsibilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                40,
+                135
+              ],
+              "name": "Threshold Signature System",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                136,
+                226
+              ],
+              "name": "Zero-Knowledge Proof System",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                227,
+                370
+              ],
+              "name": "Attack Detection System",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                371,
+                477
+              ],
+              "name": "Secure Key Management",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            38,
+            477
+          ],
+          "name": "Technical Implementation",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                480,
+                505
+              ],
+              "name": "Security Monitoring Integration",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                506,
+                525
+              ],
+              "name": "Neural Pattern Learning for Security",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            478,
+            525
+          ],
+          "name": "MCP Integration Hooks",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                528,
+                570
+              ],
+              "name": "Byzantine Consensus Security",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            526,
+            570
+          ],
+          "name": "Integration with Consensus Protocols",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                573,
+                622
+              ],
+              "name": "Penetration Testing Framework",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            571,
+            622
+          ],
+          "name": "Security Testing and Validation",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.177683+00:00",
+  "version": "1.0"
+}

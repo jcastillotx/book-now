@@ -1,0 +1,289 @@
+{
+  "directory": ".claude/commands/optimization",
+  "files": {
+    "README.md": {
+      "hash": "e398abe1a335",
+      "indexed_at": "2026-01-20T04:50:25.519651+00:00",
+      "language": "markdown",
+      "lines": 9,
+      "symbols": [
+        {
+          "docstring": "- [topology-optimize](./topology-optimize.md) - [parallel-execute](./parallel-execute.md) - [cache-manage](./cache-manage.md)",
+          "lines": [
+            5,
+            10
+          ],
+          "name": "Available Commands",
+          "type": "section"
+        }
+      ]
+    },
+    "auto-topology.md": {
+      "hash": "b1eadd2b29da",
+      "indexed_at": "2026-01-20T04:50:25.518989+00:00",
+      "language": "markdown",
+      "lines": 62,
+      "symbols": [
+        {
+          "docstring": "Automatically select the optimal swarm topology based on task complexity analysis.",
+          "lines": [
+            3,
+            5
+          ],
+          "name": "Purpose",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "The system analyzes your task description to determine: - Complexity level (simple/medium/complex) - Required agent types - Estimated duration - Resou",
+              "lines": [
+                8,
+                14
+              ],
+              "name": "1. Task Analysis",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Based on analysis, it selects: - **Star**: For simple, centralized tasks - **Mesh**: For medium complexity with flexibility needs - **Hierarchical**:",
+              "lines": [
+                15,
+                21
+              ],
+              "name": "2. Topology Selection",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Simple Task:**",
+              "lines": [
+                22,
+                37
+              ],
+              "name": "3. Example Usage",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6,
+            37
+          ],
+          "name": "How It Works",
+          "type": "section"
+        },
+        {
+          "docstring": "- \ud83c\udfaf Optimal performance for each task type - \ud83e\udd16 Automatic agent assignment - \u26a1 Reduced setup time - \ud83d\udcca Better resource utilization",
+          "lines": [
+            38,
+            43
+          ],
+          "name": "Benefits",
+          "type": "section"
+        },
+        {
+          "docstring": "The pre-task hook automatically handles topology selection:",
+          "lines": [
+            44,
+            51
+          ],
+          "name": "Hook Configuration",
+          "type": "section"
+        },
+        {
+          "lines": [
+            52,
+            57
+          ],
+          "name": "Direct Optimization",
+          "type": "section"
+        },
+        {
+          "lines": [
+            58,
+            62
+          ],
+          "name": "CLI Usage",
+          "type": "section"
+        }
+      ]
+    },
+    "cache-manage.md": {
+      "hash": "6dc3e531dbbe",
+      "indexed_at": "2026-01-20T04:50:25.519840+00:00",
+      "language": "markdown",
+      "lines": 25,
+      "symbols": [
+        {
+          "lines": [
+            5,
+            9
+          ],
+          "name": "Usage",
+          "type": "section"
+        },
+        {
+          "docstring": "- `--action <type>` - Action (view, clear, optimize) - `--max-size <mb>` - Maximum cache size - `--ttl <seconds>` - Time to live",
+          "lines": [
+            10,
+            14
+          ],
+          "name": "Options",
+          "type": "section"
+        },
+        {
+          "lines": [
+            15,
+            26
+          ],
+          "name": "Examples",
+          "type": "section"
+        }
+      ]
+    },
+    "parallel-execute.md": {
+      "hash": "d00383faea99",
+      "indexed_at": "2026-01-20T04:50:25.518747+00:00",
+      "language": "markdown",
+      "lines": 25,
+      "symbols": [
+        {
+          "lines": [
+            5,
+            9
+          ],
+          "name": "Usage",
+          "type": "section"
+        },
+        {
+          "docstring": "- `--tasks <file>` - Task list file - `--max-parallel <n>` - Maximum parallel tasks - `--strategy <type>` - Execution strategy",
+          "lines": [
+            10,
+            14
+          ],
+          "name": "Options",
+          "type": "section"
+        },
+        {
+          "lines": [
+            15,
+            26
+          ],
+          "name": "Examples",
+          "type": "section"
+        }
+      ]
+    },
+    "parallel-execution.md": {
+      "hash": "e5786fb028db",
+      "indexed_at": "2026-01-20T04:50:25.519238+00:00",
+      "language": "markdown",
+      "lines": 50,
+      "symbols": [
+        {
+          "docstring": "Execute independent subtasks in parallel for maximum efficiency.",
+          "lines": [
+            3,
+            5
+          ],
+          "name": "Purpose",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                8,
+                17
+              ],
+              "name": "1. Task Decomposition",
+              "type": "subsection"
+            },
+            {
+              "docstring": "The system automatically: - Identifies independent components - Assigns specialized agents - Executes in parallel where possible - Synchronizes at dep",
+              "lines": [
+                18,
+                24
+              ],
+              "name": "2. Parallel Workflows",
+              "type": "subsection"
+            },
+            {
+              "docstring": "For the REST API task: - **Agent 1 (Architect)**: Design API structure - **Agent 2-3 (Coders)**: Implement auth & CRUD in parallel - **Agent 4 (Tester",
+              "lines": [
+                25,
+                31
+              ],
+              "name": "3. Example Breakdown",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            6,
+            31
+          ],
+          "name": "Coordination Strategy",
+          "type": "section"
+        },
+        {
+          "lines": [
+            32,
+            37
+          ],
+          "name": "CLI Usage",
+          "type": "section"
+        },
+        {
+          "docstring": "- \ud83d\ude80 2.8-4.4x faster execution - \ud83d\udcaa Optimal CPU utilization - \ud83d\udd04 Automatic load balancing - \ud83d\udcc8 Linear scalability with agents",
+          "lines": [
+            38,
+            43
+          ],
+          "name": "Performance Gains",
+          "type": "section"
+        },
+        {
+          "lines": [
+            44,
+            50
+          ],
+          "name": "Monitoring",
+          "type": "section"
+        }
+      ]
+    },
+    "topology-optimize.md": {
+      "hash": "1824a0fda02b",
+      "indexed_at": "2026-01-20T04:50:25.519448+00:00",
+      "language": "markdown",
+      "lines": 25,
+      "symbols": [
+        {
+          "lines": [
+            5,
+            9
+          ],
+          "name": "Usage",
+          "type": "section"
+        },
+        {
+          "docstring": "- `--analyze-first` - Analyze before optimizing - `--target <metric>` - Optimization target - `--apply` - Apply optimizations",
+          "lines": [
+            10,
+            14
+          ],
+          "name": "Options",
+          "type": "section"
+        },
+        {
+          "lines": [
+            15,
+            26
+          ],
+          "name": "Examples",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.170866+00:00",
+  "version": "1.0"
+}

@@ -1,0 +1,110 @@
+{
+  "directory": ".claude/agents/development",
+  "files": {
+    "dev-backend-api.md": {
+      "hash": "24037c935c0a",
+      "indexed_at": "2026-01-20T04:50:25.551916+00:00",
+      "language": "markdown",
+      "lines": 346,
+      "symbols": [
+        {
+          "children": [
+            {
+              "lines": [
+                180,
+                218
+              ],
+              "name": "Before Each API Implementation: Learn from History",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                219,
+                241
+              ],
+              "name": "During Implementation: GNN-Enhanced Context Search",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                242,
+                257
+              ],
+              "name": "For Large Schemas: Flash Attention Processing",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                258,
+                277
+              ],
+              "name": "After Implementation: Store Learning Patterns",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            178,
+            277
+          ],
+          "name": "\ud83e\udde0 Self-Learning Protocol",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                280,
+                303
+              ],
+              "name": "API Pattern Recognition",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                304,
+                319
+              ],
+              "name": "Endpoint Success Rate Tracking",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            278,
+            319
+          ],
+          "name": "\ud83c\udfaf Domain-Specific Optimizations",
+          "type": "section"
+        },
+        {
+          "docstring": "1. Design RESTful and GraphQL APIs following best practices 2. Implement secure authentication and authorization 3. Create efficient database queries",
+          "lines": [
+            320,
+            328
+          ],
+          "name": "Key responsibilities:",
+          "type": "section"
+        },
+        {
+          "docstring": "- Always validate input data - Use proper HTTP status codes - Implement rate limiting and caching - Follow REST/GraphQL conventions - Write tests for",
+          "lines": [
+            329,
+            339
+          ],
+          "name": "Best practices:",
+          "type": "section"
+        },
+        {
+          "docstring": "- Controller-Service-Repository pattern - Middleware for cross-cutting concerns - DTO pattern for data validation - Proper error response formatting -",
+          "lines": [
+            340,
+            346
+          ],
+          "name": "Patterns to follow:",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.181984+00:00",
+  "version": "1.0"
+}

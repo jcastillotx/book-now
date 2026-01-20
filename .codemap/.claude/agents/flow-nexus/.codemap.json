@@ -1,0 +1,70 @@
+{
+  "directory": ".claude/agents/flow-nexus",
+  "files": {
+    "app-store.md": {
+      "hash": "a3d2b5239dd6",
+      "indexed_at": "2026-01-20T04:50:25.556378+00:00",
+      "language": "markdown",
+      "lines": 88,
+      "symbols": []
+    },
+    "authentication.md": {
+      "hash": "e1f457036f82",
+      "indexed_at": "2026-01-20T04:50:25.556150+00:00",
+      "language": "markdown",
+      "lines": 69,
+      "symbols": []
+    },
+    "challenges.md": {
+      "hash": "25612f97449d",
+      "indexed_at": "2026-01-20T04:50:25.556996+00:00",
+      "language": "markdown",
+      "lines": 81,
+      "symbols": []
+    },
+    "neural-network.md": {
+      "hash": "f42ae96a533e",
+      "indexed_at": "2026-01-20T04:50:25.556809+00:00",
+      "language": "markdown",
+      "lines": 88,
+      "symbols": []
+    },
+    "payments.md": {
+      "hash": "abab0c52b6f2",
+      "indexed_at": "2026-01-20T04:50:25.557397+00:00",
+      "language": "markdown",
+      "lines": 83,
+      "symbols": []
+    },
+    "sandbox.md": {
+      "hash": "b06be9d3e250",
+      "indexed_at": "2026-01-20T04:50:25.556623+00:00",
+      "language": "markdown",
+      "lines": 76,
+      "symbols": []
+    },
+    "swarm.md": {
+      "hash": "71f2cca54559",
+      "indexed_at": "2026-01-20T04:50:25.557553+00:00",
+      "language": "markdown",
+      "lines": 76,
+      "symbols": []
+    },
+    "user-tools.md": {
+      "hash": "1a27f961e773",
+      "indexed_at": "2026-01-20T04:50:25.557769+00:00",
+      "language": "markdown",
+      "lines": 96,
+      "symbols": []
+    },
+    "workflow.md": {
+      "hash": "89547ceaa0f7",
+      "indexed_at": "2026-01-20T04:50:25.557226+00:00",
+      "language": "markdown",
+      "lines": 84,
+      "symbols": []
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.185111+00:00",
+  "version": "1.0"
+}

@@ -1,0 +1,183 @@
+{
+  "directory": "vendor/google/auth",
+  "files": {
+    "README.md": {
+      "hash": "28d112fff752",
+      "indexed_at": "2026-01-20T04:50:18.010324+00:00",
+      "language": "markdown",
+      "lines": 368,
+      "symbols": [
+        {
+          "children": [
+            {
+              "docstring": "The recommended way to install the google auth library is through [Composer](http://getcomposer.org).",
+              "lines": [
+                10,
+                25
+              ],
+              "name": "Installing via Composer",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "This is Google's officially supported PHP client library for using OAuth 2.0 authorization and authentication with Google APIs.",
+          "lines": [
+            5,
+            25
+          ],
+          "name": "Description",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "To use ADC, you must set it up by providing credentials. How you set up ADC depends on the environment where your code is running, and whether you are",
+              "lines": [
+                43,
+                50
+              ],
+              "name": "Set up ADC",
+              "type": "subsection"
+            },
+            {
+              "docstring": "Before making your API call, you must be sure the API you're calling has been enabled. Go to **APIs & Auth** > **APIs** in the [Google Developers Cons",
+              "lines": [
+                51,
+                57
+              ],
+              "name": "Enable the API you want to use",
+              "type": "subsection"
+            },
+            {
+              "children": [
+                {
+                  "docstring": "If your application is running behind Cloud Run, or using Cloud Identity-Aware Proxy (IAP), you will need to fetch an ID token to access your applicat",
+                  "lines": [
+                    110,
+                    157
+                  ],
+                  "name": "Call using an ID Token",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "If you want to use a specific JSON key instead of using `GOOGLE_APPLICATION_CREDENTIALS` environment variable, you can do this:",
+                  "lines": [
+                    158,
+                    207
+                  ],
+                  "name": "Call using a specific JSON key",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "If your application is behind a proxy such as [Google Cloud IAP][iap-proxy-header], and your application occupies the `Authorization` request header,",
+                  "lines": [
+                    208,
+                    250
+                  ],
+                  "name": "Call using Proxy-Authorization Header",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "Using workload identity federation, your application can access Google Cloud resources from Amazon Web Services (AWS), Microsoft Azure or any identity",
+                  "lines": [
+                    251,
+                    262
+                  ],
+                  "name": "External credentials (Workload identity federation)",
+                  "type": "subsubsection"
+                },
+                {
+                  "docstring": "If you are [using Google ID tokens to authenticate users][google-id-tokens], use the `Google\\Auth\\AccessToken` class to verify the ID token:",
+                  "lines": [
+                    263,
+                    291
+                  ],
+                  "name": "Verifying JWTs",
+                  "type": "subsubsection"
+                }
+              ],
+              "docstring": "As long as you update the environment variable below to point to *your* JSON credentials file, the following code should output a list of your Drive f",
+              "lines": [
+                58,
+                291
+              ],
+              "name": "Call the APIs",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "This library provides an implementation of [Application Default Credentials (ADC)][application default credentials] for PHP.",
+          "lines": [
+            26,
+            291
+          ],
+          "name": "Application Default Credentials",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "The `FileSystemCacheItemPool` class is a `PSR-6` compliant cache that stores its serialized objects on disk, caching data between processes and making",
+              "lines": [
+                310,
+                328
+              ],
+              "name": "FileSystemCacheItemPool Cache",
+              "type": "subsection"
+            },
+            {
+              "docstring": "You can use a third party that follows the `PSR-6` interface of your choice.",
+              "lines": [
+                329,
+                343
+              ],
+              "name": "Integrating with a third party cache",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "Caching is enabled by passing a PSR-6 `CacheItemPoolInterface` instance to the constructor when instantiating the credentials.",
+          "lines": [
+            292,
+            343
+          ],
+          "name": "Caching",
+          "type": "section"
+        },
+        {
+          "docstring": "This library is licensed under Apache 2.0. Full license text is available in [COPYING][copying].",
+          "lines": [
+            344,
+            348
+          ],
+          "name": "License",
+          "type": "section"
+        },
+        {
+          "docstring": "See [CONTRIBUTING][contributing].",
+          "lines": [
+            349,
+            352
+          ],
+          "name": "Contributing",
+          "type": "section"
+        },
+        {
+          "docstring": "Please [report bugs at the project on Github](https://github.com/google/google-auth-library-php/issues). Don't hesitate to [ask questions](http://stac",
+          "lines": [
+            353,
+            369
+          ],
+          "name": "Support",
+          "type": "section"
+        }
+      ]
+    },
+    "SECURITY.md": {
+      "hash": "f045875316da",
+      "indexed_at": "2026-01-20T04:50:18.010648+00:00",
+      "language": "markdown",
+      "lines": 7,
+      "symbols": []
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.144638+00:00",
+  "version": "1.0"
+}

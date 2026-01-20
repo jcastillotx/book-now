@@ -1,0 +1,922 @@
+{
+  "directory": ".claude/agents/sparc",
+  "files": {
+    "architecture.md": {
+      "hash": "3388eb7fdc57",
+      "indexed_at": "2026-01-20T04:50:25.582870+00:00",
+      "language": "markdown",
+      "lines": 699,
+      "symbols": [
+        {
+          "children": [
+            {
+              "lines": [
+                90,
+                128
+              ],
+              "name": "Before System Design: Learn from Past Architectures",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                129,
+                145
+              ],
+              "name": "During Architecture Design: Flash Attention for Large Docs",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                146,
+                169
+              ],
+              "name": "GNN Search for Similar System Designs",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                170,
+                195
+              ],
+              "name": "After Architecture Design: Store Learning Patterns",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            88,
+            195
+          ],
+          "name": "\ud83e\udde0 Self-Learning Protocol for Architecture",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                198,
+                221
+              ],
+              "name": "Learn Architecture Patterns by Scale",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                222,
+                236
+              ],
+              "name": "Cross-Phase Coordination with Hierarchical Attention",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            196,
+            236
+          ],
+          "name": "\ud83c\udfd7\ufe0f Architecture Pattern Library",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                239,
+                246
+              ],
+              "name": "Before: Typical architecture design (baseline)",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                247,
+                255
+              ],
+              "name": "After: Self-learning architecture (v2.0.0-alpha)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            237,
+            255
+          ],
+          "name": "\u26a1 Performance Optimization Examples",
+          "type": "section"
+        },
+        {
+          "docstring": "The Architecture phase transforms algorithms into system designs by: 1. Defining system components and boundaries 2. Designing interfaces and contract",
+          "lines": [
+            256,
+            264
+          ],
+          "name": "SPARC Architecture Phase",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                267,
+                317
+              ],
+              "name": "1. High-Level Architecture",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                318,
+                374
+              ],
+              "name": "2. Component Architecture",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                375,
+                429
+              ],
+              "name": "3. Data Architecture",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                430,
+                516
+              ],
+              "name": "4. API Architecture",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                517,
+                583
+              ],
+              "name": "5. Infrastructure Architecture",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                584,
+                641
+              ],
+              "name": "6. Security Architecture",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                642,
+                680
+              ],
+              "name": "7. Scalability Design",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            265,
+            680
+          ],
+          "name": "System Architecture Design",
+          "type": "section"
+        },
+        {
+          "docstring": "1. **System Design Document**: Complete architecture specification 2. **Component Diagrams**: Visual representation of system components 3. **Sequence",
+          "lines": [
+            681,
+            689
+          ],
+          "name": "Architecture Deliverables",
+          "type": "section"
+        },
+        {
+          "docstring": "1. **Design for Failure**: Assume components will fail 2. **Loose Coupling**: Minimize dependencies between components 3. **High Cohesion**: Keep rela",
+          "lines": [
+            690,
+            699
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        }
+      ]
+    },
+    "pseudocode.md": {
+      "hash": "4466b1045cee",
+      "indexed_at": "2026-01-20T04:50:25.583407+00:00",
+      "language": "markdown",
+      "lines": 520,
+      "symbols": [
+        {
+          "children": [
+            {
+              "lines": [
+                87,
+                125
+              ],
+              "name": "Before Algorithm Design: Learn from Similar Implementations",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                126,
+                153
+              ],
+              "name": "During Algorithm Design: GNN-Enhanced Pattern Search",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                154,
+                178
+              ],
+              "name": "After Algorithm Design: Store Learning Patterns",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            85,
+            178
+          ],
+          "name": "\ud83e\udde0 Self-Learning Protocol for Algorithms",
+          "type": "section"
+        },
+        {
+          "lines": [
+            179,
+            199
+          ],
+          "name": "\u26a1 Attention-Based Algorithm Selection",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                202,
+                217
+              ],
+              "name": "Learn Algorithm Patterns by Domain",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                218,
+                230
+              ],
+              "name": "Cross-Phase Coordination",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            200,
+            230
+          ],
+          "name": "\ud83c\udfaf SPARC-Specific Algorithm Optimizations",
+          "type": "section"
+        },
+        {
+          "docstring": "The Pseudocode phase bridges specifications and implementation by: 1. Designing algorithmic solutions 2. Selecting optimal data structures 3. Analyzin",
+          "lines": [
+            231,
+            239
+          ],
+          "name": "SPARC Pseudocode Phase",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                242,
+                277
+              ],
+              "name": "1. Structure and Syntax",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                278,
+                313
+              ],
+              "name": "2. Data Structure Selection",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                314,
+                352
+              ],
+              "name": "3. Algorithm Patterns",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                353,
+                421
+              ],
+              "name": "4. Complex Algorithm Design",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                422,
+                461
+              ],
+              "name": "5. Complexity Analysis",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            240,
+            461
+          ],
+          "name": "Pseudocode Standards",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                464,
+                483
+              ],
+              "name": "1. Strategy Pattern",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                484,
+                502
+              ],
+              "name": "2. Observer Pattern",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            462,
+            502
+          ],
+          "name": "Design Patterns in Pseudocode",
+          "type": "section"
+        },
+        {
+          "docstring": "1. **Language Agnostic**: Don't use language-specific syntax 2. **Clear Logic**: Focus on algorithm flow, not implementation details 3. **Handle Edge",
+          "lines": [
+            503,
+            511
+          ],
+          "name": "Pseudocode Best Practices",
+          "type": "section"
+        },
+        {
+          "docstring": "1. **Algorithm Documentation**: Complete pseudocode for all major functions 2. **Data Structure Definitions**: Clear specifications for all data struc",
+          "lines": [
+            512,
+            520
+          ],
+          "name": "Deliverables",
+          "type": "section"
+        }
+      ]
+    },
+    "refinement.md": {
+      "hash": "354ac3837c0e",
+      "indexed_at": "2026-01-20T04:50:25.584104+00:00",
+      "language": "markdown",
+      "lines": 802,
+      "symbols": [
+        {
+          "children": [
+            {
+              "lines": [
+                103,
+                141
+              ],
+              "name": "Before Refinement: Learn from Past Refactorings",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                142,
+                171
+              ],
+              "name": "During Refinement: GNN-Enhanced Code Pattern Search",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                172,
+                201
+              ],
+              "name": "After Refinement: Store Learning Patterns with Metrics",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            101,
+            201
+          ],
+          "name": "\ud83e\udde0 Self-Learning Protocol for Refinement",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                204,
+                234
+              ],
+              "name": "Red-Green-Refactor with Pattern Memory",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                235,
+                250
+              ],
+              "name": "Performance Optimization with Flash Attention",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            202,
+            250
+          ],
+          "name": "\ud83e\uddea Test-Driven Refinement with Learning",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                253,
+                270
+              ],
+              "name": "Track Refinement Progress Over Time",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            251,
+            270
+          ],
+          "name": "\ud83d\udcca Continuous Improvement Metrics",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                273,
+                281
+              ],
+              "name": "Before: Traditional refinement",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                282,
+                290
+              ],
+              "name": "After: Self-learning refinement (v2.0.0-alpha)",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            271,
+            290
+          ],
+          "name": "\u26a1 Performance Examples",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                293,
+                307
+              ],
+              "name": "Cross-Phase Test Alignment",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            291,
+            307
+          ],
+          "name": "\ud83c\udfaf SPARC-Specific Refinement Optimizations",
+          "type": "section"
+        },
+        {
+          "docstring": "The Refinement phase ensures code quality through: 1. Test-Driven Development (TDD) 2. Code optimization and refactoring 3. Performance tuning 4. Erro",
+          "lines": [
+            308,
+            316
+          ],
+          "name": "SPARC Refinement Phase",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                319,
+                383
+              ],
+              "name": "1. Red Phase - Write Failing Tests",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                384,
+                461
+              ],
+              "name": "2. Green Phase - Make Tests Pass",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                462,
+                529
+              ],
+              "name": "3. Refactor Phase - Improve Code Quality",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            317,
+            529
+          ],
+          "name": "TDD Refinement Process",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                532,
+                554
+              ],
+              "name": "1. Identify Bottlenecks",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                555,
+                594
+              ],
+              "name": "2. Optimize Hot Paths",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            530,
+            594
+          ],
+          "name": "Performance Refinement",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                597,
+                653
+              ],
+              "name": "1. Comprehensive Error Handling",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                654,
+                734
+              ],
+              "name": "2. Retry Logic and Circuit Breakers",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            595,
+            734
+          ],
+          "name": "Error Handling Refinement",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                737,
+                756
+              ],
+              "name": "1. Code Coverage",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                757,
+                792
+              ],
+              "name": "2. Complexity Analysis",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            735,
+            792
+          ],
+          "name": "Quality Metrics",
+          "type": "section"
+        },
+        {
+          "docstring": "1. **Test First**: Always write tests before implementation 2. **Small Steps**: Make incremental improvements 3. **Continuous Refactoring**: Improve c",
+          "lines": [
+            793,
+            802
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        }
+      ]
+    },
+    "specification.md": {
+      "hash": "87897edf19ee",
+      "indexed_at": "2026-01-20T04:50:25.582282+00:00",
+      "language": "markdown",
+      "lines": 478,
+      "symbols": [
+        {
+          "children": [
+            {
+              "lines": [
+                82,
+                120
+              ],
+              "name": "Before Each Specification: Learn from History",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                121,
+                140
+              ],
+              "name": "During Specification: Enhanced Context Retrieval",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                141,
+                157
+              ],
+              "name": "After Specification: Store Learning Patterns",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            80,
+            157
+          ],
+          "name": "\ud83e\udde0 Self-Learning Protocol for Specifications",
+          "type": "section"
+        },
+        {
+          "docstring": "Track continuous improvement:",
+          "lines": [
+            158,
+            173
+          ],
+          "name": "\ud83d\udcc8 Specification Quality Metrics",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                176,
+                192
+              ],
+              "name": "Pattern-Based Requirement Analysis",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                193,
+                214
+              ],
+              "name": "GNN Search for Similar Requirements",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                215,
+                229
+              ],
+              "name": "Cross-Phase Coordination with Attention",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            174,
+            229
+          ],
+          "name": "\ud83c\udfaf SPARC-Specific Learning Optimizations",
+          "type": "section"
+        },
+        {
+          "docstring": "The Specification phase is the foundation of SPARC methodology, where we: 1. Define clear, measurable requirements 2. Identify constraints and boundar",
+          "lines": [
+            230,
+            238
+          ],
+          "name": "SPARC Specification Phase",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                241,
+                265
+              ],
+              "name": "1. Requirements Gathering",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                266,
+                285
+              ],
+              "name": "2. Constraint Analysis",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                286,
+                311
+              ],
+              "name": "3. Use Case Definition",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                312,
+                335
+              ],
+              "name": "4. Acceptance Criteria",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            239,
+            335
+          ],
+          "name": "Specification Process",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                338,
+                342
+              ],
+              "name": "1. Requirements Document",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            336,
+            342
+          ],
+          "name": "Specification Deliverables",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "This system provides user authentication and authorization...",
+              "lines": [
+                344,
+                346
+              ],
+              "name": "1.1 Purpose",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- User registration and login - Role-based access control - Session management - Security audit logging",
+              "lines": [
+                347,
+                352
+              ],
+              "name": "1.2 Scope",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **User**: Any person with system access - **Role**: Set of permissions assigned to users - **Session**: Active authentication state",
+              "lines": [
+                353,
+                357
+              ],
+              "name": "1.3 Definitions",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            343,
+            357
+          ],
+          "name": "1. Introduction",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- FR-2.1.1: Support email/password login - FR-2.1.2: Implement OAuth2 providers - FR-2.1.3: Two-factor authentication",
+              "lines": [
+                360,
+                364
+              ],
+              "name": "2.1 Authentication",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- FR-2.2.1: Role-based permissions - FR-2.2.2: Resource-level access control - FR-2.2.3: API key management",
+              "lines": [
+                365,
+                369
+              ],
+              "name": "2.2 Authorization",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            358,
+            369
+          ],
+          "name": "2. Functional Requirements",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- NFR-3.1.1: 99.9% uptime SLA - NFR-3.1.2: <200ms response time - NFR-3.1.3: Support 10,000 concurrent users",
+              "lines": [
+                372,
+                376
+              ],
+              "name": "3.1 Performance",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- NFR-3.2.1: OWASP Top 10 compliance - NFR-3.2.2: Data encryption (AES-256) - NFR-3.2.3: Security audit logging",
+              "lines": [
+                377,
+                382
+              ],
+              "name": "3.2 Security",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                383,
+                415
+              ],
+              "name": "2. Data Model Specification",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                416,
+                455
+              ],
+              "name": "3. API Specification",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            370,
+            455
+          ],
+          "name": "3. Non-Functional Requirements",
+          "type": "section"
+        },
+        {
+          "docstring": "Before completing specification:",
+          "lines": [
+            456,
+            468
+          ],
+          "name": "Validation Checklist",
+          "type": "section"
+        },
+        {
+          "docstring": "1. **Be Specific**: Avoid ambiguous terms like \"fast\" or \"user-friendly\" 2. **Make it Testable**: Each requirement should have clear pass/fail criteri",
+          "lines": [
+            469,
+            478
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.193759+00:00",
+  "version": "1.0"
+}

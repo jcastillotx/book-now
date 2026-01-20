@@ -1,0 +1,1639 @@
+{
+  "directory": "vendor/guzzlehttp/psr7",
+  "files": {
+    "CHANGELOG.md": {
+      "hash": "833d316e3950",
+      "indexed_at": "2026-01-20T04:50:22.513128+00:00",
+      "language": "markdown",
+      "lines": 485,
+      "symbols": [
+        {
+          "children": [
+            {
+              "docstring": "- Allow empty lists as header values",
+              "lines": [
+                10,
+                13
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- PHP 8.5 support",
+              "lines": [
+                14,
+                17
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            8,
+            17
+          ],
+          "name": "2.8.0 - 2025-08-23",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Fixed uppercase IPv6 addresses in URI",
+              "lines": [
+                20,
+                23
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Improve uploaded file error message",
+              "lines": [
+                24,
+                27
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            18,
+            27
+          ],
+          "name": "2.7.1 - 2025-03-27",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Add `Utils::redactUserInfo()` method - Add ability to encode bools as ints in `Query::build`",
+              "lines": [
+                30,
+                34
+              ],
+              "name": "Added",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            28,
+            34
+          ],
+          "name": "2.7.0 - 2024-07-18",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Make `StreamWrapper::stream_stat()` return `false` if inner stream's size is `null`",
+              "lines": [
+                37,
+                40
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- PHP 8.4 support",
+              "lines": [
+                41,
+                44
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            35,
+            44
+          ],
+          "name": "2.6.3 - 2024-07-18",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Fixed another issue with the fact that PHP transforms numeric strings in array keys to ints",
+              "lines": [
+                47,
+                50
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Updated links in docs to their canonical versions - Replaced `call_user_func*` with native calls",
+              "lines": [
+                51,
+                55
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            45,
+            55
+          ],
+          "name": "2.6.2 - 2023-12-03",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Properly handle the fact that PHP transforms numeric strings in array keys to ints",
+              "lines": [
+                58,
+                61
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            56,
+            61
+          ],
+          "name": "2.6.1 - 2023-08-27",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Updated the mime type map to add some new entries, fix a couple of invalid entries, and remove an invalid entry - Fallback to `application/octet-str",
+              "lines": [
+                64,
+                68
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            62,
+            68
+          ],
+          "name": "2.6.0 - 2023-08-03",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Corrected mime type for `.acc` files to `audio/aac`",
+              "lines": [
+                71,
+                74
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- PHP 8.3 support",
+              "lines": [
+                75,
+                78
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            69,
+            78
+          ],
+          "name": "2.5.1 - 2023-08-03",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Adjusted `psr/http-message` version constraint to `^1.1 || ^2.0`",
+              "lines": [
+                81,
+                84
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            79,
+            84
+          ],
+          "name": "2.5.0 - 2023-04-17",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Prevent possible warnings on unset variables in `ServerRequest::normalizeNestedFileSpec` - Fixed `Message::bodySummary` when `preg_match` fails - Fi",
+              "lines": [
+                87,
+                92
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            85,
+            92
+          ],
+          "name": "2.4.5 - 2023-04-17",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Removed the need for `AllowDynamicProperties` in `LazyOpenStream`",
+              "lines": [
+                95,
+                98
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            93,
+            98
+          ],
+          "name": "2.4.4 - 2023-03-09",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Replaced `sha1(uniqid())` by `bin2hex(random_bytes(20))`",
+              "lines": [
+                101,
+                104
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            99,
+            104
+          ],
+          "name": "2.4.3 - 2022-10-26",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Fixed erroneous behaviour when combining host and relative path",
+              "lines": [
+                107,
+                110
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            105,
+            110
+          ],
+          "name": "2.4.2 - 2022-10-25",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Rewind body before reading in `Message::bodySummary`",
+              "lines": [
+                113,
+                116
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            111,
+            116
+          ],
+          "name": "2.4.1 - 2022-08-28",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Added provisional PHP 8.2 support - Added `UriComparator::isCrossOrigin` method",
+              "lines": [
+                119,
+                123
+              ],
+              "name": "Added",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            117,
+            123
+          ],
+          "name": "2.4.0 - 2022-06-20",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Added `Header::splitList` method - Added `Utils::tryGetContents` method - Improved `Stream::getContents` method - Updated mimetype mappings",
+              "lines": [
+                126,
+                132
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            124,
+            132
+          ],
+          "name": "2.3.0 - 2022-06-09",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Fix `Message::parseRequestUri` for numeric headers - Re-wrap exceptions thrown in `fread` into runtime exceptions - Throw an exception when multipar",
+              "lines": [
+                135,
+                140
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            133,
+            140
+          ],
+          "name": "2.2.2 - 2022-06-08",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Correct header value validation",
+              "lines": [
+                143,
+                146
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            141,
+            146
+          ],
+          "name": "2.2.1 - 2022-03-20",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- A more compressive list of mime types - Add JsonSerializable to Uri - Missing return types",
+              "lines": [
+                149,
+                154
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Bug MultipartStream no `uri` metadata - Bug MultipartStream with filename for `data://` streams - Fixed new line handling in MultipartStream - Reduc",
+              "lines": [
+                155,
+                162
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            147,
+            162
+          ],
+          "name": "2.2.0 - 2022-03-20",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Validate header values properly",
+              "lines": [
+                165,
+                168
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            163,
+            168
+          ],
+          "name": "2.1.1 - 2022-03-20",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Attempting to create a `Uri` object from a malformed URI will no longer throw a generic `InvalidArgumentException`, but rather a `MalformedUriExcept",
+              "lines": [
+                171,
+                177
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Return `null` in caching stream size if remote size is `null`",
+              "lines": [
+                178,
+                181
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            169,
+            181
+          ],
+          "name": "2.1.0 - 2021-10-06",
+          "type": "section"
+        },
+        {
+          "docstring": "Identical to the RC release.",
+          "lines": [
+            182,
+            185
+          ],
+          "name": "2.0.0 - 2021-06-30",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Handle possibly unset `url` in `stream_get_meta_data`",
+              "lines": [
+                188,
+                191
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            186,
+            191
+          ],
+          "name": "2.0.0@RC-1 - 2021-04-29",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- PSR-17 factories - Made classes final - PHP7 type hints",
+              "lines": [
+                194,
+                199
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- When building a query string, booleans are represented as 1 and 0.",
+              "lines": [
+                200,
+                203
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- PHP < 7.2 support - All functions in the `GuzzleHttp\\Psr7` namespace",
+              "lines": [
+                204,
+                208
+              ],
+              "name": "Removed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            192,
+            208
+          ],
+          "name": "2.0.0@beta-1 - 2021-03-21",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Issue parsing IPv6 URLs - Issue modifying ServerRequest lost all its attributes",
+              "lines": [
+                211,
+                215
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            209,
+            215
+          ],
+          "name": "1.8.1 - 2021-03-21",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Locale independent URL parsing - Most classes got a `@final` annotation to prepare for 2.0",
+              "lines": [
+                218,
+                222
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Issue when creating stream from `php://input` and curl-ext is not installed - Broken `Utils::tryFopen()` on PHP 8",
+              "lines": [
+                223,
+                227
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            216,
+            227
+          ],
+          "name": "1.8.0 - 2021-03-21",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Replaced functions by static methods",
+              "lines": [
+                230,
+                233
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Converting a non-seekable stream to a string - Handle multiple Set-Cookie correctly - Ignore array keys in header values when merging - Allow multib",
+              "lines": [
+                234,
+                240
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Restored partial HHVM 3 support",
+              "lines": [
+                241,
+                245
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            228,
+            245
+          ],
+          "name": "1.7.0 - 2020-09-30",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Accept null and bool header values again",
+              "lines": [
+                248,
+                252
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            246,
+            252
+          ],
+          "name": "[1.6.1] - 2019-07-02",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Allowed version `^3.0` of `ralouphie/getallheaders` dependency (#244) - Added MIME type for WEBP image format (#246) - Added more validation of valu",
+              "lines": [
+                255,
+                260
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Tests don't pass with HHVM 4.0, so HHVM support got dropped. Other libraries like composer have done the same. (#262) - Accept port number 0 to be v",
+              "lines": [
+                261,
+                265
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fixed subsequent reads from `php://input` in ServerRequest (#247) - Fixed readable/writable detection for certain stream modes (#248) - Fixed encodi",
+              "lines": [
+                266,
+                272
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            253,
+            272
+          ],
+          "name": "[1.6.0] - 2019-06-30",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Check body size when getting the message summary",
+              "lines": [
+                275,
+                279
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            273,
+            279
+          ],
+          "name": "[1.5.2] - 2018-12-04",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Get the summary of a body only if it is readable",
+              "lines": [
+                282,
+                286
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            280,
+            286
+          ],
+          "name": "[1.5.1] - 2018-12-04",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Response first-line to response string exception (fixes #145) - A test for #129 behavior - `get_message_body_summary` function in order to get the m",
+              "lines": [
+                289,
+                295
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Clarify exception message when stream is detached",
+              "lines": [
+                296,
+                299
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Deprecated parsing folded header lines as per RFC 7230",
+              "lines": [
+                300,
+                303
+              ],
+              "name": "Deprecated",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Fix `AppendStream::detach` to not close streams - `InflateStream` preserves `isSeekable` attribute of the underlying stream - `ServerRequest::getUri",
+              "lines": [
+                304,
+                313
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            287,
+            313
+          ],
+          "name": "[1.5.0] - 2018-12-03",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Reverted BC break to `Uri::resolve` and `Uri::removeDotSegments` by removing calls to `trigger_error` when deprecated methods are invoked.",
+              "lines": [
+                316,
+                321
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            314,
+            321
+          ],
+          "name": "[1.4.2] - 2017-03-20",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Rriggering of silenced deprecation warnings.",
+              "lines": [
+                324,
+                327
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Reverted BC break by reintroducing behavior to automagically fix a URI with a relative path and an authority by adding a leading slash to the path.",
+              "lines": [
+                328,
+                334
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            322,
+            334
+          ],
+          "name": "[1.4.1] - 2017-02-27",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Added common URI utility methods based on RFC 3986 (see documentation in the readme): - `Uri::isDefaultPort` - `Uri::isAbsolute` - `Uri::isNetworkPa",
+              "lines": [
+                337,
+                350
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Ensure `ServerRequest::getUriFromGlobals` returns a URI in absolute form. - Allow `parse_response` to parse a response without delimiting space and",
+              "lines": [
+                351,
+                361
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- `Uri::resolve` in favor of `UriResolver::resolve` - `Uri::removeDotSegments` in favor of `UriResolver::removeDotSegments`",
+              "lines": [
+                362,
+                366
+              ],
+              "name": "Deprecated",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- `Stream::read` when length parameter <= 0. - `copy_to_stream` reads bytes in chunks instead of `maxLen` into memory. - `ServerRequest::getUriFromGlo",
+              "lines": [
+                367,
+                374
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            335,
+            374
+          ],
+          "name": "[1.4.0] - 2017-02-21",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- `Uri::__toString` for network path references, e.g. `//example.org`. - Missing lowercase normalization for host. - Handling of URI components in cas",
+              "lines": [
+                377,
+                394
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            375,
+            394
+          ],
+          "name": "[1.3.1] - 2016-06-25",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Remaining interfaces needed for full PSR7 compatibility (ServerRequestInterface, UploadedFileInterface, etc.). - Support for stream_for from scalars",
+              "lines": [
+                397,
+                402
+              ],
+              "name": "Added",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Can now extend Uri.",
+              "lines": [
+                403,
+                406
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- A bug in validating request methods by making it more permissive.",
+              "lines": [
+                407,
+                410
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            395,
+            410
+          ],
+          "name": "[1.3.0] - 2016-04-13",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Support in `GuzzleHttp\\Psr7\\CachingStream` for seeking forward on remote streams, which can sometimes return fewer bytes than requested with `fread`",
+              "lines": [
+                413,
+                419
+              ],
+              "name": "Fixed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            411,
+            419
+          ],
+          "name": "[1.2.3] - 2016-02-18",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Support for URIs without any authority. - Support for HTTP 451 'Unavailable For Legal Reasons.' - Support for using '0' as a filename. - Support for",
+              "lines": [
+                422,
+                429
+              ],
+              "name": "Added",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            420,
+            429
+          ],
+          "name": "[1.2.2] - 2016-01-22",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Now supporting negative offsets when seeking to SEEK_END.",
+              "lines": [
+                432,
+                436
+              ],
+              "name": "Changes",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            430,
+            436
+          ],
+          "name": "[1.2.1] - 2015-11-02",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Body as `\"0\"` is now properly added to a response. - Now allowing forward seeking in CachingStream. - Now properly parsing HTTP requests that contai",
+              "lines": [
+                439,
+                448
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            437,
+            448
+          ],
+          "name": "[1.2.0] - 2015-08-15",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- URIs can now be relative. - `multipart/form-data` headers are now overridden case-insensitively. - URI paths no longer encode the following characte",
+              "lines": [
+                451,
+                460
+              ],
+              "name": "Changed",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            449,
+            460
+          ],
+          "name": "[1.1.0] - 2015-06-24",
+          "type": "section"
+        },
+        {
+          "docstring": "Initial release.",
+          "lines": [
+            461,
+            486
+          ],
+          "name": "1.0.0 - 2015-05-19",
+          "type": "section"
+        }
+      ]
+    },
+    "README.md": {
+      "hash": "4039a7de8297",
+      "indexed_at": "2026-01-20T04:50:22.516052+00:00",
+      "language": "markdown",
+      "lines": 887,
+      "symbols": [
+        {
+          "docstring": "This package comes with a number of stream implementations and stream decorators.",
+          "lines": [
+            11,
+            16
+          ],
+          "name": "Features",
+          "type": "section"
+        },
+        {
+          "lines": [
+            17,
+            22
+          ],
+          "name": "Installation",
+          "type": "section"
+        },
+        {
+          "docstring": "| Version | Status              | PHP Version  | |---------|---------------------|--------------| | 1.x     | EOL (2024-06-30)    | >=5.4,<8.2   | | 2",
+          "lines": [
+            23,
+            30
+          ],
+          "name": "Version Guidance",
+          "type": "section"
+        },
+        {
+          "docstring": "`GuzzleHttp\\Psr7\\AppendStream`",
+          "lines": [
+            31,
+            49
+          ],
+          "name": "AppendStream",
+          "type": "section"
+        },
+        {
+          "docstring": "`GuzzleHttp\\Psr7\\BufferStream`",
+          "lines": [
+            50,
+            69
+          ],
+          "name": "BufferStream",
+          "type": "section"
+        },
+        {
+          "docstring": "The CachingStream is used to allow seeking over previously read bytes on non-seekable streams. This can be useful when transferring a non-seekable ent",
+          "lines": [
+            70,
+            94
+          ],
+          "name": "CachingStream",
+          "type": "section"
+        },
+        {
+          "docstring": "`GuzzleHttp\\Psr7\\DroppingStream`",
+          "lines": [
+            95,
+            115
+          ],
+          "name": "DroppingStream",
+          "type": "section"
+        },
+        {
+          "docstring": "`GuzzleHttp\\Psr7\\FnStream`",
+          "lines": [
+            116,
+            142
+          ],
+          "name": "FnStream",
+          "type": "section"
+        },
+        {
+          "docstring": "`GuzzleHttp\\Psr7\\InflateStream`",
+          "lines": [
+            143,
+            153
+          ],
+          "name": "InflateStream",
+          "type": "section"
+        },
+        {
+          "docstring": "`GuzzleHttp\\Psr7\\LazyOpenStream`",
+          "lines": [
+            154,
+            171
+          ],
+          "name": "LazyOpenStream",
+          "type": "section"
+        },
+        {
+          "docstring": "`GuzzleHttp\\Psr7\\LimitStream`",
+          "lines": [
+            172,
+            195
+          ],
+          "name": "LimitStream",
+          "type": "section"
+        },
+        {
+          "docstring": "`GuzzleHttp\\Psr7\\MultipartStream`",
+          "lines": [
+            196,
+            203
+          ],
+          "name": "MultipartStream",
+          "type": "section"
+        },
+        {
+          "docstring": "`GuzzleHttp\\Psr7\\NoSeekStream`",
+          "lines": [
+            204,
+            225
+          ],
+          "name": "NoSeekStream",
+          "type": "section"
+        },
+        {
+          "docstring": "`GuzzleHttp\\Psr7\\PumpStream`",
+          "lines": [
+            226,
+            239
+          ],
+          "name": "PumpStream",
+          "type": "section"
+        },
+        {
+          "docstring": "Creating a stream decorator is very easy thanks to the `GuzzleHttp\\Psr7\\StreamDecoratorTrait`. This trait provides methods that implement `Psr\\Http\\Me",
+          "lines": [
+            240,
+            303
+          ],
+          "name": "Implementing stream decorators",
+          "type": "section"
+        },
+        {
+          "docstring": "You can use the `GuzzleHttp\\Psr7\\StreamWrapper` class if you need to use a PSR-7 stream as a PHP stream resource.",
+          "lines": [
+            304,
+            325
+          ],
+          "name": "PHP StreamWrapper",
+          "type": "section"
+        },
+        {
+          "docstring": "`public static function toString(MessageInterface $message): string`",
+          "lines": [
+            326,
+            337
+          ],
+          "name": "`GuzzleHttp\\Psr7\\Message::toString`",
+          "type": "section"
+        },
+        {
+          "docstring": "`public static function bodySummary(MessageInterface $message, int $truncateAt = 120): string|null`",
+          "lines": [
+            338,
+            346
+          ],
+          "name": "`GuzzleHttp\\Psr7\\Message::bodySummary`",
+          "type": "section"
+        },
+        {
+          "docstring": "`public static function rewindBody(MessageInterface $message): void`",
+          "lines": [
+            347,
+            356
+          ],
+          "name": "`GuzzleHttp\\Psr7\\Message::rewindBody`",
+          "type": "section"
+        },
+        {
+          "docstring": "`public static function parseMessage(string $message): array`",
+          "lines": [
+            357,
+            367
+          ],
+          "name": "`GuzzleHttp\\Psr7\\Message::parseMessage`",
+          "type": "section"
+        },
+        {
+          "docstring": "`public static function parseRequestUri(string $path, array $headers): string`",
+          "lines": [
+            368,
+            374
+          ],
+          "name": "`GuzzleHttp\\Psr7\\Message::parseRequestUri`",
+          "type": "section"
+        },
+        {
+          "docstring": "`public static function parseRequest(string $message): Request`",
+          "lines": [
+            375,
+            381
+          ],
+          "name": "`GuzzleHttp\\Psr7\\Message::parseRequest`",
+          "type": "section"
+        },
+        {
+          "docstring": "`public static function parseResponse(string $message): Response`",
+          "lines": [
+            382,
+            388
+          ],
+          "name": "`GuzzleHttp\\Psr7\\Message::parseResponse`",
+          "type": "section"
+        },
+        {
+          "docstring": "`public static function parse(string|array $header): array`",
+          "lines": [
+            389,
+            398
+          ],
+          "name": "`GuzzleHttp\\Psr7\\Header::parse`",
+          "type": "section"
+        },
+        {
+          "docstring": "`public static function splitList(string|string[] $header): string[]`",
+          "lines": [
+            399,
+            412
+          ],
+          "name": "`GuzzleHttp\\Psr7\\Header::splitList`",
+          "type": "section"
+        },
+        {
+          "docstring": "`public static function normalize(string|array $header): array`",
+          "lines": [
+            413,
+            424
+          ],
+          "name": "`GuzzleHttp\\Psr7\\Header::normalize` (deprecated)",
+          "type": "section"
+        },
+        {
+          "docstring": "`public static function parse(string $str, int|bool $urlEncoding = true): array`",
+          "lines": [
+            425,
+            436
+          ],
+          "name": "`GuzzleHttp\\Psr7\\Query::parse`",
+          "type": "section"
+        },
+        {
+          "docstring": "`public static function build(array $params, int|false $encoding = PHP_QUERY_RFC3986, bool $treatBoolsAsInts = true): string`",
+          "lines": [
+            437,
+            447
+          ],
+          "name": "`GuzzleHttp\\Psr7\\Query::build`",
+          "type": "section"
+        },
+        {
+          "docstring": "`public static function caselessRemove(iterable<string> $keys, $keys, array $data): array`",
+          "lines": [
+            448,
+            454
+          ],
+          "name": "`GuzzleHttp\\Psr7\\Utils::caselessRemove`",
+          "type": "section"
+        },
+        {
+          "docstring": "`public static function copyToStream(StreamInterface $source, StreamInterface $dest, int $maxLen = -1): void`",
+          "lines": [
+            455,
+            462
+          ],
+          "name": "`GuzzleHttp\\Psr7\\Utils::copyToStream`",
+          "type": "section"
+        },
+        {
+          "docstring": "`public static function copyToString(StreamInterface $stream, int $maxLen = -1): string`",
+          "lines": [
+            463,
+            470
+          ],
+          "name": "`GuzzleHttp\\Psr7\\Utils::copyToString`",
+          "type": "section"
+        },
+        {
+          "docstring": "`public static function hash(StreamInterface $stream, string $algo, bool $rawOutput = false): string`",
+          "lines": [
+            471,
+            480
+          ],
+          "name": "`GuzzleHttp\\Psr7\\Utils::hash`",
+          "type": "section"
+        },
+        {
+          "docstring": "`public static function modifyRequest(RequestInterface $request, array $changes): RequestInterface`",
+          "lines": [
+            481,
+            498
+          ],
+          "name": "`GuzzleHttp\\Psr7\\Utils::modifyRequest`",
+          "type": "section"
+        },
+        {
+          "docstring": "`public static function readLine(StreamInterface $stream, ?int $maxLength = null): string`",
+          "lines": [
+            499,
+            505
+          ],
+          "name": "`GuzzleHttp\\Psr7\\Utils::readLine`",
+          "type": "section"
+        },
+        {
+          "docstring": "`public static function redactUserInfo(UriInterface $uri): UriInterface`",
+          "lines": [
+            506,
+            512
+          ],
+          "name": "`GuzzleHttp\\Psr7\\Utils::redactUserInfo`",
+          "type": "section"
+        },
+        {
+          "docstring": "`public static function streamFor(resource|string|null|int|float|bool|StreamInterface|callable|\\Iterator $resource = '', array $options = []): StreamI",
+          "lines": [
+            513,
+            560
+          ],
+          "name": "`GuzzleHttp\\Psr7\\Utils::streamFor`",
+          "type": "section"
+        },
+        {
+          "docstring": "`public static function tryFopen(string $filename, string $mode): resource`",
+          "lines": [
+            561,
+            570
+          ],
+          "name": "`GuzzleHttp\\Psr7\\Utils::tryFopen`",
+          "type": "section"
+        },
+        {
+          "docstring": "`public static function tryGetContents(resource $stream): string`",
+          "lines": [
+            571,
+            581
+          ],
+          "name": "`GuzzleHttp\\Psr7\\Utils::tryGetContents`",
+          "type": "section"
+        },
+        {
+          "docstring": "`public static function uriFor(string|UriInterface $uri): UriInterface`",
+          "lines": [
+            582,
+            592
+          ],
+          "name": "`GuzzleHttp\\Psr7\\Utils::uriFor`",
+          "type": "section"
+        },
+        {
+          "docstring": "`public static function fromFilename(string $filename): string|null`",
+          "lines": [
+            593,
+            599
+          ],
+          "name": "`GuzzleHttp\\Psr7\\MimeType::fromFilename`",
+          "type": "section"
+        },
+        {
+          "docstring": "`public static function fromExtension(string $extension): string|null`",
+          "lines": [
+            600,
+            606
+          ],
+          "name": "`GuzzleHttp\\Psr7\\MimeType::fromExtension`",
+          "type": "section"
+        },
+        {
+          "docstring": "The static API was first introduced in 1.7.0, in order to mitigate problems with functions conflicting between global and local copies of the package.",
+          "lines": [
+            607,
+            641
+          ],
+          "name": "Upgrading from Function API",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "`public static function isAbsolute(UriInterface $uri): bool`",
+              "lines": [
+                655,
+                660
+              ],
+              "name": "`GuzzleHttp\\Psr7\\Uri::isAbsolute`",
+              "type": "subsection"
+            },
+            {
+              "docstring": "`public static function isNetworkPathReference(UriInterface $uri): bool`",
+              "lines": [
+                661,
+                667
+              ],
+              "name": "`GuzzleHttp\\Psr7\\Uri::isNetworkPathReference`",
+              "type": "subsection"
+            },
+            {
+              "docstring": "`public static function isAbsolutePathReference(UriInterface $uri): bool`",
+              "lines": [
+                668,
+                674
+              ],
+              "name": "`GuzzleHttp\\Psr7\\Uri::isAbsolutePathReference`",
+              "type": "subsection"
+            },
+            {
+              "docstring": "`public static function isRelativePathReference(UriInterface $uri): bool`",
+              "lines": [
+                675,
+                681
+              ],
+              "name": "`GuzzleHttp\\Psr7\\Uri::isRelativePathReference`",
+              "type": "subsection"
+            },
+            {
+              "docstring": "`public static function isSameDocumentReference(UriInterface $uri, ?UriInterface $base = null): bool`",
+              "lines": [
+                682,
+                689
+              ],
+              "name": "`GuzzleHttp\\Psr7\\Uri::isSameDocumentReference`",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "An instance of `Psr\\Http\\Message\\UriInterface` can either be an absolute URI or a relative reference. An absolute URI has a scheme. A relative referen",
+          "lines": [
+            642,
+            689
+          ],
+          "name": "URI Types",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "`public static function isDefaultPort(UriInterface $uri): bool`",
+              "lines": [
+                694,
+                700
+              ],
+              "name": "`GuzzleHttp\\Psr7\\Uri::isDefaultPort`",
+              "type": "subsection"
+            },
+            {
+              "docstring": "`public static function composeComponents($scheme, $authority, $path, $query, $fragment): string`",
+              "lines": [
+                701,
+                708
+              ],
+              "name": "`GuzzleHttp\\Psr7\\Uri::composeComponents`",
+              "type": "subsection"
+            },
+            {
+              "docstring": "`public static function fromParts(array $parts): UriInterface`",
+              "lines": [
+                709,
+                715
+              ],
+              "name": "`GuzzleHttp\\Psr7\\Uri::fromParts`",
+              "type": "subsection"
+            },
+            {
+              "docstring": "`public static function withQueryValue(UriInterface $uri, $key, $value): UriInterface`",
+              "lines": [
+                716,
+                723
+              ],
+              "name": "`GuzzleHttp\\Psr7\\Uri::withQueryValue`",
+              "type": "subsection"
+            },
+            {
+              "docstring": "`public static function withQueryValues(UriInterface $uri, array $keyValueArray): UriInterface`",
+              "lines": [
+                724,
+                730
+              ],
+              "name": "`GuzzleHttp\\Psr7\\Uri::withQueryValues`",
+              "type": "subsection"
+            },
+            {
+              "docstring": "`public static function withoutQueryValue(UriInterface $uri, $key): UriInterface`",
+              "lines": [
+                731,
+                737
+              ],
+              "name": "`GuzzleHttp\\Psr7\\Uri::withoutQueryValue`",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "Additional methods to work with URI components.",
+          "lines": [
+            690,
+            737
+          ],
+          "name": "URI Components",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "`public static function isCrossOrigin(UriInterface $original, UriInterface $modified): bool`",
+              "lines": [
+                742,
+                747
+              ],
+              "name": "`GuzzleHttp\\Psr7\\UriComparator::isCrossOrigin`",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "`GuzzleHttp\\Psr7\\UriComparator` provides methods to determine if a modified URL should be considered cross-origin.",
+          "lines": [
+            738,
+            747
+          ],
+          "name": "Cross-Origin Detection",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "`public static function resolve(UriInterface $base, UriInterface $rel): UriInterface`",
+              "lines": [
+                754,
+                759
+              ],
+              "name": "`GuzzleHttp\\Psr7\\UriResolver::resolve`",
+              "type": "subsection"
+            },
+            {
+              "docstring": "`public static function removeDotSegments(string $path): string`",
+              "lines": [
+                760,
+                766
+              ],
+              "name": "`GuzzleHttp\\Psr7\\UriResolver::removeDotSegments`",
+              "type": "subsection"
+            },
+            {
+              "docstring": "`public static function relativize(UriInterface $base, UriInterface $target): UriInterface`",
+              "lines": [
+                767,
+                787
+              ],
+              "name": "`GuzzleHttp\\Psr7\\UriResolver::relativize`",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "`GuzzleHttp\\Psr7\\UriResolver` provides methods to resolve a URI reference in the context of a base URI according to [RFC 3986 Section 5](https://datat",
+          "lines": [
+            748,
+            787
+          ],
+          "name": "Reference Resolution",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "`public static function normalize(UriInterface $uri, $flags = self::PRESERVING_NORMALIZATIONS): UriInterface`",
+              "lines": [
+                793,
+                862
+              ],
+              "name": "`GuzzleHttp\\Psr7\\UriNormalizer::normalize`",
+              "type": "subsection"
+            },
+            {
+              "docstring": "`public static function isEquivalent(UriInterface $uri1, UriInterface $uri2, $normalizations = self::PRESERVING_NORMALIZATIONS): bool`",
+              "lines": [
+                863,
+                872
+              ],
+              "name": "`GuzzleHttp\\Psr7\\UriNormalizer::isEquivalent`",
+              "type": "subsection"
+            }
+          ],
+          "docstring": "`GuzzleHttp\\Psr7\\UriNormalizer` provides methods to normalize and compare URIs according to [RFC 3986 Section 6](https://datatracker.ietf.org/doc/html",
+          "lines": [
+            788,
+            872
+          ],
+          "name": "Normalization and Comparison",
+          "type": "section"
+        },
+        {
+          "docstring": "If you discover a security vulnerability within this package, please send an email to security@tidelift.com. All security vulnerabilities will be prom",
+          "lines": [
+            873,
+            877
+          ],
+          "name": "Security",
+          "type": "section"
+        },
+        {
+          "docstring": "Guzzle is made available under the MIT License (MIT). Please see [License File](LICENSE) for more information.",
+          "lines": [
+            878,
+            882
+          ],
+          "name": "License",
+          "type": "section"
+        },
+        {
+          "docstring": "Available as part of the Tidelift Subscription",
+          "lines": [
+            883,
+            888
+          ],
+          "name": "For Enterprise",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.146687+00:00",
+  "version": "1.0"
+}

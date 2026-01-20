@@ -1,0 +1,180 @@
+{
+  "directory": ".claude/skills/reasoningbank-intelligence",
+  "files": {
+    "SKILL.md": {
+      "hash": "b62b18984d12",
+      "indexed_at": "2026-01-20T04:50:25.503863+00:00",
+      "language": "markdown",
+      "lines": 201,
+      "symbols": [
+        {
+          "docstring": "Implements ReasoningBank's adaptive learning system for AI agents to learn from experience, recognize patterns, and optimize strategies over time. Ena",
+          "lines": [
+            8,
+            11
+          ],
+          "name": "What This Skill Does",
+          "type": "section"
+        },
+        {
+          "docstring": "- agentic-flow v1.5.11+ - AgentDB v1.0.4+ (for persistence) - Node.js 18+",
+          "lines": [
+            12,
+            17
+          ],
+          "name": "Prerequisites",
+          "type": "section"
+        },
+        {
+          "lines": [
+            18,
+            54
+          ],
+          "name": "Quick Start",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                57,
+                70
+              ],
+              "name": "1. Pattern Recognition",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                71,
+                84
+              ],
+              "name": "2. Strategy Optimization",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                85,
+                93
+              ],
+              "name": "3. Continuous Learning",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            55,
+            93
+          ],
+          "name": "Core Features",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                96,
+                108
+              ],
+              "name": "Meta-Learning",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                109,
+                118
+              ],
+              "name": "Transfer Learning",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                119,
+                142
+              ],
+              "name": "Adaptive Agents",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            94,
+            142
+          ],
+          "name": "Advanced Usage",
+          "type": "section"
+        },
+        {
+          "lines": [
+            143,
+            164
+          ],
+          "name": "Integration with AgentDB",
+          "type": "section"
+        },
+        {
+          "lines": [
+            165,
+            177
+          ],
+          "name": "Performance Metrics",
+          "type": "section"
+        },
+        {
+          "docstring": "1. **Record consistently**: Log all task outcomes, not just successes 2. **Provide context**: Rich context improves pattern matching 3. **Set threshol",
+          "lines": [
+            178,
+            185
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "**Solution**: Ensure sufficient training data (100+ experiences per task type)",
+              "lines": [
+                188,
+                190
+              ],
+              "name": "Issue: Poor recommendations",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Solution**: Enable vector indexing in AgentDB",
+              "lines": [
+                191,
+                193
+              ],
+              "name": "Issue: Slow pattern matching",
+              "type": "subsection"
+            },
+            {
+              "docstring": "**Solution**: Set TTL for old experiences or enable pruning",
+              "lines": [
+                194,
+                196
+              ],
+              "name": "Issue: Memory growing large",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            186,
+            196
+          ],
+          "name": "Troubleshooting",
+          "type": "section"
+        },
+        {
+          "docstring": "- ReasoningBank Guide: agentic-flow/src/reasoningbank/README.md - AgentDB Integration: packages/agentdb/docs/reasoningbank.md - Pattern Learning: docs",
+          "lines": [
+            197,
+            202
+          ],
+          "name": "Learn More",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.162312+00:00",
+  "version": "1.0"
+}

@@ -1,0 +1,126 @@
+{
+  "directory": ".claude/agents/data",
+  "files": {
+    "data-ml-model.md": {
+      "hash": "aa8b9ce4f576",
+      "indexed_at": "2026-01-20T04:50:25.581737+00:00",
+      "language": "markdown",
+      "lines": 445,
+      "symbols": [
+        {
+          "children": [
+            {
+              "lines": [
+                185,
+                223
+              ],
+              "name": "Before Training: Learn from Past Models",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                224,
+                246
+              ],
+              "name": "During Training: GNN for Hyperparameter Search",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                247,
+                262
+              ],
+              "name": "For Large Datasets: Flash Attention",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                263,
+                291
+              ],
+              "name": "After Training: Store Learning Patterns",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            183,
+            291
+          ],
+          "name": "\ud83e\udde0 Self-Learning Protocol",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                294,
+                325
+              ],
+              "name": "ReasoningBank for Model Training Patterns",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                326,
+                354
+              ],
+              "name": "GNN for Hyperparameter Optimization",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                355,
+                375
+              ],
+              "name": "Flash Attention for Large Datasets",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            292,
+            375
+          ],
+          "name": "\ud83c\udfaf Domain-Specific Optimizations",
+          "type": "section"
+        },
+        {
+          "docstring": "1. Data preprocessing and feature engineering 2. Model selection and architecture design 3. Training and hyperparameter tuning 4. Model evaluation and",
+          "lines": [
+            376,
+            385
+          ],
+          "name": "Key responsibilities:",
+          "type": "section"
+        },
+        {
+          "docstring": "1. **Data Analysis** - Exploratory data analysis - Feature statistics - Data quality checks",
+          "lines": [
+            386,
+            414
+          ],
+          "name": "ML workflow:",
+          "type": "section"
+        },
+        {
+          "lines": [
+            415,
+            439
+          ],
+          "name": "Code patterns:",
+          "type": "section"
+        },
+        {
+          "docstring": "- Always split data before preprocessing - Use cross-validation for robust evaluation - Log all experiments and parameters - Version control models an",
+          "lines": [
+            440,
+            445
+          ],
+          "name": "Best practices:",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.193265+00:00",
+  "version": "1.0"
+}

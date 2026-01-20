@@ -1,0 +1,354 @@
+{
+  "directory": ".claude/agents/testing",
+  "files": {
+    "production-validator.md": {
+      "hash": "2290d706d92b",
+      "indexed_at": "2026-01-20T04:50:25.555570+00:00",
+      "language": "markdown",
+      "lines": 395,
+      "symbols": [
+        {
+          "docstring": "1. **Implementation Verification**: Ensure all components are fully implemented, not mocked 2. **Production Readiness**: Validate applications work wi",
+          "lines": [
+            32,
+            39
+          ],
+          "name": "Core Responsibilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                42,
+                74
+              ],
+              "name": "1. Implementation Completeness Check",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                75,
+                118
+              ],
+              "name": "2. Real Database Integration",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                119,
+                155
+              ],
+              "name": "3. External API Integration",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                156,
+                203
+              ],
+              "name": "4. Infrastructure Validation",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                204,
+                264
+              ],
+              "name": "5. Performance Under Load",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            40,
+            264
+          ],
+          "name": "Validation Strategies",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                267,
+                282
+              ],
+              "name": "1. Code Quality Validation",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                283,
+                303
+              ],
+              "name": "2. Environment Validation",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                304,
+                336
+              ],
+              "name": "3. Security Validation",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                337,
+                372
+              ],
+              "name": "4. Deployment Readiness",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            265,
+            372
+          ],
+          "name": "Validation Checklist",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Use production-like test data, not placeholder values - Test with actual file uploads, not mock files - Validate with real user scenarios and edge c",
+              "lines": [
+                375,
+                379
+              ],
+              "name": "1. Real Data Usage",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Test against actual databases, not in-memory alternatives - Validate network connectivity and timeouts - Test failure scenarios with real service ou",
+              "lines": [
+                380,
+                384
+              ],
+              "name": "2. Infrastructure Testing",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Measure actual response times under load - Test memory usage with real data volumes - Validate scaling behavior with production-sized datasets",
+              "lines": [
+                385,
+                389
+              ],
+              "name": "3. Performance Validation",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Test authentication with real identity providers - Validate encryption with actual certificates - Test authorization with real user roles and permis",
+              "lines": [
+                390,
+                395
+              ],
+              "name": "4. Security Testing",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            373,
+            395
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        }
+      ]
+    },
+    "tdd-london-swarm.md": {
+      "hash": "1157ccd19576",
+      "indexed_at": "2026-01-20T04:50:25.555131+00:00",
+      "language": "markdown",
+      "lines": 244,
+      "symbols": [
+        {
+          "docstring": "1. **Outside-In TDD**: Drive development from user behavior down to implementation details 2. **Mock-Driven Development**: Use mocks and stubs to isol",
+          "lines": [
+            32,
+            39
+          ],
+          "name": "Core Responsibilities",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                42,
+                59
+              ],
+              "name": "1. Outside-In Development Flow",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                60,
+                73
+              ],
+              "name": "2. Mock-First Approach",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                74,
+                89
+              ],
+              "name": "3. Behavior Verification Over State",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            40,
+            89
+          ],
+          "name": "London School TDD Methodology",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                92,
+                108
+              ],
+              "name": "1. Test Agent Collaboration",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                109,
+                121
+              ],
+              "name": "2. Contract Testing with Swarm",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                122,
+                137
+              ],
+              "name": "3. Mock Coordination",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            90,
+            137
+          ],
+          "name": "Swarm Coordination Patterns",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "lines": [
+                140,
+                159
+              ],
+              "name": "1. Interaction Testing",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                160,
+                180
+              ],
+              "name": "2. Collaboration Patterns",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                181,
+                195
+              ],
+              "name": "3. Contract Evolution",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            138,
+            195
+          ],
+          "name": "Testing Strategies",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- **Coordinate with integration agents** for end-to-end scenarios - **Share mock contracts** with other testing agents - **Synchronize test execution*",
+              "lines": [
+                198,
+                204
+              ],
+              "name": "1. Test Coordination",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- **Report interaction patterns** to architecture agents - **Share discovered contracts** with implementation agents - **Provide behavior insights** t",
+              "lines": [
+                205,
+                211
+              ],
+              "name": "2. Feedback Loops",
+              "type": "subsection"
+            },
+            {
+              "lines": [
+                212,
+                223
+              ],
+              "name": "3. Continuous Verification",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            196,
+            223
+          ],
+          "name": "Swarm Integration",
+          "type": "section"
+        },
+        {
+          "children": [
+            {
+              "docstring": "- Keep mocks simple and focused - Verify interactions, not implementations - Use jest.fn() for behavior verification - Avoid over-mocking internal det",
+              "lines": [
+                226,
+                231
+              ],
+              "name": "1. Mock Management",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Define clear interfaces through mock expectations - Focus on object responsibilities and collaborations - Use mocks to drive design decisions - Keep",
+              "lines": [
+                232,
+                237
+              ],
+              "name": "2. Contract Design",
+              "type": "subsection"
+            },
+            {
+              "docstring": "- Share test insights with other agents - Coordinate test execution timing - Maintain consistent mock contracts - Provide feedback for continuous impr",
+              "lines": [
+                238,
+                244
+              ],
+              "name": "3. Swarm Collaboration",
+              "type": "subsection"
+            }
+          ],
+          "lines": [
+            224,
+            244
+          ],
+          "name": "Best Practices",
+          "type": "section"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-01-20T04:50:26.183136+00:00",
+  "version": "1.0"
+}
