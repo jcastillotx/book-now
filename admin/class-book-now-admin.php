@@ -43,7 +43,7 @@ class Book_Now_Admin {
      */
     public function handle_booking_actions() {
         // Only process on the bookings page
-        if (!isset($_GET['page']) || $_GET['page'] !== 'book-now-bookings') {
+        if (!isset($_GET['page']) || sanitize_text_field(wp_unslash($_GET['page'])) !== 'book-now-bookings') {
             return;
         }
 
@@ -58,10 +58,10 @@ class Book_Now_Admin {
             return;
         }
 
-        $action = sanitize_text_field($_GET['action']);
+        $action = sanitize_text_field(wp_unslash($_GET['action']));
 
         // Verify nonce
-        if (!wp_verify_nonce($_GET['_wpnonce'], 'booknow_booking_action_' . $booking_id)) {
+        if (!wp_verify_nonce(sanitize_text_field(wp_unslash($_GET['_wpnonce'])), 'booknow_booking_action_' . $booking_id)) {
             $redirect_url = add_query_arg(
                 array(
                     'page' => 'book-now-bookings',
@@ -148,39 +148,48 @@ class Book_Now_Admin {
     }
 
     /**
-     * Handle calendar sync action.
+     * Handle calendar sync action with robust error handling to prevent blank screens.
      *
      * @param int $booking_id Booking ID.
      * @return string Notice message.
      */
     private function handle_calendar_sync($booking_id) {
+        // Start output buffering to prevent any stray output causing blank screens
+        ob_start();
+
         try {
-            // Load dependencies required by calendar classes
-            if (!class_exists('Book_Now_Encryption')) {
-                require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-encryption.php';
-            }
-            if (!class_exists('Book_Now_Logger')) {
-                require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-logger.php';
-            }
-            if (!class_exists('Book_Now_Calendar_Sync')) {
-                require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-calendar-sync.php';
-            }
-            if (!class_exists('Book_Now_Google_Calendar')) {
-                require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-google-calendar.php';
-            }
-            if (!class_exists('Book_Now_Microsoft_Calendar')) {
-                require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-microsoft-calendar.php';
-            }
-            // Ensure consultation type class is loaded as it might be needed for event description
-            if (!class_exists('Book_Now_Consultation_Type')) {
-                require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-consultation-type.php';
+            // Load dependencies required by calendar classes with error checking
+            $required_classes = array(
+                'Book_Now_Encryption' => 'includes/class-book-now-encryption.php',
+                'Book_Now_Logger' => 'includes/class-book-now-logger.php',
+                'Book_Now_Calendar_Sync' => 'includes/class-book-now-calendar-sync.php',
+                'Book_Now_Google_Calendar' => 'includes/class-book-now-google-calendar.php',
+                'Book_Now_Microsoft_Calendar' => 'includes/class-book-now-microsoft-calendar.php',
+                'Book_Now_Consultation_Type' => 'includes/class-book-now-consultation-type.php',
+            );
+
+            foreach ($required_classes as $class_name => $file_path) {
+                if (!class_exists($class_name)) {
+                    $full_path = BOOK_NOW_PLUGIN_DIR . $file_path;
+                    if (!file_exists($full_path)) {
+                        ob_end_clean();
+                        return sprintf(__('Required file missing: %s', 'book-now-kre8iv'), $file_path);
+                    }
+                    require_once $full_path;
+                }
             }
 
+            // Create calendar sync instance with error handling
             $calendar_sync = new Book_Now_Calendar_Sync();
+
+            // Perform the sync
             $results = $calendar_sync->manual_sync($booking_id);
 
+            // Clean output buffer
+            ob_end_clean();
+
             if (empty($results)) {
-                return __('No calendars configured or authenticated.', 'book-now-kre8iv');
+                return __('No calendars configured or authenticated. Go to Settings → Integrations to connect your calendar.', 'book-now-kre8iv');
             }
 
             if (isset($results['error'])) {
@@ -193,7 +202,7 @@ class Book_Now_Admin {
             foreach ($results as $provider => $status) {
                 if ($status === 'error') {
                     $error_msgs[] = sprintf(
-                        __('Sync with %s failed. Please check logs or re-authenticate.', 'book-now-kre8iv'),
+                        __('Sync with %s failed. Please re-authenticate in Settings → Integrations.', 'book-now-kre8iv'),
                         ucfirst($provider)
                     );
                 } else {
@@ -212,14 +221,25 @@ class Book_Now_Admin {
             return implode(' ', $success_msgs);
 
         } catch (Throwable $e) {
+            // Clean any buffered output
+            ob_end_clean();
+
+            // Log the error
             if (class_exists('Book_Now_Logger')) {
                 Book_Now_Logger::error('Calendar sync failed', array(
                     'booking_id' => $booking_id,
                     'error' => $e->getMessage(),
+                    'file' => $e->getFile(),
+                    'line' => $e->getLine(),
                     'trace' => $e->getTraceAsString()
                 ));
             }
-            return sprintf(__('Calendar sync encountered an error: %s', 'book-now-kre8iv'), $e->getMessage());
+
+            // Return user-friendly error message
+            return sprintf(
+                __('Calendar sync error: %s. Check Settings → Integrations to verify your calendar connection.', 'book-now-kre8iv'),
+                $e->getMessage()
+            );
         }
     }
 

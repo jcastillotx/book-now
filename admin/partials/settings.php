@@ -278,6 +278,9 @@ $masked_microsoft_secret = Book_Now_Encryption::mask($integration_settings['micr
         <a href="?page=book-now-settings&tab=integration" class="nav-tab <?php echo $current_tab === 'integration' ? 'nav-tab-active' : ''; ?>">
             <?php esc_html_e('Integrations', 'book-now-kre8iv'); ?>
         </a>
+        <a href="?page=book-now-settings&tab=diagnostics" class="nav-tab <?php echo $current_tab === 'diagnostics' ? 'nav-tab-active' : ''; ?>">
+            <?php esc_html_e('Diagnostics', 'book-now-kre8iv'); ?>
+        </a>
     </nav>
 
     <form method="post" action="">
@@ -782,10 +785,303 @@ $masked_microsoft_secret = Book_Now_Encryption::mask($integration_settings['micr
                     </td>
                 </tr>
             </table>
+
+        <?php elseif ($current_tab === 'diagnostics') : ?>
+            <?php
+            // Calendar Diagnostics Page
+            // Load required classes
+            if (!class_exists('Book_Now_Encryption')) {
+                require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-encryption.php';
+            }
+            if (!class_exists('Book_Now_Logger')) {
+                require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-logger.php';
+            }
+            if (!class_exists('Book_Now_Google_Calendar')) {
+                require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-google-calendar.php';
+            }
+            if (!class_exists('Book_Now_Microsoft_Calendar')) {
+                require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-microsoft-calendar.php';
+            }
+
+            // Get calendar settings
+            $calendar_settings = get_option('booknow_calendar_settings', array());
+            $integration_settings = Book_Now_Encryption::get_integration_settings();
+
+            // Initialize calendar classes
+            $google_calendar = null;
+            $microsoft_calendar = null;
+            $google_error = null;
+            $microsoft_error = null;
+
+            try {
+                $google_calendar = new Book_Now_Google_Calendar();
+            } catch (Exception $e) {
+                $google_error = $e->getMessage();
+            }
+
+            try {
+                $microsoft_calendar = new Book_Now_Microsoft_Calendar();
+            } catch (Exception $e) {
+                $microsoft_error = $e->getMessage();
+            }
+
+            // Get connection status
+            $google_status = $google_calendar ? $google_calendar->get_connection_status() : array('connected' => false, 'error' => $google_error);
+            $microsoft_status = $microsoft_calendar ? $microsoft_calendar->get_connection_status() : array('connected' => false, 'error' => $microsoft_error);
+
+            // Check if auto-sync is enabled
+            $google_sync_enabled = !empty($integration_settings['google_calendar_enabled']);
+            $microsoft_sync_enabled = !empty($integration_settings['microsoft_calendar_enabled']);
+
+            // Get recent bookings that might need sync
+            if (!class_exists('Book_Now_Booking')) {
+                require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-booking.php';
+            }
+            $recent_confirmed = Book_Now_Booking::get_all(array(
+                'status' => 'confirmed',
+                'limit' => 10,
+                'orderby' => 'created_at',
+                'order' => 'DESC'
+            ));
+
+            // Count bookings without calendar events
+            $bookings_need_sync = array();
+            foreach ($recent_confirmed as $booking) {
+                $needs_google = $google_sync_enabled && $google_status['connected'] && empty($booking->google_event_id);
+                $needs_microsoft = $microsoft_sync_enabled && $microsoft_status['connected'] && empty($booking->microsoft_event_id);
+                if ($needs_google || $needs_microsoft) {
+                    $bookings_need_sync[] = $booking;
+                }
+            }
+            ?>
+
+            <h2><?php esc_html_e('Calendar Diagnostics', 'book-now-kre8iv'); ?></h2>
+            <p class="description"><?php esc_html_e('Check the status of your calendar integrations and troubleshoot sync issues.', 'book-now-kre8iv'); ?></p>
+
+            <!-- System Status -->
+            <div class="booknow-diagnostic-section" style="margin-top: 20px; padding: 20px; background: #fff; border: 1px solid #ccd0d4; border-radius: 4px;">
+                <h3 style="margin-top: 0;"><span class="dashicons dashicons-admin-tools" style="margin-right: 8px;"></span><?php esc_html_e('System Status', 'book-now-kre8iv'); ?></h3>
+                <table class="widefat striped" style="margin-top: 10px;">
+                    <tbody>
+                        <tr>
+                            <td><strong><?php esc_html_e('PHP Version', 'book-now-kre8iv'); ?></strong></td>
+                            <td><?php echo esc_html(PHP_VERSION); ?> <?php echo version_compare(PHP_VERSION, '8.0', '>=') ? '<span style="color:green;">✓</span>' : '<span style="color:orange;">⚠ PHP 8.0+ recommended</span>'; ?></td>
+                        </tr>
+                        <tr>
+                            <td><strong><?php esc_html_e('WordPress Version', 'book-now-kre8iv'); ?></strong></td>
+                            <td><?php echo esc_html(get_bloginfo('version')); ?></td>
+                        </tr>
+                        <tr>
+                            <td><strong><?php esc_html_e('Plugin Version', 'book-now-kre8iv'); ?></strong></td>
+                            <td><?php echo esc_html(defined('BOOK_NOW_VERSION') ? BOOK_NOW_VERSION : '1.0.0'); ?></td>
+                        </tr>
+                        <tr>
+                            <td><strong><?php esc_html_e('Debug Mode', 'book-now-kre8iv'); ?></strong></td>
+                            <td><?php echo (defined('WP_DEBUG') && WP_DEBUG) ? '<span style="color:orange;">Enabled</span>' : '<span style="color:green;">Disabled</span>'; ?></td>
+                        </tr>
+                        <tr>
+                            <td><strong><?php esc_html_e('Timezone', 'book-now-kre8iv'); ?></strong></td>
+                            <td><?php echo esc_html(booknow_get_setting('general', 'timezone') ?: get_option('timezone_string', 'UTC')); ?></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Google Calendar Status -->
+            <div class="booknow-diagnostic-section" style="margin-top: 20px; padding: 20px; background: #fff; border: 1px solid #ccd0d4; border-radius: 4px;">
+                <h3 style="margin-top: 0;"><span class="dashicons dashicons-google" style="color: #4285f4; margin-right: 8px;"></span><?php esc_html_e('Google Calendar Status', 'book-now-kre8iv'); ?></h3>
+                <table class="widefat striped" style="margin-top: 10px;">
+                    <tbody>
+                        <tr>
+                            <td style="width: 200px;"><strong><?php esc_html_e('Sync Enabled', 'book-now-kre8iv'); ?></strong></td>
+                            <td>
+                                <?php if ($google_sync_enabled) : ?>
+                                    <span style="color: green;">✓ <?php esc_html_e('Yes', 'book-now-kre8iv'); ?></span>
+                                <?php else : ?>
+                                    <span style="color: gray;">✗ <?php esc_html_e('No', 'book-now-kre8iv'); ?></span>
+                                <?php endif; ?>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong><?php esc_html_e('Credentials Configured', 'book-now-kre8iv'); ?></strong></td>
+                            <td>
+                                <?php if (!empty($integration_settings['google_client_id']) && !empty($integration_settings['google_client_secret'])) : ?>
+                                    <span style="color: green;">✓ <?php esc_html_e('Yes', 'book-now-kre8iv'); ?></span>
+                                <?php else : ?>
+                                    <span style="color: red;">✗ <?php esc_html_e('Missing credentials', 'book-now-kre8iv'); ?></span>
+                                <?php endif; ?>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong><?php esc_html_e('Connection Status', 'book-now-kre8iv'); ?></strong></td>
+                            <td>
+                                <?php if ($google_status['connected']) : ?>
+                                    <span style="color: green;">✓ <?php esc_html_e('Connected', 'book-now-kre8iv'); ?></span>
+                                    <?php if (!empty($google_status['email'])) : ?>
+                                        <br><small><?php echo esc_html($google_status['email']); ?></small>
+                                    <?php endif; ?>
+                                <?php elseif (!empty($google_status['error'])) : ?>
+                                    <span style="color: red;">✗ <?php echo esc_html($google_status['error']); ?></span>
+                                <?php else : ?>
+                                    <span style="color: orange;">⚠ <?php esc_html_e('Not connected - authorization required', 'book-now-kre8iv'); ?></span>
+                                <?php endif; ?>
+                            </td>
+                        </tr>
+                        <?php if ($google_calendar && $google_status['connected']) : ?>
+                        <tr>
+                            <td><strong><?php esc_html_e('API Test', 'book-now-kre8iv'); ?></strong></td>
+                            <td>
+                                <?php
+                                $test_result = $google_calendar->test_connection();
+                                if (is_wp_error($test_result)) {
+                                    echo '<span style="color: red;">✗ ' . esc_html($test_result->get_error_message()) . '</span>';
+                                } else {
+                                    echo '<span style="color: green;">✓ ' . esc_html__('API responding correctly', 'book-now-kre8iv') . '</span>';
+                                }
+                                ?>
+                            </td>
+                        </tr>
+                        <?php endif; ?>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Microsoft Calendar Status -->
+            <div class="booknow-diagnostic-section" style="margin-top: 20px; padding: 20px; background: #fff; border: 1px solid #ccd0d4; border-radius: 4px;">
+                <h3 style="margin-top: 0;"><span class="dashicons dashicons-cloud" style="color: #0078d4; margin-right: 8px;"></span><?php esc_html_e('Microsoft 365 Calendar Status', 'book-now-kre8iv'); ?></h3>
+                <table class="widefat striped" style="margin-top: 10px;">
+                    <tbody>
+                        <tr>
+                            <td style="width: 200px;"><strong><?php esc_html_e('Sync Enabled', 'book-now-kre8iv'); ?></strong></td>
+                            <td>
+                                <?php if ($microsoft_sync_enabled) : ?>
+                                    <span style="color: green;">✓ <?php esc_html_e('Yes', 'book-now-kre8iv'); ?></span>
+                                <?php else : ?>
+                                    <span style="color: gray;">✗ <?php esc_html_e('No', 'book-now-kre8iv'); ?></span>
+                                <?php endif; ?>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong><?php esc_html_e('Credentials Configured', 'book-now-kre8iv'); ?></strong></td>
+                            <td>
+                                <?php if (!empty($integration_settings['microsoft_client_id']) && !empty($integration_settings['microsoft_client_secret'])) : ?>
+                                    <span style="color: green;">✓ <?php esc_html_e('Yes', 'book-now-kre8iv'); ?></span>
+                                <?php else : ?>
+                                    <span style="color: red;">✗ <?php esc_html_e('Missing credentials', 'book-now-kre8iv'); ?></span>
+                                <?php endif; ?>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong><?php esc_html_e('Connection Status', 'book-now-kre8iv'); ?></strong></td>
+                            <td>
+                                <?php if ($microsoft_status['connected']) : ?>
+                                    <span style="color: green;">✓ <?php esc_html_e('Connected', 'book-now-kre8iv'); ?></span>
+                                    <?php if (!empty($microsoft_status['email'])) : ?>
+                                        <br><small><?php echo esc_html($microsoft_status['email']); ?></small>
+                                    <?php endif; ?>
+                                <?php elseif (!empty($microsoft_status['error'])) : ?>
+                                    <span style="color: red;">✗ <?php echo esc_html($microsoft_status['error']); ?></span>
+                                <?php else : ?>
+                                    <span style="color: orange;">⚠ <?php esc_html_e('Not connected - authorization required', 'book-now-kre8iv'); ?></span>
+                                <?php endif; ?>
+                            </td>
+                        </tr>
+                        <?php if (!empty($microsoft_status['expires_at'])) : ?>
+                        <tr>
+                            <td><strong><?php esc_html_e('Token Expires', 'book-now-kre8iv'); ?></strong></td>
+                            <td><?php echo esc_html($microsoft_status['expires_at']); ?></td>
+                        </tr>
+                        <?php endif; ?>
+                        <?php if ($microsoft_calendar && $microsoft_status['connected']) : ?>
+                        <tr>
+                            <td><strong><?php esc_html_e('API Test', 'book-now-kre8iv'); ?></strong></td>
+                            <td>
+                                <?php
+                                $test_result = $microsoft_calendar->test_connection();
+                                if (is_wp_error($test_result)) {
+                                    echo '<span style="color: red;">✗ ' . esc_html($test_result->get_error_message()) . '</span>';
+                                } else {
+                                    echo '<span style="color: green;">✓ ' . esc_html__('API responding correctly', 'book-now-kre8iv') . '</span>';
+                                }
+                                ?>
+                            </td>
+                        </tr>
+                        <?php endif; ?>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Sync Status -->
+            <div class="booknow-diagnostic-section" style="margin-top: 20px; padding: 20px; background: #fff; border: 1px solid #ccd0d4; border-radius: 4px;">
+                <h3 style="margin-top: 0;"><span class="dashicons dashicons-update" style="margin-right: 8px;"></span><?php esc_html_e('Auto-Sync Status', 'book-now-kre8iv'); ?></h3>
+
+                <p class="description"><?php esc_html_e('Auto-sync automatically creates calendar events when bookings are confirmed.', 'book-now-kre8iv'); ?></p>
+
+                <table class="widefat striped" style="margin-top: 10px;">
+                    <tbody>
+                        <tr>
+                            <td style="width: 200px;"><strong><?php esc_html_e('Auto-Sync Hooks', 'book-now-kre8iv'); ?></strong></td>
+                            <td>
+                                <?php
+                                // Check if Calendar_Sync hooks are registered
+                                $hooks_registered = has_action('booknow_booking_confirmed');
+                                if ($hooks_registered) {
+                                    echo '<span style="color: green;">✓ ' . esc_html__('Registered', 'book-now-kre8iv') . '</span>';
+                                } else {
+                                    echo '<span style="color: orange;">⚠ ' . esc_html__('Not registered - Calendar_Sync may not be initialized', 'book-now-kre8iv') . '</span>';
+                                }
+                                ?>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong><?php esc_html_e('Bookings Needing Sync', 'book-now-kre8iv'); ?></strong></td>
+                            <td>
+                                <?php if (empty($bookings_need_sync)) : ?>
+                                    <span style="color: green;">✓ <?php esc_html_e('All recent bookings are synced', 'book-now-kre8iv'); ?></span>
+                                <?php else : ?>
+                                    <span style="color: orange;">⚠ <?php echo esc_html(sprintf(_n('%d booking needs sync', '%d bookings need sync', count($bookings_need_sync), 'book-now-kre8iv'), count($bookings_need_sync))); ?></span>
+                                    <ul style="margin: 10px 0 0 20px; list-style: disc;">
+                                        <?php foreach ($bookings_need_sync as $booking) : ?>
+                                            <li>
+                                                <?php echo esc_html(sprintf(
+                                                    __('Booking #%s (%s) - %s', 'book-now-kre8iv'),
+                                                    $booking->reference_number,
+                                                    $booking->customer_name,
+                                                    $booking->booking_date
+                                                )); ?>
+                                                <a href="<?php echo esc_url(wp_nonce_url(
+                                                    admin_url('admin.php?page=book-now-bookings&id=' . $booking->id . '&action=sync_calendar'),
+                                                    'booknow_booking_action_' . $booking->id
+                                                )); ?>" class="button button-small" style="margin-left: 10px;">
+                                                    <?php esc_html_e('Sync Now', 'book-now-kre8iv'); ?>
+                                                </a>
+                                            </li>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                <?php endif; ?>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Troubleshooting Tips -->
+            <div class="booknow-diagnostic-section" style="margin-top: 20px; padding: 20px; background: #fff9e5; border: 1px solid #f0c36d; border-radius: 4px;">
+                <h3 style="margin-top: 0;"><span class="dashicons dashicons-lightbulb" style="margin-right: 8px;"></span><?php esc_html_e('Troubleshooting Tips', 'book-now-kre8iv'); ?></h3>
+                <ul style="margin: 10px 0 0 20px; list-style: disc;">
+                    <li><strong><?php esc_html_e('Blank screen on sync:', 'book-now-kre8iv'); ?></strong> <?php esc_html_e('Check that your calendar credentials are valid and the calendar is still connected. Try disconnecting and reconnecting.', 'book-now-kre8iv'); ?></li>
+                    <li><strong><?php esc_html_e('Auto-sync not working:', 'book-now-kre8iv'); ?></strong> <?php esc_html_e('Ensure the calendar sync is enabled in Integrations settings AND the calendar is connected/authenticated.', 'book-now-kre8iv'); ?></li>
+                    <li><strong><?php esc_html_e('Token expired:', 'book-now-kre8iv'); ?></strong> <?php esc_html_e('Microsoft tokens expire periodically. If you see token errors, disconnect and reconnect your calendar.', 'book-now-kre8iv'); ?></li>
+                    <li><strong><?php esc_html_e('Calendar not showing availability:', 'book-now-kre8iv'); ?></strong> <?php esc_html_e('The system checks calendar busy times when calculating available slots. Ensure the correct calendar is selected and connected.', 'book-now-kre8iv'); ?></li>
+                </ul>
+            </div>
+
         <?php endif; ?>
 
+        <?php if ($current_tab !== 'diagnostics') : ?>
         <p class="submit">
             <button type="submit" class="button button-primary"><?php esc_html_e('Save Settings', 'book-now-kre8iv'); ?></button>
         </p>
+        <?php endif; ?>
     </form>
 </div>

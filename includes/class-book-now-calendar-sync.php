@@ -280,6 +280,79 @@ class Book_Now_Calendar_Sync {
     }
 
     /**
+     * Sync all confirmed bookings that are missing calendar events.
+     *
+     * Useful for catching up after initial calendar connection or fixing missed syncs.
+     *
+     * @param int $limit Maximum number of bookings to sync (default 50)
+     * @return array Results with counts of synced/failed bookings
+     */
+    public function sync_all_pending($limit = 50) {
+        $results = array(
+            'total' => 0,
+            'synced' => 0,
+            'failed' => 0,
+            'skipped' => 0,
+            'details' => array(),
+        );
+
+        // Get confirmed bookings
+        $bookings = Book_Now_Booking::get_all(array(
+            'status' => 'confirmed',
+            'limit' => $limit,
+            'orderby' => 'created_at',
+            'order' => 'DESC',
+        ));
+
+        foreach ($bookings as $booking) {
+            $results['total']++;
+            $needs_sync = false;
+
+            // Check if needs Google sync
+            if ($this->is_google_enabled() && $this->google !== null && $this->google->is_authenticated() && empty($booking->google_event_id)) {
+                $needs_sync = true;
+            }
+
+            // Check if needs Microsoft sync
+            if ($this->is_microsoft_enabled() && $this->microsoft !== null && $this->microsoft->is_authenticated() && empty($booking->microsoft_event_id)) {
+                $needs_sync = true;
+            }
+
+            if (!$needs_sync) {
+                $results['skipped']++;
+                continue;
+            }
+
+            // Perform sync
+            $sync_result = $this->manual_sync($booking->id);
+
+            if (isset($sync_result['error'])) {
+                $results['failed']++;
+                $results['details'][$booking->id] = array(
+                    'status' => 'error',
+                    'message' => $sync_result['error'],
+                );
+            } else {
+                $has_error = false;
+                foreach ($sync_result as $provider => $status) {
+                    if ($status === 'error') {
+                        $has_error = true;
+                    }
+                }
+
+                if ($has_error) {
+                    $results['failed']++;
+                } else {
+                    $results['synced']++;
+                }
+                $results['details'][$booking->id] = $sync_result;
+            }
+        }
+
+        return $results;
+    }
+
+    /**
      * Manual sync booking to calendars
      *
      * @param int $booking_id Booking ID
