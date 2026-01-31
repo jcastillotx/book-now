@@ -14,7 +14,15 @@
  * @return mixed
  */
 function booknow_get_setting( $group, $key = null ) {
-	$settings = get_option( 'booknow_' . $group . '_settings', array() );
+	static $cache = array();
+
+	$cache_key = 'booknow_' . $group . '_settings';
+
+	if ( ! isset( $cache[ $cache_key ] ) ) {
+		$cache[ $cache_key ] = get_option( $cache_key, array() );
+	}
+
+	$settings = $cache[ $cache_key ];
 
 	if ( null !== $key ) {
 		return isset( $settings[ $key ] ) ? $settings[ $key ] : null;
@@ -128,6 +136,9 @@ function booknow_get_payment_status_label( $status ) {
  */
 function booknow_time_to_minutes( $time ) {
 	$parts = explode( ':', $time );
+	if ( count( $parts ) < 2 ) {
+		return 0;
+	}
 	return (int) $parts[0] * 60 + (int) $parts[1];
 }
 

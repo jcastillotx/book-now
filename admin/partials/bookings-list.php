@@ -33,6 +33,14 @@ if ($booking_id) {
     $booking = Book_Now_Booking::get($booking_id);
 } else {
     $bookings = Book_Now_Booking::get_all(array('limit' => 100));
+
+    // Batch load consultation types to avoid N+1 queries
+    // This single query replaces 100 individual queries in the loop
+    $consultation_types_map = array();
+    $all_types = Book_Now_Consultation_Type::get_all(array('status' => null));
+    foreach ($all_types as $type_obj) {
+        $consultation_types_map[$type_obj->id] = $type_obj;
+    }
 }
 ?>
 
@@ -273,7 +281,7 @@ if ($booking_id) {
                         </thead>
                         <tbody>
                             <?php foreach ($bookings as $booking):
-                                $type = Book_Now_Consultation_Type::get_by_id($booking->consultation_type_id);
+                                $type = isset($consultation_types_map[$booking->consultation_type_id]) ? $consultation_types_map[$booking->consultation_type_id] : null;
                                 ?>
                                 <tr>
                                     <td>

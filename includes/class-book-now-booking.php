@@ -351,13 +351,27 @@ class Book_Now_Booking {
         global $wpdb;
         $table = $wpdb->prefix . 'booknow_bookings';
 
-        return array(
-            'total'     => (int) $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM {$table} WHERE 1=%d", 1)),
-            'pending'   => (int) $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM {$table} WHERE status = %s", 'pending')),
-            'confirmed' => (int) $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM {$table} WHERE status = %s", 'confirmed')),
-            'completed' => (int) $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM {$table} WHERE status = %s", 'completed')),
-            'cancelled' => (int) $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM {$table} WHERE status = %s", 'cancelled')),
+        // Use single aggregated query instead of 5 separate COUNT queries
+        $results = $wpdb->get_results(
+            "SELECT status, COUNT(*) as count FROM {$table} GROUP BY status"
         );
+
+        $stats = array(
+            'total'     => 0,
+            'pending'   => 0,
+            'confirmed' => 0,
+            'completed' => 0,
+            'cancelled' => 0,
+        );
+
+        foreach ( $results as $row ) {
+            if ( isset( $stats[ $row->status ] ) ) {
+                $stats[ $row->status ] = (int) $row->count;
+            }
+            $stats['total'] += (int) $row->count;
+        }
+
+        return $stats;
     }
 
     /**
@@ -371,7 +385,7 @@ class Book_Now_Booking {
         $table = $wpdb->prefix . 'booknow_bookings';
 
         $start_time = current_time('mysql');
-        $end_time = date('Y-m-d H:i:s', strtotime("+{$hours} hours"));
+        $end_time = wp_date('Y-m-d H:i:s', strtotime("+{$hours} hours"));
 
         $sql = $wpdb->prepare(
             "SELECT * FROM {$table}

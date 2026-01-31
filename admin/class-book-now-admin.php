@@ -43,7 +43,7 @@ class Book_Now_Admin {
      */
     public function handle_booking_actions() {
         // Only process on the bookings page
-        if (!isset($_GET['page']) || $_GET['page'] !== 'book-now-bookings') {
+        if (!isset($_GET['page']) || sanitize_text_field(wp_unslash($_GET['page'])) !== 'book-now-bookings') {
             return;
         }
 
@@ -58,10 +58,10 @@ class Book_Now_Admin {
             return;
         }
 
-        $action = sanitize_text_field($_GET['action']);
+        $action = sanitize_text_field(wp_unslash($_GET['action']));
 
         // Verify nonce
-        if (!wp_verify_nonce($_GET['_wpnonce'], 'booknow_booking_action_' . $booking_id)) {
+        if (!wp_verify_nonce(sanitize_text_field(wp_unslash($_GET['_wpnonce'])), 'booknow_booking_action_' . $booking_id)) {
             $redirect_url = add_query_arg(
                 array(
                     'page' => 'book-now-bookings',
