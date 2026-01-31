@@ -105,6 +105,7 @@ class Book_Now {
         // Admin classes
         require_once BOOK_NOW_PLUGIN_DIR . 'admin/class-book-now-admin.php';
         require_once BOOK_NOW_PLUGIN_DIR . 'admin/class-book-now-setup-wizard.php';
+        require_once BOOK_NOW_PLUGIN_DIR . 'admin/class-book-now-dashboard-widgets.php';
 
         // Public classes
         require_once BOOK_NOW_PLUGIN_DIR . 'public/class-book-now-public.php';
@@ -132,6 +133,7 @@ class Book_Now {
     private function define_admin_hooks() {
         $plugin_admin = new Book_Now_Admin($this->get_plugin_name(), $this->get_version());
         new Book_Now_Setup_Wizard();
+        new Book_Now_Dashboard_Widgets();
 
         // Enqueue admin assets
         $this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_styles');
