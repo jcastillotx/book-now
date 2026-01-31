@@ -30,6 +30,13 @@ class Book_Now {
     protected $version;
 
     /**
+     * Calendar sync instance - must be stored to persist action hooks.
+     *
+     * @var Book_Now_Calendar_Sync
+     */
+    protected $calendar_sync;
+
+    /**
      * Initialize the core plugin.
      */
     public function __construct() {
@@ -44,12 +51,20 @@ class Book_Now {
     }
 
     /**
-     * Initialize REST API.
+     * Initialize REST API and integration classes.
+     *
+     * Note: Calendar_Sync MUST be stored as a class property to prevent
+     * garbage collection from breaking the auto-sync action hooks.
      */
     private function define_rest_api() {
         new Book_Now_REST_API();
         new Book_Now_Webhook();
-        new Book_Now_Calendar_Sync();
+
+        // Store Calendar_Sync instance - this is critical!
+        // The hooks registered in the constructor use $this references.
+        // If the instance is garbage collected, auto-sync breaks silently.
+        $this->calendar_sync = new Book_Now_Calendar_Sync();
+
         new Book_Now_SMTP();
         new Book_Now_Email();
     }
