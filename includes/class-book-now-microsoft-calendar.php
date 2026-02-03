@@ -227,7 +227,7 @@ class Book_Now_Microsoft_Calendar {
      *
      * @return string The redirect URI.
      */
-    private function get_redirect_uri(): string {
+    public function get_redirect_uri(): string {
         return admin_url('admin.php?page=book-now-settings&tab=integration&microsoft_oauth=callback');
     }
 

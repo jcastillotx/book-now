@@ -531,6 +531,7 @@ $masked_microsoft_secret = Book_Now_Encryption::mask($integration_settings['micr
             $microsoft_auth_url = $microsoft_is_configured ? $microsoft_calendar->get_auth_url() : false;
             $microsoft_connection_status = $microsoft_calendar->get_connection_status(); // Get detailed status
             $microsoft_connection_info = $microsoft_is_connected ? $microsoft_calendar->test_connection() : null;
+            $microsoft_redirect_uri = $microsoft_calendar->get_redirect_uri();
             ?>
 
             <h2><?php esc_html_e('Calendar Integrations', 'book-now-kre8iv'); ?></h2>
@@ -759,6 +760,15 @@ $masked_microsoft_secret = Book_Now_Encryption::mask($integration_settings['micr
                             <input type="checkbox" name="microsoft_calendar_enabled" value="1" <?php checked(!empty($integration_settings['microsoft_calendar_enabled'])); ?>>
                             <?php esc_html_e('Sync bookings with Microsoft 365/Outlook', 'book-now-kre8iv'); ?>
                         </label>
+                    </td>
+                </tr>
+                <tr>
+                    <th><?php esc_html_e('Redirect URI', 'book-now-kre8iv'); ?></th>
+                    <td>
+                        <code style="display: inline-block; padding: 8px 12px; background: #f0f0f1; border-radius: 4px; user-select: all;"><?php echo esc_html($microsoft_redirect_uri); ?></code>
+                        <p class="description">
+                            <?php esc_html_e('Add this URL as a redirect URI in your Azure App Registration (Authentication tab).', 'book-now-kre8iv'); ?>
+                        </p>
                     </td>
                 </tr>
                 <tr>

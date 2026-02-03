@@ -417,6 +417,12 @@ When a payment fails:
 
 ### Google Calendar
 
+**OAuth Setup (Required):**
+1. In WordPress, go to Book Now > Settings > Integrations.
+2. Copy the **Redirect URI** shown under Google Calendar.
+3. In Google Cloud Console, add that URL to **Authorized redirect URIs** for your OAuth client.
+4. Paste the **Client ID** and **Client Secret** into the plugin and click **Save Settings**.
+
 **Connect:**
 1. Go to Settings > Integrations
 2. Enter Client ID and Secret
@@ -436,6 +442,13 @@ When a payment fails:
 3. Existing calendar events remain
 
 ### Microsoft Calendar
+
+**OAuth Setup (Required):**
+1. In WordPress, go to Book Now > Settings > Integrations.
+2. Copy the **Redirect URI** shown under Microsoft 365 Calendar.
+3. In Azure Portal, open your App Registration > **Authentication**.
+4. Add the Redirect URI under **Web** platform.
+5. Paste the **Application (Client) ID**, **Client Secret**, and **Directory (Tenant) ID** into the plugin and click **Save Settings**.
 
 **Connect:**
 1. Go to Settings > Integrations
