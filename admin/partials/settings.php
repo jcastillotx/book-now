@@ -141,6 +141,84 @@ if ($current_tab === 'integration') {
         $oauth_message = __('Microsoft 365 Calendar disconnected.', 'book-now-kre8iv');
     }
 
+    if (isset($_GET['test_google_calendar']) && isset($_GET['_wpnonce'])) {
+        if (wp_verify_nonce(sanitize_text_field(wp_unslash($_GET['_wpnonce'])), 'booknow_test_google_calendar')) {
+            if (!class_exists('Book_Now_Encryption')) {
+                require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-encryption.php';
+            }
+            if (!class_exists('Book_Now_Logger')) {
+                require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-logger.php';
+            }
+            if (!class_exists('Book_Now_Google_Calendar')) {
+                require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-google-calendar.php';
+            }
+
+            $google_calendar = new Book_Now_Google_Calendar();
+            $result = $google_calendar->test_selected_calendar_access();
+
+            $redirect_url = add_query_arg(
+                array(
+                    'page' => 'book-now-settings',
+                    'tab' => 'integration',
+                    'google_calendar_test' => is_wp_error($result) ? 'error' : 'success',
+                    'google_calendar_test_message' => rawurlencode(is_wp_error($result) ? $result->get_error_message() : ($result['message'] ?? __('Google Calendar access verified.', 'book-now-kre8iv'))),
+                ),
+                admin_url('admin.php')
+            );
+
+            wp_safe_redirect($redirect_url);
+            exit;
+        }
+    }
+
+    if (isset($_GET['test_microsoft_calendar']) && isset($_GET['_wpnonce'])) {
+        if (wp_verify_nonce(sanitize_text_field(wp_unslash($_GET['_wpnonce'])), 'booknow_test_microsoft_calendar')) {
+            if (!class_exists('Book_Now_Encryption')) {
+                require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-encryption.php';
+            }
+            if (!class_exists('Book_Now_Logger')) {
+                require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-logger.php';
+            }
+            if (!class_exists('Book_Now_Microsoft_Calendar')) {
+                require_once BOOK_NOW_PLUGIN_DIR . 'includes/class-book-now-microsoft-calendar.php';
+            }
+
+            $microsoft_calendar = new Book_Now_Microsoft_Calendar();
+            $result = $microsoft_calendar->test_selected_calendar_access();
+
+            $redirect_url = add_query_arg(
+                array(
+                    'page' => 'book-now-settings',
+                    'tab' => 'integration',
+                    'microsoft_calendar_test' => is_wp_error($result) ? 'error' : 'success',
+                    'microsoft_calendar_test_message' => rawurlencode(is_wp_error($result) ? $result->get_error_message() : ($result['message'] ?? __('Microsoft Calendar access verified.', 'book-now-kre8iv'))),
+                ),
+                admin_url('admin.php')
+            );
+
+            wp_safe_redirect($redirect_url);
+            exit;
+        }
+    }
+
+    if (isset($_GET['google_calendar_test_message'])) {
+        $message = sanitize_text_field(rawurldecode(wp_unslash($_GET['google_calendar_test_message'])));
+        if ('error' === ( $_GET['google_calendar_test'] ?? '' )) {
+            $oauth_error = $message;
+        } else {
+            $oauth_message = $message;
+        }
+    }
+
+    if (isset($_GET['microsoft_calendar_test_message'])) {
+        $message = sanitize_text_field(rawurldecode(wp_unslash($_GET['microsoft_calendar_test_message'])));
+        if ('error' === ( $_GET['microsoft_calendar_test'] ?? '' )) {
+            $oauth_error = $message;
+        } else {
+            $oauth_message = $message;
+        }
+    }
+
     // Check for OAuth messages stored in transients (set by the calendar classes)
     $microsoft_transient_success = get_transient('booknow_microsoft_oauth_success');
     $microsoft_transient_error = get_transient('booknow_microsoft_oauth_error');
@@ -239,6 +317,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['booknow_settings_nonc
                     'microsoft_client_id'        => sanitize_text_field($_POST['microsoft_client_id'] ?? ''),
                     'microsoft_client_secret'    => $get_secret_value('microsoft_client_secret', $existing_integration),
                     'microsoft_tenant_id'        => sanitize_text_field($_POST['microsoft_tenant_id'] ?? ''),
+                    'microsoft_calendar_id'      => sanitize_text_field($_POST['microsoft_calendar_id'] ?? ''),
                 );
                 // Use encryption class to save with automatic encryption
                 Book_Now_Encryption::save_integration_settings($settings);
@@ -522,6 +601,10 @@ $masked_microsoft_secret = Book_Now_Encryption::mask($integration_settings['micr
             $google_is_configured = $google_connection_status['configured'];
             $google_is_connected = $google_connection_status['connected'];
             $google_auth_url = $google_is_configured ? $google_calendar->get_auth_url() : false;
+            $google_calendars = $google_is_connected ? $google_calendar->list_calendars() : array();
+            if (is_wp_error($google_calendars)) {
+                $google_calendars = array();
+            }
 
             // Build the redirect URI for display in setup instructions
             $google_redirect_uri = $google_calendar->get_redirect_uri();
@@ -531,6 +614,10 @@ $masked_microsoft_secret = Book_Now_Encryption::mask($integration_settings['micr
             $microsoft_auth_url = $microsoft_is_configured ? $microsoft_calendar->get_auth_url() : false;
             $microsoft_connection_status = $microsoft_calendar->get_connection_status(); // Get detailed status
             $microsoft_connection_info = $microsoft_is_connected ? $microsoft_calendar->test_connection() : null;
+            $microsoft_calendars = $microsoft_is_connected ? $microsoft_calendar->list_calendars() : array();
+            if (is_wp_error($microsoft_calendars)) {
+                $microsoft_calendars = array();
+            }
             $microsoft_redirect_uri = $microsoft_calendar->get_redirect_uri();
             ?>
 
@@ -594,6 +681,16 @@ $masked_microsoft_secret = Book_Now_Encryption::mask($integration_settings['micr
                                     ?>
                                 </p>
                                 <?php endif; ?>
+                                <?php if (!empty($google_connection_status['last_tested_at'])) : ?>
+                                <p>
+                                    <span class="dashicons dashicons-yes-alt"></span>
+                                    <strong><?php esc_html_e('Last Calendar Test:', 'book-now-kre8iv'); ?></strong>
+                                    <?php
+                                    $last_tested_time = strtotime($google_connection_status['last_tested_at']);
+                                    echo esc_html(date_i18n(get_option('date_format') . ' ' . get_option('time_format'), $last_tested_time));
+                                    ?>
+                                </p>
+                                <?php endif; ?>
                             </div>
                             <div class="booknow-calendar-card-actions">
                                 <?php
@@ -601,7 +698,15 @@ $masked_microsoft_secret = Book_Now_Encryption::mask($integration_settings['micr
                                     admin_url('admin.php?page=book-now-settings&tab=integration&disconnect_google=1'),
                                     'booknow_disconnect_google'
                                 );
+                                $google_test_url = wp_nonce_url(
+                                    admin_url('admin.php?page=book-now-settings&tab=integration&test_google_calendar=1'),
+                                    'booknow_test_google_calendar'
+                                );
                                 ?>
+                                <a href="<?php echo esc_url($google_test_url); ?>" class="button button-secondary">
+                                    <span class="dashicons dashicons-yes-alt" style="vertical-align: middle; margin-top: -2px;"></span>
+                                    <?php esc_html_e('Test Selected Calendar', 'book-now-kre8iv'); ?>
+                                </a>
                                 <a href="<?php echo esc_url($google_disconnect_url); ?>" class="button button-secondary" onclick="return confirm('<?php esc_attr_e('Are you sure you want to disconnect Google Calendar? This will revoke access and remove stored tokens.', 'book-now-kre8iv'); ?>');">
                                     <span class="dashicons dashicons-no" style="vertical-align: middle; margin-top: -2px;"></span>
                                     <?php esc_html_e('Disconnect', 'book-now-kre8iv'); ?>
@@ -647,11 +752,31 @@ $masked_microsoft_secret = Book_Now_Encryption::mask($integration_settings['micr
                                     <strong><?php esc_html_e('Email:', 'book-now-kre8iv'); ?></strong>
                                     <?php echo esc_html($microsoft_connection_info['user_email'] ?? $microsoft_connection_status['email'] ?? ''); ?>
                                 </p>
+                                <p>
+                                    <span class="dashicons dashicons-calendar-alt"></span>
+                                    <strong><?php esc_html_e('Calendar:', 'book-now-kre8iv'); ?></strong>
+                                    <?php echo esc_html($microsoft_connection_status['calendar_name'] ?? __('Primary Calendar', 'book-now-kre8iv')); ?>
+                                </p>
+                                <p>
+                                    <span class="dashicons dashicons-admin-links"></span>
+                                    <strong><?php esc_html_e('Calendar ID:', 'book-now-kre8iv'); ?></strong>
+                                    <?php echo esc_html($microsoft_connection_status['calendar_id'] ?? 'primary'); ?>
+                                </p>
                                 <?php if (!empty($microsoft_connection_status['expires_at'])) : ?>
                                 <p>
                                     <span class="dashicons dashicons-clock"></span>
                                     <strong><?php esc_html_e('Token Expires:', 'book-now-kre8iv'); ?></strong>
                                     <?php echo esc_html($microsoft_connection_status['expires_at']); ?>
+                                </p>
+                                <?php endif; ?>
+                                <?php if (!empty($microsoft_connection_status['last_tested_at'])) : ?>
+                                <p>
+                                    <span class="dashicons dashicons-yes-alt"></span>
+                                    <strong><?php esc_html_e('Last Calendar Test:', 'book-now-kre8iv'); ?></strong>
+                                    <?php
+                                    $last_tested_time = strtotime($microsoft_connection_status['last_tested_at']);
+                                    echo esc_html(date_i18n(get_option('date_format') . ' ' . get_option('time_format'), $last_tested_time));
+                                    ?>
                                 </p>
                                 <?php endif; ?>
                             </div>
@@ -661,7 +786,15 @@ $masked_microsoft_secret = Book_Now_Encryption::mask($integration_settings['micr
                                     admin_url('admin.php?page=book-now-settings&tab=integration&disconnect_microsoft=1'),
                                     'booknow_disconnect_microsoft'
                                 );
+                                $microsoft_test_url = wp_nonce_url(
+                                    admin_url('admin.php?page=book-now-settings&tab=integration&test_microsoft_calendar=1'),
+                                    'booknow_test_microsoft_calendar'
+                                );
                                 ?>
+                                <a href="<?php echo esc_url($microsoft_test_url); ?>" class="button button-secondary">
+                                    <span class="dashicons dashicons-yes-alt" style="vertical-align: middle; margin-top: -2px;"></span>
+                                    <?php esc_html_e('Test Selected Calendar', 'book-now-kre8iv'); ?>
+                                </a>
                                 <a href="<?php echo esc_url($microsoft_disconnect_url); ?>" class="button button-secondary" onclick="return confirm('<?php esc_attr_e('Are you sure you want to disconnect Microsoft 365?', 'book-now-kre8iv'); ?>');">
                                     <span class="dashicons dashicons-no" style="vertical-align: middle; margin-top: -2px;"></span>
                                     <?php esc_html_e('Disconnect', 'book-now-kre8iv'); ?>
@@ -745,8 +878,20 @@ $masked_microsoft_secret = Book_Now_Encryption::mask($integration_settings['micr
                 <tr>
                     <th><label for="google_calendar_id"><?php esc_html_e('Calendar ID', 'book-now-kre8iv'); ?></label></th>
                     <td>
-                        <input type="text" name="google_calendar_id" id="google_calendar_id" value="<?php echo esc_attr($integration_settings['google_calendar_id'] ?? ''); ?>" class="regular-text" placeholder="primary">
-                        <p class="description"><?php esc_html_e('Usually "primary" for your main calendar. Leave empty or use "primary" for default.', 'book-now-kre8iv'); ?></p>
+                        <?php if (!empty($google_calendars)) : ?>
+                            <select name="google_calendar_id" id="google_calendar_id" class="regular-text">
+                                <option value="primary"><?php esc_html_e('Primary Calendar', 'book-now-kre8iv'); ?></option>
+                                <?php foreach ($google_calendars as $calendar) : ?>
+                                    <option value="<?php echo esc_attr($calendar['id']); ?>" <?php selected(($integration_settings['google_calendar_id'] ?? 'primary'), $calendar['id']); ?>>
+                                        <?php echo esc_html($calendar['name'] . (!empty($calendar['primary']) ? ' (' . __('Primary', 'book-now-kre8iv') . ')' : '')); ?>
+                                    </option>
+                                <?php endforeach; ?>
+                            </select>
+                            <p class="description"><?php esc_html_e('Choose one of your connected Google calendars, or leave it on Primary Calendar.', 'book-now-kre8iv'); ?></p>
+                        <?php else : ?>
+                            <input type="text" name="google_calendar_id" id="google_calendar_id" value="<?php echo esc_attr($integration_settings['google_calendar_id'] ?? ''); ?>" class="regular-text" placeholder="primary">
+                            <p class="description"><?php esc_html_e('Usually "primary" for your main calendar. Connect Google first to choose from a list.', 'book-now-kre8iv'); ?></p>
+                        <?php endif; ?>
                     </td>
                 </tr>
             </table>
@@ -792,6 +937,25 @@ $masked_microsoft_secret = Book_Now_Encryption::mask($integration_settings['micr
                     <td>
                         <input type="text" name="microsoft_tenant_id" id="microsoft_tenant_id" value="<?php echo esc_attr($integration_settings['microsoft_tenant_id'] ?? ''); ?>" class="regular-text">
                         <p class="description"><?php esc_html_e('Your Azure AD tenant ID from the app overview page', 'book-now-kre8iv'); ?></p>
+                    </td>
+                </tr>
+                <tr>
+                    <th><label for="microsoft_calendar_id"><?php esc_html_e('Calendar ID', 'book-now-kre8iv'); ?></label></th>
+                    <td>
+                        <?php if (!empty($microsoft_calendars)) : ?>
+                            <select name="microsoft_calendar_id" id="microsoft_calendar_id" class="regular-text">
+                                <option value="primary"><?php esc_html_e('Primary Calendar', 'book-now-kre8iv'); ?></option>
+                                <?php foreach ($microsoft_calendars as $calendar) : ?>
+                                    <option value="<?php echo esc_attr($calendar['id']); ?>" <?php selected(($integration_settings['microsoft_calendar_id'] ?? 'primary'), $calendar['id']); ?>>
+                                        <?php echo esc_html($calendar['name'] . (!empty($calendar['is_default']) ? ' (' . __('Primary', 'book-now-kre8iv') . ')' : '')); ?>
+                                    </option>
+                                <?php endforeach; ?>
+                            </select>
+                            <p class="description"><?php esc_html_e('Choose the Outlook/Microsoft 365 calendar Book Now should read and write.', 'book-now-kre8iv'); ?></p>
+                        <?php else : ?>
+                            <input type="text" name="microsoft_calendar_id" id="microsoft_calendar_id" value="<?php echo esc_attr($integration_settings['microsoft_calendar_id'] ?? ''); ?>" class="regular-text" placeholder="primary">
+                            <p class="description"><?php esc_html_e('Use "primary" for the default Outlook calendar, or connect Microsoft first to choose from a list.', 'book-now-kre8iv'); ?></p>
+                        <?php endif; ?>
                     </td>
                 </tr>
             </table>
@@ -938,6 +1102,17 @@ $masked_microsoft_secret = Book_Now_Encryption::mask($integration_settings['micr
                             </td>
                         </tr>
                         <?php if ($google_calendar && $google_status['connected']) : ?>
+                        <?php if (!empty($google_status['last_tested_at'])) : ?>
+                        <tr>
+                            <td><strong><?php esc_html_e('Last Calendar Test', 'book-now-kre8iv'); ?></strong></td>
+                            <td>
+                                <?php
+                                $google_last_tested = strtotime($google_status['last_tested_at']);
+                                echo esc_html(date_i18n(get_option('date_format') . ' ' . get_option('time_format'), $google_last_tested));
+                                ?>
+                            </td>
+                        </tr>
+                        <?php endif; ?>
                         <tr>
                             <td><strong><?php esc_html_e('API Test', 'book-now-kre8iv'); ?></strong></td>
                             <td>
@@ -996,6 +1171,26 @@ $masked_microsoft_secret = Book_Now_Encryption::mask($integration_settings['micr
                                 <?php endif; ?>
                             </td>
                         </tr>
+                        <?php if ($microsoft_status['connected']) : ?>
+                        <tr>
+                            <td><strong><?php esc_html_e('Selected Calendar', 'book-now-kre8iv'); ?></strong></td>
+                            <td>
+                                <?php echo esc_html($microsoft_status['calendar_name'] ?: __('Primary Calendar', 'book-now-kre8iv')); ?>
+                                <br><small><?php echo esc_html($microsoft_status['calendar_id'] ?? 'primary'); ?></small>
+                            </td>
+                        </tr>
+                        <?php endif; ?>
+                        <?php if (!empty($microsoft_status['last_tested_at'])) : ?>
+                        <tr>
+                            <td><strong><?php esc_html_e('Last Calendar Test', 'book-now-kre8iv'); ?></strong></td>
+                            <td>
+                                <?php
+                                $microsoft_last_tested = strtotime($microsoft_status['last_tested_at']);
+                                echo esc_html(date_i18n(get_option('date_format') . ' ' . get_option('time_format'), $microsoft_last_tested));
+                                ?>
+                            </td>
+                        </tr>
+                        <?php endif; ?>
                         <?php if (!empty($microsoft_status['expires_at'])) : ?>
                         <tr>
                             <td><strong><?php esc_html_e('Token Expires', 'book-now-kre8iv'); ?></strong></td>

@@ -318,56 +318,7 @@ class Book_Now_REST_API {
      * @return array Available time slots.
      */
     private function calculate_available_slots($consultation_type_id, $date) {
-        global $wpdb;
-
-        // Get consultation type
-        $type = Book_Now_Consultation_Type::get($consultation_type_id);
-        if (!$type) {
-            return array();
-        }
-
-        // Get day of week (0 = Sunday, 6 = Saturday)
-        $day_of_week = date('w', strtotime($date));
-
-        // Get availability rules for this day
-        $availability = Book_Now_Availability::get_for_date($date, $day_of_week);
-
-        if (empty($availability)) {
-            return array();
-        }
-
-        $slots = array();
-        $slot_interval = absint(booknow_get_setting('general', 'slot_interval')) ?: 30;
-        $duration = absint($type->duration);
-        $buffer_before = absint($type->buffer_before);
-        $buffer_after = absint($type->buffer_after);
-
-        foreach ($availability as $rule) {
-            // Skip if not available
-            if ($rule->is_available != 1) {
-                continue;
-            }
-
-            $start_minutes = booknow_time_to_minutes($rule->start_time);
-            $end_minutes = booknow_time_to_minutes($rule->end_time);
-
-            // Generate slots
-            for ($time = $start_minutes; $time + $duration <= $end_minutes; $time += $slot_interval) {
-                $slot_time = booknow_minutes_to_time($time);
-                $slot_end_time = booknow_minutes_to_time($time + $duration);
-
-                // Check if slot is available (not booked)
-                if ($this->is_slot_available($date, $slot_time, $duration, $buffer_before, $buffer_after)) {
-                    $slots[] = array(
-                        'time'      => $slot_time,
-                        'end_time'  => $slot_end_time,
-                        'available' => true,
-                    );
-                }
-            }
-        }
-
-        return $slots;
+        return Book_Now_Availability::calculate_slots($date, $consultation_type_id);
     }
 
     /**
@@ -449,6 +400,19 @@ class Book_Now_REST_API {
         // create_with_lock() is the authoritative check for race condition prevention
         if (!$this->is_slot_available($date, $time, $type->duration, $type->buffer_before, $type->buffer_after)) {
             return new WP_Error('slot_unavailable', __('This time slot is no longer available.', 'book-now-kre8iv'), array('status' => 400));
+        }
+
+        if (class_exists('Book_Now_Calendar_Sync')) {
+            $calendar_sync = new Book_Now_Calendar_Sync();
+            $calendar_available = $calendar_sync->is_time_available($date, $time, (int) $type->duration);
+
+            if (is_wp_error($calendar_available)) {
+                return new WP_Error('calendar_check_failed', __('Unable to verify calendar availability. Please try again.', 'book-now-kre8iv'), array('status' => 503));
+            }
+
+            if (!$calendar_available) {
+                return new WP_Error('slot_unavailable', __('This time slot is no longer available.', 'book-now-kre8iv'), array('status' => 409));
+            }
         }
 
         // Create booking data

@@ -182,6 +182,18 @@ class Book_Now_Public {
 		}
 
 		// Create booking data.
+		$calendar_sync       = new Book_Now_Calendar_Sync();
+		$calendar_available = $calendar_sync->is_time_available( $booking_date, $booking_time, (int) $consultation_type->duration );
+
+		if ( is_wp_error( $calendar_available ) ) {
+			wp_send_json_error( array( 'message' => __( 'Unable to verify calendar availability. Please try again.', 'book-now-kre8iv' ) ) );
+		}
+
+		if ( ! $calendar_available ) {
+			wp_send_json_error( array( 'message' => __( 'This time slot is no longer available.', 'book-now-kre8iv' ) ) );
+		}
+
+		// Create booking data.
 		$booking_data = array(
 			'consultation_type_id' => $consultation_type_id,
 			'customer_name'        => isset( $_POST['customer_name'] ) ? sanitize_text_field( wp_unslash( $_POST['customer_name'] ) ) : '',
