@@ -114,6 +114,16 @@ class Book_Now_Shortcodes {
                 </div>
             <?php endforeach; ?>
         </div>
+
+        <?php
+        // Inline booking form, hidden until a "Book Now" button is clicked.
+        // Rendered with show_types=false so it has no type selector of its own;
+        // the grid above provides the type selection.
+        $atts = array( 'show_types' => 'false' );
+        ?>
+        <div id="booknow-inline-booking" class="booknow-inline-booking" style="display:none;">
+            <?php include BOOK_NOW_PLUGIN_DIR . 'public/partials/form-wizard.php'; ?>
+        </div>
         <?php
         return ob_get_clean();
     }

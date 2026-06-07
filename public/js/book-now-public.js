@@ -184,15 +184,37 @@
             });
         });
 
-        // Handle "Book Now" button clicks on consultation type cards
+        // Handle "Book Now" button clicks on consultation type cards.
+        // Reveals the inline booking form for the chosen type, starting at the
+        // date/time step (the grid is the type selector).
         $('.booknow-select-type').on('click', function(e) {
             e.preventDefault();
-            const typeId = $(this).data('type-id');
 
-            // Store selected type and redirect to booking page or trigger form
-            // This is a simplified version - in a full implementation,
-            // you might redirect to a booking page with the type ID as a parameter
-            console.log('Selected consultation type:', typeId);
+            const typeId = $(this).data('type-id');
+            const $booking = $('#booknow-inline-booking');
+            if (!$booking.length) {
+                return;
+            }
+
+            // Set the selected type on the hidden input and internal state.
+            selectedType = typeId;
+            $booking.find('input[name="consultation_type_id"]').val(typeId);
+
+            // Reset any prior date/time selection so each type starts fresh.
+            selectedDate = null;
+            selectedTime = null;
+            $('#booking_date').val('');
+            $('#available-slots').hide();
+            $('#slots-container').empty();
+            $('.booknow-confirmation').hide();
+            $('.booknow-form-step[data-step="2"] .booknow-next-step').prop('disabled', true);
+
+            // Reveal the form at the date/time step and scroll to it.
+            $booking.show();
+            showStep(2);
+            $('html, body').animate({
+                scrollTop: $booking.offset().top - 80
+            }, 400);
         });
     });
 
