@@ -151,7 +151,9 @@ class Book_Now_Email {
      * @param object $type Consultation type object
      */
     private function send_admin_notification($booking, $type) {
-        $admin_email = get_option('admin_email');
+        $admin_email = !empty($this->settings['admin_email'])
+            ? $this->settings['admin_email']
+            : get_option('admin_email');
         $subject = sprintf(__('New Booking: %s', 'book-now-kre8iv'), $type->name);
         $message = $this->get_admin_notification_template($booking, $type);
         $headers = $this->get_email_headers();
