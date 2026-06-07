@@ -308,3 +308,66 @@
         grid-template-columns: 1fr !important;
     }
 }
+
+/* Booking modal (popup) */
+body.booknow-modal-open {
+    overflow: hidden;
+}
+
+.booknow-modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 100000;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 5vh 16px;
+    background: rgba(0, 0, 0, 0.6);
+    overflow-y: auto;
+}
+
+.booknow-modal-dialog {
+    position: relative;
+    width: 100%;
+    max-width: 640px;
+    margin: auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    padding: 32px 32px 28px;
+}
+
+.booknow-modal-dialog .booknow-form-wrapper {
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+    background: transparent;
+}
+
+.booknow-modal-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #555;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.booknow-modal-close-btn:hover,
+.booknow-modal-close-btn:focus {
+    background: rgba(0, 0, 0, 0.06);
+    color: #000;
+}
+
+@media screen and (max-width: 600px) {
+    .booknow-modal-dialog {
+        padding: 24px 18px 20px;
+    }
+}

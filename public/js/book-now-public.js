@@ -184,21 +184,28 @@
             });
         });
 
+        // Booking modal controls.
+        const $bookingModal = $('#booknow-booking-modal');
+
+        function closeBookingModal() {
+            $bookingModal.hide();
+            $('body').removeClass('booknow-modal-open');
+        }
+
         // Handle "Book Now" button clicks on consultation type cards.
-        // Reveals the inline booking form for the chosen type, starting at the
+        // Opens the booking form in a modal for the chosen type, starting at the
         // date/time step (the grid is the type selector).
         $('.booknow-select-type').on('click', function(e) {
             e.preventDefault();
 
             const typeId = $(this).data('type-id');
-            const $booking = $('#booknow-inline-booking');
-            if (!$booking.length) {
+            if (!$bookingModal.length) {
                 return;
             }
 
             // Set the selected type on the hidden input and internal state.
             selectedType = typeId;
-            $booking.find('input[name="consultation_type_id"]').val(typeId);
+            $bookingModal.find('input[name="consultation_type_id"]').val(typeId);
 
             // Reset any prior date/time selection so each type starts fresh.
             selectedDate = null;
@@ -209,12 +216,23 @@
             $('.booknow-confirmation').hide();
             $('.booknow-form-step[data-step="2"] .booknow-next-step').prop('disabled', true);
 
-            // Reveal the form at the date/time step and scroll to it.
-            $booking.show();
+            // Open the modal at the date/time step.
             showStep(2);
-            $('html, body').animate({
-                scrollTop: $booking.offset().top - 80
-            }, 400);
+            $bookingModal.css('display', 'flex');
+            $('body').addClass('booknow-modal-open');
+        });
+
+        // Close the modal: close button, backdrop click, or Escape key.
+        $bookingModal.on('click', '.booknow-modal-close-btn', closeBookingModal);
+        $bookingModal.on('click', function(e) {
+            if (e.target === this) {
+                closeBookingModal();
+            }
+        });
+        $(document).on('keydown', function(e) {
+            if (e.key === 'Escape' && $bookingModal.is(':visible')) {
+                closeBookingModal();
+            }
         });
     });
 

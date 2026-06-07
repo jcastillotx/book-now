@@ -116,13 +116,18 @@ class Book_Now_Shortcodes {
         </div>
 
         <?php
-        // Inline booking form, hidden until a "Book Now" button is clicked.
+        // Booking form shown in a modal popup when a "Book Now" button is clicked.
         // Rendered with show_types=false so it has no type selector of its own;
         // the grid above provides the type selection.
         $atts = array( 'show_types' => 'false' );
         ?>
-        <div id="booknow-inline-booking" class="booknow-inline-booking" style="display:none;">
-            <?php include BOOK_NOW_PLUGIN_DIR . 'public/partials/form-wizard.php'; ?>
+        <div id="booknow-booking-modal" class="booknow-modal-overlay" style="display:none;" role="dialog" aria-modal="true" aria-label="<?php esc_attr_e('Book a consultation', 'book-now-kre8iv'); ?>">
+            <div class="booknow-modal-dialog">
+                <button type="button" class="booknow-modal-close-btn" aria-label="<?php esc_attr_e('Close', 'book-now-kre8iv'); ?>">&times;</button>
+                <div id="booknow-inline-booking" class="booknow-inline-booking">
+                    <?php include BOOK_NOW_PLUGIN_DIR . 'public/partials/form-wizard.php'; ?>
+                </div>
+            </div>
         </div>
         <?php
         return ob_get_clean();
