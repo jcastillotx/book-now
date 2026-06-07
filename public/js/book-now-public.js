@@ -161,16 +161,23 @@
                 data: formData,
                 success: function(response) {
                     if (response.success) {
+                        // The booking handler returns the reference under
+                        // data.reference (with data.booking.reference_number as
+                        // a fallback).
+                        const reference = response.data.reference ||
+                            (response.data.booking && response.data.booking.reference_number) ||
+                            '';
+
                         // Show confirmation
                         $('.booknow-form-step').hide();
                         $('.booknow-confirmation').show();
                         $('.confirmation-message').html(
-                            'Your booking reference number is <strong>' + response.data.reference_number + '</strong>'
+                            'Your booking reference number is <strong>' + reference + '</strong>'
                         );
 
-                        // If payment required, redirect to payment
-                        if (response.data.payment_required) {
-                            // Payment handling will be implemented in Phase 4
+                        // If payment is required, redirect to payment
+                        if (response.data.needs_payment) {
+                            // Payment handling will be implemented with Stripe.
                         }
                     } else {
                         alert(response.data.message || bookNowPublic.strings.error);
