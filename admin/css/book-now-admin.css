@@ -813,7 +813,7 @@
     color: var(--booknow-primary);
 }
 
-.booknow-modal-close {
+.booknow-modal-header .booknow-modal-close {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -828,7 +828,7 @@
     transition: all var(--booknow-transition);
 }
 
-.booknow-modal-close:hover {
+.booknow-modal-header .booknow-modal-close:hover {
     background: var(--booknow-gray-100);
     color: var(--booknow-gray-800);
 }
