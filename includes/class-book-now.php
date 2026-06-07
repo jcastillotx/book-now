@@ -171,8 +171,7 @@ class Book_Now {
         $this->loader->add_action('wp_ajax_booknow_get_availability', $plugin_public, 'ajax_get_availability');
         $this->loader->add_action('wp_ajax_nopriv_booknow_get_availability', $plugin_public, 'ajax_get_availability');
 
-        $this->loader->add_action('wp_ajax_booknow_create_booking', $plugin_public, 'ajax_create_booking');
-        $this->loader->add_action('wp_ajax_nopriv_booknow_create_booking', $plugin_public, 'ajax_create_booking');
+        // Note: booknow_create_booking is handled by Book_Now_Public_AJAX (above).
     }
 
     /**
