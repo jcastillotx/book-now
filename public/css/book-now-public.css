@@ -326,35 +326,41 @@ body.booknow-modal-open {
     overflow-y: auto;
 }
 
+/* Transparent positioning container so the form itself is the single card
+   (no white frame around the cream form). */
 .booknow-modal-dialog {
     position: relative;
     width: 100%;
     max-width: 640px;
     margin: auto;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    padding: 32px 32px 28px;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
 }
 
+/* The form wrapper becomes the visible card; keep its themed background. */
 .booknow-modal-dialog .booknow-form-wrapper {
-    padding: 0;
+    max-width: none;
+    margin: 0;
+    padding: 40px;
     border: 0;
-    box-shadow: none;
-    background: transparent;
+    border-radius: 8px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
 }
 
 .booknow-modal-close-btn {
     position: absolute;
-    top: 10px;
-    right: 12px;
-    width: 36px;
-    height: 36px;
+    top: 14px;
+    right: 16px;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
     padding: 0;
     border: 0;
     background: transparent;
-    color: #555;
-    font-size: 28px;
+    color: #1c2b3a;
+    font-size: 30px;
     line-height: 1;
     cursor: pointer;
     border-radius: 4px;
@@ -362,12 +368,18 @@ body.booknow-modal-open {
 
 .booknow-modal-close-btn:hover,
 .booknow-modal-close-btn:focus {
-    background: rgba(0, 0, 0, 0.06);
+    background: rgba(0, 0, 0, 0.08);
     color: #000;
 }
 
+/* Status messages (no slots / loading / error) should span the slot grid. */
+#slots-container > p {
+    grid-column: 1 / -1;
+    margin: 0;
+}
+
 @media screen and (max-width: 600px) {
-    .booknow-modal-dialog {
-        padding: 24px 18px 20px;
+    .booknow-modal-dialog .booknow-form-wrapper {
+        padding: 28px 20px;
     }
 }
