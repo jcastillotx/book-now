@@ -28,9 +28,9 @@ class Book_Now_Email {
         $this->settings = get_option('booknow_email_settings', array(
             'from_name' => get_bloginfo('name'),
             'from_email' => get_bloginfo('admin_email'),
-            'confirmation_enabled' => true,
-            'reminder_enabled' => true,
-            'admin_notification_enabled' => true,
+            'send_confirmation' => true,
+            'send_reminder' => true,
+            'send_admin_notification' => true,
             'reminder_hours' => 24,
         ));
     }
@@ -51,7 +51,7 @@ class Book_Now_Email {
      * @param int $booking_id Booking ID
      */
     public function send_confirmation_email($booking_id) {
-        if (empty($this->settings['confirmation_enabled'])) {
+        if (empty($this->settings['send_confirmation'])) {
             return;
         }
 
@@ -76,12 +76,12 @@ class Book_Now_Email {
         $this->log_email($booking_id, 'confirmation', $to, $subject, $sent, $message);
 
         // Send admin notification
-        if (!empty($this->settings['admin_notification_enabled'])) {
+        if (!empty($this->settings['send_admin_notification'])) {
             $this->send_admin_notification($booking, $type);
         }
 
         // Schedule reminder
-        if (!empty($this->settings['reminder_enabled'])) {
+        if (!empty($this->settings['send_reminder'])) {
             $this->schedule_reminder($booking);
         }
 
@@ -172,7 +172,7 @@ class Book_Now_Email {
      */
     private function get_confirmation_template($booking, $type) {
         $booking_datetime = booknow_format_date($booking->booking_date) . ' at ' . booknow_format_time($booking->booking_time);
-        $price = booknow_format_price($booking->total_amount);
+        $price = booknow_format_price($booking->payment_amount);
 
         ob_start();
         ?>
@@ -225,17 +225,17 @@ class Book_Now_Email {
                             <?php echo esc_html($type->duration); ?> <?php _e('minutes', 'book-now-kre8iv'); ?>
                         </div>
                         
-                        <?php if ($booking->total_amount > 0): ?>
+                        <?php if ($booking->payment_amount > 0): ?>
                         <div class="detail-row">
                             <span class="label"><?php _e('Amount Paid:', 'book-now-kre8iv'); ?></span>
                             <?php echo esc_html($price); ?>
                         </div>
                         <?php endif; ?>
                         
-                        <?php if ($booking->notes): ?>
+                        <?php if ($booking->customer_notes): ?>
                         <div class="detail-row">
                             <span class="label"><?php _e('Notes:', 'book-now-kre8iv'); ?></span>
-                            <?php echo nl2br(esc_html($booking->notes)); ?>
+                            <?php echo nl2br(esc_html($booking->customer_notes)); ?>
                         </div>
                         <?php endif; ?>
                     </div>
@@ -377,7 +377,7 @@ class Book_Now_Email {
      */
     private function get_admin_notification_template($booking, $type) {
         $booking_datetime = booknow_format_date($booking->booking_date) . ' at ' . booknow_format_time($booking->booking_time);
-        $price = booknow_format_price($booking->total_amount);
+        $price = booknow_format_price($booking->payment_amount);
 
         ob_start();
         ?>
@@ -439,10 +439,10 @@ class Book_Now_Email {
                             <span class="label"><?php _e('Status:', 'book-now-kre8iv'); ?></span>
                             <?php echo esc_html(booknow_get_status_label($booking->status)); ?>
                         </div>
-                        <?php if ($booking->notes): ?>
+                        <?php if ($booking->customer_notes): ?>
                         <div class="detail-row">
                             <span class="label"><?php _e('Notes:', 'book-now-kre8iv'); ?></span>
-                            <?php echo nl2br(esc_html($booking->notes)); ?>
+                            <?php echo nl2br(esc_html($booking->customer_notes)); ?>
                         </div>
                         <?php endif; ?>
                     </div>
