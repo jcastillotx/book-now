@@ -65,7 +65,14 @@ $consultation_types = Book_Now_Consultation_Type::get_all(array('status' => ''))
                                     </span>
                                 </td>
                                 <td class="booknow-actions">
-                                    <a href="#" class="button button-small edit-consultation-type" data-id="<?php echo esc_attr($type->id); ?>" title="<?php esc_attr_e('Edit', 'book-now-kre8iv'); ?>">
+                                    <a href="#" class="button button-small edit-consultation-type"
+                                        data-id="<?php echo esc_attr($type->id); ?>"
+                                        data-name="<?php echo esc_attr($type->name); ?>"
+                                        data-duration="<?php echo esc_attr($type->duration); ?>"
+                                        data-price="<?php echo esc_attr($type->price); ?>"
+                                        data-description="<?php echo esc_attr($type->description); ?>"
+                                        data-status="<?php echo esc_attr($type->status); ?>"
+                                        title="<?php esc_attr_e('Edit', 'book-now-kre8iv'); ?>">
                                         <span class="dashicons dashicons-edit"></span>
                                         <span class="screen-reader-text"><?php esc_html_e('Edit', 'book-now-kre8iv'); ?></span>
                                     </a>

@@ -26,9 +26,19 @@
         // Open modal for editing consultation type
         $('.edit-consultation-type').on('click', function(e) {
             e.preventDefault();
-            const typeId = $(this).data('id');
-            // In a full implementation, you would load the consultation type data via AJAX
-            $('#consultation-type-id').val(typeId);
+            const $btn = $(this);
+
+            // Reset first so no stale values carry over between rows.
+            $('#consultation-type-form')[0].reset();
+
+            // Populate the form from the row's data attributes.
+            $('#consultation-type-id').val($btn.attr('data-id'));
+            $('#name').val($btn.attr('data-name'));
+            $('#duration').val($btn.attr('data-duration'));
+            $('#price').val($btn.attr('data-price'));
+            $('#description').val($btn.attr('data-description'));
+            $('#status').val($btn.attr('data-status'));
+
             $('#modal-title').text('Edit Consultation Type');
             modal.show();
         });
