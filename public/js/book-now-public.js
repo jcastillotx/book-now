@@ -187,6 +187,14 @@
         // Booking modal controls.
         const $bookingModal = $('#booknow-booking-modal');
 
+        // Move the modal to <body> so it escapes any theme stacking context.
+        // Page-builder sections (e.g. Divi) create their own stacking contexts
+        // via transforms/positioning, which can render later sections over a
+        // modal nested inside an earlier section.
+        if ($bookingModal.length) {
+            $bookingModal.appendTo(document.body);
+        }
+
         function closeBookingModal() {
             $bookingModal.hide();
             $('body').removeClass('booknow-modal-open');
